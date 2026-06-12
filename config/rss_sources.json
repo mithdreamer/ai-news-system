@@ -1,0 +1,16 @@
+[
+  {
+    "name": "BBC Türkçe",
+    "url": "https://feeds.bbci.co.uk/turkce/rss.xml"
+  },
+  {
+    "name": "TRT Haber",
+    "url": "https://www.trthaber.com/sondakika_articles.rss"
+  },
+  {
+    "name": "Anadolu Ajansı",
+    "url": "https://www.aa.com.tr/tr/rss/default?cat=sondakika"
+    }
+
+
+]
