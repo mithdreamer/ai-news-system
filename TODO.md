@@ -1,25 +1,36 @@
 # TODO
 
-## Bu Hafta
+## Tamamlananlar
 
 ### Altyapı
 
-- [ ] Klasör yapısı oluştur
-- [ ] requirements.txt oluştur
-- [ ] .env sistemi oluştur
+- [x] Klasör yapısı oluştur
+- [x] requirements.txt oluştur
+- [x] .env sistemi oluştur
 
 ### Haber Kaynakları
 
-- [ ] BBC RSS
-- [ ] TRT RSS
-- [ ] Anadolu Ajansı RSS
+- [x] BBC RSS
+- [x] TRT RSS
+- [x] Anadolu Ajansı RSS
 
 ### Testler
 
-- [ ] İlk haber çekme testi
+- [x] İlk haber çekme testi
+
+---
+
+## Bu Hafta
+
+- [ ] OpenAI entegrasyonu
+- [ ] `main.py` içindeki tekrar eden istatistik üretimini sadeleştir
+- [ ] RSS kaynakları için hata yakalama ve boş sonuç kontrolü ekle
+- [ ] HTML çıktıda haber başlığı/özet/link alanları için güvenli escape işlemi ekle
+- [ ] Temel servis testlerini ekle
 
 ---
 
 ## Sonraki Adım
 
-- [ ] OpenAI entegrasyonu
+- [ ] OpenAI ile gerçek haber özeti üret
+- [ ] ElevenLabs seslendirme entegrasyonunu başlat

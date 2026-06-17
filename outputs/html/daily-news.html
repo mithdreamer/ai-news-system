@@ -37,6 +37,18 @@
             font-weight: bold;
         }
 
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
         .category-title {
             margin-top: 40px;
             border-bottom: 2px solid #222;
@@ -50,10 +62,18 @@
             border-radius: 8px;
         }
 
+        .news-card h3 {
+            margin-top: 0;
+        }
+
         .source {
             font-size: 13px;
             color: #777;
             margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
         }
     </style>
 </head>
@@ -68,18 +88,18 @@
         </div>
 
         <div class="stat-card">
-            <strong>dünya</strong>
-            <span>9</span>
+            <strong>ekonomi</strong>
+            <span>4</span>
         </div>
 
         <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>2</span>
+            <strong>dünya</strong>
+            <span>6</span>
         </div>
 
         <div class="stat-card">
             <strong>genel</strong>
-            <span>8</span>
+            <span>9</span>
         </div>
 
         <div class="stat-card">
@@ -89,14 +109,72 @@
 
     </div>
 
-    <h2 class="category-title">DÜNYA</h2>
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank">
+                <strong>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank">
+                <strong>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank">
+                <strong>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c0jyz1zdwx3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Tahran'ın 'zafer' olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c74yk2g3l7ko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Netanyahu açısından siyasi kabus': ABD-İran anlaşması İsrail için ne anlama geliyor?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
 
     <div class="news-card">
-        <h3>CHP'de kritik gün: Olağanüstü kurultay imzaları Kılıçdaroğlu'na sunuluyor</h3>
-        <p>CHP'de Özgür Özel yönetimi, olağanüstü kurultay için toplanan 900'e yakın delege imzasını, bugün CHP Genel Başkanı Kemal Kılıçdaroğlu'na iletecek. Genel Merkez kaynaklarının verdiği bilgiye göre "Mutlak butlan kararı nedeniyle olağanüstü kurultay toplanamaz" tutumunu sürdüren Kılıçdaroğlu, bu talebi işleme koymayacak.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cgevnnyxl84o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <h3>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</h3>
+        <p>İran ile ABD arasında varılan mutabakata ait olduğu iddia edilen metinde, İran'ın büyük ekonomik imtiyazlar aldığı görülürken Lübnan'da İsrail işgalinin sonlandırılması ve İran'ın yeniden yapılandırılması için oluşturulması öngörülen 300 milyar dolarlık fon ve Hürmüz Boğazı'nın gelecekteki statüsü gibi bazı konularda belirsizlikler göze çarpıyor.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank">Haberi Oku</a>
     </div>
+
+    <div class="news-card">
+        <h3>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</h3>
+        <p>Cumhurbaşkanı Yardımcısı Yılmaz, "Savaşlar bölgedeki ülkelere de Türkiye’ye de ekonomik olarak maliyetler getirdi. Ama inşallah orta vadede çok daha önemli kazançlar sağlayacağımız bir döneme giriyoruz. Bunu da hep birlikte değerlendirmek durumundayız. Burada da yine inşaat sektörümüze çok önemli görevler düşüyor" açıklamasını yaptı.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
+        <h3>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</h3>
+        <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Yerel Kalkınma Hamlesi Teşvik Programı 2025 Çağrısı sonuçlarının belli olduğunu bildirdi.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
+        <h3>Bakan Bolat: Hizmet ihracatında ilk 6 ülke arasındayız</h3>
+        <p>Ticaret Bakanı Ömer Bolat, Türkiye'nin geçen yıl 122,6 milyar dolara ulaşan hizmet ihracatıyla dünyada en çok hizmet ticareti fazlası sağlayan ilk 6 ülke arasında yer aldığını açıkladı.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-hizmet-ihracatinda-ilk-6-ulke-arasindayiz-948480.html" target="_blank">Haberi Oku</a>
+    </div>
+
+    <h2 class="category-title">DÜNYA</h2>
 
     <div class="news-card">
         <h3>Tahran'ın 'zafer' olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</h3>
@@ -113,24 +191,10 @@
     </div>
 
     <div class="news-card">
-        <h3>AP Türkiye Raportörü: 'Mevcut durumda müzakere yeniden başlayamaz'</h3>
-        <p>Avrupa Parlamentosu (AP), sert eleştiriler içeren Türkiye Raporu taslağını bugün görüşüyor. AP'nin İspanyol üyelerinden Nacho Sanchez Amor tarafından kaleme alınan belge, 17 Haziran'da yapılacak oylamanın ardından nihai halini alacak.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/clyer0d2mr5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
         <h3>IEA: Küresel petrol arzı mayısta ABD/İsrailİran Savaşı öncesinin 13,6 milyon varil altında kaldı</h3>
         <p>Uluslararası Enerji Ajansı (IEA), küresel petrol arzının mayısta önceki aya göre günlük yaklaşık 600 bin varil azalışla 94 milyon 470 bin varile gerilediğini ve bu seviyenin ABD/İsrail-İran Savaşı öncesi dönemin günlük yaklaşık 13 milyon 600 bin varil altında kaldığını bildirdi.</p>
         <div class="source">Kaynak: TRT Haber</div>
         <a href="https://www.trthaber.com/haber/dunya/iea-kuresel-petrol-arzi-mayista-abdisrail-iran-savasi-oncesinin-136-milyon-varil-altinda-kaldi-948474.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>MGK yarın toplanacak</h3>
-        <p>Milli Güvenlik Kurulu, Cumhurbaşkanı Erdoğan'ın başkanlığında Beştepe'de toplanacak. Toplantının öncelikli gündemi, ABD ile İran arasındaki mutabakat, Doğu Akdeniz'deki gelişmeler ve Terörsüz Türkiye süreci olacak. MGK toplantısında, diğer bölgesel ve uluslararası güvenlik konuları da ele alınacak.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/mgk-yarin-toplanacak-948470.html" target="_blank">Haberi Oku</a>
     </div>
 
     <div class="news-card">
@@ -141,33 +205,17 @@
     </div>
 
     <div class="news-card">
-        <h3>Neden gemiler henüz Hürmüz Boğazı'ndan geçmiyor?</h3>
-        <p>ABD Başkanı Donald Trump 14 Haziran Pazar günü İran ile yapılan anlaşmayı duyurup Hürmüz Boğazı'nın "açılışını" ilan ettiğinde, sosyal medya paylaşımını "Dünyanın gemileri, motorlarınızı çalıştırın. Petrol akmaya başlasın!" sözleriyle bitirdi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c30yqm2n237o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
         <h3>Can Holding soruşturması: Remzi Sanver tahliye edildi</h3>
         <p>Can Holding soruşturması kapsamında tutuklanan Remzi Sanver için tahliye kararı verildi. Sanver eski Bilgi Üniversitesi Rektörü ve Hür ve Kabul Edilmiş Masonlar Derneği Başkanı.</p>
         <div class="source">Kaynak: BBC Türkçe</div>
         <a href="https://www.bbc.com/turkce/articles/cr7x80ve57zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
 
-    <h2 class="category-title">EKONOMI</h2>
-
     <div class="news-card">
-        <h3>Tohumda ihracat rekoru: Yüzde 141 karşılama oranı</h3>
-        <p>Türkiye, tohumculuk sektöründe yürüttüğü AR-GE ve teknoloji odaklı çalışmalarla dış ticaret fazlası veren küresel bir aktör haline geldi. 2018'de yüzde 108 olan ihracatın ithalatı karşılama oranının 2025 yılı itibarıyla yüzde 141'e ulaştığı sektörde, temel hedef dünya tohum ticaretinde ilk 10'dan ilk 5 ülke arasına yükselmek olarak belirlendi.</p>
+        <h3>İran medyası: ABD ile varılan mutabakatın metni imzalar atıldıktan sonra yayımlanacak</h3>
+        <p>İran ile ABD arasında cuma günü imzalanması planlanan mutabakat metninin imza sonrası kamuoyuyla paylaşılacağı belirtildi.</p>
         <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/tohumda-ihracat-rekoru-yuzde-141-karsilama-orani-948471.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>Türkiye hamsi ihracatından 5 ayda 7,3 milyon dolar kazandı</h3>
-        <p>Türkiye'den ocak-mayıs döneminde yapılan hamsi ihracatının tutarı 7 milyon 306 bin 333 dolara ulaştı. Türkiye'nin 5 aylık hamsi ihracatında Belçika ilk sırada yer aldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/turkiye-hamsi-ihracatindan-5-ayda-73-milyon-dolar-kazandi-948467.html" target="_blank">Haberi Oku</a>
+        <a href="https://www.trthaber.com/haber/dunya/iran-medyasi-abd-ile-varilan-mutabakatin-metni-imzalar-atildiktan-sonra-yayimlanacak-948479.html" target="_blank">Haberi Oku</a>
     </div>
 
     <h2 class="category-title">GENEL</h2>
@@ -180,17 +228,24 @@
     </div>
 
     <div class="news-card">
+        <h3>CHP'de kritik gün: Olağanüstü kurultay imzaları sunuldu, Özel 'CHP'nin kalbini vermeyiz' dedi</h3>
+        <p>Mutlak butlan kararıyla CHP Genel Başkanlığı düşürülen partinin Grup Başkanı Özgür Özel "CHP'nin kalbini kimseye verme niyetimiz yok" derken, hukuki ve siyasi mücadeleyesi sürdüreceklerini vurguladı. Ancak Özel yeni parti üzerinde de çalıştıklarını söyledi. Bu arada, olağanüstü kurultay isteyen delegelerin imzaları Genel Merkez'e sunuldu.</p>
+        <div class="source">Kaynak: BBC Türkçe</div>
+        <a href="https://www.bbc.com/turkce/articles/cgevnnyxl84o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
+        <h3>Bakan Kurum, Haymana ve Gölbaşı belediye başkanlarını kabul etti</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, Haymana ve Gölbaşı Belediye Başkanlarını kabul etti. Görüşmelerde, ilçelerde yürütülen çalışmalar ele alındı.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/turkiye/bakan-kurum-haymana-ve-golbasi-belediye-baskanlarini-kabul-etti-948475.html" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
         <h3>Mülki idarede yeni sınıflandırma ve kadro düzenlemesi</h3>
         <p>İçişleri Bakanlığınca, bazı ilçelerin mülki idare amirleri atama ve yer değiştirme işlemlerinde esas alınan sınıflarında değişikliğe gidildi.</p>
         <div class="source">Kaynak: TRT Haber</div>
         <a href="https://www.trthaber.com/haber/gundem/mulki-idarede-yeni-siniflandirma-ve-kadro-duzenlemesi-948472.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>NATO Zirvesi öncesi istihbaratın geleceği MİA'da tartışıldı</h3>
-        <p>Milli İstihbarat Akademisi (MİA) tarafından düzenlenen programda, Ankara’da yapılacak 36. NATO Zirvesi öncesinde istihbaratın stratejik rolü, NATO 3.0 perspektifi ve küresel dayanıklılık konuları ele alındı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/nato-zirvesi-oncesi-istihbaratin-gelecegi-miada-tartisildi-948466.html" target="_blank">Haberi Oku</a>
     </div>
 
     <div class="news-card">
@@ -201,31 +256,31 @@
     </div>
 
     <div class="news-card">
+        <h3>Baykar-Leonardo ortak girişimine İtalya'dan şartlı onay: 'AB ve NATO çizgisi'</h3>
+        <p>İtalyan savunma ve havacılık şirketi Leonardo ile Türkiye'den Baykar arasında geçen yıl varılan ortak girişim anlaşmasına İtalya hükümetinden şartlı onay geldi. Övgü Pınar Roma'dan aktarıyor.</p>
+        <div class="source">Kaynak: BBC Türkçe</div>
+        <a href="https://www.bbc.com/turkce/articles/c05yn12524qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
+        <h3>2026 Dünya Kupası: İngiltere ilk maçına çıkıyor</h3>
+        <p>İngiltere, 2026 Dünya Kupası L Grubu'ndaki ilk maçında bu akşam Hırvatistan ile karşı karşıya gelecek. Takımın stratejisi ne olacak?</p>
+        <div class="source">Kaynak: BBC Türkçe</div>
+        <a href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
+        <h3>Bolu'da maden ocağında göçük</h3>
+        <p>Bolu'nun Mengen ilçesinde özel maden ocağında göçük meydana geldi.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/turkiye/boluda-maden-ocaginda-gocuk-948476.html" target="_blank">Haberi Oku</a>
+    </div>
+
+    <div class="news-card">
         <h3>Atatürk Baraj Göleti çevresindeki bazı kafeler su altında kaldı</h3>
         <p>Adıyaman'ın Kahta ilçesinde Atatürk Baraj Göleti'nde su seviyesinin yükselmesi sonucu kıyıdaki bazı kafe ve lokantalar kısmen su altında kaldı.</p>
         <div class="source">Kaynak: TRT Haber</div>
         <a href="https://www.trthaber.com/haber/turkiye/ataturk-baraj-goleti-cevresindeki-bazi-kafeler-su-altinda-kaldi-948473.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>Gökova Susamı tescillendi</h3>
-        <p>Muğla'nın Ula ilçesi ve çevresinde yetiştirilen Gökova Susamı, Türk Patent ve Marka Kurumunca coğrafi işaretle tescillendi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/kultur-sanat/gokova-susami-tescillendi-948469.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>Sivas'ta KKKA şüphesiyle tedavi gören 26 kişiden 5'i hayatını kaybetti</h3>
-        <p>Sivas'ta bu yıl Kırım Kongo Kanamalı Ateşi (KKKA) hastalığı şüphesiyle tedavi gören 26 kişiden 5'i hayatını kaybetti, 9 kişinin tedavisi ise sürüyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/sivasta-kkka-suphesiyle-tedavi-goren-26-kisiden-5i-hayatini-kaybetti-948468.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>Güney Kore, Koreler arası askeri sınır bölgesinde sivillere yönelik kısıtlamaları hafifletecek</h3>
-        <p>Güney Kore’nin, Koreler arası sınırda yer alan askeri kontrol altındaki bölgede sivillerin erişimine yönelik kısıtlamaları azaltacağı bildirildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/guney-kore-koreler-arasi-askeri-sinir-bolgesinde-sivillere-yonelik-kisitlamalari-hafifletecek-948465.html" target="_blank">Haberi Oku</a>
     </div>
 
     <h2 class="category-title">SPOR</h2>

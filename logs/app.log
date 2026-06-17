@@ -334,3 +334,63 @@
 2026-06-17 12:00:30,765 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
 2026-06-17 12:00:30,765 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
 2026-06-17 12:00:30,765 | INFO | Yayýn metni oluþturuldu
+2026-06-17 13:08:12,484 | INFO | Uygulama baþlatýldý
+2026-06-17 13:08:12,485 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-17 13:08:12,778 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:08:12,778 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:08:12,778 | INFO | RSS çekiliyor: TRT Haber
+2026-06-17 13:08:13,482 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:08:13,482 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:08:13,482 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-17 13:08:13,920 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:08:13,921 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:08:13,928 | INFO | 20 adet ham haber çekildi
+2026-06-17 13:08:13,928 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-17 13:08:13,928 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
+2026-06-17 13:08:13,928 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
+2026-06-17 13:08:13,928 | INFO | Yayýn metni oluþturuldu
+2026-06-17 13:14:35,532 | INFO | Uygulama baþlatýldý
+2026-06-17 13:14:35,533 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-17 13:14:36,477 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:14:36,477 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:14:36,477 | INFO | RSS çekiliyor: TRT Haber
+2026-06-17 13:14:37,194 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:14:37,194 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:14:37,194 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-17 13:14:37,751 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:14:37,751 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:14:37,758 | INFO | 20 adet ham haber çekildi
+2026-06-17 13:14:37,758 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-17 13:14:37,759 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
+2026-06-17 13:14:37,759 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
+2026-06-17 13:14:37,759 | INFO | Yayýn metni oluþturuldu
+2026-06-17 13:17:58,863 | INFO | Uygulama baþlatýldý
+2026-06-17 13:17:58,863 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-17 13:17:59,380 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:17:59,380 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:17:59,381 | INFO | RSS çekiliyor: TRT Haber
+2026-06-17 13:17:59,942 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:17:59,943 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:17:59,943 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-17 13:18:00,390 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:18:00,390 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:18:00,398 | INFO | 20 adet ham haber çekildi
+2026-06-17 13:18:00,398 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-17 13:18:00,398 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
+2026-06-17 13:18:00,398 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
+2026-06-17 13:18:00,398 | INFO | Yayýn metni oluþturuldu
+2026-06-17 13:18:42,673 | INFO | Uygulama baþlatýldý
+2026-06-17 13:18:42,675 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-17 13:18:43,027 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:18:43,027 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-17 13:18:43,028 | INFO | RSS çekiliyor: TRT Haber
+2026-06-17 13:18:43,653 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:18:43,653 | INFO | RSS tamamlandý: TRT Haber
+2026-06-17 13:18:43,653 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-17 13:18:44,018 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:18:44,018 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-17 13:18:44,026 | INFO | 20 adet ham haber çekildi
+2026-06-17 13:18:44,026 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-17 13:18:44,026 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
+2026-06-17 13:18:44,027 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
+2026-06-17 13:18:44,027 | INFO | Yayýn metni oluþturuldu

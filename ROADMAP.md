@@ -2,10 +2,13 @@
 
 ## Faz 1 - MVP
 
-- [ ] RSS haber çekme
-- [ ] Haber kaydetme
-- [ ] Haber filtreleme
-- [ ] Yayın metni oluşturma
+- [x] RSS haber çekme
+- [x] Haber kaydetme
+- [x] Haber filtreleme
+- [x] Yayın metni oluşturma
+- [x] Günlük JSON arşivi
+- [x] Günlük TXT yayın metni
+- [x] HTML haber çıktısı
 
 Amaç:
 Metin tabanlı haber bülteni
@@ -15,8 +18,10 @@ Metin tabanlı haber bülteni
 ## Faz 2 - AI Özetleme
 
 - [ ] OpenAI entegrasyonu
-- [ ] Tekrarlı haber temizleme
-- [ ] Haber önem puanlama
+- [x] Tekrarlı haber temizleme
+- [x] Haber önem puanlama
+- [ ] AI destekli haber özeti
+- [ ] Haber başlıklarını ve özetlerini model ile iyileştirme
 
 Amaç:
 Gerçek AI haber özeti
@@ -50,7 +55,7 @@ YouTube videosu
 
 - [ ] Haber arşivi
 - [ ] Video arşivi
-- [ ] Kategori sistemi
+- [x] Kategori sistemi
 - [ ] Arama
 
 Amaç:

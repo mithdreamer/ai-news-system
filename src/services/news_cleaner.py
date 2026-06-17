@@ -13,6 +13,15 @@ def clean_html(text):
 
     return clean_text
 
+def normalize_punctuation(text):
+    if not text:
+        return ""
+
+    text = text.replace("–", "-")
+    text = text.replace("—", "-")
+    text = text.replace("−", "-")
+
+    return text
 
 def clean_spaces(text):
     if not text:
@@ -25,12 +34,16 @@ def clean_spaces(text):
 
 def clean_news_item(item):
     item["title"] = clean_spaces(
-        item.get("title", "")
+        normalize_punctuation(
+            item.get("title", "")
     )
+)
 
     item["summary"] = clean_spaces(
-        clean_html(
-            item.get("summary", "")
+        normalize_punctuation(
+            clean_html(
+                item.get("summary", "")
+            )
         )
     )
 

@@ -38,6 +38,18 @@ def generate_news_html(news_items, stats):
             font-weight: bold;
         }
 
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
         .category-title {
             margin-top: 40px;
             border-bottom: 2px solid #222;
@@ -51,10 +63,18 @@ def generate_news_html(news_items, stats):
             border-radius: 8px;
         }
 
+        .news-card h3 {
+            margin-top: 0;
+        }
+
         .source {
             font-size: 13px;
             color: #777;
             margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
         }
     </style>
 </head>
@@ -76,6 +96,30 @@ def generate_news_html(news_items, stats):
 
     html += """
     </div>
+"""
+
+    top_news = sorted(
+        news_items,
+        key=lambda x: x.get("importance_score", 0),
+        reverse=True
+    )[:5]
+
+    html += """
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+"""
+
+    for item in top_news:
+        html += f"""
+        <li>
+            <a href="{item.get("link", "")}" target="_blank">
+                <strong>{item.get("title", "")}</strong>
+            </a>
+        </li>
+"""
+
+    html += """
+    </ul>
 """
 
     grouped_news = {}

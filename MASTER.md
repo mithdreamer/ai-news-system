@@ -67,14 +67,27 @@ PostgreSQL
 
 ## Ana Modüller
 
-news_fetcher.py
+- `news_fetcher.py` - RSS kaynaklarından haber çeker
+- `news_cleaner.py` - HTML etiketlerini ve gereksiz boşlukları temizler
+- `news_filter.py` - kısa/eksik haberleri, tekrar başlıkları ve önem puanını yönetir
+- `news_categorizer.py` - haberleri kategoriye ayırır
+- `statistics.py` - kategori bazlı istatistik üretir
+- `script_generator.py` - günlük yayın metni üretir
+- `html_generator.py` - istatistikli ve kategorili HTML haber paneli üretir
+- `ai_summarizer.py` - OpenAI özeti için ayrıldı
+- `text_to_speech.py` - seslendirme fazı için ayrıldı
+- `video_creator.py` - video üretimi fazı için ayrıldı
+- `publisher.py` - yayınlama otomasyonu için ayrıldı
 
-ai_summarizer.py
+---
 
-script_generator.py
+## Güncel Çıktılar
 
-text_to_speech.py
-
-video_creator.py
-
-publisher.py
+- `data/raw/latest-news.json`
+- `data/raw/YYYY-MM-DD-news.json`
+- `data/stats/latest-statistics.json`
+- `data/stats/YYYY-MM-DD-statistics.json`
+- `outputs/scripts/daily-news-script.txt`
+- `outputs/scripts/YYYY-MM-DD-script.txt`
+- `outputs/html/daily-news.html`
+- `outputs/html/YYYY-MM-DD-news.html`
