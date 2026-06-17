@@ -33,11 +33,30 @@ def main():
     latest_json_file = PROJECT_ROOT / "data" / "raw" / "latest-news.json"
     archive_json_file = PROJECT_ROOT / "data" / "raw" / f"{today}-news.json"
 
+    latest_stats_file = (
+        PROJECT_ROOT
+        / "data"
+        / "stats"
+        / "latest-statistics.json"
+    )
+
+    archive_stats_file = (
+        PROJECT_ROOT
+        / "data"
+        / "stats"
+        / f"{today}-statistics.json"
+    )
+
     latest_script_file = PROJECT_ROOT / "outputs" / "scripts" / "daily-news-script.txt"
     archive_script_file = PROJECT_ROOT / "outputs" / "scripts" / f"{today}-script.txt"
 
     save_json(categorized_news, latest_json_file)
     save_json(categorized_news, archive_json_file)
+
+    stats = generate_statistics(categorized_news)
+
+    save_json(stats, latest_stats_file)
+    save_json(stats, archive_stats_file)
 
     script = generate_news_script(categorized_news)
 
@@ -47,13 +66,22 @@ def main():
     save_text(script, archive_script_file)
     latest_html_file = PROJECT_ROOT / "outputs" / "html" / "daily-news.html"
     archive_html_file = PROJECT_ROOT / "outputs" / "html" / f"{today}-news.html"
-    html = generate_news_html(categorized_news)
+    html = generate_news_html(categorized_news, stats)
 
     save_text(html, latest_html_file)
     save_text(html, archive_html_file)
 
     stats = generate_statistics(
         categorized_news
+    )
+    save_json(
+        stats,
+        latest_stats_file
+    )
+
+    save_json(
+        stats,
+        archive_stats_file
     )
 
     print("\n--- HABER İSTATİSTİKLERİ ---")
@@ -79,6 +107,7 @@ def main():
     print(f"Arşiv TXT  : {archive_script_file}")
     print(f"Güncel HTML: {latest_html_file}")
     print(f"Arşiv HTML : {archive_html_file}")
+    print(f"İstatistik JSON: {latest_stats_file}")
 
 
 if __name__ == "__main__":

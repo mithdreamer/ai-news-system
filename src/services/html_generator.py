@@ -1,4 +1,4 @@
-def generate_news_html(news_items):
+def generate_news_html(news_items, stats):
     html = """
 <!DOCTYPE html>
 <html lang="tr">
@@ -34,10 +34,50 @@ def generate_news_html(news_items):
         a {
             color: #0066cc;
         }
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 16px;
+            border-radius: 8px;
+            min-width: 120px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .stat-card span {
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <h1>Günün Haberleri</h1>
+"""
+    html += """
+    <div class="stats-grid">
+"""
+
+    for key, value in stats.items():
+        html += f"""
+        <div class="stat-card">
+            <strong>{key}</strong>
+            <span>{value}</span>
+        </div>
+"""
+
+    html += """
+    </div>
 """
 
     for item in news_items:

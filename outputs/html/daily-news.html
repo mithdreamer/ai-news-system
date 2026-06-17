@@ -33,10 +33,64 @@
         a {
             color: #0066cc;
         }
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 16px;
+            border-radius: 8px;
+            min-width: 120px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .stat-card span {
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <h1>Günün Haberleri</h1>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+    </div>
 
     <div class="news-card">
         <div class="category">dünya</div>
@@ -71,11 +125,19 @@
     </div>
 
     <div class="news-card">
-        <div class="category">dünya</div>
-        <h2>Bakan Yumaklı: Daha yeşil bir Türkiye için çalışmaya devam edeceğiz</h2>
-        <p>Tarım ve Orman Bakanı İbrahim Yumaklı, "Daha dirençli, daha bereketli ve daha yeşil bir Türkiye için milletimizle omuz omuza, aynı azim ve kararlılıkla çalışmaya devam edeceğiz" dedi.</p>
+        <div class="category">ekonomi</div>
+        <h2>Tohumda ihracat rekoru: Yüzde 141 karşılama oranı</h2>
+        <p>Türkiye, tohumculuk sektöründe yürüttüğü AR-GE ve teknoloji odaklı çalışmalarla dış ticaret fazlası veren küresel bir aktör haline geldi. 2018'de yüzde 108 olan ihracatın ithalatı karşılama oranının 2025 yılı itibarıyla yüzde 141'e ulaştığı sektörde, temel hedef dünya tohum ticaretinde ilk 10'dan ilk 5 ülke arasına yükselmek olarak belirlendi.</p>
         <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/bakan-yumakli-daha-yesil-bir-turkiye-icin-calismaya-devam-edecegiz-948460.html" target="_blank">Haberi oku</a>
+        <a href="https://www.trthaber.com/haber/ekonomi/tohumda-ihracat-rekoru-yuzde-141-karsilama-orani-948471.html" target="_blank">Haberi oku</a>
+    </div>
+
+    <div class="news-card">
+        <div class="category">dünya</div>
+        <h2>MGK yarın toplanacak</h2>
+        <p>Milli Güvenlik Kurulu, Cumhurbaşkanı Erdoğan'ın başkanlığında Beştepe'de toplanacak. Toplantının öncelikli gündemi, ABD ile İran arasındaki mutabakat, Doğu Akdeniz'deki gelişmeler ve Terörsüz Türkiye süreci olacak. MGK toplantısında, diğer bölgesel ve uluslararası güvenlik konuları da ele alınacak.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/gundem/mgk-yarin-toplanacak-948470.html" target="_blank">Haberi oku</a>
     </div>
 
     <div class="news-card">
@@ -111,6 +173,14 @@
     </div>
 
     <div class="news-card">
+        <div class="category">genel</div>
+        <h2>Mülki idarede yeni sınıflandırma ve kadro düzenlemesi</h2>
+        <p>İçişleri Bakanlığınca, bazı ilçelerin mülki idare amirleri atama ve yer değiştirme işlemlerinde esas alınan sınıflarında değişikliğe gidildi.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/gundem/mulki-idarede-yeni-siniflandirma-ve-kadro-duzenlemesi-948472.html" target="_blank">Haberi oku</a>
+    </div>
+
+    <div class="news-card">
         <div class="category">ekonomi</div>
         <h2>Türkiye hamsi ihracatından 5 ayda 7,3 milyon dolar kazandı</h2>
         <p>Türkiye'den ocak-mayıs döneminde yapılan hamsi ihracatının tutarı 7 milyon 306 bin 333 dolara ulaştı. Türkiye'nin 5 aylık hamsi ihracatında Belçika ilk sırada yer aldı.</p>
@@ -124,22 +194,6 @@
         <p>Milli İstihbarat Akademisi (MİA) tarafından düzenlenen programda, Ankara’da yapılacak 36. NATO Zirvesi öncesinde istihbaratın stratejik rolü, NATO 3.0 perspektifi ve küresel dayanıklılık konuları ele alındı.</p>
         <div class="source">Kaynak: TRT Haber</div>
         <a href="https://www.trthaber.com/haber/gundem/nato-zirvesi-oncesi-istihbaratin-gelecegi-miada-tartisildi-948466.html" target="_blank">Haberi oku</a>
-    </div>
-
-    <div class="news-card">
-        <div class="category">genel</div>
-        <h2>MİT'ten DEAŞ'a darbe: Sözde sorumlu Ahmet Kazancı yakalandı</h2>
-        <p>Milli İstihbarat Teşkilatı (MİT), terör örgütü DEAŞ'ın sözde Horasan Vilayeti medya yapılanmasına yönelik operasyonunda, örgütün sözde Türkiye medya sorumlusu "Abu Ubeyde/Abu İbrahim" kod adlı Ahmet Kazancı'yı sınır bölgesinde yakaladı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/mitten-deasa-darbe-sozde-sorumlu-ahmet-kazanci-yakalandi-948462.html" target="_blank">Haberi oku</a>
-    </div>
-
-    <div class="news-card">
-        <div class="category">dünya</div>
-        <h2>Akkuyu NGS'de boru hattı kaynağı başladı</h2>
-        <p>Rusya Devlet Nükleer Enerji Kuruluşu Rosatom tarafından inşa edilen Akkuyu Nükleer Güç Santrali'nin (NGS) 2. güç ünitesinde ana sirkülasyon boru hattının (ASBH) kaynak işlemlerine başlandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/akkuyu-ngsde-boru-hatti-kaynagi-basladi-948459.html" target="_blank">Haberi oku</a>
     </div>
 
     <div class="news-card">
@@ -160,6 +214,30 @@
 
     <div class="news-card">
         <div class="category">genel</div>
+        <h2>Atatürk Baraj Göleti çevresindeki bazı kafeler su altında kaldı</h2>
+        <p>Adıyaman'ın Kahta ilçesinde Atatürk Baraj Göleti'nde su seviyesinin yükselmesi sonucu kıyıdaki bazı kafe ve lokantalar kısmen su altında kaldı.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/turkiye/ataturk-baraj-goleti-cevresindeki-bazi-kafeler-su-altinda-kaldi-948473.html" target="_blank">Haberi oku</a>
+    </div>
+
+    <div class="news-card">
+        <div class="category">genel</div>
+        <h2>Gökova Susamı tescillendi</h2>
+        <p>Muğla'nın Ula ilçesi ve çevresinde yetiştirilen Gökova Susamı, Türk Patent ve Marka Kurumunca coğrafi işaretle tescillendi.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/kultur-sanat/gokova-susami-tescillendi-948469.html" target="_blank">Haberi oku</a>
+    </div>
+
+    <div class="news-card">
+        <div class="category">genel</div>
+        <h2>Sivas'ta KKKA şüphesiyle tedavi gören 26 kişiden 5'i hayatını kaybetti</h2>
+        <p>Sivas'ta bu yıl Kırım Kongo Kanamalı Ateşi (KKKA) hastalığı şüphesiyle tedavi gören 26 kişiden 5'i hayatını kaybetti, 9 kişinin tedavisi ise sürüyor.</p>
+        <div class="source">Kaynak: TRT Haber</div>
+        <a href="https://www.trthaber.com/haber/turkiye/sivasta-kkka-suphesiyle-tedavi-goren-26-kisiden-5i-hayatini-kaybetti-948468.html" target="_blank">Haberi oku</a>
+    </div>
+
+    <div class="news-card">
+        <div class="category">genel</div>
         <h2>Güney Kore, Koreler arası askeri sınır bölgesinde sivillere yönelik kısıtlamaları hafifletecek</h2>
         <p>Güney Kore’nin, Koreler arası sınırda yer alan askeri kontrol altındaki bölgede sivillerin erişimine yönelik kısıtlamaları azaltacağı bildirildi.</p>
         <div class="source">Kaynak: TRT Haber</div>
@@ -172,30 +250,6 @@
         <p>24 ilde 32 ayrı organize suç örgütüne yönelik düzenlenen operasyonlarda 313 şüpheli yakalandı. Şüphelilerden 197'si tutuklandı.</p>
         <div class="source">Kaynak: TRT Haber</div>
         <a href="https://www.trthaber.com/haber/turkiye/24-ilde-32-ayri-organize-suc-orgutune-operasyon-948463.html" target="_blank">Haberi oku</a>
-    </div>
-
-    <div class="news-card">
-        <div class="category">ekonomi</div>
-        <h2>TÜPRAŞ, en büyük sanayi kuruluşu oldu</h2>
-        <p>İSO'nun Türkiye'nin 500 Büyük Sanayi Kuruluşu 2025 Araştırması'na göre, TÜPRAŞ, üretimden satışlarda 698,8 milyar lirayla en büyük sanayi kuruluşu oldu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/tupras-en-buyuk-sanayi-kurulusu-oldu-948461.html" target="_blank">Haberi oku</a>
-    </div>
-
-    <div class="news-card">
-        <div class="category">ekonomi</div>
-        <h2>İnşaat üretim endeksi arttı</h2>
-        <p>İnşaat üretim endeksi, nisanda yıllık bazda yüzde 2,1 artış gösterdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/insaat-uretim-endeksi-artti-948458.html" target="_blank">Haberi oku</a>
-    </div>
-
-    <div class="news-card">
-        <div class="category">genel</div>
-        <h2>Denizli'de uyuşturucu operasyonu: Baro Başkanı da gözaltına alındı</h2>
-        <p>Denizli'de düzenlenen uyuşturucu operasyonunda Denizli Baro Başkanı Ufuk Kök'ün de aralarında bulunduğu 12 şüpheli gözaltına alındı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/denizlide-uyusturucu-operasyonu-baro-baskani-da-gozaltina-alindi-948457.html" target="_blank">Haberi oku</a>
     </div>
 
 </body>
