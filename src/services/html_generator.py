@@ -8,32 +8,11 @@ def generate_news_html(news_items, stats):
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             line-height: 1.6;
         }
 
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .category {
-            font-size: 13px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-        }
-
-        a {
-            color: #0066cc;
-        }
         .stats-grid {
             display: flex;
             flex-wrap: wrap;
@@ -43,27 +22,46 @@ def generate_news_html(news_items, stats):
 
         .stat-card {
             border: 1px solid #ddd;
-            padding: 12px 16px;
+            padding: 12px 20px;
             border-radius: 8px;
-            min-width: 120px;
+            min-width: 140px;
             background: #f7f7f7;
         }
 
         .stat-card strong {
             display: block;
-            font-size: 13px;
-            color: #555;
+            color: #444;
         }
 
         .stat-card span {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
         }
     </style>
 </head>
 <body>
     <h1>Günün Haberleri</h1>
 """
+
     html += """
     <div class="stats-grid">
 """
@@ -80,14 +78,28 @@ def generate_news_html(news_items, stats):
     </div>
 """
 
+    grouped_news = {}
+
     for item in news_items:
+        category = item.get("category", "genel")
+
+        if category not in grouped_news:
+            grouped_news[category] = []
+
+        grouped_news[category].append(item)
+
+    for category, items in grouped_news.items():
         html += f"""
+    <h2 class="category-title">{category.upper()}</h2>
+"""
+
+        for item in items:
+            html += f"""
     <div class="news-card">
-        <div class="category">{item.get("category", "genel")}</div>
-        <h2>{item.get("title", "")}</h2>
+        <h3>{item.get("title", "")}</h3>
         <p>{item.get("summary", "")}</p>
         <div class="source">Kaynak: {item.get("source", "")}</div>
-        <a href="{item.get("link", "")}" target="_blank">Haberi oku</a>
+        <a href="{item.get("link", "")}" target="_blank">Haberi Oku</a>
     </div>
 """
 
