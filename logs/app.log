@@ -394,3 +394,33 @@
 2026-06-17 13:18:44,026 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-17-news.json
 2026-06-17 13:18:44,027 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-17-script.txt
 2026-06-17 13:18:44,027 | INFO | Yayýn metni oluþturuldu
+2026-06-19 13:08:27,450 | INFO | Uygulama baþlatýldý
+2026-06-19 13:08:27,451 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-19 13:08:27,949 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-19 13:08:27,949 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-19 13:08:27,949 | INFO | RSS çekiliyor: TRT Haber
+2026-06-19 13:08:28,454 | INFO | RSS tamamlandý: TRT Haber
+2026-06-19 13:08:28,454 | INFO | RSS tamamlandý: TRT Haber
+2026-06-19 13:08:28,454 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-19 13:08:28,844 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-19 13:08:28,845 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-19 13:08:28,850 | INFO | 20 adet ham haber çekildi
+2026-06-19 13:08:28,850 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-19 13:08:28,850 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-19-news.json
+2026-06-19 13:08:28,850 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-19-script.txt
+2026-06-19 13:08:28,850 | INFO | Yayýn metni oluþturuldu
+2026-06-19 13:16:58,074 | INFO | Uygulama baþlatýldý
+2026-06-19 13:16:58,074 | INFO | RSS çekiliyor: BBC Türkçe
+2026-06-19 13:16:58,240 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-19 13:16:58,241 | INFO | RSS tamamlandý: BBC Türkçe
+2026-06-19 13:16:58,241 | INFO | RSS çekiliyor: TRT Haber
+2026-06-19 13:16:58,584 | INFO | RSS tamamlandý: TRT Haber
+2026-06-19 13:16:58,584 | INFO | RSS tamamlandý: TRT Haber
+2026-06-19 13:16:58,584 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-06-19 13:16:58,881 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-19 13:16:58,882 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-06-19 13:16:58,886 | INFO | 20 adet ham haber çekildi
+2026-06-19 13:16:58,886 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-06-19 13:16:58,886 | INFO | Arþiv JSON oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\data\raw\2026-06-19-news.json
+2026-06-19 13:16:58,886 | INFO | Arþiv TXT oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\scripts\2026-06-19-script.txt
+2026-06-19 13:16:58,886 | INFO | Yayýn metni oluþturuldu
