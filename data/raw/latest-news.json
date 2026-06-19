@@ -5,7 +5,7 @@
     "summary": "ABD Başkanı Donald Trump ile İran Cumhurbaşkanı Mesud Pezeşkiyan tarafından imzalanan mutabakat zaptı, ABD'nin 28 Şubat'ta İran'a saldırma yönünde aldığı hatalı kararın siyasi, askeri ve ekonomik sonuçlarını ortaya koyuyor.",
     "link": "https://www.bbc.com/turkce/articles/cly0vj7vp77o?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 02:22:12 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241180",
+    "fetched_at": "2026-06-19T13:26:33.889381",
     "importance_score": 5,
     "category": "ekonomi"
   },
@@ -15,7 +15,7 @@
     "summary": "Dışişleri Bakanı Hakan Fidan'ın 16-17 Haziran'daki Rusya ziyareti, Ankara-Moskova arasında son dönemlerde yapılan en yoğun temaslara sahne oldu. Ziyaretin Ankara'da Temmuz ayında düzenlenecek NATO zirvesi öncesinde yapılması dikkat çekti.",
     "link": "https://www.bbc.com/turkce/articles/c8r2e5mkvrvo?at_medium=RSS&at_campaign=rss",
     "published": "Thu, 18 Jun 2026 15:04:11 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241192",
+    "fetched_at": "2026-06-19T13:26:33.889388",
     "importance_score": 3,
     "category": "dünya"
   },
@@ -25,7 +25,7 @@
     "summary": "Hollanda'daki Leiden Üniversitesi tarafından yapılan yeni bir araştırma, küresel tüketimin zirvesindeki yüzde 10'luk kesimin çevreye verdiği zararın ekonomik boyutunu gözler önüne serdi. Bilim insanları, bu varlıklı grubun yol açtığı çevre tahribatının topluma yıllık maliyetinin 1,7 ila 5,7 trilyon dolar arasında olduğunu hesapladı.",
     "link": "https://www.trthaber.com/haber/dunya/en-zenginlerin-cevreye-yillik-maliyeti-57-trilyon-dolar-948712.html",
     "published": "Fri, 19 Jun 2026 12:04:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584625",
+    "fetched_at": "2026-06-19T13:26:34.257091",
     "importance_score": 3,
     "category": "ekonomi"
   },
@@ -35,7 +35,7 @@
     "summary": "ABD ve Avrupa’dan araştırmacıların geliştirdiği yeni bir bilgisayar modeli, Kaliforniya'nın en korkulan deprem hatlarındaki tektonik baskının \"sıra dışı derecede yüksek\" olduğunu ortaya koydu. Bilim insanları, bölgedeki fay segmentlerindeki stres seviyelerinin son bin yılın en yüksek değerlerine ulaştığını ya da bu değerleri aştığını belirtiyor.",
     "link": "https://www.trthaber.com/haber/dunya/kaliforniyadaki-tehlikeli-fay-hatlari-son-1000-yilin-en-yuksek-basincinda-948710.html",
     "published": "Fri, 19 Jun 2026 11:40:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584633",
+    "fetched_at": "2026-06-19T13:26:34.257096",
     "importance_score": 3,
     "category": "dünya"
   },
@@ -45,19 +45,9 @@
     "summary": "ABD'li iş insanı Elon Musk'ın üst yöneticisi (CEO) olduğu uzay, havacılık ve yapay zeka şirketi SpaceX'in Nasdaq borsasındaki ilk haftası, halka arz büyüklüğü ve piyasa değerindeki tırmanışla dikkati çekerken şirketin hisseleri bu dönemde toplam yüzde 37 değer kazandı.",
     "link": "https://www.trthaber.com/haber/dunya/spacexin-hisseleri-borsadaki-ilk-haftasinda-yuzde-37-yukseldi-948716.html",
     "published": "Fri, 19 Jun 2026 12:54:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584612",
+    "fetched_at": "2026-06-19T13:26:34.257067",
     "importance_score": 2,
     "category": "ekonomi"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Burhanettin Duran: Bir yatırım daha milletimizin hizmetine sunuluyor",
-    "summary": "İletişim Başkanı Burhanettin Duran, Cumhurbaşkanı Recep Tayyip Erdoğan'ın katılımıyla bugün açılışı gerçekleştirilecek Halkalı-Arnavutköy Metro Hattı'na ilişkin, \"İstanbul’un ulaşım ağını güçlendiren bir yatırım daha milletimizin hizmetine sunuluyor, Türkiye hızlanıyor. \" dedi.",
-    "link": "https://www.trthaber.com/haber/gundem/burhanettin-duran-bir-yatirim-daha-milletimizin-hizmetine-sunuluyor-948707.html",
-    "published": "Fri, 19 Jun 2026 11:34:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584645",
-    "importance_score": 2,
-    "category": "genel"
   },
   {
     "source": "BBC Türkçe",
@@ -65,7 +55,17 @@
     "summary": "17 Haziran Çarşamba günü İstanbul Maltepe'de kimliği belirsiz kişilerce kaçırılan İstanbul Büyükşehir Belediyesi Kültür A.Ş. Genel Müdür Yardımcısı Vekili Erhan Karaal polis ekiplerinin çalışması sonucu bulundu.",
     "link": "https://www.bbc.com/turkce/articles/cwylwd75k70o?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 08:14:33 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241172",
+    "fetched_at": "2026-06-19T13:26:33.889376",
+    "importance_score": 1,
+    "category": "dünya"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "Görüşme ertelendi: İsrail'in Lübnan saldırıları ABDİran barış masasını dağıtır mı?",
+    "summary": "ABD ile Iran arasında imzalanan tarihi ateşkes anlaşmasının ardından İsviçre'de yapılması planlanan kritik teknik görüşmeler, İsrail'in Lübnan'a yönelik askeri operasyonlarını sürdürmesi nedeniyle ertelendi. Tahran yönetiminin Lübnan'daki saldırılar durana kadar heyetini göndermeme kararı alması, barış planının çökebileceği endişesini doğurdu.",
+    "link": "https://www.trthaber.com/haber/dunya/gorusme-ertelendi-israilin-lubnan-saldirilari-abd-iran-baris-masasini-dagitir-mi-948718.html",
+    "published": "Fri, 19 Jun 2026 13:04:00 +0300",
+    "fetched_at": "2026-06-19T13:26:34.257055",
     "importance_score": 1,
     "category": "dünya"
   },
@@ -75,7 +75,7 @@
     "summary": "2011'deki Tohoku depreminde yerin derinliklerine inip geri yansıyan sismik bir dalganın, kilitli levhaları tetikleyerek Japonya'yı kalıcı olarak doğuya ittiği keşfedildi.",
     "link": "https://www.trthaber.com/haber/dunya/bilim-dunyasinda-bir-ilk-dunya-cekirdegi-japonyayi-yerinden-oynatti-948711.html",
     "published": "Fri, 19 Jun 2026 11:51:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584629",
+    "fetched_at": "2026-06-19T13:26:34.257094",
     "importance_score": 1,
     "category": "genel"
   },
@@ -85,7 +85,7 @@
     "summary": "Yeni trafik düzenlemesinin 27 Şubat'ta yürürlüğe girmesinin ardından trafikte \"makas atma\" tespiti sayısı 27 Şubat-31 Mayıs döneminde geçen yılın aynı dönemine kıyasla yüzde 93 azalarak 47 bin 380'den 3 bin 306'ya düştü.",
     "link": "https://www.trthaber.com/haber/turkiye/trafikte-makas-ihlalleri-yuzde-93-geriledi-948709.html",
     "published": "Fri, 19 Jun 2026 11:41:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584637",
+    "fetched_at": "2026-06-19T13:26:34.257098",
     "importance_score": 1,
     "category": "genel"
   },
@@ -95,7 +95,7 @@
     "summary": "Cumhurbaşkanı Recep Tayyip Erdoğan, Halkalı-İstanbul Havalimanı Metro Hattı'nın açılışını gerçekleştirecek.",
     "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-halkali-istanbul-havalimani-metro-hattinin-acilisini-yapacak-948708.html",
     "published": "Fri, 19 Jun 2026 11:39:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584641",
+    "fetched_at": "2026-06-19T13:26:34.257100",
     "importance_score": 1,
     "category": "gümrük"
   },
@@ -105,7 +105,7 @@
     "summary": "Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar",
     "link": "https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss",
     "published": "Thu, 04 Jun 2026 07:01:41 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241145",
+    "fetched_at": "2026-06-19T13:26:33.889353",
     "importance_score": 0,
     "category": "genel"
   },
@@ -115,7 +115,7 @@
     "summary": "ABD ve İran arasındaki doğrudan müzakereler, Başkan Yardımcısı JD Vance'in İsviçre'ye planlanan gezisini ertelemesinin ardından ertelendi.",
     "link": "https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 09:53:11 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241159",
+    "fetched_at": "2026-06-19T13:26:33.889368",
     "importance_score": 0,
     "category": "dünya"
   },
@@ -125,7 +125,7 @@
     "summary": "CHP'li belediyelere yönelik operasyonlara bir yenisi daha eklendi. Adalar Belediyesi'ne yönelik başlatılan soruşturma kapsamında sabah saatlerinde İstanbul dahil dört ilde operasyon düzenlendi.",
     "link": "https://www.bbc.com/turkce/articles/ce95vy3dk0zo?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 09:58:19 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241164",
+    "fetched_at": "2026-06-19T13:26:33.889372",
     "importance_score": 0,
     "category": "genel"
   },
@@ -135,7 +135,7 @@
     "summary": "Mersin'de Silifke Belediyesi'ne 19 Haziran sabah saatlerinde jandarma tarafından operasyon düzenlendi. Belediye Başkanı Mustafa Turgut ve bazı belediye çalışanları gözaltına alındı.",
     "link": "https://www.bbc.com/turkce/articles/cpwe70eejqxo?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 08:06:15 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241168",
+    "fetched_at": "2026-06-19T13:26:33.889374",
     "importance_score": 0,
     "category": "dünya"
   },
@@ -145,7 +145,7 @@
     "summary": "Bazıları hesabı bölmekte ısrar ediyor, diğerleri teklif eden kişinin ödemesi gerektiğini söylüyor.",
     "link": "https://www.bbc.com/turkce/articles/c0ry10k4x51o?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 02:13:04 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241176",
+    "fetched_at": "2026-06-19T13:26:33.889379",
     "importance_score": 0,
     "category": "genel"
   },
@@ -155,7 +155,7 @@
     "summary": "Süresiz açlık grevine başlayan Özel Sektör Öğretmenleri Sendikası ve mülakat mağduru öğretmenlerden ikisi 18 Haziran'da sağlık durumlarının kötüleşmesi nedeniyle hastaneye kaldırıldı.",
     "link": "https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&at_campaign=rss",
     "published": "Fri, 19 Jun 2026 00:08:10 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241184",
+    "fetched_at": "2026-06-19T13:26:33.889383",
     "importance_score": 0,
     "category": "dünya"
   },
@@ -165,7 +165,7 @@
     "summary": "İzmir Büyükşehir Belediye Başkanı Cemil Tugay CHP'den istifa kararını \"büyük bir üzüntüyle ve bir gün geri dönebilme umuduyla Cumhuriyet Halk Partisi üyeliğimden istifa ediyorum\" sözleriyle duyurdu.",
     "link": "https://www.bbc.com/turkce/articles/c5yz88jz3nro?at_medium=RSS&at_campaign=rss",
     "published": "Thu, 18 Jun 2026 22:25:01 GMT",
-    "fetched_at": "2026-06-19T13:16:58.241188",
+    "fetched_at": "2026-06-19T13:26:33.889385",
     "importance_score": 0,
     "category": "genel"
   },
@@ -175,7 +175,7 @@
     "summary": "Mardin'in Midyat ilçesinde parke taşı döşeme çalışmasında bulunan Süryanice yazıtlı tarihi taş bloklar üzerindeki incelemede, en eski kitabenin 722 yılına ait olduğu belirlendi.",
     "link": "https://www.trthaber.com/haber/turkiye/yol-calismasinda-bulunan-tas-bloklarda-722-yilina-ait-yazit-ortaya-cikti-948717.html",
     "published": "Fri, 19 Jun 2026 12:55:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584603",
+    "fetched_at": "2026-06-19T13:26:34.257063",
     "importance_score": 0,
     "category": "genel"
   },
@@ -185,7 +185,7 @@
     "summary": "\"İmamoğlu çıkar amaçlı suç örgütü\"ne yönelik soruşturmalar kapsamında, İstanbul merkezli 3 ildeki \"usulsüz iskan raporu\" operasyonunda gözaltına alınan 27 şüpheliden 12'si tutuklandı.",
     "link": "https://www.trthaber.com/haber/turkiye/istanbul-merkezli-usulsuz-iskan-operasyonunda-12-tutuklama-948715.html",
     "published": "Fri, 19 Jun 2026 12:51:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584616",
+    "fetched_at": "2026-06-19T13:26:34.257071",
     "importance_score": 0,
     "category": "genel"
   },
@@ -195,7 +195,7 @@
     "summary": "Sıcak hava dalgasının etkisi altındaki Fransa'da 53 vilayette alarm seviyesi turuncuya yükseltildi.",
     "link": "https://www.trthaber.com/haber/dunya/fransada-sicak-hava-uyarisi-53-vilayette-turuncu-alarm-verildi-948713.html",
     "published": "Fri, 19 Jun 2026 12:37:00 +0300",
-    "fetched_at": "2026-06-19T13:16:58.584620",
+    "fetched_at": "2026-06-19T13:26:34.257085",
     "importance_score": 0,
     "category": "genel"
   }
