@@ -34,3 +34,6 @@
 
 - [ ] OpenAI ile gerçek haber özeti üret
 - [ ] ElevenLabs seslendirme entegrasyonunu başlat
+
+[ ] Gümrük kategori sistemi için negatif keyword desteği ekle
+[ ] Kategori skor sistemi tasarla
