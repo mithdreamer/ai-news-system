@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def generate_statistics(news_items):
 
     stats = {}
@@ -15,5 +18,10 @@ def generate_statistics(news_items):
             stats[category] = 0
 
         stats[category] += 1
+
+    stats["generated_at"] = (
+        datetime.now()
+        .strftime("%Y-%m-%d %H:%M")
+    )
 
     return stats
