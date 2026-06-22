@@ -53,6 +53,20 @@ def main():
     save_text(script, latest_script_file)
     save_text(script, archive_script_file)
 
+    public_stats_file = (
+    PROJECT_ROOT
+    / "outputs"
+    / "html"
+    / "data"
+    / "stats"
+    / "latest-statistics.json"
+    )
+    public_stats_file.parent.mkdir(
+    parents=True,
+    exist_ok=True
+    )
+
+    save_json(stats, public_stats_file)
     save_text(html, latest_html_file)
     save_text(html, archive_html_file)
 
