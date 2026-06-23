@@ -61,33 +61,34 @@ def generate_archive(project_root):
 
 def generate_search_index(project_root):
 
-    raw_folder = (
-        project_root
-        / "data"
-        / "raw"
-    )
+    raw_folder = project_root / "data" / "raw"
 
     all_news = []
+    seen_links = set()
 
     for file in raw_folder.glob("*-news.json"):
 
         try:
-
-            with open(
-                file,
-                "r",
-                encoding="utf-8"
-            ) as f:
-
+            with open(file, "r", encoding="utf-8") as f:
                 news = json.load(f)
 
                 if isinstance(news, list):
-                    all_news.extend(news)
+
+                    for item in news:
+
+                        link = item.get("link", "").strip()
+
+                        if not link:
+                            continue
+
+                        if link in seen_links:
+                            continue
+
+                        seen_links.add(link)
+
+                        all_news.append(item)
 
         except Exception as e:
-
-            print(
-                f"Hata: {file.name} -> {e}"
-            )
+            print(f"Hata: {file.name} -> {e}")
 
     return all_news

@@ -37,3 +37,6 @@
 
 [ ] Gümrük kategori sistemi için negatif keyword desteği ekle
 [ ] Kategori skor sistemi tasarla
+
+
+[ ] generate_search_index içinde duplicate link temizliği
