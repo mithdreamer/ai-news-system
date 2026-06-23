@@ -30,6 +30,12 @@ def generate_archive(project_root):
 </head>
 <body>
 
+<nav>
+    <a href="index.html">Güncel Haberler</a> |
+    <a href="archive.html">Arşiv</a> |
+    <a href="search.html">Arama</a>
+</nav>
+
 <h1>Haber Arşivi</h1>
 
 <ul>

@@ -79,6 +79,12 @@ def generate_news_html(news_items, stats):
     </style>
 </head>
 <body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
     <h1>Günün Haberleri</h1>
 """
 
