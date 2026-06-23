@@ -1,8 +1,9 @@
 {
   "toplam_haber": 20,
-  "dünya": 6,
+  "dünya": 4,
   "teknoloji": 3,
-  "genel": 9,
+  "genel": 10,
+  "ekonomi": 1,
   "spor": 2,
-  "generated_at": "2026-06-23 13:19"
+  "generated_at": "2026-06-23 13:54"
 }

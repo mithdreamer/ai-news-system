@@ -74,6 +74,14 @@ def main():
     / "index"
     / "search-index.json"
 )
+    public_search_index_file = (
+    PROJECT_ROOT
+    / "outputs"
+    / "html"
+    / "data"
+    / "index"
+    / "search-index.json"
+)
             
 
     save_json(stats, public_stats_file)
@@ -82,6 +90,7 @@ def main():
 
     archive_html = generate_archive(PROJECT_ROOT)
     search_index = generate_search_index(PROJECT_ROOT)
+    save_json(search_index, public_search_index_file)
     save_json(search_index, search_index_file)
     save_text(archive_html, archive_page_file)
 
