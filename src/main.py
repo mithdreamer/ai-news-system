@@ -8,6 +8,7 @@ from services.news_categorizer import add_categories
 from services.statistics import generate_statistics
 from services.script_generator import generate_news_script
 from services.html_generator import generate_news_html
+from services.archive_generator import generate_archive, generate_search_index
 
 from utils.file_helper import save_json, save_text
 from utils.logger import get_logger
@@ -43,6 +44,8 @@ def main():
 
     latest_html_file = PROJECT_ROOT / "outputs" / "html" / "index.html"
     archive_html_file = PROJECT_ROOT / "outputs" / "html" / f"{today}-news.html"
+    archive_page_file = PROJECT_ROOT / "outputs" / "html" / "archive.html"
+
 
     save_json(categorized_news, latest_json_file)
     save_json(categorized_news, archive_json_file)
@@ -65,10 +68,24 @@ def main():
     parents=True,
     exist_ok=True
     )
+    search_index_file = (
+    PROJECT_ROOT
+    / "data"
+    / "index"
+    / "search-index.json"
+)
+            
 
     save_json(stats, public_stats_file)
     save_text(html, latest_html_file)
     save_text(html, archive_html_file)
+
+    archive_html = generate_archive(PROJECT_ROOT)
+    search_index = generate_search_index(PROJECT_ROOT)
+    save_json(search_index, search_index_file)
+    save_text(archive_html, archive_page_file)
+
+    
 
     print("\n--- HABER İSTATİSTİKLERİ ---")
     for key, value in stats.items():
@@ -83,6 +100,8 @@ def main():
     print(f"Filtrelenmiş haber sayısı: {len(filtered_news)}")
     print(f"Güncel HTML: {latest_html_file}")
     print(f"Arşiv HTML : {archive_html_file}")
+    print(f"Arşiv Sayfası: {archive_page_file}")
+    print(f"Search Index: {search_index_file}")
 
 
 if __name__ == "__main__":
