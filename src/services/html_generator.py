@@ -87,6 +87,26 @@ def generate_news_html(news_items, stats):
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
     </style>
 </head>
 <body>
@@ -104,6 +124,16 @@ def generate_news_html(news_items, stats):
         placeholder="Güncel haberlerde ara..."
     >
 </div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
 """
 
     html += """
@@ -173,6 +203,7 @@ def generate_news_html(news_items, stats):
                 <div
                     class="news-card"
                     data-search="{search_text}"
+                    data-category="{item.get("category", "genel")}"
                 >
                     <h3>{item.get("title", "")}</h3>
                     <p>{item.get("summary", "")}</p>
@@ -181,24 +212,47 @@ def generate_news_html(news_items, stats):
                 </div>
             """           
     html += """
-    <script>
-        const homeSearchInput = document.querySelector("#home-search-input");
-        const newsCards = document.querySelectorAll(".news-card");
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
 
-        homeSearchInput.addEventListener("input", function () {
-            const query = homeSearchInput.value.toLowerCase();
+            let selectedCategory = "all";
 
-            newsCards.forEach(function (card) {
-                const text = card.dataset.search || "";
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
 
-                if (text.includes(query)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
             });
-        });
-    </script>
+        </script>
 
     </body>
     </html>

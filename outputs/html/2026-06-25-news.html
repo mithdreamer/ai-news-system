@@ -86,6 +86,26 @@
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
     </style>
 </head>
 <body>
@@ -104,6 +124,16 @@
     >
 </div>
 
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
     <div class="stats-grid">
 
         <div class="stat-card">
@@ -117,8 +147,13 @@
         </div>
 
         <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
             <strong>genel</strong>
-            <span>13</span>
+            <span>12</span>
         </div>
 
         <div class="stat-card">
@@ -133,7 +168,7 @@
 
         <div class="stat-card">
             <strong>generated_at</strong>
-            <span>2026-06-25 18:10</span>
+            <span>2026-06-25 23:29</span>
         </div>
 
     </div>
@@ -142,32 +177,32 @@
     <ul class="featured-list">
 
         <li>
-            <a href="https://www.bbc.com/turkce/articles/c1we3jwnx1po?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Dünyanın en eski tatlısı: Aşure</strong>
+            <a href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank">
+                <strong>Rusya: Batı Avrupa, Ukrayna'da barışın sağlanmasında en büyük engel</strong>
             </a>
         </li>
 
         <li>
-            <a href="https://www.trthaber.com/haber/dunya/ayda-saat-kac-abd-ve-cin-bu-konuda-hemfikir-degil-949335.html" target="_blank">
-                <strong>Ay'da saat kaç? ABD ve Çin bu konuda hemfikir değil</strong>
+            <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188'e yükseldi</strong>
             </a>
         </li>
 
         <li>
-            <a href="https://www.trthaber.com/haber/saglik/saglik-bakanligi-22-bin-952-gebeye-birebir-destek-ulastirdi-949334.html" target="_blank">
-                <strong>Sağlık Bakanlığı 22 bin 952 gebeye birebir destek ulaştırdı</strong>
+            <a href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank">
+                <strong>Fidan'dan depremle sarsılan Venezuela'ya destek mesajı</strong>
             </a>
         </li>
 
         <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/merkez-bankasi-rezervleri-1572-milyar-dolar-oldu-949333.html" target="_blank">
-                <strong>Merkez Bankası rezervleri 157,2 milyar dolar oldu</strong>
+            <a href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yusuf Ziya Gümüşel ve Kadir İstekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: Karar neden önemli?</strong>
             </a>
         </li>
 
         <li>
-            <a href="https://www.trthaber.com/haber/turkiye/turkiyede-gecici-koruma-altinda-2-milyon-264-bin-983-suriyeli-bulunuyor-949332.html" target="_blank">
-                <strong>Türkiye'de geçici koruma altında 2 milyon 264 bin 983 Suriyeli bulunuyor</strong>
+            <a href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye Dünya Kupası'nda son maçında ABD'yle karşılaşacak</strong>
             </a>
         </li>
 
@@ -178,59 +213,31 @@
                 <div
                     class="news-card"
                     data-search="
-            dünyanın en eski tatlısı: aşure
-            aşure, arapçada "10" anlamına geliyor ve i̇slami takvimin ilk ayı olan muharrem ayının 10. günü için kullanılıyor. aşure de bu hafta evlerde pişirilip arkadaşlara, akrabalara ve komşulara dağıtılıyor. gazeteci paul benjamin osterlund, türkiye'de aşurenin tarihi, kültürü ve sembolize ettiği şeyleri inceledi
-            dünya
-            bbc türkçe
-            "
-                >
-                    <h3>Dünyanın en eski tatlısı: Aşure</h3>
-                    <p>Aşure, Arapçada "10" anlamına geliyor ve İslami takvimin ilk ayı olan Muharrem ayının 10. günü için kullanılıyor. Aşure de bu hafta evlerde pişirilip arkadaşlara, akrabalara ve komşulara dağıtılıyor. Gazeteci Paul Benjamin Osterlund, Türkiye'de aşurenin tarihi, kültürü ve sembolize ettiği şeyleri inceledi</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1we3jwnx1po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ay'da saat kaç? abd ve çin bu konuda hemfikir değil
-            uzay yarışında yeni bir cephe açan abd ve çin, ay’da ortak bir saat standardı belirlenmesi konusunda fikir ayrılığı yaşıyor. uzmanlar, iki gücün zaman ölçümünde uzlaşamaması durumunda gelecekteki ay misyonlarında ciddi koordinasyon sorunları ve kaza risklerinin doğabileceği konusunda uyarıyor.
+            rusya: batı avrupa, ukrayna'da barışın sağlanmasında en büyük engel
+            rusya dışişleri bakanlığı sözcüsü mariya zaharova, batı avrupa'nın ukrayna'da barışın sağlanmasında en büyük engel olduğunu belirterek, "terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil." dedi.
             dünya
             trt haber
             "
+                    data-category="dünya"
                 >
-                    <h3>Ay'da saat kaç? ABD ve Çin bu konuda hemfikir değil</h3>
-                    <p>Uzay yarışında yeni bir cephe açan ABD ve Çin, Ay’da ortak bir saat standardı belirlenmesi konusunda fikir ayrılığı yaşıyor. Uzmanlar, iki gücün zaman ölçümünde uzlaşamaması durumunda gelecekteki Ay misyonlarında ciddi koordinasyon sorunları ve kaza risklerinin doğabileceği konusunda uyarıyor.</p>
+                    <h3>Rusya: Batı Avrupa, Ukrayna'da barışın sağlanmasında en büyük engel</h3>
+                    <p>Rusya Dışişleri Bakanlığı Sözcüsü Mariya Zaharova, Batı Avrupa'nın Ukrayna'da barışın sağlanmasında en büyük engel olduğunu belirterek, "Terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil." dedi.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/ayda-saat-kac-abd-ve-cin-bu-konuda-hemfikir-degil-949335.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank">Haberi Oku</a>
                 </div>
             
                 <div
                     class="news-card"
                     data-search="
-            dmm, binaların ve gecekonduların önüne set çekiliyor iddiasını yalanladı
-            cumhurbaşkanlığı i̇letişim başkanlığı dezenformasyonla mücadele merkezi (dmm), "nato zirvesi nedeniyle liderlerin göz zevki için binaların ve gecekonduların önüne set çekiliyor" iddiasının gerçeği yansıtmadığını bildirdi.
-            dünya
-            trt haber
-            "
-                >
-                    <h3>DMM, Binaların ve gecekonduların önüne set çekiliyor iddiasını yalanladı</h3>
-                    <p>Cumhurbaşkanlığı İletişim Başkanlığı Dezenformasyonla Mücadele Merkezi (DMM), "NATO Zirvesi nedeniyle liderlerin göz zevki için binaların ve gecekonduların önüne set çekiliyor" iddiasının gerçeği yansıtmadığını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/dmm-binalarin-ve-gecekondularin-onune-set-cekiliyor-iddiasini-yalanladi-949329.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da peş peşe iki deprem: en az 164 can kaybı
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 164 kişi öldü, bine yakın yaralı var. ülkede olağanüstü hal ilan edildi.
+            venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: can kaybı 188'e yükseldi
+            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500'den fazla yaralı var. venezuela devlet başkanlığı görevini vekaleten yürüten delcy rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.
             dünya
             bbc türkçe
             "
+                    data-category="dünya"
                 >
-                    <h3>Venezuela'da peş peşe iki deprem: En az 164 can kaybı</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 164 kişi öldü, bine yakın yaralı var. Ülkede olağanüstü hal ilan edildi.</p>
+                    <h3>Venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188'e yükseldi</h3>
+                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500'den fazla yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.</p>
                     <div class="source">Kaynak: BBC Türkçe</div>
                     <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
                 </div>
@@ -238,80 +245,71 @@
                 <div
                     class="news-card"
                     data-search="
-            almanyada etkisini artıran sıcaklardan dolayı etkinlikler iptal edildi
-            avrupa'yı etkisi altına alan sıcak hava dalgasının almanya’da da etkisini artırması, birçok yerde hafta sonu düzenlenmesi planlanan etkinliklerin iptal edilmesine yol açtı.
+            yusuf ziya gümüşel ve kadir i̇stekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: karar neden önemli?
+            hiranur vakfı kurucusu yusuf ziya gümüşel ve reşit olmayan kızını evlendirdiği kadir i̇stekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yusuf Ziya Gümüşel ve Kadir İstekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: Karar neden önemli?</h3>
+                    <p>Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel ve reşit olmayan kızını evlendirdiği Kadir İstekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye dünya kupası'nda son maçında abd'yle karşılaşacak
+            2026 fifa dünya kupası'ndan elenen türkiye a milli futbol takımı, turnuvada d grubu'nda üçüncü ve son maçında tsi̇ 05.00'te ev sahiplerinden abd ile karşı karşıya gelecek. los angeles'taki sofi stadyumu'nda oynanacak maçı cezayir futbol federasyonu'ndan mustapha ghorbal yönetecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye Dünya Kupası'nda son maçında ABD'yle karşılaşacak</h3>
+                    <p>2026 FIFA Dünya Kupası'ndan elenen Türkiye A Milli Futbol Takımı, turnuvada D Grubu'nda üçüncü ve son maçında TSİ 05.00'te ev sahiplerinden ABD ile karşı karşıya gelecek. Los Angeles'taki SoFi Stadyumu'nda oynanacak maçı Cezayir Futbol Federasyonu'ndan Mustapha Ghorbal yönetecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul havalimanı liderliğini sürdürüyor
+            i̇stanbul havalimanı, 15-21 haziran'da günlük ortalama 1502 uçuşla avrupa'nın en yoğun havalimanı olarak kayıtlara geçti.
             dünya
             trt haber
             "
+                    data-category="dünya"
                 >
-                    <h3>Almanyada etkisini artıran sıcaklardan dolayı etkinlikler iptal edildi</h3>
-                    <p>Avrupa'yı etkisi altına alan sıcak hava dalgasının Almanya’da da etkisini artırması, birçok yerde hafta sonu düzenlenmesi planlanan etkinliklerin iptal edilmesine yol açtı.</p>
+                    <h3>İstanbul Havalimanı liderliğini sürdürüyor</h3>
+                    <p>İstanbul Havalimanı, 15-21 Haziran'da günlük ortalama 1502 uçuşla Avrupa'nın en yoğun havalimanı olarak kayıtlara geçti.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/almanyada-etkisini-artiran-sicaklardan-dolayi-etkinlikler-iptal-edildi-949337.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-havalimani-liderligini-surduruyor-949351.html" target="_blank">Haberi Oku</a>
                 </div>
             
-    <h2 class="category-title">GENEL</h2>
+    <h2 class="category-title">TEKNOLOJI</h2>
 
                 <div
                     class="news-card"
                     data-search="
-            sağlık bakanlığı 22 bin 952 gebeye birebir destek ulaştırdı
-            sağlık bakanı kemal memişoğlu, "her gebeye bir ebe" uygulamasıyla son üç ayına giren bütün anne adaylarına bir ebeyi koordinatör ebe olarak görevlendirdiklerini ve bu kapsamda ilk gebeliğini yaşayan anne adaylarına gerçekleştirdikleri ev ziyaretleriyle 22 bin 952 gebeye birebir destek ulaştırdıklarını söyledi.
-            genel
+            fidan'dan depremle sarsılan venezuela'ya destek mesajı
+            dışişleri bakanı hakan fidan, venezuela dışişleri bakanı yvan gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.
+            teknoloji
             trt haber
             "
+                    data-category="teknoloji"
                 >
-                    <h3>Sağlık Bakanlığı 22 bin 952 gebeye birebir destek ulaştırdı</h3>
-                    <p>Sağlık Bakanı Kemal Memişoğlu, "Her Gebeye Bir Ebe" uygulamasıyla son üç ayına giren bütün anne adaylarına bir ebeyi koordinatör ebe olarak görevlendirdiklerini ve bu kapsamda ilk gebeliğini yaşayan anne adaylarına gerçekleştirdikleri ev ziyaretleriyle 22 bin 952 gebeye birebir destek ulaştırdıklarını söyledi.</p>
+                    <h3>Fidan'dan depremle sarsılan Venezuela'ya destek mesajı</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Venezuela Dışişleri Bakanı Yvan Gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/saglik/saglik-bakanligi-22-bin-952-gebeye-birebir-destek-ulastirdi-949334.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank">Haberi Oku</a>
                 </div>
             
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'de geçici koruma altında 2 milyon 264 bin 983 suriyeli bulunuyor
-            i̇çişleri bakanı mustafa çiftçi, türkiye'de yasal kalış hakkına sahip 3 milyon 632 bin 64 yabancının bulunduğunu, bunların 2 milyon 264 bin 983'ünü geçici koruma altındaki suriyelilerin oluşturduğunu bildirdi.
-            genel
-            trt haber
-            "
-                >
-                    <h3>Türkiye'de geçici koruma altında 2 milyon 264 bin 983 Suriyeli bulunuyor</h3>
-                    <p>İçişleri Bakanı Mustafa Çiftçi, Türkiye'de yasal kalış hakkına sahip 3 milyon 632 bin 64 yabancının bulunduğunu, bunların 2 milyon 264 bin 983'ünü geçici koruma altındaki Suriyelilerin oluşturduğunu bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/turkiyede-gecici-koruma-altinda-2-milyon-264-bin-983-suriyeli-bulunuyor-949332.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            msb: almanya, türkiye'ye patriot sistemi konuşlandırdı
-            milli savunma bakanlığı (msb) almanya'ya ait bir adet patriot hava savunma sisteminin kürecik'e konuşlandırıldığını açıkladı.
-            genel
-            bbc türkçe
-            "
-                >
-                    <h3>MSB: Almanya, Türkiye'ye Patriot sistemi konuşlandırdı</h3>
-                    <p>Milli Savunma Bakanlığı (MSB) Almanya'ya ait bir adet Patriot hava savunma sisteminin Kürecik'e konuşlandırıldığını açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c05287gj79no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            remzi sanver suçlamalara yanıt verdi: 'özel sektörle bağım yok, olmadı'
-            can holding soruşturması kapsamında tutuklandıktan sonra tahliye edilen eski bilgi üniversitesi rektörü mehmet remzi sanver özel sektörle bağı olmadığını ve bilgi üniversitesi'nde 2016'dan beri imza yetkisinin bulunmadığını söyledi.
-            genel
-            bbc türkçe
-            "
-                >
-                    <h3>Remzi Sanver suçlamalara yanıt verdi: 'Özel sektörle bağım yok, olmadı'</h3>
-                    <p>Can Holding soruşturması kapsamında tutuklandıktan sonra tahliye edilen eski Bilgi Üniversitesi Rektörü Mehmet Remzi Sanver özel sektörle bağı olmadığını ve Bilgi Üniversitesi'nde 2016'dan beri imza yetkisinin bulunmadığını söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cr7x80ve57zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
+    <h2 class="category-title">GENEL</h2>
+
                 <div
                     class="news-card"
                     data-search="
@@ -320,6 +318,7 @@
             genel
             bbc türkçe
             "
+                    data-category="genel"
                 >
                     <h3>Haiti iki kez öne geçti, Fas son sözü söyledi</h3>
                     <p>Soufiane Rahimi ve Gessime Yassine'in maçın son bölümünde attığı goller, Haiti'nin Fas karşısında ilk puanını almasının önüne geçti. Dünya Kupası C Grubu son maçında Fas, Atlanta'da Haiti'yi 4-2 mağlup etti.</p>
@@ -330,16 +329,49 @@
                 <div
                     class="news-card"
                     data-search="
-            milli eğitim bakanı tekin trt haber'de
-            milli eğitim bakanı yusuf tekin trt haber'de soruları yanıtlıyor.
+            çelik, uclg başkanlığına seçilen altay'ı tebrik etti
+            ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçilen konya büyükşehir belediye başkanı uğur i̇brahim altay'ı tebrik etti.
             genel
             trt haber
             "
+                    data-category="genel"
                 >
-                    <h3>Milli Eğitim Bakanı Tekin TRT Haber'de</h3>
-                    <p>Milli Eğitim Bakanı Yusuf Tekin TRT Haber'de soruları yanıtlıyor.</p>
+                    <h3>Çelik, UCLG Başkanlığına seçilen Altay'ı tebrik etti</h3>
+                    <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçilen Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay'ı tebrik etti.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/milli-egitim-bakani-tekin-trt-haberde-949336.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/gundem/celik-uclg-baskanligina-secilen-altayi-tebrik-etti-949355.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            venezuela'daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı
+            venezuela geçici devlet başkanı delcy rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Venezuela'daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı</h3>
+                    <p>Venezuela Geçici Devlet Başkanı Delcy Rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-en-az-188-kisi-oldu-bin-520-kisi-yaralandi-949350.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanlığından sofya'da nato paneli
+            i̇letişim başkanlığı, bulgaristan’ın başkenti sofya’da, center for the study of democracy democracy (csd) isimli düşünce kuruluşu iş birliğinde “nato’da bölgesel güvenliği yeniden düşünmek: dayanıklılık, i̇ş birliği ve türkiye-bulgaristan ekseni” başlıklı yuvarlak masa toplantısı düzenledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İletişim Başkanlığından Sofya'da NATO paneli</h3>
+                    <p>İletişim Başkanlığı, Bulgaristan’ın başkenti Sofya’da, Center for the Study of Democracy Democracy (CSD) isimli düşünce kuruluşu iş birliğinde “NATO’da Bölgesel Güvenliği Yeniden Düşünmek: Dayanıklılık, İş Birliği ve Türkiye-Bulgaristan Ekseni” başlıklı yuvarlak masa toplantısı düzenledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskanligindan-sofyada-nato-paneli-949349.html" target="_blank">Haberi Oku</a>
                 </div>
             
                 <div
@@ -350,6 +382,7 @@
             genel
             bbc türkçe
             "
+                    data-category="genel"
                 >
                     <h3>104 maçı canlı takip edin</h3>
                     <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
@@ -360,11 +393,28 @@
                 <div
                     class="news-card"
                     data-search="
+            nato zirvesi öncesi ankara'da 103 kişi tutuklandı
+            ankara'da gelecek ay düzenlenmesi planlanan nato zirvesi öncesinde ankara ve i̇stanbul'da yapılan operasyonlarda 233 kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>NATO zirvesi öncesi Ankara'da 103 kişi tutuklandı</h3>
+                    <p>Ankara'da gelecek ay düzenlenmesi planlanan NATO zirvesi öncesinde Ankara ve İstanbul'da yapılan operasyonlarda 233 kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyd855ee7po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
             nevşehir, keçiören ve keşan belediye başkanları akp'ye geçti
             i̇yi̇ partili nevşehir belediye başkanı rasim arı ile chp'den istifa eden keçiören belediye başkanı mesut özarslan ve keşan belediye başkanı mehmet özcan akp'ye katıldı.
             genel
             bbc türkçe
             "
+                    data-category="genel"
                 >
                     <h3>Nevşehir, Keçiören ve Keşan belediye başkanları AKP'ye geçti</h3>
                     <p>İYİ Partili Nevşehir Belediye Başkanı Rasim Arı ile CHP'den istifa eden Keçiören Belediye Başkanı Mesut Özarslan ve Keşan Belediye Başkanı Mehmet Özcan AKP'ye katıldı.</p>
@@ -380,6 +430,7 @@
             genel
             bbc türkçe
             "
+                    data-category="genel"
                 >
                     <h3>İskoçya'nın Dünya Kupası'nda tur umutları tehlikede</h3>
                     <p>İskoçya'nın Dünya Kupası'nda tarihinde ilk kez eleme turlarına yükselme umutları, Miami'de Brezilya'ya 3-0 mağlup olmasının ardından büyük tehlikeye girdi</p>
@@ -395,6 +446,7 @@
             genel
             bbc türkçe
             "
+                    data-category="genel"
                 >
                     <h3>Meksika üçte üç yaptı, Çekya'yı Dünya Kupası'nın dışına itti</h3>
                     <p>Meksika, ikinci yarıda bulduğu üç golle Çekya'yı Dünya Kupası'ndan eledi ve grup aşamasını üçte üç yaparak tamamladı</p>
@@ -405,46 +457,49 @@
                 <div
                     class="news-card"
                     data-search="
-            ankara'daki sağlık tesisleri nato zirvesi süresince tam kapasiteyle hizmet verecek
-            ankara'da, nato zirvesi süresince sağlık hizmetlerinin aksamaması amacıyla gerekli tüm tedbirlerin alındığı ve merkezi hekim randevu sistemi (mhrs) planlamalarında düzenleme yapıldığı bildirildi.
+            konya büyükşehir belediye başkanı altay uclg başkanı oldu
+            konya büyükşehir belediye başkanı uğur i̇brahim altay, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçildi.
             genel
             trt haber
             "
+                    data-category="genel"
                 >
-                    <h3>Ankara'daki sağlık tesisleri NATO Zirvesi süresince tam kapasiteyle hizmet verecek</h3>
-                    <p>Ankara'da, NATO Zirvesi süresince sağlık hizmetlerinin aksamaması amacıyla gerekli tüm tedbirlerin alındığı ve Merkezi Hekim Randevu Sistemi (MHRS) planlamalarında düzenleme yapıldığı bildirildi.</p>
+                    <h3>Konya Büyükşehir Belediye Başkanı Altay UCLG başkanı oldu</h3>
+                    <p>Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçildi.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/ankaradaki-saglik-tesisleri-nato-zirvesi-suresince-tam-kapasiteyle-hizmet-verecek-949331.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/gundem/konya-buyuksehir-belediye-baskani-altay-uclg-baskani-oldu-949357.html" target="_blank">Haberi Oku</a>
                 </div>
             
                 <div
                     class="news-card"
                     data-search="
-            türkiye, pakistan'ın elektrik özelleştirmesine destek verecek
-            pakistan'ın elektrik dağıtımının özelleştirilmesine destek amacıyla türkiye ile pakistan'daki ilgili kurumlar arasında üç anlaşma imzalandı.
+            terör örgütlerine yönelik operasyonlarda 103 tutuklama
+            ankara cumhuriyet başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103'ü tutuklandı.
             genel
             trt haber
             "
+                    data-category="genel"
                 >
-                    <h3>Türkiye, Pakistan'ın elektrik özelleştirmesine destek verecek</h3>
-                    <p>Pakistan'ın elektrik dağıtımının özelleştirilmesine destek amacıyla Türkiye ile Pakistan'daki ilgili kurumlar arasında üç anlaşma imzalandı.</p>
+                    <h3>Terör örgütlerine yönelik operasyonlarda 103 tutuklama</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103'ü tutuklandı.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/turkiye-pakistanin-elektrik-ozellestirmesine-destek-verecek-949330.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/gundem/teror-orgutlerine-yonelik-operasyonlarda-103-tutuklama-949354.html" target="_blank">Haberi Oku</a>
                 </div>
             
                 <div
                     class="news-card"
                     data-search="
-            soma'da bozuk 4 ton midye imha edildi
-            manisa'nın soma ilçesinde bir tırda ele geçirilen bozuk 4 ton midye imha edildi.
+            fransa tarihinin en sıcak gecesini yaşadı
+            fransa'da "hava durumu kayıtlarının alınmaya başladığı 1947'den bu yana en sıcak gece" yaşandı.
             genel
             trt haber
             "
+                    data-category="genel"
                 >
-                    <h3>Soma'da bozuk 4 ton midye imha edildi</h3>
-                    <p>Manisa'nın Soma ilçesinde bir tırda ele geçirilen bozuk 4 ton midye imha edildi.</p>
+                    <h3>Fransa tarihinin en sıcak gecesini yaşadı</h3>
+                    <p>Fransa'da "hava durumu kayıtlarının alınmaya başladığı 1947'den bu yana en sıcak gece" yaşandı.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/somada-bozuk-4-ton-midye-imha-edildi-949328.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/dunya/fransa-tarihinin-en-sicak-gecesini-yasadi-949348.html" target="_blank">Haberi Oku</a>
                 </div>
             
     <h2 class="category-title">EKONOMI</h2>
@@ -452,16 +507,17 @@
                 <div
                     class="news-card"
                     data-search="
-            merkez bankası rezervleri 157,2 milyar dolar oldu
-            türkiye cumhuriyet merkez bankasının (tcmb) toplam rezervleri, 19 haziran haftasında bir önceki haftaya göre 5 milyar 115 milyon dolar artarak 157 milyar 196 milyon dolar oldu.
+            rutte: aselsan, türkiye'nin savunma sanayisi devrimine öncülük ediyor
+            nato genel sekreteri mark rutte, türkiye'nin en büyük savunma elektroniği şirketi aselsan'ın nato'nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, ankara zirvesi'nde büyük bir savunma sanayisi günü düzenleneceğini söyledi.
             ekonomi
             trt haber
             "
+                    data-category="ekonomi"
                 >
-                    <h3>Merkez Bankası rezervleri 157,2 milyar dolar oldu</h3>
-                    <p>Türkiye Cumhuriyet Merkez Bankasının (TCMB) toplam rezervleri, 19 Haziran haftasında bir önceki haftaya göre 5 milyar 115 milyon dolar artarak 157 milyar 196 milyon dolar oldu.</p>
+                    <h3>Rutte: ASELSAN, Türkiye'nin savunma sanayisi devrimine öncülük ediyor</h3>
+                    <p>NATO Genel Sekreteri Mark Rutte, Türkiye'nin en büyük savunma elektroniği şirketi ASELSAN'ın NATO'nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, Ankara Zirvesi'nde büyük bir savunma sanayisi günü düzenleneceğini söyledi.</p>
                     <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/merkez-bankasi-rezervleri-1572-milyar-dolar-oldu-949333.html" target="_blank">Haberi Oku</a>
+                    <a href="https://www.trthaber.com/haber/dunya/rutte-aselsan-turkiyenin-savunma-sanayisi-devrimine-onculuk-ediyor-949352.html" target="_blank">Haberi Oku</a>
                 </div>
             
     <h2 class="category-title">SPOR</h2>
@@ -474,6 +530,7 @@
             spor
             bbc türkçe
             "
+                    data-category="spor"
                 >
                     <h3>Montella: İstifa etmeyeceğim, daha da güçlendim</h3>
                     <p>Türkiye A Milli Erkek Futbol Takımı Teknik Direktörü Vincenzo Montella, takımının ikinci maçlar sonunda 2026 Dünya Kupası'ndan elenmesinin ardından görevinden istifa etmeyeceğini söyledi</p>
@@ -481,24 +538,47 @@
                     <a href="https://www.bbc.com/turkce/articles/cj0g70g17m9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
                 </div>
             
-    <script>
-        const homeSearchInput = document.querySelector("#home-search-input");
-        const newsCards = document.querySelectorAll(".news-card");
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
 
-        homeSearchInput.addEventListener("input", function () {
-            const query = homeSearchInput.value.toLowerCase();
+            let selectedCategory = "all";
 
-            newsCards.forEach(function (card) {
-                const text = card.dataset.search || "";
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
 
-                if (text.includes(query)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
             });
-        });
-    </script>
+        </script>
 
     </body>
     </html>
