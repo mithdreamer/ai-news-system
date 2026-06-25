@@ -76,6 +76,17 @@ def generate_news_html(news_items, stats):
         a {
             color: #0066cc;
         }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -86,6 +97,13 @@ def generate_news_html(news_items, stats):
             <a href="search.html">Arama</a>
         </nav>
     <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
 """
 
     html += """
@@ -144,18 +162,46 @@ def generate_news_html(news_items, stats):
 """
 
         for item in items:
-            html += f"""
-    <div class="news-card">
-        <h3>{item.get("title", "")}</h3>
-        <p>{item.get("summary", "")}</p>
-        <div class="source">Kaynak: {item.get("source", "")}</div>
-        <a href="{item.get("link", "")}" target="_blank">Haberi Oku</a>
-    </div>
-"""
+            search_text = f"""
+            {item.get("title", "")}
+            {item.get("summary", "")}
+            {item.get("category", "")}
+            {item.get("source", "")}
+            """.lower()
 
+            html += f"""
+                <div
+                    class="news-card"
+                    data-search="{search_text}"
+                >
+                    <h3>{item.get("title", "")}</h3>
+                    <p>{item.get("summary", "")}</p>
+                    <div class="source">Kaynak: {item.get("source", "")}</div>
+                    <a href="{item.get("link", "")}" target="_blank">Haberi Oku</a>
+                </div>
+            """           
     html += """
-</body>
-</html>
-"""
+    <script>
+        const homeSearchInput = document.querySelector("#home-search-input");
+        const newsCards = document.querySelectorAll(".news-card");
+
+        homeSearchInput.addEventListener("input", function () {
+            const query = homeSearchInput.value.toLowerCase();
+
+            newsCards.forEach(function (card) {
+                const text = card.dataset.search || "";
+
+                if (text.includes(query)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+    </body>
+    </html>
+    """
 
     return html
