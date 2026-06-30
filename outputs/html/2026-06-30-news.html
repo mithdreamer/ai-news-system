@@ -3,43 +3,138 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <link rel="stylesheet" href="assets/css/news.css">
-    <script src="assets/js/news.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
-        </div>
-    </header>
 
-    <main class="site-wrapper">
-        <section class="hero">
-            <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input
-                    type="text"
-                    id="home-search-input"
-                    placeholder="Search today's news..."
-                >
-            </div>
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
 
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
-            </div>
-        </section>
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
 
-        <div class="stats-grid">
+
+    <div class="stats-grid">
 
         <div class="stat-card">
             <strong>toplam_haber</strong>
@@ -48,7 +143,7 @@
 
         <div class="stat-card">
             <strong>dünya</strong>
-            <span>5</span>
+            <span>6</span>
         </div>
 
         <div class="stat-card">
@@ -63,12 +158,12 @@
 
         <div class="stat-card">
             <strong>gümrük</strong>
-            <span>2</span>
+            <span>1</span>
         </div>
 
         <div class="stat-card">
             <strong>generated_at</strong>
-            <span>2026-06-30 16:53</span>
+            <span>2026-06-30 17:18</span>
         </div>
 
     </div>
@@ -95,14 +190,14 @@
         </li>
 
         <li>
-            <a href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İki belediye başkanı hakkında sokak hayvanlarının 'etkin şekilde toplanmadığı' gerekçesiyle soruşturma izni</strong>
+            <a href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Paraguay'ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</strong>
             </a>
         </li>
 
         <li>
-            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-ab-yuksek-temsilcisi-kallasi-kabul-etti-949800.html" target="_blank">
-                <strong>Cumhurbaşkanı Erdoğan AB Yüksek Temsilcisi Kallas'ı kabul etti</strong>
+            <a href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İki belediye başkanı hakkında sokak hayvanlarının 'etkin şekilde toplanmadığı' gerekçesiyle soruşturma izni</strong>
             </a>
         </li>
 
@@ -156,6 +251,22 @@
                     <p>FIFA Başkanı Gianni Infantino, 2026 Dünya Kupası kapsamında Kuzey Amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. Bu uçuşların çevreye maliyetini inceledik.</p>
                     <div class="source">Kaynak: BBC Türkçe</div>
                     <a href="https://www.bbc.com/turkce/articles/c33y8j8lyp8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            paraguay'ın dünya kupası kahramanı: oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci
+            orlando gill paraguay'ın dünya kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Paraguay'ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</h3>
+                    <p>Orlando Gill Paraguay'ın Dünya Kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
                 </div>
             
                 <div
@@ -323,22 +434,6 @@
                 <div
                     class="news-card"
                     data-search="
-            '10 yıl boyunca öğle yemeğimizi evden götürüp, 40 yaşında emekli olduk'
-            erken emeklilik hayallerinin yolu günlük yaşamdaki masraflarımızı "aşırı şekilde" kısı hayatlarımızdan fedakarlık yapmaktan mı geçiyor, yoksa başka yolları da var mı?
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>'10 yıl boyunca öğle yemeğimizi evden götürüp, 40 yaşında emekli olduk'</h3>
-                    <p>Erken emeklilik hayallerinin yolu günlük yaşamdaki masraflarımızı "aşırı şekilde" kısı hayatlarımızdan fedakarlık yapmaktan mı geçiyor, yoksa başka yolları da var mı?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cp367v3zygpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
             şile belediyesi soruşturmasında 14 şüpheli tutuklandı
             i̇stanbul şile belediyesi'ne yönelik süren soruşturma kapsamında gözaltına alınan 17 kişiden 13'ü tutuklanırken, dört kişi adli kontrolle serbest bırakıldı.
             genel
@@ -355,6 +450,38 @@
                 <div
                     class="news-card"
                     data-search="
+            çekmecede unutulan fosil antarktikanın ilk dinazoru çıktı
+            i̇ngiliz antarktika araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Çekmecede unutulan fosil Antarktikanın ilk dinazoru çıktı</h3>
+                    <p>İngiliz Antarktika Araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, Antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/cekmecede-unutulan-fosil-antarktikanin-ilk-dinazoru-cikti-949805.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            başkentte atlı polisler devriyede
+            başkentte emniyet genel müdürlüğü bünyesinde görevli atlı polisler, kızılay ve kuğulu park'ta devriye görevi yapıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Başkentte atlı polisler devriyede</h3>
+                    <p>Başkentte Emniyet Genel Müdürlüğü bünyesinde görevli atlı polisler, Kızılay ve Kuğulu Park'ta devriye görevi yapıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/baskentte-atli-polisler-devriyede-949804.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
             i̇şgalci i̇srail, haremi i̇brahim camisi'nde 10 gündür ezan okunmasını engelliyor
             soykırımcı i̇srail'in işgal altındaki batı şeria'nın güneyinde yer alan el halil kentindeki harem-i i̇brahim camisi'nde 10 gündür ezan okunmasını engellediği belirtildi.
             genel
@@ -366,22 +493,6 @@
                     <p>Soykırımcı İsrail'in işgal altındaki Batı Şeria'nın güneyinde yer alan El Halil kentindeki Harem-i İbrahim Camisi'nde 10 gündür ezan okunmasını engellediği belirtildi.</p>
                     <div class="source">Kaynak: TRT Haber</div>
                     <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-harem-i-ibrahim-camisinde-10-gundur-ezan-okunmasini-engelliyor-949803.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            almanya'da aşırı sağcı sayısı ve şiddet suçlarında artış
-            almanya'da aşırı sağcıların işlediği şiddet suçlarının 2025'te bir önceki yıla göre yüzde 8,9 arttığı, potansiyel aşırı sağcı sayısının ise 8 bin 500 artışla 58 bin 750'ye yükseldiği bildirildi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Almanya'da aşırı sağcı sayısı ve şiddet suçlarında artış</h3>
-                    <p>Almanya'da aşırı sağcıların işlediği şiddet suçlarının 2025'te bir önceki yıla göre yüzde 8,9 arttığı, potansiyel aşırı sağcı sayısının ise 8 bin 500 artışla 58 bin 750'ye yükseldiği bildirildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/almanyada-asiri-sagci-sayisi-ve-siddet-suclarinda-artis-949794.html" target="_blank">Haberi Oku</a>
                 </div>
             
     <h2 class="category-title">TEKNOLOJI</h2>
@@ -420,33 +531,47 @@
                     <a href="https://www.trthaber.com/haber/turkiye/sahil-guvenlik-gemi-ve-botlari-24-limanda-ziyarete-aciliyor-949801.html" target="_blank">Haberi Oku</a>
                 </div>
             
-                <div
-                    class="news-card"
-                    data-search="
-            antalya havalimanı 5 ayda 9 milyondan fazla yolcuya hizmet verdi
-            antalya havalimanı'nda 5 ayda gelen ve giden yolcu sayısı 9 milyon 169 bin 801 oldu.
-            gümrük
-            trt haber
-            "
-                    data-category="gümrük"
-                >
-                    <h3>Antalya Havalimanı 5 ayda 9 milyondan fazla yolcuya hizmet verdi</h3>
-                    <p>Antalya Havalimanı'nda 5 ayda gelen ve giden yolcu sayısı 9 milyon 169 bin 801 oldu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/antalya-havalimani-5-ayda-9-milyondan-fazla-yolcuya-hizmet-verdi-949795.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <footer class="site-footer">
-            <div class="inner">
-                <div>AI News Portal — Generated automatically</div>
-                <div>
-                    <a href="rss_sources.json">RSS Sources</a> ·
-                    <a href="https://github.com/korhanors">GitHub</a> · Korhan ÖRS · 2026
-                </div>
-            </div>
-        </footer>
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
 
-    </main>
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
 
     </body>
     </html>
