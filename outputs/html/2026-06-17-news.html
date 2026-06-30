@@ -1,165 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <h1>Günün Haberleri</h1>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+    <header class="site-nav">
+        <div class="nav-inner">
+            <div class="brand">AI News</div>
+            <a href="index.html">Current News</a>
+            <a href="archive.html">Archive</a>
+            <a href="search.html">Search</a>
         </div>
+    </header>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>4</span>
-        </div>
+    <main class="site-wrapper">
+        <section class="hero">
+            <h1>Günün Haberleri</h1>
+            <div class="search-box">
+                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            </div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>6</span>
-        </div>
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Tümü</button>
+                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                <button class="category-filter-btn" data-category="genel">Genel</button>
+            </div>
+        </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>9</span>
-        </div>
+        <div class="stats-grid">
+                        <a href="archive.html">Archive</a>
+                        <a href="search.html">Search</a>
+                    </div>
+                </header>
 
-        <div class="stat-card">
-            <strong>spor</strong>
-            <span>1</span>
-        </div>
+                <main class="site-wrapper">
+                    <section class="hero">
+                        <h1>Günün Haberleri</h1>
+                        <div class="search-box">
+                            <input type="text" id="home-search-input" placeholder="Search today's news...">
+                        </div>
 
-    </div>
+                        <div class="category-filters">
+                            <button class="category-filter-btn active" data-category="all">Tümü</button>
+                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                            <button class="category-filter-btn" data-category="genel">Genel</button>
+                        </div>
+                    </section>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank">
-                <strong>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank">
-                <strong>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank">
-                <strong>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c0jyz1zdwx3o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Tahran'ın 'zafer' olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c74yk2g3l7ko?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>'Netanyahu açısından siyasi kabus': ABD-İran anlaşması İsrail için ne anlama geliyor?</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">EKONOMI</h2>
-
-    <div class="news-card">
-        <h3>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</h3>
-        <p>İran ile ABD arasında varılan mutabakata ait olduğu iddia edilen metinde, İran'ın büyük ekonomik imtiyazlar aldığı görülürken Lübnan'da İsrail işgalinin sonlandırılması ve İran'ın yeniden yapılandırılması için oluşturulması öngörülen 300 milyar dolarlık fon ve Hürmüz Boğazı'nın gelecekteki statüsü gibi bazı konularda belirsizlikler göze çarpıyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</h3>
-        <p>Cumhurbaşkanı Yardımcısı Yılmaz, "Savaşlar bölgedeki ülkelere de Türkiye’ye de ekonomik olarak maliyetler getirdi. Ama inşallah orta vadede çok daha önemli kazançlar sağlayacağımız bir döneme giriyoruz. Bunu da hep birlikte değerlendirmek durumundayız. Burada da yine inşaat sektörümüze çok önemli görevler düşüyor" açıklamasını yaptı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank">Haberi Oku</a>
-    </div>
-
+                    <div class="stats-grid">
     <div class="news-card">
         <h3>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</h3>
         <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Yerel Kalkınma Hamlesi Teşvik Programı 2025 Çağrısı sonuçlarının belli olduğunu bildirdi.</p>

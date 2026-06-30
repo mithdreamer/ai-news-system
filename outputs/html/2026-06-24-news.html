@@ -1,165 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+    <header class="site-nav">
+        <div class="nav-inner">
+            <div class="brand">AI News</div>
+            <a href="index.html">Current News</a>
+            <a href="archive.html">Archive</a>
+            <a href="search.html">Search</a>
         </div>
+    </header>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>6</span>
-        </div>
+    <main class="site-wrapper">
+        <section class="hero">
+            <h1>Günün Haberleri</h1>
+            <div class="search-box">
+                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            </div>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>3</span>
-        </div>
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Tümü</button>
+                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                <button class="category-filter-btn" data-category="genel">Genel</button>
+            </div>
+        </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>11</span>
-        </div>
+        <div class="stats-grid">
+                        <a href="archive.html">Archive</a>
+                        <a href="search.html">Search</a>
+                    </div>
+                </header>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-24 13:33</span>
-        </div>
+                <main class="site-wrapper">
+                    <section class="hero">
+                        <h1>Günün Haberleri</h1>
+                        <div class="search-box">
+                            <input type="text" id="home-search-input" placeholder="Search today's news...">
+                        </div>
 
-    </div>
+                        <div class="category-filters">
+                            <button class="category-filter-btn active" data-category="all">Tümü</button>
+                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                            <button class="category-filter-btn" data-category="genel">Genel</button>
+                        </div>
+                    </section>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Avrupa kavruluyor: İngiltere'de 'kırmızı alarm', Fransa'da boğulma kaynaklı ölümler</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/turkiye/istanbulda-kentsel-donusum-kredisine-196-bin-bagimsiz-bolum-icin-on-basvuru-alindi-949183.html" target="_blank">
-                <strong>İstanbul'da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/bilim-teknoloji/turkiye-veri-merkezlerinde-bolgesel-us-olacak-949181.html" target="_blank">
-                <strong>Türkiye veri merkezlerinde bölgesel üs olacak</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cpd391ndxv8o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Temmuz sonunda TBMM'den geçmesi hedeflenen 'çözüm süreci yasasında' neler var?</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-bolgesel-enerji-guvenligindeki-stratejik-rolu-gucleniyor-949190.html" target="_blank">
-                <strong>Türkiye'nin bölgesel enerji güvenliğindeki stratejik rolü güçleniyor</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-    <div class="news-card">
-        <h3>Avrupa kavruluyor: İngiltere'de 'kırmızı alarm', Fransa'da boğulma kaynaklı ölümler</h3>
-        <p>İngiltere'de sıcaklıklar nedeniyle kırmızı alarm verildi. Fransa'da sıcak hava dalgası sırasında serinlemek için nehir ve kanallara girenlerin de aralarında bulunduğu en az 40 kişi boğularak hayatını kaybederken, Avrupa'nın birçok ülkesinde rekor sıcaklıklar ve kırmızı alarm uygulamaları sürüyor</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
+                    <div class="stats-grid">
         <h3>İstanbul'da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı</h3>
         <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Kentsel Dönüşüm Başkanlığınca yürütülen İklim ve Afetlere Dayanıklı Şehirler Projesi (İADŞP) kapsamında riskli yapıların dönüşümü için 196 bin 324 konut ve iş yerine ilişkin ön başvuru alındı.</p>
         <div class="source">Kaynak: TRT Haber</div>

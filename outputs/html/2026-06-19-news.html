@@ -1,164 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <h1>Günün Haberleri</h1>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+    <header class="site-nav">
+        <div class="nav-inner">
+            <div class="brand">AI News</div>
+            <a href="index.html">Current News</a>
+            <a href="archive.html">Archive</a>
+            <a href="search.html">Search</a>
         </div>
+    </header>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>7</span>
-        </div>
+    <main class="site-wrapper">
+        <section class="hero">
+            <h1>Günün Haberleri</h1>
+            <div class="search-box">
+                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            </div>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>1</span>
-        </div>
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Tümü</button>
+                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                <button class="category-filter-btn" data-category="genel">Genel</button>
+            </div>
+        </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>10</span>
-        </div>
-
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
-        </div>
-
-        <div class="stat-card">
-            <strong>spor</strong>
-            <span>1</span>
-        </div>
-
-    </div>
-
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cx24j9k7vjjo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Trump'ın 'Meloni bana fotoğraf için yalvardı' sözü kriz çıkardı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-italya-ile-aramizdaki-ikili-ticaret-hacmi-yaklasik-30-milyar-dolar-seviyesinde-948757.html" target="_blank">
-                <strong>Bakan Bolat: İtalya ile aramızdaki ikili ticaret hacmi yaklaşık 30 milyar dolar seviyesinde</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/crlwj1ye84do?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İngiltere'de Andy Burnham ara seçimi kazandı: İşçi Partisi liderliği ve başbakanlık yarışı kızışıyor mu?</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c39yxn11g1vo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye Dünya Kupası'nda kritik virajda, rakip Paraguay</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/wp-abd-istihbarati-netanyahunun-abd-iran-baris-cabalarini-baltalayabilecegi-konusunda-uyari-yapti-948759.html" target="_blank">
-                <strong>WP: ABD istihbaratı, Netanyahu'nun ABDİran barış çabalarını baltalayabileceği konusunda uyarı yaptı</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-    <div class="news-card">
-        <h3>Trump'ın 'Meloni bana fotoğraf için yalvardı' sözü kriz çıkardı</h3>
-        <p>ABD Başkanı Donald Trump, İtalya Başbakanı Giorgia Meloni'nin Fransa'da yapılan G7 zirvesinde kendisiyle fotoğraf çektirmek için yalvardığını söyleyince iki ülke arasında son aylarda yaşanan gerilim yeni bir seviyeye tırmandı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cx24j9k7vjjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
+        <div class="stats-grid">
         <h3>Türkiye Dünya Kupası'nda kritik virajda, rakip Paraguay</h3>
         <p>Dünya Kupası'ndaki ilk maçında Avustralya'ya 2-0 yenilen Türkiye turnuvadaki en kritik maçında Güney Amerika temsilcisi Paraguay'la karşılaşacak. ABD'de San Francisco Bay Area Stadyumu'nda oynanacak maç TSİ 06.00'da başlayacak.</p>
         <div class="source">Kaynak: BBC Türkçe</div>

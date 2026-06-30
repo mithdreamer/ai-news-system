@@ -1,165 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <h1>Günün Haberleri</h1>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+    <header class="site-nav">
+        <div class="nav-inner">
+            <div class="brand">AI News</div>
+            <a href="index.html">Current News</a>
+            <a href="archive.html">Archive</a>
+            <a href="search.html">Search</a>
         </div>
+    </header>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>11</span>
-        </div>
+    <main class="site-wrapper">
+        <section class="hero">
+            <h1>Günün Haberleri</h1>
+            <div class="search-box">
+                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            </div>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>8</span>
-        </div>
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Tümü</button>
+                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                <button class="category-filter-btn" data-category="genel">Genel</button>
+            </div>
+        </section>
 
-        <div class="stat-card">
-            <strong>spor</strong>
-            <span>1</span>
-        </div>
+        <div class="stats-grid">
+                        <a href="archive.html">Archive</a>
+                        <a href="search.html">Search</a>
+                    </div>
+                </header>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-22 13:04</span>
-        </div>
+                <main class="site-wrapper">
+                    <section class="hero">
+                        <h1>Günün Haberleri</h1>
+                        <div class="search-box">
+                            <input type="text" id="home-search-input" placeholder="Search today's news...">
+                        </div>
 
-    </div>
+                        <div class="category-filters">
+                            <button class="category-filter-btn active" data-category="all">Tümü</button>
+                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                            <button class="category-filter-btn" data-category="genel">Genel</button>
+                        </div>
+                    </section>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/ingilterenin-basbakan-koltugunda-istikrar-krizi-son-10-yilda-6-basbakan-gorev-yapti-948954.html" target="_blank">
-                <strong>İngiltere'nin başbakan koltuğunda istikrar krizi: Son 10 yılda 6 başbakan görev yaptı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD-İran görüşmelerinin ilk turu tamamlandı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cvgq92veyzwo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire'de biraraya geldi</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/clyez3knx02o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İtalya Başbakanı Meloni'den Trump'a: 'Dostun olmak popülariteme iyi gelmedi'</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/lubnan-cumhurbaskani-avn-abd-ve-katarli-yetkililerle-ateskesin-kalici-hale-getirilmesini-gorustu-948950.html" target="_blank">
-                <strong>Lübnan Cumhurbaşkanı Avn, ABD ve Katarlı yetkililerle ateşkesin kalıcı hale getirilmesini görüştü</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-    <div class="news-card">
-        <h3>İngiltere'nin başbakan koltuğunda istikrar krizi: Son 10 yılda 6 başbakan görev yaptı</h3>
-        <p>İngiltere'de son 10 yılda yaşanan siyasi hareketlilik ve lider değişimleri, ülke tarihinin en hareketli dönemlerinden birini beraberinde getirdi. Haziran 2016'dan bu yana geçen süreçte, Muhafazakar Parti ile İşçi Partisi hükümetleri altında toplam 5 kez başbakan değişti ve bu süreçte 6 farklı isim başbakanlık koltuğuna oturdu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/ingilterenin-basbakan-koltugunda-istikrar-krizi-son-10-yilda-6-basbakan-gorev-yapti-948954.html" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>ABD-İran görüşmelerinin ilk turu tamamlandı</h3>
-        <p>ABD ile İran arasında savaşı sona erdirecek nihai bir anlaşmaya ulaşmayı amaçlayan ilk tur müzakereler tamamlandı. Arabulucu ülkeler Katar ve Pakistan, görüşmelerde "cesaret verici ilerleme" kaydedildiğini açıkladı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
+                    <div class="stats-grid">
     <div class="news-card">
         <h3>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire'de biraraya geldi</h3>
         <p>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire'de biraraya geldi. Toplantıda bölgesel gelişmelerin değerlendirildiği ve ABD ile İran arasında varılan mutabakatın uygulanma sürecinin ele alındığı bildirildi</p>

@@ -1,165 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <h1>Günün Haberleri</h1>
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+    <header class="site-nav">
+        <div class="nav-inner">
+            <div class="brand">AI News</div>
+            <a href="index.html">Current News</a>
+            <a href="archive.html">Archive</a>
+            <a href="search.html">Search</a>
         </div>
+    </header>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>3</span>
-        </div>
+    <main class="site-wrapper">
+        <section class="hero">
+            <h1>Günün Haberleri</h1>
+            <div class="search-box">
+                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            </div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>7</span>
-        </div>
+            <div class="category-filters">
+                <button class="category-filter-btn active" data-category="all">Tümü</button>
+                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                <button class="category-filter-btn" data-category="genel">Genel</button>
+            </div>
+        </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>9</span>
-        </div>
+        <div class="stats-grid">
+                        <a href="archive.html">Archive</a>
+                        <a href="search.html">Search</a>
+                    </div>
+                </header>
 
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
-        </div>
+                <main class="site-wrapper">
+                    <section class="hero">
+                        <h1>Günün Haberleri</h1>
+                        <div class="search-box">
+                            <input type="text" id="home-search-input" placeholder="Search today's news...">
+                        </div>
 
-    </div>
+                        <div class="category-filters">
+                            <button class="category-filter-btn active" data-category="all">Tümü</button>
+                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
+                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+                            <button class="category-filter-btn" data-category="genel">Genel</button>
+                        </div>
+                    </section>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cly0vj7vp77o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>'ABD-İran anlaşması, ne için savaşıldığı sorusunu kaçınılmaz olarak gündeme getiriyor'</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c8r2e5mkvrvo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Dışişleri Bakanı Fidan'ın Rusya ziyaretinden hangi sonuçlar çıktı?</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/en-zenginlerin-cevreye-yillik-maliyeti-57-trilyon-dolar-948712.html" target="_blank">
-                <strong>En zenginlerin çevreye yıllık maliyeti 5,7 trilyon dolar</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/kaliforniyadaki-tehlikeli-fay-hatlari-son-1000-yilin-en-yuksek-basincinda-948710.html" target="_blank">
-                <strong>Kaliforniya'daki tehlikeli fay hatları son 1000 yılın en yüksek basıncında</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/spacexin-hisseleri-borsadaki-ilk-haftasinda-yuzde-37-yukseldi-948716.html" target="_blank">
-                <strong>SpaceX'in hisseleri borsadaki ilk haftasında yüzde 37 yükseldi</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">EKONOMI</h2>
-
-    <div class="news-card">
-        <h3>'ABD-İran anlaşması, ne için savaşıldığı sorusunu kaçınılmaz olarak gündeme getiriyor'</h3>
-        <p>ABD Başkanı Donald Trump ile İran Cumhurbaşkanı Mesud Pezeşkiyan tarafından imzalanan mutabakat zaptı, ABD'nin 28 Şubat'ta İran'a saldırma yönünde aldığı hatalı kararın siyasi, askeri ve ekonomik sonuçlarını ortaya koyuyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cly0vj7vp77o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-    </div>
-
-    <div class="news-card">
-        <h3>En zenginlerin çevreye yıllık maliyeti 5,7 trilyon dolar</h3>
-        <p>Hollanda'daki Leiden Üniversitesi tarafından yapılan yeni bir araştırma, küresel tüketimin zirvesindeki yüzde 10'luk kesimin çevreye verdiği zararın ekonomik boyutunu gözler önüne serdi. Bilim insanları, bu varlıklı grubun yol açtığı çevre tahribatının topluma yıllık maliyetinin 1,7 ila 5,7 trilyon dolar arasında olduğunu hesapladı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/en-zenginlerin-cevreye-yillik-maliyeti-57-trilyon-dolar-948712.html" target="_blank">Haberi Oku</a>
-    </div>
-
+                    <div class="stats-grid">
     <div class="news-card">
         <h3>SpaceX'in hisseleri borsadaki ilk haftasında yüzde 37 yükseldi</h3>
         <p>ABD'li iş insanı Elon Musk'ın üst yöneticisi (CEO) olduğu uzay, havacılık ve yapay zeka şirketi SpaceX'in Nasdaq borsasındaki ilk haftası, halka arz büyüklüğü ve piyasa değerindeki tırmanışla dikkati çekerken şirketin hisseleri bu dönemde toplam yüzde 37 değer kazandı.</p>
