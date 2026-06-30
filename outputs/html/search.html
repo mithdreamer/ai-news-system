@@ -2,79 +2,44 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Haber Arama</title>
+  <link rel="stylesheet" href="assets/css/news.css">
+  <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-<nav>
-    <a href="index.html">Güncel Haberler</a> |
-    <a href="archive.html">Arşiv</a> |
-    <a href="search.html">Arama</a>
-</nav>
-  <h1>Haber Arama</h1>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <div class="brand">AI News</div>
+      <a href="index.html">Current News</a>
+      <a href="archive.html">Archive</a>
+      <a href="search.html">Search</a>
+    </div>
+  </header>
 
-  <input
-    type="text"
-    id="search-input"
-    placeholder="Başlık, konu, kategori veya kaynak ara..."
-  >
+  <main class="site-wrapper">
+    <h1>Haber Arama</h1>
 
-  <div id="search-results"></div>
+    <div class="search-box">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Başlık, konu, kategori veya kaynak ara..."
+      >
+    </div>
 
-  <script>
-    const searchInput = document.querySelector("#search-input");
-    const resultsContainer = document.querySelector("#search-results");
+    <div id="search-results"></div>
 
-    let newsData = [];
-
-    fetch("data/index/search-index.json")
-      .then(response => response.json())
-      .then(data => {
-        newsData = data;
-        showResults(newsData);
-      });
-
-    function showResults(items) {
-      resultsContainer.innerHTML = "";
-
-      items.forEach(item => {
-        const card = document.createElement("div");
-
-        card.innerHTML = `
-          <h2>${item.title}</h2>
-          <p>${item.summary}</p>
-          <p>
-            <strong>Kategori:</strong> ${item.category || "genel"}
-            |
-            <strong>Kaynak:</strong> ${item.source || ""}
-          </p>
-          <a href="${item.link}" target="_blank">
-            Haberi Oku
-          </a>
-          <hr>
-        `;
-
-        resultsContainer.appendChild(card);
-      });
-    }
-
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.toLowerCase();
-
-      const filteredNews = newsData.filter(item => {
-        const text = `
-          ${item.title || ""}
-          ${item.summary || ""}
-          ${item.category || ""}
-          ${item.source || ""}
-          ${item.published || ""}
-        `.toLowerCase();
-
-        return text.includes(query);
-      });
-
-      showResults(filteredNews);
-    });
-  </script>
+    <footer class="site-footer">
+      <div class="inner">
+        <div>AI News Portal — Generated automatically</div>
+        <div>
+          <a href="rss_sources.json">RSS Sources</a> ·
+          <a href="https://github.com/korhanors">GitHub</a> · Korhan ÖRS · 2026
+        </div>
+      </div>
+    </footer>
+  </main>
 
 </body>
 </html>
