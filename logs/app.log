@@ -930,3 +930,16 @@
 2026-07-05 13:05:57,578 | INFO | 20 adet ham haber çekildi
 2026-07-05 13:05:57,578 | INFO | 20 adet filtrelenmiþ haber kaydedildi
 2026-07-05 13:05:57,578 | INFO | HTML oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\html\index.html
+2026-07-06 10:24:24,811 | INFO | Uygulama baþlatýldý
+2026-07-06 10:24:24,813 | INFO | RSS çekiliyor: BBC Türkçe
+2026-07-06 10:24:25,230 | INFO | RSS tamamlandý: BBC Türkçe
+2026-07-06 10:24:25,231 | INFO | RSS tamamlandý: BBC Türkçe
+2026-07-06 10:24:25,231 | INFO | RSS çekiliyor: TRT Haber
+2026-07-06 10:24:25,674 | INFO | RSS tamamlandý: TRT Haber
+2026-07-06 10:24:25,674 | INFO | RSS tamamlandý: TRT Haber
+2026-07-06 10:24:25,674 | INFO | RSS çekiliyor: Anadolu Ajansý
+2026-07-06 10:24:26,032 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-07-06 10:24:26,033 | INFO | RSS tamamlandý: Anadolu Ajansý
+2026-07-06 10:24:26,059 | INFO | 20 adet ham haber çekildi
+2026-07-06 10:24:26,059 | INFO | 20 adet filtrelenmiþ haber kaydedildi
+2026-07-06 10:24:26,059 | INFO | HTML oluþturuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yayýn Sistemi\ai-news-system\outputs\html\index.html
