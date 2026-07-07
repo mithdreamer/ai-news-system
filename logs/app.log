@@ -1034,3 +1034,16 @@
 2026-07-07 15:37:58,989 | INFO | 20 adet ham haber �ekildi
 2026-07-07 15:37:58,991 | INFO | 20 adet filtrelenmi� haber kaydedildi
 2026-07-07 15:37:58,991 | INFO | HTML olu�turuldu: C:\Users\korhan.ors\Desktop\Flashdisk Korhan\GitHub\arsiv\Projeler\AI Haber Yay�n Sistemi\ai-news-system\outputs\html\index.html
+2026-07-07 12:39:03,423 | INFO | Uygulama başlatıldı
+2026-07-07 12:39:03,423 | INFO | RSS çekiliyor: BBC Türkçe
+2026-07-07 12:39:03,692 | INFO | RSS tamamlandı: BBC Türkçe
+2026-07-07 12:39:03,692 | INFO | RSS tamamlandı: BBC Türkçe
+2026-07-07 12:39:03,692 | INFO | RSS çekiliyor: TRT Haber
+2026-07-07 12:39:04,771 | INFO | RSS tamamlandı: TRT Haber
+2026-07-07 12:39:04,772 | INFO | RSS tamamlandı: TRT Haber
+2026-07-07 12:39:04,772 | INFO | RSS çekiliyor: Anadolu Ajansı
+2026-07-07 12:39:07,421 | INFO | RSS tamamlandı: Anadolu Ajansı
+2026-07-07 12:39:07,421 | INFO | RSS tamamlandı: Anadolu Ajansı
+2026-07-07 12:39:07,436 | INFO | 20 adet ham haber çekildi
+2026-07-07 12:39:07,436 | INFO | 20 adet filtrelenmiş haber kaydedildi
+2026-07-07 12:39:07,436 | INFO | HTML oluşturuldu: /home/runner/work/ai-news-system/ai-news-system/outputs/html/index.html
