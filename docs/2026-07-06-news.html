@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-06 10:24</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/12-dev-adam-dunya-kupasi-yolunda-6da-6-icin-isvicre-karsisinda-950350.html" target="_blank">
+                <strong>12 Dev Adam Dünya Kupası yolunda 6'da 6 için İsviçre karşısında</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c70yy6wxgl9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>NATO Zirvesi neden önemli, Ankara'da hangi kararlar alınabilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c8x22v27elgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ankara'da NATO Zirvesi için hangi hazırlıklar yapıldı, halk ne diyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c8922001gv9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ekrem İmamoğlu bugün üç ayrı davada hakim karşısına çıkıyor</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye ve nato: 1952'den bugüne krizlerle şekillenen stratejik ortaklık
+            türkiye’nin nato’ya 1952’de katılımıyla başlayan ortaklık, soğuk savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen nato’nun güvenlik mimarisinde kritik konumunu korudu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</h3>
+                    <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            12 dev adam dünya kupası yolunda 6'da 6 için i̇sviçre karşısında
+            a milli erkek basketbol takımımız, fiba 2027 dünya kupası avrupa elemeleri 1. tur c grubu'ndaki 6. ve son maçında bugün i̇sviçre'yi ağırlayacak. saat 19.00'da başlayacak karşılaşma, trt 1'den naklen yayınlanacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>12 Dev Adam Dünya Kupası yolunda 6'da 6 için İsviçre karşısında</h3>
+                    <p>A Milli Erkek Basketbol Takımımız, FIBA 2027 Dünya Kupası Avrupa Elemeleri 1. Tur C Grubu'ndaki 6. ve son maçında bugün İsviçre'yi ağırlayacak. Saat 19.00'da başlayacak karşılaşma, TRT 1'den naklen yayınlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/12-dev-adam-dunya-kupasi-yolunda-6da-6-icin-isvicre-karsisinda-950350.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nato zirvesi neden önemli, ankara'da hangi kararlar alınabilir?
+            yarın ankara'da başlayacak ve iki gün sürecek zirve, gerek ittifakın abd yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. brüksel'den güven özalp'ın haberi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>NATO Zirvesi neden önemli, Ankara'da hangi kararlar alınabilir?</h3>
+                    <p>Yarın Ankara'da başlayacak ve iki gün sürecek zirve, gerek ittifakın ABD yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. Brüksel'den Güven Özalp'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c70yy6wxgl9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da nato zirvesi için hangi hazırlıklar yapıldı, halk ne diyor?
+            36. nato zirvesi'ne saatler kala, alınan tedbirler şehrin her noktasında hissedilir durumda. ankara'da yolların düzeltilmesine karşı çıkan pek yok. ancak nato zirvesi olmasaydı bu çalışmaların yapılıp yapılmayacağı sorgulanıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ankara'da NATO Zirvesi için hangi hazırlıklar yapıldı, halk ne diyor?</h3>
+                    <p>36. NATO Zirvesi'ne saatler kala, alınan tedbirler şehrin her noktasında hissedilir durumda. Ankara'da yolların düzeltilmesine karşı çıkan pek yok. Ancak NATO zirvesi olmasaydı bu çalışmaların yapılıp yapılmayacağı sorgulanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8x22v27elgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            enkazdan 32 saat sonra kurtarılan çocuk, peynir ve ketçap yiyerek hayatta kaldı
+            venezuela'da 24 haziran'da meydana gelen iki büyük depremde enkaz altında kalan ve 32 saat sonra kurtarılan 12 yaşındaki fabiana blanco, kurtarılmayı beklerken ketçap ve peynir yiyerek hayatta kaldığını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Enkazdan 32 saat sonra kurtarılan çocuk, peynir ve ketçap yiyerek hayatta kaldı</h3>
+                    <p>Venezuela'da 24 Haziran'da meydana gelen iki büyük depremde enkaz altında kalan ve 32 saat sonra kurtarılan 12 yaşındaki Fabiana Blanco, kurtarılmayı beklerken ketçap ve peynir yiyerek hayatta kaldığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/enkazdan-32-saat-sonra-kurtarilan-cocuk-peynir-ve-ketcap-yiyerek-hayatta-kaldi-950352.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'ın dini lideri mücteba hamaney, ali hamaney'in cenazesinde görülmedi
+            suikaste uğrayan i̇ran'ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni tahran'da devam ediyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran'ın dini lideri Mücteba Hamaney, Ali Hamaney'in cenazesinde görülmedi</h3>
+                    <p>Suikaste uğrayan İran'ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni Tahran'da devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de aşırı sıcak hava dalgası nedeniyle 25 kişi öldü
+            abd'de yaklaşık bir haftadır etkili olan aşırı sıcak hava dalgası nedeniyle 25 kişinin hayatını kaybettiği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de aşırı sıcak hava dalgası nedeniyle 25 kişi öldü</h3>
+                    <p>ABD'de yaklaşık bir haftadır etkili olan aşırı sıcak hava dalgası nedeniyle 25 kişinin hayatını kaybettiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdde-asiri-sicak-hava-dalgasi-nedeniyle-25-kisi-oldu-950344.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ekrem i̇mamoğlu bugün üç ayrı davada hakim karşısına çıkıyor
+            23 mart 2025'te tutuklanarak silivri cezaevi'ne gönderilen ve i̇çişleri bakanlığı tarafından i̇stanbul büyükşehir belediye (i̇bb) başkanlığı görevinden uzaklaştırılan ekrem i̇mamoğlu bugün yargılandığı üç ayrı davada hakim karşısına çıkacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ekrem İmamoğlu bugün üç ayrı davada hakim karşısına çıkıyor</h3>
+                    <p>23 Mart 2025'te tutuklanarak Silivri Cezaevi'ne gönderilen ve İçişleri Bakanlığı tarafından İstanbul Büyükşehir Belediye (İBB) Başkanlığı görevinden uzaklaştırılan Ekrem İmamoğlu bugün yargılandığı üç ayrı davada hakim karşısına çıkacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8922001gv9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            deniz göktaş'ın avukatı: saç, kıl, tırnak örnekleri alındı
+            tutuklanan komedyen deniz göktaş'ın avukatı metin sinan aslan, müvekkilinin halk arasında 'kuyu tipi' olarak bilinen karatepe cezaevi'nde tek kişilik bir odada tutulduğunu; gözaltı sırasında uyuşturucu suçlaması yapılmamasına rağmen göktaş'tan saç, kıl ve tırnak örnekleri alındığını söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Deniz Göktaş'ın avukatı: Saç, kıl, tırnak örnekleri alındı</h3>
+                    <p>Tutuklanan komedyen Deniz Göktaş'ın avukatı Metin Sinan Aslan, müvekkilinin halk arasında 'kuyu tipi' olarak bilinen Karatepe Cezaevi'nde tek kişilik bir odada tutulduğunu; gözaltı sırasında uyuşturucu suçlaması yapılmamasına rağmen Göktaş'tan saç, kıl ve tırnak örnekleri alındığını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2ww9pwqpxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere meksika'yı 3-2 yenerek dünya kupası'nda çeyrek finale yükseldi
+            dünya kupası'nda çeyrek finale yükselen dördüncü takım, meksika'yı mexico city'de oynanan heyecan dolu maçta 3-2 yenen i̇ngiltere oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere Meksika'yı 3-2 yenerek Dünya Kupası'nda çeyrek finale yükseldi</h3>
+                    <p>Dünya Kupası'nda çeyrek finale yükselen dördüncü takım, Meksika'yı Mexico City'de oynanan heyecan dolu maçta 3-2 yenen İngiltere oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            usta oyuncu zihni göktay hayatını kaybetti
+            türk tiyatrosunun duayen ismi zihni göktay, 80 yaşında hayatını kaybetti. göktay, tam 53 yıl boyunca i̇bb şehir tiyatroları'nda görev alarak türk tiyatrosunun tuluat geleneğini sahnede yaşatmıştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Usta oyuncu Zihni Göktay hayatını kaybetti</h3>
+                    <p>Türk tiyatrosunun duayen ismi Zihni Göktay, 80 yaşında hayatını kaybetti. Göktay, tam 53 yıl boyunca İBB Şehir Tiyatroları'nda görev alarak Türk tiyatrosunun tuluat geleneğini sahnede yaşatmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd0mmvj0j35o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazeteci, avukat ve akademisyenler gözaltına alındı
+            i̇stanbul, i̇zmir, kocaeli, ankara dahil farklı illerde düzenlenen operasyonlarda 39 kişi sabah saatlerinde gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazeteci, avukat ve akademisyenler gözaltına alındı</h3>
+                    <p>İstanbul, İzmir, Kocaeli, Ankara dahil farklı illerde düzenlenen operasyonlarda 39 kişi sabah saatlerinde gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6211mnvlz5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın haftaya düşüşle başladı
+            gram altın, haftanın ilk işlem gününe düşüşle başlamasının ardından 6 bin 259,5 liradan işlem görüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın haftaya düşüşle başladı</h3>
+                    <p>Gram altın, haftanın ilk işlem gününe düşüşle başlamasının ardından 6 bin 259,5 liradan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-haftaya-dususle-basladi-950348.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            perakende ticarette yeni dönem
+            ticaret bakanlığınca hazırlanan yeni yönetmelik taslağıyla perakende ticaretin kuralları yeniden belirleniyor. tedarik zincirini güçlendirmeyi amaçlayan düzenleme; kobi̇ ödemelerinin hızlandırılmasından kadın kooperatiflerine raf önceliğine, uygun fiyatlı ekmek üretiminden dijital sorgulama ekranına kadar geniş kapsamlı yenilikler içeriyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Perakende ticarette yeni dönem</h3>
+                    <p>Ticaret Bakanlığınca hazırlanan yeni yönetmelik taslağıyla perakende ticaretin kuralları yeniden belirleniyor. Tedarik zincirini güçlendirmeyi amaçlayan düzenleme; KOBİ ödemelerinin hızlandırılmasından kadın kooperatiflerine raf önceliğine, uygun fiyatlı ekmek üretiminden dijital sorgulama ekranına kadar geniş kapsamlı yenilikler içeriyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/perakende-ticarette-yeni-donem-950346.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'nın kuzeydoğusundaki müzeden milyonlarca euroluk mücevherler çalındı
+            fransa'nın kuzeydoğusundaki bas-rhin vilayetinde bulunan müzeden milyonlarca euro değerindeki mücevherler çalındı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fransa'nın kuzeydoğusundaki müzeden milyonlarca euroluk mücevherler çalındı</h3>
+                    <p>Fransa'nın kuzeydoğusundaki Bas-Rhin vilayetinde bulunan müzeden milyonlarca euro değerindeki mücevherler çalındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransanin-kuzeydogusundaki-muzeden-milyonlarca-euroluk-mucevherler-calindi-950354.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 72,22 dolardan işlem görüyor
+            brent petrolün varili, uluslararası vadeli piyasalarda 72,22 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 72,22 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili, uluslararası vadeli piyasalarda 72,22 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-7222-dolardan-islem-goruyor-950349.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küresel piyasalar haftaya karışık seyirle başladı
+            küresel piyasalar, teknoloji hisselerindeki düşüşlerin etkisiyle haftaya karışık bir seyirle başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Küresel piyasalar haftaya karışık seyirle başladı</h3>
+                    <p>Küresel piyasalar, teknoloji hisselerindeki düşüşlerin etkisiyle haftaya karışık bir seyirle başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kuresel-piyasalar-haftaya-karisik-seyirle-basladi-950345.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            25 yıllık cezası bulunan firarinin çarşı gezintisi yarım kaldı
+            adana'da "uyuşturucu ticareti" suçundan 24 yıl 11 ay kesinleşmiş hapis cezasıyla aranan hükümlü çarşıda gezdiği sırada yakalandı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>25 yıllık cezası bulunan firarinin çarşı gezintisi yarım kaldı</h3>
+                    <p>Adana'da "uyuşturucu ticareti" suçundan 24 yıl 11 ay kesinleşmiş hapis cezasıyla aranan hükümlü çarşıda gezdiği sırada yakalandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/25-yillik-cezasi-bulunan-firarinin-carsi-gezintisi-yarim-kaldi-950353.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bist 100 endeksi yeni haftaya yükselişle başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,51 artışla 14.491,23 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>BIST 100 endeksi yeni haftaya yükselişle başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,51 artışla 14.491,23 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/bist-100-endeksi-yeni-haftaya-yukselisle-basladi-950351.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            telefonlar vücudunuzun şeklini nasıl değiştiriyor?
+            cihazlarınız vücudunuzu fark etmeyebileceğiniz şekillerde değiştiriyor. bu konuda bir şeyler yapmak için henüz çok geç değil.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Telefonlar vücudunuzun şeklini nasıl değiştiriyor?</h3>
+                    <p>Cihazlarınız vücudunuzu fark etmeyebileceğiniz şekillerde değiştiriyor. Bu konuda bir şeyler yapmak için henüz çok geç değil.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crel04n73yeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
