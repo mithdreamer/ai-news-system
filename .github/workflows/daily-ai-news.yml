@@ -31,3 +31,8 @@ jobs:
 
       - name: Run AI News System
         run: python src/main.py
+
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update daily AI news"
