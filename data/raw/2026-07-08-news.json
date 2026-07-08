@@ -1,21 +1,21 @@
 [
   {
     "source": "BBC Türkçe",
+    "title": "NATO Zirvesi: Liderler Beştepe'de",
+    "summary": "Ankara'nın ev sahipliğinde düzenlenen NATO Zirvesi'nin ikinci gününde liderler Beştepe'de biraraya geliyor. ABD Başkanı Donald Trump, NATO Genel Sekreteri Mark Rutte ile görüşmesinde NATO'ya yönelik şikayetlerini yineledi. Cumhurbaşkanı Erdoğan, Çelik Kubbe için ek 24 milyar dolar bütçe ayrıldığını açıkladı.",
+    "link": "https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&at_campaign=rss",
+    "published": "",
+    "fetched_at": "2026-07-08T10:18:37.719841",
+    "importance_score": 4,
+    "category": "ekonomi"
+  },
+  {
+    "source": "BBC Türkçe",
     "title": "Zelenskiy NATO'dan hava savunma sistemi istedi",
     "summary": "Ukrayna Cumhurbaşkanı, Türkiye'deki NATO zirvesinde yaptığı konuşmada, Rusya'nın artan saldırılarına karşı Kiev'i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu.",
     "link": "https://www.bbc.com/turkce/articles/c77yg1mnlr1o?at_medium=RSS&at_campaign=rss",
     "published": "Tue, 07 Jul 2026 17:09:45 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715718",
-    "importance_score": 4,
-    "category": "dünya"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Ay Yıldız Karargahı kapılarını ilk kez NATO Savunma Bakanları için açtı",
-    "summary": "Milli Savunma Bakanlığından yapılan açıklamada, Cumhurbaşkanı Recep Tayyip Erdoğan'ın ev sahipliğinde gerçekleştirilen 36. NATO Devlet ve Hükümet Başkanları Zirvesi kapsamında, inşası devam eden Ay Yıldız Müşterek Karargahı kapılarının ilk kez NATO Savunma Bakanları için açıldığı belirtildi.",
-    "link": "https://www.trthaber.com/haber/gundem/ay-yildiz-karargahi-kapilarini-ilk-kez-nato-savunma-bakanlari-icin-acti-950632.html",
-    "published": "Wed, 08 Jul 2026 12:05:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409326",
+    "fetched_at": "2026-07-08T10:18:37.719880",
     "importance_score": 4,
     "category": "dünya"
   },
@@ -25,7 +25,7 @@
     "summary": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"2030 yılından önce savunma harcamalarımızın oranını yüzde 3,5 düzeyine yükseltmek için tedbirlerimizi aldık. Güvenlik ve dayanıklılıkla bağlantılı harcamalarda ise şimdiden yüzde 1,5’luk bütçe payına ulaştık. Böylece yüzde 5 hedefine, Lahey’de belirlenen 2035 yılından 5 sene önce erişmeyi hedefliyoruz\" dedi.",
     "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-savunma-hedeflerine-5-yil-erken-ulasacagiz-950637.html",
     "published": "Wed, 08 Jul 2026 12:19:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409312",
+    "fetched_at": "2026-07-08T10:18:38.641122",
     "importance_score": 3,
     "category": "dünya"
   },
@@ -35,29 +35,9 @@
     "summary": "Türkiye'nin, ticaret diplomasisi kapsamında Afrika ülkeleriyle geliştirdiği çok yönlü ekonomik iş birlikleri ihracata yansırken ocak-haziran döneminde yapılan dış satım yıllık bazda yüzde 12 artışla 11 milyar dolara ulaştı.",
     "link": "https://www.trthaber.com/haber/ekonomi/turkiye-afrika-ulkeleriyle-ekonomik-is-birligini-guclendiriyor-950633.html",
     "published": "Wed, 08 Jul 2026 11:44:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409323",
+    "fetched_at": "2026-07-08T10:18:38.641138",
     "importance_score": 3,
     "category": "ekonomi"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Apple, AB ile dijital kurallar konusundaki hukuki mücadeleyi kaybetti",
-    "summary": "Avrupa Birliği (AB) Genel Mahkemesi, ABD'li teknoloji şirketi Apple'ın, Dijital Piyasalar Yasası (DMA) kapsamında uygulama mağazası App Store ve iOS işletim sisteminin \"geçit bekçisi\" olarak belirlenmesine karşı açtığı davaları reddetti.",
-    "link": "https://www.trthaber.com/haber/dunya/apple-ab-ile-dijital-kurallar-konusundaki-hukuki-mucadeleyi-kaybetti-950631.html",
-    "published": "Wed, 08 Jul 2026 12:02:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409329",
-    "importance_score": 3,
-    "category": "ekonomi"
-  },
-  {
-    "source": "BBC Türkçe",
-    "title": "Netanyahu: 'Türkiye'ye F-35 satışı Ortadoğu'da güç dengesini yok eder'",
-    "summary": "İsrail Başbakanı Benjamin Netanyahu, ABD'nin Türkiye'ye F-35 savaş uçakları satmasının Ortadoğu'daki güç dengesini \"yok edeceğini\" söyledi.",
-    "link": "https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&at_campaign=rss",
-    "published": "Wed, 08 Jul 2026 08:26:16 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715698",
-    "importance_score": 2,
-    "category": "dünya"
   },
   {
     "source": "BBC Türkçe",
@@ -65,7 +45,17 @@
     "summary": "ABD, Hürmüz Boğazı'nda üç ticari gemiye düzenlenen saldırılara karşılık olarak İran'a yönelik bir dizi \"güçlü\" hava saldırısı başlattı. Buna karşılık İran, Kuveyt ve Bahreyn'deki Amerikan askeri üslerini vurdu.",
     "link": "https://www.bbc.com/turkce/articles/czdemgm5gjmo?at_medium=RSS&at_campaign=rss",
     "published": "Wed, 08 Jul 2026 09:35:34 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715701",
+    "fetched_at": "2026-07-08T10:18:37.719853",
+    "importance_score": 2,
+    "category": "dünya"
+  },
+  {
+    "source": "BBC Türkçe",
+    "title": "Netanyahu: 'Türkiye'ye F-35 satışı Ortadoğu'da güç dengesini yok eder'",
+    "summary": "İsrail Başbakanı Benjamin Netanyahu, ABD'nin Türkiye'ye F-35 savaş uçakları satmasının Ortadoğu'daki güç dengesini \"yok edeceğini\" söyledi.",
+    "link": "https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&at_campaign=rss",
+    "published": "Wed, 08 Jul 2026 08:26:16 GMT",
+    "fetched_at": "2026-07-08T10:18:37.719856",
     "importance_score": 2,
     "category": "dünya"
   },
@@ -75,7 +65,7 @@
     "summary": "ABD Başkanı Donald Trump, Cumhurbaşkanı Recep Tayyip Erdoğan ile yaptığı görüşme sırasında basına yaptığı açıklamada Türkiye'ye yönelik CAATSA yaptırımlarının kaldırılacağını söyledi. Trump ayrıca F-35 satışını da değerlendireceklerini belirtti.",
     "link": "https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss",
     "published": "Tue, 07 Jul 2026 13:47:08 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715710",
+    "fetched_at": "2026-07-08T10:18:37.719870",
     "importance_score": 2,
     "category": "dünya"
   },
@@ -85,7 +75,17 @@
     "summary": "NATO müttefikleri Ankara'daki liderler zirvesi kapsamında düzenlenen Savunma Forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.",
     "link": "https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&at_campaign=rss",
     "published": "Tue, 07 Jul 2026 11:34:44 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715715",
+    "fetched_at": "2026-07-08T10:18:37.719876",
+    "importance_score": 2,
+    "category": "ekonomi"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "ASELSAN Genel Müdürü Akyol'dan 'Avrupa'nın en hızlı şirketlerindeniz' mesajı",
+    "summary": "ASELSAN Genel Müdürü Ahmet Akyol, seri üretim kapasitesiyle Avrupa'daki şirketlerden farklı olduklarını belirterek, \"Ankara'dan açıkça ilan ediyoruz ki hava savunma sistemleri dahil en karmaşık radar ve hava savunma sistemlerimizden pek çoğunu bugün sipariş vermeniz durumunda tüm müttefiklere 2 yılın altında bir sürede teslim edebiliriz\" dedi.",
+    "link": "https://www.trthaber.com/haber/gundem/aselsan-genel-muduru-akyoldan-avrupanin-en-hizli-sirketlerindeniz-mesaji-950642.html",
+    "published": "Wed, 08 Jul 2026 13:08:00 +0300",
+    "fetched_at": "2026-07-08T10:18:38.641098",
     "importance_score": 2,
     "category": "ekonomi"
   },
@@ -95,18 +95,8 @@
     "summary": "Meteoroloji, İstanbul'un Avrupa Yakası ile Trakya için yarın yerel kuvvetli gök gürültülü sağanak uyarısında bulundu.",
     "link": "https://www.trthaber.com/haber/turkiye/meteorolojiden-istanbul-icin-kuvvetli-saganak-uyarisi-950639.html",
     "published": "Wed, 08 Jul 2026 12:21:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409305",
+    "fetched_at": "2026-07-08T10:18:38.641115",
     "importance_score": 2,
-    "category": "dünya"
-  },
-  {
-    "source": "BBC Türkçe",
-    "title": "NATO Zirvesi: Liderler Beştepe'de",
-    "summary": "Ankara'nın ev sahipliğinde düzenlenen NATO Zirvesi'nin ikinci gününde liderler Beştepe'de biraraya geliyor. ABD Başkanı Donald Trump, NATO Genel Sekreteri Mark Rutte ile görüşmesinde NATO'ya yönelik şikayetlerini yineledi.",
-    "link": "https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&at_campaign=rss",
-    "published": "",
-    "fetched_at": "2026-07-08T09:47:54.715685",
-    "importance_score": 1,
     "category": "dünya"
   },
   {
@@ -115,7 +105,17 @@
     "summary": "Ankara'da düzenlenen NATO Zirvesi'ni protesto etmek isteyen gruba polis müdahale etti. Müdahale sırasında çok sayıda kişi gözaltına alınırken, bazı milletvekilleri ve siyasi parti temsilcileri polis tarafından abluka altına alındı",
     "link": "https://www.bbc.com/turkce/articles/cn94nvyenr4o?at_medium=RSS&at_campaign=rss",
     "published": "Tue, 07 Jul 2026 11:51:18 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715722",
+    "fetched_at": "2026-07-08T10:18:37.719883",
+    "importance_score": 1,
+    "category": "genel"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "Bakan Güler, Bulgaristanlı ve Romanyalı mevkidaşlarıyla görüştü",
+    "summary": "Milli Savunma Bakanı Yaşar Güler, Bulgaristan Savunma Bakanı Dimitar Stoyanov ve Romanya Savunma Bakanı Radu-Dinel Miruta ile görüştü.",
+    "link": "https://www.trthaber.com/haber/gundem/bakan-guler-bulgaristanli-ve-romanyali-mevkidaslariyla-gorustu-950641.html",
+    "published": "Wed, 08 Jul 2026 13:03:00 +0300",
+    "fetched_at": "2026-07-08T10:18:38.641107",
     "importance_score": 1,
     "category": "genel"
   },
@@ -125,7 +125,7 @@
     "summary": "Bitlis'in Hizan ilçesinde karla mücadele ekipleri, kar kalınlığının bazı yerlerde 1 metreyi geçtiği 3 bin rakımlı Kolludere Yaylası'nın yolunu açmak için çaba harcıyor.",
     "link": "https://www.trthaber.com/haber/turkiye/bitliste-temmuzda-kar-mesaisi-suruyor-950638.html",
     "published": "Wed, 08 Jul 2026 12:22:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409309",
+    "fetched_at": "2026-07-08T10:18:38.641118",
     "importance_score": 1,
     "category": "dünya"
   },
@@ -135,7 +135,7 @@
     "summary": "Brent petrolün varil fiyatı, ABD Başkanı Donald Trump'ın İran'la ateşkesin sona erdiğini açıklaması ve ABD yönetiminin İran petrolü satışına izin veren genel lisansı iptal etmesinin ardından yüzde 6'nın üzerinde arttı.",
     "link": "https://www.trthaber.com/haber/dunya/trumpin-iranla-muzakerelerin-bittigini-aciklamasiyla-brent-petrolun-fiyati-yuzde-6dan-fazla-yukseldi-950636.html",
     "published": "Wed, 08 Jul 2026 12:16:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409315",
+    "fetched_at": "2026-07-08T10:18:38.641125",
     "importance_score": 1,
     "category": "dünya"
   },
@@ -145,7 +145,7 @@
     "summary": "NATO Genel Sekreteri Mark Rutte, ABD Başkanı Donald Trump'ın İran'a yönelik politikası ve NATO müttefiklerinin savunma harcamalarını artırmasındaki rolünü överek \"Bu koltukta olmasaydınız bunların hiçbiri gerçekleşmezdi\" dedi.",
     "link": "https://www.trthaber.com/haber/dunya/nato-genel-sekreteri-trumpin-ittifakin-savunma-harcamalarini-artirmasindaki-rolunu-ovdu-950634.html",
     "published": "Wed, 08 Jul 2026 11:58:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409320",
+    "fetched_at": "2026-07-08T10:18:38.641134",
     "importance_score": 1,
     "category": "dünya"
   },
@@ -155,7 +155,7 @@
     "summary": "Ankara'daki zirvede bugün liderler düzeyindeki resmi oturumlara geçiliyor. Liderler dört ana konuya odaklanacak. Tartışmaların seyrinde ABD Başkanı Donald Trump'ın ruh hali belirleyici olabilir.",
     "link": "https://www.bbc.com/turkce/articles/c9q29xz7z47o?at_medium=RSS&at_campaign=rss",
     "published": "Wed, 08 Jul 2026 04:24:30 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715694",
+    "fetched_at": "2026-07-08T10:18:37.719860",
     "importance_score": 0,
     "category": "dünya"
   },
@@ -165,7 +165,7 @@
     "summary": "Ekem İmamoğlu'nun\"suç örgütü lideri\" olmakla suçlandığı İstanbul Büyükşehir Belediyesi (İBB) davası 64. gününde Silivri'de devam edecek.",
     "link": "https://www.bbc.com/turkce/articles/c05yqd2y949o?at_medium=RSS&at_campaign=rss",
     "published": "Wed, 08 Jul 2026 06:03:32 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715704",
+    "fetched_at": "2026-07-08T10:18:37.719863",
     "importance_score": 0,
     "category": "genel"
   },
@@ -175,7 +175,7 @@
     "summary": "Dünya Kupası'nda çeyrek finale yükselen son takım İsviçre oldu. İsviçre, Kanada'nın Vancouver kentinde oynanan maçta Kolombiya'yı penaltılarla 4-3 mağlup etti.",
     "link": "https://www.bbc.com/turkce/articles/cn7p7dyp0gjo?at_medium=RSS&at_campaign=rss",
     "published": "Wed, 08 Jul 2026 04:29:37 GMT",
-    "fetched_at": "2026-07-08T09:47:54.715707",
+    "fetched_at": "2026-07-08T10:18:37.719867",
     "importance_score": 0,
     "category": "genel"
   },
@@ -185,7 +185,7 @@
     "summary": "Türkiye'nin ev sahipliğinde gerçekleştirilen 36. NATO Devlet ve Hükümet Başkanları Zirvesi kapsamında liderler, aile fotoğrafı çekimine katıldı.",
     "link": "https://www.trthaber.com/haber/gundem/nato-liderleri-ankarada-aile-fotografinda-bulustu-950640.html",
     "published": "Wed, 08 Jul 2026 12:32:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409298",
+    "fetched_at": "2026-07-08T10:18:38.641111",
     "importance_score": 0,
     "category": "genel"
   },
@@ -195,7 +195,7 @@
     "summary": "İstanbul'da göçmen kaçakçılığından elde ettikleri suç gelirlerini altın şirketi üzerinden finansal dolaşıma entegre eden kara para aklama ağını yönettikleri iddiasıyla 6 şüpheli gözaltına alındı.",
     "link": "https://www.trthaber.com/haber/turkiye/istanbulda-kara-para-aklama-operasyonu-6-gozalti-950635.html",
     "published": "Wed, 08 Jul 2026 12:09:00 +0300",
-    "fetched_at": "2026-07-08T09:47:55.409317",
+    "fetched_at": "2026-07-08T10:18:38.641129",
     "importance_score": 0,
     "category": "genel"
   }

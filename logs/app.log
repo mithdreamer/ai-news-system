@@ -1073,3 +1073,16 @@
 2026-07-08 09:47:57,945 | INFO | 20 adet ham haber çekildi
 2026-07-08 09:47:57,945 | INFO | 20 adet filtrelenmiş haber kaydedildi
 2026-07-08 09:47:57,945 | INFO | HTML oluşturuldu: /home/runner/work/ai-news-system/ai-news-system/outputs/html/index.html
+2026-07-08 10:18:37,437 | INFO | Uygulama başlatıldı
+2026-07-08 10:18:37,437 | INFO | RSS çekiliyor: BBC Türkçe
+2026-07-08 10:18:37,719 | INFO | RSS tamamlandı: BBC Türkçe
+2026-07-08 10:18:37,719 | INFO | RSS tamamlandı: BBC Türkçe
+2026-07-08 10:18:37,719 | INFO | RSS çekiliyor: TRT Haber
+2026-07-08 10:18:38,640 | INFO | RSS tamamlandı: TRT Haber
+2026-07-08 10:18:38,641 | INFO | RSS tamamlandı: TRT Haber
+2026-07-08 10:18:38,641 | INFO | RSS çekiliyor: Anadolu Ajansı
+2026-07-08 10:18:41,376 | INFO | RSS tamamlandı: Anadolu Ajansı
+2026-07-08 10:18:41,376 | INFO | RSS tamamlandı: Anadolu Ajansı
+2026-07-08 10:18:41,391 | INFO | 20 adet ham haber çekildi
+2026-07-08 10:18:41,391 | INFO | 20 adet filtrelenmiş haber kaydedildi
+2026-07-08 10:18:41,391 | INFO | HTML oluşturuldu: /home/runner/work/ai-news-system/ai-news-system/outputs/html/index.html
