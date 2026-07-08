@@ -9,6 +9,7 @@ from services.statistics import generate_statistics
 from services.script_generator import generate_news_script
 from services.html_generator import generate_news_html
 from services.archive_generator import generate_archive, generate_search_index
+from services.publisher import publish
 
 from utils.file_helper import save_json, save_text
 from utils.logger import get_logger
@@ -32,6 +33,7 @@ def main():
     stats = generate_statistics(categorized_news)
     script = generate_news_script(categorized_news)
     html = generate_news_html(categorized_news, stats)
+    publish(PROJECT_ROOT)
 
     latest_json_file = PROJECT_ROOT / "data" / "raw" / "latest-news.json"
     archive_json_file = PROJECT_ROOT / "data" / "raw" / f"{today}-news.json"
