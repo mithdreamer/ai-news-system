@@ -1,7 +1,9 @@
 {
   "toplam_haber": 20,
-  "ekonomi": 6,
+  "ekonomi": 5,
   "dünya": 8,
-  "genel": 6,
-  "generated_at": "2026-07-09 08:31"
+  "genel": 4,
+  "teknoloji": 2,
+  "gümrük": 1,
+  "generated_at": "2026-07-09 09:33"
 }
