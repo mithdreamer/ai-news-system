@@ -33,7 +33,7 @@ def main():
     stats = generate_statistics(categorized_news)
     script = generate_news_script(categorized_news)
     html = generate_news_html(categorized_news, stats)
-    publish(PROJECT_ROOT)
+   
 
     latest_json_file = PROJECT_ROOT / "data" / "raw" / "latest-news.json"
     archive_json_file = PROJECT_ROOT / "data" / "raw" / f"{today}-news.json"
@@ -92,11 +92,12 @@ def main():
 
     archive_html = generate_archive(PROJECT_ROOT)
     search_index = generate_search_index(PROJECT_ROOT)
+
     save_json(search_index, public_search_index_file)
     save_json(search_index, search_index_file)
     save_text(archive_html, archive_page_file)
 
-    
+    publish(PROJECT_ROOT)
 
     print("\n--- HABER İSTATİSTİKLERİ ---")
     for key, value in stats.items():
@@ -105,15 +106,16 @@ def main():
     logger.info(f"{len(news_items)} adet ham haber çekildi")
     logger.info(f"{len(filtered_news)} adet filtrelenmiş haber kaydedildi")
     logger.info(f"HTML oluşturuldu: {latest_html_file}")
+    logger.info(f"Yayın klasörü güncellendi: {PROJECT_ROOT / 'docs'}")
 
     print("Haberler çekildi.")
     print(f"Ham haber sayısı: {len(news_items)}")
     print(f"Filtrelenmiş haber sayısı: {len(filtered_news)}")
     print(f"Güncel HTML: {latest_html_file}")
-    print(f"Arşiv HTML : {archive_html_file}")
+    print(f"Arşiv HTML: {archive_html_file}")
     print(f"Arşiv Sayfası: {archive_page_file}")
     print(f"Search Index: {search_index_file}")
-
+    print("Yayın klasörü güncellendi:", PROJECT_ROOT / "docs")
 
 if __name__ == "__main__":
     main()
