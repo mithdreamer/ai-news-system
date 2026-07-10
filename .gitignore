@@ -8,9 +8,10 @@ __pycache__/
 # Environment variables
 .env
 
-# Logs
-logs/*.log
-
 # Temporary files
 .DS_Store
 Thumbs.db
+
+# Generated files
+outputs/
+logs/
