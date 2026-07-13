@@ -33,6 +33,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run AI News System
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
+          NEWSLETTER_FROM: "AI News <onboarding@resend.dev>"
+          SEND_NEWSLETTER: "true"
         run: python src/main.py
 
       - name: Configure GitHub Pages
