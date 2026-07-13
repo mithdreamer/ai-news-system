@@ -4,3 +4,4 @@ feedparser
 openai
 moviepy
 pydub
+resend
