@@ -100,20 +100,19 @@ def main():
     save_json(search_index, search_index_file)
     save_text(archive_html, archive_page_file)
 
-publish(PROJECT_ROOT)
+    publish(PROJECT_ROOT)
 
-send_newsletter_enabled = os.getenv("SEND_NEWSLETTER")
+    send_newsletter_enabled = os.getenv("SEND_NEWSLETTER")
+    print("SEND_NEWSLETTER değeri:", repr(send_newsletter_enabled))
 
-print("SEND_NEWSLETTER değeri:", repr(send_newsletter_enabled))
+    if send_newsletter_enabled == "true":
+        print("Newsletter gönderme aşamasına girildi.")
 
-if send_newsletter_enabled == "true":
-    print("Newsletter gönderme aşamasına girildi.")
+        email_result = send_newsletter(categorized_news, stats)
 
-    email_result = send_newsletter(categorized_news, stats)
-
-    print("Bülten gönderildi:", email_result)
-else:
-    print("Newsletter gönderimi kapalı.")
+        print("Bülten gönderildi:", email_result)
+    else:
+        print("Newsletter gönderimi kapalı.")
 
     print("\n--- HABER İSTATİSTİKLERİ ---")
     for key, value in stats.items():
@@ -132,6 +131,7 @@ else:
     print(f"Arşiv Sayfası: {archive_page_file}")
     print(f"Search Index: {search_index_file}")
     print("Yayın klasörü güncellendi:", PROJECT_ROOT / "docs")
+
 
 if __name__ == "__main__":
     main()
