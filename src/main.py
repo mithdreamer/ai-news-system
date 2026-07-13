@@ -10,12 +10,15 @@ from services.script_generator import generate_news_script
 from services.html_generator import generate_news_html
 from services.archive_generator import generate_archive, generate_search_index
 from services.publisher import publish
+from services.newsletter_sender import send_newsletter
 
 from utils.file_helper import save_json, save_text
 from utils.logger import get_logger
+import os
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 
 
 def main():
@@ -97,7 +100,20 @@ def main():
     save_json(search_index, search_index_file)
     save_text(archive_html, archive_page_file)
 
-    publish(PROJECT_ROOT)
+publish(PROJECT_ROOT)
+
+send_newsletter_enabled = os.getenv("SEND_NEWSLETTER")
+
+print("SEND_NEWSLETTER değeri:", repr(send_newsletter_enabled))
+
+if send_newsletter_enabled == "true":
+    print("Newsletter gönderme aşamasına girildi.")
+
+    email_result = send_newsletter(categorized_news, stats)
+
+    print("Bülten gönderildi:", email_result)
+else:
+    print("Newsletter gönderimi kapalı.")
 
     print("\n--- HABER İSTATİSTİKLERİ ---")
     for key, value in stats.items():
