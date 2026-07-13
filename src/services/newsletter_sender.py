@@ -2,6 +2,7 @@ import html
 import os
 from datetime import datetime
 from typing import Any
+from collections import Counter
 
 import resend
 
