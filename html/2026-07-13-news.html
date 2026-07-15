@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-13 21:38</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvge2zwq0e2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>25 kişinin gözaltına alındığı Muhsin Yazıcıoğlu soruşturması hakkında neler biliniyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn0vlyk40r2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>FIFA Dünya Kupası'nı 64 takıma çıkarmayı görüşecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cpd8lg2vqqeo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye'de kumar bağımlılığı neden rekor düzeyde, neler yapılabilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-ukrayna-konulu-gonulluler-koalisyonu-liderler-zirvesine-katildi-951106.html" target="_blank">
+                <strong>Bakan Fidan, Ukrayna konulu Gönüllüler Koalisyonu Liderler Zirvesi'ne katıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/turkiye/depremde-115-kisinin-oldugu-penta-park-sitesi-davasinda-karar-951104.html" target="_blank">
+                <strong>Depremde 115 kişinin öldüğü Penta Park Sitesi davasında karar</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            25 kişinin gözaltına alındığı muhsin yazıcıoğlu soruşturması hakkında neler biliniyor?
+            adalet bakanı akın gürlek, büyük birlik partisi'nin eski lideri muhsin yazıcıoğlu'nun 2009'da hayatını kaybettiği helikopter kazasına dair yürütülen soruşturmada 25 kişinin gözaltına alındığını açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>25 kişinin gözaltına alındığı Muhsin Yazıcıoğlu soruşturması hakkında neler biliniyor?</h3>
+                    <p>Adalet Bakanı Akın Gürlek, Büyük Birlik Partisi'nin eski lideri Muhsin Yazıcıoğlu'nun 2009'da hayatını kaybettiği helikopter kazasına dair yürütülen soruşturmada 25 kişinin gözaltına alındığını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvge2zwq0e2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            depremde 115 kişinin öldüğü penta park sitesi davasında karar
+            kahramanmaraş'ta meydana gelen depremlerde 115 kişinin yaşamını yitirdiği penta park sitesi 1. ve 3. blokların yıkılmasına ilişkin davada, yapının müteahhidi mesut başkır ile statik proje müellifi özcan çakmak, ayrı ayrı 15 yıl 6 ay 20 gün hapis cezasına çarptırıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Depremde 115 kişinin öldüğü Penta Park Sitesi davasında karar</h3>
+                    <p>Kahramanmaraş'ta meydana gelen depremlerde 115 kişinin yaşamını yitirdiği Penta Park Sitesi 1. ve 3. Blokların yıkılmasına ilişkin davada, yapının müteahhidi Mesut Başkır ile statik proje müellifi Özcan Çakmak, ayrı ayrı 15 yıl 6 ay 20 gün hapis cezasına çarptırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/depremde-115-kisinin-oldugu-penta-park-sitesi-davasinda-karar-951104.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan: artık reddi miras yapan türkiye yok
+            cumhurbaşkanı recep tayyip erdoğan, "mehter marşı'ndan, yeniçeriden rahatsız olanlara hatırlatıyorum, artık reddi miras yapan türkiye yok, medeniyet ve kültür birikimini kucaklayan türkiye var" açıklamasını yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan: Artık reddi miras yapan Türkiye yok</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, "Mehter Marşı'ndan, yeniçeriden rahatsız olanlara hatırlatıyorum, artık reddi miras yapan Türkiye yok, medeniyet ve kültür birikimini kucaklayan Türkiye var" açıklamasını yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-artik-reddi-miras-yapan-turkiye-yok-951097.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            haluk levent'ten açıklama: 'kişisel borç-alacak ilişkilerimde ahbap tamamen konu dışıdır'
+            sanatçı haluk levent, i̇stanbul cumhuriyet başsavcılığı tarafından başlatılan soruşturma kapsamında gözaltına alındı. ahbap derneğinin başkanı olan sanatçı, "dernekler kanunu'na muhalefet", "suçtan kaynaklanan mal varlığı değerlerini aklama" ve "örgüt üyeliği" suçlamalarıyla karşı karşıya. aynı soruşturma kapsamında 10'dan fazla dernek çalışanı da gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Haluk Levent'ten açıklama: 'Kişisel borç-alacak ilişkilerimde Ahbap tamamen konu dışıdır'</h3>
+                    <p>Sanatçı Haluk Levent, İstanbul Cumhuriyet Başsavcılığı tarafından başlatılan soruşturma kapsamında gözaltına alındı. Ahbap derneğinin başkanı olan sanatçı, "Dernekler Kanunu'na muhalefet", "suçtan kaynaklanan mal varlığı değerlerini aklama" ve "örgüt üyeliği" suçlamalarıyla karşı karşıya. Aynı soruşturma kapsamında 10'dan fazla dernek çalışanı da gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            haluk levent'in müzik, cezaevi ve ahbap derneği süreci
+            müzisyen haluk levent, 2019'dan bu yana altı senedir üst üste yapılan bir araştırmada türkiye'nin en güvenilir ünlüsü olarak öne çıktı. levent, 12 temmuz'da farklı suçlamalarla gözaltına alındı. i̇ddiaları reddeden haluk levent bu noktaya nasıl geldi?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Haluk Levent'in müzik, cezaevi ve Ahbap Derneği süreci</h3>
+                    <p>Müzisyen Haluk Levent, 2019'dan bu yana altı senedir üst üste yapılan bir araştırmada Türkiye'nin en güvenilir ünlüsü olarak öne çıktı. Levent, 12 Temmuz'da farklı suçlamalarla gözaltına alındı. İddiaları reddeden Haluk Levent bu noktaya nasıl geldi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp8l3ev3vj6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'da paris yakınlarında 'olağanüstü ölçekte' orman yangını
+            fransa'da itfaiyeciler, başkent paris'in güneyindeki büyük bir orman yangınıyla mücadele ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa'da Paris yakınlarında 'olağanüstü ölçekte' orman yangını</h3>
+                    <p>Fransa'da itfaiyeciler, başkent Paris'in güneyindeki büyük bir orman yangınıyla mücadele ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crr84greg48o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fetö'nün 'güncel yapılanması' deşifre edildi
+            fetö'nün 15 temmuz 2016'daki darbe girişiminden sonra yeni yapılanmaya gittiği belirlenirken, yargı ve güvenlik güçlerinin 10 yıldır aralıksız sürdürdüğü çalışmalarla örgütün "güncel yapılanmaları" deşifre edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>FETÖ'nün 'güncel yapılanması' deşifre edildi</h3>
+                    <p>FETÖ'nün 15 Temmuz 2016'daki darbe girişiminden sonra yeni yapılanmaya gittiği belirlenirken, yargı ve güvenlik güçlerinin 10 yıldır aralıksız sürdürdüğü çalışmalarla örgütün "güncel yapılanmaları" deşifre edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/fetonun-guncel-yapilanmasi-desifre-edildi-951105.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de aşırı sıcaklar 'yaklaşık üç bin kişinin ölümüne sebep oldu'
+            i̇lk tahminlere göre, i̇ngiltere'de son aylarda yaşanan olağanüstü sıcak havalarda 2 bin 700'den fazla kişi sıcağa bağlı nedenlerle hayatını kaybetti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'de aşırı sıcaklar 'yaklaşık üç bin kişinin ölümüne sebep oldu'</h3>
+                    <p>İlk tahminlere göre, İngiltere'de son aylarda yaşanan olağanüstü sıcak havalarda 2 bin 700'den fazla kişi sıcağa bağlı nedenlerle hayatını kaybetti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye voleybol milletler ligi'nde çeyrek finalde
+            türkiye a milli kadın voleybol takımı, 2026 voleybol milletler ligi'nde tayland'ı 3-1 mağlup etti. bu skorla çeyrek finale yükselen türkiye'nin rakibi kanada oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye Voleybol Milletler Ligi'nde çeyrek finalde</h3>
+                    <p>Türkiye A Milli Kadın Voleybol Takımı, 2026 Voleybol Milletler Ligi'nde Tayland'ı 3-1 mağlup etti. Bu skorla çeyrek finale yükselen Türkiye'nin rakibi Kanada oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c23y5yjpzr0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'da hava savunma sistemleri devreye girdi
+            suudi arabistan öncülüğündeki koalisyon sözcüsü: yemen'deki i̇ran destekli husilerin fırlattığı balistik füzeler nedeniyle suudi arabistan'da hava savunma sistemleri devreye girdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Suudi Arabistan'da hava savunma sistemleri devreye girdi</h3>
+                    <p>Suudi Arabistan öncülüğündeki Koalisyon Sözcüsü: Yemen'deki İran destekli Husilerin fırlattığı balistik füzeler nedeniyle Suudi Arabistan'da hava savunma sistemleri devreye girdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/suudi-arabistanda-hava-savunma-sistemleri-devreye-girdi-951103.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mersin'de fetö operasyonu: 58 gözaltı
+            mersin'de fetö'ye üye oldukları gerekçesiyle 58 şüpheli yakalandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Mersin'de FETÖ operasyonu: 58 gözaltı</h3>
+                    <p>Mersin'de FETÖ'ye üye oldukları gerekçesiyle 58 şüpheli yakalandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/mersinde-feto-operasyonu-58-gozalti-951102.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            burdur'da kkka can aldı
+            burdur'da kırım-kongo kanamalı ateşi (kkka) hastalığı şüphesiyle tedavi gören kişi, sevk edildiği antalya'daki hastanede yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Burdur'da KKKA can aldı</h3>
+                    <p>Burdur'da Kırım-Kongo Kanamalı Ateşi (KKKA) hastalığı şüphesiyle tedavi gören kişi, sevk edildiği Antalya'daki hastanede yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/burdurda-kkka-can-aldi-951101.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trabzon fanilası tescillendi
+            trabzon fanilası, türk patent ve marka kurumunca (türkpatent) coğrafi işaretle tescillendi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Trabzon fanilası tescillendi</h3>
+                    <p>Trabzon fanilası, Türk Patent ve Marka Kurumunca (TÜRKPATENT) coğrafi işaretle tescillendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/yasam/trabzon-fanilasi-tescillendi-951099.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yüksek sıcaklıkların etkili olduğu fransa'da 3 nükleer reaktörün faaliyeti askıya alındı
+            yeni bir sıcak hava dalgasının etkisi altında olan fransa’da 3 nükleer reaktörün faaliyeti durdurulurken, 8 reaktör de düşük güç moduna alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yüksek sıcaklıkların etkili olduğu Fransa'da 3 nükleer reaktörün faaliyeti askıya alındı</h3>
+                    <p>Yeni bir sıcak hava dalgasının etkisi altında olan Fransa’da 3 nükleer reaktörün faaliyeti durdurulurken, 8 reaktör de düşük güç moduna alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yuksek-sicakliklarin-etkili-oldugu-fransada-3-nukleer-reaktorun-faaliyeti-askiya-alindi-951098.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fifa dünya kupası'nı 64 takıma çıkarmayı görüşecek
+            fifa başkanı gianni infantino, organizasyonun "tüm dünya için" olması gerektiğini söyleyerek, bu yılki turnuvanın ardından erkekler dünya kupası'nın 64 takıma çıkarılması planlarının değerlendirileceğini açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>FIFA Dünya Kupası'nı 64 takıma çıkarmayı görüşecek</h3>
+                    <p>FIFA Başkanı Gianni Infantino, organizasyonun "tüm dünya için" olması gerektiğini söyleyerek, bu yılki turnuvanın ardından erkekler Dünya Kupası'nın 64 takıma çıkarılması planlarının değerlendirileceğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0vlyk40r2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de kumar bağımlılığı neden rekor düzeyde, neler yapılabilir?
+            türkiye'de kumar bağımlılığı son yıllarda büyük bir artış gösterdi. öyle ki, yeşilay'a kumar bağımlılığı tedavisi için yapılan başvurular 2024'te ilk defa alkol ve uyuşturucu bağımlılığı nedeniyle yapılan başvuruların toplamını geçti. peki bu tablonun sorumlusu ne? bbc türkçe'den onur erem araştırdı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'de kumar bağımlılığı neden rekor düzeyde, neler yapılabilir?</h3>
+                    <p>Türkiye'de kumar bağımlılığı son yıllarda büyük bir artış gösterdi. Öyle ki, Yeşilay'a kumar bağımlılığı tedavisi için yapılan başvurular 2024'te ilk defa alkol ve uyuşturucu bağımlılığı nedeniyle yapılan başvuruların toplamını geçti. Peki bu tablonun sorumlusu ne? BBC Türkçe'den Onur Erem araştırdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cpd8lg2vqqeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan, ukrayna konulu gönüllüler koalisyonu liderler zirvesi'ne katıldı
+            dışişleri bakanı hakan fidan, fransa'nın başkenti paris'te düzenlenen ukrayna konulu gönüllüler koalisyonu liderler zirvesi'ne cumhurbaşkanı recep tayyip erdoğan'ı temsilen katıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Fidan, Ukrayna konulu Gönüllüler Koalisyonu Liderler Zirvesi'ne katıldı</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Fransa'nın başkenti Paris'te düzenlenen Ukrayna konulu Gönüllüler Koalisyonu Liderler Zirvesi'ne Cumhurbaşkanı Recep Tayyip Erdoğan'ı temsilen katıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-ukrayna-konulu-gonulluler-koalisyonu-liderler-zirvesine-katildi-951106.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'ani bir rahatsızlıkla' hayatını kaybeden abd senatörü lindsey graham kimdir, türkiye'ye karşı tutumu nasıldı?
+            abd'de cumhuriyetçi senatör lindsey graham, kısa ve ani bir rahatsızlığın ardından hayatını kaybetti. graham türkiye ve abd arasında siyasi gerilim dönemlerinde tepki çeken açıklamalarıyla gündeme gelse de son dönemde trump'ın türkiye'ye f-35 satışına yeşil ışık yakan önemli politika değişikliklerine destek verdiğini açıklamıştı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>'Ani bir rahatsızlıkla' hayatını kaybeden ABD Senatörü Lindsey Graham kimdir, Türkiye'ye karşı tutumu nasıldı?</h3>
+                    <p>ABD'de Cumhuriyetçi Senatör Lindsey Graham, kısa ve ani bir rahatsızlığın ardından hayatını kaybetti. Graham Türkiye ve ABD arasında siyasi gerilim dönemlerinde tepki çeken açıklamalarıyla gündeme gelse de son dönemde Trump'ın Türkiye'ye F-35 satışına yeşil ışık yakan önemli politika değişikliklerine destek verdiğini açıklamıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yz1040mzvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            on avrupa ülkesi, antibalistik füze koalisyonu kurduklarını duyurdu
+            fransa ve ukrayna’nın da aralarında bulunduğu 10 avrupa ülkesi, balistik füzelerin oluşturduğu artan tehdide karşı anti-balistik füze koalisyonu kurduklarını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>On Avrupa ülkesi, AntiBalistik Füze Koalisyonu kurduklarını duyurdu</h3>
+                    <p>Fransa ve Ukrayna’nın da aralarında bulunduğu 10 Avrupa ülkesi, balistik füzelerin oluşturduğu artan tehdide karşı Anti-Balistik Füze Koalisyonu kurduklarını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/on-avrupa-ulkesi-anti-balistik-fuze-koalisyonu-kurduklarini-duyurdu-951100.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, abd'nin hürmüz boğazı'na ablukayı geri getirdiğini açıkladı
+            abd başkanı donald trump, abd'nin i̇ran limanlarına yeniden abluka uygulamaya başladığını açıkladı. trump ayrıca hürmüz boğazı'ndan geçen kargo gemilerinden %20 oranında ödeme alınacağını söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, ABD'nin Hürmüz Boğazı'na ablukayı geri getirdiğini açıkladı</h3>
+                    <p>ABD Başkanı Donald Trump, ABD'nin İran limanlarına yeniden abluka uygulamaya başladığını açıkladı. Trump ayrıca Hürmüz Boğazı'ndan geçen kargo gemilerinden %20 oranında ödeme alınacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce8jlnm787jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
