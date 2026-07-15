@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-15 14:11</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cz9lpdw2qj3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>15 Temmuz darbe girişiminden sonra Türkiye'de neler değişti?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cq512d9zqldo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Milli şuur ve vatandaşlık bilinci': 15 Temmuz okullarda nasıl anlatılıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn0vlyk40r2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>FIFA Dünya Kupası'nı 64 takıma çıkarmayı görüşecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/bilim-teknoloji/gokbilimciler-en-sonuk-gezegeni-tesadufen-fotografladi-951303.html" target="_blank">
+                <strong>Gökbilimciler en sönük gezegeni tesadüfen fotoğrafladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cql1lw33p7wo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Haluk Levent emniyetteki ifadesinde neler söyledi?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            15 temmuz darbe girişiminden sonra türkiye'de neler değişti?
+            15 temmuz 2016 gecesi türkiye, yakın tarihinin en uzun gecelerinden birini yaşadı. darbe girişimi sokaklara çıkan milyonlarca kişinin, askerin içinde direnen unsurların ve polisin işbirliği ile 16 temmuz'un erken saatlerinde bastırıldı. türkiye'de darbe girişimini savunan hiçbir siyasi kesim yok. ancak sonrasında yaşanan değişimlere dair önemli yorum farkları bulunuyor. peki 15 temmuz darbe girişimi sonrasında neler yaşandı ve türkiye nasıl değişti?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>15 Temmuz darbe girişiminden sonra Türkiye'de neler değişti?</h3>
+                    <p>15 Temmuz 2016 gecesi Türkiye, yakın tarihinin en uzun gecelerinden birini yaşadı. Darbe girişimi sokaklara çıkan milyonlarca kişinin, askerin içinde direnen unsurların ve polisin işbirliği ile 16 Temmuz'un erken saatlerinde bastırıldı. Türkiye'de darbe girişimini savunan hiçbir siyasi kesim yok. Ancak sonrasında yaşanan değişimlere dair önemli yorum farkları bulunuyor. Peki 15 Temmuz darbe girişimi sonrasında neler yaşandı ve Türkiye nasıl değişti?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz9lpdw2qj3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fifa dünya kupası'nı 64 takıma çıkarmayı görüşecek
+            fifa başkanı gianni infantino, organizasyonun "tüm dünya için" olması gerektiğini söyleyerek, bu yılki turnuvanın ardından erkekler dünya kupası'nın 64 takıma çıkarılması planlarının değerlendirileceğini açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>FIFA Dünya Kupası'nı 64 takıma çıkarmayı görüşecek</h3>
+                    <p>FIFA Başkanı Gianni Infantino, organizasyonun "tüm dünya için" olması gerektiğini söyleyerek, bu yılki turnuvanın ardından erkekler Dünya Kupası'nın 64 takıma çıkarılması planlarının değerlendirileceğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0vlyk40r2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gökbilimciler en sönük gezegeni tesadüfen fotoğrafladı
+            avrupa güney rasathanesi’nin çok büyük teleskop’u ve james webb uzay teleskobu verilerini inceleyen gökbilimciler, başka bir gezegeni gözlemlemeye çalışırken tesadüfen dünya'dan doğrudan görüntülenebilen en sönük ötegezegeni keşfetti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Gökbilimciler en sönük gezegeni tesadüfen fotoğrafladı</h3>
+                    <p>Avrupa Güney Rasathanesi’nin Çok Büyük Teleskop’u ve James Webb Uzay Teleskobu verilerini inceleyen gökbilimciler, başka bir gezegeni gözlemlemeye çalışırken tesadüfen Dünya'dan doğrudan görüntülenebilen en sönük ötegezegeni keşfetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/gokbilimciler-en-sonuk-gezegeni-tesadufen-fotografladi-951303.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere - arjantin: altmış yıllık tartışmalar ve bitmeyen rekabet
+            i̇ngiltere, 60 yıllık dünya kupası finali hasretini sona erdirmek için tarihi rekabetin, tartışmalı anların ve lionel messi faktörünün gölgesinde arjantin karşısına çıkıyor
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İngiltere - Arjantin: Altmış yıllık tartışmalar ve bitmeyen rekabet</h3>
+                    <p>İngiltere, 60 yıllık Dünya Kupası finali hasretini sona erdirmek için tarihi rekabetin, tartışmalı anların ve Lionel Messi faktörünün gölgesinde Arjantin karşısına çıkıyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgqgx7rwj7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de yaz saati kalıcı hale getiriliyor
+            abd temsilciler meclisi yaz saatini kalıcı hale getirme ve yılda iki kere yapılan saat değişimlerini sonlandırma yönünde oy kullandı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de yaz saati kalıcı hale getiriliyor</h3>
+                    <p>ABD Temsilciler Meclisi yaz saatini kalıcı hale getirme ve yılda iki kere yapılan saat değişimlerini sonlandırma yönünde oy kullandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3vyv41k757o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            'milli şuur ve vatandaşlık bilinci': 15 temmuz okullarda nasıl anlatılıyor?
+            15 temmuz 2016'daki darbe girişimi anaokulu seviyesi dahil okul müfredatlarında yer alıyor. peki o gece yaşananlar kitaplarda nasıl anlatılıyor? öğrenciler, öğretmenler ve sendikalar memnun mu? milli eğitim bakanlığı eleştirilere nasıl yanıt veriyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Milli şuur ve vatandaşlık bilinci': 15 Temmuz okullarda nasıl anlatılıyor?</h3>
+                    <p>15 Temmuz 2016'daki darbe girişimi anaokulu seviyesi dahil okul müfredatlarında yer alıyor. Peki o gece yaşananlar kitaplarda nasıl anlatılıyor? Öğrenciler, öğretmenler ve sendikalar memnun mu? Milli Eğitim Bakanlığı eleştirilere nasıl yanıt veriyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq512d9zqldo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            haluk levent emniyetteki ifadesinde neler söyledi?
+            haluk levent emniyetteki ifadesinde "ahbap çeklerini ve senetlerini kimi yerlerde teminat olarak kullandım. yüksek miktarda borçlandım. bunun adına usulsüzlük diyebilirsiniz ama yolsuzluk diyemezsiniz" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Haluk Levent emniyetteki ifadesinde neler söyledi?</h3>
+                    <p>Haluk Levent emniyetteki ifadesinde "Ahbap çeklerini ve senetlerini kimi yerlerde teminat olarak kullandım. Yüksek miktarda borçlandım. Bunun adına usulsüzlük diyebilirsiniz ama yolsuzluk diyemezsiniz" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cql1lw33p7wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇nsan plasentası: tıbbi atık mı yoksa mucizevi tedavi mi?
+            pakistan'da yürütülen bir soruşturmada bir çete, yaşlanma karşıtı tedavilerde kullanmak üzere hastanelerden insan plasentası kaçırmakla suçlanıyor. ancak bu olay, çok daha büyük bir hikâyeyi gözler önüne seriyor: doğumdan sonra atılan geçici organ etrafında kurulan, hızla büyüyen küresel bir pazar.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İnsan plasentası: Tıbbi atık mı yoksa mucizevi tedavi mi?</h3>
+                    <p>Pakistan'da yürütülen bir soruşturmada bir çete, yaşlanma karşıtı tedavilerde kullanmak üzere hastanelerden insan plasentası kaçırmakla suçlanıyor. Ancak bu olay, çok daha büyük bir hikâyeyi gözler önüne seriyor: Doğumdan sonra atılan geçici organ etrafında kurulan, hızla büyüyen küresel bir pazar.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5159g658go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası'nın ilk finalisti i̇spanya
+            2026 fifa dünya kupası'nda finale yükselen ilk takım, fransa'yı 2-0 yenen i̇spanya oldu. i̇spanya, finalde 15 temmuz'da oynanacak i̇ngiltere-norveç maçının kazananıyla karşı karşıya gelecek. final maçı 19 temmuz'da oynanacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya Kupası'nın ilk finalisti İspanya</h3>
+                    <p>2026 FIFA Dünya Kupası'nda finale yükselen ilk takım, Fransa'yı 2-0 yenen İspanya oldu. İspanya, finalde 15 Temmuz'da oynanacak İngiltere-Norveç maçının kazananıyla karşı karşıya gelecek. Final maçı 19 Temmuz'da oynanacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7rg1dnjlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çankaya belediye başkanı görevden uzaklaştırıldı
+            i̇çişleri bakanlığınca, çankaya belediye başkanı hüseyin can güner görevden uzaklaştırıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Çankaya Belediye Başkanı görevden uzaklaştırıldı</h3>
+                    <p>İçişleri Bakanlığınca, Çankaya Belediye Başkanı Hüseyin Can Güner görevden uzaklaştırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/cankaya-belediye-baskani-gorevden-uzaklastirildi-951300.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngilterede 16 ve 17 yaşındaki gençlere gece yarısı sosyal medya kısıtlaması geliyor
+            i̇ngiltere, 16 ve 17 yaş grubundaki gençlerin uyku kalitesini ve odaklanmasını artırmak amacıyla gece yarısı ile sabah 06:00 saatleri arasında sosyal medya kullanımına kısıtlama getirileceğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İngilterede 16 ve 17 yaşındaki gençlere gece yarısı sosyal medya kısıtlaması geliyor</h3>
+                    <p>İngiltere, 16 ve 17 yaş grubundaki gençlerin uyku kalitesini ve odaklanmasını artırmak amacıyla gece yarısı ile sabah 06:00 saatleri arasında sosyal medya kullanımına kısıtlama getirileceğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ingilterede-16-ve-17-yasindaki-genclere-gece-yarisi-sosyal-medya-kisitlamasi-geliyor-951295.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan tbmm'de 15 temmuz anma töreni'ne katıldı
+            cumhurbaşkanı recep tayyip erdoğan, 15 temmuz anma töreni'ne katılmak üzere tbmm'ye geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan TBMM'de 15 Temmuz Anma Töreni'ne katıldı</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 15 Temmuz Anma Töreni'ne katılmak üzere TBMM'ye geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-tbmmde-15-temmuz-anma-torenine-katildi-951294.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'da su kullanımına kısıtlama getirildi
+            fransa ekolojik dönüşüm bakanı monique barbut, olağanüstü kuraklık döneminden geçen ülkede su kullanımına kısıtlama getirildiğini belirtti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa'da su kullanımına kısıtlama getirildi</h3>
+                    <p>Fransa Ekolojik Dönüşüm Bakanı Monique Barbut, olağanüstü kuraklık döneminden geçen ülkede su kullanımına kısıtlama getirildiğini belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransada-su-kullanimina-kisitlama-getirildi-951293.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yarı final ve final maçlarını canlı takip edin
+            hiçbir golü kaçırmayın: takvim ve anlık sonuçlar
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yarı final ve final maçlarını canlı takip edin</h3>
+                    <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            muş'ta traktör römorku devrildi: 1 ölü, 23 yaralı
+            muş'un bulanık ilçesinde traktörün römorkunun devrilmesi sonucu 1 kişi hayatını kaybetti, 23 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Muş'ta traktör römorku devrildi: 1 ölü, 23 yaralı</h3>
+                    <p>Muş'un Bulanık ilçesinde traktörün römorkunun devrilmesi sonucu 1 kişi hayatını kaybetti, 23 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/musta-traktor-romorku-devrildi-1-olu-23-yarali-951301.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            numan kurtulmuş: milletimiz darbeler geleneğini tarihin çöplüğüne attı
+            tbmm başkanı numan kurtulmuş, "darbeler zincirine milletimiz 15 temmuz gecesinin sabahı damga vurmuş ve artık darbeler geleneğini tarihin çöplüğüne atmıştır" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Numan Kurtulmuş: Milletimiz darbeler geleneğini tarihin çöplüğüne attı</h3>
+                    <p>TBMM Başkanı Numan Kurtulmuş, "Darbeler zincirine milletimiz 15 Temmuz gecesinin sabahı damga vurmuş ve artık darbeler geleneğini tarihin çöplüğüne atmıştır" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/numan-kurtulmus-milletimiz-darbeler-gelenegini-tarihin-coplugune-atti-951299.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da kontrolden çıkan ego otobüsü iş yerine çarptı
+            ankara'nın mamak ilçesinde kontrolden çıkan ego otobüsünün, yol kenarındaki iş yerine çarpması sonucu ilk belirlemelere göre 5 kişi yaralandı. kazayla ilgili inceleme sürüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ankara'da kontrolden çıkan EGO otobüsü iş yerine çarptı</h3>
+                    <p>Ankara'nın Mamak ilçesinde kontrolden çıkan EGO otobüsünün, yol kenarındaki iş yerine çarpması sonucu ilk belirlemelere göre 5 kişi yaralandı. Kazayla ilgili inceleme sürüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-kontrolden-cikan-ego-otobusu-is-yerine-carpti-951298.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            burhanettin duran'dan 'onuncu yılında 15 temmuz: i̇rade bizim, zafer bizim' makalesi
+            cumhurbaşkanlığı i̇letişim başkanı prof. dr. burhanettin duran, 15 temmuz demokrasi ve milli birlik günü vesilesiyle "onuncu yılında 15 temmuz: i̇rade bizim, zafer bizim" başlıklı makale kaleme aldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Burhanettin Duran'dan 'Onuncu Yılında 15 Temmuz: İrade Bizim, Zafer Bizim' makalesi</h3>
+                    <p>Cumhurbaşkanlığı İletişim Başkanı Prof. Dr. Burhanettin Duran, 15 Temmuz Demokrasi ve Milli Birlik Günü vesilesiyle "Onuncu Yılında 15 Temmuz: İrade Bizim, Zafer Bizim" başlıklı makale kaleme aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/burhanettin-durandan-onuncu-yilinda-15-temmuz-irade-bizim-zafer-bizim-makalesi-951297.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            zeytinburnu'nda 15 saatlik su kesintisi
+            i̇stanbul su ve kanalizasyon i̇daresi (i̇ski̇), bölgedeki isale hattında yapılacak çalışmalar nedeniyle yarın zeytinburnu'nun bazı mahallelerine 15 saat süreyle su verilemeyeceğini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Zeytinburnu'nda 15 saatlik su kesintisi</h3>
+                    <p>İstanbul Su ve Kanalizasyon İdaresi (İSKİ), bölgedeki isale hattında yapılacak çalışmalar nedeniyle yarın Zeytinburnu'nun bazı mahallelerine 15 saat süreyle su verilemeyeceğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/zeytinburnunda-15-saatlik-su-kesintisi-951296.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            su molaları dünya kupası'nda daha fazla gole mi yol açtı?
+            bbc dünya servisi'nin ulaştığı, grup aşamasından çeyrek finallere kadar oynanan 100 maça ilişkin istatistiksel analiz, futbolun yönetim organı fifa tarafından getirilen tartışmalı su molalarının, oyunun durmasının ardından beklenmedik derecede yüksek sayıda gole yol açtığını gösteriyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Su molaları Dünya Kupası'nda daha fazla gole mi yol açtı?</h3>
+                    <p>BBC Dünya Servisi'nin ulaştığı, grup aşamasından çeyrek finallere kadar oynanan 100 maça ilişkin istatistiksel analiz, futbolun yönetim organı FIFA tarafından getirilen tartışmalı su molalarının, oyunun durmasının ardından beklenmedik derecede yüksek sayıda gole yol açtığını gösteriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cddld8645yvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
