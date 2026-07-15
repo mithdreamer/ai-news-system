@@ -6,7 +6,7 @@ on:
     - cron: "0 5 * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -21,6 +21,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Restore persistent archive
+        shell: bash
+        run: |
+          mkdir -p data/raw
+          mkdir -p outputs/html
+
+          if [ -d archive-store/raw ]; then
+            cp -r archive-store/raw/. data/raw/
+          fi
+
+          if [ -d archive-store/html ]; then
+            cp -r archive-store/html/. outputs/html/
+          fi
+
+          rm -f data/raw/.gitkeep
+          rm -f outputs/html/.gitkeep
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,7 +56,29 @@ jobs:
           NEWSLETTER_FROM: "AI News <onboarding@resend.dev>"
           SEND_NEWSLETTER: "true"
         run: python src/main.py
+      
+      - name: Save persistent archive
+        shell: bash
+        run: |
+          mkdir -p archive-store/raw
+          mkdir -p archive-store/html
 
+          cp data/raw/*-news.json archive-store/raw/ 2>/dev/null || true
+          cp outputs/html/*-news.html archive-store/html/ 2>/dev/null || true
+
+          cd archive-store
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add raw html
+
+          if git diff --cached --quiet; then
+            echo "Arşivde yeni değişiklik yok."
+          else
+            git commit -m "Update persistent news archive"
+            git push origin archive-data
+          fi
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
