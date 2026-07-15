@@ -77,7 +77,7 @@ jobs:
             echo "Arşivde yeni değişiklik yok."
           else
             git commit -m "Update persistent news archive"
-            git push origin archive-data
+            git push origin HEAD:archive-data
           fi
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
