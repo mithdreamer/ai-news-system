@@ -22,6 +22,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout persistent archive
+        uses: actions/checkout@v4
+        with:
+          ref: archive-data
+          path: archive-store
+          fetch-depth: 0
+
       - name: Restore persistent archive
         shell: bash
         run: |
@@ -60,6 +67,16 @@ jobs:
       - name: Save persistent archive
         shell: bash
         run: |
+          cd archive-store
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin archive-data
+          git reset --hard origin/archive-data
+
+          cd ..
+
           mkdir -p archive-store/raw
           mkdir -p archive-store/html
 
@@ -67,9 +84,6 @@ jobs:
           cp outputs/html/*-news.html archive-store/html/ 2>/dev/null || true
 
           cd archive-store
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add raw html
 
@@ -79,6 +93,7 @@ jobs:
             git commit -m "Update persistent news archive"
             git push origin HEAD:archive-data
           fi
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
