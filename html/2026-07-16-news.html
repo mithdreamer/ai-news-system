@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-16 07:24</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/icisleri-bakani-ciftci-golbasi-ozel-harekat-baskanligindaki-15-temmuz-programinda-konustu-951338.html" target="_blank">
+                <strong>İçişleri Bakanı Çiftçi, Gölbaşı Özel Harekat Başkanlığı'ndaki 15 Temmuz programında konuştu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5yzy2k8r6zo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Karton gibiydiler': Venezuela'daki depremde Türk müteahhitin yaptığı 100'den fazla sosyal konut çöktü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c2lq1z0ze5lo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD ordusu testosteron eksikliği taramasına başlayacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvgqgx7rwj7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Dünya Kupası yarı finalinde Arjantin İngiltere'yi 2-1 yendi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ahbap soruşturması: Haluk Levent tutuklandı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇çişleri bakanı çiftçi, gölbaşı özel harekat başkanlığı'ndaki 15 temmuz programında konuştu
+            i̇çişleri bakanı mustafa çiftçi, "i̇çişleri bakanlığı olarak bütün güvenlik birimlerimizle birlikte tehditlerin her birini büyük bir dikkatle takip ediyor, devletimizin güvenliği, milletimizin huzuru ve kamu düzenimizin korunması için sürekli teyakkuz halinde bulunuyoruz." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İçişleri Bakanı Çiftçi, Gölbaşı Özel Harekat Başkanlığı'ndaki 15 Temmuz programında konuştu</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, "İçişleri Bakanlığı olarak bütün güvenlik birimlerimizle birlikte tehditlerin her birini büyük bir dikkatle takip ediyor, devletimizin güvenliği, milletimizin huzuru ve kamu düzenimizin korunması için sürekli teyakkuz halinde bulunuyoruz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/icisleri-bakani-ciftci-golbasi-ozel-harekat-baskanligindaki-15-temmuz-programinda-konustu-951338.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ordusu testosteron eksikliği taramasına başlayacak
+            abd savunma bakanı pete hegseth "yüksek-t [testosteron] departmanı" başlıklıbir video yayınlarak, 30 yaş ve üzeri askeri personelin yıllık sağlık kontrolleri kapsamında bundan böyle testosteron eksikliği testine de tabi tutulacağını duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ordusu testosteron eksikliği taramasına başlayacak</h3>
+                    <p>ABD Savunma Bakanı Pete Hegseth "Yüksek-T [testosteron] Departmanı" başlıklıbir video yayınlarak, 30 yaş ve üzeri askeri personelin yıllık sağlık kontrolleri kapsamında bundan böyle testosteron eksikliği testine de tabi tutulacağını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2lq1z0ze5lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası yarı finalinde arjantin i̇ngiltere'yi 2-1 yendi
+            i̇ngiltere, 60 yıllık dünya kupası finali hasretini sona erdirmek için tarihi rekabetin, tartışmalı anların ve lionel messi faktörünün gölgesinde arjantin karşısına çıktı. 85. dakikaya kadar 1-0 önde götürdüğü oyunu, arjantin'in 85 ve 92. dakikadaki golleriyle kaybetti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Dünya Kupası yarı finalinde Arjantin İngiltere'yi 2-1 yendi</h3>
+                    <p>İngiltere, 60 yıllık Dünya Kupası finali hasretini sona erdirmek için tarihi rekabetin, tartışmalı anların ve Lionel Messi faktörünün gölgesinde Arjantin karşısına çıktı. 85. dakikaya kadar 1-0 önde götürdüğü oyunu, Arjantin'in 85 ve 92. dakikadaki golleriyle kaybetti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgqgx7rwj7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'i̇stediğim kariyere ulaşmak için 10 yılda 10 kez iş değiştirdim'
+            z kuşağı, kariyerlerinde. önceki kuşaklara kıyasla çok daha sık iş değiştiriyor. "lily-padding" olarak bilinen bu trend, gençlerin kariyerlerinde ilerlemek için seçtikleri bir yol.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>'İstediğim kariyere ulaşmak için 10 yılda 10 kez iş değiştirdim'</h3>
+                    <p>Z kuşağı, kariyerlerinde. önceki kuşaklara kıyasla çok daha sık iş değiştiriyor. "Lily-padding" olarak bilinen bu trend, gençlerin kariyerlerinde ilerlemek için seçtikleri bir yol.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr59nd94rlno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, i̇ran'a başlattığı son saldırı dalgasını bitirdi
+            abd merkez kuvvetler komutanlığı (centcom), tsi̇ 22.00'de (abd doğu saatiyle 15.00) i̇ran'a başlatılan saldırı dalgasının bitirildiğini duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, İran'a başlattığı son saldırı dalgasını bitirdi</h3>
+                    <p>ABD Merkez Kuvvetler Komutanlığı (CENTCOM), TSİ 22.00'de (ABD doğu saatiyle 15.00) İran'a başlatılan saldırı dalgasının bitirildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-irana-baslattigi-son-saldiri-dalgasini-bitirdi-951345.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            'karton gibiydiler': venezuela'daki depremde türk müteahhitin yaptığı 100'den fazla sosyal konut çöktü
+            venezuela’da 24 haziran’da meydana gelen depremlerde, türk inşaat şirketi summa’nın inşa ettiği 196 bloğun çoğu ya çöktü ya ağır hasar aldı. bbc türkçe'nin sorularını yanıtlayan şirket, projenin inşası sırasında yürürlükte bulunan venezuela mevzuatına uyulduğunu söylüyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>'Karton gibiydiler': Venezuela'daki depremde Türk müteahhitin yaptığı 100'den fazla sosyal konut çöktü</h3>
+                    <p>Venezuela’da 24 Haziran’da meydana gelen depremlerde, Türk inşaat şirketi Summa’nın inşa ettiği 196 bloğun çoğu ya çöktü ya ağır hasar aldı. BBC Türkçe'nin sorularını yanıtlayan şirket, projenin inşası sırasında yürürlükte bulunan Venezuela mevzuatına uyulduğunu söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yzy2k8r6zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap soruşturması: haluk levent tutuklandı
+            ahbap derneği soruşturmasında gözaltında bulunan ve savcılıktaki ifade işlemleri tamamlandıktan sonra tutuklama talebiyle sulh ceza hakimliği'ne sevk edilen haluk levent ve 13 kişi daha, perşembe günü erken saatlerde tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahbap soruşturması: Haluk Levent tutuklandı</h3>
+                    <p>Ahbap Derneği soruşturmasında gözaltında bulunan ve savcılıktaki ifade işlemleri tamamlandıktan sonra tutuklama talebiyle Sulh Ceza Hakimliği'ne sevk edilen Haluk Levent ve 13 kişi daha, perşembe günü erken saatlerde tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası'nın ilk finalisti i̇spanya
+            2026 fifa dünya kupası'nda finale yükselen ilk takım, fransa'yı 2-0 yenen i̇spanya oldu. i̇spanya, finalde 15 temmuz'da oynanacak i̇ngiltere-norveç maçının kazananıyla karşı karşıya gelecek. final maçı 19 temmuz'da oynanacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya Kupası'nın ilk finalisti İspanya</h3>
+                    <p>2026 FIFA Dünya Kupası'nda finale yükselen ilk takım, Fransa'yı 2-0 yenen İspanya oldu. İspanya, finalde 15 Temmuz'da oynanacak İngiltere-Norveç maçının kazananıyla karşı karşıya gelecek. Final maçı 19 Temmuz'da oynanacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7rg1dnjlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ünlülere uyuşturucu soruşturması: 25 gözaltı kararı
+            ünlülere uyuşturucu soruşturması... bakırköy cumhuriyet başsavcılığı'nın yürüttüğü soruşturma kapsamında şarkıcı i̇lyas yalçıntaş, sıla gençoğlu ile yapımcı fatih aksoy'un da aralarında olduğu 25 şüpheli hakkında gözaltı kararı verildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ünlülere uyuşturucu soruşturması: 25 gözaltı kararı</h3>
+                    <p>Ünlülere uyuşturucu soruşturması... Bakırköy Cumhuriyet Başsavcılığı'nın yürüttüğü soruşturma kapsamında şarkıcı İlyas Yalçıntaş, Sıla Gençoğlu ile yapımcı Fatih Aksoy'un da aralarında olduğu 25 şüpheli hakkında gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/unlulere-uyusturucu-sorusturmasi-25-gozalti-karari-951342.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nasuh mahruki hakkında gözaltı kararı
+            arama kurtarma derneği (akut) kurucularından nasuh mahruki hakkında, sosyal medya hesabından yaptığı 15 temmuz darbe girişimine ilişkin paylaşım nedeniyle gözaltı kararı verildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nasuh Mahruki hakkında gözaltı kararı</h3>
+                    <p>Arama Kurtarma Derneği (AKUT) kurucularından Nasuh Mahruki hakkında, sosyal medya hesabından yaptığı 15 Temmuz darbe girişimine ilişkin paylaşım nedeniyle gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjwx3ngn3z4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            final ve üçüncülük maçlarını canlı takip edin
+            hiçbir golü kaçırmayın: takvim ve anlık sonuçlar
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Final ve üçüncülük maçlarını canlı takip edin</h3>
+                    <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın güne düşüşle başladı
+            gram altın, güne düşüşle başlamasının ardından 6 bin 97 liradan işlem görüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın güne düşüşle başladı</h3>
+                    <p>Gram altın, güne düşüşle başlamasının ardından 6 bin 97 liradan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-gune-dususle-basladi-951346.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran lideri hamaney'in başdanışmanı: hürmüz boğazı i̇ran'a aittir, hiçbir güç i̇ran'ın egemenliğinden alamaz
+            i̇ran lideri ayetullah mücteba hamaney'in başdanışmanı ali ekber velayeti, "hürmüz boğazı'nın i̇ran'a ait olduğunu ve hiçbir dünya gücünün onu i̇ran'ın egemenliğinden alamayacağını" söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İran lideri Hamaney'in Başdanışmanı: Hürmüz Boğazı İran'a aittir, hiçbir güç İran'ın egemenliğinden alamaz</h3>
+                    <p>İran lideri Ayetullah Mücteba Hamaney'in Başdanışmanı Ali Ekber Velayeti, "Hürmüz Boğazı'nın İran'a ait olduğunu ve hiçbir dünya gücünün onu İran'ın egemenliğinden alamayacağını" söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-lideri-hamaneyin-basdanismani-hurmuz-bogazi-irana-aittir-hicbir-guc-iranin-egemenliginden-alamaz-951344.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nasuh mahruki'ye 15 temmuz paylaşımı nedeniyle soruşturma
+            eski arama kurtarma derneği başkanı nasuh mahruki hakkında, 15 temmuz darbe teşebbüsüne ilişkin paylaşımı nedeniyle soruşturma başlatıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Nasuh Mahruki'ye 15 Temmuz paylaşımı nedeniyle soruşturma</h3>
+                    <p>Eski Arama Kurtarma Derneği Başkanı Nasuh Mahruki hakkında, 15 Temmuz darbe teşebbüsüne ilişkin paylaşımı nedeniyle soruşturma başlatıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/nasuh-mahrukiye-15-temmuz-paylasimi-nedeniyle-sorusturma-951343.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filenin efeleri milletler ligi'nde 6. galibiyetini aldı
+            a milli erkek voleybol takımımız, 2026 fivb milletler ligi'nin üçüncü haftasındaki ilk maçında ev sahibi sırbistan'ı 3-0 yendi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Filenin Efeleri Milletler Ligi'nde 6. galibiyetini aldı</h3>
+                    <p>A Milli Erkek Voleybol Takımımız, 2026 FIVB Milletler Ligi'nin üçüncü haftasındaki ilk maçında ev sahibi Sırbistan'ı 3-0 yendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/filenin-efeleri-milletler-liginde-6-galibiyetini-aldi-951341.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            amasya'da yolcu otobüsü devrildi: 46 yaralı
+            amasya'nın merzifon ilçesinde yolcu otobüsünün devrilmesi sonucu 46 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Amasya'da yolcu otobüsü devrildi: 46 yaralı</h3>
+                    <p>Amasya'nın Merzifon ilçesinde yolcu otobüsünün devrilmesi sonucu 46 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/amasyada-yolcu-otobusu-devrildi-46-yarali-951340.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap derneği soruşturmasında haluk levent dahil 14 kişi tutuklandı
+            "ahbap derneği adına toplanan bağışların şüphelilerin hesaplarına aktarıldığı" iddiasına yönelik yürütülen soruşturmada haluk levent'in de aralarında bulunduğu 14 şüpheli tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahbap Derneği soruşturmasında Haluk Levent dahil 14 kişi tutuklandı</h3>
+                    <p>"Ahbap Derneği adına toplanan bağışların şüphelilerin hesaplarına aktarıldığı" iddiasına yönelik yürütülen soruşturmada Haluk Levent'in de aralarında bulunduğu 14 şüpheli tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ahbap-dernegi-sorusturmasinda-haluk-levent-dahil-14-kisi-tutuklandi-951339.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahreyn'de sirenler çaldı, halka güvenli bölgelere gitme çağrısı yapıldı
+            i̇ran saldırısı nedeniyle sirenlerin çaldığı bahreyn'de halka güvenli yerlere gitmeleri çağrısı yapıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahreyn'de sirenler çaldı, halka güvenli bölgelere gitme çağrısı yapıldı</h3>
+                    <p>İran saldırısı nedeniyle sirenlerin çaldığı Bahreyn'de halka güvenli yerlere gitmeleri çağrısı yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bahreynde-sirenler-caldi-halka-guvenli-bolgelere-gitme-cagrisi-yapildi-951337.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            arjantin, falkland adaları pankartı nedeniyle ceza alabilir
+            arjantin milli takımı, futbolcuların, i̇ngiltere'ye karşı kazandıkları dünya kupası yarı final zaferini, falkland adaları üzerindeki hak iddialarını destekleyen bir pankartla kutlamaları nedeniyle fifa'dan ceza alma ihtimaliyle karşı karşıya.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Arjantin, Falkland Adaları pankartı nedeniyle ceza alabilir</h3>
+                    <p>Arjantin milli takımı, futbolcuların, İngiltere'ye karşı kazandıkları Dünya Kupası yarı final zaferini, Falkland Adaları üzerindeki hak iddialarını destekleyen bir pankartla kutlamaları nedeniyle FIFA'dan ceza alma ihtimaliyle karşı karşıya.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2d8j0wrzqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            su molaları dünya kupası'nda daha fazla gole mi yol açtı?
+            bbc dünya servisi'nin ulaştığı, grup aşamasından çeyrek finallere kadar oynanan 100 maça ilişkin istatistiksel analiz, futbolun yönetim organı fifa tarafından getirilen tartışmalı su molalarının, oyunun durmasının ardından beklenmedik derecede yüksek sayıda gole yol açtığını gösteriyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Su molaları Dünya Kupası'nda daha fazla gole mi yol açtı?</h3>
+                    <p>BBC Dünya Servisi'nin ulaştığı, grup aşamasından çeyrek finallere kadar oynanan 100 maça ilişkin istatistiksel analiz, futbolun yönetim organı FIFA tarafından getirilen tartışmalı su molalarının, oyunun durmasının ardından beklenmedik derecede yüksek sayıda gole yol açtığını gösteriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cddld8645yvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
