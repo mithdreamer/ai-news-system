@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-17 07:20</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/petrol-fiyatlari-yon-degistirdi-951444.html" target="_blank">
+                <strong>Petrol fiyatları yön değiştirdi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cevkpze8wnvo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye'de sosyal medya üzerinden ruhsatsız silah satışı ne kadar yaygın?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c78gln0xe75o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İmralı heyetinin çerçeve yasa turu: AKP ve Bahçeli ziyaretlerinde neler konuşuldu?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cz05783yeeko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Pew araştırması: Türkiye'de Çin'e yönelik olumlu görüş rekor seviyede</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/turkiyeden-abnin-ortak-anlayis-belgesine-tepki-951451.html" target="_blank">
+                <strong>Türkiye'den AB'nin Ortak Anlayış belgesine tepki</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            petrol fiyatları yön değiştirdi
+            orta doğu'da tırmanan jeopolitik gerilim ve hürmüz boğazı'ndaki sıcak temaslara rağmen, küresel ekonomik büyüme ile petrol talebine yönelik endişeler fiyatları aşağı çekti. brent petrol, arz riskleri ve talep baskısı kıskacında 84 dolar seviyelerinde işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Petrol fiyatları yön değiştirdi</h3>
+                    <p>Orta Doğu'da tırmanan jeopolitik gerilim ve Hürmüz Boğazı'ndaki sıcak temaslara rağmen, küresel ekonomik büyüme ile petrol talebine yönelik endişeler fiyatları aşağı çekti. Brent petrol, arz riskleri ve talep baskısı kıskacında 84 dolar seviyelerinde işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/petrol-fiyatlari-yon-degistirdi-951444.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ticaret bakanlığı'ndan ithalat düzenlemesi
+            gümrük beyannamesinin tescili sırasında gümrüklerce tespit ve kabul edilen kıymetin, kayıt belgesinde yer alan kıymeti yüzde 5'ten daha az oranda aşması durumunda ithalat gerçekleştirilebilecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ticaret Bakanlığı'ndan ithalat düzenlemesi</h3>
+                    <p>Gümrük beyannamesinin tescili sırasında gümrüklerce tespit ve kabul edilen kıymetin, kayıt belgesinde yer alan kıymeti yüzde 5'ten daha az oranda aşması durumunda ithalat gerçekleştirilebilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ticaret-bakanligindan-ithalat-duzenlemesi-951442.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de sosyal medya üzerinden ruhsatsız silah satışı ne kadar yaygın?
+            i̇çişleri bakanlığı 2024 yılında, türkiye'de ateşli silahlarla gerçekleştirilen saldırıların çoğunda ruhsatsız silahlar kullanıldığını açıkladı. bakanlık ruhsatsız silah taşıyanlara yönelik yoğun operasyonlar düzenliyor. ancak bu tip silahların sosyal medya platformları üzerinden satışı sürüyor. berza şimşek'in haberi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de sosyal medya üzerinden ruhsatsız silah satışı ne kadar yaygın?</h3>
+                    <p>İçişleri Bakanlığı 2024 yılında, Türkiye'de ateşli silahlarla gerçekleştirilen saldırıların çoğunda ruhsatsız silahlar kullanıldığını açıkladı. Bakanlık ruhsatsız silah taşıyanlara yönelik yoğun operasyonlar düzenliyor. Ancak bu tip silahların sosyal medya platformları üzerinden satışı sürüyor. Berza Şimşek'in haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cevkpze8wnvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'den ab'nin ortak anlayış belgesine tepki
+            dışişleri bakanlığı sözcüsü öncü keçeli, ab tarafından yayımlanan "ortak anlayış" belgesine ilişkin, "türkiye’nin adaylık statüsünü görmezden gelen belge, ab’nin ülkemizle ortak bir gelecek vizyonu geliştirmedeki yetersizliğini ortaya koymaktadır." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'den AB'nin Ortak Anlayış belgesine tepki</h3>
+                    <p>Dışişleri Bakanlığı Sözcüsü Öncü Keçeli, AB tarafından yayımlanan "Ortak Anlayış" belgesine ilişkin, "Türkiye’nin adaylık statüsünü görmezden gelen belge, AB’nin ülkemizle ortak bir gelecek vizyonu geliştirmedeki yetersizliğini ortaya koymaktadır." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/turkiyeden-abnin-ortak-anlayis-belgesine-tepki-951451.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            oğuzhan uğur gözaltına alındı
+            i̇nternet fenomeni oğuzhan uğur, ahbap derneği'ne yönelik soruşturma kapsamında gözaltına alındı. uğur, 6 şubat depremleri sonrasında, ahbap ile koordineli çalışan isimlerden biriydi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Oğuzhan Uğur gözaltına alındı</h3>
+                    <p>İnternet fenomeni Oğuzhan Uğur, Ahbap Derneği'ne yönelik soruşturma kapsamında gözaltına alındı. Uğur, 6 Şubat depremleri sonrasında, Ahbap ile koordineli çalışan isimlerden biriydi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g3zn1kdgpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap soruşturması: deprem yardımlarına ilişkin bilirkişi heyeti görevlendirildi
+            i̇stanbul cumhuriyet başsavcılığı tarafından ahbap derneği'ne yönelik yürütülen soruşturma kapsamında düzenlenen ikinci dalga operasyonda gözaltına alınan 12 şüpheliden dördü tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahbap soruşturması: Deprem yardımlarına ilişkin bilirkişi heyeti görevlendirildi</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından Ahbap Derneği'ne yönelik yürütülen soruşturma kapsamında düzenlenen ikinci dalga operasyonda gözaltına alınan 12 şüpheliden dördü tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c24ye7d207no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tbmm genel kurulu'nda kabul edilen 12. yargı paketi'nde neler var?
+            uzun süredir kamuoyunda tartışılan 12. yargı paketi, 16 temmuz'da tbmm genel kurulu'nda kabul edilerek yasalaştı. teklif, yargının daha "etkin ve verimli" işlemesini sağlamaya yönelik değişikliklerin yanı sıra anayasa mahkemesi'nin iptal ettiği bazı hükümlere ilişkin yeni düzenlemeleri içeriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>TBMM Genel Kurulu'nda kabul edilen 12. Yargı Paketi'nde neler var?</h3>
+                    <p>Uzun süredir kamuoyunda tartışılan 12. Yargı Paketi, 16 Temmuz'da TBMM Genel Kurulu'nda kabul edilerek yasalaştı. Teklif, yargının daha "etkin ve verimli" işlemesini sağlamaya yönelik değişikliklerin yanı sıra Anayasa Mahkemesi'nin iptal ettiği bazı hükümlere ilişkin yeni düzenlemeleri içeriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx26x7vk8yxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ünlülere uyuşturucu soruşturması: 4 kişi tutuklandı
+            ünlülere yönelik uyuşturucu soruşturması kapsamında aralarında şarkıcı sıla gençoğlu, yapımcı mehmet fatih aksoy, şarkıcı i̇lyas altıntaş'ın da olduğu 25 kişi gözaltına alındı. gece saatlerinde bu isimlerden dördü tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ünlülere uyuşturucu soruşturması: 4 kişi tutuklandı</h3>
+                    <p>Ünlülere yönelik uyuşturucu soruşturması kapsamında aralarında şarkıcı Sıla Gençoğlu, yapımcı Mehmet Fatih Aksoy, şarkıcı İlyas Altıntaş'ın da olduğu 25 kişi gözaltına alındı. Gece saatlerinde bu isimlerden dördü tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0l58k1pk60o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            muhsin yazıcıoğlu soruşturmasında 19 şüpheli tutuklandı
+            ankara cumhuriyet başsavcılığınca, büyük birlik partisi (bbp) kurucu genel başkanı muhsin yazıcıoğlu ve beraberindekilerin bulunduğu helikopterin düşmesi sonucu ölümleriyle ilgili yürütülen soruşturma kapsamında gözaltına alınan 27 şüpheliden 19'u tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Muhsin Yazıcıoğlu soruşturmasında 19 şüpheli tutuklandı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığınca, Büyük Birlik Partisi (BBP) Kurucu Genel Başkanı Muhsin Yazıcıoğlu ve beraberindekilerin bulunduğu helikopterin düşmesi sonucu ölümleriyle ilgili yürütülen soruşturma kapsamında gözaltına alınan 27 şüpheliden 19'u tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/muhsin-yazicioglu-sorusturmasinda-19-supheli-tutuklandi-951449.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hafta sonu kavurucu sıcaklıklara dikkat
+            hafta sonu yurdun kuzeydoğu kesimlerinde gök gürültülü sağanak beklenirken; ege, akdeniz ve i̇ç anadolu bölgelerinde yüksek sıcaklıklar etkili olmaya devam edecek. güneydoğu anadolu'da ise toz taşınımı uyarısı yapıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hafta sonu kavurucu sıcaklıklara dikkat</h3>
+                    <p>Hafta sonu yurdun kuzeydoğu kesimlerinde gök gürültülü sağanak beklenirken; Ege, Akdeniz ve İç Anadolu bölgelerinde yüksek sıcaklıklar etkili olmaya devam edecek. Güneydoğu Anadolu'da ise toz taşınımı uyarısı yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/hafta-sonu-kavurucu-sicakliklara-dikkat-951448.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            odyssey filmine eleştirmenlerin yorumu: 'muazzam bir sinema eseri'
+            yönetmen christopher nolan'ın oppenheimer'dan sonraki ilk filminde matt damon ve zendaya başrolleri paylaşıyor. 17 temmuz'da vizyona girecek olan film, eleştirmenlerin büyük beğenisini aldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Odyssey filmine eleştirmenlerin yorumu: 'Muazzam bir sinema eseri'</h3>
+                    <p>Yönetmen Christopher Nolan'ın Oppenheimer'dan sonraki ilk filminde Matt Damon ve Zendaya başrolleri paylaşıyor. 17 Temmuz'da vizyona girecek olan film, eleştirmenlerin büyük beğenisini aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5ywdvgdp5xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            alanya'da itfaiye aracına yol vermeyen sürücüye 46 bin lira ceza
+            antalya'nın alanya ilçesinde, göreve giden itfaiye aracına yol vermeyerek geçişini engelleyen otomobil sürücüsüne 46 bin lira idari ceza uygulandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Alanya'da itfaiye aracına yol vermeyen sürücüye 46 bin lira ceza</h3>
+                    <p>Antalya'nın Alanya ilçesinde, göreve giden itfaiye aracına yol vermeyerek geçişini engelleyen otomobil sürücüsüne 46 bin lira idari ceza uygulandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/alanyada-itfaiye-aracina-yol-vermeyen-surucuye-46-bin-lira-ceza-951450.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın güne yükselişle başladı
+            gram altın, haftanın son işlem gününe yükselişle başlamasının ardından 6 bin 49 liradan işlem görüyor. çeyrek altın 9 bin 966 liradan, cumhuriyet altını 39 bin 714 liradan satılıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın güne yükselişle başladı</h3>
+                    <p>Gram altın, haftanın son işlem gününe yükselişle başlamasının ardından 6 bin 49 liradan işlem görüyor. Çeyrek altın 9 bin 966 liradan, cumhuriyet altını 39 bin 714 liradan satılıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-gune-yukselisle-basladi-951441.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇mralı heyetinin çerçeve yasa turu: akp ve bahçeli ziyaretlerinde neler konuşuldu?
+            i̇ktidarın "terörsüz türkiye" olarak adlandırdığı yeni çözüm sürecinin yasal zeminini oluşturacak çerçeve yasa için dem parti i̇mralı heyeti, akp ve mhp genel başkanı devlet bahçeli ile art arda görüşmeler gerçekleştirdi. peki akp'ye hangi talepler iletildi ve bundan sonra hangi adımlar atılacak?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İmralı heyetinin çerçeve yasa turu: AKP ve Bahçeli ziyaretlerinde neler konuşuldu?</h3>
+                    <p>İktidarın "Terörsüz Türkiye" olarak adlandırdığı yeni çözüm sürecinin yasal zeminini oluşturacak çerçeve yasa için DEM Parti İmralı heyeti, AKP ve MHP Genel Başkanı Devlet Bahçeli ile art arda görüşmeler gerçekleştirdi. Peki AKP'ye hangi talepler iletildi ve bundan sonra hangi adımlar atılacak?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78gln0xe75o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pew araştırması: türkiye'de çin'e yönelik olumlu görüş rekor seviyede
+            pew araştırma merkezi'nin yeni bir çalışmasına göre, çin artık dünyanın birçok ülkesinde abd'den daha olumlu bir şekilde değerlendiriliyor. araştırmanın bu yılki sonuçlarına göre türkiye'nin de aralarında olduğu bazı ülkelerde çin'e yönelik olumlu görüşler rekor seviyede.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Pew araştırması: Türkiye'de Çin'e yönelik olumlu görüş rekor seviyede</h3>
+                    <p>Pew Araştırma Merkezi'nin yeni bir çalışmasına göre, Çin artık dünyanın birçok ülkesinde ABD'den daha olumlu bir şekilde değerlendiriliyor. Araştırmanın bu yılki sonuçlarına göre Türkiye'nin de aralarında olduğu bazı ülkelerde Çin'e yönelik olumlu görüşler rekor seviyede.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz05783yeeko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd i̇ran'da köprüleri vurdu
+            abd ile i̇ran arasındaki yeni saldırı dalgasının altıncı gününde abd i̇ran'daki bazı köprüleri vurdu. i̇ran ise misilleme olarak suriye ve kuveyt'teki abd askeri tesislerini hedef aldıklarını açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD İran'da köprüleri vurdu</h3>
+                    <p>ABD ile İran arasındaki yeni saldırı dalgasının altıncı gününde ABD İran'daki bazı köprüleri vurdu. İran ise misilleme olarak Suriye ve Kuveyt'teki ABD askeri tesislerini hedef aldıklarını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cze9e190y1zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, yabancı öğrenciler için vize kurallarını sıkılaştırıyor
+            öğrencilerin abd'de dört yıldan daha uzun süre kalabilmeleri için hükümetten izin almaları gerekecek ve üniversiteler vizeleri uzatma yetkisini kaybedecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, yabancı öğrenciler için vize kurallarını sıkılaştırıyor</h3>
+                    <p>Öğrencilerin ABD'de dört yıldan daha uzun süre kalabilmeleri için hükümetten izin almaları gerekecek ve üniversiteler vizeleri uzatma yetkisini kaybedecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg92lz8310o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran sağlık bakanlığı: abd'nin temmuz ayında başlattığı saldırılarda 38 kişi hayatını kaybetti
+            i̇ran sağlık bakanlığı, abd'nin temmuz ayında ülkeye düzenlediği saldırılarda hayatını kaybedenlerin sayısının 38'e yükseldiğini, yaralı sayısının ise 400'ü aştığını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Sağlık Bakanlığı: ABD'nin temmuz ayında başlattığı saldırılarda 38 kişi hayatını kaybetti</h3>
+                    <p>İran Sağlık Bakanlığı, ABD'nin temmuz ayında ülkeye düzenlediği saldırılarda hayatını kaybedenlerin sayısının 38'e yükseldiğini, yaralı sayısının ise 400'ü aştığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-saglik-bakanligi-abdnin-temmuz-ayinda-baslattigi-saldirilarda-38-kisi-hayatini-kaybetti-951447.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, i̇ran'a başlattığı saldırıları bitirdiğini açıkladı
+            abd merkez kuvvetler komutanlığı (centcom), i̇ran'a yönelik 6 gün art arda devam eden saldırı dalgasının sona erdirildiğini duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, İran'a başlattığı saldırıları bitirdiğini açıkladı</h3>
+                    <p>ABD Merkez Kuvvetler Komutanlığı (CENTCOM), İran'a yönelik 6 gün art arda devam eden saldırı dalgasının sona erdirildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-irana-baslattigi-saldirilari-bitirdigini-acikladi-951446.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan: ukrayna'ya son derece verimli bir ziyaret gerçekleştirdik
+            dışişleri bakanı hakan fidan, ukrayna'ya gerçekleştirdiği ziyaretin verimli geçtiğini, devlet başkanı volodimir zelenski tarafından kendisine tevdi edilen nişanı almaktan onur duyduğunu söyledi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Bakan Fidan: Ukrayna'ya son derece verimli bir ziyaret gerçekleştirdik</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Ukrayna'ya gerçekleştirdiği ziyaretin verimli geçtiğini, Devlet Başkanı Volodimir Zelenski tarafından kendisine tevdi edilen nişanı almaktan onur duyduğunu söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-ukraynaya-son-derece-verimli-bir-ziyaret-gerceklestirdik-951445.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
