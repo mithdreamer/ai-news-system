@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-18 07:01</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crmr223jnx8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump ulusa seslendi, Çin'in 2020 seçimine müdahale ettiğini öne sürdü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj6gyx01p5do?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İngiltere'nin yeni başbakanı olacak Andy Burnham kimdir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c8enldry305o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>DEM Parti: 'Çerçeve yasa müzakereye alan açmalı'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c62xmz8d2emo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>PKK'nın kurucularından Duran Kalkan: 'Bu süreç batmayacak'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c4g3zn1kdgpo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Oğuzhan Uğur gözaltına alındı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump ulusa seslendi, çin'in 2020 seçimine müdahale ettiğini öne sürdü
+            çin dışişleri bakanlığı ise trump'ın konuşmasına yanıt olarak, çin'in 2020 abd başkanlık seçimlerine müdahale ettiği yönündeki iddiaları güçlü şekilde reddetti ve bunların "tamamen uydurma" olduğunu belirtti.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Trump ulusa seslendi, Çin'in 2020 seçimine müdahale ettiğini öne sürdü</h3>
+                    <p>Çin Dışişleri Bakanlığı ise Trump'ın konuşmasına yanıt olarak, Çin'in 2020 ABD başkanlık seçimlerine müdahale ettiği yönündeki iddiaları güçlü şekilde reddetti ve bunların "tamamen uydurma" olduğunu belirtti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crmr223jnx8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'nin yeni başbakanı olacak andy burnham kimdir?
+            i̇ngiltere'de önceki hükümetlerde bakanlık görevinde bulunduktan sonra manchester büyükşehir belediye başkanı olan ve artan popülerliğiyle partinin başına geçen andy burnham'ın siyasetteki geçmişini derledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'nin yeni başbakanı olacak Andy Burnham kimdir?</h3>
+                    <p>İngiltere'de önceki hükümetlerde bakanlık görevinde bulunduktan sonra Manchester Büyükşehir Belediye Başkanı olan ve artan popülerliğiyle partinin başına geçen Andy Burnham'ın siyasetteki geçmişini derledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj6gyx01p5do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dem parti: 'çerçeve yasa müzakereye alan açmalı'
+            dem parti yöneticileri süreçle ilgili değerlendirmelerde bulundu. çerçeve yasayla, pkk'lılar hakkındaki tüm davaların düşmesinin sağlanması gerektiğini savunan dem parti yöneticileri, "ama hangi pkk'lının nerede yaşayacağı meselesi müzakere konusudur. yasa, müzakereye alan açmalıdır" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>DEM Parti: 'Çerçeve yasa müzakereye alan açmalı'</h3>
+                    <p>DEM Parti yöneticileri süreçle ilgili değerlendirmelerde bulundu. Çerçeve yasayla, PKK'lılar hakkındaki tüm davaların düşmesinin sağlanması gerektiğini savunan DEM Parti yöneticileri, "Ama hangi PKK'lının nerede yaşayacağı meselesi müzakere konusudur. Yasa, müzakereye alan açmalıdır" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8enldry305o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pkk'nın kurucularından duran kalkan: 'bu süreç batmayacak'
+            duran kalkan, iktidarın "terörsüz türkiye", dem parti'nin "barış ve demokratik toplum" olarak nitelendirdiği yeni çözüm sürecini değerlendirdi. kandil'de medyascope genel yayın yönetmeni ruşen çakır'a konuşan kalkan, "bu süreç batmayacak" dedi. kalkan, günümüzdeki iç ve dış dinamiklerin bu dönemi 2015'te çöken eski çözüm sürecinden farklı kıldığını söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>PKK'nın kurucularından Duran Kalkan: 'Bu süreç batmayacak'</h3>
+                    <p>Duran Kalkan, iktidarın "Terörsüz Türkiye", DEM Parti'nin "Barış ve Demokratik Toplum" olarak nitelendirdiği yeni çözüm sürecini değerlendirdi. Kandil'de Medyascope Genel Yayın Yönetmeni Ruşen Çakır'a konuşan Kalkan, "Bu süreç batmayacak" dedi. Kalkan, günümüzdeki iç ve dış dinamiklerin bu dönemi 2015'te çöken eski çözüm sürecinden farklı kıldığını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62xmz8d2emo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            oğuzhan uğur gözaltına alındı
+            i̇nternet fenomeni oğuzhan uğur, ahbap derneği'ne yönelik soruşturma kapsamında gözaltına alındı. uğur, 6 şubat depremleri sonrasında, ahbap ile koordineli çalışan isimlerden biriydi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Oğuzhan Uğur gözaltına alındı</h3>
+                    <p>İnternet fenomeni Oğuzhan Uğur, Ahbap Derneği'ne yönelik soruşturma kapsamında gözaltına alındı. Uğur, 6 Şubat depremleri sonrasında, Ahbap ile koordineli çalışan isimlerden biriydi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g3zn1kdgpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hafta sonu sıcaklıklar mevsim normallerinin üzerine çıkacak
+            sıcak hava yurt genelinde hafta sonu da etkisini sürdürecek. termometreler yer yer mevsim normallerinin üzerindeki değerleri gösterecek. meteorolojinin tahminlerine göre; yurdun kuzeyinde ise yağış bekleniyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hafta sonu sıcaklıklar mevsim normallerinin üzerine çıkacak</h3>
+                    <p>Sıcak hava yurt genelinde hafta sonu da etkisini sürdürecek. Termometreler yer yer mevsim normallerinin üzerindeki değerleri gösterecek. Meteorolojinin tahminlerine göre; yurdun kuzeyinde ise yağış bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/hafta-sonu-sicakliklar-mevsim-normallerinin-uzerine-cikacak-951527.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            malatya'da 5 büyüklüğünde deprem
+            malatya'nın battalgazi ilçesinde 5 büyüklüğünde deprem meydana geldi. çevre illerden de hissedildiği öğrenilen depremin olumsuz bir duruma sebep olmadığı aktarıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Malatya'da 5 büyüklüğünde deprem</h3>
+                    <p>Malatya'nın Battalgazi ilçesinde 5 büyüklüğünde deprem meydana geldi. Çevre illerden de hissedildiği öğrenilen depremin olumsuz bir duruma sebep olmadığı aktarıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/malatyada-5-buyuklugunde-deprem-951521.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'ye mutlak butlanın iptal başvurusu yargıtay'a ulaştı
+            chp'de kemal kılıçdaroğlu'nun genel başkanlığa dönmesinin önünü açan mutlak butlan kararına yapılan itiraz yaklaşık iki ay sonra yargıtay'a ulaştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP'ye mutlak butlanın iptal başvurusu Yargıtay'a ulaştı</h3>
+                    <p>CHP'de Kemal Kılıçdaroğlu'nun genel başkanlığa dönmesinin önünü açan mutlak butlan kararına yapılan itiraz yaklaşık iki ay sonra Yargıtay'a ulaştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdewny8l469o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            andy burnham resmen i̇şçi partisi'nin lideri oldu
+            i̇ngiltere'de eski manchester belediye başkanı andy burnham, 17 temmuz'da resmen i̇şçi partisi'nin yeni lideri oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Andy Burnham resmen İşçi Partisi'nin lideri oldu</h3>
+                    <p>İngiltere'de eski Manchester Belediye Başkanı Andy Burnham, 17 Temmuz'da resmen İşçi Partisi'nin yeni lideri oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c621m52lmv1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            japonya'da erkek veliaht sıkıntısı: kadın imparator yasağının geçmişi neye dayanıyor?
+            japon parlamentosu, imparatorluk ailesinin giderek küçülen yapısına ilişkin endişeler nedeniyle imparatorluk veraset kurallarını gevşeten bir yasa tasarısını onayladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Japonya'da erkek veliaht sıkıntısı: Kadın imparator yasağının geçmişi neye dayanıyor?</h3>
+                    <p>Japon parlamentosu, imparatorluk ailesinin giderek küçülen yapısına ilişkin endişeler nedeniyle imparatorluk veraset kurallarını gevşeten bir yasa tasarısını onayladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce97jzv25m0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nasuh mahruki 15 temmuz paylaşımı nedeniyle tutuklandı
+            arama kurtarma derneği (akut) kurucularından nasuh mahruki hakkında, sosyal medya hesabından yaptığı 15 temmuz darbe girişimine ilişkin paylaşım nedeniyle tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nasuh Mahruki 15 Temmuz paylaşımı nedeniyle tutuklandı</h3>
+                    <p>Arama Kurtarma Derneği (AKUT) kurucularından Nasuh Mahruki hakkında, sosyal medya hesabından yaptığı 15 Temmuz darbe girişimine ilişkin paylaşım nedeniyle tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjwx3ngn3z4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuveyt ve bahreyn'de i̇ran saldırıları nedeniyle alarm durumu
+            kuveyt'te i̇ran'ın balistik füze ve insansız hava aracı (i̇ha) saldırılarına karşı hava savunma sistemleri yeniden devreye girdi, bahreyn'de ise sirenlerin çalmaya devam etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kuveyt ve Bahreyn'de İran saldırıları nedeniyle alarm durumu</h3>
+                    <p>Kuveyt'te İran'ın balistik füze ve insansız hava aracı (İHA) saldırılarına karşı hava savunma sistemleri yeniden devreye girdi, Bahreyn'de ise sirenlerin çalmaya devam etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kuveyt-ve-bahreynde-iran-saldirilari-nedeniyle-alarm-durumu-951525.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ürdün: i̇ran'dan ateşlenen 10 balistik füzeyi etkisiz hale getirdik
+            ürdün ordusu, i̇ran'dan ateşlenen 10 balistik füzenin hava savunma sistemleriyle etkisiz hale getirildiğini açıkladı.​​​​​​​​​​​​​​
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ürdün: İran'dan ateşlenen 10 balistik füzeyi etkisiz hale getirdik</h3>
+                    <p>Ürdün ordusu, İran'dan ateşlenen 10 balistik füzenin hava savunma sistemleriyle etkisiz hale getirildiğini açıkladı.​​​​​​​​​​​​​​</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/urdun-irandan-ateslenen-10-balistik-fuzeyi-etkisiz-hale-getirdik-951522.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mhp torbalı teşkilatına 350 yeni üye
+            i̇zmir'in torbalı ilçesinde milliyetçi hareket partisi'ne (mhp) katılan 350 kişiye rozet takıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>MHP Torbalı teşkilatına 350 yeni üye</h3>
+                    <p>İzmir'in Torbalı ilçesinde Milliyetçi Hareket Partisi'ne (MHP) katılan 350 kişiye rozet takıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/mhp-torbali-teskilatina-350-yeni-uye-951520.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: hürmüz boğazı'nda mayınlı bölgeden geçmeye çalışan 2 gemide patlama meydana geldi
+            i̇ran devrim muhafızları ordusu, hürmüz boğazı'nın güneyindeki mayınlı sulardan geçmeye çalışan 2 petrol tankerinde patlama meydana geldiğini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İran: Hürmüz Boğazı'nda mayınlı bölgeden geçmeye çalışan 2 gemide patlama meydana geldi</h3>
+                    <p>İran Devrim Muhafızları Ordusu, Hürmüz Boğazı'nın güneyindeki mayınlı sulardan geçmeye çalışan 2 petrol tankerinde patlama meydana geldiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-hurmuz-bogazinda-mayinli-bolgeden-gecmeye-calisan-2-gemide-patlama-meydana-geldi-951519.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            venezuela'daki depremlerde bilanço ağırlaşıyor: 5 bin 69 can kaybı
+            venezuela'da 24 haziran'da meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde yaşamını yitirenlerin sayısı 5 bin 69'a yükseldi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Venezuela'daki depremlerde bilanço ağırlaşıyor: 5 bin 69 can kaybı</h3>
+                    <p>Venezuela'da 24 Haziran'da meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde yaşamını yitirenlerin sayısı 5 bin 69'a yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-bilanco-agirlasiyor-5-bin-69-can-kaybi-951523.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'dan abd'ye sivil altyapıyı hedef alma suçlaması
+            abd ordusu i̇ran'a karşı yeni saldırı dalgasının altıncı gününde ülkedeki bazı köprüleri hedef aldı. i̇ran ise misilleme olarak abd'nin bölgedeki askeri tesislerini hedef aldıklarını açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran'dan ABD'ye sivil altyapıyı hedef alma suçlaması</h3>
+                    <p>ABD ordusu İran'a karşı yeni saldırı dalgasının altıncı gününde ülkedeki bazı köprüleri hedef aldı. İran ise misilleme olarak ABD'nin bölgedeki askeri tesislerini hedef aldıklarını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cze9e190y1zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            centcom: abd'nin i̇ran'a yönelik son saldırı dalgası sona erdi
+            abd merkez kuvvetler komutanlığı (centcom), i̇ran'a yönelik art arda yedinci gecede düzenlenen saldırı dalgasının sona erdiğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>CENTCOM: ABD'nin İran'a yönelik son saldırı dalgası sona erdi</h3>
+                    <p>ABD Merkez Kuvvetler Komutanlığı (CENTCOM), İran'a yönelik art arda yedinci gecede düzenlenen saldırı dalgasının sona erdiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/centcom-abdnin-irana-yonelik-son-saldiri-dalgasi-sona-erdi-951528.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hürmüz boğazı'nda 4 gemi füze ve i̇ha saldırılarıyla durduruldu
+            i̇ran devrim muhafızları ordusu donanması, abd ordusunun desteğiyle hürmüz boğazı'ndan geçmeye çalışan 4 geminin füze ve insansız hava aracı (i̇ha) saldırılarıyla durdurulduğunu açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hürmüz Boğazı'nda 4 gemi füze ve İHA saldırılarıyla durduruldu</h3>
+                    <p>İran Devrim Muhafızları Ordusu Donanması, ABD ordusunun desteğiyle Hürmüz Boğazı'ndan geçmeye çalışan 4 geminin füze ve insansız hava aracı (İHA) saldırılarıyla durdurulduğunu açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hurmuz-bogazinda-4-gemi-fuze-ve-iha-saldirilariyla-durduruldu-951526.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: abd, hürmüzgan'da 2 köprü ve 1 tüneli hedef aldı
+            i̇ran, abd'nin hürmüzgan eyaletinde bender abbas-sircan güzergahındaki bir köprü ile 2 farklı ulaşım noktasına saldırı düzenlediğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran: ABD, Hürmüzgan'da 2 köprü ve 1 tüneli hedef aldı</h3>
+                    <p>İran, ABD'nin Hürmüzgan eyaletinde Bender Abbas-Sircan güzergahındaki bir köprü ile 2 farklı ulaşım noktasına saldırı düzenlediğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-abd-hurmuzganda-2-kopru-ve-1-tuneli-hedef-aldi-951524.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
