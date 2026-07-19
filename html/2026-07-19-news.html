@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-19 07:29</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cly53pn0v18o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rus basını neden Türkiye'yi 'Karadeniz'i kontrol etmeye çalışmakla' suçluyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cgewy8wpznwo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Kontrol, tehditler, şekil bozucu ameliyatlar: Jeffrey Epstein'ın 'tarikatının' içindeki hayatım</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crl7842k75jo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bisiklet taytı nedeniyle eleştirilen Ardahan valisi görevden alındı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvg7293gzg8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Çözülememiş cinayetleri aydınlatan kadın: 'Ölen herkes adının bilinmesini hak eder'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/ticaret-bakanligi-haziranda-608-firmaya-dahilde-isleme-izin-belgesi-verdi-951590.html" target="_blank">
+                <strong>Ticaret Bakanlığı haziranda 608 firmaya dahilde işleme izin belgesi verdi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            rus basını neden türkiye'yi 'karadeniz'i kontrol etmeye çalışmakla' suçluyor?
+            dışişleri bakanı hakan fidan 16 temmuz'da, olası bir rusya-ukrayna anlaşmasıyla ilgili olarak türkiye'nin "deniz unsurlarına liderlik etmeyi kabul ettiğini" söyledi. kremlin türkiye'nin açıklamalarına ılımlı yaklaşsa da kremlin yanlısı bazı rus yorumcular ise çok daha saldırgan bir tutum sergiledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rus basını neden Türkiye'yi 'Karadeniz'i kontrol etmeye çalışmakla' suçluyor?</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan 16 Temmuz'da, olası bir Rusya-Ukrayna anlaşmasıyla ilgili olarak Türkiye'nin "deniz unsurlarına liderlik etmeyi kabul ettiğini" söyledi. Kremlin Türkiye'nin açıklamalarına ılımlı yaklaşsa da Kremlin yanlısı bazı Rus yorumcular ise çok daha saldırgan bir tutum sergiledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly53pn0v18o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kontrol, tehditler, şekil bozucu ameliyatlar: jeffrey epstein'ın 'tarikatının' içindeki hayatım
+            "anya", bbc'ye cinsel suçlardan hüküm giyen epstein'ın "asistanlarını" nasıl kandırıp istismar ettiğine dair az bilinen detaylar anlattı. asistanlar epstein tarafından barındırılan, onun emriyle günün her saati çalışan ve düzenli olarak onun tarafından cinsel istismara uğrayan bir grup kadından oluşuyordu; anya'nın tahminine göre bu sayı bir dönem 10'dan fazlaydı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kontrol, tehditler, şekil bozucu ameliyatlar: Jeffrey Epstein'ın 'tarikatının' içindeki hayatım</h3>
+                    <p>"Anya", BBC'ye cinsel suçlardan hüküm giyen Epstein'ın "asistanlarını" nasıl kandırıp istismar ettiğine dair az bilinen detaylar anlattı. Asistanlar Epstein tarafından barındırılan, onun emriyle günün her saati çalışan ve düzenli olarak onun tarafından cinsel istismara uğrayan bir grup kadından oluşuyordu; Anya'nın tahminine göre bu sayı bir dönem 10'dan fazlaydı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgewy8wpznwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuveyt'te hava savunma sistemleri devreye girdi
+            kuveyt ordusu, i̇ran'dan atılan füze ve kamikaze insansız hava araçlarının (i̇ha) önlenmesi için hava savunma sistemlerinin devreye girdiğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kuveyt'te hava savunma sistemleri devreye girdi</h3>
+                    <p>Kuveyt ordusu, İran'dan atılan füze ve kamikaze insansız hava araçlarının (İHA) önlenmesi için hava savunma sistemlerinin devreye girdiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kuveytte-hava-savunma-sistemleri-devreye-girdi-951596.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna: rusya 41 füze, 125 si̇ha ile hava saldırısı düzenledi
+            ukrayna, rus ordusunun bu gece ülkeye 41 füze ve 125 silahlı insansız hava aracıyla (si̇ha) saldırı gerçekleştirdiğini bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ukrayna: Rusya 41 füze, 125 SİHA ile hava saldırısı düzenledi</h3>
+                    <p>Ukrayna, Rus ordusunun bu gece ülkeye 41 füze ve 125 silahlı insansız hava aracıyla (SİHA) saldırı gerçekleştirdiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ukrayna-rusya-41-fuze-125-siha-ile-hava-saldirisi-duzenledi-951594.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yks sonuçları için geri sayım
+            milyonlarca üniversite adayının heyecanla beklediği yükseköğretim kurumları sınavı (yks) sonuçları, ösym'nin takvimine göre 22 temmuz çarşamba günü açıklanacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>YKS sonuçları için geri sayım</h3>
+                    <p>Milyonlarca üniversite adayının heyecanla beklediği Yükseköğretim Kurumları Sınavı (YKS) sonuçları, ÖSYM'nin takvimine göre 22 Temmuz Çarşamba günü açıklanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/yks-sonuclari-icin-geri-sayim-951593.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran ordusu, kuveyt'teki 2 abd üssünü i̇ha'larla hedef aldığını duyurdu
+            i̇ran ordusu, kuveyt'te abd ordusunun kullandığı el-adiri kampı ile ali es-salem hava üssü'ndeki amerikan teçhizatlarını kamikaze insansız hava araçlarıyla (i̇ha) hedef aldığını duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran ordusu, Kuveyt'teki 2 ABD üssünü İHA'larla hedef aldığını duyurdu</h3>
+                    <p>İran ordusu, Kuveyt'te ABD ordusunun kullandığı El-Adiri Kampı ile Ali es-Salem Hava Üssü'ndeki Amerikan teçhizatlarını kamikaze insansız hava araçlarıyla (İHA) hedef aldığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-ordusu-kuveytteki-2-abd-ussunu-ihalarla-hedef-aldigini-duyurdu-951587.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ürdün'de iki abd askeri öldürüldü: abd ve i̇ran'dan karşılıklı saldırılar
+            abd ordusu cumartesi gecesi i̇ran'a yönelik yeni bir hava saldırısı dalgası başlattıklarını, i̇ran'ın kıyı gözetleme ile hava savunma tesislerini hedef aldığını duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ürdün'de iki ABD askeri öldürüldü: ABD ve İran'dan karşılıklı saldırılar</h3>
+                    <p>ABD ordusu Cumartesi gecesi İran'a yönelik yeni bir hava saldırısı dalgası başlattıklarını, İran'ın kıyı gözetleme ile hava savunma tesislerini hedef aldığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c07rnxj949po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ordusu, i̇ran'a yönelik başlattığı son saldırı dalgasını tamamladığını duyurdu
+            abd ordusu, "ürdün'de 2 abd askerinin öldüğü saldırılara da karşılık vermek amacıyla" i̇ran'a yönelik başlattığı hava saldırılarını tamamladığını duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ordusu, İran'a yönelik başlattığı son saldırı dalgasını tamamladığını duyurdu</h3>
+                    <p>ABD ordusu, "Ürdün'de 2 ABD askerinin öldüğü saldırılara da karşılık vermek amacıyla" İran'a yönelik başlattığı hava saldırılarını tamamladığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-ordusu-irana-yonelik-baslattigi-son-saldiri-dalgasini-tamamladigini-duyurdu-951592.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran basını, abd'nin hürmüz yakınlarındaki hacıabad'a saldırı düzenlediğini duyurdu
+            abd'nin hürmüz boğazı yakınlarında i̇ran'ın hürmüzgan eyaletine bağlı hacıabad kentine saldırı düzenlediği duyuruldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran basını, ABD'nin Hürmüz yakınlarındaki Hacıabad'a saldırı düzenlediğini duyurdu</h3>
+                    <p>ABD'nin Hürmüz Boğazı yakınlarında İran'ın Hürmüzgan eyaletine bağlı Hacıabad kentine saldırı düzenlediği duyuruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-basini-abdnin-hurmuz-yakinlarindaki-haciabada-saldiri-duzenledigini-duyurdu-951591.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bisiklet taytı nedeniyle eleştirilen ardahan valisi görevden alındı
+            resmi gazete'de yayımlanan bir kararla ardahan valisi mehmet fatih çiçekli görevden alındı. cumhurbaşkanı recep tayyip erdoğan'ın imzasıyla 17 temmuz'da yayımlanan kararla yerine gaziantep şehitkamil kaymakamı ömer hilmi yamlı atandı. mehmet fatih çiçekli son dönemde bisiklet sürerken videolarını sosyal medyada paylaşmasıyla gündeme gelmişti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bisiklet taytı nedeniyle eleştirilen Ardahan valisi görevden alındı</h3>
+                    <p>Resmi Gazete'de yayımlanan bir kararla Ardahan Valisi Mehmet Fatih Çiçekli görevden alındı. Cumhurbaşkanı Recep Tayyip Erdoğan'ın imzasıyla 17 Temmuz'da yayımlanan kararla yerine Gaziantep Şehitkamil Kaymakamı Ömer Hilmi Yamlı atandı. Mehmet Fatih Çiçekli son dönemde bisiklet sürerken videolarını sosyal medyada paylaşmasıyla gündeme gelmişti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crl7842k75jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dem parti: 'çerçeve yasa müzakereye alan açmalı'
+            dem parti yöneticileri süreçle ilgili değerlendirmelerde bulundu. çerçeve yasayla, pkk'lılar hakkındaki tüm davaların düşmesinin sağlanması gerektiğini savunan dem parti yöneticileri, "ama hangi pkk'lının nerede yaşayacağı meselesi müzakere konusudur. yasa, müzakereye alan açmalıdır" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>DEM Parti: 'Çerçeve yasa müzakereye alan açmalı'</h3>
+                    <p>DEM Parti yöneticileri süreçle ilgili değerlendirmelerde bulundu. Çerçeve yasayla, PKK'lılar hakkındaki tüm davaların düşmesinin sağlanması gerektiğini savunan DEM Parti yöneticileri, "Ama hangi PKK'lının nerede yaşayacağı meselesi müzakere konusudur. Yasa, müzakereye alan açmalıdır" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8enldry305o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası'nda dev final: i̇spanyaarjantin maçı bugün trt1'de
+            2026 fifa dünya kupası'nda i̇spanya ile arjantin arasında bugün 22.00'de oynanacak final, devre arası şovundan şampiyonluk yüzüğüne, tarihi eşleşmelerden kırılacak rekorlara kadar birçok ilke sahne olacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya Kupası'nda dev final: İspanyaArjantin maçı bugün TRT1'de</h3>
+                    <p>2026 FIFA Dünya Kupası'nda İspanya ile Arjantin arasında bugün 22.00'de oynanacak final, devre arası şovundan şampiyonluk yüzüğüne, tarihi eşleşmelerden kırılacak rekorlara kadar birçok ilke sahne olacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/dunya-kupasinda-dev-final-ispanya-arjantin-maci-bugun-trt1de-951589.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'ın huzistan kentinde 5 büyüklüğünde deprem
+            i̇ran'ın huzistan kenti yakınlarındaki salend ilçesinde 5 büyüklüğünde deprem meydana geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İran'ın Huzistan kentinde 5 büyüklüğünde deprem</h3>
+                    <p>İran'ın Huzistan kenti yakınlarındaki Salend ilçesinde 5 büyüklüğünde deprem meydana geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iranin-huzistan-kentinde-5-buyuklugunde-deprem-951588.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            perseid meteor yağmuru görsel bir şölen sunacak
+            perseid meteor yağmuru önümüzdeki beş hafta boyunca gece gökyüzünü aydınlatacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Perseid meteor yağmuru görsel bir şölen sunacak</h3>
+                    <p>Perseid meteor yağmuru önümüzdeki beş hafta boyunca gece gökyüzünü aydınlatacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c935ye3z010o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sıcak havalarda vantilatörünüzden en iyi şekilde nasıl yararlanabilirsiniz?
+            yüzünüze mi tutmalısınız, bir kase buz mu kullanmalı yoksa pencere mi açmalısınız? uzmanlara göre vantilatörden en iyi şekilde yararlanma yolları.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sıcak havalarda vantilatörünüzden en iyi şekilde nasıl yararlanabilirsiniz?</h3>
+                    <p>Yüzünüze mi tutmalısınız, bir kase buz mu kullanmalı yoksa pencere mi açmalısınız? Uzmanlara göre vantilatörden en iyi şekilde yararlanma yolları.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gy5w0993eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            adli tatil yarın başlıyor
+            yargıda, "toplu izin kullanımı" anlamına gelen adli tatil yarın başlayacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Adli tatil yarın başlıyor</h3>
+                    <p>Yargıda, "toplu izin kullanımı" anlamına gelen adli tatil yarın başlayacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/adli-tatil-yarin-basliyor-951595.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            çözülememiş cinayetleri aydınlatan kadın: 'ölen herkes adının bilinmesini hak eder'
+            margaret press, cinayet kurbanlarını tespit etmek için dna teknolojisi ve soyağacını birleştirme fikrini ortaya attı. gönüllülerden oluşan ekibi o zamandan beri 150'den fazla vakayı çözdü.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Çözülememiş cinayetleri aydınlatan kadın: 'Ölen herkes adının bilinmesini hak eder'</h3>
+                    <p>Margaret Press, cinayet kurbanlarını tespit etmek için DNA teknolojisi ve soyağacını birleştirme fikrini ortaya attı. Gönüllülerden oluşan ekibi o zamandan beri 150'den fazla vakayı çözdü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg7293gzg8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çocukların telefonda fazla zaman geçirmesini engellemenin beş yolu
+            çocuk yetiştirme uzmanlarından çocuklarının telefon ve tabletleri ellerinden kısa süreliğine bile olsa bırakmasına yardımcı olacak tavsiyeler.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Çocukların telefonda fazla zaman geçirmesini engellemenin beş yolu</h3>
+                    <p>Çocuk yetiştirme uzmanlarından çocuklarının telefon ve tabletleri ellerinden kısa süreliğine bile olsa bırakmasına yardımcı olacak tavsiyeler.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy45y3y2vdeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ticaret bakanlığı haziranda 608 firmaya dahilde işleme izin belgesi verdi
+            ticaret bakanlığı, dahilde işleme rejimi kapsamında haziranda 608 firma için izin belgesi düzenledi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ticaret Bakanlığı haziranda 608 firmaya dahilde işleme izin belgesi verdi</h3>
+                    <p>Ticaret Bakanlığı, dahilde işleme rejimi kapsamında haziranda 608 firma için izin belgesi düzenledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ticaret-bakanligi-haziranda-608-firmaya-dahilde-isleme-izin-belgesi-verdi-951590.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hürmüz boğazı: alternatif rotalar hangileri, türkiye rol oynayabilir mi?
+            uzmanlar, alternatifler mevcut olsa da hiçbirinin deniz yoluyla yapılan petrol ticaretinin yaklaşık dörtte birinin geçtiği hürmüz boğazı'nın yerini alamayacağını söylüyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Hürmüz Boğazı: Alternatif rotalar hangileri, Türkiye rol oynayabilir mi?</h3>
+                    <p>Uzmanlar, alternatifler mevcut olsa da hiçbirinin deniz yoluyla yapılan petrol ticaretinin yaklaşık dörtte birinin geçtiği Hürmüz Boğazı'nın yerini alamayacağını söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx76yywprpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
