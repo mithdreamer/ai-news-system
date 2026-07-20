@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-20 08:09</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cly53pn0v18o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rus basını neden Türkiye'yi 'Karadeniz'i kontrol etmeye çalışmakla' suçluyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/istihdami-koruma-destek-programinin-suresi-3-yila-cikarildi-951666.html" target="_blank">
+                <strong>İstihdamı Koruma Destek Programı'nın süresi 3 yıla çıkarıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvge2zwq0e2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bakan Gürlek: Muhsin Yazıcıoğlu soruşturmasında sonuna kadar gidilecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cgk41zke535o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Andy Burnham bugün İngiltere Başbakanı olarak ilk konuşmasını yapacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c199wp4l1edo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Kıbrıs Harekâtı: O gün Atina'da neler yaşandı?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            rus basını neden türkiye'yi 'karadeniz'i kontrol etmeye çalışmakla' suçluyor?
+            dışişleri bakanı hakan fidan 16 temmuz'da, olası bir rusya-ukrayna anlaşmasıyla ilgili olarak türkiye'nin "deniz unsurlarına liderlik etmeyi kabul ettiğini" söyledi. kremlin türkiye'nin açıklamalarına ılımlı yaklaşsa da kremlin yanlısı bazı rus yorumcular ise çok daha saldırgan bir tutum sergiledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rus basını neden Türkiye'yi 'Karadeniz'i kontrol etmeye çalışmakla' suçluyor?</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan 16 Temmuz'da, olası bir Rusya-Ukrayna anlaşmasıyla ilgili olarak Türkiye'nin "deniz unsurlarına liderlik etmeyi kabul ettiğini" söyledi. Kremlin Türkiye'nin açıklamalarına ılımlı yaklaşsa da Kremlin yanlısı bazı Rus yorumcular ise çok daha saldırgan bir tutum sergiledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly53pn0v18o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stihdamı koruma destek programı'nın süresi 3 yıla çıkarıldı
+            çalışma ve sosyal güvenlik bakanı vedat işıkhan, i̇stihdamı koruma destek programı'nın süresinin 3 yıla çıkarıldığını ve 2026-2028 yılları arasında istihdamı koruyan imalat sektörü işverenlerine çalıştırdıkları sigortalılar için toplam 187,5 milyar lira destek sağlayacaklarını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstihdamı Koruma Destek Programı'nın süresi 3 yıla çıkarıldı</h3>
+                    <p>Çalışma ve Sosyal Güvenlik Bakanı Vedat Işıkhan, İstihdamı Koruma Destek Programı'nın süresinin 3 yıla çıkarıldığını ve 2026-2028 yılları arasında istihdamı koruyan imalat sektörü işverenlerine çalıştırdıkları sigortalılar için toplam 187,5 milyar lira destek sağlayacaklarını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/istihdami-koruma-destek-programinin-suresi-3-yila-cikarildi-951666.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kıbrıs harekâtı: o gün atina'da neler yaşandı?
+            uzun yıllardır çeşitli basın-yayın organlarının atina muhabirliğini yapan tecrübeli gazeteci stelyo berberakis, 20 temmuz 1974'te harekât başladığında 19 yaşındaydı. o günü atina'da yaşayan berberakis yaşadıklarını bbc türkçe için kaleme aldı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kıbrıs Harekâtı: O gün Atina'da neler yaşandı?</h3>
+                    <p>Uzun yıllardır çeşitli basın-yayın organlarının Atina muhabirliğini yapan tecrübeli gazeteci Stelyo Berberakis, 20 Temmuz 1974'te harekât başladığında 19 yaşındaydı. O günü Atina'da yaşayan Berberakis yaşadıklarını BBC Türkçe için kaleme aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c199wp4l1edo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yks sonuçları çarşamba günü açıklanacak
+            yks sonuçlarının açıklanması için geri sayım başladı. milyonlarca üniversite adayı sonuçları öğrenmek için 22 temmuz'u bekliyor. sonuçların ilanı ile birlikte yükseköğretim programları ve kontenjan kılavuzu da yayımlanacak. adaylar kılavuza göre üniversite tercihlerini yapacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>YKS sonuçları çarşamba günü açıklanacak</h3>
+                    <p>YKS sonuçlarının açıklanması için geri sayım başladı. Milyonlarca üniversite adayı sonuçları öğrenmek için 22 Temmuz'u bekliyor. Sonuçların ilanı ile birlikte Yükseköğretim Programları ve Kontenjan Kılavuzu da yayımlanacak. Adaylar kılavuza göre üniversite tercihlerini yapacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/yks-sonuclari-carsamba-gunu-aciklanacak-951667.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'ın irak'taki saldırısının ardından bir abd askeri öldü
+            abd ordusu, cumartesi günü irak'ın kuzeyinde düzenlenen bir i̇ran saldırısının ardından bir askerinin öldüğünü açıkladı. bir gün önce ürdün'deki bir üsse düzenlenen saldırıda da iki abd askeri öldürülmüştü.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran'ın Irak'taki saldırısının ardından bir ABD askeri öldü</h3>
+                    <p>ABD ordusu, Cumartesi günü Irak'ın kuzeyinde düzenlenen bir İran saldırısının ardından bir askerinin öldüğünü açıkladı. Bir gün önce Ürdün'deki bir üsse düzenlenen saldırıda da iki ABD askeri öldürülmüştü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c07rnxj949po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran devrim muhafızları ordusu: ürdün ve kuveyt'te abd üslerini hedef aldık
+            i̇ran devrim muhafızları ordusu, "nasr 2" operasyonunun 21 ve 22. dalgaları kapsamında ürdün ve kuveyt'teki abd askeri hedeflerine füze ve insansız hava araçlarıyla (i̇ha) saldırılar düzenlediğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Devrim Muhafızları Ordusu: Ürdün ve Kuveyt'te ABD üslerini hedef aldık</h3>
+                    <p>İran Devrim Muhafızları Ordusu, "Nasr 2" operasyonunun 21 ve 22. dalgaları kapsamında Ürdün ve Kuveyt'teki ABD askeri hedeflerine füze ve insansız hava araçlarıyla (İHA) saldırılar düzenlediğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-urdun-ve-kuveytte-abd-uslerini-hedef-aldik-951665.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            andrew ve tristan tate abd'de gözaltına alındı
+            tartışmalı sosyal medya ünlüsü andrew tate ve kardeşi tristan, i̇ngiliz makamlarının ikili hakkında 38 yeni suçlama yöneltmesinin ardından abd'de gözaltına alındı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Andrew ve Tristan Tate ABD'de gözaltına alındı</h3>
+                    <p>Tartışmalı sosyal medya ünlüsü Andrew Tate ve kardeşi Tristan, İngiliz makamlarının ikili hakkında 38 yeni suçlama yöneltmesinin ardından ABD'de gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8xnp8e8kv1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: muhsin yazıcıoğlu soruşturmasında sonuna kadar gidilecek
+            adalet bakanı akın gürlek, büyük birlik partisi'nin (bbp) eski lideri muhsin yazıcıoğlu'nun 2009'da hayatını kaybettiği helikopter kazasına dair yürütülen yeni soruşturmayla ilgili bir açıklama yaptı. dosyada gülen yapılanmasının "karanlık izlerinin de araştırıldığını" ifade etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Gürlek: Muhsin Yazıcıoğlu soruşturmasında sonuna kadar gidilecek</h3>
+                    <p>Adalet Bakanı Akın Gürlek, Büyük Birlik Partisi'nin (BBP) eski lideri Muhsin Yazıcıoğlu'nun 2009'da hayatını kaybettiği helikopter kazasına dair yürütülen yeni soruşturmayla ilgili bir açıklama yaptı. Dosyada Gülen yapılanmasının "karanlık izlerinin de araştırıldığını" ifade etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvge2zwq0e2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            andy burnham bugün i̇ngiltere başbakanı olarak ilk konuşmasını yapacak
+            andy burnham'ın 20 temmuz pazartesi günü i̇ngiltere'nin başkenti londra'daki başbakanlık konutu önünde yapacağı ilk konuşmasında insanlara "daha fazla nefes alma alanı" sağlayacağına söz vermesi bekleniyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Andy Burnham bugün İngiltere Başbakanı olarak ilk konuşmasını yapacak</h3>
+                    <p>Andy Burnham'ın 20 Temmuz Pazartesi günü İngiltere'nin başkenti Londra'daki başbakanlık konutu önünde yapacağı ilk konuşmasında insanlara "daha fazla nefes alma alanı" sağlayacağına söz vermesi bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgk41zke535o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇zmit belediye başkanı fatma kaplan hürriyet gözaltına alındı
+            i̇stanbul cumhuriyet başsavcılığı'nın yürüttüğü soruşturma kapsamında i̇zmit belediye başkanı fatma kaplan hürriyet ve eşi murat hürriyet dahil 31 kişi hakkında gözaltı kararı verildi. yöneltilen suçlamalar, 'suç işlemek amacıyla örgüt kurmak', 'rüşvet' ve 'ihaleye fesat karıştırmak' olarak duyuruldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İzmit Belediye Başkanı Fatma Kaplan Hürriyet gözaltına alındı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı'nın yürüttüğü soruşturma kapsamında İzmit Belediye Başkanı Fatma Kaplan Hürriyet ve eşi Murat Hürriyet dahil 31 kişi hakkında gözaltı kararı verildi. Yöneltilen suçlamalar, 'suç işlemek amacıyla örgüt kurmak', 'rüşvet' ve 'ihaleye fesat karıştırmak' olarak duyuruldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2dkl2pgyn0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            burhanettin duran: mavi vatan'daki haklarımızı korumaya devam edeceğiz
+            i̇letişim başkanı burhanettin duran, "türkiye; kuzey kıbrıs türk cumhuriyeti’nin egemen eşitliği ve eşit uluslararası statüsüne dayalı haklı davasını kararlılıkla desteklemeye, mavi vatan’daki hak ve menfaatlerini tavizsiz şekilde korumaya devam edecektir" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Burhanettin Duran: Mavi Vatan'daki haklarımızı korumaya devam edeceğiz</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, "Türkiye; Kuzey Kıbrıs Türk Cumhuriyeti’nin egemen eşitliği ve eşit uluslararası statüsüne dayalı haklı davasını kararlılıkla desteklemeye, Mavi Vatan’daki hak ve menfaatlerini tavizsiz şekilde korumaya devam edecektir" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/burhanettin-duran-mavi-vatandaki-haklarimizi-korumaya-devam-edecegiz-951672.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankarakahire hattı güçleniyor: yeni bir denklem kurulabilir
+            son dönemlerde türkiye-mısır ilişkilerinde gözle görülür bir dönüşüm var. i̇ki ülke ortak tatbikatlar yapıyor, savunma iş birliği anlaşması imzalıyor, üst düzey heyetler sürekli bir araya geliyor... tüm bunlara deniz yetki alanlarında izlenecek muhtemel yol haritası da eklendiğinde sürecin yeni bir gerçeklik yaratması gayet mümkün görünüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>AnkaraKahire hattı güçleniyor: Yeni bir denklem kurulabilir</h3>
+                    <p>Son dönemlerde Türkiye-Mısır ilişkilerinde gözle görülür bir dönüşüm var. İki ülke ortak tatbikatlar yapıyor, savunma iş birliği anlaşması imzalıyor, üst düzey heyetler sürekli bir araya geliyor... Tüm bunlara deniz yetki alanlarında izlenecek muhtemel yol haritası da eklendiğinde sürecin yeni bir gerçeklik yaratması gayet mümkün görünüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ankara-kahire-hatti-gucleniyor-yeni-bir-denklem-kurulabilir-951664.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            göcek'te yanan tekne battı
+            muğla'nın fethiye ilçesi göcek mahallesi'ndeki hamam koyu'nda 'princess alize' isimli charter teknede yangın çıktı. yangında 5 yolcu ile 3 personel tahliye edilirken tekne battı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Göcek'te yanan tekne battı</h3>
+                    <p>Muğla'nın Fethiye ilçesi Göcek Mahallesi'ndeki Hamam Koyu'nda 'Princess Alize' isimli charter teknede yangın çıktı. Yangında 5 yolcu ile 3 personel tahliye edilirken tekne battı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gocekte-yanan-tekne-batti-951662.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya, finalde arjantin'i 1-0 yenerek 2026 dünya kupası şampiyonu oldu
+            i̇spanya, 2026 dünya kupası finalinde 10 kişi kalan arjantin'in direncini ferran torres'in uzatmalarda attığı golle kırdı ve şampiyonluğa ulaştı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya, finalde Arjantin'i 1-0 yenerek 2026 Dünya Kupası şampiyonu oldu</h3>
+                    <p>İspanya, 2026 Dünya Kupası finalinde 10 kişi kalan Arjantin'in direncini Ferran Torres'in uzatmalarda attığı golle kırdı ve şampiyonluğa ulaştı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyr5jvnr88o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'acımı tiktok'ta paylaşmak hayatıma anlam katıyor'
+            kelsey mulcahy, nişanlısı joseph day'in 2022'deki ölümünün ardından yaşadığı acıyı tiktok üzerinden anlatıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Acımı TikTok'ta paylaşmak hayatıma anlam katıyor'</h3>
+                    <p>Kelsey Mulcahy, nişanlısı Joseph Day'in 2022'deki ölümünün ardından yaşadığı acıyı TikTok üzerinden anlatıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1l1gr61r5zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'nin dünya kupası'ndan elenmesi aile içi şiddeti nasıl etkiledi?
+            lancaster üniversitesi'nin araştırmasına göre, i̇ngiltere'nin maç yaptığı zamanlarda aile içi şiddet %26, maç kaybettiği zamanlarda ise %38 oranında artıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'nin Dünya Kupası'ndan elenmesi aile içi şiddeti nasıl etkiledi?</h3>
+                    <p>Lancaster Üniversitesi'nin araştırmasına göre, İngiltere'nin maç yaptığı zamanlarda aile içi şiddet %26, maç kaybettiği zamanlarda ise %38 oranında artıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9q9v219zqvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran devrim muhafızları: hürmüz boğazı'ndan geçmeye çalışan iki petrol tankeri patladı
+            i̇ran devrim muhafızları ordusu, hürmüz boğazı'nda güvenli olmayan rotadan geçmeye çalışan iki petrol tankerinin "patladığını" açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İran Devrim Muhafızları: Hürmüz Boğazı'ndan geçmeye çalışan iki petrol tankeri patladı</h3>
+                    <p>İran Devrim Muhafızları Ordusu, Hürmüz Boğazı'nda güvenli olmayan rotadan geçmeye çalışan iki petrol tankerinin "patladığını" açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-hurmuz-bogazindan-gecmeye-calisan-iki-petrol-tankeri-patladi-951663.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            aselsan'ın yarım asırlık teknoloji yolculuğu
+            türk savunma sanayiinin öncü kuruluşu aselsan, kuruluşundan bugüne uzanan 50 yıllık teknoloji yolculuğunu ve türkiye’nin savunmadaki bağımsızlık mücadelesini "güvenden gurura" adlı belgeselle kamuoyuyla paylaştı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ASELSAN'ın yarım asırlık teknoloji yolculuğu</h3>
+                    <p>Türk savunma sanayiinin öncü kuruluşu ASELSAN, kuruluşundan bugüne uzanan 50 yıllık teknoloji yolculuğunu ve Türkiye’nin savunmadaki bağımsızlık mücadelesini "Güvenden Gurura" adlı belgeselle kamuoyuyla paylaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/aselsanin-yarim-asirlik-teknoloji-yolculugu-951669.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tarımsal girdi fiyat endeksi mayısta arttı
+            tarımsal girdi fiyat endeksi (tarım-gfe), mayısta yıllık bazda yüzde 36,65, aylık bazda yüzde 0,44 artış gösterdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Tarımsal girdi fiyat endeksi mayısta arttı</h3>
+                    <p>Tarımsal girdi fiyat endeksi (Tarım-GFE), mayısta yıllık bazda yüzde 36,65, aylık bazda yüzde 0,44 artış gösterdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tarimsal-girdi-fiyat-endeksi-mayista-artti-951670.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            sabiha gökçen havalimanı'ndan rekor
+            sabiha gökçen uluslararası havalimanı'nda, tarihinin en yüksek günlük yolcu ve uçuş sayısına dün ulaşıldı. dün, 171 bin 460 yolcu havalimanında ağırlanırken 915 uçuş gerçekleşti.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Sabiha Gökçen Havalimanı'ndan rekor</h3>
+                    <p>Sabiha Gökçen Uluslararası Havalimanı'nda, tarihinin en yüksek günlük yolcu ve uçuş sayısına dün ulaşıldı. Dün, 171 bin 460 yolcu havalimanında ağırlanırken 915 uçuş gerçekleşti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/sabiha-gokcen-havalimanindan-rekor-951668.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
