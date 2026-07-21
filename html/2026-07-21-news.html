@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-21 07:34</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/tarim-ve-orman-bakanligi-turkiyede-cekirge-istilasi-yok-951753.html" target="_blank">
+                <strong>Tarım ve Orman Bakanlığı: Türkiye'de çekirge istilası yok</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqj1kjeq8x5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Erdoğan ve Trump: Yakın ilişkiyi şekillendiren dinamikler neler?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/guvensiz-urunlere-6-ayda-86-milyon-lira-ceza-kesildi-951754.html" target="_blank">
+                <strong>Güvensiz ürünlere 6 ayda 8,6 milyon lira ceza kesildi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c4g3zn1kdgpo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Oğuzhan Uğur tutuklandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c3ek8gvgw1do?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Dünya Kupası 64 takımla nasıl olabilir?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            tarım ve orman bakanlığı: türkiye'de çekirge istilası yok
+            tarım ve orman bakanlığı, yapılan inceleme ve takipler sonucunda marmara bölgesi'nde tarımsal üretimi tehdit eden herhangi bir çekirge istilası veya ekonomik zarar oluşturan bir çekirge popülasyonunun tespit edilemediğini açıkladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Tarım ve Orman Bakanlığı: Türkiye'de çekirge istilası yok</h3>
+                    <p>Tarım ve Orman Bakanlığı, yapılan inceleme ve takipler sonucunda Marmara Bölgesi'nde tarımsal üretimi tehdit eden herhangi bir çekirge istilası veya ekonomik zarar oluşturan bir çekirge popülasyonunun tespit edilemediğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tarim-ve-orman-bakanligi-turkiyede-cekirge-istilasi-yok-951753.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güvensiz ürünlere 6 ayda 8,6 milyon lira ceza kesildi
+            ticaret bakanlığı, bu yılın ilk yarısında 4 bin 704 firmada denetim ve mevzuata uyum konusunda bilgilendirme faaliyetlerinin gerçekleştirildiğini, mevzuata aykırı olduğu tespit edilen ürünleri arz edenlere 8,6 milyon lira idari para cezası kesildiğini duyurdu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Güvensiz ürünlere 6 ayda 8,6 milyon lira ceza kesildi</h3>
+                    <p>Ticaret Bakanlığı, bu yılın ilk yarısında 4 bin 704 firmada denetim ve mevzuata uyum konusunda bilgilendirme faaliyetlerinin gerçekleştirildiğini, mevzuata aykırı olduğu tespit edilen ürünleri arz edenlere 8,6 milyon lira idari para cezası kesildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/guvensiz-urunlere-6-ayda-86-milyon-lira-ceza-kesildi-951754.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 88,32 dolardan işlem görüyor
+            brent petrolün varili, uluslararası vadeli piyasalarda 88,32 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 88,32 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili, uluslararası vadeli piyasalarda 88,32 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-8832-dolardan-islem-goruyor-951755.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            erdoğan ve trump: yakın ilişkiyi şekillendiren dinamikler neler?
+            beyaz saray sözcüsü anna kelly, bbc türkçe'ye yaptığı yazılı açıklamada başkan trump'ın, "bölgede muhteşem bir ortak olan" türkiye cumhurbaşkanı recep tayyip erdoğan ile "harika bir ilişkiye sahip" olduğunu söyledi. peki iki liderin son dönemde daha fazla dile getirdiği bu yakınlaşmanın arkasında ne tür dinamikler var?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Erdoğan ve Trump: Yakın ilişkiyi şekillendiren dinamikler neler?</h3>
+                    <p>Beyaz Saray Sözcüsü Anna Kelly, BBC Türkçe'ye yaptığı yazılı açıklamada Başkan Trump'ın, "bölgede muhteşem bir ortak olan" Türkiye Cumhurbaşkanı Recep Tayyip Erdoğan ile "harika bir ilişkiye sahip" olduğunu söyledi. Peki iki liderin son dönemde daha fazla dile getirdiği bu yakınlaşmanın arkasında ne tür dinamikler var?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqj1kjeq8x5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            oğuzhan uğur tutuklandı
+            ahbap derneği'ne yönelik soruşturma kapsamında gözaltına alınan oğuzhan uğur'un da aralarında bulunduğu dokuz kişi "hizmet nedeniyle güveni kötüye kullanma" ve "suçtan kaynaklanan malvarlığı değerlerini aklama" suçlarından tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Oğuzhan Uğur tutuklandı</h3>
+                    <p>Ahbap Derneği'ne yönelik soruşturma kapsamında gözaltına alınan Oğuzhan Uğur'un da aralarında bulunduğu dokuz kişi "hizmet nedeniyle güveni kötüye kullanma" ve "suçtan kaynaklanan malvarlığı değerlerini aklama" suçlarından tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g3zn1kdgpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası 64 takımla nasıl olabilir?
+            gianni infantino'nun fifa'nın yönetimindeki 10 yıldan öğrendiğimiz bir şey varsa, o da daha fazlasının daha iyi demek olduğudur. infantino rotayı, 64 takımlı bir dünya kupası'na doğru kırmış gibi görünüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya Kupası 64 takımla nasıl olabilir?</h3>
+                    <p>Gianni Infantino'nun FIFA'nın yönetimindeki 10 yıldan öğrendiğimiz bir şey varsa, o da daha fazlasının daha iyi demek olduğudur. Infantino rotayı, 64 takımlı bir Dünya Kupası'na doğru kırmış gibi görünüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3ek8gvgw1do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            andy burnham i̇ngiltere başbakanı oldu, kabinede kimler var?
+            andy burnham, kral iii. charles ile yaptığı görüşmenin ardından i̇ngiltere'nin 59'uncu ve son 10 yıldaki yedinci başbakanı olarak göreve başladı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Andy Burnham İngiltere başbakanı oldu, kabinede kimler var?</h3>
+                    <p>Andy Burnham, Kral III. Charles ile yaptığı görüşmenin ardından İngiltere'nin 59'uncu ve son 10 yıldaki yedinci başbakanı olarak göreve başladı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgk41zke535o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kesimhanelerde kamera zorunluluğu 1 ocak 2027'de başlıyor
+            canlı hayvanlar, karkaslar, yan ürünler ile personel hareketlerinin izlenmesi amacıyla hayvan bekleme ve kesim yeri ile muamelenin yapıldığı alanlarda en az bir ay kayıt yapabilen görüntüleme sistemleri kurulması gerekecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kesimhanelerde kamera zorunluluğu 1 Ocak 2027'de başlıyor</h3>
+                    <p>Canlı hayvanlar, karkaslar, yan ürünler ile personel hareketlerinin izlenmesi amacıyla hayvan bekleme ve kesim yeri ile muamelenin yapıldığı alanlarda en az bir ay kayıt yapabilen görüntüleme sistemleri kurulması gerekecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/cevre/kesimhanelerde-kamera-zorunlulugu-1-ocak-2027de-basliyor-951750.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında 15 kişi gözaltına alındı
+            altı yıldır kayıp olan üniversite öğrencisi gülistan doku ile ilgili soruşturmada eski tunceli valisi tuncay sonel'in eşi h.s.'nin de aralarında olduğu 15 kişi gözaltına alındı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gülistan Doku soruşturmasında 15 kişi gözaltına alındı</h3>
+                    <p>Altı yıldır kayıp olan üniversite öğrencisi Gülistan Doku ile ilgili soruşturmada eski Tunceli Valisi Tuncay Sonel'in eşi H.S.'nin de aralarında olduğu 15 kişi gözaltına alındı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn5n4x6dxqro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avustralya'da nadir görülen tek yumurta dördüzleri dünyaya geldi
+            avustralya’da, doğal yollarla oluşan ve aynı plasentayı paylaşan tek yumurta dördüzleri, yüksek riskli hamileliğin ardından sağlıklı şekilde dünyaya geldi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Avustralya'da nadir görülen tek yumurta dördüzleri dünyaya geldi</h3>
+                    <p>Avustralya’da, doğal yollarla oluşan ve aynı plasentayı paylaşan tek yumurta dördüzleri, yüksek riskli hamileliğin ardından sağlıklı şekilde dünyaya geldi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c7vg322eveqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya, finalde arjantin'i 1-0 yenerek 2026 dünya kupası şampiyonu oldu
+            i̇spanya, 2026 dünya kupası finalinde 10 kişi kalan arjantin'in direncini ferran torres'in uzatmalarda attığı golle kırdı ve şampiyonluğa ulaştı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya, finalde Arjantin'i 1-0 yenerek 2026 Dünya Kupası şampiyonu oldu</h3>
+                    <p>İspanya, 2026 Dünya Kupası finalinde 10 kişi kalan Arjantin'in direncini Ferran Torres'in uzatmalarda attığı golle kırdı ve şampiyonluğa ulaştı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyr5jvnr88o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya kupası finali devre arası gösterisinde neler yaşandı?
+            pop müziğin süperstarları madonna ve justin bieber, 2026 dünya kupası'nın devre arası gösterisinde stadyumu dolduran binlerce seyirciye unutulmaz anlar yaşattı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya Kupası finali devre arası gösterisinde neler yaşandı?</h3>
+                    <p>Pop müziğin süperstarları Madonna ve Justin Bieber, 2026 Dünya Kupası'nın devre arası gösterisinde stadyumu dolduran binlerce seyirciye unutulmaz anlar yaşattı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9d8yy34341o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp silivri i̇lçe başkanı doruk bulut gözaltına alındı
+            silivri belediyesine yönelik soruşturma kapsamında, chp silivri i̇lçe başkanı doruk bulut gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP Silivri İlçe Başkanı Doruk Bulut gözaltına alındı</h3>
+                    <p>Silivri Belediyesine yönelik soruşturma kapsamında, CHP Silivri İlçe Başkanı Doruk Bulut gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/chp-silivri-ilce-baskani-doruk-bulut-gozaltina-alindi-951758.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kendilerini banka görevlisi olarak tanıtarak dolandırıcılık yaptılar
+            i̇stanbul merkezli 7 ilde düzenlenen eş zamanlı operasyonda, kendilerini banka görevlisi olarak tanıtıp dolandırıcılık yaptıkları iddia edilen 28 şüpheliden 12'si gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kendilerini banka görevlisi olarak tanıtarak dolandırıcılık yaptılar</h3>
+                    <p>İstanbul merkezli 7 ilde düzenlenen eş zamanlı operasyonda, kendilerini banka görevlisi olarak tanıtıp dolandırıcılık yaptıkları iddia edilen 28 şüpheliden 12'si gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kendilerini-banka-gorevlisi-olarak-tanitarak-dolandiricilik-yaptilar-951757.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gram altın güne yükselişle başladı
+            gram altın, güne yükselişle başlamasının ardından 6 bin 178 liradan işlem görüyor. çeyrek altın 10 bin 152 liradan, cumhuriyet altını 40 bin 452 liradan satılıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gram altın güne yükselişle başladı</h3>
+                    <p>Gram altın, güne yükselişle başlamasının ardından 6 bin 178 liradan işlem görüyor. Çeyrek altın 10 bin 152 liradan, cumhuriyet altını 40 bin 452 liradan satılıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gram-altin-gune-yukselisle-basladi-951756.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            beş yılda 16 şampiyonluk: i̇spanya futbolda nasıl bu kadar baskın hale geldi?
+            i̇spanya futbolu, son beş yılda 17 yaş altı takımdan büyükler seviyesine kadar 16 dünya ve avrupa şampiyonluğu kazandı. peki bunu nasıl başardılar?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beş yılda 16 şampiyonluk: İspanya futbolda nasıl bu kadar baskın hale geldi?</h3>
+                    <p>İspanya futbolu, son beş yılda 17 yaş altı takımdan büyükler seviyesine kadar 16 dünya ve Avrupa şampiyonluğu kazandı. Peki bunu nasıl başardılar?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2l4lv68llo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            faullerde arjantin, gol girişiminde i̇spanya: sayılarla fifa 2026 dünya kupası
+            abd, kanada ve meksika genelinde saha içinde ve dışında yaşananlara ilişkin sizi şaşırtabilecek turnuva bilgileri ve istatistiklerini derledik
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Faullerde Arjantin, gol girişiminde İspanya: Sayılarla FIFA 2026 Dünya Kupası</h3>
+                    <p>ABD, Kanada ve Meksika genelinde saha içinde ve dışında yaşananlara ilişkin sizi şaşırtabilecek turnuva bilgileri ve istatistiklerini derledik</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c70g4ygedvjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, kanada'dan ithal edilen bazı mallara yüzde 50 oranında gümrük vergisi getiriyor
+            abd yönetimi, kanada'nın amerikan ürünlerine yönelik "ayrımcı" uygulamalarda bulunduğunu öne sürerek, bu ülkeden ithal edilen bazı mallara yüzde 50 oranında gümrük vergisi uygulanacağını duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, Kanada'dan ithal edilen bazı mallara yüzde 50 oranında gümrük vergisi getiriyor</h3>
+                    <p>ABD yönetimi, Kanada'nın Amerikan ürünlerine yönelik "ayrımcı" uygulamalarda bulunduğunu öne sürerek, bu ülkeden ithal edilen bazı mallara yüzde 50 oranında gümrük vergisi uygulanacağını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-kanadadan-ithal-edilen-bazi-mallara-yuzde-50-oraninda-gumruk-vergisi-getiriyor-951752.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            venezuela'daki depremlerin bilançosu ağırlaşıyor: 5 bin 278 can kaybı
+            venezuela'da, 24 haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısı 5 bin 278'e çıktı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Venezuela'daki depremlerin bilançosu ağırlaşıyor: 5 bin 278 can kaybı</h3>
+                    <p>Venezuela'da, 24 Haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısı 5 bin 278'e çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerin-bilancosu-agirlasiyor-5-bin-278-can-kaybi-951749.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abdnin i̇ranın güney ve orta bölgelerine yönelik saldırıları gece boyunca sürdü
+            abd’nin i̇ran’ın güney ve orta bölgelerine yönelik saldırıları gece boyunca devam etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABDnin İranın güney ve orta bölgelerine yönelik saldırıları gece boyunca sürdü</h3>
+                    <p>ABD’nin İran’ın güney ve orta bölgelerine yönelik saldırıları gece boyunca devam etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdnin-iranin-guney-ve-orta-bolgelerine-yonelik-saldirilari-gece-boyunca-surdu-951751.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
