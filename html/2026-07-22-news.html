@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-22 07:36</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c935gy0rd2vo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD Savunma Bakanı: 'İran savaşı şu ana kadar ABD'ye 37,5 milyar dolara mal oldu'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Dilovası parfüm fabrikası yangını: 5 kişinin tutukluluğunun devamına karar verildi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-goktas-kimsenin-otekilestirilmesine-sessiz-kalmayacagiz-951848.html" target="_blank">
+                <strong>Bakan Göktaş: Kimsenin ötekileştirilmesine sessiz kalmayacağız</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/petrol-fiyatlari-arz-endisesiyle-yukselisini-surduruyor-951847.html" target="_blank">
+                <strong>Petrol fiyatları arz endişesiyle yükselişini sürdürüyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/rusyanin-guneyindeki-wildberries-lojistik-merkezlerine-iha-saldirisi-duzenlendi-951842.html" target="_blank">
+                <strong>Rusyanın güneyindeki Wildberries lojistik merkezlerine İHA saldırısı düzenlendi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd savunma bakanı: 'i̇ran savaşı şu ana kadar abd'ye 37,5 milyar dolara mal oldu'
+            abd savunma bakanı pete hegseth, i̇ran ile savaşın şu ana kadar abd'ye yaklaşık 37,5 milyar dolara (yaklaşık 1 trilyon 770 milyar tl) mal olduğunu söyledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD Savunma Bakanı: 'İran savaşı şu ana kadar ABD'ye 37,5 milyar dolara mal oldu'</h3>
+                    <p>ABD Savunma Bakanı Pete Hegseth, İran ile savaşın şu ana kadar ABD'ye yaklaşık 37,5 milyar dolara (yaklaşık 1 trilyon 770 milyar TL) mal olduğunu söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c935gy0rd2vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            petrol fiyatları arz endişesiyle yükselişini sürdürüyor
+            abd'de ham petrol stoklarının beklentilerin aksine artış göstermesine rağmen, orta doğu'daki sıcak çatışmalar piyasadaki yönü yukarıda tutuyor. hürmüz boğazı ve kızıldeniz'deki güvenlik riskleri nedeniyle brent petrol 93 dolar sınırına yaklaştı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Petrol fiyatları arz endişesiyle yükselişini sürdürüyor</h3>
+                    <p>ABD'de ham petrol stoklarının beklentilerin aksine artış göstermesine rağmen, Orta Doğu'daki sıcak çatışmalar piyasadaki yönü yukarıda tutuyor. Hürmüz Boğazı ve Kızıldeniz'deki güvenlik riskleri nedeniyle Brent petrol 93 dolar sınırına yaklaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/petrol-fiyatlari-arz-endisesiyle-yukselisini-surduruyor-951847.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusyanın güneyindeki wildberries lojistik merkezlerine i̇ha saldırısı düzenlendi
+            rusya’nın güneyindeki krasnodar ve nevinnomıssk şehirlerinde e-ticaret platformu wildberries’e ait lojistik merkezlerine düzenlenen insansız hava aracı (i̇ha) saldırılarında 10 kişinin yaralandığı duyuruldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Rusyanın güneyindeki Wildberries lojistik merkezlerine İHA saldırısı düzenlendi</h3>
+                    <p>Rusya’nın güneyindeki Krasnodar ve Nevinnomıssk şehirlerinde e-ticaret platformu Wildberries’e ait lojistik merkezlerine düzenlenen insansız hava aracı (İHA) saldırılarında 10 kişinin yaralandığı duyuruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusyanin-guneyindeki-wildberries-lojistik-merkezlerine-iha-saldirisi-duzenlendi-951842.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bazı kentlerde görülen çekirge yoğunluğu ne anlama geliyor?
+            özellikle trakya bölgesi ve i̇stanbul genelinde boyutları 12 santimetreye ulaşan ergin çekirge yoğunluğu arttı. uzmanlar ise tarımsal üretimi olumsuz etkileyecek bir çekirge artışının olmadığını söylüyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bazı kentlerde görülen çekirge yoğunluğu ne anlama geliyor?</h3>
+                    <p>Özellikle Trakya bölgesi ve İstanbul genelinde boyutları 12 santimetreye ulaşan ergin çekirge yoğunluğu arttı. Uzmanlar ise tarımsal üretimi olumsuz etkileyecek bir çekirge artışının olmadığını söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c87n8elje8zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küresel piyasalarda jeopolitik riskler teknoloji iyimserliğiyle dengeleniyor
+            orta doğu'daki jeopolitik belirsizliklere karşın hızlanan bilanço sezonunda teknoloji şirketlerine yönelik iyimserlikler, küresel piyasalardaki toparlanmayı destekliyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Küresel piyasalarda jeopolitik riskler teknoloji iyimserliğiyle dengeleniyor</h3>
+                    <p>Orta Doğu'daki jeopolitik belirsizliklere karşın hızlanan bilanço sezonunda teknoloji şirketlerine yönelik iyimserlikler, küresel piyasalardaki toparlanmayı destekliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kuresel-piyasalarda-jeopolitik-riskler-teknoloji-iyimserligiyle-dengeleniyor-951843.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kapasite kullanım oranı temmuzda yüzde 73,9 oldu
+            i̇malat sanayisi genelinde mevsimsel etkilerden arındırılmamış kapasite kullanım oranı, temmuzda geçen aya göre 0,6 puan azalarak yüzde 73,9 oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Kapasite kullanım oranı temmuzda yüzde 73,9 oldu</h3>
+                    <p>İmalat sanayisi genelinde mevsimsel etkilerden arındırılmamış kapasite kullanım oranı, temmuzda geçen aya göre 0,6 puan azalarak yüzde 73,9 oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kapasite-kullanim-orani-temmuzda-yuzde-739-oldu-951851.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bist 100 endeksi güne yükselişle başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,26 yükselişle 14.010,38 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>BIST 100 endeksi güne yükselişle başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,26 yükselişle 14.010,38 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/bist-100-endeksi-gune-yukselisle-basladi-951850.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            dilovası parfüm fabrikası yangını: 5 kişinin tutukluluğunun devamına karar verildi
+            kocaeli'nin dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin davanın üçüncü duruşması 21 temmuz'da kandıra cezaevi'nde görüldü. mahkeme beş sanığın tutukluluğunun devamına karar verdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Dilovası parfüm fabrikası yangını: 5 kişinin tutukluluğunun devamına karar verildi</h3>
+                    <p>Kocaeli'nin Dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin davanın üçüncü duruşması 21 Temmuz'da Kandıra Cezaevi'nde görüldü. Mahkeme beş sanığın tutukluluğunun devamına karar verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            araştırma: büyük insansı maymunlar huzuru korumak için öpüşüp sarılıyorlar
+            bilim insanları insana en yakın maymun akrabalarının davranışlarını inceledi ve buna göre, stresli olaylardan önce dokunmak, kucaklaşmak ve öpüşmek, güven oluşturmanın eski bir yolu olabilir.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Araştırma: Büyük insansı maymunlar huzuru korumak için öpüşüp sarılıyorlar</h3>
+                    <p>Bilim insanları insana en yakın maymun akrabalarının davranışlarını inceledi ve buna göre, stresli olaylardan önce dokunmak, kucaklaşmak ve öpüşmek, güven oluşturmanın eski bir yolu olabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gxwyd3jy4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            venezuela'daki depremlerde can kaybı 5 bin 346'ya yükseldi
+            venezuela'da 24 haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısının 5 bin 346'ya yükseldiği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Venezuela'daki depremlerde can kaybı 5 bin 346'ya yükseldi</h3>
+                    <p>Venezuela'da 24 Haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısının 5 bin 346'ya yükseldiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-can-kaybi-5-bin-346ya-yukseldi-951846.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kurtulmuş tura çıktı, çerçeve yasada hedef netleşti: 'teklif meclis kapanmadan yasalaşacak'
+            dem parti i̇mralı heyeti’nin pazartesi günü pkk lideri abdullah öcalan'la görüşmesinin ardından tbmm başkanı numan kurtulmuş, siyasi parti liderlerini ziyaret turuna başladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kurtulmuş tura çıktı, çerçeve yasada hedef netleşti: 'Teklif Meclis kapanmadan yasalaşacak'</h3>
+                    <p>DEM Parti İmralı Heyeti’nin pazartesi günü PKK lideri Abdullah Öcalan'la görüşmesinin ardından TBMM Başkanı Numan Kurtulmuş, siyasi parti liderlerini ziyaret turuna başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr596vd5n6no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran hürmüz boğazı konusunda neden bu kadar büyük risk alıyor?
+            i̇ran’ın liderlerinin önündeki seçeneklerin hiçbiri, abd ile çatışma sürerken zafere giden net bir yol sunmuyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Hürmüz Boğazı konusunda neden bu kadar büyük risk alıyor?</h3>
+                    <p>İran’ın liderlerinin önündeki seçeneklerin hiçbiri, ABD ile çatışma sürerken zafere giden net bir yol sunmuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9w0lxvkw5wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ordusu, i̇ran'a yönelik 11. saldırı dalgasını tamamladığını duyurdu
+            abd merkez kuvvetler komutanlığı (centcom), i̇ran'ın hürmüz boğazı'nda "ticari gemileri tehdit etme kabiliyetini zayıflatmayı amaçlayan" 11. saldırı dalgasını tamamladığını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ordusu, İran'a yönelik 11. saldırı dalgasını tamamladığını duyurdu</h3>
+                    <p>ABD Merkez Kuvvetler Komutanlığı (CENTCOM), İran'ın Hürmüz Boğazı'nda "ticari gemileri tehdit etme kabiliyetini zayıflatmayı amaçlayan" 11. saldırı dalgasını tamamladığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-ordusu-irana-yonelik-11-saldiri-dalgasini-tamamladigini-duyurdu-951845.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yanıltıcı reklamlara yaklaşık 185 milyon lira ceza kesildi
+            reklam kurulu, yanıltıcı reklamlar ve haksız ticari uygulamalara karşı 7 ayda yaklaşık 21 bin dosyayı karara bağlarken 185 milyon liranın üzerinde idari para cezası uygulanmasını kararlaştırdı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yanıltıcı reklamlara yaklaşık 185 milyon lira ceza kesildi</h3>
+                    <p>Reklam Kurulu, yanıltıcı reklamlar ve haksız ticari uygulamalara karşı 7 ayda yaklaşık 21 bin dosyayı karara bağlarken 185 milyon liranın üzerinde idari para cezası uygulanmasını kararlaştırdı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yaniltici-reklamlara-yaklasik-185-milyon-lira-ceza-kesildi-951844.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan göktaş: kimsenin ötekileştirilmesine sessiz kalmayacağız
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, evlatlarının mezuniyet sevincini paylaşan annelerin ve ailelerin kılık kıyafetleri üzerinden hedef alınmasına tepki göstererek, "kimsenin inancı, kimliği, kıyafeti ya da yaşam tarzı nedeniyle küçümsenmesine, hedef gösterilmesine ve ötekileştirilmesine sessiz kalmayacağız" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Göktaş: Kimsenin ötekileştirilmesine sessiz kalmayacağız</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, evlatlarının mezuniyet sevincini paylaşan annelerin ve ailelerin kılık kıyafetleri üzerinden hedef alınmasına tepki göstererek, "Kimsenin inancı, kimliği, kıyafeti ya da yaşam tarzı nedeniyle küçümsenmesine, hedef gösterilmesine ve ötekileştirilmesine sessiz kalmayacağız" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-goktas-kimsenin-otekilestirilmesine-sessiz-kalmayacagiz-951848.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özgür özel'den chp'ye veda: 'yeni partimizi kuruyoruz'
+            özgür özel, kendisi dahil 83 milletvekilinin bulunduğu grup toplantısında cumhuriyet halk partisi'ne veda konuşması yaptı ve "yeni partimizi kuruyoruz" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özgür Özel'den CHP'ye veda: 'Yeni partimizi kuruyoruz'</h3>
+                    <p>Özgür Özel, kendisi dahil 83 milletvekilinin bulunduğu grup toplantısında Cumhuriyet Halk Partisi'ne veda konuşması yaptı ve "Yeni partimizi kuruyoruz" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2glz2n6v5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yıldızlararası uzayda ahudududa bulunan şeker tespit edildi
+            bilim insanları uzayda, ahudududa ve bazı bronzlaştırıcı losyonlarda da bulunan bir şeker türü keşfetti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yıldızlararası uzayda ahudududa bulunan şeker tespit edildi</h3>
+                    <p>Bilim insanları uzayda, ahudududa ve bazı bronzlaştırıcı losyonlarda da bulunan bir şeker türü keşfetti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg6z3gd978o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nato zirvesi öncesi tutuklanan tema gönüllülerine tahliye
+            ankara'da 7-8 temmuz'da düzenlenen nato zirvesi öncesinde tutuklanan doç. dr. emel memiş dahil yedi tema vakfı gönüllüsü ile umut-sen sözcüsü burcu arıkan hakkında tahliye kararı verildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>NATO Zirvesi öncesi tutuklanan TEMA gönüllülerine tahliye</h3>
+                    <p>Ankara'da 7-8 Temmuz'da düzenlenen NATO Zirvesi öncesinde tutuklanan Doç. Dr. Emel Memiş dahil yedi TEMA Vakfı gönüllüsü ile Umut-Sen Sözcüsü Burcu Arıkan hakkında tahliye kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyd855ee7po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de hava sıcaklıkları mevsim normallerinin üzerinde seyredecek
+            meteoroloji genel müdürlüğü'ne (mgm) göre türkiye'de hava sıcaklıkları mevsim normallerinin üzerinde seyretmeye devam ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de hava sıcaklıkları mevsim normallerinin üzerinde seyredecek</h3>
+                    <p>Meteoroloji Genel Müdürlüğü'ne (MGM) göre Türkiye'de hava sıcaklıkları mevsim normallerinin üzerinde seyretmeye devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgje7e302lpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            zehir tacirlerine dağıtılacak uyuşturucular ele geçirildi
+            i̇zmir'in karşıyaka ilçesinde "torbacı" olarak adlandırılan sokak satıcılarına dağıtımı yapılacağı belirlenen çok miktarda uyuşturucu ele geçirildi, şüpheli tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Zehir tacirlerine dağıtılacak uyuşturucular ele geçirildi</h3>
+                    <p>İzmir'in Karşıyaka ilçesinde "torbacı" olarak adlandırılan sokak satıcılarına dağıtımı yapılacağı belirlenen çok miktarda uyuşturucu ele geçirildi, şüpheli tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/zehir-tacirlerine-dagitilacak-uyusturucular-ele-gecirildi-951849.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
