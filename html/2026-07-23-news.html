@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-23 07:34</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/piyasalarda-gozler-merkez-bankalarinin-faiz-kararlarinda-951961.html" target="_blank">
+                <strong>Piyasalarda gözler merkez bankalarının faiz kararlarında</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9q9jvwdxnwo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD, Suudi Arabistan ile tarihi bir nükleer anlaşma imzaladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/czrjlvy1lvvo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>New York Belediye Başkanı Mamdani, Netanyahu'yu tutuklama yetkisinin olmadığını söyledi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c05qp534dddo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Merkez Bankası faiz kararını açıklayacak, beklentiler ne yönde?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynanin-odessa-limanina-saldiri-duzenledik-951970.html" target="_blank">
+                <strong>Rusya: Ukraynanın Odessa Limanına saldırı düzenledik</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            piyasalarda gözler merkez bankalarının faiz kararlarında
+            küresel piyasalarda, teknoloji ve yapay zeka odaklı büyüme temasına yönelik olumlu bakış açısının sürmesi risk iştahını desteklerken, gözler yurt içinde merkez bankasının yurt dışında ise avrupa merkez bankasının alacağı para politikası kararlarına çevrildi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Piyasalarda gözler merkez bankalarının faiz kararlarında</h3>
+                    <p>Küresel piyasalarda, teknoloji ve yapay zeka odaklı büyüme temasına yönelik olumlu bakış açısının sürmesi risk iştahını desteklerken, gözler yurt içinde Merkez Bankasının yurt dışında ise Avrupa Merkez Bankasının alacağı para politikası kararlarına çevrildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/piyasalarda-gozler-merkez-bankalarinin-faiz-kararlarinda-951961.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            merkez bankası faiz kararını açıklayacak, beklentiler ne yönde?
+            türkiye cumhuriyet merkez bankası (tcmb) para politikası kurulu (ppk) yılın 5. faiz kararını 23 temmuz perşembe günü yapacağı toplantıda verecek. banka ocak ayında faizi % 38'den %37'ye indirmiş ve bundan sonraki toplantılarda faizi değiştirmemişti.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Merkez Bankası faiz kararını açıklayacak, beklentiler ne yönde?</h3>
+                    <p>Türkiye Cumhuriyet Merkez Bankası (TCMB) Para Politikası Kurulu (PPK) yılın 5. faiz kararını 23 Temmuz Perşembe günü yapacağı toplantıda verecek. Banka ocak ayında faizi % 38'den %37'ye indirmiş ve bundan sonraki toplantılarda faizi değiştirmemişti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c05qp534dddo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 96,64 dolardan işlem görüyor
+            brent petrolün varili, uluslararası vadeli piyasalarda 96,64 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 96,64 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili, uluslararası vadeli piyasalarda 96,64 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-9664-dolardan-islem-goruyor-951965.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gümrüklerde yaklaşık 63 milyar liralık kaçakçılık engellendi
+            ticaret bakanlığı gümrük muhafaza ekipleri, bu yılın ilk yarısında gümrüklerde yaptığı 3 bin 433 operasyonda yaklaşık 63 milyar liralık kaçak eşyaya el koydu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Gümrüklerde yaklaşık 63 milyar liralık kaçakçılık engellendi</h3>
+                    <p>Ticaret Bakanlığı Gümrük Muhafaza ekipleri, bu yılın ilk yarısında gümrüklerde yaptığı 3 bin 433 operasyonda yaklaşık 63 milyar liralık kaçak eşyaya el koydu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gumruklerde-yaklasik-63-milyar-liralik-kacakcilik-engellendi-951964.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa güne 14.150,52 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,08 yükselişle 14.150,52 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa güne 14.150,52 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,08 yükselişle 14.150,52 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gune-1415052-puandan-basladi-951969.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd, suudi arabistan ile tarihi bir nükleer anlaşma imzaladı
+            abd, suudi arabistan'ın sivil bir nükleer program geliştirmesine imkan tanıyacağı bildirilen tarihi bir anlaşma imzaladı. anlaşma, abd enerji bakanlığı'na göre suudi arabistan'ın nükleer enerji programında amerikan şirketlerine "geniş erişim" sağlayacak "barışçıl nükleer işbirliği anlaşması" olarak tanımlanıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, Suudi Arabistan ile tarihi bir nükleer anlaşma imzaladı</h3>
+                    <p>ABD, Suudi Arabistan'ın sivil bir nükleer program geliştirmesine imkan tanıyacağı bildirilen tarihi bir anlaşma imzaladı. Anlaşma, ABD Enerji Bakanlığı'na göre Suudi Arabistan'ın nükleer enerji programında Amerikan şirketlerine "geniş erişim" sağlayacak "barışçıl nükleer işbirliği anlaşması" olarak tanımlanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9q9jvwdxnwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: ukraynanın odessa limanına saldırı düzenledik
+            rusya savunma bakanlığı, ukrayna’nın askeri amaçlarla kullanılan odessa limanı’na yönelik saldırı düzenlediklerini bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Ukraynanın Odessa Limanına saldırı düzenledik</h3>
+                    <p>Rusya Savunma Bakanlığı, Ukrayna’nın askeri amaçlarla kullanılan Odessa Limanı’na yönelik saldırı düzenlediklerini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynanin-odessa-limanina-saldiri-duzenledik-951970.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çin'de köpeklerin öldürülmesiyle ilgili tartışmada neler biliniyor?
+            çin’de bir sokak köpeği ile yavrularının vahşice öldürülmesi, sansür girişimlerine rağmen ülke sınırlarını aşan bir hayvan hakları kampanyasına dönüştü.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Çin'de köpeklerin öldürülmesiyle ilgili tartışmada neler biliniyor?</h3>
+                    <p>Çin’de bir sokak köpeği ile yavrularının vahşice öldürülmesi, sansür girişimlerine rağmen ülke sınırlarını aşan bir hayvan hakları kampanyasına dönüştü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cddj901vlvno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            husiler, suudi petrol tankerlerine saldırdıklarını açıkladı
+            yemen'deki husiler, abd'nin i̇ran'a yönelik üst üste 12'nci gece saldırılarını başlatmasının ardından kızıldeniz'de iki suudi petrol tankerine saldırdıklarını açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Husiler, Suudi petrol tankerlerine saldırdıklarını açıkladı</h3>
+                    <p>Yemen'deki Husiler, ABD'nin İran'a yönelik üst üste 12'nci gece saldırılarını başlatmasının ardından Kızıldeniz'de iki Suudi petrol tankerine saldırdıklarını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c935gy0rd2vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            new york belediye başkanı mamdani, netanyahu'yu tutuklama yetkisinin olmadığını söyledi
+            new york belediye başkanı zohran mamdani, 22 temmuz'da i̇srail başbakanı binyamin netanyahu'nun "savaş suçlusu" olduğunu söylediği bir video yayınladı. mamdani daha önce verdiği bir röportajda netanyahu'nın new york'a gelirse tutuklayacağına söz vermişti. ancak videoda bunu yapacak yetkisinin olmadığını söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>New York Belediye Başkanı Mamdani, Netanyahu'yu tutuklama yetkisinin olmadığını söyledi</h3>
+                    <p>New York Belediye Başkanı Zohran Mamdani, 22 Temmuz'da İsrail Başbakanı Binyamin Netanyahu'nun "savaş suçlusu" olduğunu söylediği bir video yayınladı. Mamdani daha önce verdiği bir röportajda Netanyahu'nın New York'a gelirse tutuklayacağına söz vermişti. Ancak videoda bunu yapacak yetkisinin olmadığını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/czrjlvy1lvvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇zmit belediye başkanı fatma kaplan hürriyet adliyeye sevk edildi
+            i̇stanbul cumhuriyet başsavcılığı'nın yürüttüğü soruşturma kapsamında i̇zmit belediye başkanı fatma kaplan hürriyet ve eşi murat hürriyet dahil 31 kişi hakkında gözaltı kararı verildi. yöneltilen suçlamalar, 'suç işlemek amacıyla örgüt kurmak', 'rüşvet' ve 'ihaleye fesat karıştırmak' olarak duyuruldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İzmit Belediye Başkanı Fatma Kaplan Hürriyet adliyeye sevk edildi</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı'nın yürüttüğü soruşturma kapsamında İzmit Belediye Başkanı Fatma Kaplan Hürriyet ve eşi Murat Hürriyet dahil 31 kişi hakkında gözaltı kararı verildi. Yöneltilen suçlamalar, 'suç işlemek amacıyla örgüt kurmak', 'rüşvet' ve 'ihaleye fesat karıştırmak' olarak duyuruldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2dkl2pgyn0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            susuz kalmanızı önleyebilecek, %90'dan fazlası su olan 8 besin
+            yeterince su içmekte zorlanıyor musunuz? salatalık, karpuz, çilek ve marulun %90'dan fazla sudur ve vücudun su ihtiyacını karşılayabilir. beslenme uzmanları aslında ne kadar sıvıya ihtiyacımız olduğunu ve yiyeceklerin de içecekler kadar önemli olduğunu açıklıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Susuz kalmanızı önleyebilecek, %90'dan fazlası su olan 8 besin</h3>
+                    <p>Yeterince su içmekte zorlanıyor musunuz? Salatalık, karpuz, çilek ve marulun %90'dan fazla sudur ve vücudun su ihtiyacını karşılayabilir. Beslenme uzmanları aslında ne kadar sıvıya ihtiyacımız olduğunu ve yiyeceklerin de içecekler kadar önemli olduğunu açıklıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgxe97451jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yedi soruda özgür özel'in kuracağı 'yeni parti': yol haritasında neler var?
+            özgür özel'in 21 temmuz salı günü tbmm'de yaptığı ve "veda konuşması" olarak yorumlanan son chp grup toplantısının ardından gözler yeni siyasi oluşuma çevrildi. 'yeni parti' ile ilgili merak edilen soruları ve yanıtları derledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yedi soruda Özgür Özel'in kuracağı 'Yeni Parti': Yol haritasında neler var?</h3>
+                    <p>Özgür Özel'in 21 Temmuz Salı günü TBMM'de yaptığı ve "veda konuşması" olarak yorumlanan son CHP grup toplantısının ardından gözler yeni siyasi oluşuma çevrildi. 'Yeni Parti' ile ilgili merak edilen soruları ve yanıtları derledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c14103pz2y1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sıcak havaya yağış molası: 20 derecelere düşecek
+            meteoroloji, hafta sonu yurdun büyük bölümünde yağışlı havanın etkili olacağını duyurdu. özellikle marmara, karadeniz ve i̇ç anadolu'da yer yer kuvvetli sağanak bekleniyor. hava sıcaklıkları ise birçok bölgede hissedilir derecede düşecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sıcak havaya yağış molası: 20 derecelere düşecek</h3>
+                    <p>Meteoroloji, hafta sonu yurdun büyük bölümünde yağışlı havanın etkili olacağını duyurdu. Özellikle Marmara, Karadeniz ve İç Anadolu'da yer yer kuvvetli sağanak bekleniyor. Hava sıcaklıkları ise birçok bölgede hissedilir derecede düşecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/sicak-havaya-yagis-molasi-20-derecelere-dusecek-951967.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'suçları neydi?': bbc, i̇ran'da saldırıda 120 çocuğun öldüğü okulu ziyaret etti
+            aradan yaklaşık beş ay geçmesine rağmen acılar hâlâ taze; bir öğretmen ile bir anne, minab’daki saldırının dehşetini anlatıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Suçları neydi?': BBC, İran'da saldırıda 120 çocuğun öldüğü okulu ziyaret etti</h3>
+                    <p>Aradan yaklaşık beş ay geçmesine rağmen acılar hâlâ taze; bir öğretmen ile bir anne, Minab’daki saldırının dehşetini anlatıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0ej4wwep3no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tokat'ta kkka şüphesiyle tedavi gören kadın hayatını kaybetti
+            tokat'ın almus ilçesinde kene tutunması sonrası kırım kongo kanamalı ateşi (kkka) hastalığı şüphesiyle sivas'ta tedavi altına alınan 72 yaşındaki kadın yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Tokat'ta KKKA şüphesiyle tedavi gören kadın hayatını kaybetti</h3>
+                    <p>Tokat'ın Almus ilçesinde kene tutunması sonrası Kırım Kongo Kanamalı Ateşi (KKKA) hastalığı şüphesiyle Sivas'ta tedavi altına alınan 72 yaşındaki kadın yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/tokatta-kkka-suphesiyle-tedavi-goren-kadin-hayatini-kaybetti-951968.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ordu'nun 'sarı' mahallesi: herkesin soyadı aynı, resmi işler lakaplarla yürütülüyor
+            ordu'nun perşembe ilçesine bağlı yazlık mahallesi, karadeniz fıkralarını aratmayan sıra dışı bir özelliğe ev sahipliği yapıyor. 135 haneli mahallede yaşayan herkes aynı soyadını taşıyor: "sarı".
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ordu'nun 'Sarı' mahallesi: Herkesin soyadı aynı, resmi işler lakaplarla yürütülüyor</h3>
+                    <p>Ordu'nun Perşembe ilçesine bağlı Yazlık Mahallesi, Karadeniz fıkralarını aratmayan sıra dışı bir özelliğe ev sahipliği yapıyor. 135 haneli mahallede yaşayan herkes aynı soyadını taşıyor: "Sarı".</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ordunun-sari-mahallesi-herkesin-soyadi-ayni-resmi-isler-lakaplarla-yurutuluyor-951966.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sivas'ta kkka can aldı
+            sivas'ta kırım kongo kanamalı ateşi (kkka) hastalığı şüphesiyle tedavi gören 72 yaşındaki kadın yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sivas'ta KKKA can aldı</h3>
+                    <p>Sivas'ta Kırım Kongo Kanamalı Ateşi (KKKA) hastalığı şüphesiyle tedavi gören 72 yaşındaki kadın yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/sivasta-kkka-can-aldi-951963.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kudüs valiliği, 1300'den fazla i̇srailli'nin mescidi aksa'ya baskın düzenlediğini duyurdu
+            filistin topraklarını gasbeden 1300'den fazla i̇srailli, işgal altındaki doğu kudüs'te bulunan mescid-i aksa'ya baskın düzenledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kudüs Valiliği, 1300'den fazla İsrailli'nin Mescidi Aksa'ya baskın düzenlediğini duyurdu</h3>
+                    <p>Filistin topraklarını gasbeden 1300'den fazla İsrailli, işgal altındaki Doğu Kudüs'te bulunan Mescid-i Aksa'ya baskın düzenledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kudus-valiligi-1300den-fazla-israillinin-mescid-i-aksaya-baskin-duzenledigini-duyurdu-951962.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            openai'ın yapay zekası kontrolden çıktı ve 'görülmemiş' bir siber saldırı yaptı
+            openai, bir güvenlik testi sırasında en gelişmiş yapay zeka modellerinden birinin kontrolden çıkarak programcılara yönelik popüler bir platformu kendi başlarına hacklediğini duyurdu.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>OpenAI'ın yapay zekası kontrolden çıktı ve 'görülmemiş' bir siber saldırı yaptı</h3>
+                    <p>OpenAI, bir güvenlik testi sırasında en gelişmiş yapay zeka modellerinden birinin kontrolden çıkarak programcılara yönelik popüler bir platformu kendi başlarına hacklediğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce97njy1jgxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
