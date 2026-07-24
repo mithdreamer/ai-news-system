@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-24 07:34</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqlxdxwwze0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye ekonomisini yılın kalanında neler bekliyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c0jlnyg5v8po?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Yeni Parti' için alternatifli hazırlık: Kuruluş için geri sayım</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Avrupa'da yangınlar: Fransa ve İspanya'da on binlerce kişi tahliye ediliyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/sanayi-ve-teknoloji-bakanligi-23-uzman-yardimcisi-alacak-952091.html" target="_blank">
+                <strong>Sanayi ve Teknoloji Bakanlığı 23 uzman yardımcısı alacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/filistin-saglik-bakanligi-bati-seriada-2026da-israillilerin-saldirilarinda-86-filistinli-hayatini-kaybetti-952090.html" target="_blank">
+                <strong>Filistin Sağlık Bakanlığı: Batı Şeria'da 2026'da İsraillilerin saldırılarında 86 Filistinli hayatını kaybetti</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye ekonomisini yılın kalanında neler bekliyor?
+            2026 boyunca faiz indirmesi beklenen merkez bankası, i̇ran savaşının hemen ardından efektif politika faizini üç puan yükselterek koridorun üst bandına çıkardı. koç üniversitesi öğretim üyesi prof. dr. selva demiralp, türkiye ekonomisini yılın kalanında nelerin beklediğini bbc türkçe için değerlendirdi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türkiye ekonomisini yılın kalanında neler bekliyor?</h3>
+                    <p>2026 boyunca faiz indirmesi beklenen Merkez Bankası, İran savaşının hemen ardından efektif politika faizini üç puan yükselterek koridorun üst bandına çıkardı. Koç Üniversitesi Öğretim Üyesi Prof. Dr. Selva Demiralp, Türkiye ekonomisini yılın kalanında nelerin beklediğini BBC Türkçe için değerlendirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlxdxwwze0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sanayi ve teknoloji bakanlığı 23 uzman yardımcısı alacak
+            sanayi ve teknoloji bakanlığı, 23 uzman yardımcısı istihdam edecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Sanayi ve Teknoloji Bakanlığı 23 uzman yardımcısı alacak</h3>
+                    <p>Sanayi ve Teknoloji Bakanlığı, 23 uzman yardımcısı istihdam edecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/sanayi-ve-teknoloji-bakanligi-23-uzman-yardimcisi-alacak-952091.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 99,63 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 99,63 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 99,63 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 99,63 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-9963-dolardan-islem-goruyor-952088.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, türkiye'nin de aralarında olduğu 60 ülkeye yeni gümrük vergileri getirdi
+            abd, zorunlu işçiliği durdurmadıkları gerekçesiyle, ithalatının büyük çoğunluğunu oluşturan 60 ticaret ortağına yeni gümrük vergileri uyguladı. bu ülkeler arasında türkiye de var.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD, Türkiye'nin de aralarında olduğu 60 ülkeye yeni gümrük vergileri getirdi</h3>
+                    <p>ABD, zorunlu işçiliği durdurmadıkları gerekçesiyle, ithalatının büyük çoğunluğunu oluşturan 60 ticaret ortağına yeni gümrük vergileri uyguladı. Bu ülkeler arasında Türkiye de var.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0nj2k7xnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            'yeni parti' için alternatifli hazırlık: kuruluş için geri sayım
+            chp grup başkanı özgür özel'in öncülüğünde kurulması planlanan yeni parti için hazırlıklar son aşamaya geldi. kuruluş dilekçesinin i̇çişleri bakanlığı'na verilmesi öncesinde parti ismi, kurucu milletvekilleri, örgütlenme modeli ve meclis'teki olası dengelere ilişkin kritik ayrıntılar netleşmeye başladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>'Yeni Parti' için alternatifli hazırlık: Kuruluş için geri sayım</h3>
+                    <p>CHP Grup Başkanı Özgür Özel'in öncülüğünde kurulması planlanan yeni parti için hazırlıklar son aşamaya geldi. Kuruluş dilekçesinin İçişleri Bakanlığı'na verilmesi öncesinde parti ismi, kurucu milletvekilleri, örgütlenme modeli ve Meclis'teki olası dengelere ilişkin kritik ayrıntılar netleşmeye başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0jlnyg5v8po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'da yangınlar: fransa ve i̇spanya'da on binlerce kişi tahliye ediliyor
+            i̇spanya hükümeti, orman yangınları nedeniyle madrid ve komşu avila'da ulusal acil durum ilan etti. yangınlar, sıcak ve kuru hava koşullarında hızla yayılıyor. başkentin çevresinde on bin kişi tahliye edildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'da yangınlar: Fransa ve İspanya'da on binlerce kişi tahliye ediliyor</h3>
+                    <p>İspanya hükümeti, orman yangınları nedeniyle Madrid ve komşu Avila'da ulusal acil durum ilan etti. Yangınlar, sıcak ve kuru hava koşullarında hızla yayılıyor. Başkentin çevresinde on bin kişi tahliye edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump: nükleer anlaşma için suudiler i̇srail'i tanımalı
+            abd başkanı donald trump, ülkesi ile suudi arabistan arasındaki tarihi nükleer anlaşmanın, riyad'ın i̇srail'i tanımasına bağlı olduğunu duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump: Nükleer anlaşma için Suudiler İsrail'i tanımalı</h3>
+                    <p>ABD Başkanı Donald Trump, ülkesi ile Suudi Arabistan arasındaki tarihi nükleer anlaşmanın, Riyad'ın İsrail'i tanımasına bağlı olduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9q9jvwdxnwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd, i̇ran'a yönelik son saldırılarında ülkenin çeşitli bölgelerini hedef aldı
+            abd'nin i̇ran'a yönelik son saldırılarında gece boyunca i̇sfahan, yezd, loristan, sistan-beluçistan, hürmüzgan, fars ve huzistan eyaletlerindeki çeşitli noktaların hedef alındığı belirtildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, İran'a yönelik son saldırılarında ülkenin çeşitli bölgelerini hedef aldı</h3>
+                    <p>ABD'nin İran'a yönelik son saldırılarında gece boyunca İsfahan, Yezd, Loristan, Sistan-Beluçistan, Hürmüzgan, Fars ve Huzistan eyaletlerindeki çeşitli noktaların hedef alındığı belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-irana-yonelik-son-saldirilarinda-ulkenin-cesitli-bolgelerini-hedef-aldi-952087.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            filistin sağlık bakanlığı: batı şeria'da 2026'da i̇sraillilerin saldırılarında 86 filistinli hayatını kaybetti
+            filistin sağlık bakanlığı, i̇srail ordusu ile filistin topraklarını gasbeden i̇sraillilerin işgal altındaki batı şeria'da 2026'nın başından bu yana gerçekleştirdiği saldırılarda 86 filistinlinin hayatını kaybettiğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Filistin Sağlık Bakanlığı: Batı Şeria'da 2026'da İsraillilerin saldırılarında 86 Filistinli hayatını kaybetti</h3>
+                    <p>Filistin Sağlık Bakanlığı, İsrail ordusu ile Filistin topraklarını gasbeden İsraillilerin işgal altındaki Batı Şeria'da 2026'nın başından bu yana gerçekleştirdiği saldırılarda 86 Filistinlinin hayatını kaybettiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/filistin-saglik-bakanligi-bati-seriada-2026da-israillilerin-saldirilarinda-86-filistinli-hayatini-kaybetti-952090.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya, başkent madrid çevresindeki orman yangınları nedeniyle acil durum ilan etti
+            i̇spanya i̇çişleri bakanı fernando grande-marlaska, başkent madrid ve çevresindeki orman yangınları nedeniyle "acil durum" ilan ettiklerini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya, başkent Madrid çevresindeki orman yangınları nedeniyle acil durum ilan etti</h3>
+                    <p>İspanya İçişleri Bakanı Fernando Grande-Marlaska, başkent Madrid ve çevresindeki orman yangınları nedeniyle "acil durum" ilan ettiklerini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ispanya-baskent-madrid-cevresindeki-orman-yanginlari-nedeniyle-acil-durum-ilan-etti-952083.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beş soruda lozan barış antlaşması: gizli maddeleri ve geçerlilik süresi var mı?
+            lozan barış antlaşması'nın imzalanması üzerinden 103 yıl geçti. batı ülkelerine kapitülasyonların kaldırılmasından ülke sınırlarının uluslararası olarak tanınmasına kadar birçok konuyu düzenleyen belge, türkiye'nin kurucu antlaşması kabul ediliyor. bbc türkçe, lozan ile ilgili yanlış bilinen gerçekleri uzmanlara sordu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Beş soruda Lozan Barış Antlaşması: Gizli maddeleri ve geçerlilik süresi var mı?</h3>
+                    <p>Lozan Barış Antlaşması'nın imzalanması üzerinden 103 yıl geçti. Batı ülkelerine kapitülasyonların kaldırılmasından ülke sınırlarının uluslararası olarak tanınmasına kadar birçok konuyu düzenleyen belge, Türkiye'nin kurucu antlaşması kabul ediliyor. BBC Türkçe, Lozan ile ilgili yanlış bilinen gerçekleri uzmanlara sordu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yv935d0z5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yks sonuçları ne anlatıyor, uzmanlar verileri nasıl yorumluyor?
+            ösym'nin 21 temmuz'da açıkladığı yks sonuçları, yüksek puan dilimindeki adayların sayısının arttığını ancak özellikle matematik ve fen testlerinde ortalama doğru yanıt sayısının yine düşük düzeyde kaldığını gösterdi. verilerle ilgili olarak uzmanların görüşlerini aldık.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>YKS sonuçları ne anlatıyor, uzmanlar verileri nasıl yorumluyor?</h3>
+                    <p>ÖSYM'nin 21 Temmuz'da açıkladığı YKS sonuçları, yüksek puan dilimindeki adayların sayısının arttığını ancak özellikle matematik ve fen testlerinde ortalama doğru yanıt sayısının yine düşük düzeyde kaldığını gösterdi. Verilerle ilgili olarak uzmanların görüşlerini aldık.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crmr727xr9po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap soruşturmasında altı ünlü isim daha ifadeye çağrıldı
+            ahbap soruşturması kapsamında gazetecilerden müzisyenlere ünlü isimler ifadeye çağrıldı. bu isimler arasında gazeteciler fatih altaylı, ruşen çakır ve özlem gürses ile komedyen şahan gökbakar, oyuncu hazal kaya ve youtuber fatih koparan da var.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahbap soruşturmasında altı ünlü isim daha ifadeye çağrıldı</h3>
+                    <p>Ahbap soruşturması kapsamında gazetecilerden müzisyenlere ünlü isimler ifadeye çağrıldı. Bu isimler arasında gazeteciler Fatih Altaylı, Ruşen Çakır ve Özlem Gürses ile komedyen Şahan Gökbakar, oyuncu Hazal Kaya ve YouTuber Fatih Koparan da var.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4xd9wzn4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran'dan ayasofya paylaşımı
+            i̇letişim başkanı burhanettin duran, "ayasofya-i kebir cami-i şerifi'nin yeniden ibadete açılışının yıl dönümünde, bu kutlu mabedin kıyamete kadar ezanlarla, selalarla ve ibadetle yaşamaya devam etmesini yüce allah'tan niyaz ediyoruz." ifadesini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İletişim Başkanı Duran'dan Ayasofya paylaşımı</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, "Ayasofya-i Kebir Cami-i Şerifi'nin yeniden ibadete açılışının yıl dönümünde, bu kutlu mabedin kıyamete kadar ezanlarla, selalarla ve ibadetle yaşamaya devam etmesini Yüce Allah'tan niyaz ediyoruz." ifadesini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-durandan-ayasofya-paylasimi-952089.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mapeg 115 maden sahası ihale edecek
+            enerji ve tabii kaynaklar bakanlığı maden ve petrol i̇şleri genel müdürlüğünce (mapeg) 115 maden sahası ihale edilecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>MAPEG 115 maden sahası ihale edecek</h3>
+                    <p>Enerji ve Tabii Kaynaklar Bakanlığı Maden ve Petrol İşleri Genel Müdürlüğünce (MAPEG) 115 maden sahası ihale edilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/mapeg-115-maden-sahasi-ihale-edecek-952086.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            alo 193 ortak hasar i̇hbar merkezi kuruldu
+            vatandaşların hasar ihbarlarını tek bir merkez üzerinden kolay ve süratli bir şekilde iletebilmelerini sağlamak üzere tüm sigorta şirketlerinin entegre olduğu alo 193 ortak hasar i̇hbar merkezi (ohi̇m) kuruldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Alo 193 Ortak Hasar İhbar Merkezi kuruldu</h3>
+                    <p>Vatandaşların hasar ihbarlarını tek bir merkez üzerinden kolay ve süratli bir şekilde iletebilmelerini sağlamak üzere tüm sigorta şirketlerinin entegre olduğu Alo 193 Ortak Hasar İhbar Merkezi (OHİM) kuruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/alo-193-ortak-hasar-ihbar-merkezi-kuruldu-952084.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aşırı sıcaklar ruh sağlığını olumsuz etkileyebilir, başa çıkma yolları neler?
+            bir araştırmaya göre, aşırı sıcaklar ruh sağlığını olumsuz etkileyebilir ve gençler ile kadınlar en çok risk altında olan gruplar arasında yer alıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Aşırı sıcaklar ruh sağlığını olumsuz etkileyebilir, başa çıkma yolları neler?</h3>
+                    <p>Bir araştırmaya göre, aşırı sıcaklar ruh sağlığını olumsuz etkileyebilir ve gençler ile kadınlar en çok risk altında olan gruplar arasında yer alıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn4nm9kk4w8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli'den 'yeni parti' açıklaması: 'vekil sayısı oranında hazine yardımı etik olanıdır'
+            mhp genel başkanı devlet bahçeli, özgür özel önderliğindeki bir ekibin chp'den ayrılarak kuracağı yeni partiye hazineden pay aktarılması gerektiğini savundu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahçeli'den 'Yeni Parti' açıklaması: 'Vekil sayısı oranında hazine yardımı etik olanıdır'</h3>
+                    <p>MHP Genel Başkanı Devlet Bahçeli, Özgür Özel önderliğindeki bir ekibin CHP'den ayrılarak kuracağı yeni partiye hazineden pay aktarılması gerektiğini savundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgvy9ex32po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da bir kişinin 2 milyon lirasını gasp eden şüpheliler kırıkkale'de yakalandı
+            ankara'da 60 yaşındaki kişinin 2 milyon lirasını gasp edip il dışına kaçan 7 şüpheli kırıkkale'de yakalandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ankara'da bir kişinin 2 milyon lirasını gasp eden şüpheliler Kırıkkale'de yakalandı</h3>
+                    <p>Ankara'da 60 yaşındaki kişinin 2 milyon lirasını gasp edip il dışına kaçan 7 şüpheli Kırıkkale'de yakalandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-bir-kisinin-2-milyon-lirasini-gasp-eden-supheliler-kirikkalede-yakalandi-952085.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gram altın güne düşüşle başladı
+            gram altın, güne düşüşle başlamasının ardından 6 bin 135 liradan işlem görüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gram altın güne düşüşle başladı</h3>
+                    <p>Gram altın, güne düşüşle başlamasının ardından 6 bin 135 liradan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gram-altin-gune-dususle-basladi-952082.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
