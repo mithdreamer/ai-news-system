@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-25 07:21</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fransa ve İspanya'da orman yangınları: On binlerce kişi tahliye edildi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cp8xl3e9z49o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yeni Parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/35-il-icin-sari-ve-turuncu-uyari-kuvvetli-yagis-ve-firtinaya-dikkat-952165.html" target="_blank">
+                <strong>35 il için sarı ve turuncu uyarı: Kuvvetli yağış ve fırtınaya dikkat</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5y0mvmqne2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yeni Parti kurulurken CHP'de neler yaşanıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c4gjw97vnvyo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD ve İran'dan Körfez'de karşılıklı saldırılar: Savaşın tırmanması endişeleri artıyor</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fransa ve i̇spanya'da orman yangınları: on binlerce kişi tahliye edildi
+            fransa ve i̇spanya'da orman yangınları nedeniyle on binlerce kişi tahliye edildi. i̇spanya hükümeti madrid ve komşu avila'da ulusal acil durum ilan etti. yangınlar, sıcak ve kuru hava koşullarında hızla yayılıyor. başkentin çevresinde on bin kişi tahliye edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa ve İspanya'da orman yangınları: On binlerce kişi tahliye edildi</h3>
+                    <p>Fransa ve İspanya'da orman yangınları nedeniyle on binlerce kişi tahliye edildi. İspanya hükümeti Madrid ve komşu Avila'da ulusal acil durum ilan etti. Yangınlar, sıcak ve kuru hava koşullarında hızla yayılıyor. Başkentin çevresinde on bin kişi tahliye edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti kurulurken chp'de neler yaşanıyor?
+            chp, özgür özel ve 90 milletvekilinin istifasının ardından tbmm'de beşinci parti konumuna düştü. chp lideri kemal kılıçdaroğlu, parti myk'sını toplantıya çağırdı. sosyal medya hesabından paylaşım yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti kurulurken CHP'de neler yaşanıyor?</h3>
+                    <p>CHP, Özgür Özel ve 90 milletvekilinin istifasının ardından TBMM'de beşinci parti konumuna düştü. CHP lideri Kemal Kılıçdaroğlu, parti MYK'sını toplantıya çağırdı. Sosyal medya hesabından paylaşım yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y0mvmqne2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beş soruda lozan barış antlaşması: gizli maddeleri ve geçerlilik süresi var mı?
+            lozan barış antlaşması'nın imzalanması üzerinden 103 yıl geçti. batı ülkelerine kapitülasyonların kaldırılmasından ülke sınırlarının uluslararası olarak tanınmasına kadar birçok konuyu düzenleyen belge, türkiye'nin kurucu antlaşması kabul ediliyor. bbc türkçe, lozan ile ilgili yanlış bilinen gerçekleri uzmanlara sordu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Beş soruda Lozan Barış Antlaşması: Gizli maddeleri ve geçerlilik süresi var mı?</h3>
+                    <p>Lozan Barış Antlaşması'nın imzalanması üzerinden 103 yıl geçti. Batı ülkelerine kapitülasyonların kaldırılmasından ülke sınırlarının uluslararası olarak tanınmasına kadar birçok konuyu düzenleyen belge, Türkiye'nin kurucu antlaşması kabul ediliyor. BBC Türkçe, Lozan ile ilgili yanlış bilinen gerçekleri uzmanlara sordu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yv935d0z5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özel liderliğindeki yeni parti yönetimi belirlendi: fezlekeli isimler pm dışında kaldı
+            chp'den istifa eden 91 milletvekiliyle kurulan yeni parti'de yönetim belirlendi. özgür özel genel başkan seçilirken, kurucu 90 milletvekilinden 80'i parti meclis'ine (pm) girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özel liderliğindeki Yeni Parti yönetimi belirlendi: Fezlekeli isimler PM dışında kaldı</h3>
+                    <p>CHP'den istifa eden 91 milletvekiliyle kurulan Yeni Parti'de yönetim belirlendi. Özgür Özel Genel Başkan seçilirken, kurucu 90 milletvekilinden 80'i Parti Meclis'ine (PM) girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gd0rryj0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aç olmadığınız halde yemek yemenin nedeni ne, neler yardımcı olabilir?
+            uzmanlara göre stres, can sıkıntısı ve uykusuzluk gibi etkenler aç olmadığımız hâlde yemek yememize yol açabilir; ancak duygusal yeme döngüsünü kırmanın basit ve etkili yolları var
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Aç olmadığınız halde yemek yemenin nedeni ne, neler yardımcı olabilir?</h3>
+                    <p>Uzmanlara göre stres, can sıkıntısı ve uykusuzluk gibi etkenler aç olmadığımız hâlde yemek yememize yol açabilir; ancak duygusal yeme döngüsünü kırmanın basit ve etkili yolları var</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg9nyevzg7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti kuruldu, özgür özel genel başkan seçildi
+            özgür özel, yeni parti'nin ilk kurucular toplantısında genel başkan seçildi. özgür özel'in x hesabındaki unvanı da yeni parti genel başkanı olarak değişti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti kuruldu, Özgür Özel Genel Başkan seçildi</h3>
+                    <p>Özgür Özel, Yeni Parti'nin ilk kurucular toplantısında genel başkan seçildi. Özgür Özel'in X hesabındaki unvanı da Yeni Parti Genel Başkanı olarak değişti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0jlnyg5v8po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli'den 'yeni parti' açıklaması: 'vekil sayısı oranında hazine yardımı etik olanıdır'
+            mhp genel başkanı devlet bahçeli, özgür özel önderliğindeki bir ekibin chp'den ayrılarak kuracağı yeni partiye hazineden pay aktarılması gerektiğini savundu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahçeli'den 'Yeni Parti' açıklaması: 'Vekil sayısı oranında hazine yardımı etik olanıdır'</h3>
+                    <p>MHP Genel Başkanı Devlet Bahçeli, Özgür Özel önderliğindeki bir ekibin CHP'den ayrılarak kuracağı yeni partiye hazineden pay aktarılması gerektiğini savundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgvy9ex32po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özgür özel liderliğindeki yeni partiye ne tepki geldi?
+            yeni parti'nin kurulması sonrası cezaevindeki ekrem i̇mamoğlu x hesabından yaptığı açıklamada "her şey çok güzel olacak! yürüyelim arkadaşlar!" paylaşımı yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özgür Özel liderliğindeki yeni partiye ne tepki geldi?</h3>
+                    <p>Yeni Parti'nin kurulması sonrası cezaevindeki Ekrem İmamoğlu X hesabından yaptığı açıklamada "Her şey çok güzel olacak! Yürüyelim arkadaşlar!" paylaşımı yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr7kv74z4g4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çalıştığı döviz bürosundan 300 tam altın çalan şüpheli yakalandı
+            fatih'te çalıştığı döviz bürosunda elektrik kesintisini fırsat bilerek 300 tam altın çaldığı belirlenen şüpheli gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Çalıştığı döviz bürosundan 300 tam altın çalan şüpheli yakalandı</h3>
+                    <p>Fatih'te çalıştığı döviz bürosunda elektrik kesintisini fırsat bilerek 300 tam altın çaldığı belirlenen şüpheli gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/calistigi-doviz-burosundan-300-tam-altin-calan-supheli-yakalandi-952166.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            eyüpsultan'da yolcu otobüsü ile otomobil çarpıştı: 30 yaralı
+            eyüpsultan'da yolcu otobüsü ile otomobilin çarpıştığı kazada 30 yolcu yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Eyüpsultan'da yolcu otobüsü ile otomobil çarpıştı: 30 yaralı</h3>
+                    <p>Eyüpsultan'da yolcu otobüsü ile otomobilin çarpıştığı kazada 30 yolcu yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/eyupsultanda-yolcu-otobusu-ile-otomobil-carpisti-30-yarali-952163.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bisikletten düşen belediye özel kalem müdürü yaşamını yitirdi
+            kayseri'de bisikletten düşen melikgazi belediyesi özel kalem müdürü mustafa tümgüç, hayatını kaybetti
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bisikletten düşen belediye özel kalem müdürü yaşamını yitirdi</h3>
+                    <p>Kayseri'de bisikletten düşen Melikgazi Belediyesi Özel Kalem Müdürü Mustafa Tümgüç, hayatını kaybetti</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/bisikletten-dusen-belediye-ozel-kalem-muduru-yasamini-yitirdi-952162.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            başkentte sağanak etkili oldu
+            ankara'da gece saatlerinden itibaren aralıklarla süren yağış, sabah saatlerinde de etkili oldu. mamak'ta mutlu mahallesi'nde yolun çökmesi sonucu bir hafif ticari araç oluşan çukura düştü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Başkentte sağanak etkili oldu</h3>
+                    <p>Ankara'da gece saatlerinden itibaren aralıklarla süren yağış, sabah saatlerinde de etkili oldu. Mamak'ta Mutlu Mahallesi'nde yolun çökmesi sonucu bir hafif ticari araç oluşan çukura düştü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/baskentte-saganak-etkili-oldu-952161.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'ın yenbu kentinde erken uyarı sistemi devreye alındı
+            suudi arabistan'ın kızıldeniz kıyısındaki yenbu kentinde olası bir tehlikeye karşı erken uyarı sisteminin devreye alındığı belirtildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Suudi Arabistan'ın Yenbu kentinde erken uyarı sistemi devreye alındı</h3>
+                    <p>Suudi Arabistan'ın Kızıldeniz kıyısındaki Yenbu kentinde olası bir tehlikeye karşı erken uyarı sisteminin devreye alındığı belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/suudi-arabistanin-yenbu-kentinde-erken-uyari-sistemi-devreye-alindi-952158.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fethin nişanesi, medeniyetin kalbi: çağları aşan mabet ayasofya paneli düzenlendi
+            i̇letişim başkanlığınca, ayasofya-i kebir cami-i şerifi'nin yeniden ibadete açılmasının 6. yıl dönümü dolayısıyla "fethin nişanesi, medeniyetin kalbi: çağları aşan mabet ayasofya" paneli düzenlendi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fethin Nişanesi, Medeniyetin Kalbi: Çağları Aşan Mabet Ayasofya paneli düzenlendi</h3>
+                    <p>İletişim Başkanlığınca, Ayasofya-i Kebir Cami-i Şerifi'nin yeniden ibadete açılmasının 6. yıl dönümü dolayısıyla "Fethin Nişanesi, Medeniyetin Kalbi: Çağları Aşan Mabet Ayasofya" paneli düzenlendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/fethin-nisanesi-medeniyetin-kalbi-caglari-asan-mabet-ayasofya-paneli-duzenlendi-952157.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?
+            21 mayıs'ta i̇stinaf mahkemesi'nin mutlak butlan kararıyla chp genel başkanlığı görevinden uzaklaştırılan özgür özel partiden istifa etti ve kendisi dahil 91 milletvekiliyle yeni parti'yi kurdu. partiyle ilgili en çok merak edilen konulardan biri de, hazine yardımı alıp alamayacağı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yeni Parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?</h3>
+                    <p>21 Mayıs'ta İstinaf Mahkemesi'nin mutlak butlan kararıyla CHP Genel Başkanlığı görevinden uzaklaştırılan Özgür Özel partiden istifa etti ve kendisi dahil 91 milletvekiliyle Yeni Parti'yi kurdu. Partiyle ilgili en çok merak edilen konulardan biri de, hazine yardımı alıp alamayacağı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp8xl3e9z49o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            35 il için sarı ve turuncu uyarı: kuvvetli yağış ve fırtınaya dikkat
+            meteoroloji genel müdürlüğü (mgm), aralarında i̇stanbul ve ankara'nın da bulunduğu 35 il için "sarı" ve "turuncu" kodlu uyarıda bulundu. ülkenin büyük bölümünde etkili olması beklenen kuvvetli yağış ve fırtına nedeniyle yaşanabilecek olumsuzluklara karşı vatandaşların dikkatli ve tedbirli olması istendi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>35 il için sarı ve turuncu uyarı: Kuvvetli yağış ve fırtınaya dikkat</h3>
+                    <p>Meteoroloji Genel Müdürlüğü (MGM), aralarında İstanbul ve Ankara'nın da bulunduğu 35 il için "sarı" ve "turuncu" kodlu uyarıda bulundu. Ülkenin büyük bölümünde etkili olması beklenen kuvvetli yağış ve fırtına nedeniyle yaşanabilecek olumsuzluklara karşı vatandaşların dikkatli ve tedbirli olması istendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/35-il-icin-sari-ve-turuncu-uyari-kuvvetli-yagis-ve-firtinaya-dikkat-952165.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ve i̇ran'dan körfez'de karşılıklı saldırılar: savaşın tırmanması endişeleri artıyor
+            i̇ran, abd'nin 13 gündür üst üste düzenlediği saldırılara misilleme olarak ortadoğu genelindeki abd askeri tesislerine ve üslerine insansız hava aracı saldırıları düzenlediğini açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ve İran'dan Körfez'de karşılıklı saldırılar: Savaşın tırmanması endişeleri artıyor</h3>
+                    <p>İran, ABD'nin 13 gündür üst üste düzenlediği saldırılara misilleme olarak Ortadoğu genelindeki ABD askeri tesislerine ve üslerine insansız hava aracı saldırıları düzenlediğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gjw97vnvyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            venezuela'daki depremlerde can kaybı 5 bin 546'ya yükseldi
+            venezuela'da 24 haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısının 5 bin 546'ya ulaştığı bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Venezuela'daki depremlerde can kaybı 5 bin 546'ya yükseldi</h3>
+                    <p>Venezuela'da 24 Haziran'da meydana gelen iki büyük depremde hayatını kaybedenlerin sayısının 5 bin 546'ya ulaştığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-can-kaybi-5-bin-546ya-yukseldi-952164.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump: pek bir şeyleri kalmadı
+            abd başkanı donald trump, i̇ran’ın nükleer silaha sahip olmasına izin vermeyeceklerini savunarak, "washington'un, şehirlerimizin, i̇srail'in veya açıkçası orta doğu'nun nükleer silahla yok edilmesini istemiyoruz." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump: Pek bir şeyleri kalmadı</h3>
+                    <p>ABD Başkanı Donald Trump, İran’ın nükleer silaha sahip olmasına izin vermeyeceklerini savunarak, "Washington'un, şehirlerimizin, İsrail'in veya açıkçası Orta Doğu'nun nükleer silahla yok edilmesini istemiyoruz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-pek-bir-seyleri-kalmadi-952160.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, gelecek seçimde bir kez daha aday olacağını açıkladı
+            abd başkanı trump, gelecek başkanlık seçimlerinde "bir kez daha aday olacağını" açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, gelecek seçimde bir kez daha aday olacağını açıkladı</h3>
+                    <p>ABD Başkanı Trump, gelecek başkanlık seçimlerinde "bir kez daha aday olacağını" açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-gelecek-secimde-bir-kez-daha-aday-olacagini-acikladi-952159.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
