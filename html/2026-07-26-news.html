@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-26 07:37</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/clyx53kglxro?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yemek seçen bir çocuğa yaz tatilinde yemek yedirme ipuçları</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cp8xl3e9z49o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yeni Parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/lgs-tercihleri-icin-yarin-son-gun-952218.html" target="_blank">
+                <strong>LGS tercihleri için yarın son gün</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/soykirimci-israil-filistin-topraklarina-yonelik-gasbini-genisletmeyi-amacliyor-952214.html" target="_blank">
+                <strong>Soykırımcı İsrail, Filistin topraklarına yönelik gasbını genişletmeyi amaçlıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/filenin-sultanlari-sampiyonluk-icin-brezilya-karsisinda-952210.html" target="_blank">
+                <strong>Filenin Sultanları şampiyonluk için Brezilya karşısında</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yemek seçen bir çocuğa yaz tatilinde yemek yedirme ipuçları
+            yaz tatili başladı ve çocuklara biraz sebze yedirmek için mücadele devam ediyor. yemek seçen bir çocuğunuz varsa tatil dönemi çok stresli olabilir. i̇şte yemek saatlerini daha keyifli hale getirmek için birkaç ipucu...
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yemek seçen bir çocuğa yaz tatilinde yemek yedirme ipuçları</h3>
+                    <p>Yaz tatili başladı ve çocuklara biraz sebze yedirmek için mücadele devam ediyor. Yemek seçen bir çocuğunuz varsa tatil dönemi çok stresli olabilir. İşte yemek saatlerini daha keyifli hale getirmek için birkaç ipucu...</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyx53kglxro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?
+            21 mayıs'ta i̇stinaf mahkemesi'nin mutlak butlan kararıyla chp genel başkanlığı görevinden uzaklaştırılan özgür özel partiden istifa etti ve kendisi dahil 91 milletvekiliyle yeni parti'yi kurdu. partiyle ilgili en çok merak edilen konulardan biri de, hazine yardımı alıp alamayacağı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yeni Parti hazine yardımı alabilir mi, sistem yıllar içinde nasıl değişti?</h3>
+                    <p>21 Mayıs'ta İstinaf Mahkemesi'nin mutlak butlan kararıyla CHP Genel Başkanlığı görevinden uzaklaştırılan Özgür Özel partiden istifa etti ve kendisi dahil 91 milletvekiliyle Yeni Parti'yi kurdu. Partiyle ilgili en çok merak edilen konulardan biri de, hazine yardımı alıp alamayacağı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp8xl3e9z49o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            lgs tercihleri için yarın son gün
+            milli eğitim bakanlığınca (meb) liselere geçiş sistemi (lgs) kapsamındaki merkezi sınav sonucuna göre yapılacak lise tercihleri yarın saat 17.00'de sona erecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>LGS tercihleri için yarın son gün</h3>
+                    <p>Milli Eğitim Bakanlığınca (MEB) Liselere Geçiş Sistemi (LGS) kapsamındaki merkezi sınav sonucuna göre yapılacak lise tercihleri yarın saat 17.00'de sona erecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/lgs-tercihleri-icin-yarin-son-gun-952218.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filenin sultanları şampiyonluk için brezilya karşısında
+            a milli kadın voleybol takımımız, 2026 fivb milletler ligi finalinde bugün brezilya ile karşılaşacak. milletler ligi'nde 3. kez finale çıkan filenin sultanları, organizasyondaki ikinci şampiyonluğunu hedefliyor. saat 14.30'da başlayacak olan tarihi maç, trt 1'den canlı yayınlanacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Filenin Sultanları şampiyonluk için Brezilya karşısında</h3>
+                    <p>A Milli Kadın Voleybol Takımımız, 2026 FIVB Milletler Ligi finalinde bugün Brezilya ile karşılaşacak. Milletler Ligi'nde 3. kez finale çıkan Filenin Sultanları, organizasyondaki ikinci şampiyonluğunu hedefliyor. Saat 14.30'da başlayacak olan tarihi maç, TRT 1'den canlı yayınlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/filenin-sultanlari-sampiyonluk-icin-brezilya-karsisinda-952210.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filenin sultanları milletler ligi'nde finale çıktı
+            türkiye a milli kadın voleybol takımı, 2026 voleybol milletler ligi (vnl) yarı finalinde çin'i yenerek finale çıktı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Filenin Sultanları Milletler Ligi'nde finale çıktı</h3>
+                    <p>Türkiye A Milli Kadın Voleybol Takımı, 2026 Voleybol Milletler Ligi (VNL) yarı finalinde Çin'i yenerek finale çıktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c23y5yjpzr0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brezilya hükümeti, abd'li yetkililerin vize taleplerini reddetti
+            brezilya hükümeti, ekim ayında yapılacak devlet başkanlığı seçimleri öncesinde seçim yetkilileriyle görüşmek üzere ülkeye gelmek isteyen abd dışişleri bakanlığından iki yetkiliye vize vermedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Brezilya hükümeti, ABD'li yetkililerin vize taleplerini reddetti</h3>
+                    <p>Brezilya hükümeti, ekim ayında yapılacak devlet başkanlığı seçimleri öncesinde seçim yetkilileriyle görüşmek üzere ülkeye gelmek isteyen ABD Dışişleri Bakanlığından iki yetkiliye vize vermedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brezilya-hukumeti-abdli-yetkililerin-vize-taleplerini-reddetti-952217.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            orta karadeniz için kuvvetli sağanak uyarısı
+            orta karadeniz'in bazı illeri ve kastamonu için kuvvetli sağanak ve gök gürültülü sağanak uyarısında bulunuldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Orta Karadeniz için kuvvetli sağanak uyarısı</h3>
+                    <p>Orta Karadeniz'in bazı illeri ve Kastamonu için kuvvetli sağanak ve gök gürültülü sağanak uyarısında bulunuldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/orta-karadeniz-icin-kuvvetli-saganak-uyarisi-952213.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail, filistin topraklarına yönelik gasbını genişletmeyi amaçlıyor
+            soykırımcı i̇srail'in aşırı sağcı maliye bakanı bezalel smotrich, işgal altındaki batı şeria'nın nablus kentinin güneyinde filistin toprakları gasbedilerek kurulan eli yerleşim yerinde 763 yeni konut inşa edilmesini planladıklarını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail, Filistin topraklarına yönelik gasbını genişletmeyi amaçlıyor</h3>
+                    <p>Soykırımcı İsrail'in aşırı sağcı Maliye Bakanı Bezalel Smotrich, işgal altındaki Batı Şeria'nın Nablus kentinin güneyinde Filistin toprakları gasbedilerek kurulan Eli yerleşim yerinde 763 yeni konut inşa edilmesini planladıklarını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israil-filistin-topraklarina-yonelik-gasbini-genisletmeyi-amacliyor-952214.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'nin bölünme tarihi: yeni parti'ye kadar neler yaşandı?
+            chp’nin 103 yıllık tarihinde yaşanan bölünmeler; ideolojik ayrışmalar, liderlik mücadeleleri ve toplumu dönüştürme konusundaki farklı yaklaşımlardan kaynaklanıyor. tarih boyunca terakkiperver’den demokrat parti’ye, güven partisi’nden dsp’ye uzanan kopuşlar siyasal yapıyı derinden etkiledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP'nin bölünme tarihi: Yeni Parti'ye kadar neler yaşandı?</h3>
+                    <p>CHP’nin 103 yıllık tarihinde yaşanan bölünmeler; ideolojik ayrışmalar, liderlik mücadeleleri ve toplumu dönüştürme konusundaki farklı yaklaşımlardan kaynaklanıyor. Tarih boyunca Terakkiperver’den Demokrat Parti’ye, Güven Partisi’nden DSP’ye uzanan kopuşlar siyasal yapıyı derinden etkiledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp8xl5yngk8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kılıçdaroğlu: arınma büyük ölçüde gerçekleşti
+            cumhuriyet halk partisi'ndeki bölünme sonrası chp genel başkanı kemal kılıçdaroğlu, i̇stanbul'daki üye katılım töreninde konuştu. mutlak butlan kararıyla partinin genel başkanlığına dönen kılıçdaroğlu, "arınma büyük ölçüde gerçekleşti" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kılıçdaroğlu: Arınma büyük ölçüde gerçekleşti</h3>
+                    <p>Cumhuriyet Halk Partisi'ndeki bölünme sonrası CHP Genel Başkanı Kemal Kılıçdaroğlu, İstanbul'daki üye katılım töreninde konuştu. Mutlak butlan kararıyla partinin genel başkanlığına dönen Kılıçdaroğlu, "Arınma büyük ölçüde gerçekleşti" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y0mvmqne2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti'nin ilk myk'sı 10 kişilik çekirdek kadrodan oluştu
+            yeni parti genel başkanı özgür özel, partinin vitrini konumundaki merkez yönetim kurulu (myk) kadrosunu belirledi. özel'in chp genel başkanlığı dönemindeki son myk'sında da görev yapan üç isim yeni a takımında da yer aldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti'nin ilk MYK'sı 10 kişilik çekirdek kadrodan oluştu</h3>
+                    <p>Yeni Parti Genel Başkanı Özgür Özel, partinin vitrini konumundaki Merkez Yönetim Kurulu (MYK) kadrosunu belirledi. Özel'in CHP Genel Başkanlığı dönemindeki son MYK'sında da görev yapan üç isim yeni A takımında da yer aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz641279pq6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meclis'te yeni haftanın gündemi: üniversite affı ve çocuk suçlulara ilişkin düzenleme
+            tbmm'nin gündemi yeni haftada da yoğun olacak. yükseköğretim kurumlarıyla ilişiği kesilen öğrencilere af getirecek kanun teklifi, genel kurul gündemine gelecek. teklifle, aday hekimliğe geçiş yapamamış öğrencilere de okula dönüş yolu açılacak. meclis'te ayrıca, terörsüz türkiye hedefinde yapılacak yasal düzenlemelere ilişkin adımlar atılacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Meclis'te yeni haftanın gündemi: Üniversite affı ve çocuk suçlulara ilişkin düzenleme</h3>
+                    <p>TBMM'nin gündemi yeni haftada da yoğun olacak. Yükseköğretim kurumlarıyla ilişiği kesilen öğrencilere af getirecek kanun teklifi, Genel Kurul gündemine gelecek. Teklifle, aday hekimliğe geçiş yapamamış öğrencilere de okula dönüş yolu açılacak. Meclis'te ayrıca, Terörsüz Türkiye hedefinde yapılacak yasal düzenlemelere ilişkin adımlar atılacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/mecliste-yeni-haftanin-gundemi-universite-affi-ve-cocuk-suclulara-iliskin-duzenleme-952216.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            köy öğretmeni olmak: 'bu okulun müdürü, öğretmeni, her şeyi sensin'
+            türkiye'deki okulların üçte biri kırsal alanlarda bulunuyor. neredeyse her on öğrenciden biri bu okullarda okuyor. peki köy okulları neden önemli, öğretmenler neler yaşıyor? bbc türkçe araştırdı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Köy öğretmeni olmak: 'Bu okulun müdürü, öğretmeni, her şeyi sensin'</h3>
+                    <p>Türkiye'deki okulların üçte biri kırsal alanlarda bulunuyor. Neredeyse her on öğrenciden biri bu okullarda okuyor. Peki köy okulları neden önemli, öğretmenler neler yaşıyor? BBC Türkçe araştırdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/czrx0mlxy72o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özel liderliğindeki yeni parti yönetimi belirlendi: fezlekeli isimler pm dışında kaldı
+            chp'den istifa eden 91 milletvekiliyle kurulan yeni parti'de yönetim belirlendi. özgür özel genel başkan seçilirken, kurucu 90 milletvekilinden 80'i parti meclis'ine (pm) girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özel liderliğindeki Yeni Parti yönetimi belirlendi: Fezlekeli isimler PM dışında kaldı</h3>
+                    <p>CHP'den istifa eden 91 milletvekiliyle kurulan Yeni Parti'de yönetim belirlendi. Özgür Özel Genel Başkan seçilirken, kurucu 90 milletvekilinden 80'i Parti Meclis'ine (PM) girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gd0rryj0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti kuruldu, özgür özel genel başkan seçildi
+            özgür özel, yeni parti'nin ilk kurucular toplantısında genel başkan seçildi. özgür özel'in x hesabındaki unvanı da yeni parti genel başkanı olarak değişti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti kuruldu, Özgür Özel Genel Başkan seçildi</h3>
+                    <p>Özgür Özel, Yeni Parti'nin ilk kurucular toplantısında genel başkan seçildi. Özgür Özel'in X hesabındaki unvanı da Yeni Parti Genel Başkanı olarak değişti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0jlnyg5v8po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da kentsel dönüşüm kapsamındaki binanın balkonları ile duvarı çöktü
+            i̇stanbul'un kartal ilçesinde yıkım aşamasındaki binanın balkonları ile duvarında çökme meydana geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da kentsel dönüşüm kapsamındaki binanın balkonları ile duvarı çöktü</h3>
+                    <p>İstanbul'un Kartal ilçesinde yıkım aşamasındaki binanın balkonları ile duvarında çökme meydana geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-kentsel-donusum-kapsamindaki-binanin-balkonlari-ile-duvari-coktu-952215.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kastamonu'da sağanak hayatı olumsuz etkiledi
+            kastamonu'nun doğanyurt ve cide ilçesinde etkili olan sağanak birçok noktada su baskınlarına ve taşkınlara neden oldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kastamonu'da sağanak hayatı olumsuz etkiledi</h3>
+                    <p>Kastamonu'nun Doğanyurt ve Cide ilçesinde etkili olan sağanak birçok noktada su baskınlarına ve taşkınlara neden oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kastamonuda-saganak-hayati-olumsuz-etkiledi-952212.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rize'de 2 otomobilin çarpıştığı kazada 8 kişi yaralandı
+            rize'nin ardeşen ilçesinde iki otomobilin çarpıştığı kazada, 3'ü çocuk 8 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rize'de 2 otomobilin çarpıştığı kazada 8 kişi yaralandı</h3>
+                    <p>Rize'nin Ardeşen ilçesinde iki otomobilin çarpıştığı kazada, 3'ü çocuk 8 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/rizede-2-otomobilin-carpistigi-kazada-8-kisi-yaralandi-952211.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna i̇ran gemisine saldırdı
+            i̇ran dışişleri bakanlığı, ukrayna'nın hazar denizi'nde ülkelerine ait ticaret gemisine yönelik düzenlediği ve bir denizcinin hayatını kaybettiği saldırıyı kınadı. i̇ran'ın uluslararası hukuk gereği meşru müdafaa hakkının olduğu hatırlatıldı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ukrayna İran gemisine saldırdı</h3>
+                    <p>İran Dışişleri Bakanlığı, Ukrayna'nın Hazar Denizi'nde ülkelerine ait ticaret gemisine yönelik düzenlediği ve bir denizcinin hayatını kaybettiği saldırıyı kınadı. İran'ın uluslararası hukuk gereği meşru müdafaa hakkının olduğu hatırlatıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ukrayna-iran-gemisine-saldirdi-952209.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında dönemin tunceli valisinin eşi de tutuklandı
+            altı yıldır kayıp olan üniversite öğrencisi gülistan doku ile ilgili soruşturmada tutuklu bulunan dönemin tunceli valisi tuncay sonel'in telefonunda yapılan inceleme sonucu ankara'da iki kişi daha gözaltına alındı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Gülistan Doku soruşturmasında dönemin Tunceli valisinin eşi de tutuklandı</h3>
+                    <p>Altı yıldır kayıp olan üniversite öğrencisi Gülistan Doku ile ilgili soruşturmada tutuklu bulunan dönemin Tunceli valisi Tuncay Sonel'in telefonunda yapılan inceleme sonucu Ankara'da iki kişi daha gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn5n4x6dxqro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
