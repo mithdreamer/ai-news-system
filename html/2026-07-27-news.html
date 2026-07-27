@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-27 08:34</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj4k5l7pgdxo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>BM Genel Sekreteri Guterres'in Kıbrıs temaslarından yeni bir 'Annan Planı' çıkar mı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy8mez9g777o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Gülistan Doku soruşturmasında polislere operasyon: 18 gözaltı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/aile-kampi-etkinlikleri-duzenlenecek-952299.html" target="_blank">
+                <strong>Aile Kampı etkinlikleri düzenlenecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/turkiye/turkiyede-sicak-hava-dalgalarinin-siddeti-son-75-yilin-zirvesine-cikti-952298.html" target="_blank">
+                <strong>Türkiye'de sıcak hava dalgalarının şiddeti son 75 yılın zirvesine çıktı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/abd-buyukelcisi-trump-diplomatik-gorusmelere-alan-acmak-icin-irana-saldirilari-durdurdu-952291.html" target="_blank">
+                <strong>ABD Büyükelçisi: Trump, diplomatik görüşmelere alan açmak için İran'a saldırıları durdurdu</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bm genel sekreteri guterres'in kıbrıs temaslarından yeni bir 'annan planı' çıkar mı?
+            bm genel sekreteri antonio guterres, 27-29 temmuz günlerinde kıbrıs cumhuriyeti'ne resmi bir ziyaret düzenliyor. kıbrıs sorununun çözümü için yeni bir süreci başlatma konusunda istekli olan guterres'in bu ziyaretinde kıbrıs rum ve kıbrıs türk taraflarıyla bir araya gelmesi ve üçlü bir toplantı gerçekleştirmesi bekleniyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>BM Genel Sekreteri Guterres'in Kıbrıs temaslarından yeni bir 'Annan Planı' çıkar mı?</h3>
+                    <p>BM Genel Sekreteri Antonio Guterres, 27-29 Temmuz günlerinde Kıbrıs Cumhuriyeti'ne resmi bir ziyaret düzenliyor. Kıbrıs sorununun çözümü için yeni bir süreci başlatma konusunda istekli olan Guterres'in bu ziyaretinde Kıbrıs Rum ve Kıbrıs Türk taraflarıyla bir araya gelmesi ve üçlü bir toplantı gerçekleştirmesi bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj4k5l7pgdxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de sıcak hava dalgalarının şiddeti son 75 yılın zirvesine çıktı
+            i̇stanbul teknik üniversitesi (i̇tü) araştırmacılarının avrupa yerbilimleri birliği (egu) konferansı'nda sunulan çalışması, türkiye'de sıcak hava dalgalarının şiddetinin son yıllarda belirgin şekilde arttığını, özellikle 2023 ve 2025 yazlarının son 75 yılın en güçlü sıcak hava dalgalarına sahne olduğunu ortaya koydu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'de sıcak hava dalgalarının şiddeti son 75 yılın zirvesine çıktı</h3>
+                    <p>İstanbul Teknik Üniversitesi (İTÜ) araştırmacılarının Avrupa Yerbilimleri Birliği (EGU) Konferansı'nda sunulan çalışması, Türkiye'de sıcak hava dalgalarının şiddetinin son yıllarda belirgin şekilde arttığını, özellikle 2023 ve 2025 yazlarının son 75 yılın en güçlü sıcak hava dalgalarına sahne olduğunu ortaya koydu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/turkiyede-sicak-hava-dalgalarinin-siddeti-son-75-yilin-zirvesine-cikti-952298.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd büyükelçisi: trump, diplomatik görüşmelere alan açmak için i̇ran'a saldırıları durdurdu
+            abd'nin birleşmiş milletler (bm) daimi temsilcisi mike waltz, abd başkanı donald trump'ın diplomasiye daha fazla zaman tanımak amacıyla i̇ran'a yönelik saldırıları üst üste ikinci gecede de durdurduğunu belirtti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD Büyükelçisi: Trump, diplomatik görüşmelere alan açmak için İran'a saldırıları durdurdu</h3>
+                    <p>ABD'nin Birleşmiş Milletler (BM) Daimi Temsilcisi Mike Waltz, ABD Başkanı Donald Trump'ın diplomasiye daha fazla zaman tanımak amacıyla İran'a yönelik saldırıları üst üste ikinci gecede de durdurduğunu belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-buyukelcisi-trump-diplomatik-gorusmelere-alan-acmak-icin-irana-saldirilari-durdurdu-952291.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ölmek üzere olan babamın hayalini gerçekleştirmek için atlantik okyanusu'nu iki yüzen arabayla geçtik
+            i̇ki genç i̇talyan, ölmek üzere olan babalarının son hayalini gerçekleştirmek için yüzen arabalarla atlantik okyanusu'nu geçmeye çalıştı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ölmek üzere olan babamın hayalini gerçekleştirmek için Atlantik Okyanusu'nu iki yüzen arabayla geçtik</h3>
+                    <p>İki genç İtalyan, ölmek üzere olan babalarının son hayalini gerçekleştirmek için yüzen arabalarla Atlantik Okyanusu'nu geçmeye çalıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2mv115lyvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ve i̇ran karşılıklı saldırıları durdurdu mu?
+            abd'nin birleşmiş milletler büyükelçisi, başkan trump'ın diplomasiye daha fazla alan tanımak amacıyla i̇ran'a yönelik saldırıları durdurduğunu belirtti. reuters'a konuşan i̇ranlı bir yetkili de abd saldırılara ara verdiği sürece i̇ran'ın da saldırılarını durduracağını söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ve İran karşılıklı saldırıları durdurdu mu?</h3>
+                    <p>ABD'nin Birleşmiş Milletler Büyükelçisi, Başkan Trump'ın diplomasiye daha fazla alan tanımak amacıyla İran'a yönelik saldırıları durdurduğunu belirtti. Reuters'a konuşan İranlı bir yetkili de ABD saldırılara ara verdiği sürece İran'ın da saldırılarını durduracağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgvp3e2dgeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mtv ödemelerinde süre daralıyor: son 5 gün
+            motorlu taşıtlar vergisinin (mtv) ikinci taksit ödemeleri için süre daralıyor. ödemeler cuma günü sona eriyor. peki, mtv nereden ve nasıl yatırılabiliyor?
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>MTV ödemelerinde süre daralıyor: Son 5 gün</h3>
+                    <p>Motorlu Taşıtlar Vergisinin (MTV) ikinci taksit ödemeleri için süre daralıyor. Ödemeler cuma günü sona eriyor. Peki, MTV nereden ve nasıl yatırılabiliyor?</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/mtv-odemelerinde-sure-daraliyor-son-5-gun-952295.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap derneği soruşturmasında 5 isim daha ifadeye çağırıldı
+            i̇stanbul cumhuriyet başsavcılığınca yürütülen ahbaplar suç örgütü soruşturması kapsamında uğur dündar, mahsun kırmızıgül, gülben ergen, elçin sangu ve hayko cepkin ifadeye çağırıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ahbap Derneği soruşturmasında 5 isim daha ifadeye çağırıldı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığınca yürütülen Ahbaplar suç örgütü soruşturması kapsamında Uğur Dündar, Mahsun Kırmızıgül, Gülben Ergen, Elçin Sangu ve Hayko Cepkin ifadeye çağırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ahbap-dernegi-sorusturmasinda-5-isim-daha-ifadeye-cagirildi-952294.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında polislere operasyon: 18 gözaltı
+            adalet bakanı akın gürlek, gülistan doku'nun kaybolmasına dair soruşturmada 18 kişinin gözaltına alındığını açıkladı. soruşturmayı yürüten erzurum başsavcılığı gözaltına alınanlar arasında bir emniyet müdürü, bir emniyet amiri, bir başkomiser, bir komiser, bir başpolis memuru, 10 polis memuru, bir bilgisayar işletmeni ve üç emekli polis memuru olduğunu duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gülistan Doku soruşturmasında polislere operasyon: 18 gözaltı</h3>
+                    <p>Adalet Bakanı Akın Gürlek, Gülistan Doku'nun kaybolmasına dair soruşturmada 18 kişinin gözaltına alındığını açıkladı. Soruşturmayı yürüten Erzurum Başsavcılığı gözaltına alınanlar arasında bir emniyet müdürü, bir emniyet amiri, bir başkomiser, bir komiser, bir başpolis memuru, 10 polis memuru, bir bilgisayar işletmeni ve üç emekli polis memuru olduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy8mez9g777o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aile kampı etkinlikleri düzenlenecek
+            tarım ve orman bakanı i̇brahim yumaklı, ailelerin doğayla bağlarını güçlendirmek, çocuklarda doğa sevgisi ve çevre bilinci oluşturmak amacıyla 8 ağustos'ta 81 ilde eş zamanlı "aile kampı" etkinlikleri düzenleneceğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Aile Kampı etkinlikleri düzenlenecek</h3>
+                    <p>Tarım ve Orman Bakanı İbrahim Yumaklı, ailelerin doğayla bağlarını güçlendirmek, çocuklarda doğa sevgisi ve çevre bilinci oluşturmak amacıyla 8 Ağustos'ta 81 ilde eş zamanlı "Aile Kampı" etkinlikleri düzenleneceğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/aile-kampi-etkinlikleri-duzenlenecek-952299.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp törenine 'figüran taşındı' iddiasıyla ilgili soruşturma başlatıldı
+            i̇stanbul cumhuriyet başsavcılığı, birgün gazetesinin chp'nin 25 temmuz'daki üye katılım törenine "cast ajanslarından yüzlerce figüranın para karşılığında taşındığı" haberinin ardından soruşturma başlattı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP törenine 'figüran taşındı' iddiasıyla ilgili soruşturma başlatıldı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı, Birgün gazetesinin CHP'nin 25 Temmuz'daki üye katılım törenine "cast ajanslarından yüzlerce figüranın para karşılığında taşındığı" haberinin ardından soruşturma başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c998pp41130o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa ve i̇spanya'da orman yangınları devam ediyor: 330 bin kişiye tahliye
+            fransa ve i̇spanya'da orman yangınları nedeniyle yüz binlerce kişi tahliye edildi. i̇spanya hükümeti madrid ve komşu avila'da ulusal acil durum ilan etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa ve İspanya'da orman yangınları devam ediyor: 330 bin kişiye tahliye</h3>
+                    <p>Fransa ve İspanya'da orman yangınları nedeniyle yüz binlerce kişi tahliye edildi. İspanya hükümeti Madrid ve komşu Avila'da ulusal acil durum ilan etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında 18 yeni gözaltı
+            tunceli'de 5 ocak 2020'den beri haber alınamayan üniversite öğrencisi gülistan doku ile ilgili soruşturma kapsamında 18 şüpheli daha gözaltına alındı. gözaltına alınanlar arasında emniyet müdürü, emniyet amiri, başkomiser, komiser, başpolis, 10 polis memuru, bilgisayar işletmeni ve 3 emekli polis memuru da bulunuyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gülistan Doku soruşturmasında 18 yeni gözaltı</h3>
+                    <p>Tunceli'de 5 Ocak 2020'den beri haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgili soruşturma kapsamında 18 şüpheli daha gözaltına alındı. Gözaltına alınanlar arasında emniyet müdürü, emniyet amiri, başkomiser, komiser, başpolis, 10 polis memuru, bilgisayar işletmeni ve 3 emekli polis memuru da bulunuyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/gulistan-doku-sorusturmasinda-18-yeni-gozalti-952296.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suriye lideri şara: 'i̇srail ile güvenlik anlaşması yapmaya çalışıyoruz'
+            suriye lideri el cezire'ye verdiği röportajda i̇srail ile güvenlik anlaşmasından lübnan'a askeri müdahale söylentilerine gündeme ilişkin sorulara yanıt verdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suriye lideri Şara: 'İsrail ile güvenlik anlaşması yapmaya çalışıyoruz'</h3>
+                    <p>Suriye lideri El Cezire'ye verdiği röportajda İsrail ile güvenlik anlaşmasından Lübnan'a askeri müdahale söylentilerine gündeme ilişkin sorulara yanıt verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1l1m2n138go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kim jong un'un 'tek idol' olduğu kuzey kore'de k-pop'u keşfedenler
+            k-pop, ağır cezalara rağmen kuzey kore’nin duvarlarını aşarak gençlere dış dünyaya açılan bir pencere ve özgür bir yaşam umudu sunuyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kim Jong Un'un 'tek idol' olduğu Kuzey Kore'de K-pop'u keşfedenler</h3>
+                    <p>K-pop, ağır cezalara rağmen Kuzey Kore’nin duvarlarını aşarak gençlere dış dünyaya açılan bir pencere ve özgür bir yaşam umudu sunuyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0n8xyklqqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filistinliler, i̇srailli yerleşimcilerin batı şeria'da camileri, arabaları ve tarım arazilerini ateşe verdiğini anlatıyor
+            son saldırılar, yerleşimciler ve filistinliler arasında tal köyü yakınlarında çıkan ve dört filistinli ile iki i̇sraillinin ölümüne yol açan çatışmadan iki gün sonra gerçekleşti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Filistinliler, İsrailli yerleşimcilerin Batı Şeria'da camileri, arabaları ve tarım arazilerini ateşe verdiğini anlatıyor</h3>
+                    <p>Son saldırılar, yerleşimciler ve Filistinliler arasında Tal köyü yakınlarında çıkan ve dört Filistinli ile iki İsraillinin ölümüne yol açan çatışmadan iki gün sonra gerçekleşti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp3r161l9kko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filenin sultanları şampiyon oldu
+            a milli kadın voleybol takımı, 2026 fivb milletler ligi (vnl) final maçında brezilya'yı 3-1 mağlup ederek şampiyon oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Filenin Sultanları şampiyon oldu</h3>
+                    <p>A Milli Kadın Voleybol Takımı, 2026 FIVB Milletler Ligi (VNL) final maçında Brezilya'yı 3-1 mağlup ederek şampiyon oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c23y5yjpzr0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kades'i indiren kadınların sayısı 10 milyona yaklaştı
+            kadınların tehdit anında tek dokunuşla güvenlik birimlerine ulaşmasını sağlayan kadın destek uygulaması (kades) 9 milyon 859 bin 147 kez indirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>KADES'i indiren kadınların sayısı 10 milyona yaklaştı</h3>
+                    <p>Kadınların tehdit anında tek dokunuşla güvenlik birimlerine ulaşmasını sağlayan Kadın Destek Uygulaması (KADES) 9 milyon 859 bin 147 kez indirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kadesi-indiren-kadinlarin-sayisi-10-milyona-yaklasti-952297.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akıntıyla sürüklenen bottaki 15 yaşındaki çocuk kurtarıldı
+            bursa'nın mudanya ilçesinde kontrolden çıkarak sürüklenen bottaki 15 yaşlarındaki çocuk, sahil güvenlik ekiplerince kurtarıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Akıntıyla sürüklenen bottaki 15 yaşındaki çocuk kurtarıldı</h3>
+                    <p>Bursa'nın Mudanya ilçesinde kontrolden çıkarak sürüklenen bottaki 15 yaşlarındaki çocuk, Sahil Güvenlik ekiplerince kurtarıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/akintiyla-suruklenen-bottaki-15-yasindaki-cocuk-kurtarildi-952292.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            barajlarda son yılların en yüksek su seviyesi
+            türkiye genelindeki barajlı santrallere gelen toplam su miktarı geçen yılın aynı dönemine göre yüzde 140 artışla 72,5 milyar metreküpe yükseldi. yılın ilk yarısında hidroelektrik üretimi 57 milyar kilovatsaate çıkarak rekor kırarken elektrik üretiminde hes'lerin payı yüzde 32'yi aştı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Barajlarda son yılların en yüksek su seviyesi</h3>
+                    <p>Türkiye genelindeki barajlı santrallere gelen toplam su miktarı geçen yılın aynı dönemine göre yüzde 140 artışla 72,5 milyar metreküpe yükseldi. Yılın ilk yarısında hidroelektrik üretimi 57 milyar kilovatsaate çıkarak rekor kırarken elektrik üretiminde HES'lerin payı yüzde 32'yi aştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/barajlarda-son-yillarin-en-yuksek-su-seviyesi-952300.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bist 100 endeksi yeni haftaya 14.028,40 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, haftaya yüzde 0,61 yükselişle 14.028,40 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>BIST 100 endeksi yeni haftaya 14.028,40 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, haftaya yüzde 0,61 yükselişle 14.028,40 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/bist-100-endeksi-yeni-haftaya-1402840-puandan-basladi-952293.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
