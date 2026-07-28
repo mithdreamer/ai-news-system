@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-28 07:41</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c4g6k35p34yo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran Savaşı'nda kaç ABD askeri öldü, kaçı yaralandı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-kurumdan-manavgat-paylasimi-milletimizin-yaralarini-sardik-952373.html" target="_blank">
+                <strong>Bakan Kurum'dan 'Manavgat' paylaşımı: Milletimizin yaralarını sardık</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn8ng0d0q6wo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AB süreci tıkanan Türkiye Avrupa ile ikili ilişkilere odaklanıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/temmuzda-1588-milyon-liralik-dogal-gaz-destegi-952378.html" target="_blank">
+                <strong>Temmuzda 158,8 milyon liralık doğal gaz desteği</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/gibin-planli-bakim-calismasi-tum-beyannameleri-kapsamiyor-952375.html" target="_blank">
+                <strong>GİB'in planlı bakım çalışması tüm beyannameleri kapsamıyor</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran savaşı'nda kaç abd askeri öldü, kaçı yaralandı?
+            abd savunma bakanlığı pentagon'un 25 temmuz'daki son güncellemesine göre, başkan donald trump'ın şubat ayında i̇ran'a yönelik saldırı emri vermesinden bu yana en az 624 abd askeri personeli yaralandı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Savaşı'nda kaç ABD askeri öldü, kaçı yaralandı?</h3>
+                    <p>ABD Savunma Bakanlığı Pentagon'un 25 Temmuz'daki son güncellemesine göre, Başkan Donald Trump'ın şubat ayında İran'a yönelik saldırı emri vermesinden bu yana en az 624 ABD askeri personeli yaralandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g6k35p34yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ab süreci tıkanan türkiye avrupa ile ikili ilişkilere odaklanıyor
+            avrupa birliği'ne katılım süreci tıkanan ve birliğin yeni savunma girişimlerinin dışında bırakılan türkiye, avrupa ülkeleriyle ikili ilişkilerini derinleştirme stratejisine yönelmiş görünüyor. bbc'nin medya izleme servisi bbc monitoring, türkiye'nin avrupa ülkeleri ile son yıllarda yaptığı anlaşmaları inceledi, bu süreci uzmanlara yorumlattı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>AB süreci tıkanan Türkiye Avrupa ile ikili ilişkilere odaklanıyor</h3>
+                    <p>Avrupa Birliği'ne katılım süreci tıkanan ve birliğin yeni savunma girişimlerinin dışında bırakılan Türkiye, Avrupa ülkeleriyle ikili ilişkilerini derinleştirme stratejisine yönelmiş görünüyor. BBC'nin medya izleme servisi BBC Monitoring, Türkiye'nin Avrupa ülkeleri ile son yıllarda yaptığı anlaşmaları inceledi, bu süreci uzmanlara yorumlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn8ng0d0q6wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gi̇b'in planlı bakım çalışması tüm beyannameleri kapsamıyor
+            gelir i̇daresi başkanlığı (gi̇b), beyanname sisteminde 1-3 ağustos'ta sadece muhtasar ve prim hizmet beyannamesi için hizmet kesintisi yapılacağını, diğer tüm beyannameler için sistemin kesintisiz hizmet vermeye devam edeceğini belirtildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>GİB'in planlı bakım çalışması tüm beyannameleri kapsamıyor</h3>
+                    <p>Gelir İdaresi Başkanlığı (GİB), beyanname sisteminde 1-3 Ağustos'ta sadece muhtasar ve prim hizmet beyannamesi için hizmet kesintisi yapılacağını, diğer tüm beyannameler için sistemin kesintisiz hizmet vermeye devam edeceğini belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gibin-planli-bakim-calismasi-tum-beyannameleri-kapsamiyor-952375.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bağlanma kuramı flört dünyasını yeniden şekillendiriyor
+            bağlanma kuramı şu sıralar her yerde, peki bu kuram nedir ve ilişkilerinizi geliştirmek için nasıl kullanabilirsiniz?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bağlanma kuramı flört dünyasını yeniden şekillendiriyor</h3>
+                    <p>Bağlanma kuramı şu sıralar her yerde, peki bu kuram nedir ve ilişkilerinizi geliştirmek için nasıl kullanabilirsiniz?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdrv5g20lx5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan f-35 çıkışı: 'kimse bana ne satıp satmamamız gerektiğini söyleyemez'
+            abd başkanı donald trump, i̇srail başbakanı netanyahu'nun, abd'nin türkiye'ye f-35 satışına karşı çıkması konusunda, "kimse bana kime neyi satıp satmamamız gerektiğini söyleyemez" dedi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump'tan F-35 çıkışı: 'Kimse bana ne satıp satmamamız gerektiğini söyleyemez'</h3>
+                    <p>ABD Başkanı Donald Trump, İsrail Başbakanı Netanyahu'nun, ABD'nin Türkiye'ye F-35 satışına karşı çıkması konusunda, "Kimse bana kime neyi satıp satmamamız gerektiğini söyleyemez" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            diyanet'ten hacı adaylarına uyarı
+            diyanet i̇şleri başkanlığı, hacı adaylarının vize alabilmeleri için pasaport geçerlilik süresinin en az 20 kasım 2027'ye kadar olması gerektiğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Diyanet'ten hacı adaylarına uyarı</h3>
+                    <p>Diyanet İşleri Başkanlığı, hacı adaylarının vize alabilmeleri için pasaport geçerlilik süresinin en az 20 Kasım 2027'ye kadar olması gerektiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/diyanetten-haci-adaylarina-uyari-952377.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin wisconsin eyaletindeki kasırga nedeniyle 30 binden fazla ev elektriksiz kaldı
+            abd'nin wisconsin eyaletinde etkili olan kasırga, 30 binden fazla evde elektrik kesintisine yol açtı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin Wisconsin eyaletindeki kasırga nedeniyle 30 binden fazla ev elektriksiz kaldı</h3>
+                    <p>ABD'nin Wisconsin eyaletinde etkili olan kasırga, 30 binden fazla evde elektrik kesintisine yol açtı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdnin-wisconsin-eyaletindeki-kasirga-nedeniyle-30-binden-fazla-ev-elektriksiz-kaldi-952380.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kurum'dan 'manavgat' paylaşımı: milletimizin yaralarını sardık
+            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, 2021 manavgat yangınının yıl dönümünde hayatını kaybedenleri anarak, "devlet olarak yaraları sardık. 1 yılda yaptığımız yuvalarda şimdi huzur var" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Kurum'dan 'Manavgat' paylaşımı: Milletimizin yaralarını sardık</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, 2021 Manavgat yangınının yıl dönümünde hayatını kaybedenleri anarak, "Devlet olarak yaraları sardık. 1 yılda yaptığımız yuvalarda şimdi huzur var" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-kurumdan-manavgat-paylasimi-milletimizin-yaralarini-sardik-952373.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            temmuzda 158,8 milyon liralık doğal gaz desteği
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, düzenli doğal gaz tüketim desteği kapsamında 2026 yılı temmuz döneminde 504 bin 638 hak sahibine toplam 158 milyon 836 bin lira ödeme yapıldığını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Temmuzda 158,8 milyon liralık doğal gaz desteği</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, Düzenli Doğal Gaz Tüketim Desteği kapsamında 2026 yılı temmuz döneminde 504 bin 638 hak sahibine toplam 158 milyon 836 bin lira ödeme yapıldığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/temmuzda-1588-milyon-liralik-dogal-gaz-destegi-952378.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'ateş bulutları' ve 'yangın fırtınaları': orman yangınları nasıl daha ölümcül hale geliyor?
+            bazı şiddetli orman yangınları, nasa'nın "ateş püsküren bulut ejderhası" olarak adlandırdığı pirokümülonimbus bulutlarının oluşmasına neden oluyor. bu da yangınlarla mücadeleyi daha da güçleştiriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Ateş bulutları' ve 'yangın fırtınaları': Orman yangınları nasıl daha ölümcül hale geliyor?</h3>
+                    <p>Bazı şiddetli orman yangınları, NASA'nın "ateş püsküren bulut ejderhası" olarak adlandırdığı pirokümülonimbus bulutlarının oluşmasına neden oluyor. Bu da yangınlarla mücadeleyi daha da güçleştiriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c07r1kndxjgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            irak'ın yeni başbakanı türkiye'ye gidiyor: gündemdeki konular neler?
+            irak’ın yeni başbakanı ali zeydi, göreve gelmesinin ardından üçüncü yurt dışını ziyaretini türkiye’ye gerçekleştirecek. ziyarette öne çıkması beklenen konuları inceledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Irak'ın yeni başbakanı Türkiye'ye gidiyor: Gündemdeki konular neler?</h3>
+                    <p>Irak’ın yeni Başbakanı Ali Zeydi, göreve gelmesinin ardından üçüncü yurt dışını ziyaretini Türkiye’ye gerçekleştirecek. Ziyarette öne çıkması beklenen konuları inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgwn29yqjyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli'den kılıçdaroğlu ve özel'e çağrı: 'siyasi mücadele şahsi hesaplaşmanın dışına çıkarılmalı'
+            mhp lideri devlet bahçeli, cumhuriyet halk partisi lideri kemal kılıçdaroğlu ve yeni parti lideri özgür özel'e iki parti arasındaki tartışmaları "türkiye'nin ana gündem maddesi haline getirmeme" çağrısı yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahçeli'den Kılıçdaroğlu ve Özel'e çağrı: 'Siyasi mücadele şahsi hesaplaşmanın dışına çıkarılmalı'</h3>
+                    <p>MHP lideri Devlet Bahçeli, Cumhuriyet Halk Partisi lideri Kemal Kılıçdaroğlu ve Yeni Parti lideri Özgür Özel'e iki parti arasındaki tartışmaları "Türkiye'nin ana gündem maddesi haline getirmeme" çağrısı yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2dked68g93o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa ve i̇spanya'da orman yangınları devam ediyor: 'söndürmek aylar sürebilir'
+            fransa ulusal i̇tfaiye federasyonu sözcüsü david annotel yangının haftalarca süreceğini tahmin ettiklerini, tam anlamıyla söndürülmesinin ise aylar alacağını söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa ve İspanya'da orman yangınları devam ediyor: 'Söndürmek aylar sürebilir'</h3>
+                    <p>Fransa Ulusal İtfaiye Federasyonu Sözcüsü David Annotel yangının haftalarca süreceğini tahmin ettiklerini, tam anlamıyla söndürülmesinin ise aylar alacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kamu kurumlarının kişisel veri paylaşımına kvkk düzenlemesi
+            kvkk, kamu tüzel kişiliğini haiz veri sorumlularının internet ortamında kişisel veri paylaşımına ilişkin ilke kararı aldı. kararda, internet ortamında yayımlanan belgelerde amacın gerektirmediği kişisel verilere yer verilmemesi, gerekli teknik ve idari tedbirlerin alınması gerektiği belirtildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kamu kurumlarının kişisel veri paylaşımına KVKK düzenlemesi</h3>
+                    <p>KVKK, kamu tüzel kişiliğini haiz veri sorumlularının internet ortamında kişisel veri paylaşımına ilişkin ilke kararı aldı. Kararda, internet ortamında yayımlanan belgelerde amacın gerektirmediği kişisel verilere yer verilmemesi, gerekli teknik ve idari tedbirlerin alınması gerektiği belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kamu-kurumlarinin-kisisel-veri-paylasimina-kvkk-duzenlemesi-952381.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ahbap derneği'ne kayyum atandı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında ahbap derneği'ne kayyum atandı. derneğin tüm mal varlığının idare yetkisi kayyum yönetimine devredildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahbap Derneği'ne kayyum atandı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Ahbap Derneği'ne kayyum atandı. Derneğin tüm mal varlığının idare yetkisi kayyum yönetimine devredildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c934g0n55p9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın fiyatlarında son durum
+            gram altın, güne düşüşle başlamasının ardından 6 bin 169 liradan işlem görüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın fiyatlarında son durum</h3>
+                    <p>Gram altın, güne düşüşle başlamasının ardından 6 bin 169 liradan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-fiyatlarinda-son-durum-952376.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            14 ilde narko kapan operasyonu: 382 gözaltı
+            gaziantep merkezli 14 ilde düzenlenen “narko kapan" operasyonunda şu ana kadar 382 şüpheli gözaltına alınırken 4’ü yurt dışında firari olmak üzere kalan 91 şüpheliye yönelik işlemler sürüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>14 ilde Narko Kapan operasyonu: 382 gözaltı</h3>
+                    <p>Gaziantep merkezli 14 ilde düzenlenen “Narko Kapan" operasyonunda şu ana kadar 382 şüpheli gözaltına alınırken 4’ü yurt dışında firari olmak üzere kalan 91 şüpheliye yönelik işlemler sürüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/14-ilde-narko-kapan-operasyonu-382-gozalti-952372.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakanlıktan tüketicilere servis ücreti uyarısı
+            ticaret bakanlığı, vatandaşların alışveriş ve hizmet alma süreçlerinde sık karşılaşabilecekleri uygulamalara ilişkin temel hususlara yönelik hatırlatmada bulunarak, restoran, kafe ve benzeri işletmelerde servis, masa, kuver ücreti veya benzeri adlarla, fiyat listesinde yer almayan ilave ücretin talep edilemeyeceğini açıkladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakanlıktan tüketicilere servis ücreti uyarısı</h3>
+                    <p>Ticaret Bakanlığı, vatandaşların alışveriş ve hizmet alma süreçlerinde sık karşılaşabilecekleri uygulamalara ilişkin temel hususlara yönelik hatırlatmada bulunarak, restoran, kafe ve benzeri işletmelerde servis, masa, kuver ücreti veya benzeri adlarla, fiyat listesinde yer almayan ilave ücretin talep edilemeyeceğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/bakanliktan-tuketicilere-servis-ucreti-uyarisi-952374.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            johnson & johnson'dan bebek pudrası davalarına 5.5 milyar dolar tazminat teklifi
+            önerilen anlaşma, talk pudrası ürünlerinin kansere neden olduğu iddiaları üzerine yıllardır süren hukuki mücadeleyi sona erdirmeyi amaçlıyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Johnson & Johnson'dan bebek pudrası davalarına 5.5 milyar dolar tazminat teklifi</h3>
+                    <p>Önerilen anlaşma, talk pudrası ürünlerinin kansere neden olduğu iddiaları üzerine yıllardır süren hukuki mücadeleyi sona erdirmeyi amaçlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyjgg8zvmro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa güne 13.786,47 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,08 yükselişle 13.786,47 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa güne 13.786,47 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,08 yükselişle 13.786,47 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gune-1378647-puandan-basladi-952379.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
