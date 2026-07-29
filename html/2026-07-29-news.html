@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-29 07:45</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cd692e29d6xo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Prestijli Booker Ödülü listesine giren yazar Kenan Orhan kimdir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5yd84778d8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Japonya'daki depremde en az 13 kişi hayatını kaybetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/kultur-sanat/malazgirtin-955-yillik-sirri-cozuluyor-952477.html" target="_blank">
+                <strong>Malazgirt'in 955 yıllık sırrı çözülüyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/cinden-abdnin-cinli-arastirma-kurumlarini-ozel-izleme-listesine-alma-kararina-tepki-952469.html" target="_blank">
+                <strong>Çin'den ABD'nin Çinli araştırma kurumlarını özel izleme listesine alma kararına tepki</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cpq8ey2p7vgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye'den vize isteyen ve istemeyen ülkeler hangileri?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            prestijli booker ödülü listesine giren yazar kenan orhan kimdir?
+            edebiyat dünyasının en prestijli ödüllerinden biri olarak kabul edilen booker ödülü için 13 yazarın yer aldığı uzun liste açıklandı. türk-amerikan yazar kenan orhan ilk romanı the renovation ile listede yer alıyor. roman, türkiye'den i̇talya'ya göç etmiş bir kadının hikâyesi üzerinden sürgün, hafıza ve siyaset temalarını ele alıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Prestijli Booker Ödülü listesine giren yazar Kenan Orhan kimdir?</h3>
+                    <p>Edebiyat dünyasının en prestijli ödüllerinden biri olarak kabul edilen Booker Ödülü için 13 yazarın yer aldığı uzun liste açıklandı. Türk-Amerikan yazar Kenan Orhan ilk romanı The Renovation ile listede yer alıyor. Roman, Türkiye'den İtalya'ya göç etmiş bir kadının hikâyesi üzerinden sürgün, hafıza ve siyaset temalarını ele alıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd692e29d6xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çin'den abd'nin çinli araştırma kurumlarını özel izleme listesine alma kararına tepki
+            çin, abd savunma bakanlığının (pentagon), bazı araştırma merkezlerini özel izleme listesine almasına tepki göstererek, çinli kurumların hak ve çıkarlarını korumak için gerekli tedbirlerin alınacağını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Çin'den ABD'nin Çinli araştırma kurumlarını özel izleme listesine alma kararına tepki</h3>
+                    <p>Çin, ABD Savunma Bakanlığının (Pentagon), bazı araştırma merkezlerini özel izleme listesine almasına tepki göstererek, Çinli kurumların hak ve çıkarlarını korumak için gerekli tedbirlerin alınacağını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/cinden-abdnin-cinli-arastirma-kurumlarini-ozel-izleme-listesine-alma-kararina-tepki-952469.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'den vize isteyen ve istemeyen ülkeler hangileri?
+            karadağ'ın ekim 2026'dan itibaren türk vatandaşlarından vize istemeye başlayacağını açıklamasıyla birlikte, türk pasaportuyla avrupa'da vizesiz gidilebilen ülke sayısı 10'a düşecek. peki türk vatandaşları dünya genelinde hangi ülkeleri vizesiz gezebiliyor? haritalarla aktarıyoruz.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'den vize isteyen ve istemeyen ülkeler hangileri?</h3>
+                    <p>Karadağ'ın Ekim 2026'dan itibaren Türk vatandaşlarından vize istemeye başlayacağını açıklamasıyla birlikte, Türk pasaportuyla Avrupa'da vizesiz gidilebilen ülke sayısı 10'a düşecek. Peki Türk vatandaşları dünya genelinde hangi ülkeleri vizesiz gezebiliyor? Haritalarla aktarıyoruz.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cpq8ey2p7vgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ve i̇ran arasında kısa süreliğine duran saldırılar yeniden başladı
+            abd ordusu, i̇ran'ın "sürpriz bir saldırı girişimi" kapsamında ortadoğu'daki amerikan güçlerine "çok sayıda" balistik füze fırlattığını açıkladı. saldırıyla birlikte çatışmalardaki kısa süreli duraklama sona erdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ve İran arasında kısa süreliğine duran saldırılar yeniden başladı</h3>
+                    <p>ABD ordusu, İran'ın "sürpriz bir saldırı girişimi" kapsamında Ortadoğu'daki Amerikan güçlerine "çok sayıda" balistik füze fırlattığını açıkladı. Saldırıyla birlikte çatışmalardaki kısa süreli duraklama sona erdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgvp3e2dgeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa için geri sayım: 'gelecek hafta yasalaşabilir'
+            akp'nin "terörsüz türkiye" adını verdiği süreç kapsamında hazırlanan çerçeve yasa teklifinde çalışmalar son aşamaya geldi. i̇ktidar partisi, yasa teklifi taslağını hafta sonuna kadar tamamlamayı, ardından teklif meclis'e sunulmadan önce siyasi partilerle paylaşmayı planlıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Çerçeve yasa için geri sayım: 'Gelecek hafta yasalaşabilir'</h3>
+                    <p>AKP'nin "Terörsüz Türkiye" adını verdiği süreç kapsamında hazırlanan çerçeve yasa teklifinde çalışmalar son aşamaya geldi. İktidar partisi, yasa teklifi taslağını hafta sonuna kadar tamamlamayı, ardından teklif Meclis'e sunulmadan önce siyasi partilerle paylaşmayı planlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4rndrw57o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp töreninde 'figüran' haberi için muhabir ebru çelik ifadeye çağrıldı
+            i̇stanbul cumhuriyet başsavcılığı, birgün gazetesinin chp'nin 25 temmuz'daki üye katılım törenine "cast ajanslarından yüzlerce figüranın para karşılığında taşındığı" haberinin ardından soruşturma başlattı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>CHP töreninde 'figüran' haberi için muhabir Ebru Çelik ifadeye çağrıldı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı, Birgün gazetesinin CHP'nin 25 Temmuz'daki üye katılım törenine "cast ajanslarından yüzlerce figüranın para karşılığında taşındığı" haberinin ardından soruşturma başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c998pp41130o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hac kesin kayıtları yarın başlıyor
+            önümüzdeki yıl kutsal topraklara gidecek hacı adaylarının kesin kayıt işlemi yarın başlıyor. kayıt işlemleri 18 ağustos'a kadar e-devlet'ten yapılacak. hacı adaylarının vize alabilmeleri için pasaportlarının en az 20 kasım 2027'ye kadar geçerli olması gerekiyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hac kesin kayıtları yarın başlıyor</h3>
+                    <p>Önümüzdeki yıl kutsal topraklara gidecek hacı adaylarının kesin kayıt işlemi yarın başlıyor. Kayıt işlemleri 18 Ağustos'a kadar e-Devlet'ten yapılacak. Hacı adaylarının vize alabilmeleri için pasaportlarının en az 20 Kasım 2027'ye kadar geçerli olması gerekiyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/hac-kesin-kayitlari-yarin-basliyor-952472.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            japonya'daki depremde en az 13 kişi hayatını kaybetti
+            japonya'nın güneyindeki kumamoto'da meydana gelen deprem nedeniyle çöken alışveriş merkezinde en az 13 kişinin hayatını kaybettiği açıklandı. başbakan sanae takaichi, depremde hayatını kaybedenlerin sayısının 13'e yükseldiğini duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Japonya'daki depremde en az 13 kişi hayatını kaybetti</h3>
+                    <p>Japonya'nın güneyindeki Kumamoto'da meydana gelen deprem nedeniyle çöken alışveriş merkezinde en az 13 kişinin hayatını kaybettiği açıklandı. Başbakan Sanae Takaichi, depremde hayatını kaybedenlerin sayısının 13'e yükseldiğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yd84778d8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            doğum yardımı ödemeleri hesaplara yatırıldı
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, temmuz ayı doğum yardımı ödemelerinin bugün itibarıyla annelerin hesaplarına yatırıldığını duyurdu. doğum yardımlarından bugüne kadar toplam 1 milyon 201 bin 173 çocuk faydalandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Doğum yardımı ödemeleri hesaplara yatırıldı</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, temmuz ayı doğum yardımı ödemelerinin bugün itibarıyla annelerin hesaplarına yatırıldığını duyurdu. Doğum yardımlarından bugüne kadar toplam 1 milyon 201 bin 173 çocuk faydalandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/dogum-yardimi-odemeleri-hesaplara-yatirildi-952473.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            oscar ödüllü oyuncu jared leto dört kadına cinsel saldırıyla suçlanıyor
+            10 kadın oyuncu ve müzisyen jared leto'nun kendilerine cinsel saldırıda bulunduğunu iddia ediyor. bbc'ye konuşan kadınlar leto'nun kadınların reşit olup olmamasıyla ilgilenmediğini öne sürüyor. leto iddialara yanıt vermedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Oscar ödüllü oyuncu Jared Leto dört kadına cinsel saldırıyla suçlanıyor</h3>
+                    <p>10 kadın oyuncu ve müzisyen Jared Leto'nun kendilerine cinsel saldırıda bulunduğunu iddia ediyor. BBC'ye konuşan kadınlar Leto'nun kadınların reşit olup olmamasıyla ilgilenmediğini öne sürüyor. Leto iddialara yanıt vermedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c74gngyj1z0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediye başkanı sinem dedetaş gözaltına alındı
+            i̇stanbul anadolu cumhuriyet başsavcılığı'nca yürütülen soruşturma kapsamında üsküdar belediyesi'ne yönelik operasyon düzenlendi. belediye başkanı sinem dedetaş ve altı kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediye Başkanı Sinem Dedetaş gözaltına alındı</h3>
+                    <p>İstanbul Anadolu Cumhuriyet Başsavcılığı'nca yürütülen soruşturma kapsamında Üsküdar Belediyesi'ne yönelik operasyon düzenlendi. Belediye Başkanı Sinem Dedetaş ve altı kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4rdn5ydgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sinem dedetaş'ın gözaltına alınmasına tepkiler ne oldu?
+            kırk beş yaşındaki dedetaş'ın gözaltına alınmasına cumhuriyet halk partisi ve yeni parti'den tepki geldi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sinem Dedetaş'ın gözaltına alınmasına tepkiler ne oldu?</h3>
+                    <p>Kırk beş yaşındaki Dedetaş'ın gözaltına alınmasına Cumhuriyet Halk Partisi ve Yeni Parti'den tepki geldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78g78x8yn9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tmsf, ahbap derneği'ne bağlı ticari şirketlere kayyum olarak atandı
+            tasarruf mevduatı sigorta fonu (tmsf), ahbap derneği'nin iştiraki konumundaki iktisadi işletme ve şirketlere kayyum olarak atandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TMSF, Ahbap Derneği'ne bağlı ticari şirketlere kayyum olarak atandı</h3>
+                    <p>Tasarruf Mevduatı Sigorta Fonu (TMSF), Ahbap Derneği'nin iştiraki konumundaki iktisadi işletme ve şirketlere kayyum olarak atandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tmsf-ahbap-dernegine-bagli-ticari-sirketlere-kayyum-olarak-atandi-952479.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            antalya büyükşehir belediyesi gençlik merkezi sorumlusu gözaltına alındı
+            antalya büyükşehir belediyesi gençlik merkezi sorumlusu t.g, antalya büyükşehir belediyesine yönelik rüşvet ve yolsuzluk soruşturması kapsamında gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Antalya Büyükşehir Belediyesi Gençlik Merkezi Sorumlusu gözaltına alındı</h3>
+                    <p>Antalya Büyükşehir Belediyesi Gençlik Merkezi Sorumlusu T.G, Antalya Büyükşehir Belediyesine yönelik rüşvet ve yolsuzluk soruşturması kapsamında gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/antalya-buyuksehir-belediyesi-genclik-merkezi-sorumlusu-gozaltina-alindi-952478.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kpss ön lisans başvuruları başladı
+            ön lisans düzeyinde uygulanacak 2026 kamu personel seçme sınavı (2026-kpss ön lisans) başvuruları başladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>KPSS Ön Lisans başvuruları başladı</h3>
+                    <p>Ön lisans düzeyinde uygulanacak 2026 Kamu Personel Seçme Sınavı (2026-KPSS Ön Lisans) başvuruları başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/kpss-on-lisans-basvurulari-basladi-952476.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            malazgirt'in 955 yıllık sırrı çözülüyor
+            kültür ve turizm bakanı mehmet nuri ersoy, malazgirt savaş alanı'nda yürütülen arkeolojik çalışmalarda xi. yüzyıl bizans askerî teknolojisini yansıtan balista ok uçlarının ilk kez gün yüzüne çıkarıldığını açıkladı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Malazgirt'in 955 yıllık sırrı çözülüyor</h3>
+                    <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Malazgirt Savaş Alanı'nda yürütülen arkeolojik çalışmalarda XI. yüzyıl Bizans askerî teknolojisini yansıtan balista ok uçlarının ilk kez gün yüzüne çıkarıldığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/malazgirtin-955-yillik-sirri-cozuluyor-952477.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            kıymetli madenlerin dijital ortama aktarılmasında yeni düzenleme
+            hazine ve maliye bakanlığı, belirli saflık ve ağırlıktaki işlenmemiş kıymetli madenlerin dijital ortama aktarılması ve borsa i̇stanbul'da işlem görmesi için düzenleme yaptı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Kıymetli madenlerin dijital ortama aktarılmasında yeni düzenleme</h3>
+                    <p>Hazine ve Maliye Bakanlığı, belirli saflık ve ağırlıktaki işlenmemiş kıymetli madenlerin dijital ortama aktarılması ve Borsa İstanbul'da işlem görmesi için düzenleme yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kiymetli-madenlerin-dijital-ortama-aktarilmasinda-yeni-duzenleme-952475.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 84,33 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 84,33 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 84,33 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 84,33 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-8433-dolardan-islem-goruyor-952474.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            borcu bulunan yabancı plaka araçlar yurt dışına çıkışına çıkamayacak
+            ulaştırma ve altyapı bakanı uraloğlu, "ülke içerisinde tahsil edilemeyen borçlar, yabancı plakalı aracın türkiye'den çıkış yapmak üzere sınır kapısına gelmesi halinde elektronik ortamda sorgulanacak. borçlar tahsil edilmeden aracın yurt dışına çıkışına gümrük idaresince izin verilmeyecek." dedi.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Borcu bulunan yabancı plaka araçlar yurt dışına çıkışına çıkamayacak</h3>
+                    <p>Ulaştırma ve Altyapı Bakanı Uraloğlu, "Ülke içerisinde tahsil edilemeyen borçlar, yabancı plakalı aracın Türkiye'den çıkış yapmak üzere sınır kapısına gelmesi halinde elektronik ortamda sorgulanacak. Borçlar tahsil edilmeden aracın yurt dışına çıkışına gümrük idaresince izin verilmeyecek." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/borcu-bulunan-yabanci-plaka-araclar-yurt-disina-cikisina-cikamayacak-952470.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            neden bazı vücut geliştirme sporcuları genç yaşta ölüyor?
+            güçlü ve formda görünen bazı vücut geliştiriciler neden nispeten genç yaşlarda aniden ölüyor?
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Neden bazı vücut geliştirme sporcuları genç yaşta ölüyor?</h3>
+                    <p>Güçlü ve formda görünen bazı vücut geliştiriciler neden nispeten genç yaşlarda aniden ölüyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cre49yn448jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
