@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-30 07:36</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Balıkesir, Muğla ve Antalya'da orman yangıları sürüyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj4keerzgn0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Irak'taki Şii milisler hakkında neler biliniyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Avrupa'da yangınlar: Girit'te üç itfaiye eri hayatını kaybetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c1e106211nno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>CHP'de 'üçüncü yolcular' bildiri hazırlığında</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-yumakli-orman-yanginlarindaki-son-durumu-acikladi-952577.html" target="_blank">
+                <strong>Bakan Yumaklı, orman yangınlarındaki son durumu açıkladı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            balıkesir, muğla ve antalya'da orman yangıları sürüyor
+            tarım ve orman bakanı i̇brahim yumaklı, yumaklı, muğla'nın seydikemer ilçesi, antalya'nın kaş ve kumluca ilçeleri, balıkesir'in edremit, altınoluk ve gömeç ilçeleri ile çanakkale'nin ayvacık ilçesindeki yangınların büyük ölçüde kontrol altına alındığını söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Balıkesir, Muğla ve Antalya'da orman yangıları sürüyor</h3>
+                    <p>Tarım ve Orman Bakanı İbrahim Yumaklı, Yumaklı, Muğla'nın Seydikemer ilçesi, Antalya'nın Kaş ve Kumluca ilçeleri, Balıkesir'in Edremit, Altınoluk ve Gömeç ilçeleri ile Çanakkale'nin Ayvacık ilçesindeki yangınların büyük ölçüde kontrol altına alındığını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan yumaklı, orman yangınlarındaki son durumu açıkladı
+            tarım ve orman bakanı i̇brahim yumaklı, "balıkesir edremit, çanakkale ayvacık, antalya kumluca olmak üzere 3 yangın daha tamamen kontrol altına alındı" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Yumaklı, orman yangınlarındaki son durumu açıkladı</h3>
+                    <p>Tarım ve Orman Bakanı İbrahim Yumaklı, "Balıkesir Edremit, Çanakkale Ayvacık, Antalya Kumluca olmak üzere 3 yangın daha tamamen kontrol altına alındı" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-yumakli-orman-yanginlarindaki-son-durumu-acikladi-952577.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meb'in son yönetmeliğiyle okul öncesi eğitimde ve ilkokullarda neler değişecek?
+            milli eğitim bakanlığı'nın okul öncesi eğitim ve i̇lköğretim kurumları yönetmeliği'nde yaptığı değişiklikler 28 temmuz'da resmi gazete'de yayımlanarak yürürlüğe girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>MEB'in son yönetmeliğiyle okul öncesi eğitimde ve ilkokullarda neler değişecek?</h3>
+                    <p>Milli Eğitim Bakanlığı'nın Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği'nde yaptığı değişiklikler 28 Temmuz'da Resmi Gazete'de yayımlanarak yürürlüğe girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn9nyxwjnnjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            etimesgut belediye başkanı erdal beşikçioğlu dahil 52 kişi gözaltına alındı
+            ankara cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında etimesgut belediye başkanı erdal beşikçioğlu'nun da yer aldığı 55 kişi hakkında gözaltı kararı verildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Etimesgut Belediye Başkanı Erdal Beşikçioğlu dahil 52 kişi gözaltına alındı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Etimesgut Belediye Başkanı Erdal Beşikçioğlu'nun da yer aldığı 55 kişi hakkında gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5630yz169o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            davutoğlu, gelecek partisi'ni feshettiklerini açıkladı
+            ahmet davutoğlu, genel başkanı olduğu gelecek partisi'nin siyasi faaliyetlerini sonlandırma kararı aldıklarını açıkladı. davutoğlu kararı "ahlaki bir mesafe koyma kararı" olarak niteledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Davutoğlu, Gelecek Partisi'ni feshettiklerini açıkladı</h3>
+                    <p>Ahmet Davutoğlu, genel başkanı olduğu Gelecek Partisi'nin siyasi faaliyetlerini sonlandırma kararı aldıklarını açıkladı. Davutoğlu kararı "ahlaki bir mesafe koyma kararı" olarak niteledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy07w8dey5no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında 8 şüpheli adliyeye sevk edildi
+            tunceli'de 5 ocak 2020'den beri haber alınamayan üniversite öğrencisi gülistan doku ile ilgili soruşturma kapsamında gözaltına alınan 18 şüpheliden 8'i adliyeye sevk edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gülistan Doku soruşturmasında 8 şüpheli adliyeye sevk edildi</h3>
+                    <p>Tunceli'de 5 Ocak 2020'den beri haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgili soruşturma kapsamında gözaltına alınan 18 şüpheliden 8'i adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gulistan-doku-sorusturmasinda-8-supheli-adliyeye-sevk-edildi-952573.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hindistan'ın kuzeydoğusundaki sellerde can kaybı 78'e yükseldi
+            hindistan'ın kuzeydoğusundaki assam eyaletinde meydana gelen sellerde hayatını kaybedenlerin sayısı 78'e çıktı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hindistan'ın kuzeydoğusundaki sellerde can kaybı 78'e yükseldi</h3>
+                    <p>Hindistan'ın kuzeydoğusundaki Assam eyaletinde meydana gelen sellerde hayatını kaybedenlerin sayısı 78'e çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hindistanin-kuzeydogusundaki-sellerde-can-kaybi-78e-yukseldi-952571.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın güne nasıl başladı?
+            gram altın, güne düşüşle başlamasının ardından 6 bin 156 liradan işlem görüyor. çeyrek altın 10 bin 108 liradan, cumhuriyet altını 40 bin 274 liradan satılıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın güne nasıl başladı?</h3>
+                    <p>Gram altın, güne düşüşle başlamasının ardından 6 bin 156 liradan işlem görüyor. Çeyrek altın 10 bin 108 liradan, cumhuriyet altını 40 bin 274 liradan satılıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-gune-nasil-basladi-952570.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            irak'taki şii milisler hakkında neler biliniyor?
+            irak, i̇ran savaşında hem i̇ran hem de abd tarafının saldırılar düzenlediği ülke olmasıyla sıradışı bir konuma sahip. son olarak suudi ve amerikan güçlerinin irak'taki i̇ran destekli milisleri hedef alması dikkatleri bu gruplara çekti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Irak'taki Şii milisler hakkında neler biliniyor?</h3>
+                    <p>Irak, İran savaşında hem İran hem de ABD tarafının saldırılar düzenlediği ülke olmasıyla sıradışı bir konuma sahip. Son olarak Suudi ve Amerikan güçlerinin Irak'taki İran destekli milisleri hedef alması dikkatleri bu gruplara çekti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj4keerzgn0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'da yangınlar: girit'te üç itfaiye eri hayatını kaybetti
+            girit'te etkili olan bir orman yangınına müdahale ederken mahsur kalan üç yunan itfaiyeci hayatını kaybetti.fransa ve i̇spanya'da ise bu yazın dördüncü sıcak hava dalgası başladı. i̇ki ülkede de itfaiyeciler kısa süre önce kontrol altına alınan büyük yangınların yeniden alevlenmesini önlemeye çalışıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'da yangınlar: Girit'te üç itfaiye eri hayatını kaybetti</h3>
+                    <p>Girit'te etkili olan bir orman yangınına müdahale ederken mahsur kalan üç Yunan itfaiyeci hayatını kaybetti.Fransa ve İspanya'da ise bu yazın dördüncü sıcak hava dalgası başladı. İki ülkede de itfaiyeciler kısa süre önce kontrol altına alınan büyük yangınların yeniden alevlenmesini önlemeye çalışıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx71e1g114o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'de 'üçüncü yolcular' bildiri hazırlığında
+            özgür özel ve ekibinin ayrılarak yeni parti'yi kurmasına karşın, chp içindeki çalkantı sürüyor. partide kalan 44 milletvekili içinde kendilerini "ne özgürcü ne kemalci" olarak tanımlayan ve kulislerde "üçüncü yolcular" diye anılan grubun, partinin en kısa sürede olağan kurultayını gerçekleştirmesi talebiyle ortak bir bildiri açıklama hazırlığında olduğu öğrenildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>CHP'de 'üçüncü yolcular' bildiri hazırlığında</h3>
+                    <p>Özgür Özel ve ekibinin ayrılarak Yeni Parti'yi kurmasına karşın, CHP içindeki çalkantı sürüyor. Partide kalan 44 milletvekili içinde kendilerini "Ne Özgürcü ne Kemalci" olarak tanımlayan ve kulislerde "üçüncü yolcular" diye anılan grubun, partinin en kısa sürede olağan kurultayını gerçekleştirmesi talebiyle ortak bir bildiri açıklama hazırlığında olduğu öğrenildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1e106211nno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'ın abd-i̇ran savaşındaki ikilemi
+            krallık, caydırıcı bir önlem olarak misilleme yapmaya devam etmek ya da durumu yatıştırmaya çalışmak arasında bir seçimle karşı karşıya.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Suudi Arabistan'ın ABD-İran savaşındaki ikilemi</h3>
+                    <p>Krallık, caydırıcı bir önlem olarak misilleme yapmaya devam etmek ya da durumu yatıştırmaya çalışmak arasında bir seçimle karşı karşıya.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c74gwz8ywx1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ki yaşından önce şeker tüketimini sınırlamak beyin sağlığını iyileştirebilir
+            yapılan bir çalışma, erken yaşlarda daha az şeker tüketmenin uzun vadeli beyin sağlığı için iyi olduğunu öne sürüyor, ancak kanıtlar kesin değil.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İki yaşından önce şeker tüketimini sınırlamak beyin sağlığını iyileştirebilir</h3>
+                    <p>Yapılan bir çalışma, erken yaşlarda daha az şeker tüketmenin uzun vadeli beyin sağlığı için iyi olduğunu öne sürüyor, ancak kanıtlar kesin değil.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crmrvernge2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd i̇ran'a karşı 'sert' saldırılar başlattı
+            donald trump'ın 29 temmuz'da misilleme yapacaklarını açıklamasından saatler sonra abd i̇ran'a karşı yeniden saldırılara başladı. abd başkanı, beyaz saray'da basın mensuplarına yaptığı açıklamada, "onları çok sert vuracağız çünkü vurma sırası şimdi bizde" dedi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD İran'a karşı 'sert' saldırılar başlattı</h3>
+                    <p>Donald Trump'ın 29 Temmuz'da misilleme yapacaklarını açıklamasından saatler sonra ABD İran'a karşı yeniden saldırılara başladı. ABD Başkanı, Beyaz Saray'da basın mensuplarına yaptığı açıklamada, "Onları çok sert vuracağız çünkü vurma sırası şimdi bizde" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgvp3e2dgeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'da bir evde beş bebeğe ait kalıntılar bulundu
+            fransa'nın güneydoğusundaki orange kentinde polisin bir apartman dairesinde yaptığı aramada, karton kutular içinde beş yeni doğmuş bebeğe ait olduğu değerlendirilen kemik kalıntıları tespit edildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Fransa'da bir evde beş bebeğe ait kalıntılar bulundu</h3>
+                    <p>Fransa'nın güneydoğusundaki Orange kentinde polisin bir apartman dairesinde yaptığı aramada, karton kutular içinde beş yeni doğmuş bebeğe ait olduğu değerlendirilen kemik kalıntıları tespit edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransada-bir-evde-bes-bebege-ait-kalintilar-bulundu-952576.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şsizlik haziranda azaldı
+            türkiye'de işsizlik oranı, haziranda bir önceki aya göre 0,5 puan azalarak yüzde 7,6 oldu
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İşsizlik haziranda azaldı</h3>
+                    <p>Türkiye'de işsizlik oranı, haziranda bir önceki aya göre 0,5 puan azalarak yüzde 7,6 oldu</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/issizlik-haziranda-azaldi-952575.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: abd'nin müdahaleleri sürdüğü sürece hürmüz boğazı yeniden açılmayacak
+            i̇ran devrim muhafızları ordusu, abd'nin "tehditleri ve bölgesel deniz trafiğine müdahaleleri sürdüğü sürece" hürmüz boğazı'nın yeniden açılmayacağını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran: ABD'nin müdahaleleri sürdüğü sürece Hürmüz Boğazı yeniden açılmayacak</h3>
+                    <p>İran Devrim Muhafızları Ordusu, ABD'nin "tehditleri ve bölgesel deniz trafiğine müdahaleleri sürdüğü sürece" Hürmüz Boğazı'nın yeniden açılmayacağını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-abdnin-mudahaleleri-surdugu-surece-hurmuz-bogazi-yeniden-acilmayacak-952574.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin i̇ran'daki keşm adası'na düzenlediği saldırıda biri çocuk 3 kişi öldü
+            i̇ran'ın hürmüz boğazı yakınındaki keşm adası'na abd tarafından düzenlenen saldırıda aynı aileden biri çocuk 3 kişinin hayatını kaybettiği, 2 çocuğun ise yaralandığı belirtildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin İran'daki Keşm Adası'na düzenlediği saldırıda biri çocuk 3 kişi öldü</h3>
+                    <p>İran'ın Hürmüz Boğazı yakınındaki Keşm Adası'na ABD tarafından düzenlenen saldırıda aynı aileden biri çocuk 3 kişinin hayatını kaybettiği, 2 çocuğun ise yaralandığı belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdnin-irandaki-kesm-adasina-duzenledigi-saldirida-biri-cocuk-3-kisi-oldu-952569.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yasa dışı şans oyunları reklamları yasak kapsamına alınıyor
+            ticaret bakanlığınca yasa dışı şans oyunları, bahis ve kumar reklamlarının yanı sıra falcı, medyum ve astrolog gibi kişilerce sunulan hizmetlerin reklamları da 1 ağustos 2026 itibarıyla yasak kapsamına alınıyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yasa dışı şans oyunları reklamları yasak kapsamına alınıyor</h3>
+                    <p>Ticaret Bakanlığınca yasa dışı şans oyunları, bahis ve kumar reklamlarının yanı sıra falcı, medyum ve astrolog gibi kişilerce sunulan hizmetlerin reklamları da 1 Ağustos 2026 itibarıyla yasak kapsamına alınıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yasa-disi-sans-oyunlari-reklamlari-yasak-kapsamina-aliniyor-952572.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrol 89,50 dolar seviyesinde
+            brent petrolün varili, uluslararası piyasalarda 89,50 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrol 89,50 dolar seviyesinde</h3>
+                    <p>Brent petrolün varili, uluslararası piyasalarda 89,50 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/brent-petrol-8950-dolar-seviyesinde-952579.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
