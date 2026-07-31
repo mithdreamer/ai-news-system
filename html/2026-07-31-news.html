@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-07-31 07:52</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c3v0d2enw02o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mısır, ABD-İran savaşının başından beri ilk kez saldırıya uğradı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/kizilelmadan-tarihi-atis-ic-istasyonlar-surpriz-etkisi-yaratacak-952695.html" target="_blank">
+                <strong>KIZILELMAdan tarihi atış: İç istasyonlar sürpriz etkisi yaratacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c70gx2gke5ro?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Hamas, Gazze'de Barış Kurulu ile silah bırakma konusunda anlaştı, planın detayları neler?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/clyqlqyrvn6o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Suudi Arabistan öncülüğünde Kızıldeniz için koalisyon hazırlığı: 'Türkiye de destekledi'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cq897xvyjnzo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Gelecek Partisi kapanıyor: 'Derin hayal kırıklığı Davutoğlu'nu fesih kararına götürdü'</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mısır, abd-i̇ran savaşının başından beri ilk kez saldırıya uğradı
+            mısır hükümeti, akdeniz'deki dimyat limanı'nda iki gaz depolama gemisinde 29 temmuz çarşamba günü çıkan yangının bir insansız hava aracı saldırısından kaynaklandığını doğruladı. bu, mısır'ın beş aydır süren abd-i̇srail-i̇ran savaşında ilk kez hedef alınması anlamına geliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mısır, ABD-İran savaşının başından beri ilk kez saldırıya uğradı</h3>
+                    <p>Mısır hükümeti, Akdeniz'deki Dimyat Limanı'nda iki gaz depolama gemisinde 29 Temmuz Çarşamba günü çıkan yangının bir insansız hava aracı saldırısından kaynaklandığını doğruladı. Bu, Mısır'ın beş aydır süren ABD-İsrail-İran savaşında ilk kez hedef alınması anlamına geliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3v0d2enw02o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hamas, gazze'de barış kurulu ile silah bırakma konusunda anlaştı, planın detayları neler?
+            abd başkanı donald trump, barış kurulu'nun hamas ve gazze'deki diğer silahlı grupların "tamamen silah bırakması" konusunda anlaşmaya vardığını açıkladı. hamas'tan üst düzey bir yetkili bbc'ye, planı kabul ettiklerini söyledi. yetkiliye göre örgüt, kısa süre içinde resmi bir açıklama yayımlayacak. konuyla ilgili i̇srail'den henüz bir açıklama gelmedi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hamas, Gazze'de Barış Kurulu ile silah bırakma konusunda anlaştı, planın detayları neler?</h3>
+                    <p>ABD Başkanı Donald Trump, Barış Kurulu'nun Hamas ve Gazze'deki diğer silahlı grupların "tamamen silah bırakması" konusunda anlaşmaya vardığını açıkladı. Hamas'tan üst düzey bir yetkili BBC'ye, planı kabul ettiklerini söyledi. Yetkiliye göre örgüt, kısa süre içinde resmi bir açıklama yayımlayacak. Konuyla ilgili İsrail'den henüz bir açıklama gelmedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c70gx2gke5ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan öncülüğünde kızıldeniz için koalisyon hazırlığı: 'türkiye de destekledi'
+            suudi arabistan, türkiye'nin de aralarında bulunduğu 14 ülkenin, kızıldeniz'deki ticari güzergahları korumak için bir deniz savunma koalisyonu kurulması önerisine destek veren bir açıklama yayımladığını bildirdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Suudi Arabistan öncülüğünde Kızıldeniz için koalisyon hazırlığı: 'Türkiye de destekledi'</h3>
+                    <p>Suudi Arabistan, Türkiye'nin de aralarında bulunduğu 14 ülkenin, Kızıldeniz'deki ticari güzergahları korumak için bir deniz savunma koalisyonu kurulması önerisine destek veren bir açıklama yayımladığını bildirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyqlqyrvn6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            binek otomobiller için asgari maktu vergi uygulaması getirildi
+            binek otomobiller ve insan taşımak üzere imal edilmiş diğer motorlu taşıtların vergilendirilmesinde asgari maktu vergi uygulaması devreye alınıyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Binek otomobiller için asgari maktu vergi uygulaması getirildi</h3>
+                    <p>Binek otomobiller ve insan taşımak üzere imal edilmiş diğer motorlu taşıtların vergilendirilmesinde asgari maktu vergi uygulaması devreye alınıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/binek-otomobiller-icin-asgari-maktu-vergi-uygulamasi-getirildi-952690.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            kizilelmadan tarihi atış: i̇ç istasyonlar sürpriz etkisi yaratacak
+            türkiye’nin ilk insansız savaş uçağı projesi olan kizilelma’da tarihi bir viraj daha dönüldü. platformun iç istasyonların mühimmat atış testleri başarıyla gerçekleşti. taktik ve operasyonel anlamda çok stratejik bir kabiliyete daha erişen türkiye, anka-3 ve kaan’ı da benzer teknolojilerle donatacak.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>KIZILELMAdan tarihi atış: İç istasyonlar sürpriz etkisi yaratacak</h3>
+                    <p>Türkiye’nin ilk insansız savaş uçağı projesi olan KIZILELMA’da tarihi bir viraj daha dönüldü. Platformun iç istasyonların mühimmat atış testleri başarıyla gerçekleşti. Taktik ve operasyonel anlamda çok stratejik bir kabiliyete daha erişen Türkiye, ANKA-3 ve KAAN’ı da benzer teknolojilerle donatacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kizilelmadan-tarihi-atis-ic-istasyonlar-surpriz-etkisi-yaratacak-952695.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            gelecek partisi kapanıyor: 'derin hayal kırıklığı davutoğlu'nu fesih kararına götürdü'
+            yakın çevresine göre davutoğlu'nun kararının arkasında sonuçsuz kalan ittifak arayışlarının yanı sıra yıllardır inşa etmeye çalıştığı "muhafazakâr reformcu yeni merkez" projesinin hayata geçirilemeyeceğini görmesinden kaynaklı "derin hayal kırıklığı" yatıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gelecek Partisi kapanıyor: 'Derin hayal kırıklığı Davutoğlu'nu fesih kararına götürdü'</h3>
+                    <p>Yakın çevresine göre Davutoğlu'nun kararının arkasında sonuçsuz kalan ittifak arayışlarının yanı sıra yıllardır inşa etmeye çalıştığı "muhafazakâr reformcu yeni merkez" projesinin hayata geçirilemeyeceğini görmesinden kaynaklı "derin hayal kırıklığı" yatıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq897xvyjnzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cem küçük gözaltına alındı
+            tv yorumcusu cem küçük, i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında, i̇stanbul i̇l jandarma komutanlığı güçleri tarafından gözaltına alındı. soruşturmada küçük'e, "halkı yanıltıcı bilgiyi alenen yayma" ve "şantaj" suçlamaları yöneltiliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cem Küçük gözaltına alındı</h3>
+                    <p>TV yorumcusu Cem Küçük, İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında, İstanbul İl Jandarma Komutanlığı güçleri tarafından gözaltına alındı. Soruşturmada Küçük'e, "halkı yanıltıcı bilgiyi alenen yayma" ve "şantaj" suçlamaları yöneltiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyqe433j9no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            öğrenci affı düzenlemesi meclis'ten geçti: kimleri kapsıyor, üniversitelerde neler değişecek?
+            öğrenci affına ve yükseköğretime ilişkin düzenlemeleri içeren teklifin ilk 13 maddesi tbmm genel kurulu'nda kabul edildi. yasa teklifinin yasalaşması halinde, yükseköğretim kurumlarıyla ilişiği kesilen öğrenciler, yeniden üniversitelerine dönebilecek.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Öğrenci affı düzenlemesi Meclis'ten geçti: Kimleri kapsıyor, üniversitelerde neler değişecek?</h3>
+                    <p>Öğrenci affına ve yükseköğretime ilişkin düzenlemeleri içeren teklifin ilk 13 maddesi TBMM Genel Kurulu'nda kabul edildi. Yasa teklifinin yasalaşması halinde, yükseköğretim kurumlarıyla ilişiği kesilen öğrenciler, yeniden üniversitelerine dönebilecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn5nkg0276qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hava sıcaklıkları ülke genelinde etkisini artıracak
+            ağustos ayının ilk tam haftasında türkiye genelinde yaz sıcakları etkisini artırarak hissettirmeye devam edecek. hafta boyunca yurdun büyük bölümünde güneşli bir gökyüzü hakim olurken, bazı bölgelerde gök gürültülü sağanak geçişleri bekleniyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hava sıcaklıkları ülke genelinde etkisini artıracak</h3>
+                    <p>Ağustos ayının ilk tam haftasında Türkiye genelinde yaz sıcakları etkisini artırarak hissettirmeye devam edecek. Hafta boyunca yurdun büyük bölümünde güneşli bir gökyüzü hakim olurken, bazı bölgelerde gök gürültülü sağanak geçişleri bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/hava-sicakliklari-ulke-genelinde-etkisini-artiracak-952697.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediyesi'ne yolsuzluk operasyonunda 6 kişi adliyede
+            üsküdar belediyesi'nde yapı ve iskan ruhsatı işlemlerinde usulsüzlük yapılarak "rüşvet" ve "irtikap" suçu işlendiği iddiasına ilişkin yürütülen soruşturma kapsamında gözaltına alınan aralarında belediye başkanı sinem dedetaş'ın da bulunduğu 6 şüpheli adliyeye sevk edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediyesi'ne yolsuzluk operasyonunda 6 kişi adliyede</h3>
+                    <p>Üsküdar Belediyesi'nde yapı ve iskan ruhsatı işlemlerinde usulsüzlük yapılarak "rüşvet" ve "irtikap" suçu işlendiği iddiasına ilişkin yürütülen soruşturma kapsamında gözaltına alınan aralarında Belediye Başkanı Sinem Dedetaş'ın da bulunduğu 6 şüpheli adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/uskudar-belediyesine-yolsuzluk-operasyonunda-6-kisi-adliyede-952692.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'binlerce göçmen girdi': i̇spanya, afrika'daki topraklarına asker konuşlandıracak
+            i̇spanya'nın afrika'daki kenti ceuta'ya sınır komşusu fas üzerinden binlerce kişi girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Binlerce göçmen girdi': İspanya, Afrika'daki topraklarına asker konuşlandıracak</h3>
+                    <p>İspanya'nın Afrika'daki kenti Ceuta'ya sınır komşusu Fas üzerinden binlerce kişi girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz97klj5x98o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kitap seçimleriniz sizinle ilgili neler söylüyor?
+            tatil kitabınızı mı seçtiniz? araştırmalar gösteriyor ki, seçimlerimiz bilinçaltımızda kişiliğimizin önemli yönlerini ortaya çıkarabiliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kitap seçimleriniz sizinle ilgili neler söylüyor?</h3>
+                    <p>Tatil kitabınızı mı seçtiniz? Araştırmalar gösteriyor ki, seçimlerimiz bilinçaltımızda kişiliğimizin önemli yönlerini ortaya çıkarabiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c20417z5ezpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediye başkanı sinem dedetaş adliyeye sevk edildi
+            i̇stanbul anadolu cumhuriyet başsavcılığı'nca yürütülen soruşturma kapsamında üsküdar belediyesi'ne yönelik operasyonda gözaltına alınan sinem dedetaş dahil altı kişi adliyeye sevk edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediye Başkanı Sinem Dedetaş adliyeye sevk edildi</h3>
+                    <p>İstanbul Anadolu Cumhuriyet Başsavcılığı'nca yürütülen soruşturma kapsamında Üsküdar Belediyesi'ne yönelik operasyonda gözaltına alınan Sinem Dedetaş dahil altı kişi adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4rdn5ydgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            etimesgut belediye başkanı erdal beşikçioğlu dahil 52 kişi gözaltına alındı
+            ankara cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında etimesgut belediye başkanı erdal beşikçioğlu'nun da yer aldığı 55 kişi hakkında gözaltı kararı verildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Etimesgut Belediye Başkanı Erdal Beşikçioğlu dahil 52 kişi gözaltına alındı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Etimesgut Belediye Başkanı Erdal Beşikçioğlu'nun da yer aldığı 55 kişi hakkında gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5630yz169o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suç örgütlerinin sosyal medya ağı çökertildi: 216 gözaltı
+            sosyal medya platformları üzerinden eleman temin etme ve suç örgütlerini övme amacıyla paylaşım yapanlara yönelik 52 ilde düzenlenen operasyonlarda 216 şüpheli yakalandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Suç örgütlerinin sosyal medya ağı çökertildi: 216 gözaltı</h3>
+                    <p>Sosyal medya platformları üzerinden eleman temin etme ve suç örgütlerini övme amacıyla paylaşım yapanlara yönelik 52 ilde düzenlenen operasyonlarda 216 şüpheli yakalandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/suc-orgutlerinin-sosyal-medya-agi-cokertildi-216-gozalti-952696.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hafta sonu hava nasıl olacak?
+            ağustos ayının ilk hafta sonunda türkiye genelinde yüksek sıcaklıklar etkisini sürdürürken, batı kesimlerde şiddetli rüzgar, kuzeydoğuda ise yerel gök gürültülü sağanak yağışlar bekleniyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hafta sonu hava nasıl olacak?</h3>
+                    <p>Ağustos ayının ilk hafta sonunda Türkiye genelinde yüksek sıcaklıklar etkisini sürdürürken, batı kesimlerde şiddetli rüzgar, kuzeydoğuda ise yerel gök gürültülü sağanak yağışlar bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/hafta-sonu-hava-nasil-olacak-952691.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin ihracatı haziranda 24,9 milyar dolar oldu
+            türkiye'nin ihracatı, haziranda geçen yılın aynı ayına kıyasla yüzde 21,7 artarak 24 milyar 915 milyon dolar, ithalatı yüzde 23 yükselişle 35 milyar 285 milyon dolar oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türkiye'nin ihracatı haziranda 24,9 milyar dolar oldu</h3>
+                    <p>Türkiye'nin ihracatı, haziranda geçen yılın aynı ayına kıyasla yüzde 21,7 artarak 24 milyar 915 milyon dolar, ithalatı yüzde 23 yükselişle 35 milyar 285 milyon dolar oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-ihracati-haziranda-249-milyar-dolar-oldu-952699.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            turizm geliri yılın ikinci çeyreğinde 15,9 milyar dolar oldu
+            türkiye'nin turizm geliri, yılın ikinci çeyreğinde geçen yılın aynı dönemine göre yüzde 2,6 azalarak 15 milyar 865 milyon 339 bin dolar oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Turizm geliri yılın ikinci çeyreğinde 15,9 milyar dolar oldu</h3>
+                    <p>Türkiye'nin turizm geliri, yılın ikinci çeyreğinde geçen yılın aynı dönemine göre yüzde 2,6 azalarak 15 milyar 865 milyon 339 bin dolar oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turizm-geliri-yilin-ikinci-ceyreginde-159-milyar-dolar-oldu-952698.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 84,86 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 84,86 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 84,86 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 84,86 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-8486-dolardan-islem-goruyor-952694.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            gi̇b'den yeni düzenleme: riskli mükelleflerden 5 kat teminat alınacak
+            vergi teminat uygulaması kapsamında "riskli mükellefler" 5 katı kadar teminat verecek.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>GİB'den yeni düzenleme: Riskli mükelleflerden 5 kat teminat alınacak</h3>
+                    <p>Vergi teminat uygulaması kapsamında "riskli mükellefler" 5 katı kadar teminat verecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gibden-yeni-duzenleme-riskli-mukelleflerden-5-kat-teminat-alinacak-952693.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
