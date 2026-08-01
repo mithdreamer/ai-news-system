@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-01 07:29</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/orman-yanginlarina-havadan-mudahale-yogunlasti-952770.html" target="_blank">
+                <strong>Orman yangınlarına havadan müdahale yoğunlaştı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogana-suikast-girisiminde-bulunan-fetocu-terorist-yakalandi-952768.html" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan'a suikast girişiminde bulunan FETÖ'cü terörist yakalandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqx72dgnw28o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yeni Parti'nin yol haritası: İlk kurultay ekimde, Doğu ve Güneydoğu için özel heyet</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/milli-savunma-universitesi-10uncu-yilini-kutluyor-952766.html" target="_blank">
+                <strong>Milli Savunma Üniversitesi 10'uncu yılını kutluyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c998mmz22jpo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Gazze barış anlaşmasının yol haritasında neler var?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            orman yangınlarına havadan müdahale yoğunlaştı
+            tarım ve orman bakanlığı, balıkesir’in susurluk ilçesi başta olmak üzere yurdun çeşitli noktalarında devam eden orman yangınlarına yönelik havadan müdahalenin sabahın ilk ışıklarıyla birlikte yoğunlaştırıldığını bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Orman yangınlarına havadan müdahale yoğunlaştı</h3>
+                    <p>Tarım ve Orman Bakanlığı, Balıkesir’in Susurluk ilçesi başta olmak üzere yurdun çeşitli noktalarında devam eden orman yangınlarına yönelik havadan müdahalenin sabahın ilk ışıklarıyla birlikte yoğunlaştırıldığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/orman-yanginlarina-havadan-mudahale-yogunlasti-952770.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan'a suikast girişiminde bulunan fetö'cü terörist yakalandı
+            i̇çişleri bakanlığı, 15 temmuz darbe girişimi sırasında cumhurbaşkanı recep tayyip erdoğan’ın marmaris’te konakladığı otele yönelik suikast girişiminde bulunan 37 kişilik fetö'cü timin firari üyesi, kırmızı bültenle aranan b.k'nın afyonkarahisar'da yakalandığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan'a suikast girişiminde bulunan FETÖ'cü terörist yakalandı</h3>
+                    <p>İçişleri Bakanlığı, 15 Temmuz darbe girişimi sırasında Cumhurbaşkanı Recep Tayyip Erdoğan’ın Marmaris’te konakladığı otele yönelik suikast girişiminde bulunan 37 kişilik FETÖ'cü timin firari üyesi, kırmızı bültenle aranan B.K'nın Afyonkarahisar'da yakalandığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogana-suikast-girisiminde-bulunan-fetocu-terorist-yakalandi-952768.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            milli savunma üniversitesi 10'uncu yılını kutluyor
+            milli savunma üniversitesi, fetö darbe girişiminin ardından, 31 temmuz 2016'da kuruldu. milli savunma bakanlığı bünyesinde kurulan üniversite, rektörlüğe bağlı olarak, kurmay subay yetiştirmek ve lisansüstü eğitim vermek amacıyla yeni kurulan enstitülerden, kara, deniz ve hava harp okullarından, astsubay meslek yüksekokullarından oluşuyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Milli Savunma Üniversitesi 10'uncu yılını kutluyor</h3>
+                    <p>Milli Savunma Üniversitesi, FETÖ darbe girişiminin ardından, 31 Temmuz 2016'da kuruldu. Milli Savunma Bakanlığı bünyesinde kurulan üniversite, rektörlüğe bağlı olarak, kurmay subay yetiştirmek ve lisansüstü eğitim vermek amacıyla yeni kurulan enstitülerden, kara, deniz ve hava harp okullarından, astsubay meslek yüksekokullarından oluşuyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/milli-savunma-universitesi-10uncu-yilini-kutluyor-952766.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazze barış anlaşmasının yol haritasında neler var?
+            hamas’ın ağır silahlarını aşamalı olarak bırakmasını ve i̇srail’in gazze’den kademeli biçimde çekilmesini öngören plan, savaşın sona ermesi yönünde önemli bir adım olarak değerlendiriliyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazze barış anlaşmasının yol haritasında neler var?</h3>
+                    <p>Hamas’ın ağır silahlarını aşamalı olarak bırakmasını ve İsrail’in Gazze’den kademeli biçimde çekilmesini öngören plan, savaşın sona ermesi yönünde önemli bir adım olarak değerlendiriliyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c998mmz22jpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya'nın afrika'daki toprağı ceuta'ya bir günde 60 bin göçmen girdi; en az 57 kişi hayatını kaybetti
+            i̇spanya'nın afrika'daki toprağı ceuta'ya (sebte) son 24 saatte 60 bin göçmenin giriş yaptığı bildirildi. i̇spanya sınır güvenliğini güçlendirmek amacıyla fas'a komşu toprağına asker konuşlandıracağını açıklamıştı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya'nın Afrika'daki toprağı Ceuta'ya bir günde 60 bin göçmen girdi; en az 57 kişi hayatını kaybetti</h3>
+                    <p>İspanya'nın Afrika'daki toprağı Ceuta'ya (Sebte) son 24 saatte 60 bin göçmenin giriş yaptığı bildirildi. İspanya sınır güvenliğini güçlendirmek amacıyla Fas'a komşu toprağına asker konuşlandıracağını açıklamıştı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz97klj5x98o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gelecek partisi kapanıyor: 'derin hayal kırıklığı davutoğlu'nu fesih kararına götürdü'
+            yakın çevresine göre davutoğlu'nun kararının arkasında sonuçsuz kalan ittifak arayışlarının yanı sıra yıllardır inşa etmeye çalıştığı "muhafazakâr reformcu yeni merkez" projesinin hayata geçirilemeyeceğini görmesinden kaynaklı "derin hayal kırıklığı" yatıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gelecek Partisi kapanıyor: 'Derin hayal kırıklığı Davutoğlu'nu fesih kararına götürdü'</h3>
+                    <p>Yakın çevresine göre Davutoğlu'nun kararının arkasında sonuçsuz kalan ittifak arayışlarının yanı sıra yıllardır inşa etmeye çalıştığı "muhafazakâr reformcu yeni merkez" projesinin hayata geçirilemeyeceğini görmesinden kaynaklı "derin hayal kırıklığı" yatıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq897xvyjnzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            balıkesir, antalya, mersin ve aydın'da yangınlar sürüyor
+            türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Balıkesir, Antalya, Mersin ve Aydın'da yangınlar sürüyor</h3>
+                    <p>Türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meb'in son yönetmeliğiyle okul öncesi eğitimde ve ilkokullarda neler değişecek?
+            milli eğitim bakanlığı'nın okul öncesi eğitim ve i̇lköğretim kurumları yönetmeliği'nde yaptığı değişiklikler 28 temmuz'da resmi gazete'de yayımlanarak yürürlüğe girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>MEB'in son yönetmeliğiyle okul öncesi eğitimde ve ilkokullarda neler değişecek?</h3>
+                    <p>Milli Eğitim Bakanlığı'nın Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği'nde yaptığı değişiklikler 28 Temmuz'da Resmi Gazete'de yayımlanarak yürürlüğe girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn9nyxwjnnjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fas'tan i̇spanya'ya geçen 53 bin düzensiz göçmen geri döndü
+            i̇spanya'nın kuzey afrika'daki toprağı sebte (ceuta) kentine geçen düzensiz göçmenlerden yaklaşık 53 bininin gönüllü olarak fas'a geri döndüğü açıklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fas'tan İspanya'ya geçen 53 bin düzensiz göçmen geri döndü</h3>
+                    <p>İspanya'nın Kuzey Afrika'daki toprağı Sebte (Ceuta) kentine geçen düzensiz göçmenlerden yaklaşık 53 bininin gönüllü olarak Fas'a geri döndüğü açıklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fastan-ispanyaya-gecen-53-bin-duzensiz-gocmen-geri-dondu-952763.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediye başkanı sinem dedetaş dahil dört kişi tutuklandı
+            i̇stanbul anadolu cumhuriyet başsavcılığı'nca yürütülen soruşturma kapsamında gözaltına alınan üsküdar belediye başkanı sinem dedetaş'ın da aralarında bulunduğu dört kişi tutuklandı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediye Başkanı Sinem Dedetaş dahil dört kişi tutuklandı</h3>
+                    <p>İstanbul Anadolu Cumhuriyet Başsavcılığı'nca yürütülen soruşturma kapsamında gözaltına alınan Üsküdar Belediye Başkanı Sinem Dedetaş'ın da aralarında bulunduğu dört kişi tutuklandı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4rdn5ydgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cem küçük 'halkı yanıltıcı bilgiyi alenen yayma' suçlamasıyla tutuklandı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan tv yorumcusu cem küçük tutuklandı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cem Küçük 'halkı yanıltıcı bilgiyi alenen yayma' suçlamasıyla tutuklandı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan TV yorumcusu Cem Küçük tutuklandı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyqe433j9no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kitap seçimleriniz sizinle ilgili neler söylüyor?
+            tatil kitabınızı mı seçtiniz? araştırmalar gösteriyor ki, seçimlerimiz bilinçaltımızda kişiliğimizin önemli yönlerini ortaya çıkarabiliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kitap seçimleriniz sizinle ilgili neler söylüyor?</h3>
+                    <p>Tatil kitabınızı mı seçtiniz? Araştırmalar gösteriyor ki, seçimlerimiz bilinçaltımızda kişiliğimizin önemli yönlerini ortaya çıkarabiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c20417z5ezpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuveyt: hava savunma sistemleri i̇ran'ın i̇ha saldırılarına karşı devreye girdi
+            kuveyt ordusu, hava savunma sistemlerinin i̇ran'ın insansız hava aracı (i̇ha) saldırılarına karşı devreye girdiğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kuveyt: Hava savunma sistemleri İran'ın İHA saldırılarına karşı devreye girdi</h3>
+                    <p>Kuveyt ordusu, hava savunma sistemlerinin İran'ın insansız hava aracı (İHA) saldırılarına karşı devreye girdiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kuveyt-hava-savunma-sistemleri-iranin-iha-saldirilarina-karsi-devreye-girdi-952771.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beykoz ve arnavutköy'de 2 gün denize girmek yasaklandı
+            i̇stanbul'un beykoz ve arnavutköy ilçelerinde, dalga yüksekliği nedeniyle bugün ve yarın denize girilmesi yasaklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Beykoz ve Arnavutköy'de 2 gün denize girmek yasaklandı</h3>
+                    <p>İstanbul'un Beykoz ve Arnavutköy ilçelerinde, dalga yüksekliği nedeniyle bugün ve yarın denize girilmesi yasaklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/beykoz-ve-arnavutkoyde-2-gun-denize-girmek-yasaklandi-952765.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti'nin yol haritası: i̇lk kurultay ekimde, doğu ve güneydoğu için özel heyet
+            yeni parti genel başkan yardımcısı ensar aytekin, partinin ilk kurultayının ekim ayında yapılmasının öngörüldüğünü, doğu ve güneydoğu bölgelerindeki örgütlenme için özel heyet oluşturulacağını söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yeni Parti'nin yol haritası: İlk kurultay ekimde, Doğu ve Güneydoğu için özel heyet</h3>
+                    <p>Yeni Parti Genel Başkan Yardımcısı Ensar Aytekin, partinin ilk kurultayının Ekim ayında yapılmasının öngörüldüğünü, Doğu ve Güneydoğu bölgelerindeki örgütlenme için özel heyet oluşturulacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqx72dgnw28o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cemil tugay akp'ye geçecek mi, chp'den istifası sonrası neler söyledi?
+            18 haziran'da chp'den istifa eden i̇zmir büyükşehir belediye başkanı cemil tugay, 24 temmuz'da kurulan yeni parti'ye katılmadı. cemil tugay'ın akp'ye geçeceği iddia edildi. tugay ise bu iddiaları yalanlıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cemil Tugay AKP'ye geçecek mi, CHP'den istifası sonrası neler söyledi?</h3>
+                    <p>18 Haziran'da CHP'den istifa eden İzmir Büyükşehir Belediye Başkanı Cemil Tugay, 24 Temmuz'da kurulan Yeni Parti'ye katılmadı. Cemil Tugay'ın AKP'ye geçeceği iddia edildi. Tugay ise bu iddiaları yalanlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5ydplgpp89o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            marmara ve kuzey ege için fırtına uyarısı
+            meteoroloji genel müdürlüğü (mgm), marmara bölgesi ve kuzey ege'de beklenen kuvvetli rüzgar ve fırtına nedeniyle 11 il için "sarı" kodlu uyarıda bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Marmara ve Kuzey Ege için fırtına uyarısı</h3>
+                    <p>Meteoroloji Genel Müdürlüğü (MGM), Marmara Bölgesi ve Kuzey Ege'de beklenen kuvvetli rüzgar ve fırtına nedeniyle 11 il için "sarı" kodlu uyarıda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/marmara-ve-kuzey-ege-icin-firtina-uyarisi-952769.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'dan kiev'e hava saldırısı: 9 ölü, 28 yaralı
+            rus ordusunun ukrayna'nın başkenti kiev'e gerçekleştirdiği hava saldırısında en az 9 kişi hayatını kaybetti ve 28 kişi yaralandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'dan Kiev'e hava saldırısı: 9 ölü, 28 yaralı</h3>
+                    <p>Rus ordusunun Ukrayna'nın başkenti Kiev'e gerçekleştirdiği hava saldırısında en az 9 kişi hayatını kaybetti ve 28 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusyadan-kieve-hava-saldirisi-9-olu-28-yarali-952767.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tuna nehri'nin su seviyesinde düşüş sürüyor
+            avrupa'nın en uzun ikinci nehri olan ve 10 ülkenin sınırlarından geçerek karadeniz'e dökülen tuna nehri'nin sırbistan ve bulgaristan kesiminde su seviyesinde düşüş devam ediyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Tuna Nehri'nin su seviyesinde düşüş sürüyor</h3>
+                    <p>Avrupa'nın en uzun ikinci nehri olan ve 10 ülkenin sınırlarından geçerek Karadeniz'e dökülen Tuna Nehri'nin Sırbistan ve Bulgaristan kesiminde su seviyesinde düşüş devam ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/tuna-nehrinin-su-seviyesinde-dusus-suruyor-952764.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cbs: abd ve i̇srail i̇ran'daki enerji altyapısını bombalamayı planlıyor
+            abd ve i̇srail'in, bu hafta sonu i̇ran'daki enerji altyapısına karşı "bugüne kadarki en sert bombalamayı" yapmayı planladığı öne sürüldü.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>CBS: ABD ve İsrail İran'daki enerji altyapısını bombalamayı planlıyor</h3>
+                    <p>ABD ve İsrail'in, bu hafta sonu İran'daki enerji altyapısına karşı "bugüne kadarki en sert bombalamayı" yapmayı planladığı öne sürüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/cbs-abd-ve-israil-irandaki-enerji-altyapisini-bombalamayi-planliyor-952762.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
