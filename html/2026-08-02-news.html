@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-02 07:33</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx70eq0vlgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran ABD ile barıştansa düşük yoğunluklu bir savaşı mı tercih ediyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckg4rdn5ydgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Tutuklanan Üsküdar Belediye Başkanı Sinem Dedetaş görevden uzaklaştırıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c3w046g8106o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>FIFA, UEFA'nın boykot resti sonrası Dünya Kupası 'yatırım planlarını' geri çekti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/tbmmde-yeni-haftada-3-onemli-baslik-952845.html" target="_blank">
+                <strong>TBMM'de yeni haftada 3 önemli başlık</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cnvn7q297m7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Suudi Arabistan'da idam sırasını bekleyen umutsuz mahkumlar BBC'yi arıyor</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran abd ile barıştansa düşük yoğunluklu bir savaşı mı tercih ediyor?
+            i̇lk bakışta i̇ran'ın bu hafta başlarında ürdün'deki bir abd üssüne düzenlediği sürpriz füze saldırısını açıklamak zor görünebilir. i̇ran, çatışmayı dikkatli bir şekilde yöneterek abd üzerinde baskıyı sürdürebileceğine ve topyekün bir savaştan kaçınabileceğine inanıyor olabilir.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran ABD ile barıştansa düşük yoğunluklu bir savaşı mı tercih ediyor?</h3>
+                    <p>İlk bakışta İran'ın bu hafta başlarında Ürdün'deki bir ABD üssüne düzenlediği sürpriz füze saldırısını açıklamak zor görünebilir. İran, çatışmayı dikkatli bir şekilde yöneterek ABD üzerinde baskıyı sürdürebileceğine ve topyekün bir savaştan kaçınabileceğine inanıyor olabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx70eq0vlgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tbmm'de yeni haftada 3 önemli başlık
+            meclis yaz döneminde de yoğun mesaisini sürdürüyor. bu hafta 18 yaş altı suçlularda ceza üst sınırını artırmaya yönelik düzenlemenin genel kurul gündemine gelmesi bekleniyor. terörsüz türkiye hedefi için de kanun teklifi hazırlıkları sürüyor. teklifin meclis başkanlığı'na hafta içinde sunulması öngörülüyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>TBMM'de yeni haftada 3 önemli başlık</h3>
+                    <p>Meclis yaz döneminde de yoğun mesaisini sürdürüyor. Bu hafta 18 yaş altı suçlularda ceza üst sınırını artırmaya yönelik düzenlemenin Genel Kurul gündemine gelmesi bekleniyor. Terörsüz Türkiye hedefi için de kanun teklifi hazırlıkları sürüyor. Teklifin Meclis Başkanlığı'na hafta içinde sunulması öngörülüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tbmmde-yeni-haftada-3-onemli-baslik-952845.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa atletizm şampiyonası'nda türkiye'den rekor katılım
+            türkiye, 10-16 ağustos tarihlerinde i̇ngiltere'nin birmingham kentinde düzenlenecek avrupa atletizm şampiyonası'na 50 sporcuyla katılarak organizasyon tarihindeki en yüksek sporcu sayısına ulaşacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa Atletizm Şampiyonası'nda Türkiye'den rekor katılım</h3>
+                    <p>Türkiye, 10-16 Ağustos tarihlerinde İngiltere'nin Birmingham kentinde düzenlenecek Avrupa Atletizm Şampiyonası'na 50 sporcuyla katılarak organizasyon tarihindeki en yüksek sporcu sayısına ulaşacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/avrupa-atletizm-sampiyonasinda-turkiyeden-rekor-katilim-952848.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de bir restoranda silahlı saldırı: en az 3 ölü, 2 yaralı
+            abd'nin idaho eyaletinde bir restoranda gerçekleşen silahlı saldırıda en az 3 kişi hayatını kaybetti ve 2 kişi de yaralandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de bir restoranda silahlı saldırı: En az 3 ölü, 2 yaralı</h3>
+                    <p>ABD'nin Idaho eyaletinde bir restoranda gerçekleşen silahlı saldırıda en az 3 kişi hayatını kaybetti ve 2 kişi de yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdde-bir-restoranda-silahli-saldiri-en-az-3-olu-2-yarali-952842.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump i̇ran'a yönelik saldırıları iptal etti
+            abd başkanı donald trump, i̇ran'la bir anlaşmanın ana hatları üzerinde uzlaşma sağlandığını ve bu nedenle i̇ran'a yönelik planlanan saldırıları askıya aldığını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump İran'a yönelik saldırıları iptal etti</h3>
+                    <p>ABD Başkanı Donald Trump, İran'la bir anlaşmanın ana hatları üzerinde uzlaşma sağlandığını ve bu nedenle İran'a yönelik planlanan saldırıları askıya aldığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-irana-yonelik-saldirilari-iptal-etti-952841.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            tutuklanan üsküdar belediye başkanı sinem dedetaş görevden uzaklaştırıldı
+            i̇stanbul anadolu cumhuriyet başsavcılığı'nca yürütülen soruşturma kapsamında gözaltına alınan üsküdar belediye başkanı sinem dedetaş'ın da aralarında bulunduğu dört kişi tutuklandı. i̇çişleri bakanlığı, sinem dedetaş'ın üsküdar belediye başkanlığı görevinden uzaklaştırıldığını duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tutuklanan Üsküdar Belediye Başkanı Sinem Dedetaş görevden uzaklaştırıldı</h3>
+                    <p>İstanbul Anadolu Cumhuriyet Başsavcılığı'nca yürütülen soruşturma kapsamında gözaltına alınan Üsküdar Belediye Başkanı Sinem Dedetaş'ın da aralarında bulunduğu dört kişi tutuklandı. İçişleri Bakanlığı, Sinem Dedetaş'ın Üsküdar Belediye Başkanlığı görevinden uzaklaştırıldığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg4rdn5ydgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'nın 'i̇spanya ile schengen'i askıya alma' kararı ne anlama geliyor?
+            i̇spanya'nın kuzey afrika'daki toprağı ceuta'ya fas'tan on binlerce kişinin geçmesinin ardından i̇talya'nın i̇spanya ile "schengen serbest dolaşım rejimini geçici olarak askıya alma" kararı tartışmalara neden oldu. bu tedbirin ceuta vakasında ne amaca hizmet edeceği ve pratikte nasıl uygulanacağı konusunda soru işaretleri doğdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalya'nın 'İspanya ile Schengen'i askıya alma' kararı ne anlama geliyor?</h3>
+                    <p>İspanya'nın Kuzey Afrika'daki toprağı Ceuta'ya Fas'tan on binlerce kişinin geçmesinin ardından İtalya'nın İspanya ile "Schengen serbest dolaşım rejimini geçici olarak askıya alma" kararı tartışmalara neden oldu. Bu tedbirin Ceuta vakasında ne amaca hizmet edeceği ve pratikte nasıl uygulanacağı konusunda soru işaretleri doğdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cg4dx7zqzy9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            batı şeria'da i̇srailli yerleşimci: 'tanrı bizi seçti, filistinlilere saldırılar haklı bir intikam'
+            i̇şgal altındaki batı şeria'nın derinliklerinde yer alan i̇sraillilerin yasa dışı yerleşimlerinden havat gilad, son dönemde filistinlilere yönelik saldırılarla tekrar gündemde. aşırılık yanlısı i̇srailli yerleşimcilerin önderi, bu bölgenin kendilerine vadedildiğini söyleyerek saldırıları haklı buluyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Batı Şeria'da İsrailli yerleşimci: 'Tanrı bizi seçti, Filistinlilere saldırılar haklı bir intikam'</h3>
+                    <p>İşgal altındaki Batı Şeria'nın derinliklerinde yer alan İsraillilerin yasa dışı yerleşimlerinden Havat Gilad, son dönemde Filistinlilere yönelik saldırılarla tekrar gündemde. Aşırılık yanlısı İsrailli yerleşimcilerin önderi, bu bölgenin kendilerine vadedildiğini söyleyerek saldırıları haklı buluyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj03y3115d8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            balıkesir, antalya, mersin ve aydın'da yangınlar sürüyor
+            türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Balıkesir, Antalya, Mersin ve Aydın'da yangınlar sürüyor</h3>
+                    <p>Türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da üç belediye başkanı daha akp'ye katıldı
+            i̇stanbul'da 31 mart 2024 yerel seçimlerinde chp'den seçilen tuzla belediye başkanı eren ali bingöl, çekmeköy belediye başkanı orhan çerkez ve şile belediye başkanvekili sacit terzi akp'ye katıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da üç belediye başkanı daha AKP'ye katıldı</h3>
+                    <p>İstanbul'da 31 Mart 2024 yerel seçimlerinde CHP'den seçilen Tuzla Belediye Başkanı Eren Ali Bingöl, Çekmeköy Belediye Başkanı Orhan Çerkez ve Şile Belediye Başkanvekili Sacit Terzi AKP'ye katıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgv3264gj7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'bu gezegenin gerçek hükümdarı biz değiliz': dünya'nın derinliklerinde kol gezen gizemli şeytan solucanları
+            dünya'nın derinliklerinde hiçbir canlının yaşayamayacağını düşünüyorduk. yanılmışız.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Bu gezegenin gerçek hükümdarı biz değiliz': Dünya'nın derinliklerinde kol gezen gizemli şeytan solucanları</h3>
+                    <p>Dünya'nın derinliklerinde hiçbir canlının yaşayamayacağını düşünüyorduk. Yanılmışız.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2gzrjm121o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cem küçük 'halkı yanıltıcı bilgiyi alenen yayma' suçlamasıyla tutuklandı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan tv yorumcusu cem küçük tutuklandı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cem Küçük 'halkı yanıltıcı bilgiyi alenen yayma' suçlamasıyla tutuklandı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan TV yorumcusu Cem Küçük tutuklandı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyqe433j9no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            japonya'da şirketler aşırı sıcaklar nedeniyle çalışma saatlerini azaltmaya başladı
+            japonya'da şirketler, etkisini artıran aşırı sıcaklardan çalışanları korumak amacıyla çalışma saatlerini kısaltmaya başladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Japonya'da şirketler aşırı sıcaklar nedeniyle çalışma saatlerini azaltmaya başladı</h3>
+                    <p>Japonya'da şirketler, etkisini artıran aşırı sıcaklardan çalışanları korumak amacıyla çalışma saatlerini kısaltmaya başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/japonyada-sirketler-asiri-sicaklar-nedeniyle-calisma-saatlerini-azaltmaya-basladi-952846.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da bir otomobil park halindeki araçlara çarptı
+            ankara'da seyir halindeki bir otomobilin park halindeki araçlara çarpması sonucu 4 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ankara'da bir otomobil park halindeki araçlara çarptı</h3>
+                    <p>Ankara'da seyir halindeki bir otomobilin park halindeki araçlara çarpması sonucu 4 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-bir-otomobil-park-halindeki-araclara-carpti-952843.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail gazze'ye saldırdı: 2'si çocuk 8 filistinli hayatını kaybetti
+            soykırımcı i̇srail ordusunun ateşkese rağmen gazze şeridi'nde evleri hedef alan saldırılarında 2'si çocuk 8 filistinli yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail Gazze'ye saldırdı: 2'si çocuk 8 Filistinli hayatını kaybetti</h3>
+                    <p>Soykırımcı İsrail ordusunun ateşkese rağmen Gazze Şeridi'nde evleri hedef alan saldırılarında 2'si çocuk 8 Filistinli yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israil-gazzeye-saldirdi-2si-cocuk-8-filistinli-hayatini-kaybetti-952840.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bursa'da iki otomobilin çarpıştığı kazada 7 kişi yaralandı
+            bursa'nın yıldırım ilçesinde iki otomobilin çarpıştığı kazada 7 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bursa'da iki otomobilin çarpıştığı kazada 7 kişi yaralandı</h3>
+                    <p>Bursa'nın Yıldırım ilçesinde iki otomobilin çarpıştığı kazada 7 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/bursada-iki-otomobilin-carpistigi-kazada-7-kisi-yaralandi-952839.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            peru'da uçak düştü: 13 ölü
+            peru'da turistleri taşıyan uçağın nazca kentindeki kırsal alana düşmesi sonucu 13 kişi yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Peru'da uçak düştü: 13 ölü</h3>
+                    <p>Peru'da turistleri taşıyan uçağın Nazca kentindeki kırsal alana düşmesi sonucu 13 kişi yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/peruda-ucak-dustu-13-olu-952838.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fifa, uefa'nın boykot resti sonrası dünya kupası 'yatırım planlarını' geri çekti
+            uluslararası futbol federasyonları birliği (fifa) başkanı gianni infantino, dünya kupası dahil uluslararası turnuvalardaki hisselerin özel yatırımcılara satılmasını öngören ve "futbolun satılması" eleştirilerine hedef olan planı, yaşanan krizin ardından iptal ettiğini söyledi.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>FIFA, UEFA'nın boykot resti sonrası Dünya Kupası 'yatırım planlarını' geri çekti</h3>
+                    <p>Uluslararası Futbol Federasyonları Birliği (FIFA) Başkanı Gianni Infantino, Dünya Kupası dahil uluslararası turnuvalardaki hisselerin özel yatırımcılara satılmasını öngören ve "futbolun satılması" eleştirilerine hedef olan planı, yaşanan krizin ardından iptal ettiğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3w046g8106o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'da idam sırasını bekleyen umutsuz mahkumlar bbc'yi arıyor
+            bazı etiyopyalı mahkumlar hikayelerini anlatmak için bbc tigrinya servisi'nin numarasını bulup cezaevi telefonundan aradı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Suudi Arabistan'da idam sırasını bekleyen umutsuz mahkumlar BBC'yi arıyor</h3>
+                    <p>Bazı Etiyopyalı mahkumlar hikayelerini anlatmak için BBC Tigrinya Servisi'nin numarasını bulup cezaevi telefonundan aradı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cnvn7q297m7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            dereköy gümrük kapısı hafif ticari kargo araçlarına açıldı
+            türkiye ile bulgaristan arasında varılan mutabakat kapsamında kırklareli'ndeki dereköy gümrük kapısı, 1 ağustos'tan itibaren 3,5 tona kadar olan hafif ticari kargo araçlarının geçişine açıldı. yeni uygulamayla sınır kapılarındaki yoğunluğun azaltılması ve ihracatın daha hızlı yapılması hedefleniyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Dereköy Gümrük Kapısı hafif ticari kargo araçlarına açıldı</h3>
+                    <p>Türkiye ile Bulgaristan arasında varılan mutabakat kapsamında Kırklareli'ndeki Dereköy Gümrük Kapısı, 1 Ağustos'tan itibaren 3,5 tona kadar olan hafif ticari kargo araçlarının geçişine açıldı. Yeni uygulamayla sınır kapılarındaki yoğunluğun azaltılması ve ihracatın daha hızlı yapılması hedefleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/derekoy-gumruk-kapisi-hafif-ticari-kargo-araclarina-acildi-952844.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
