@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-03 08:32</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy8e5zl3w82o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>TÜİK temmuz enflasyonunu %31,75; ENAG %50,49 olarak açıkladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5y05e5jzddo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İspanya'nın Afrika'daki toprağında yaşadığı göç krizi örgütlü müydü?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/avustralya-teknoloji-sirketlerinin-haber-kuruluslarina-odeme-yukumlulugunu-artirmayi-planliyor-952924.html" target="_blank">
+                <strong>Avustralya, teknoloji şirketlerinin haber kuruluşlarına ödeme yükümlülüğünü artırmayı planlıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/turistlerden-turk-mutfagina-59-milyar-dolarlik-ilgi-952922.html" target="_blank">
+                <strong>Turistlerden Türk mutfağına 5,9 milyar dolarlık ilgi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/omer-celik-cumhurbaskanimizi-franco-diktatorlugu-ile-benzestirmek-akil-yoksunlugudur-952920.html" target="_blank">
+                <strong>Ömer Çelik: Cumhurbaşkanımızı Franco diktatörlüğü ile benzeştirmek akıl yoksunluğudur</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            tüi̇k temmuz enflasyonunu %31,75; enag %50,49 olarak açıkladı
+            türkiye i̇statistik kurumu (tüi̇k) temmuz ayı enflasyon rakamlarını açıkladı. temmuz ayı enflasyonu %1,78, yıllık enflasyon %31,75 oldu. enflasyon araştırma grubu (enag) ise temmuz ayı için enflasyonu aylık %3,07, yıllık bazda ise %50,49 olarak açıkladı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>TÜİK temmuz enflasyonunu %31,75; ENAG %50,49 olarak açıkladı</h3>
+                    <p>Türkiye İstatistik Kurumu (TÜİK) temmuz ayı enflasyon rakamlarını açıkladı. Temmuz ayı enflasyonu %1,78, yıllık enflasyon %31,75 oldu. Enflasyon Araştırma Grubu (ENAG) ise temmuz ayı için enflasyonu aylık %3,07, yıllık bazda ise %50,49 olarak açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy8e5zl3w82o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            turistlerden türk mutfağına 5,9 milyar dolarlık ilgi
+            dönerden pideye, lahmacundan yöresel lezzetlere uzanan türk mutfağı, turistlerin harcamalarında ilk sırada yer aldı. yeme içme gelirleri ilk 6 ayda yaklaşık yüzde 9 artış göstererek 5 milyar 904 milyon 388 bin dolar oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Turistlerden Türk mutfağına 5,9 milyar dolarlık ilgi</h3>
+                    <p>Dönerden pideye, lahmacundan yöresel lezzetlere uzanan Türk mutfağı, turistlerin harcamalarında ilk sırada yer aldı. Yeme içme gelirleri ilk 6 ayda yaklaşık yüzde 9 artış göstererek 5 milyar 904 milyon 388 bin dolar oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turistlerden-turk-mutfagina-59-milyar-dolarlik-ilgi-952922.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇hracatta tüm zamanların temmuz rekoru
+            ticaret bakanı ömer bolat, temmuzda ihracatın geçen yılın aynı dönemine göre yüzde 2,9 artarak 25,6 milyar dolara ulaştığını ve en yüksek temmuz ayı ihracatına imza atıldığını bildirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İhracatta tüm zamanların temmuz rekoru</h3>
+                    <p>Ticaret Bakanı Ömer Bolat, temmuzda ihracatın geçen yılın aynı dönemine göre yüzde 2,9 artarak 25,6 milyar dolara ulaştığını ve en yüksek temmuz ayı ihracatına imza atıldığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ihracatta-tum-zamanlarin-temmuz-rekoru-952919.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa yeni haftaya 13.544,32 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, haftaya yüzde 0,64 yükselişle 13.544,32 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa yeni haftaya 13.544,32 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, haftaya yüzde 0,64 yükselişle 13.544,32 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-yeni-haftaya-1354432-puandan-basladi-952918.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya'nın afrika'daki toprağında yaşadığı göç krizi örgütlü müydü?
+            31 temmuz'da yüzerek i̇spanya'nın afrika'daki ceuta (sebte) kentine gelen on binlerce göçmenin büyük bölümü fas topraklarına geri götürüldü. on binlerce göçmenin ceuta'ya geçmesinden sonra yaşananlarsa avrupa'da göç konusunda yaşanan bölünmeyi gözler önüne seriyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İspanya'nın Afrika'daki toprağında yaşadığı göç krizi örgütlü müydü?</h3>
+                    <p>31 Temmuz'da yüzerek İspanya'nın Afrika'daki Ceuta (Sebte) kentine gelen on binlerce göçmenin büyük bölümü Fas topraklarına geri götürüldü. On binlerce göçmenin Ceuta'ya geçmesinden sonra yaşananlarsa Avrupa'da göç konusunda yaşanan bölünmeyi gözler önüne seriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y05e5jzddo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            lindsay clancy davası: doğum sonrası psikoz mu, cinayet mi?
+            abd'de 35 yaşındaki lindsay clancy üç çocuğunu öldürme suçundan yargılanıyor. dava, kadınların doğum sonrası ruh sağlığını yeniden başlıklara taşıdığı için gündemde.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Lindsay Clancy davası: Doğum sonrası psikoz mu, cinayet mi?</h3>
+                    <p>ABD'de 35 yaşındaki Lindsay Clancy üç çocuğunu öldürme suçundan yargılanıyor. Dava, kadınların doğum sonrası ruh sağlığını yeniden başlıklara taşıdığı için gündemde.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2k7z5k2p74o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: umman'la görüşmeler hürmüz boğazı'ndaki gemi geçişlerine odaklanıyor
+            i̇ran dışişleri bakanlığı sözcüsü i̇smail bekayi, "abd ile müzakere halinde değiliz. umman ile görüşmeler hürmüz boğazı'ndaki gemilerin güvenli geçişine odaklanıyor." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran: Umman'la görüşmeler Hürmüz Boğazı'ndaki gemi geçişlerine odaklanıyor</h3>
+                    <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, "ABD ile müzakere halinde değiliz. Umman ile görüşmeler Hürmüz Boğazı'ndaki gemilerin güvenli geçişine odaklanıyor." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-ummanla-gorusmeler-hurmuz-bogazindaki-gemi-gecislerine-odaklaniyor-952925.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, i̇ran ile yeni müzakerelerin bugün başlayacağını duyurdu
+            abd başkanı donald trump, hürmüz boğazı'nın yeniden açılması ve i̇ran'ın nükleer programını içeren yeni müzakerelerin pazartesi günü başlayacağını söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, İran ile yeni müzakerelerin bugün başlayacağını duyurdu</h3>
+                    <p>ABD Başkanı Donald Trump, Hürmüz Boğazı'nın yeniden açılması ve İran'ın nükleer programını içeren yeni müzakerelerin Pazartesi günü başlayacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn8n2zx45v7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            avustralya, teknoloji şirketlerinin haber kuruluşlarına ödeme yükümlülüğünü artırmayı planlıyor
+            avustralya hükümeti, büyük teknoloji şirketlerinin yerel haber kuruluşlarıyla ticari anlaşmalar yapmasını teşvik eden mevcut medya pazarlama sisteminde değişikliğe giderek anlaşma sağlamayan şirketlere uygulanacak mali yükümlülüğü artırmaya hazırlanıyor.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Avustralya, teknoloji şirketlerinin haber kuruluşlarına ödeme yükümlülüğünü artırmayı planlıyor</h3>
+                    <p>Avustralya hükümeti, büyük teknoloji şirketlerinin yerel haber kuruluşlarıyla ticari anlaşmalar yapmasını teşvik eden mevcut medya pazarlama sisteminde değişikliğe giderek anlaşma sağlamayan şirketlere uygulanacak mali yükümlülüğü artırmaya hazırlanıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/avustralya-teknoloji-sirketlerinin-haber-kuruluslarina-odeme-yukumlulugunu-artirmayi-planliyor-952924.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'da idam sırasını bekleyen umutsuz mahkumlar bbc'yi arıyor
+            bazı etiyopyalı mahkumlar hikayelerini anlatmak için bbc tigrinya servisi'nin numarasını bulup cezaevi telefonundan aradı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Suudi Arabistan'da idam sırasını bekleyen umutsuz mahkumlar BBC'yi arıyor</h3>
+                    <p>Bazı Etiyopyalı mahkumlar hikayelerini anlatmak için BBC Tigrinya Servisi'nin numarasını bulup cezaevi telefonundan aradı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cnvn7q297m7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            15 ilde siber suçlarla mücadele: 93 tutuklama
+            15 ilde "dolandırıcılık, yasa dışı bahis, çevrim içi çocuk müstehcenliği ve tacizi, suçtan kaynaklanan mal varlığı değerlerini aklama” suçlarına yönelik düzenlenen operasyonlarda yakalanan 185 şüpheliden 93'ü tutuklandı, 55'i hakkında adli kontrol hükümleri uygulandı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>15 ilde siber suçlarla mücadele: 93 tutuklama</h3>
+                    <p>15 ilde "dolandırıcılık, yasa dışı bahis, çevrim içi çocuk müstehcenliği ve tacizi, suçtan kaynaklanan mal varlığı değerlerini aklama” suçlarına yönelik düzenlenen operasyonlarda yakalanan 185 şüpheliden 93'ü tutuklandı, 55'i hakkında adli kontrol hükümleri uygulandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/15-ilde-siber-suclarla-mucadele-93-tutuklama-952926.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ömer çelik: cumhurbaşkanımızı franco diktatörlüğü ile benzeştirmek akıl yoksunluğudur
+            ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, cumhurbaşkanı erdoğan'ın dünya üzerinde demokratik seçimlerle iş başına gelen en tecrübeli lider olduğunu belirterek, "cumhurbaşkanımızın siyasi konumunu franco diktatörlüğü ile benzeştirmek akıl ve izan yoksunluğudur." ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ömer Çelik: Cumhurbaşkanımızı Franco diktatörlüğü ile benzeştirmek akıl yoksunluğudur</h3>
+                    <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, Cumhurbaşkanı Erdoğan'ın dünya üzerinde demokratik seçimlerle iş başına gelen en tecrübeli lider olduğunu belirterek, "Cumhurbaşkanımızın siyasi konumunu Franco diktatörlüğü ile benzeştirmek akıl ve izan yoksunluğudur." ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/omer-celik-cumhurbaskanimizi-franco-diktatorlugu-ile-benzestirmek-akil-yoksunlugudur-952920.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kapalıçarşı esnafı çarşının sembolik anahtarını murat kurum'a hediye etti
+            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, kahramanmaraş programı kapsamında yeniden ihya edilen tarihi kapalıçarşı’yı ziyaret etti. yeni iş yerlerine taşınan esnaf ile bir araya gelen bakan kurum’a çarşının sembolik anahtarı hediye edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kapalıçarşı esnafı çarşının sembolik anahtarını Murat Kurum'a hediye etti</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, Kahramanmaraş programı kapsamında yeniden ihya edilen Tarihi Kapalıçarşı’yı ziyaret etti. Yeni iş yerlerine taşınan esnaf ile bir araya gelen Bakan Kurum’a çarşının sembolik anahtarı hediye edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kapalicarsi-esnafi-carsinin-sembolik-anahtarini-murat-kuruma-hediye-etti-952917.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazeteci ertuğrul özkök'e 'cumhurbaşkanına hakaret' soruşturması
+            i̇stanbul cumhuriyet başsavcılığı, gazeteci ertuğrul özkök hakkında cumhurbaşkanına hakaret suçlamasıyla soruşturma başlattı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazeteci Ertuğrul Özkök'e 'cumhurbaşkanına hakaret' soruşturması</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı, gazeteci Ertuğrul Özkök hakkında cumhurbaşkanına hakaret suçlamasıyla soruşturma başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gx9y7l2xzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran: i̇srail barış çabalarını bilinçli şekilde sabote ediyor
+            i̇letişim başkanı burhanettin duran, katil i̇srail'in gazze'deki son saldırılarının netanyahu hükümetinin çözümsüzlük niyetini açıkça ortaya koyduğunu belirterek, uluslararası toplumu daha etkili bir tavır almaya çağırdı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İletişim Başkanı Duran: İsrail barış çabalarını bilinçli şekilde sabote ediyor</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, katil İsrail'in Gazze'deki son saldırılarının Netanyahu hükümetinin çözümsüzlük niyetini açıkça ortaya koyduğunu belirterek, uluslararası toplumu daha etkili bir tavır almaya çağırdı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-israil-baris-cabalarini-bilincli-sekilde-sabote-ediyor-952923.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            temmuzda fiyatı en çok artan ve azalan ürünler belli oldu
+            tüketici fiyatları bazında temmuzda en yüksek fiyat artışı yüzde 50,42 ile ayaktan tedavi edici ve rehabilite edici hizmetlerde görülürken, en çok ucuzlayan ürün yüzde 20,44 ile diğer taze meyveler oldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Temmuzda fiyatı en çok artan ve azalan ürünler belli oldu</h3>
+                    <p>Tüketici fiyatları bazında temmuzda en yüksek fiyat artışı yüzde 50,42 ile ayaktan tedavi edici ve rehabilite edici hizmetlerde görülürken, en çok ucuzlayan ürün yüzde 20,44 ile diğer taze meyveler oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/temmuzda-fiyati-en-cok-artan-ve-azalan-urunler-belli-oldu-952921.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            etimesgut belediye başkanı erdal beşikçioğlu dahil 40 kişi tutuklandı
+            ankara cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan etimesgut belediye başkanı erdal beşikçioğlu'nun da aralarında bulunduğu 40 kişi tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Etimesgut Belediye Başkanı Erdal Beşikçioğlu dahil 40 kişi tutuklandı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında gözaltına alınan Etimesgut Belediye Başkanı Erdal Beşikçioğlu'nun da aralarında bulunduğu 40 kişi tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5630yz169o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bülent arınç'tan davutoğlu paylaşımı: 'liderimize bağlı bir şekilde ak parti'de kalmalıydınız'
+            eski tbmm başkanı bülent arınç, gelecek partisi'ni feshetme kararı alan ahmet davutoğlu'nun bu partiyi en başta kurmaması gerektiğini söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bülent Arınç'tan Davutoğlu paylaşımı: 'Liderimize bağlı bir şekilde AK Parti'de kalmalıydınız'</h3>
+                    <p>Eski TBMM Başkanı Bülent Arınç, Gelecek Partisi'ni feshetme kararı alan Ahmet Davutoğlu'nun bu partiyi en başta kurmaması gerektiğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c998glj90eko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'genital uçuk (herpes) teşhisimden utanmayı reddediyorum'
+            uzmanlara göre herpes tanısının psikolojik etkileri fiziksel belirtilerinden daha ciddi olabilir.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Genital uçuk (herpes) teşhisimden utanmayı reddediyorum'</h3>
+                    <p>Uzmanlara göre herpes tanısının psikolojik etkileri fiziksel belirtilerinden daha ciddi olabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62e85j4n6jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            geri adım atmak zorunda kalan fifa ve infantino'yu ne bekliyor?
+            salı sabahı gianni infantino, futbolun en güçlü görevi olan fifa başkanlığında sarsılmaz bir konumdaydı. şimdi ise, görünüşe göre başka kimsenin bilgisi olmadan fifa turnuvalarındaki hisseleri özel yatırım şirketlerine satmaya çalışmasının ardından tehdit altında görünüyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Geri adım atmak zorunda kalan FIFA ve Infantino'yu ne bekliyor?</h3>
+                    <p>Salı sabahı Gianni Infantino, futbolun en güçlü görevi olan FIFA başkanlığında sarsılmaz bir konumdaydı. Şimdi ise, görünüşe göre başka kimsenin bilgisi olmadan FIFA turnuvalarındaki hisseleri özel yatırım şirketlerine satmaya çalışmasının ardından tehdit altında görünüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8rnvve2ppgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
