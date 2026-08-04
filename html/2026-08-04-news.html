@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-04 07:42</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-yumaklidan-yesil-vatani-korumak-icin-duyarlilik-cagrisi-953014.html" target="_blank">
+                <strong>Bakan Yumaklı'dan Yeşil Vatanı korumak için duyarlılık çağrısı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cedj6yq8njdo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rusya yaralı askerlerini cepheye nasıl geri gönderiyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm2ge1y9g4go?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rusya: Ukrayna'nın Karadeniz'deki bir plaja saldırısında yedi kişi öldü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/trt-akademi/trt-akademi-erasmus-projesi-kapsaminda-yapay-zeka-egitimini-tamamladi-953017.html" target="_blank">
+                <strong>TRT Akademi, Erasmus Projesi kapsamında yapay zeka eğitimini tamamladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/abdde-zimmetine-1-milyon-dolara-yakin-kripto-para-gecirdigini-itiraf-eden-fbi-ajani-hakkinda-dava-953013.html" target="_blank">
+                <strong>ABD'de zimmetine 1 milyon dolara yakın kripto para geçirdiğini itiraf eden FBI ajanı hakkında dava</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan yumaklı'dan yeşil vatanı korumak için duyarlılık çağrısı
+            tarım ve orman bakanı yumaklı, meteorolojik veriler doğrultusunda türkiye'nin kıyı kesimlerinde beklenen şiddetli rüzgarın orman yangınları açısından büyük risk oluşturduğunu belirterek "yeşil vatan"ı korumak için duyarlılık çağrısında bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Yumaklı'dan Yeşil Vatanı korumak için duyarlılık çağrısı</h3>
+                    <p>Tarım ve Orman Bakanı Yumaklı, meteorolojik veriler doğrultusunda Türkiye'nin kıyı kesimlerinde beklenen şiddetli rüzgarın orman yangınları açısından büyük risk oluşturduğunu belirterek "Yeşil Vatan"ı korumak için duyarlılık çağrısında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-yumaklidan-yesil-vatani-korumak-icin-duyarlilik-cagrisi-953014.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya yaralı askerlerini cepheye nasıl geri gönderiyor?
+            açık kaynaklardan elde edilebilen mahkeme kayıtları, komutanların yaralı askerleri yasal olarak zorunlu tıbbi değerlendirmelere göndermek yerine, tekrar savaşa geri gönderdiklerine dair iddiaları ortaya koyuyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya yaralı askerlerini cepheye nasıl geri gönderiyor?</h3>
+                    <p>Açık kaynaklardan elde edilebilen mahkeme kayıtları, komutanların yaralı askerleri yasal olarak zorunlu tıbbi değerlendirmelere göndermek yerine, tekrar savaşa geri gönderdiklerine dair iddiaları ortaya koyuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cedj6yq8njdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: ukrayna'nın karadeniz'deki bir plaja saldırısında yedi kişi öldü
+            rusya'nın karadeniz kıyısındaki bir tatil bölgesine yapılan drone saldırısında, aralarında üç çocuğun da bulunduğu yedi kişinin öldüğü açıklandı. rus yetkililer ukrayna'yı "sivillere yönelik kasıtlı bir saldırı" düzenlemekle suçladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Ukrayna'nın Karadeniz'deki bir plaja saldırısında yedi kişi öldü</h3>
+                    <p>Rusya'nın Karadeniz kıyısındaki bir tatil bölgesine yapılan drone saldırısında, aralarında üç çocuğun da bulunduğu yedi kişinin öldüğü açıklandı. Rus yetkililer Ukrayna'yı "sivillere yönelik kasıtlı bir saldırı" düzenlemekle suçladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2ge1y9g4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ariana grande'nin sağlığıyla ilgili endişeler neden gündeme geldi?
+            33 yaşındaki amerikalı şarkıcı, temsilcisinin açıklamasına göre, gelecek ay sona erecek dünya turnesinin ardından "gözlerden uzak kalacak".
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ariana Grande'nin sağlığıyla ilgili endişeler neden gündeme geldi?</h3>
+                    <p>33 yaşındaki Amerikalı şarkıcı, temsilcisinin açıklamasına göre, gelecek ay sona erecek dünya turnesinin ardından "gözlerden uzak kalacak".</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8rnv7m744yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            öcalan: 'cumhuriyet'in kuruluşu kadar önemli bir demokratikleşme sürecinin başlangıcındayız'
+            abdullah öcalan, pkk'lıların topluma kazandırılmasıyla ilgili çıkarılması beklenen çerçeve yasa hakkında, "en az cumhuriyet'in kuruluşu kadar önemli olacak bir demokratikleşme sürecinin başlangıcındayız" dedi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Öcalan: 'Cumhuriyet'in kuruluşu kadar önemli bir demokratikleşme sürecinin başlangıcındayız'</h3>
+                    <p>Abdullah Öcalan, PKK'lıların topluma kazandırılmasıyla ilgili çıkarılması beklenen çerçeve yasa hakkında, "En az Cumhuriyet'in kuruluşu kadar önemli olacak bir demokratikleşme sürecinin başlangıcındayız" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0ejzvd2gzvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trt akademi, erasmus projesi kapsamında yapay zeka eğitimini tamamladı
+            trt akademi, uluslararası medya eğitim programlarına bir yenisini daha ekledi. “yapay zekâ ile gençliği güçlendirme” başlıklı erasmus projesi kapsamında düzenlenen “yapay zekâ çağında gençliğin güçlendirilmesi: okuryazarlık, dönüşüm ve dezenformasyon” eğitim programı, 28-29 temmuz 2026 tarihlerinde trt genel müdürlüğünde tamamlandı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>TRT Akademi, Erasmus Projesi kapsamında yapay zeka eğitimini tamamladı</h3>
+                    <p>TRT Akademi, uluslararası medya eğitim programlarına bir yenisini daha ekledi. “Yapay Zekâ ile Gençliği Güçlendirme” başlıklı Erasmus Projesi kapsamında düzenlenen “Yapay Zekâ Çağında Gençliğin Güçlendirilmesi: Okuryazarlık, Dönüşüm ve Dezenformasyon” eğitim programı, 28-29 Temmuz 2026 tarihlerinde TRT Genel Müdürlüğünde tamamlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/trt-akademi/trt-akademi-erasmus-projesi-kapsaminda-yapay-zeka-egitimini-tamamladi-953017.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de zimmetine 1 milyon dolara yakın kripto para geçirdiğini itiraf eden fbi ajanı hakkında dava
+            abd federal soruşturma bürosu (fbi) bünyesinde görev yapan karşı istihbarat ajanı hakkında, soruşturma kapsamında erişim sağlanan bir şüpheliye ait hesaptan izinsiz şekilde yaklaşık 1 milyon dolar değerinde kripto para çektiğini itiraf etmesinin ardından dava açıldığı belirtildi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD'de zimmetine 1 milyon dolara yakın kripto para geçirdiğini itiraf eden FBI ajanı hakkında dava</h3>
+                    <p>ABD Federal Soruşturma Bürosu (FBI) bünyesinde görev yapan karşı istihbarat ajanı hakkında, soruşturma kapsamında erişim sağlanan bir şüpheliye ait hesaptan izinsiz şekilde yaklaşık 1 milyon dolar değerinde kripto para çektiğini itiraf etmesinin ardından dava açıldığı belirtildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdde-zimmetine-1-milyon-dolara-yakin-kripto-para-gecirdigini-itiraf-eden-fbi-ajani-hakkinda-dava-953013.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 84,85 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 84,85 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 84,85 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 84,85 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-8485-dolardan-islem-goruyor-953018.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küresel piyasalarda orta doğu tedirginliği hakim
+            küresel piyasalar, orta doğu'da devam eden barış müzakerelerine karşın, her an yeni bir çatışmanın patlak verebileceğine yönelik endişelerle karışık seyrediyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Küresel piyasalarda Orta Doğu tedirginliği hakim</h3>
+                    <p>Küresel piyasalar, Orta Doğu'da devam eden barış müzakerelerine karşın, her an yeni bir çatışmanın patlak verebileceğine yönelik endişelerle karışık seyrediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kuresel-piyasalarda-orta-dogu-tedirginligi-hakim-953012.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yunanistan'ın attika bölgesinde 20182026 döneminde 480 bin dönümden fazla alan yandı
+            yunanistan'ın başkenti atina'yı da kapsayan attika bölgesinin batısında, 2018-2026 döneminde çıkan büyük orman yangınlarında 480 bin dönümden fazla alanın yandığı bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yunanistan'ın Attika bölgesinde 20182026 döneminde 480 bin dönümden fazla alan yandı</h3>
+                    <p>Yunanistan'ın başkenti Atina'yı da kapsayan Attika bölgesinin batısında, 2018-2026 döneminde çıkan büyük orman yangınlarında 480 bin dönümden fazla alanın yandığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yunanistanin-attika-bolgesinde-2018-2026-doneminde-480-bin-donumden-fazla-alan-yandi-953021.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trt akademide etkili ve güzel konuşma eğitimi ağustos döneminde yeniden başlıyor
+            türkçeyi doğru, etkili ve güzel konuşmak isteyenleri alanında deneyimli eğitmenlerle buluşturan trt akademi, etkili ve güzel konuşma “temel diksiyon” eğitim programını 17-25 ağustos 2026 tarihleri arasında trt genel müdürlüğünde gerçekleştirecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TRT Akademide etkili ve güzel konuşma eğitimi ağustos döneminde yeniden başlıyor</h3>
+                    <p>Türkçeyi doğru, etkili ve güzel konuşmak isteyenleri alanında deneyimli eğitmenlerle buluşturan TRT Akademi, Etkili ve Güzel Konuşma “Temel Diksiyon” eğitim programını 17-25 Ağustos 2026 tarihleri arasında TRT Genel Müdürlüğünde gerçekleştirecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/trt-akademi/trt-akademide-etkili-ve-guzel-konusma-egitimi-agustos-doneminde-yeniden-basliyor-953020.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            menderes belediye başkanı i̇lkay çiçek dahil 13 kişi gözaltına alındı
+            i̇zmir cumhuriyet başsavcılığı koordinesinde yürütülen soruşturma kapsamında, menderes belediyesi başkanı i̇lkay çiçek'in de aralarında bulunduğu 16 kişi hakkında gözaltı kararı verildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Menderes Belediye Başkanı İlkay Çiçek dahil 13 kişi gözaltına alındı</h3>
+                    <p>İzmir Cumhuriyet Başsavcılığı koordinesinde yürütülen soruşturma kapsamında, Menderes Belediyesi Başkanı İlkay Çiçek'in de aralarında bulunduğu 16 kişi hakkında gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0kmpngkdpmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            deniz göktaş cezaevindeki ilk ayını anlattı: 'kötü hissettiğim tek bir an bile olmadı'
+            tutuklu komedyen deniz göktaş sosyal medya hesaplarından paylaşılan bir mektupta cezaevinde moralinin yerinde, sağlığının iyi olduğunu duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Deniz Göktaş cezaevindeki ilk ayını anlattı: 'Kötü hissettiğim tek bir an bile olmadı'</h3>
+                    <p>Tutuklu komedyen Deniz Göktaş sosyal medya hesaplarından paylaşılan bir mektupta cezaevinde moralinin yerinde, sağlığının iyi olduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crk5l2gj3jno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            programcı tahir sarıkaya, cem küçük soruşturması kapsamında gözaltında
+            tv yorumcusu cem küçük tutuklandığı i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında tv programcısı tahir sarıkaya da gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Programcı Tahir Sarıkaya, Cem Küçük soruşturması kapsamında gözaltında</h3>
+                    <p>TV yorumcusu Cem Küçük tutuklandığı İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında TV programcısı Tahir Sarıkaya da gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyqe433j9no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şehit yakını ile gazi aylıklarına artış teklifi neler içeriyor?
+            akp ve mhp ortak bir açıklamayla, çerçeve yasa ile eş zamanlı olarak şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren bir kanun teklifinin meclise sunulduğunu duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Şehit yakını ile gazi aylıklarına artış teklifi neler içeriyor?</h3>
+                    <p>AKP ve MHP ortak bir açıklamayla, çerçeve yasa ile eş zamanlı olarak şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren bir kanun teklifinin meclise sunulduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7rlzrxqko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi meclis'te akp'li milletvekillerinin imzasına açıldı
+            akp milletvekillerinin imzasına açılan çerçeve yasa teklifinin, 4 ağustos salı günü saat 17.00'ye kadar imzalanması ve daha sonra da tbmm başkanlığı'na sunulması planlanıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi Meclis'te AKP'li milletvekillerinin imzasına açıldı</h3>
+                    <p>AKP milletvekillerinin imzasına açılan çerçeve yasa teklifinin, 4 Ağustos Salı günü saat 17.00'ye kadar imzalanması ve daha sonra da TBMM Başkanlığı'na sunulması planlanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c74gj9em7llo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan öncülüğündeki deniz koalisyonu nedir, hangi ülkeler katılıyor?
+            suudi arabistan, türkiye'nin de aralarında bulunduğu 14 ülkenin katılımıyla riyad liderliğinde çokuluslu bir deniz savunma koalisyonu kurulduğunu duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suudi Arabistan öncülüğündeki deniz koalisyonu nedir, hangi ülkeler katılıyor?</h3>
+                    <p>Suudi Arabistan, Türkiye'nin de aralarında bulunduğu 14 ülkenin katılımıyla Riyad liderliğinde çokuluslu bir deniz savunma koalisyonu kurulduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyqlqyrvn6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emekliye aylık zam farkı ödemeleri 7 ağustos'ta yapılacak
+            en düşük emekli aylığı tutarının 23 bin 552 tl’ye yükseltilmesi kapsamında aylık fark ödemeleri 7 ağustos'ta yapılacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Emekliye aylık zam farkı ödemeleri 7 Ağustos'ta yapılacak</h3>
+                    <p>En düşük emekli aylığı tutarının 23 bin 552 TL’ye yükseltilmesi kapsamında aylık fark ödemeleri 7 Ağustos'ta yapılacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/emekliye-aylik-zam-farki-odemeleri-7-agustosta-yapilacak-953019.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kayseri'de devrilen yolcu otobüsündeki 20 kişi yaralandı
+            kayseri'nin i̇ncesu ilçesinde yolcu otobüsünün devrilmesi sonucu 1 kişi hayatını kaybetti, 20 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kayseri'de devrilen yolcu otobüsündeki 20 kişi yaralandı</h3>
+                    <p>Kayseri'nin İncesu ilçesinde yolcu otobüsünün devrilmesi sonucu 1 kişi hayatını kaybetti, 20 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kayseride-devrilen-yolcu-otobusundeki-20-kisi-yaralandi-953016.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altının gramı güne yükselişle başladı
+            gram altın güne yükselişle başlamasının ardından 6 bin 209 liradan işlem görüyor. çeyrek altın 10 bin 160 liradan, cumhuriyet altını da 40 bin 453 liradan satılıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altının gramı güne yükselişle başladı</h3>
+                    <p>Gram altın güne yükselişle başlamasının ardından 6 bin 209 liradan işlem görüyor. Çeyrek altın 10 bin 160 liradan, Cumhuriyet altını da 40 bin 453 liradan satılıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altinin-grami-gune-yukselisle-basladi-953015.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
