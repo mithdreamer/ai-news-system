@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-05 07:42</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c87n4z2v2z8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Orman yangınlarıyla mücadelede yapay zeka nasıl kullanılıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cr493dqdzw0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>YAŞ kararları açıklandı: Türk Hava Kuvvetleri'de ilk kadın general</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckg9kg3j8v7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Hürmüz'ün açılabileceğine dair umutlarla petrol fiyatları düştü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cgk4z4vp3njo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ukraynalı seyyar satıcı 'insan safarisi' saldırısının hedefi oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c629511kx9eo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Özgür Özel ve Veli Ağbaba hakkında fezleke düzenlendi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            orman yangınlarıyla mücadelede yapay zeka nasıl kullanılıyor?
+            yangınları izlemek için teknoloji kullanılıyor ancak yangınları söndürmek için hâlâ itfaiyecilere ihtiyaç duyuluyor.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Orman yangınlarıyla mücadelede yapay zeka nasıl kullanılıyor?</h3>
+                    <p>Yangınları izlemek için teknoloji kullanılıyor ancak yangınları söndürmek için hâlâ itfaiyecilere ihtiyaç duyuluyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c87n4z2v2z8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yaş kararları açıklandı: türk hava kuvvetleri'de ilk kadın general
+            yaş'ta alınan kararlarla görev süresi dolan hava kuvvetleri komutanı orgeneral ziya cemal kadıoğlu'nun yerine orgeneral rafet dalkıran atandı. deniz kuvvetleri komutanı oramiral ercüment tatlıoğlu'nun görev süresi ise bir yıl uzatıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>YAŞ kararları açıklandı: Türk Hava Kuvvetleri'de ilk kadın general</h3>
+                    <p>YAŞ'ta alınan kararlarla görev süresi dolan Hava Kuvvetleri Komutanı Orgeneral Ziya Cemal Kadıoğlu'nun yerine Orgeneral Rafet Dalkıran atandı. Deniz Kuvvetleri Komutanı Oramiral Ercüment Tatlıoğlu'nun görev süresi ise bir yıl uzatıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr493dqdzw0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özgür özel ve veli ağbaba hakkında fezleke düzenlendi
+            ankara cumhuriyet başsavcılığı tarafından yapılan iki ayrı açıklamaya göre, yeni parti genel başkanı özgür özel ile malatya milletvekili veli ağbaba hakkında "zincirleme şekilde rüşvet almak" iddiasıyla fezleke düzenlendi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özgür Özel ve Veli Ağbaba hakkında fezleke düzenlendi</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı tarafından yapılan iki ayrı açıklamaya göre, Yeni Parti Genel Başkanı Özgür Özel ile Malatya Milletvekili Veli Ağbaba hakkında "zincirleme şekilde rüşvet almak" iddiasıyla fezleke düzenlendi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c629511kx9eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            12 maddelik çerçeve yasa teklifinde neler yer alacak?
+            i̇ktidarın "terörsüz türkiye", dem parti'nin ise "barış ve demokratik toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifine son şekli verildi. "milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi" başlığıyla tbmm başkanlığı'na sunulacak teklif, yürürlük maddeleri dahil 12 maddeden oluşuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>12 maddelik çerçeve yasa teklifinde neler yer alacak?</h3>
+                    <p>İktidarın "Terörsüz Türkiye", DEM Parti'nin ise "Barış ve Demokratik Toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifine son şekli verildi. "Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi" başlığıyla TBMM Başkanlığı'na sunulacak teklif, yürürlük maddeleri dahil 12 maddeden oluşuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2gwj9jwreo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            lgs yerleştirme sonuçları açıklandı
+            liselere geçiş sistemi kapsamındaki yerleştirme sonuçları "www.meb.gov.tr" adresinde erişime açıldı. i̇lk yerleştirmede öğrencilerin yüzde 93,56'sı tercihlerine yerleşti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>LGS yerleştirme sonuçları açıklandı</h3>
+                    <p>Liselere Geçiş Sistemi kapsamındaki yerleştirme sonuçları "www.meb.gov.tr" adresinde erişime açıldı. İlk yerleştirmede öğrencilerin yüzde 93,56'sı tercihlerine yerleşti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/lgs-yerlestirme-sonuclari-aciklandi-953126.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            thy'nin ilk yarı satışları 585 milyar lirayı aştı
+            türk hava yollarının (thy) konsolide net karı yılın ilk yarısında 18 milyar 864 milyon lira oldu. şirketin satış gelirleri geçen yılın aynı dönemine göre yüzde 43 artarak 585 milyar lirayı aşarken, toplam varlıkları 2,36 trilyon liraya yükseldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>THY'nin ilk yarı satışları 585 milyar lirayı aştı</h3>
+                    <p>Türk Hava Yollarının (THY) konsolide net karı yılın ilk yarısında 18 milyar 864 milyon lira oldu. Şirketin satış gelirleri geçen yılın aynı dönemine göre yüzde 43 artarak 585 milyar lirayı aşarken, toplam varlıkları 2,36 trilyon liraya yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/thynin-ilk-yari-satislari-585-milyar-lirayi-asti-953125.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            spacex roketinin bir parçasının ay'a çarptığı tahmin ediliyor
+            bir spacex roketinin uzayda bırakılmış bir parçasının, saatte yaklaşık 8.690 km hızla ilerleyerek ay'a çarptığı tahmin ediliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>SpaceX roketinin bir parçasının Ay'a çarptığı tahmin ediliyor</h3>
+                    <p>Bir SpaceX roketinin uzayda bırakılmış bir parçasının, saatte yaklaşık 8.690 km hızla ilerleyerek Ay'a çarptığı tahmin ediliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clye022zj38o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi bugün meclis başkanlığına sunuluyor
+            yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi bugün meclis başkanlığı'na sunuluyor. öncesinde akp grubu saat 10.00'da basına kapalı toplanacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi bugün Meclis başkanlığına sunuluyor</h3>
+                    <p>Yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi bugün Meclis Başkanlığı'na sunuluyor. Öncesinde AKP grubu saat 10.00'da basına kapalı toplanacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2gemqqr9mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şehit yakını ile gazi aylıklarına artış teklifi neler içeriyor?
+            akp ve mhp ortak bir açıklamayla, çerçeve yasa ile eşzamanlı olarak şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren bir kanun teklifinin meclise sunulduğunu duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Şehit yakını ile gazi aylıklarına artış teklifi neler içeriyor?</h3>
+                    <p>AKP ve MHP ortak bir açıklamayla, çerçeve yasa ile eşzamanlı olarak şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren bir kanun teklifinin meclise sunulduğunu duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7rlzrxqko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail, sabah ezanının okunmasına izin vermedi
+            soykırımcı i̇srail ordusu, işgal altındaki doğu kudüs'te bulunan kalendiya mülteci kampı ile kefr akab beldesine geniş çaplı baskın düzenledi, kamptaki camilerde sabah ezanının okunmasını engelledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrail, sabah ezanının okunmasına izin vermedi</h3>
+                    <p>Soykırımcı İsrail ordusu, işgal altındaki Doğu Kudüs'te bulunan Kalendiya Mülteci Kampı ile Kefr Akab beldesine geniş çaplı baskın düzenledi, kamptaki camilerde sabah ezanının okunmasını engelledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-sabah-ezaninin-okunmasina-izin-vermedi-953131.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jeopolitik iyimserlik altın fiyatlarını destekliyor
+            gram altın güne yükselişle başlamasının ardından 6 bin 384 liradan işlem görüyor. çeyrek altın 10 bin 393 liradan, cumhuriyet altını da 41 bin 384 liradan satılıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Jeopolitik iyimserlik altın fiyatlarını destekliyor</h3>
+                    <p>Gram altın güne yükselişle başlamasının ardından 6 bin 384 liradan işlem görüyor. Çeyrek altın 10 bin 393 liradan, cumhuriyet altını da 41 bin 384 liradan satılıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/jeopolitik-iyimserlik-altin-fiyatlarini-destekliyor-953123.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            hürmüz'ün açılabileceğine dair umutlarla petrol fiyatları düştü
+            abd başkanı donald trump, i̇ran savaşında kilit konumda olan hürmüz boğazı'nın "çok yakında" yeniden açılmadığı takdirde i̇ran'ın "çok sert bir şekilde vurulacağı" uyarısını yaptı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hürmüz'ün açılabileceğine dair umutlarla petrol fiyatları düştü</h3>
+                    <p>ABD Başkanı Donald Trump, İran savaşında kilit konumda olan Hürmüz Boğazı'nın "çok yakında" yeniden açılmadığı takdirde İran'ın "çok sert bir şekilde vurulacağı" uyarısını yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg9kg3j8v7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ukraynalı seyyar satıcı 'insan safarisi' saldırısının hedefi oldu
+            ukrayna, uzaktan kumandalı bir insansız hava aracı tarafından takip edilen korkmuş bir sivili gösteren videonun savaş suçu teşkil ettiğini söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ukraynalı seyyar satıcı 'insan safarisi' saldırısının hedefi oldu</h3>
+                    <p>Ukrayna, uzaktan kumandalı bir insansız hava aracı tarafından takip edilen korkmuş bir sivili gösteren videonun savaş suçu teşkil ettiğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgk4z4vp3njo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'da 27 kentte aşırı sıcak nedeniyle kırmızı alarm verildi
+            i̇talya'da etkisini artıran sıcak hava dalgası nedeniyle 27 büyük kentin tamamı için en yüksek seviyedeki "kırmızı alarm" uyarısı yapıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İtalya'da 27 kentte aşırı sıcak nedeniyle kırmızı alarm verildi</h3>
+                    <p>İtalya'da etkisini artıran sıcak hava dalgası nedeniyle 27 büyük kentin tamamı için en yüksek seviyedeki "kırmızı alarm" uyarısı yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/italyada-27-kentte-asiri-sicak-nedeniyle-kirmizi-alarm-verildi-953130.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ak parti meclis'te çerçeve yasa için toplandı
+            ak parti grup başkanı abdullah güler ile genel başkanvekili efkan ala başkanlığındaki toplantıda, terörsüz türkiye kapsamında hazırlanan kanun teklifi hakkında milletvekillerine bilgi veriliyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>AK Parti Meclis'te Çerçeve Yasa için toplandı</h3>
+                    <p>AK Parti Grup Başkanı Abdullah Güler ile Genel Başkanvekili Efkan Ala başkanlığındaki toplantıda, Terörsüz Türkiye kapsamında hazırlanan kanun teklifi hakkında milletvekillerine bilgi veriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ak-parti-mecliste-cerceve-yasa-icin-toplandi-953128.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            a.tr dolaşım belgesi sistemiyle ilk ihracat gerçekleştirildi
+            ticaret bakanlığınca geliştirilen "a.tr dolaşım belgesi" sistemiyle ilk ihracatı kadın girişimci merve özçelik yaptı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>A.TR Dolaşım Belgesi sistemiyle ilk ihracat gerçekleştirildi</h3>
+                    <p>Ticaret Bakanlığınca geliştirilen "A.TR Dolaşım Belgesi" sistemiyle ilk ihracatı kadın girişimci Merve Özçelik yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/atr-dolasim-belgesi-sistemiyle-ilk-ihracat-gerceklestirildi-953132.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 79,21 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 79,21 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 79,21 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 79,21 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-7921-dolardan-islem-goruyor-953124.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa güne 13.707,73 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,14 yükselişle 13.707,73 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa güne 13.707,73 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,14 yükselişle 13.707,73 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gune-1370773-puandan-basladi-953127.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trabzonspor yolundaki salah yedeklikten zirveye nasıl çıktı?
+            trabzonspor, mısır milli takımının da formasını giyen dünyaca ünlü futbolcu mohamed salah'ın çarşamba günü trabzon'a ulaşmasının planlandığını duyurdu.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Trabzonspor yolundaki Salah yedeklikten zirveye nasıl çıktı?</h3>
+                    <p>Trabzonspor, Mısır milli takımının da formasını giyen dünyaca ünlü futbolcu Mohamed Salah'ın Çarşamba günü Trabzon'a ulaşmasının planlandığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp3rxlkkv7ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tayland'da maç sırasında sahaya yıldırım düşmesi sonucu bir futbolcu yaşamını yitirdi
+            tayland'ın güneybatısındaki narathiwat eyaletinde bir futbol maçında sahaya yıldırım düşmesi sonucu bir oyuncunun hayatını kaybettiği bildirildi.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>Tayland'da maç sırasında sahaya yıldırım düşmesi sonucu bir futbolcu yaşamını yitirdi</h3>
+                    <p>Tayland'ın güneybatısındaki Narathiwat eyaletinde bir futbol maçında sahaya yıldırım düşmesi sonucu bir oyuncunun hayatını kaybettiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/taylandda-mac-sirasinda-sahaya-yildirim-dusmesi-sonucu-bir-futbolcu-yasamini-yitirdi-953129.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
