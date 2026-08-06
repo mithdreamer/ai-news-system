@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-06 07:42</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c8rn33de1r8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD'de sol görüşlü Abdul El-Sayed'in Michigan ön seçimindeki zaferi neden tartışılıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cx2r5y8e87go?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bir milyon euro ikramiye çıkan ve çöpe atılan bilet iki gün sonra bulundu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-behcet-oktayin-ailesini-kabul-edecek-953234.html" target="_blank">
+                <strong>Bakan Gürlek, Behçet Oktayın ailesini kabul edecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdrvng02zn7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Çerçeve yasa teklifi Meclis'te: Kimleri kapsıyor, hangi koşullar aranacak?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cd9wzkxykw7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Salah transferi için İngiliz medyası ne diyor?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de sol görüşlü abdul el-sayed'in michigan ön seçimindeki zaferi neden tartışılıyor?
+            abd başkanı donald trump, mısır göçmeni bir ailenin çocuğu olan abdul el-sayed'in de yarıştığı michigan eyaletinde yapılan ön seçimin sonuçlarının amerikan yaşam tarzını yok etme tehlikesi yarattığını öne sürdü.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de sol görüşlü Abdul El-Sayed'in Michigan ön seçimindeki zaferi neden tartışılıyor?</h3>
+                    <p>ABD Başkanı Donald Trump, Mısır göçmeni bir ailenin çocuğu olan Abdul El-Sayed'in de yarıştığı Michigan eyaletinde yapılan ön seçimin sonuçlarının Amerikan yaşam tarzını yok etme tehlikesi yarattığını öne sürdü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8rn33de1r8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            salah transferi için i̇ngiliz medyası ne diyor?
+            dokuz sezon i̇ngiliz futbol devi liverpool'da top oynayan mohamed salah'ın trabzonspor'a transferi ada basında da geniş yer buldu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Salah transferi için İngiliz medyası ne diyor?</h3>
+                    <p>Dokuz sezon İngiliz futbol devi Liverpool'da top oynayan Mohamed Salah'ın Trabzonspor'a transferi Ada basında da geniş yer buldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd9wzkxykw7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hiroşima'ya atom bombası atılmasının 81. yılı: 'sanki güneş gözlerimin önünde yere düşmüştü'
+            dünya, insanlığın en acımasız silahlarından biriyle tam 81 yıl önce tanıştı. abd atom bombasını ilk kez 6 ağustos 1945'te japonya'nın hiroşima kentinde kullandı. saldırı sırasında 14 yaşında olan şair bun hashizume, atom bombasının hiroşima'yı vurduğu o günü anlatıyor...
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hiroşima'ya atom bombası atılmasının 81. yılı: 'Sanki güneş gözlerimin önünde yere düşmüştü'</h3>
+                    <p>Dünya, insanlığın en acımasız silahlarından biriyle tam 81 yıl önce tanıştı. ABD atom bombasını ilk kez 6 Ağustos 1945'te Japonya'nın Hiroşima kentinde kullandı. Saldırı sırasında 14 yaşında olan Şair Bun Hashizume, atom bombasının Hiroşima'yı vurduğu o günü anlatıyor...</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce311kdlyg6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli: 'öcalan umuda, ahmetler göreve, demirtaş evine dönmeli'
+            mhp genel başkanı devlet bahçeli, pkk lideri abdullah öcalan'ın "umut hakkından faydalanması" yönündeki çağrısını yineledi ve "ben yine aynı şeyi söylüyorum. selahattin demirtaş evine, ahmetler görevine, öcalan umut hakkına kavuşmalıdır" dedi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bahçeli: 'Öcalan umuda, Ahmetler göreve, Demirtaş evine dönmeli'</h3>
+                    <p>MHP Genel Başkanı Devlet Bahçeli, PKK lideri Abdullah Öcalan'ın "umut hakkından faydalanması" yönündeki çağrısını yineledi ve "Ben yine aynı şeyi söylüyorum. Selahattin Demirtaş evine, Ahmetler görevine, Öcalan umut hakkına kavuşmalıdır" dedi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj031j239e0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            arge çalışmalarına geçen yıl 253,5 milyar lira harcandı
+            türkiye'de merkezi yönetim bütçesinden araştırma ve geliştirme (ar-ge) faaliyetleri için geçen yıl 253 milyar 544 milyon lira harcama yapıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ARGE çalışmalarına geçen yıl 253,5 milyar lira harcandı</h3>
+                    <p>Türkiye'de merkezi yönetim bütçesinden araştırma ve geliştirme (AR-GE) faaliyetleri için geçen yıl 253 milyar 544 milyon lira harcama yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/ar-ge-calismalarina-gecen-yil-2535-milyar-lira-harcandi-953235.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump ülkeye düzensiz göçmen girişini durdurduklarını savundu
+            abd başkanı donald trump, ülkesine düzensiz göçmen girişinin durduğunu savunarak suç işleyen kayıtsız göçmenleri sınır dışı etmeyi sürdüreceklerini belirtti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump ülkeye düzensiz göçmen girişini durdurduklarını savundu</h3>
+                    <p>ABD Başkanı Donald Trump, ülkesine düzensiz göçmen girişinin durduğunu savunarak suç işleyen kayıtsız göçmenleri sınır dışı etmeyi sürdüreceklerini belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-ulkeye-duzensiz-gocmen-girisini-durdurduklarini-savundu-953227.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bir milyon euro ikramiye çıkan ve çöpe atılan bilet iki gün sonra bulundu
+            i̇talya'nın güneyinde bir milyon euro ikramiye çıkan piyango bileti yanlışlıkla çöpe atılmasının ardından, belediyenin çöp işçilerinin iki gün süren aramasıyla bulundu. kimliği açıklanmayan ikramiye sahibi "duble talihli" olarak anılıyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bir milyon euro ikramiye çıkan ve çöpe atılan bilet iki gün sonra bulundu</h3>
+                    <p>İtalya'nın güneyinde bir milyon euro ikramiye çıkan piyango bileti yanlışlıkla çöpe atılmasının ardından, belediyenin çöp işçilerinin iki gün süren aramasıyla bulundu. Kimliği açıklanmayan ikramiye sahibi "duble talihli" olarak anılıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2r5y8e87go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brent petrolün varili 79,91 dolardan işlem görüyor
+            brent petrolün varili uluslararası vadeli piyasalarda 79,91 dolardan işlem görüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Brent petrolün varili 79,91 dolardan işlem görüyor</h3>
+                    <p>Brent petrolün varili uluslararası vadeli piyasalarda 79,91 dolardan işlem görüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-7991-dolardan-islem-goruyor-953230.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gümrüklerde bu yıl 58 bin 519 canlı hayvan ele geçirildi
+            ticaret bakanlığı gümrükler muhafaza ekipleri, bu yıl 29 operasyonda ele geçirdiği 58 bin 519 canlı hayvanı tarım ve orman bakanlığı birimlerine teslim etti.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Gümrüklerde bu yıl 58 bin 519 canlı hayvan ele geçirildi</h3>
+                    <p>Ticaret Bakanlığı Gümrükler Muhafaza ekipleri, bu yıl 29 operasyonda ele geçirdiği 58 bin 519 canlı hayvanı Tarım ve Orman Bakanlığı birimlerine teslim etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gumruklerde-bu-yil-58-bin-519-canli-hayvan-ele-gecirildi-953229.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa i̇stanbul 13.728,70 puandan başladı
+            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,19 yükselişle 13.728,70 puandan başladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa İstanbul 13.728,70 puandan başladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,19 yükselişle 13.728,70 puandan başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-istanbul-1372870-puandan-basladi-953231.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek, behçet oktayın ailesini kabul edecek
+            adalet bakanı akın gürlek, eski özel harekât daire başkanı behçet oktay’ın ailesini kabul edecek. görüşmede, kendi silahıyla intihar ettiği ileri sürülen oktay’ın şüpheli ölümünün aydınlatılmasına yönelik taleplerin gündeme gelmesi bekleniyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Gürlek, Behçet Oktayın ailesini kabul edecek</h3>
+                    <p>Adalet Bakanı Akın Gürlek, eski Özel Harekât Daire Başkanı Behçet Oktay’ın ailesini kabul edecek. Görüşmede, kendi silahıyla intihar ettiği ileri sürülen Oktay’ın şüpheli ölümünün aydınlatılmasına yönelik taleplerin gündeme gelmesi bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-behcet-oktayin-ailesini-kabul-edecek-953234.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi meclis'te: kimleri kapsıyor, hangi koşullar aranacak?
+            i̇ktidarın "terörsüz türkiye", dem parti'nin ise "barış ve demokratik toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısını oluşturmak amacıyla hazırlanan 12 maddelik "millî dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi" tbmm başkanlığı'na sunuldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi Meclis'te: Kimleri kapsıyor, hangi koşullar aranacak?</h3>
+                    <p>İktidarın "Terörsüz Türkiye", DEM Parti'nin ise "Barış ve Demokratik Toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısını oluşturmak amacıyla hazırlanan 12 maddelik "Millî Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi" TBMM Başkanlığı'na sunuldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdrvng02zn7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ranlı yetkili, hürmüz boğazı'nın i̇ran'a yönelik tehditler sona erene kadar kapalı kalacağını söyledi
+            i̇ran meclisi ulusal güvenlik ve dış politika komisyonu birinci sekreteri behnam saidi, umman ile uzlaşının hürmüz boğazı'nın açılması anlamına gelmediğini ve boğaz'ın i̇ran'a yönelik tehditler sona erene kadar kapalı kalacağını söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İranlı yetkili, Hürmüz Boğazı'nın İran'a yönelik tehditler sona erene kadar kapalı kalacağını söyledi</h3>
+                    <p>İran Meclisi Ulusal Güvenlik ve Dış Politika Komisyonu Birinci Sekreteri Behnam Saidi, Umman ile uzlaşının Hürmüz Boğazı'nın açılması anlamına gelmediğini ve Boğaz'ın İran'a yönelik tehditler sona erene kadar kapalı kalacağını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iranli-yetkili-hurmuz-bogazinin-irana-yonelik-tehditler-sona-erene-kadar-kapali-kalacagini-soyledi-953236.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan, suriyeli mevkidaşıyla bir araya gelecek
+            dışişleri bakanı hakan fidan, suriye dışişleri bakanı esad hasan şeybani ile ankara'da bir araya gelecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Fidan, Suriyeli mevkidaşıyla bir araya gelecek</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Suriye Dışişleri Bakanı Esad Hasan Şeybani ile Ankara'da bir araya gelecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-suriyeli-mevkidasiyla-bir-araya-gelecek-953226.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fifa başkanı infantino özür diledi
+            fifa başkanı gianni infantino, dünya kupası dahil turnuvaların özel yatırımcılara açılması planları sırasında hatalar yaptığını kabul etti ve özür diledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>FIFA Başkanı Infantino özür diledi</h3>
+                    <p>FIFA Başkanı Gianni Infantino, Dünya Kupası dahil turnuvaların özel yatırımcılara açılması planları sırasında hatalar yaptığını kabul etti ve özür diledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj0317qv332o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: umman ile hürmüz geçişi konusunda anlaştık
+            i̇ran, umman devleti ile, hürmüz boğazı'ndan yeni bir geçiş güzergahı konusunda anlaşma noktasına geldiklerini açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İran: Umman ile Hürmüz geçişi konusunda anlaştık</h3>
+                    <p>İran, Umman devleti ile, Hürmüz Boğazı'ndan yeni bir geçiş güzergahı konusunda anlaşma noktasına geldiklerini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg9kg3j8v7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti manisa i̇l başkanı i̇lksen özalper gözaltına alındı
+            yeni parti manisa i̇l başkanı i̇lksen özalper, ankara cumhuriyet başsavcılığı tarafından yürütülen çıkar amaçlı suç örgütü ve rüşvet soruşturması kapsamında gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti Manisa İl Başkanı İlksen Özalper gözaltına alındı</h3>
+                    <p>Yeni Parti Manisa İl Başkanı İlksen Özalper, Ankara Cumhuriyet Başsavcılığı tarafından yürütülen çıkar amaçlı suç örgütü ve rüşvet soruşturması kapsamında gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y3jk10g1do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çaldığı motosikletle gezerken yakalandı
+            adana'nın merkez seyhan ilçesinde çaldığı motosikletle gezerken yakalanan şüpheli tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Çaldığı motosikletle gezerken yakalandı</h3>
+                    <p>Adana'nın merkez Seyhan ilçesinde çaldığı motosikletle gezerken yakalanan şüpheli tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/caldigi-motosikletle-gezerken-yakalandi-953233.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            wwf: i̇talya'da bu yaz çıkan orman yangınlarında 70 bin hektar alan kül oldu
+            i̇talya'da bu yaz orman yangınları nedeniyle yaklaşık 100 bin futbol sahası büyüklüğüne denk gelen 70 bin hektar alanın yok olduğu bildirildi.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>WWF: İtalya'da bu yaz çıkan orman yangınlarında 70 bin hektar alan kül oldu</h3>
+                    <p>İtalya'da bu yaz orman yangınları nedeniyle yaklaşık 100 bin futbol sahası büyüklüğüne denk gelen 70 bin hektar alanın yok olduğu bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/wwf-italyada-bu-yaz-cikan-orman-yanginlarinda-70-bin-hektar-alan-kul-oldu-953228.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afgan kadın futbolcular fifa'nın tanıma kararı sonrası ilk milli maçlarını yaptı
+            yurt dışında yaşayan afgan kadın futbolculardan seçilen 23 kişilik kadro, cook adaları'na karşı iki resmi olmayan hazırlık maçı oynamak üzere yeni zelanda'ya gitti.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Afgan kadın futbolcular FIFA'nın tanıma kararı sonrası ilk milli maçlarını yaptı</h3>
+                    <p>Yurt dışında yaşayan Afgan kadın futbolculardan seçilen 23 kişilik kadro, Cook Adaları'na karşı iki resmi olmayan hazırlık maçı oynamak üzere Yeni Zelanda'ya gitti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7www3wz7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
