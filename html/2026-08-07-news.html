@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-07 06:10</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cx2vwxl258jo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran savaşı altıncı ayında: Trump füze kıtlığı iddialarını reddetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/israil-diaspora-bakani-chikli-macron-bizi-sirtimizdan-bicakladi-953330.html" target="_blank">
+                <strong>İsrail Diaspora Bakanı Chikli: Macron bizi sırtımızdan bıçakladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-suudi-arabistana-gitti-953328.html" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan, Suudi Arabistan'a gitti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/ispanya-tarihinin-en-buyuk-orman-yangininda-new-york-buyuklugunde-alan-kule-dondu-953326.html" target="_blank">
+                <strong>İspanya tarihinin en büyük orman yangınında New York büyüklüğünde alan küle döndü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/clyljnj29qdo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Sokak hayvanları düzenlemesinin ikinci yılı: Sahada neler yaşandı, taraflar ne diyor?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran savaşı altıncı ayında: trump füze kıtlığı iddialarını reddetti
+            abd başkanı donald trump, ülkesinin mühimmat sıkıntısı çektiği yönündeki iddiaları yalanladı. bilgi sızdırdığından şüphelenilenler için "uzun hapis cezaları" sözü verdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran savaşı altıncı ayında: Trump füze kıtlığı iddialarını reddetti</h3>
+                    <p>ABD Başkanı Donald Trump, ülkesinin mühimmat sıkıntısı çektiği yönündeki iddiaları yalanladı. Bilgi sızdırdığından şüphelenilenler için "uzun hapis cezaları" sözü verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2vwxl258jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan, suudi arabistan'a gitti
+            cumhurbaşkanı recep tayyip erdoğan, günübirlik çalışma ziyareti için suudi arabistan'a hareket etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan, Suudi Arabistan'a gitti</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, günübirlik çalışma ziyareti için Suudi Arabistan'a hareket etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-suudi-arabistana-gitti-953328.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mohamed salah neden trabzonspor'u seçti?
+            bbc spor'dan mohamed moallim, premier lig tarihinin en iyi futbolcularından biri olan mo salah'ın neden suudi arabistan veya abd dururken trabzonspor'u seçmiş olabileceğini ve bunun türk futboluna etkilerini inceliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mohamed Salah neden Trabzonspor'u seçti?</h3>
+                    <p>BBC Spor'dan Mohamed Moallim, Premier Lig tarihinin en iyi futbolcularından biri olan Mo Salah'ın neden Suudi Arabistan veya ABD dururken Trabzonspor'u seçmiş olabileceğini ve bunun Türk futboluna etkilerini inceliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjwxyxqngvqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beşiktaş, hradec kralove deplasmanından galip ayrıldı
+            beşiktaş, uefa avrupa ligi üçüncü ön eleme turu ilk maçında deplasmanda çek cumhuriyeti ekibi hradec kralove'yi 1-0 yenmeyi başardı
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beşiktaş, Hradec Kralove deplasmanından galip ayrıldı</h3>
+                    <p>Beşiktaş, UEFA Avrupa Ligi üçüncü ön eleme turu ilk maçında deplasmanda Çek Cumhuriyeti ekibi Hradec Kralove'yi 1-0 yenmeyi başardı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly899d2l8vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ağustos ayında gökyüzünde iki tutulma ve perseid gök taşı yağmuru yaşanacak
+            ağustos ayı tam güneş tutulması, perseid gök taşı yağmuru, venüs'ün parlak görünümü ve parçalı ay tutulması ile gökyüzü meraklıları için hareketli geçecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ağustos ayında gökyüzünde iki tutulma ve Perseid gök taşı yağmuru yaşanacak</h3>
+                    <p>Ağustos ayı tam güneş tutulması, Perseid gök taşı yağmuru, Venüs'ün parlak görünümü ve parçalı ay tutulması ile gökyüzü meraklıları için hareketli geçecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/agustos-ayinda-gokyuzunde-iki-tutulma-ve-perseid-gok-tasi-yagmuru-yasanacak-953327.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            faa yüzlerce boeing 737 max uçağında çatlak incelemesi istedi
+            abd federal havacılık i̇daresi (faa), uçakların gövdesinde meydana gelebilecek çatlaklar nedeniyle yüzlerce boeing 737 max jetinin incelenmesini emretti. kurum, tespit edilemeyen hasarların uçağın yapısal bütünlüğünü bozabileceği uyarısında bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>FAA yüzlerce Boeing 737 Max uçağında çatlak incelemesi istedi</h3>
+                    <p>ABD Federal Havacılık İdaresi (FAA), uçakların gövdesinde meydana gelebilecek çatlaklar nedeniyle yüzlerce Boeing 737 Max jetinin incelenmesini emretti. Kurum, tespit edilemeyen hasarların uçağın yapısal bütünlüğünü bozabileceği uyarısında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/faa-yuzlerce-boeing-737-max-ucaginda-catlak-incelemesi-istedi-953324.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail diaspora bakanı chikli: macron bizi sırtımızdan bıçakladı
+            i̇şgalci i̇srail'in diaspora bakanı amichai chikli, fransa cumhurbaşkanı emmanuel macron'un i̇srail'i "sırtından bıçakladığını" söyledi.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>İsrail Diaspora Bakanı Chikli: Macron bizi sırtımızdan bıçakladı</h3>
+                    <p>İşgalci İsrail'in Diaspora Bakanı Amichai Chikli, Fransa Cumhurbaşkanı Emmanuel Macron'un İsrail'i "sırtından bıçakladığını" söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/israil-diaspora-bakani-chikli-macron-bizi-sirtimizdan-bicakladi-953330.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya tarihinin en büyük orman yangınında new york büyüklüğünde alan küle döndü
+            i̇spanya ve fransa, son on yılların en yıkıcı orman yangınlarıyla mücadele etti. i̇spanya'da ülke tarihinin en büyük yangını kaydedilirken, fransa'da ise ilk kez yangın kaynaklı bir fırtına bulutu (pironümbit) oluştu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya tarihinin en büyük orman yangınında New York büyüklüğünde alan küle döndü</h3>
+                    <p>İspanya ve Fransa, son on yılların en yıkıcı orman yangınlarıyla mücadele etti. İspanya'da ülke tarihinin en büyük yangını kaydedilirken, Fransa'da ise ilk kez yangın kaynaklı bir fırtına bulutu (pironümbit) oluştu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ispanya-tarihinin-en-buyuk-orman-yangininda-new-york-buyuklugunde-alan-kule-dondu-953326.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sokak hayvanları düzenlemesinin ikinci yılı: sahada neler yaşandı, taraflar ne diyor?
+            hayvanları koruma kanunu hakkında yapılan ve bazı hayvanseverler tarafından "katliam yasası" olarak anılan düzenlemenin yürürlüğe girmesi üzerinden iki yıl geçti. bbc türkçe sahadaki durumu araştırdı, aktivistlerle ve belediyelerle konuştu. hilken doğaç boran'ın haberi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sokak hayvanları düzenlemesinin ikinci yılı: Sahada neler yaşandı, taraflar ne diyor?</h3>
+                    <p>Hayvanları Koruma Kanunu hakkında yapılan ve bazı hayvanseverler tarafından "katliam yasası" olarak anılan düzenlemenin yürürlüğe girmesi üzerinden iki yıl geçti. BBC Türkçe sahadaki durumu araştırdı, aktivistlerle ve belediyelerle konuştu. Hilken Doğaç Boran'ın haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyljnj29qdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye gazze barış anlaşması'nın yeni aşamasında nasıl bir diplomasi izliyor?
+            türkiye, diğer arabulucular katar ve mısır ile birlikte i̇srail’in gazze’de giderek artan saldırılarına dikkat çekiyor ve bu tırmanmanın 30 temmuz’da açıklanan barış planı yol haritasını sabote etmek amaçlı olduğunu kaydediyor. ağustos ayında bir dizi toplantının ardından gazze barış anlaşmasının uygulanması amacıyla eylülde yeni bir liderler zirvesi düzenlemesi öngörülüyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye Gazze Barış Anlaşması'nın yeni aşamasında nasıl bir diplomasi izliyor?</h3>
+                    <p>Türkiye, diğer arabulucular Katar ve Mısır ile birlikte İsrail’in Gazze’de giderek artan saldırılarına dikkat çekiyor ve bu tırmanmanın 30 Temmuz’da açıklanan barış planı yol haritasını sabote etmek amaçlı olduğunu kaydediyor. Ağustos ayında bir dizi toplantının ardından Gazze Barış Anlaşmasının uygulanması amacıyla eylülde yeni bir liderler zirvesi düzenlemesi öngörülüyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c74g12d9z2yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özel'den 'çerçeve yasa' yorumu: 'özensiz, kötü hazırlanmış bir teklif'
+            tbmm başkanlığı'na sunulan yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi ile ilgili siyasi partilerden açıklamalar gelmeye devam ediyor. yeni parti genel başkanı özgür özel, yasa teklifiyle ilgili "özensiz, kötü hazırlanmış" yorumunda bulundu
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özel'den 'çerçeve yasa' yorumu: 'Özensiz, kötü hazırlanmış bir teklif'</h3>
+                    <p>TBMM Başkanlığı'na sunulan yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi ile ilgili siyasi partilerden açıklamalar gelmeye devam ediyor. Yeni Parti Genel Başkanı Özgür Özel, yasa teklifiyle ilgili "özensiz, kötü hazırlanmış" yorumunda bulundu</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwylxpkr49zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediyesi başkan vekili seçimi neden tartışılıyor?
+            üsküdar belediye başkanı sinem dedetaş'ın gözaltına alınmasının ardından yapılan meclis oylamasında başkan vekilliğine chp'nin adayı sibel tan çetinkaya seçildi. akp, oylamayı "irade gasbı" olarak niteledi ve hukuki itirazda bulunacağını açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediyesi başkan vekili seçimi neden tartışılıyor?</h3>
+                    <p>Üsküdar Belediye Başkanı Sinem Dedetaş'ın gözaltına alınmasının ardından yapılan meclis oylamasında başkan vekilliğine CHP'nin adayı Sibel Tan Çetinkaya seçildi. AKP, oylamayı "irade gasbı" olarak niteledi ve hukuki itirazda bulunacağını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz7dn28e0y4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afp ve reuters: türkiye, suudi arabistan ve pakistan bugün üçlü savunma anlaşması imzalıyor
+            uluslararası haber ajanslarına konuşan farklı kaynaklar, suudi arabistan, türkiye ve pakistan'ın cuma günü üçlü bir ortak savunma anlaşması imzalayacağını kaydediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>AFP ve Reuters: Türkiye, Suudi Arabistan ve Pakistan bugün üçlü savunma anlaşması imzalıyor</h3>
+                    <p>Uluslararası haber ajanslarına konuşan farklı kaynaklar, Suudi Arabistan, Türkiye ve Pakistan'ın Cuma günü üçlü bir ortak savunma anlaşması imzalayacağını kaydediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62vn5wzz59o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avcılar belediyesine yönelik ihaleye fesat karıştırma soruşturmasında 12 şüpheli adliyede
+            avcılar belediyesine yönelik "ihaleye fesat karıştırma" soruşturması kapsamında i̇stanbul merkezli 4 ilde düzenlenen operasyonda gözaltına alınan 12 zanlı küçükçekmece adliyesi'ne sevk edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Avcılar Belediyesine yönelik ihaleye fesat karıştırma soruşturmasında 12 şüpheli adliyede</h3>
+                    <p>Avcılar Belediyesine yönelik "ihaleye fesat karıştırma" soruşturması kapsamında İstanbul merkezli 4 ilde düzenlenen operasyonda gözaltına alınan 12 zanlı Küçükçekmece Adliyesi'ne sevk edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/avcilar-belediyesine-yonelik-ihaleye-fesat-karistirma-sorusturmasinda-12-supheli-adliyede-953332.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            taylandda okulda düzenlenen silahlı saldırıda 7 kişi öldü, 15 kişi yaralandı
+            tayland’ın nonthaburi eyaletindeki okulda düzenlenen silahlı saldırıda 6 kişinin hayatını kaybettiği, 15 kişinin yaralandığı bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Taylandda okulda düzenlenen silahlı saldırıda 7 kişi öldü, 15 kişi yaralandı</h3>
+                    <p>Tayland’ın Nonthaburi eyaletindeki okulda düzenlenen silahlı saldırıda 6 kişinin hayatını kaybettiği, 15 kişinin yaralandığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/taylandda-okulda-duzenlenen-silahli-saldirida-7-kisi-oldu-15-kisi-yaralandi-953331.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da değnekçilik operasyonu: 10 gözaltı
+            ankara'da "değnekçi" diye tabir edilen yasa dışı otoparkçılara yönelik operasyonda 10 şüpheli gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ankara'da değnekçilik operasyonu: 10 gözaltı</h3>
+                    <p>Ankara'da "değnekçi" diye tabir edilen yasa dışı otoparkçılara yönelik operasyonda 10 şüpheli gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-degnekcilik-operasyonu-10-gozalti-953329.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            diş eti kanaması daha büyük bir sağlık sorununun erken habercisi olabilir
+            diş hekimine yapılan bir ziyaret, dişlerin durumundan çok daha fazlasını ortaya koyabilir. alınan bulgular, gelecekteki tip 2 diyabet riskine dair önemli ipuçları taşıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Diş eti kanaması daha büyük bir sağlık sorununun erken habercisi olabilir</h3>
+                    <p>Diş hekimine yapılan bir ziyaret, dişlerin durumundan çok daha fazlasını ortaya koyabilir. Alınan bulgular, gelecekteki tip 2 diyabet riskine dair önemli ipuçları taşıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/dis-eti-kanamasi-daha-buyuk-bir-saglik-sorununun-erken-habercisi-olabilir-953325.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bilimde 'dönüm noktası': yapay zeka ile sıfırdan virüs üretildi
+            abd'de bir grup araştırmacı, yapay zeka ile tamamen işlevsel ve laboratuvarda çoğalabilen yepyeni virüsler tasarladıklarını duyurdu.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Bilimde 'dönüm noktası': Yapay zeka ile sıfırdan virüs üretildi</h3>
+                    <p>ABD'de bir grup araştırmacı, yapay zeka ile tamamen işlevsel ve laboratuvarda çoğalabilen yepyeni virüsler tasarladıklarını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz97vxwn4dyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            danimarka'da okullara yapay zeka ile kopyaya karşı sözlü savunma şartı getirildi
+            danimarka'da yapay zeka araçlarıyla kopya çekilmesini önlemek amacıyla lise öğrencilerine yazılı ödevlerini sözlü olarak savunma zorunluluğu getirildi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Danimarka'da okullara yapay zeka ile kopyaya karşı sözlü savunma şartı getirildi</h3>
+                    <p>Danimarka'da yapay zeka araçlarıyla kopya çekilmesini önlemek amacıyla lise öğrencilerine yazılı ödevlerini sözlü olarak savunma zorunluluğu getirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/danimarkada-okullara-yapay-zeka-ile-kopyaya-karsi-sozlu-savunma-sarti-getirildi-953323.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            meta'ya çocuk güvenliği davasında yarım milyar dolar ceza
+            new mexico eyaletinde bir yargıç, instagram, facebook ve whatsapp'ın ana şirketi olan şirketin çocuklara verdiği zararlar nedeniyle 567 milyon dolar daha tazminat ödemesine karar verdi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Meta'ya çocuk güvenliği davasında yarım milyar dolar ceza</h3>
+                    <p>New Mexico eyaletinde bir yargıç, Instagram, Facebook ve WhatsApp'ın ana şirketi olan şirketin çocuklara verdiği zararlar nedeniyle 567 milyon dolar daha tazminat ödemesine karar verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9v4xnl10vno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
