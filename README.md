@@ -26,3 +26,4 @@ HTML ve TXT formatında yayınlamak.
 - Video Üretimi
 - Web Arayüzü
 - YouTube Otomasyonu
+- Sesli
