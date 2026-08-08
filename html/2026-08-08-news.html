@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>13</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-08 05:45</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy8eygzn4n7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mekke Savunma Anlaşması Türkiye'nin bölgedeki konumunu nasıl etkileyecek?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/bilim-teknoloji/bakan-kacir-turk-bilim-insanlari-10-antarktika-6-arktik-bilim-seferi-gerceklestirdi-953388.html" target="_blank">
+                <strong>Bakan Kacır: Türk bilim insanları 10 Antarktika, 6 Arktik bilim seferi gerçekleştirdi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-devlet-yonetmek-ciddi-bir-istir-bu-isler-ahbap-cavus-iliskisiyle-yurumez-953385.html" target="_blank">
+                <strong>Bakan Kurum: Devlet yönetmek ciddi bir iştir, bu işler ahbap çavuş ilişkisiyle yürümez</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-teror-belasindan-kurtulma-arifesindeyiz-953384.html" target="_blank">
+                <strong>Bakan Gürlek: Terör belasından kurtulma arifesindeyiz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/pakistan-basbakani-serif-mekke-ortak-savunma-anlasmasini-imzalamaktan-onur-duydugunu-belirtti-953390.html" target="_blank">
+                <strong>Pakistan Başbakanı Şerif, Mekke Ortak Savunma Anlaşması'nı imzalamaktan onur duyduğunu belirtti</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mekke savunma anlaşması türkiye'nin bölgedeki konumunu nasıl etkileyecek?
+            türkiye, suudi arabistan ve pakistan arasında imzalanan üçlü savunma anlaşmasına ilişkin ankara'dan yapılan ilk değerlendirmeler, bu adımın türkiye'nin nato üyeliğine bir alternatif oluşturmadığı ve türk askerinin bölgesel krizlerin içine çekileceği anlamına gelmediği mesajını veriyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mekke Savunma Anlaşması Türkiye'nin bölgedeki konumunu nasıl etkileyecek?</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan arasında imzalanan üçlü savunma anlaşmasına ilişkin Ankara'dan yapılan ilk değerlendirmeler, bu adımın Türkiye'nin NATO üyeliğine bir alternatif oluşturmadığı ve Türk askerinin bölgesel krizlerin içine çekileceği anlamına gelmediği mesajını veriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy8eygzn4n7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kurum: devlet yönetmek ciddi bir iştir, bu işler ahbap çavuş ilişkisiyle yürümez
+            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, "biz neredeyse bir avrupa ülkesi büyüklüğündeki bir bölgeyi, 11 ilimizi, küllerinden yeniden ayağa kaldırdık. on binlerce işçi kardeşimle gece gündüz ter döküp 455 bin konutu teslim ettik. devlet yönetmek ciddi bir iştir, bu işler ahbap çavuş ilişkisiyle yürümez" dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Kurum: Devlet yönetmek ciddi bir iştir, bu işler ahbap çavuş ilişkisiyle yürümez</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, "Biz neredeyse bir Avrupa ülkesi büyüklüğündeki bir bölgeyi, 11 ilimizi, küllerinden yeniden ayağa kaldırdık. On binlerce işçi kardeşimle gece gündüz ter döküp 455 bin konutu teslim ettik. Devlet yönetmek ciddi bir iştir, bu işler ahbap çavuş ilişkisiyle yürümez" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-devlet-yonetmek-ciddi-bir-istir-bu-isler-ahbap-cavus-iliskisiyle-yurumez-953385.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: terör belasından kurtulma arifesindeyiz
+            adalet bakanı akın gürlek, "bölge insanımızın 40 yılı aşkın kanayan yarısı, devletimizin gelişmesi, kalkınması ve huzur ortamının en büyük tehdidi olan terör belasından kurtulma arifesindeyiz. allah'ın izniyle, milletimizin şuurlu duruşu ile bu defter kapanacak ve ülkemiz için bembeyaz bir sayfa açılacaktır" ifadelerini kullandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Gürlek: Terör belasından kurtulma arifesindeyiz</h3>
+                    <p>Adalet Bakanı Akın Gürlek, "Bölge insanımızın 40 yılı aşkın kanayan yarısı, devletimizin gelişmesi, kalkınması ve huzur ortamının en büyük tehdidi olan terör belasından kurtulma arifesindeyiz. Allah'ın izniyle, milletimizin şuurlu duruşu ile bu defter kapanacak ve ülkemiz için bembeyaz bir sayfa açılacaktır" ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-teror-belasindan-kurtulma-arifesindeyiz-953384.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hayat 112 acil uygulaması için kamu spotu yayınlandı
+            i̇çişleri bakanı mustafa çiftçi, 800 binin üzerinde indirilen hayat 112 acil mobil uygulaması'nın tanıtımı için hazırlanan kamu spotunu paylaştı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>HAYAT 112 Acil uygulaması için kamu spotu yayınlandı</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, 800 binin üzerinde indirilen HAYAT 112 Acil Mobil Uygulaması'nın tanıtımı için hazırlanan kamu spotunu paylaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/hayat-112-acil-uygulamasi-icin-kamu-spotu-yayinlandi-953389.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan doğum yoluyla vatandaşlığı sınırlandırmak için yeni hamle
+            abd başkanı trump, yüksek mahkeme’nin önceki girişimini reddetmesinin ardından doğum yoluyla vatandaşlığı iki yeni başkanlık kararnamesiyle sınırlandırmaya çalışıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump'tan doğum yoluyla vatandaşlığı sınırlandırmak için yeni hamle</h3>
+                    <p>ABD Başkanı Trump, Yüksek Mahkeme’nin önceki girişimini reddetmesinin ardından doğum yoluyla vatandaşlığı iki yeni başkanlık kararnamesiyle sınırlandırmaya çalışıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3ekdve2dyqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kacır: türk bilim insanları 10 antarktika, 6 arktik bilim seferi gerçekleştirdi
+            sanayi ve teknoloji bakanı mehmet fatih kacır, tübi̇tak ile 2019 yılında hayata geçirdikleri kutup araştırmaları enstitüsünün öncülüğünde türk bilim insanlarının bilimsel araştırmaları gerçekleştiriyor olmasını sağlamaktan onur duyduklarını belirterek, "bugüne dek 10 antarktika, 6 arktik bilim seferini türk bilim insanları gerçekleştirdi" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakan Kacır: Türk bilim insanları 10 Antarktika, 6 Arktik bilim seferi gerçekleştirdi</h3>
+                    <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, TÜBİTAK ile 2019 yılında hayata geçirdikleri Kutup Araştırmaları Enstitüsünün öncülüğünde Türk bilim insanlarının bilimsel araştırmaları gerçekleştiriyor olmasını sağlamaktan onur duyduklarını belirterek, "Bugüne dek 10 Antarktika, 6 Arktik bilim seferini Türk bilim insanları gerçekleştirdi" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/bakan-kacir-turk-bilim-insanlari-10-antarktika-6-arktik-bilim-seferi-gerceklestirdi-953388.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            pakistan başbakanı şerif, mekke ortak savunma anlaşması'nı imzalamaktan onur duyduğunu belirtti
+            pakistan başbakanı şahbaz şerif, cumhurbaşkanı recep tayyip erdoğan ve suudi arabistan veliaht prensi muhammed bin selman ile "mekke ortak savunma anlaşması"nı imzalamaktan onur duyduğunu ifade etti.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Pakistan Başbakanı Şerif, Mekke Ortak Savunma Anlaşması'nı imzalamaktan onur duyduğunu belirtti</h3>
+                    <p>Pakistan Başbakanı Şahbaz Şerif, Cumhurbaşkanı Recep Tayyip Erdoğan ve Suudi Arabistan Veliaht Prensi Muhammed bin Selman ile "Mekke Ortak Savunma Anlaşması"nı imzalamaktan onur duyduğunu ifade etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/pakistan-basbakani-serif-mekke-ortak-savunma-anlasmasini-imzalamaktan-onur-duydugunu-belirtti-953390.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            asrın inşasında elazığ'da 14 bin 894 bağımsız bölüm inşa edildi
+            çevre, şehircilik ve i̇klim değişikliği bakanlığı, asrın i̇nşa seferberliği kapsamında elazığ'da 11 bin 912 konut, 2 bin 959 köy evi, 23 iş yeri olmak üzere toplam 14 bin 894 bağımsız bölümün inşa edildiğini bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Asrın inşasında Elazığ'da 14 bin 894 bağımsız bölüm inşa edildi</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Asrın İnşa Seferberliği kapsamında Elazığ'da 11 bin 912 konut, 2 bin 959 köy evi, 23 iş yeri olmak üzere toplam 14 bin 894 bağımsız bölümün inşa edildiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/asrin-insasinda-elazigda-14-bin-894-bagimsiz-bolum-insa-edildi-953387.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa adalet komisyonu'nda: görüşmeler gergin başladı, öcalan tartışması yaşandı
+            yeni çözüm sürecinin ilk yasal düzenlemesi olan, 12 maddelik çerçeve yasa niteliğindeki "milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi", tbmm adalet komisyonu'nda görüşülmeye başlandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve Yasa Adalet Komisyonu'nda: Görüşmeler gergin başladı, Öcalan tartışması yaşandı</h3>
+                    <p>Yeni çözüm sürecinin ilk yasal düzenlemesi olan, 12 maddelik çerçeve yasa niteliğindeki "Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi", TBMM Adalet Komisyonu'nda görüşülmeye başlandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0nkrjlpj0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi komisyonda: kimleri kapsıyor, hangi koşullar aranacak?
+            i̇ktidarın "terörsüz türkiye", dem parti'nin ise "barış ve demokratik toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısını oluşturmak amacıyla hazırlanan 12 maddelik "millî dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi" tbmm başkanlığı'na sunuldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi komisyonda: Kimleri kapsıyor, hangi koşullar aranacak?</h3>
+                    <p>İktidarın "Terörsüz Türkiye", DEM Parti'nin ise "Barış ve Demokratik Toplum" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısını oluşturmak amacıyla hazırlanan 12 maddelik "Millî Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi" TBMM Başkanlığı'na sunuldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdrvng02zn7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin özgün havacılık motoru geliştirme yetenekleri aynı çatı altında toplanıyor
+            türkiye'nin havacılık motorları alanındaki mühendislik kapasitesini daha etkin değerlendirmek, geliştirme süreçlerini hızlandırmak ve uzmanlaşmayı güçlendirmek amacıyla önemli bir yeniden yapılanma hayata geçiriliyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'nin özgün havacılık motoru geliştirme yetenekleri aynı çatı altında toplanıyor</h3>
+                    <p>Türkiye'nin havacılık motorları alanındaki mühendislik kapasitesini daha etkin değerlendirmek, geliştirme süreçlerini hızlandırmak ve uzmanlaşmayı güçlendirmek amacıyla önemli bir yeniden yapılanma hayata geçiriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/turkiyenin-ozgun-havacilik-motoru-gelistirme-yetenekleri-ayni-cati-altinda-toplaniyor-953386.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            menderes belediye başkanı i̇lkay çiçek dahil 10 kişi tutuklandı
+            i̇zmir cumhuriyet başsavcılığı koordinesinde yürütülen soruşturma kapsamında, menderes belediye başkanı i̇lkay çiçek'in de aralarında bulunduğu 10 kişi tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Menderes Belediye Başkanı İlkay Çiçek dahil 10 kişi tutuklandı</h3>
+                    <p>İzmir Cumhuriyet Başsavcılığı koordinesinde yürütülen soruşturma kapsamında, Menderes Belediye Başkanı İlkay Çiçek'in de aralarında bulunduğu 10 kişi tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0kmpngkdpmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'altı yaşında regl olmaya başladım ve doktorlar nedenini bilmiyordu'
+            erken ergenlik, çocuklarda cinsel özelliklerin erken gelişimini tetikliyor ve kız çocuklarını orantısız bir şekilde etkiliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Altı yaşında regl olmaya başladım ve doktorlar nedenini bilmiyordu'</h3>
+                    <p>Erken ergenlik, çocuklarda cinsel özelliklerin erken gelişimini tetikliyor ve kız çocuklarını orantısız bir şekilde etkiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq56qx3xxd4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti: 232 belediye başkanı chp'den istifa etti
+            yeni parti genel başkan yardımcısı yaşar tüzün, yerel seçimlerde chp'den seçilen 232 belediye başkanının partilerinden ayrıldığını açıkladı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti: 232 belediye başkanı CHP'den istifa etti</h3>
+                    <p>Yeni Parti Genel Başkan Yardımcısı Yaşar Tüzün, yerel seçimlerde CHP'den seçilen 232 belediye başkanının partilerinden ayrıldığını açıkladı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz641279pq6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tayland'da okul saldırısı: 14 yaşındaki öğrenci ailesini ve öğretmenlerini öldürdü
+            tayland'da 14 yaşında bir çocuk önce evdeki büyükanne ve büyükbabasını sonra okulundaki öğretmenleri öldürdü.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tayland'da okul saldırısı: 14 yaşındaki öğrenci ailesini ve öğretmenlerini öldürdü</h3>
+                    <p>Tayland'da 14 yaşında bir çocuk önce evdeki büyükanne ve büyükbabasını sonra okulundaki öğretmenleri öldürdü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c74gwnxjk0go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            erdoğan: 'savunma anlaşması hiçbir ülkeyi hedef almıyor'
+            türkiye, suudi arabistan ve pakistan 7 ağustos cuma günü mekke'de ortak savunma anlaşması imzaladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Erdoğan: 'Savunma anlaşması hiçbir ülkeyi hedef almıyor'</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan 7 Ağustos Cuma günü Mekke'de ortak savunma anlaşması imzaladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62vn5wzz59o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güneş tutulması ne zaman olacak?
+            dünyanın bazı bölgelerinde yakında tam veya kısmi güneş tutulması yaşanacak. peki, güneş tutulmasını nasıl izleyebilirsiniz?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Güneş tutulması ne zaman olacak?</h3>
+                    <p>Dünyanın bazı bölgelerinde yakında tam veya kısmi güneş tutulması yaşanacak. Peki, güneş tutulmasını nasıl izleyebilirsiniz?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgq5ev1ze2ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yemen ordusu, husilere yönelik operasyon düzenledi
+            yemen ordusu, husi unsurlarını ve askeri teçhizatını hedef alan askeri operasyon düzenlediğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yemen ordusu, Husilere yönelik operasyon düzenledi</h3>
+                    <p>Yemen ordusu, Husi unsurlarını ve askeri teçhizatını hedef alan askeri operasyon düzenlediğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yemen-ordusu-husilere-yonelik-operasyon-duzenledi-953391.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avcılar belediyesine yönelik soruşturmada 12 şüpheli tutuklandı
+            avcılar belediyesine yönelik "ihaleye fesat karıştırma" soruşturması kapsamında i̇stanbul merkezli 4 ilde düzenlenen operasyonda gözaltına alınan 12 şüpheli tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Avcılar Belediyesine yönelik soruşturmada 12 şüpheli tutuklandı</h3>
+                    <p>Avcılar Belediyesine yönelik "ihaleye fesat karıştırma" soruşturması kapsamında İstanbul merkezli 4 ilde düzenlenen operasyonda gözaltına alınan 12 şüpheli tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/avcilar-belediyesine-yonelik-sorusturmada-12-supheli-tutuklandi-953383.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kağıthane'de minibüsle i̇ett otobüsü çarpıştı
+            i̇stanbul kağıthane'de sollama yapan yolcu minibüsünün, i̇ett otobüsüne çarptığı kazada 3 kişi hafif yaralandı. o anlar güvenlik kamerasınca kaydedildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kağıthane'de minibüsle İETT otobüsü çarpıştı</h3>
+                    <p>İstanbul Kağıthane'de sollama yapan yolcu minibüsünün, İETT otobüsüne çarptığı kazada 3 kişi hafif yaralandı. O anlar güvenlik kamerasınca kaydedildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kagithanede-minibusle-iett-otobusu-carpisti-953382.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
