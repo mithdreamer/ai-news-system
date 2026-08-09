@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>15</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-09 05:48</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-daha-adil-bir-turkiye-icin-adalet-sistemimizi-gelistirmeye-devam-edecegiz-953443.html" target="_blank">
+                <strong>Bakan Gürlek: Daha adil bir Türkiye için adalet sistemimizi geliştirmeye devam edeceğiz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdewx8l16l5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ceuta sonrası Schengen krizi büyüyor: İspanya da İtalya'ya kontrol başlattı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy8eygzn4n7o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mekke Savunma Anlaşması Türkiye'nin bölgedeki konumunu nasıl etkileyecek?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c141gn402v8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Odyssey filmi: Troya Savaşı gerçekten yaşandı mı? Bugün Troya'yı nasıl gezmeli?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-uraloglu-ankara-kayseri-arasi-yuksek-hizli-tren-ile-1-saat-45-dakikaya-dusecek-953444.html" target="_blank">
+                <strong>Bakan Uraloğlu: AnkaraKayseri arası yüksek hızlı tren ile 1 saat 45 dakikaya düşecek</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: daha adil bir türkiye için adalet sistemimizi geliştirmeye devam edeceğiz
+            adalet bakanı akın gürlek, "cumhurbaşkanımız sayın recep tayyip erdoğan'ın liderliğinde, çocuklarımızın güven içinde büyüdüğü, ailelerimizin huzurunun güçlendiği, daha güvenli ve daha adil bir türkiye için adalet sistemimizi geliştirmeye devam edeceğiz." ifadesini kullandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Gürlek: Daha adil bir Türkiye için adalet sistemimizi geliştirmeye devam edeceğiz</h3>
+                    <p>Adalet Bakanı Akın Gürlek, "Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan'ın liderliğinde, çocuklarımızın güven içinde büyüdüğü, ailelerimizin huzurunun güçlendiği, daha güvenli ve daha adil bir Türkiye için adalet sistemimizi geliştirmeye devam edeceğiz." ifadesini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-daha-adil-bir-turkiye-icin-adalet-sistemimizi-gelistirmeye-devam-edecegiz-953443.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ceuta sonrası schengen krizi büyüyor: i̇spanya da i̇talya'ya kontrol başlattı
+            i̇talya'nın geçen haftadan itibaren i̇spanya'dan gelenler için schengen serbest dolaşım sistemini askıya almasının ardından i̇spanya da karşılık olarak dün geceden itibaren i̇talya'dan gidenlere sınır kontrolü uygulamaya başladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ceuta sonrası Schengen krizi büyüyor: İspanya da İtalya'ya kontrol başlattı</h3>
+                    <p>İtalya'nın geçen haftadan itibaren İspanya'dan gelenler için Schengen serbest dolaşım sistemini askıya almasının ardından İspanya da karşılık olarak dün geceden itibaren İtalya'dan gidenlere sınır kontrolü uygulamaya başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdewx8l16l5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mekke savunma anlaşması türkiye'nin bölgedeki konumunu nasıl etkileyecek?
+            türkiye, suudi arabistan ve pakistan arasında imzalanan üçlü savunma anlaşmasına ilişkin ankara'dan yapılan ilk değerlendirmeler, bu adımın türkiye'nin nato üyeliğine bir alternatif oluşturmadığı ve türk askerinin bölgesel krizlerin içine çekileceği anlamına gelmediği mesajını veriyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mekke Savunma Anlaşması Türkiye'nin bölgedeki konumunu nasıl etkileyecek?</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan arasında imzalanan üçlü savunma anlaşmasına ilişkin Ankara'dan yapılan ilk değerlendirmeler, bu adımın Türkiye'nin NATO üyeliğine bir alternatif oluşturmadığı ve Türk askerinin bölgesel krizlerin içine çekileceği anlamına gelmediği mesajını veriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy8eygzn4n7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan uraloğlu: ankarakayseri arası yüksek hızlı tren ile 1 saat 45 dakikaya düşecek
+            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, yerköy-kayseri yüksek hızlı tren hattı'nın ankara-sivas yüksek hızlı tren hattı ile entegre olacağını ve 7 saat süren ankara-kayseri arası seyahat süresini 1 saat 45 dakikaya düşüreceklerini söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Uraloğlu: AnkaraKayseri arası yüksek hızlı tren ile 1 saat 45 dakikaya düşecek</h3>
+                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Yerköy-Kayseri Yüksek Hızlı Tren Hattı'nın Ankara-Sivas Yüksek Hızlı Tren Hattı ile entegre olacağını ve 7 saat süren Ankara-Kayseri arası seyahat süresini 1 saat 45 dakikaya düşüreceklerini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-uraloglu-ankara-kayseri-arasi-yuksek-hizli-tren-ile-1-saat-45-dakikaya-dusecek-953444.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            odyssey filmi: troya savaşı gerçekten yaşandı mı? bugün troya'yı nasıl gezmeli?
+            çanakkale boğazı'nın girişindeki troya; bundan yaklaşık 3200 yıl önce, yani troya savaşı'nın yaşandığı düşünülen günlerde surları, kapıları ve saraylarıyla görkemli bir şehirdi. christopher nolan'ın odyssey filmiyle destanlara konu olan şehir ve savaş tekrar gündeme geld. peki troya savaşı gerçekten yaşandı mı? günce akpamuk'un haberi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Odyssey filmi: Troya Savaşı gerçekten yaşandı mı? Bugün Troya'yı nasıl gezmeli?</h3>
+                    <p>Çanakkale Boğazı'nın girişindeki Troya; bundan yaklaşık 3200 yıl önce, yani Troya Savaşı'nın yaşandığı düşünülen günlerde surları, kapıları ve saraylarıyla görkemli bir şehirdi. Christopher Nolan'ın Odyssey filmiyle destanlara konu olan şehir ve savaş tekrar gündeme geld. Peki Troya Savaşı gerçekten yaşandı mı? Günce Akpamuk'un haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c141gn402v8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan göktaş: bu yasa, daha güçlü bir türkiye'nin temelini oluşturacak
+            aile ve sosyal hizmetler bakanı göktaş, tbmm genel kurulunda kabul edilen "çocuk koruma kanunu ile bazı kanunlarda değişiklik yapılmasına dair kanun teklifi"ne ilişkin, "attığımız bu adım, yalnızca çocuklarımızın bugününü korumakla kalmayacak, daha güvenli, daha adil ve daha güçlü bir türkiye'nin temelini oluşturacak" ifadesini kullandı
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Göktaş: Bu yasa, daha güçlü bir Türkiye'nin temelini oluşturacak</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Göktaş, TBMM Genel Kurulunda kabul edilen "Çocuk Koruma Kanunu ile Bazı Kanunlarda Değişiklik Yapılmasına Dair Kanun Teklifi"ne ilişkin, "Attığımız bu adım, yalnızca çocuklarımızın bugününü korumakla kalmayacak, daha güvenli, daha adil ve daha güçlü bir Türkiye'nin temelini oluşturacak" ifadesini kullandı</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-goktas-bu-yasa-daha-guclu-bir-turkiyenin-temelini-olusturacak-953442.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan çiftçi: bu yıl esenyurt'ta yaklaşık 7 bin 500 aranan şahsı yakaladık
+            i̇çişleri bakanı mustafa çiftçi, esenyurt'ta emniyet ve asayiş hizmetlerine ilişkin yaptığı açıklamada, bu yılın ilk 7 ayında yaklaşık 7 bin 500 aranan şahsın yakalandığını, ilçede personel sayısının 2023'e göre yüzde 40, araç sayısının ise yüzde 96 artırıldığını bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Çiftçi: Bu yıl Esenyurt'ta yaklaşık 7 bin 500 aranan şahsı yakaladık</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, Esenyurt'ta emniyet ve asayiş hizmetlerine ilişkin yaptığı açıklamada, bu yılın ilk 7 ayında yaklaşık 7 bin 500 aranan şahsın yakalandığını, ilçede personel sayısının 2023'e göre yüzde 40, araç sayısının ise yüzde 96 artırıldığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-ciftci-bu-yil-esenyurtta-yaklasik-7-bin-500-aranan-sahsi-yakaladik-953437.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa adalet komisyonu'ndan geçti: görüşmelerde gerginlik ve öcalan tartışması
+            i̇ktidarın "terörsüz türkiye" olarak adlandırdığı yeni çözüm sürecinin ilk yasal düzenlemesi olan, 12 maddelik çerçeve yasa niteliğindeki "milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi", tbmm adalet komisyonu'ndan geçti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve Yasa Adalet Komisyonu'ndan geçti: Görüşmelerde gerginlik ve Öcalan tartışması</h3>
+                    <p>İktidarın "Terörsüz Türkiye" olarak adlandırdığı yeni çözüm sürecinin ilk yasal düzenlemesi olan, 12 maddelik çerçeve yasa niteliğindeki "Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi", TBMM Adalet Komisyonu'ndan geçti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn0nkrjlpj0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hürmüz boğazı'nda mahsur kalan gemiler 'biyolojik istilaya yol açabilir'
+            uluslararası bir deniz biyologları ekibi, hürmüz boğazı'nın kapanmasının "büyük bir uluslararası biyolojik güvenlik tehdidi" olduğunu ve "bir ekolojik krize" yol açabileceğini söylüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hürmüz Boğazı'nda mahsur kalan gemiler 'biyolojik istilaya yol açabilir'</h3>
+                    <p>Uluslararası bir deniz biyologları ekibi, Hürmüz Boğazı'nın kapanmasının "büyük bir uluslararası biyolojik güvenlik tehdidi" olduğunu ve "bir ekolojik krize" yol açabileceğini söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlxkyq6z9qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hindistan'da sınav sorularının sızması gençleri nasıl öldürdü?
+            hindistan'ın ertelenen tıp fakültesi giriş sınavına girmesine üç gün kala, 17 yaşındaki kahaan patel, ahmedabad şehrinde ailesine ait apartmanın altıncı katından atladı. patel'in hikayesi, ülkede tıp giriş sınavı sorularının sızdırılmasının yol açtığı insani kayıpları ortaya koyuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hindistan'da sınav sorularının sızması gençleri nasıl öldürdü?</h3>
+                    <p>Hindistan'ın ertelenen tıp fakültesi giriş sınavına girmesine üç gün kala, 17 yaşındaki Kahaan Patel, Ahmedabad şehrinde ailesine ait apartmanın altıncı katından atladı. Patel'in hikayesi, ülkede tıp giriş sınavı sorularının sızdırılmasının yol açtığı insani kayıpları ortaya koyuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn5n1g3ep74o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gaziantep'te 4,5 büyüklüğünde deprem
+            gaziantep'in nurdağı ilçesinde saat 03.42'de 4,5 büyüklüğünde deprem meydana geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gaziantep'te 4,5 büyüklüğünde deprem</h3>
+                    <p>Gaziantep'in Nurdağı ilçesinde saat 03.42'de 4,5 büyüklüğünde deprem meydana geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gaziantepte-45-buyuklugunde-deprem-953445.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            büyükelçi atamaları resmi gazete'de
+            cumhurbaşkanı recep tayyip erdoğan'ın imzasıyla yapılan büyükelçi atamalarına ilişkin kararlar, resmi gazete'de yayımlandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Büyükelçi atamaları Resmi Gazete'de</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın imzasıyla yapılan büyükelçi atamalarına ilişkin kararlar, Resmi Gazete'de yayımlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/buyukelci-atamalari-resmi-gazetede-953440.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi adalet komisyonu'nda kabul edildi: maddeler neler?
+            yeni çözüm sürecinin hukuki altyapısını oluşturması öngörülen çerçeve yasa teklifi, tbmm adalet komisyonu'nda kabul edildi. peki, yasa teklifi neler öngörüyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi Adalet Komisyonu'nda kabul edildi: Maddeler neler?</h3>
+                    <p>Yeni çözüm sürecinin hukuki altyapısını oluşturması öngörülen çerçeve yasa teklifi, TBMM Adalet Komisyonu'nda kabul edildi. Peki, yasa teklifi neler öngörüyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2gemqqr9mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti manisa i̇l başkanı i̇lksen özalper tutuklandı
+            yeni parti manisa i̇l başkanı i̇lksen özalper, ankara cumhuriyet başsavcılığı tarafından yürütülen çıkar amaçlı suç örgütü ve rüşvet soruşturması kapsamında tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti Manisa İl Başkanı İlksen Özalper tutuklandı</h3>
+                    <p>Yeni Parti Manisa İl Başkanı İlksen Özalper, Ankara Cumhuriyet Başsavcılığı tarafından yürütülen çıkar amaçlı suç örgütü ve rüşvet soruşturması kapsamında tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y3jk10g1do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ceuta: facebook ve instagram'ta kitlesel geçişin tekrarı çağrısı
+            bbc, facebook ve instagram'da fas'tan i̇spanya'ya ikinci bir kitlesel geçişi teşvik eden paylaşımlar buldu. meta, politikalarını ihlal eden paylaşımları kaldırdığını açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ceuta: Facebook ve Instagram'ta kitlesel geçişin tekrarı çağrısı</h3>
+                    <p>BBC, Facebook ve Instagram'da Fas'tan İspanya'ya ikinci bir kitlesel geçişi teşvik eden paylaşımlar buldu. Meta, politikalarını ihlal eden paylaşımları kaldırdığını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyj1mln3gko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            başkentte trafikte araçlarıyla drift atan 11 kişi yakalandı
+            ankara'da trafiğe açık alanlarda araçlarıyla drift atan 11 şüpheli gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Başkentte trafikte araçlarıyla drift atan 11 kişi yakalandı</h3>
+                    <p>Ankara'da trafiğe açık alanlarda araçlarıyla drift atan 11 şüpheli gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/baskentte-trafikte-araclariyla-drift-atan-11-kisi-yakalandi-953446.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emniyet genel müdürlüğüne 6 bin 250 kadro ihdas edildi
+            emniyet genel müdürlüğüne (egm) 6 bin 250 kadro ihdas edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Emniyet Genel Müdürlüğüne 6 bin 250 kadro ihdas edildi</h3>
+                    <p>Emniyet Genel Müdürlüğüne (EGM) 6 bin 250 kadro ihdas edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/emniyet-genel-mudurlugune-6-bin-250-kadro-ihdas-edildi-953441.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            öğrenci affına ilişkin düzenlemeyi içeren kanun yürürlüğe girdi
+            öğrenci affına ilişkin düzenlemeyi içeren kanun, resmi gazete'de yayımlanarak yürürlüğe girdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Öğrenci affına ilişkin düzenlemeyi içeren kanun yürürlüğe girdi</h3>
+                    <p>Öğrenci affına ilişkin düzenlemeyi içeren kanun, Resmi Gazete'de yayımlanarak yürürlüğe girdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ogrenci-affina-iliskin-duzenlemeyi-iceren-kanun-yururluge-girdi-953439.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şarkıcı cansever hayatını kaybetti
+            arabesk müziğin ünlü isimlerinden cansever, 59 yaşında hayatını kaybetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Şarkıcı Cansever hayatını kaybetti</h3>
+                    <p>Arabesk müziğin ünlü isimlerinden Cansever, 59 yaşında hayatını kaybetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/sarkici-cansever-hayatini-kaybetti-953438.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bbc bir telefon defteriyle esad'ın istihbarat şefine nasıl ulaştı?
+            bbc, bir zamanlar suriye'nin en korkulan adamlarından biri olan "örümcek"i nasıl buldu?
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>BBC bir telefon defteriyle Esad'ın istihbarat şefine nasıl ulaştı?</h3>
+                    <p>BBC, bir zamanlar Suriye'nin en korkulan adamlarından biri olan "Örümcek"i nasıl buldu?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cpvw7e109mjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
