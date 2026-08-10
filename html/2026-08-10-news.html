@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-10 06:12</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c77ge34m7j5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Netanyahu, Trump'ın Gazze planını reddettiklerini açıkladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckgez2z1pqno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Aramco'nun sıradışı kâr artışı: Suudi Arabistan İran savaşından fayda mı sağlıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/kuzey-kore-rusyaya-50-bin-asker-gonderiyor-953509.html" target="_blank">
+                <strong>Kuzey Kore Rusya'ya 50 bin asker gönderiyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/iran-hurmuz-bogazinin-acilmasi-icin-abdden-savas-tazminati-talep-ediyor-953508.html" target="_blank">
+                <strong>İran, Hürmüz Boğazı'nın açılması için ABD'den savaş tazminatı talep ediyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Manisa Kula'daki yangın 300'den fazla personelin müdahalesiyle kontrol altına alındı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            netanyahu, trump'ın gazze planını reddettiklerini açıkladı
+            i̇srail başbakanı binyamin netanyahu, abd başkanı donald trump'ın gazze için sunduğu 15 maddelik planı reddederek "hamas gerçek anlamda silahsızlandırılana kadar herhangi bir askeri çekilmenin gerçekleşmeyeceğini" söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Netanyahu, Trump'ın Gazze planını reddettiklerini açıkladı</h3>
+                    <p>İsrail Başbakanı Binyamin Netanyahu, ABD Başkanı Donald Trump'ın Gazze için sunduğu 15 maddelik planı reddederek "Hamas gerçek anlamda silahsızlandırılana kadar herhangi bir askeri çekilmenin gerçekleşmeyeceğini" söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c77ge34m7j5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuzey kore rusya'ya 50 bin asker gönderiyor
+            ukrayna devlet başkanı zelenski, kuzey kore askerlerinin rusya'daki varlığına ilişkin yeni açıklamalarda bulundu. zelenski, rusya'ya konuşlandırılan kuzey koreli asker sayısının 50 bine ulaşacağını ifade etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kuzey Kore Rusya'ya 50 bin asker gönderiyor</h3>
+                    <p>Ukrayna Devlet Başkanı Zelenski, Kuzey Kore askerlerinin Rusya'daki varlığına ilişkin yeni açıklamalarda bulundu. Zelenski, Rusya'ya konuşlandırılan Kuzey Koreli asker sayısının 50 bine ulaşacağını ifade etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kuzey-kore-rusyaya-50-bin-asker-gonderiyor-953509.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran, hürmüz boğazı'nın açılması için abd'den savaş tazminatı talep ediyor
+            i̇ran, hürmüz boğazı'nı kısmen açmak amacıyla umman ile bir anlaşmaya varmak için abd'nin karşılaması gereken bir dizi şart belirledi. bu şartlar arasında savaş tazminatı ödenmesi de yer alıyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran, Hürmüz Boğazı'nın açılması için ABD'den savaş tazminatı talep ediyor</h3>
+                    <p>İran, Hürmüz Boğazı'nı kısmen açmak amacıyla Umman ile bir anlaşmaya varmak için ABD'nin karşılaması gereken bir dizi şart belirledi. Bu şartlar arasında savaş tazminatı ödenmesi de yer alıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-hurmuz-bogazinin-acilmasi-icin-abdden-savas-tazminati-talep-ediyor-953508.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa atletizm şampiyonası bugün i̇ngiltere'de başlıyor: türkiye'den rekor katılım
+            avrupa atletizm şampiyonası bugün i̇ngiltere'de başlıyor. i̇ki yılda bir düzenlenen şampiyonaya bu sene türkiye'den rekor sayıda sporcu katılıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa Atletizm Şampiyonası bugün İngiltere'de başlıyor: Türkiye'den rekor katılım</h3>
+                    <p>Avrupa Atletizm Şampiyonası bugün İngiltere'de başlıyor. İki yılda bir düzenlenen şampiyonaya bu sene Türkiye'den rekor sayıda sporcu katılıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjd49v7nl77o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            denizler, temmuz ayı için kaydedilen en yüksek sıcaklığa ulaştı.
+            dünyadaki denizlerin temmuz ayı ortalama yüzey sıcaklığı, kaydedilen en yüksek seviyeye ulaştı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Denizler, temmuz ayı için kaydedilen en yüksek sıcaklığa ulaştı.</h3>
+                    <p>Dünyadaki denizlerin Temmuz ayı ortalama yüzey sıcaklığı, kaydedilen en yüksek seviyeye ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/denizler-temmuz-ayi-icin-kaydedilen-en-yuksek-sicakliga-ulasti-953510.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çin'de yunus tayfunu: 1 milyondan fazla kişi tahliye edildi
+            çin makamları, yunus tayfunu'nun karaya ulaşmasının ardından şanghay da dahil olmak üzere ülkenin doğusundaki 1 milyondan fazla kişiyi evlerinden tahliye etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Çin'de Yunus Tayfunu: 1 milyondan fazla kişi tahliye edildi</h3>
+                    <p>Çin makamları, Yunus Tayfunu'nun karaya ulaşmasının ardından Şanghay da dahil olmak üzere ülkenin doğusundaki 1 milyondan fazla kişiyi evlerinden tahliye etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/cinde-yunus-tayfunu-1-milyondan-fazla-kisi-tahliye-edildi-953507.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail basını: netanyahu, gazze'ye ilişkin 15 maddelik plana şans vermeye hazır
+            i̇srail başbakanı binyamin netanyahu'nun, abd başkanı donald trump'ın damadı ve danışmanı jared kushner'a, gazze'ye ilişkin 15 maddelik plana şans vermeye hazır olduğunu ilettiği öne sürüldü.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İsrail basını: Netanyahu, Gazze'ye ilişkin 15 maddelik plana şans vermeye hazır</h3>
+                    <p>İsrail Başbakanı Binyamin Netanyahu'nun, ABD Başkanı Donald Trump'ın damadı ve danışmanı Jared Kushner'a, Gazze'ye ilişkin 15 maddelik plana şans vermeye hazır olduğunu ilettiği öne sürüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/israil-basini-netanyahu-gazzeye-iliskin-15-maddelik-plana-sans-vermeye-hazir-953504.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            aramco'nun sıradışı kâr artışı: suudi arabistan i̇ran savaşından fayda mı sağlıyor?
+            suudi arabistan'ın petrol şirketi aramco, 2026'nın ikinci çeyreğinde kârının 2022'den bu yana en yüksek seviyeye ulaştığını açıkladı. bu, i̇ran savaşı nedeniyle bölgedeki gerilimlerin ve basra körfezi'ndeki deniz taşımacılığında aksaklıkların arttığı bir dönem oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Aramco'nun sıradışı kâr artışı: Suudi Arabistan İran savaşından fayda mı sağlıyor?</h3>
+                    <p>Suudi Arabistan'ın petrol şirketi Aramco, 2026'nın ikinci çeyreğinde kârının 2022'den bu yana en yüksek seviyeye ulaştığını açıkladı. Bu, İran savaşı nedeniyle bölgedeki gerilimlerin ve Basra Körfezi'ndeki deniz taşımacılığında aksaklıkların arttığı bir dönem oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgez2z1pqno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manisa kula'daki yangın 300'den fazla personelin müdahalesiyle kontrol altına alındı
+            türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ederken manisa valiliği, kula'daki yangına 300'den fazla personel ve 16 hava aracıyla müdahale edildiğini duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Manisa Kula'daki yangın 300'den fazla personelin müdahalesiyle kontrol altına alındı</h3>
+                    <p>Türkiye'nin farklı noktalarında orman yangınları ile mücadele devam ederken Manisa Valiliği, Kula'daki yangına 300'den fazla personel ve 16 hava aracıyla müdahale edildiğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd7w7pg8g71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazi ve şehit yakınlarının haklarına yönelik yasa tbmm'de kabul edildi
+            akp ve mhp'nin, çözüm sürecine dair çerçeve yasa ile eşzamanlı olarak tbmm'ye sunduğu, şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren kanun teklifi meclis'te kabul edilerek yasalaştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazi ve şehit yakınlarının haklarına yönelik yasa TBMM'de kabul edildi</h3>
+                    <p>AKP ve MHP'nin, çözüm sürecine dair çerçeve yasa ile eşzamanlı olarak TBMM'ye sunduğu, şehit yakınları ve gazilerin haklarına yönelik düzenlemeleri içeren kanun teklifi Meclis'te kabul edilerek yasalaştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx7rlzrxqko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sicilya kıyılarında şarap ve zeytinyağı küpleriyle dolu 2.000 yıllık gemi batığı bulundu
+            i̇talyan dalgıçlar, sicilya açıklarında 2.000 yıldan daha eski olduğuna inanılan antik bir roma gemi batığı keşfetti. geminin, şarap ve zeytinyağı gibi malların taşınmasında kullanılan yüzlerce iyi korunmuş küple dolu olduğu belirtildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sicilya kıyılarında şarap ve zeytinyağı küpleriyle dolu 2.000 yıllık gemi batığı bulundu</h3>
+                    <p>İtalyan dalgıçlar, Sicilya açıklarında 2.000 yıldan daha eski olduğuna inanılan antik bir Roma gemi batığı keşfetti. Geminin, şarap ve zeytinyağı gibi malların taşınmasında kullanılan yüzlerce iyi korunmuş küple dolu olduğu belirtildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgjezwgg0xpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kanada'da kontrolden çıkan orman yangınları nedeniyle binlerce kişi tahliye edildi
+            i̇ngiliz kolumbiyası eyaletinde 102 yangınla mücadele sürerken, yangının ilerleme hızı söndürme çalışmalarını güçleştiriyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kanada'da kontrolden çıkan orman yangınları nedeniyle binlerce kişi tahliye edildi</h3>
+                    <p>İngiliz Kolumbiyası eyaletinde 102 yangınla mücadele sürerken, yangının ilerleme hızı söndürme çalışmalarını güçleştiriyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kanadada-kontrolden-cikan-orman-yanginlari-nedeniyle-binlerce-kisi-tahliye-edildi-953511.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yunanistanda 106 farklı noktada filistine özgürlük mitingleri yapıldı
+            yunanistan’da 106 farklı noktada filistin’e özgürlük mitingleri düzenlendi. adalardan, şehir meydanlarına kadar her yerde filistin bayrakları dalgalandı. katil i̇srail’in yaptığı soykırım protesto edildi. başkent atina da en büyük mitinglerden birine ev sahipliği yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yunanistanda 106 farklı noktada Filistine Özgürlük mitingleri yapıldı</h3>
+                    <p>Yunanistan’da 106 farklı noktada Filistin’e Özgürlük mitingleri düzenlendi. Adalardan, şehir meydanlarına kadar her yerde Filistin bayrakları dalgalandı. Katil İsrail’in yaptığı soykırım protesto edildi. Başkent Atina da en büyük mitinglerden birine ev sahipliği yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yunanistanda-106-farkli-noktada-filistine-ozgurluk-mitingleri-yapildi-953506.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mansur yavaş'tan 'çerçeve yasa' açıklaması: 'demokratikleşme tek bir mesele üzerinden konuşulamaz'
+            tbmm başkanlığı'na sunulan yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi ile ilgili siyasi partilerden açıklamalar gelmeye devam ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mansur Yavaş'tan 'çerçeve yasa' açıklaması: 'Demokratikleşme tek bir mesele üzerinden konuşulamaz'</h3>
+                    <p>TBMM Başkanlığı'na sunulan yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa teklifi ile ilgili siyasi partilerden açıklamalar gelmeye devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwylxpkr49zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afrika'daki aşırı sıcaklara develer bile dayanamıyor
+            çobanlar ve uzmanlar bbc'ye afrika'daki develerin aşırı sıcaklar nedeniyle çektiği sıkıntıları anlattı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Afrika'daki aşırı sıcaklara develer bile dayanamıyor</h3>
+                    <p>Çobanlar ve uzmanlar BBC'ye Afrika'daki develerin aşırı sıcaklar nedeniyle çektiği sıkıntıları anlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg690rze5eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çerçeve yasa teklifi adalet komisyonu'nda kabul edildi: maddeler neler?
+            yeni çözüm sürecinin hukuki altyapısını oluşturması öngörülen çerçeve yasa teklifi, tbmm adalet komisyonu'nda kabul edildi. peki, yasa teklifi neler öngörüyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çerçeve yasa teklifi Adalet Komisyonu'nda kabul edildi: Maddeler neler?</h3>
+                    <p>Yeni çözüm sürecinin hukuki altyapısını oluşturması öngörülen çerçeve yasa teklifi, TBMM Adalet Komisyonu'nda kabul edildi. Peki, yasa teklifi neler öngörüyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2gemqqr9mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güney afrika'nın cape town şehrindeki üç ayrı silahlı saldırıda 11 kişi öldü
+            güney afrika cumhuriyeti'nin cape town şehrinde düzenlenen üç ayrı silahlı saldırıda 11 kişi hayatını kaybetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Güney Afrika'nın Cape Town şehrindeki üç ayrı silahlı saldırıda 11 kişi öldü</h3>
+                    <p>Güney Afrika Cumhuriyeti'nin Cape Town şehrinde düzenlenen üç ayrı silahlı saldırıda 11 kişi hayatını kaybetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/guney-afrikanin-cape-town-sehrindeki-uc-ayri-silahli-saldirida-11-kisi-oldu-953505.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            terörsüz türkiye yasa teklifi meclis'te
+            terörsüz türkiye hedefinde sona yaklaşılıyor. milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi, bugün meclis genel kurulu'nda görüşülecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Terörsüz Türkiye yasa teklifi Meclis'te</h3>
+                    <p>Terörsüz Türkiye hedefinde sona yaklaşılıyor. Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi, bugün Meclis Genel Kurulu'nda görüşülecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/terorsuz-turkiye-yasa-teklifi-mecliste-953503.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            havuz bakımı sırasında sızan gaz 15 kişiyi hastanelik etti
+            muğla'nın bodrum ilçesindeki bir otelde havuz bakımı sırasında gaz sızıntısından etkilenen 15 kişi hastaneye kaldırıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Havuz bakımı sırasında sızan gaz 15 kişiyi hastanelik etti</h3>
+                    <p>Muğla'nın Bodrum ilçesindeki bir otelde havuz bakımı sırasında gaz sızıntısından etkilenen 15 kişi hastaneye kaldırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/havuz-bakimi-sirasinda-sizan-gaz-15-kisiyi-hastanelik-etti-953502.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de banksy'nin eserleri kamuya 150 bin sterline mal oldu
+            sokak sanatçısı banksy'nin i̇ngiltere'deki üç eseri, şimdiye kadar temizlik çalışmaları ve güvenlik önlemleri nedeniyle vergi mükelleflerine yaklaşık 150 bin sterline mal oldu. faturanın daha da artması bekleniyor.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>İngiltere'de Banksy'nin eserleri kamuya 150 bin sterline mal oldu</h3>
+                    <p>Sokak sanatçısı Banksy'nin İngiltere'deki üç eseri, şimdiye kadar temizlik çalışmaları ve güvenlik önlemleri nedeniyle vergi mükelleflerine yaklaşık 150 bin sterline mal oldu. Faturanın daha da artması bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c70gnpr94djo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
