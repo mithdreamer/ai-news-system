@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>11</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-11 05:54</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/her-sey-dobby-icin-harry-potter-hayranlari-580-milyon-dolarlik-projenin-guzergahini-degistirdi-953606.html" target="_blank">
+                <strong>Her şey Dobby için: Harry Potter hayranları 580 milyon dolarlık projenin güzergahını değiştirdi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvgx3mej8elo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran'ın Hürmüz Boğazı'nı açmak için Trump'tan altı talebi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx8d5w5gpno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rusya'daki tek savaş karşıtı partinin seçime girmesi mahkeme kararıyla yasaklandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c78gl7le204o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yalnız Çinli erkekler sahte gelinler tarafından dolandırılıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c78grxg3xnko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Kolombiya'da 7,4 büyüklüğündeki depremde en az 132 kişi hayatını kaybetti</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            her şey dobby için: harry potter hayranları 580 milyon dolarlık projenin güzergahını değiştirdi
+            birleşik krallık ile i̇rlanda arasında yapılması planlanan 430 milyon sterlinlik (yaklaşık 580 milyon dolar) deniz altı elektrik kablosu hattının güzergahı değiştirildi. karar, harry potter hayranlarının tepkisi üzerine alındı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Her şey Dobby için: Harry Potter hayranları 580 milyon dolarlık projenin güzergahını değiştirdi</h3>
+                    <p>Birleşik Krallık ile İrlanda arasında yapılması planlanan 430 milyon sterlinlik (yaklaşık 580 milyon dolar) deniz altı elektrik kablosu hattının güzergahı değiştirildi. Karar, Harry Potter hayranlarının tepkisi üzerine alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/her-sey-dobby-icin-harry-potter-hayranlari-580-milyon-dolarlik-projenin-guzergahini-degistirdi-953606.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'ın hürmüz boğazı'nı açmak için trump'tan altı talebi
+            i̇ran ve umman'ın, stratejik öneme sahip hürmüz boğazı'ndan geçişi yönetecek yeni bir düzenleme konusundaki görüşmelerin 'olumlu' geçtiği ve ileri aşamada olduğuna dair açıklamaları, gemi trafiğinin yeniden başlaması umutlarını artırdı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran'ın Hürmüz Boğazı'nı açmak için Trump'tan altı talebi</h3>
+                    <p>İran ve Umman'ın, stratejik öneme sahip Hürmüz Boğazı'ndan geçişi yönetecek yeni bir düzenleme konusundaki görüşmelerin 'olumlu' geçtiği ve ileri aşamada olduğuna dair açıklamaları, gemi trafiğinin yeniden başlaması umutlarını artırdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgx3mej8elo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'daki tek savaş karşıtı partinin seçime girmesi mahkeme kararıyla yasaklandı
+            rusya'nın tek liberal ve savaş karşıtı partisi, moskova'daki bir mahkemenin kararıyla gelecek ay yapılacak parlamento seçimlerine katılamayacak.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'daki tek savaş karşıtı partinin seçime girmesi mahkeme kararıyla yasaklandı</h3>
+                    <p>Rusya'nın tek liberal ve savaş karşıtı partisi, Moskova'daki bir mahkemenin kararıyla gelecek ay yapılacak parlamento seçimlerine katılamayacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx8d5w5gpno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yalnız çinli erkekler sahte gelinler tarafından dolandırılıyor
+            çin'de on yıllar boyunca inşa edilen demografik krizin sonucu olarak kadın sayısından çok daha fazla erkek var ve bu da dolandırıcıların evlenmek isteyen erkekleri hedef almasını kolaylaştırıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yalnız Çinli erkekler sahte gelinler tarafından dolandırılıyor</h3>
+                    <p>Çin'de on yıllar boyunca inşa edilen demografik krizin sonucu olarak kadın sayısından çok daha fazla erkek var ve bu da dolandırıcıların evlenmek isteyen erkekleri hedef almasını kolaylaştırıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78gl7le204o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ve i̇ran arasında hürmüz boğazı gerilimi: trump'tan savaş tazminatı talebi
+            abd başkanı donald trump, abd deniz kuvvetlerinin hürmüz boğazı'nı mayınlardan temizlediğini ve stratejik su yolunda tam kontrol sağladığını iddia etti. tahran yönetimi ise abd belirledikleri şartları karşılayana kadar boğazın kapalı kalacağını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ve İran arasında Hürmüz Boğazı gerilimi: Trump'tan savaş tazminatı talebi</h3>
+                    <p>ABD Başkanı Donald Trump, ABD Deniz Kuvvetlerinin Hürmüz Boğazı'nı mayınlardan temizlediğini ve stratejik su yolunda tam kontrol sağladığını iddia etti. Tahran yönetimi ise ABD belirledikleri şartları karşılayana kadar boğazın kapalı kalacağını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abd-ve-iran-arasinda-hurmuz-bogazi-gerilimi-trumptan-savas-tazminati-talebi-953603.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kolombiya'da 7,4 büyüklüğündeki depremde ölenlerin sayısı 132'ye yükseldi
+            güney amerika ülkesi kolombiya'da dün meydana gelen 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısı 132'ye çıktı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kolombiya'da 7,4 büyüklüğündeki depremde ölenlerin sayısı 132'ye yükseldi</h3>
+                    <p>Güney Amerika ülkesi Kolombiya'da dün meydana gelen 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısı 132'ye çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kolombiyada-74-buyuklugundeki-depremde-olenlerin-sayisi-132ye-yukseldi-953601.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa atletizm şampiyonası'nda ilk gün: i̇ki türk atlet finalde
+            10 ağustos'ta i̇ngiltere'de başlayan avrupa atletizm şampiyonası'nın ilk gününde tuğba danışmaz üç adım atlamada tuğba yenigün ise 3.000 metre engelde finale yükselmeyi başardı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa Atletizm Şampiyonası'nda ilk gün: İki Türk atlet finalde</h3>
+                    <p>10 Ağustos'ta İngiltere'de başlayan Avrupa Atletizm Şampiyonası'nın ilk gününde Tuğba Danışmaz üç adım atlamada Tuğba Yenigün ise 3.000 metre engelde finale yükselmeyi başardı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjd49v7nl77o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            openai, chatgpt güncellemesini tehlikeli olduğu gerekçesiyle durdurdu
+            openai, chatgpt için planlanan yeni güncelleme üzerindeki çalışmalarının bir kısmını, sistemin aşırı tehlikeli olabileceği endişesiyle askıya aldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>OpenAI, ChatGPT güncellemesini tehlikeli olduğu gerekçesiyle durdurdu</h3>
+                    <p>OpenAI, ChatGPT için planlanan yeni güncelleme üzerindeki çalışmalarının bir kısmını, sistemin aşırı tehlikeli olabileceği endişesiyle askıya aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/openai-chatgpt-guncellemesini-tehlikeli-oldugu-gerekcesiyle-durdurdu-953605.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            kolombiya'da 7,4 büyüklüğündeki depremde en az 132 kişi hayatını kaybetti
+            kolombiya'da 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısının 132'ye yükseldiği açıklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kolombiya'da 7,4 büyüklüğündeki depremde en az 132 kişi hayatını kaybetti</h3>
+                    <p>Kolombiya'da 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısının 132'ye yükseldiği açıklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78grxg3xnko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan çiftçi'den milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun'a ilişkin paylaşım
+            i̇çişleri bakanı mustafa çiftçi, milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun'un, af, pazarlık veya taviz değil, terörün bütün unsur ve uzantılarıyla tasfiyesini esas alan güçlü bir devlet iradesi olduğunu belirtti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Çiftçi'den Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun'a ilişkin paylaşım</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun'un, af, pazarlık veya taviz değil, terörün bütün unsur ve uzantılarıyla tasfiyesini esas alan güçlü bir devlet iradesi olduğunu belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-ciftciden-milli-dayanisma-ve-toplumsal-butunlesmenin-guclendirilmesine-dair-kanuna-iliskin-paylasim-953599.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mekke i̇ttifakı'nın uygulama sürecinde hangi adımlar atılacak?
+            mekke i̇ttifakı olarak bilinen ve türkiye, suudi arabistan ve pakistan tarafından oluşturulan "mekke ortak savunma anlaşması"nın yaşama geçirilmesi sürecinde atılacak ilk somut adım mekke'de genel sekreterlik yapısının oluşturulması olacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mekke İttifakı'nın uygulama sürecinde hangi adımlar atılacak?</h3>
+                    <p>Mekke İttifakı olarak bilinen ve Türkiye, Suudi Arabistan ve Pakistan tarafından oluşturulan "Mekke Ortak Savunma Anlaşması"nın yaşama geçirilmesi sürecinde atılacak ilk somut adım Mekke'de genel sekreterlik yapısının oluşturulması olacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr7k1vjg5mko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'hayır' oyu kullandığını açıklayan yeni parti milletvekilleri kimler?
+            özgür özel'in 'çerçeve yasa' konusunda yeni parti milletvekillerinin tabanlarından gelen sese göre oy vereceklerini açıklamasından sonra, 'hayır' oyu verecek milletvekilleri nedenlerini açıklamaya başladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Hayır' oyu kullandığını açıklayan Yeni Parti milletvekilleri kimler?</h3>
+                    <p>Özgür Özel'in 'çerçeve yasa' konusunda Yeni Parti milletvekillerinin tabanlarından gelen sese göre oy vereceklerini açıklamasından sonra, 'Hayır' oyu verecek milletvekilleri nedenlerini açıklamaya başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqx7l9e5q7yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            vücudunuzdaki mikroplar sizi psikopat yapabilir mi?
+            yapılan bir araştırma, vücuttaki mikrobiyomun kişilik üzerinde sanılandan daha etkili olabileceğini ortaya koydu. bilim insanları, bağırsak ve ağızda bulunan bazı mikropların miktarı ile psikopatik kişilik özellikleri arasında bağlantı tespit etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Vücudunuzdaki mikroplar sizi psikopat yapabilir mi?</h3>
+                    <p>Yapılan bir araştırma, vücuttaki mikrobiyomun kişilik üzerinde sanılandan daha etkili olabileceğini ortaya koydu. Bilim insanları, bağırsak ve ağızda bulunan bazı mikropların miktarı ile psikopatik kişilik özellikleri arasında bağlantı tespit etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/vucudunuzdaki-mikroplar-sizi-psikopat-yapabilir-mi-953607.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de bir radyo, yanlışlıkla kral charles'ın öldüğünü duyurdu
+            i̇ngiltere'de yayın yapan radio caroline adlı radyo istasyonunun, i̇ngiltere kralı iii. charles'ın hayatını kaybettiğini yanlışlıkla duyurması nedeniyle yayın ilkelerini ihlal ettiği belirlendi. i̇ngiltere i̇letişim kurumu (ofcom), söz konusu yayının kurallara aykırı olduğuna karar verdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'de bir radyo, yanlışlıkla Kral Charles'ın öldüğünü duyurdu</h3>
+                    <p>İngiltere'de yayın yapan Radio Caroline adlı radyo istasyonunun, İngiltere Kralı III. Charles'ın hayatını kaybettiğini yanlışlıkla duyurması nedeniyle yayın ilkelerini ihlal ettiği belirlendi. İngiltere İletişim Kurumu (Ofcom), söz konusu yayının kurallara aykırı olduğuna karar verdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ingilterede-bir-radyo-yanlislikla-kral-charlesin-oldugunu-duyurdu-953604.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kudüs valiliği: i̇srail, kudüs'ün güneyinde yeni bir yahudi yerleşim birimi kurmayı planlıyor
+            filistin yönetimine bağlı kudüs valiliği, i̇srail'in işgal altındaki doğu kudüs'ün güneyinde yaklaşık 650 konuttan oluşan "novi rachel" adında yeni bir yasa dışı yahudi yerleşim birimi kurmayı planladığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kudüs Valiliği: İsrail, Kudüs'ün güneyinde yeni bir Yahudi yerleşim birimi kurmayı planlıyor</h3>
+                    <p>Filistin yönetimine bağlı Kudüs Valiliği, İsrail'in işgal altındaki Doğu Kudüs'ün güneyinde yaklaşık 650 konuttan oluşan "Novi Rachel" adında yeni bir yasa dışı Yahudi yerleşim birimi kurmayı planladığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kudus-valiligi-israil-kudusun-guneyinde-yeni-bir-yahudi-yerlesim-birimi-kurmayi-planliyor-953600.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'çerçeve yasa' meclis'ten geçti
+            "milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi" tbmm genel kurulu'nda görüşülmesinin ardından 468 oyla kabul edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Çerçeve yasa' Meclis'ten geçti</h3>
+                    <p>"Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi" TBMM Genel Kurulu'nda görüşülmesinin ardından 468 oyla kabul edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwym8yv19rxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            okyanuslarda rekor: tarihin en sıcak temmuzu kaydedildi
+            dünya genelinde okyanuslar, pasifik'te gelişmekte olan el niño koşullarının da etkisiyle, tarihin en yüksek temmuz sıcaklıklarına ulaştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Okyanuslarda rekor: Tarihin en sıcak temmuzu kaydedildi</h3>
+                    <p>Dünya genelinde okyanuslar, Pasifik'te gelişmekte olan El Niño koşullarının da etkisiyle, tarihin en yüksek temmuz sıcaklıklarına ulaştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1j17nej9ryo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            haaretz: i̇srail, 1700 filistinlinin cenazesini pazarlık kozu olarak tutuyor
+            i̇srail'in, olası bir pazarlıkta koz olarak kullanmak amacıyla yaklaşık 1700 filistinlinin cenazesini elinde tuttuğu bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Haaretz: İsrail, 1700 Filistinlinin cenazesini pazarlık kozu olarak tutuyor</h3>
+                    <p>İsrail'in, olası bir pazarlıkta koz olarak kullanmak amacıyla yaklaşık 1700 Filistinlinin cenazesini elinde tuttuğu bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/haaretz-israil-1700-filistinlinin-cenazesini-pazarlik-kozu-olarak-tutuyor-953602.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail, batı şeria'da 2 bin dönümden fazla filistin arazisine el koydu
+            i̇şgalci i̇srail yönetiminin, batı şeria'nın kuzeyindeki selfit kentinde 2 bin 224 dönüm filistin arazisine "askeri amaçlar" gerekçesiyle el koyduğu duyuruldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrail, Batı Şeria'da 2 bin dönümden fazla Filistin arazisine el koydu</h3>
+                    <p>İşgalci İsrail yönetiminin, Batı Şeria'nın kuzeyindeki Selfit kentinde 2 bin 224 dönüm Filistin arazisine "askeri amaçlar" gerekçesiyle el koyduğu duyuruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-bati-seriada-2-bin-donumden-fazla-filistin-arazisine-el-koydu-953598.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray'ın taraftar grubu ultraslan'ın lideri sebahattin şirin gözaltına alındı
+            galatasaray'ın taraftar gruplarından ultraslan'ın tribün lideri sebahattin şirin adıyla bilinen muzaffer şirin, pazar günü i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen bir soruşturma kapsamında gözaltına alındı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray'ın taraftar grubu UltrAslan'ın lideri Sebahattin Şirin gözaltına alındı</h3>
+                    <p>Galatasaray'ın taraftar gruplarından UltrAslan'ın tribün lideri Sebahattin Şirin adıyla bilinen Muzaffer Şirin, Pazar günü İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen bir soruşturma kapsamında gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy74186zknjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
