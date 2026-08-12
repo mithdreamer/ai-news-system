@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-12 06:17</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c2359xg13z9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran, ABD ve İsrail ile savaşı ne kadar sürdürebilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/ilo-kuresel-genc-issizligi-son-bir-yilda-artti-sebebi-yapay-zeka-953711.html" target="_blank">
+                <strong>ILO: Küresel genç işsizliği son bir yılda arttı, sebebi yapay zeka</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/spotify-muzisyen-profillerine-yapay-zeka-rozeti-getiriyor-953709.html" target="_blank">
+                <strong>Spotify müzisyen profillerine Yapay Zeka rozeti getiriyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/yapay-zekaya-guvenen-ciftci-25-donumluk-urununu-kaybetti-953708.html" target="_blank">
+                <strong>Yapay zekaya güvenen çiftçi 25 dönümlük ürününü kaybetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/11-anadolu-medya-odullerinden-trtye-3-odul-953706.html" target="_blank">
+                <strong>11. Anadolu Medya Ödülleri'nden TRT'ye 3 ödül</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran, abd ve i̇srail ile savaşı ne kadar sürdürebilir?
+            i̇ran savaşının başlamasının üzerinden yedi ay geçmiş olmasına ve ülke ekonomisi ile altyapısı üzerindeki büyük baskıya rağmen, karar vericiler savaşı sona erdirmek için hâlâ acele etmiyor gibi görünüyor. peki savaş daha ne kadar devam edebilir?
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İran, ABD ve İsrail ile savaşı ne kadar sürdürebilir?</h3>
+                    <p>İran savaşının başlamasının üzerinden yedi ay geçmiş olmasına ve ülke ekonomisi ile altyapısı üzerindeki büyük baskıya rağmen, karar vericiler savaşı sona erdirmek için hâlâ acele etmiyor gibi görünüyor. Peki savaş daha ne kadar devam edebilir?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2359xg13z9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ilo: küresel genç işsizliği son bir yılda arttı, sebebi yapay zeka
+            uluslararası çalışma örgütü (ilo), küresel genç işsizliğinin geçtiğimiz yıl artış gösterdiğini ve en büyük yükselişin yüksek gelirli ekonomilerde kaydedildiğini duyurdu. birleşmiş milletler bünyesinde faaliyet gösteren örgüt, bu gelişmede yapay zekanın yaygınlaşmasının önemli bir rol oynadığına dikkat çekti.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ILO: Küresel genç işsizliği son bir yılda arttı, sebebi yapay zeka</h3>
+                    <p>Uluslararası Çalışma Örgütü (ILO), küresel genç işsizliğinin geçtiğimiz yıl artış gösterdiğini ve en büyük yükselişin yüksek gelirli ekonomilerde kaydedildiğini duyurdu. Birleşmiş Milletler bünyesinde faaliyet gösteren örgüt, bu gelişmede yapay zekanın yaygınlaşmasının önemli bir rol oynadığına dikkat çekti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ilo-kuresel-genc-issizligi-son-bir-yilda-artti-sebebi-yapay-zeka-953711.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara'da dev sahte para operasyonu: 80 bin dolar ele geçirildi
+            ankara'nın mamak ilçesinde 80 bin 50 dolarlık sahte banknot ele geçirildi, 2 şüpheli gözaltına alındı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ankara'da dev sahte para operasyonu: 80 bin dolar ele geçirildi</h3>
+                    <p>Ankara'nın Mamak ilçesinde 80 bin 50 dolarlık sahte banknot ele geçirildi, 2 şüpheli gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-dev-sahte-para-operasyonu-80-bin-dolar-ele-gecirildi-953705.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            spotify müzisyen profillerine yapay zeka rozeti getiriyor
+            spotify, dinleyicilere müziklerin arkasındaki isimlerin gerçek kişiler olup olmadığı konusunda şeffaflık sağlamak amacıyla eylül ortasından itibaren bazı profillere "yapay zeka personası" rozeti eklemeye başlayacağını duyurdu.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Spotify müzisyen profillerine Yapay Zeka rozeti getiriyor</h3>
+                    <p>Spotify, dinleyicilere müziklerin arkasındaki isimlerin gerçek kişiler olup olmadığı konusunda şeffaflık sağlamak amacıyla eylül ortasından itibaren bazı profillere "Yapay Zeka Personası" rozeti eklemeye başlayacağını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/spotify-muzisyen-profillerine-yapay-zeka-rozeti-getiriyor-953709.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yapay zekaya güvenen çiftçi 25 dönümlük ürününü kaybetti
+            çin'de bir çiftçi, yapay zeka uygulamasının verdiği tarım ilacı tavsiyesine uyması sonucu 25 dönümlük tarlasındaki mahsulün kuruduğunu açıkladı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Yapay zekaya güvenen çiftçi 25 dönümlük ürününü kaybetti</h3>
+                    <p>Çin'de bir çiftçi, yapay zeka uygulamasının verdiği tarım ilacı tavsiyesine uyması sonucu 25 dönümlük tarlasındaki mahsulün kuruduğunu açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yapay-zekaya-guvenen-ciftci-25-donumluk-urununu-kaybetti-953708.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            11. anadolu medya ödülleri'nden trt'ye 3 ödül
+            terörsüz türkiye'nin milletin geleceği ve kardeşliğini doğrudan ilgilendiren son derece önemli bir süreç olduğunu belirten cumhurbaşkanı yardımcısı cevdet yılmaz, "provokasyonlara karşı ortak sorumluluk bilinci ile hareket edilmeli" dedi. cevdet yılmaz, trt'nin 3 ayrı ödüle layık görüldüğü 11. anadolu medya ödülleri töreni'nde konuştu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>11. Anadolu Medya Ödülleri'nden TRT'ye 3 ödül</h3>
+                    <p>Terörsüz Türkiye'nin milletin geleceği ve kardeşliğini doğrudan ilgilendiren son derece önemli bir süreç olduğunu belirten Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, "Provokasyonlara karşı ortak sorumluluk bilinci ile hareket edilmeli" dedi. Cevdet Yılmaz, TRT'nin 3 ayrı ödüle layık görüldüğü 11. Anadolu Medya Ödülleri Töreni'nde konuştu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/11-anadolu-medya-odullerinden-trtye-3-odul-953706.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yüksek binaların yıkımıyla ilgili yeni kurallar geldi
+            bina yıkımlarıyla ilgili yeni teknik ve idari kuralları içeren düzenleme resmi gazete'de yayımlandı. çevre, şehircilik ve i̇klim değişikliği bakanlığı bina yıkım kurallarında kapsamlı değişikliğe gitti. patlayıcı kullanılarak yapılan yıkımlarda önce meteorolojik şartlar değerlendirilecek. patlatma anı sırasında yüksek hızlı kameralar kayıtta olacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yüksek binaların yıkımıyla ilgili yeni kurallar geldi</h3>
+                    <p>Bina yıkımlarıyla ilgili yeni teknik ve idari kuralları içeren düzenleme Resmi Gazete'de yayımlandı. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı bina yıkım kurallarında kapsamlı değişikliğe gitti. Patlayıcı kullanılarak yapılan yıkımlarda önce meteorolojik şartlar değerlendirilecek. Patlatma anı sırasında yüksek hızlı kameralar kayıtta olacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/yuksek-binalarin-yikimiyla-ilgili-yeni-kurallar-geldi-953704.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kolombiya'da 7,4 büyüklüğündeki depremde en az 180 kişi hayatını kaybetti
+            kolombiya'da 10 ağustos'ta meydana gelen 7,4 büyüklüğündeki depremde en az 180 kişinin hayatını kaybettiği, 2.500'den fazla kişinin de yaralandığı bildirildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kolombiya'da 7,4 büyüklüğündeki depremde en az 180 kişi hayatını kaybetti</h3>
+                    <p>Kolombiya'da 10 Ağustos'ta meydana gelen 7,4 büyüklüğündeki depremde en az 180 kişinin hayatını kaybettiği, 2.500'den fazla kişinin de yaralandığı bildirildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78grxg3xnko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni partili vekillerden özgür özel'e destek açıklaması: 'genel başkanımızın arkasındayız'
+            özgür özel'in 'çerçeve yasa' konusunda yeni parti milletvekillerinin tabanlarından gelen sese göre oy vereceklerini açıklamasından sonra, 'hayır' oyu verecek milletvekilleri nedenlerini açıklamaya başladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Partili vekillerden Özgür Özel'e destek açıklaması: 'Genel Başkanımızın arkasındayız'</h3>
+                    <p>Özgür Özel'in 'çerçeve yasa' konusunda Yeni Parti milletvekillerinin tabanlarından gelen sese göre oy vereceklerini açıklamasından sonra, 'Hayır' oyu verecek milletvekilleri nedenlerini açıklamaya başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqx7l9e5q7yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yılın en görkemli gök taşı yağmuru perseid zirve noktasına bu gece ulaşıyor
+            yılın en parlak ve en popüler gök taşı yağmurlarından biri olan perseid, bugün zirve noktasına ulaşıyor. yeni ay evresi sayesinde geceleri ay ışığının olmaması, gök taşlarının çok daha net izlenmesine imkan tanıyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yılın en görkemli gök taşı yağmuru Perseid zirve noktasına bu gece ulaşıyor</h3>
+                    <p>Yılın en parlak ve en popüler gök taşı yağmurlarından biri olan Perseid, bugün zirve noktasına ulaşıyor. Yeni ay evresi sayesinde geceleri ay ışığının olmaması, gök taşlarının çok daha net izlenmesine imkan tanıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yilin-en-gorkemli-gok-tasi-yagmuru-perseid-zirve-noktasina-bu-gece-ulasiyor-953710.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'ın ankara'daki dramatik uçak değişikliği, kişisel risklerine dair bir ipucu
+            trump'ın güvenliğine dair kaygılar geçen ay türkiye'deki nato zirvesinden dönerken, dönüş uçuşunda gizlice farklı bir uçağa geçtiğinin bu hafta ortaya çıkmasıyla çarpıcı biçimde gözler önüne serildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Trump'ın Ankara'daki dramatik uçak değişikliği, kişisel risklerine dair bir ipucu</h3>
+                    <p>Trump'ın güvenliğine dair kaygılar geçen ay Türkiye'deki NATO zirvesinden dönerken, dönüş uçuşunda gizlice farklı bir uçağa geçtiğinin bu hafta ortaya çıkmasıyla çarpıcı biçimde gözler önüne serildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn9nplv5g48o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa istenmeyen pazarlama aramalarını yasakladı
+            fransa, istenmeyen pazarlama aramalarını yasakladı. fransız bir tüketici grubu bunu satış sektörü açısından "küçük bir devrim" olarak nitelendiriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa istenmeyen pazarlama aramalarını yasakladı</h3>
+                    <p>Fransa, istenmeyen pazarlama aramalarını yasakladı. Fransız bir tüketici grubu bunu satış sektörü açısından "küçük bir devrim" olarak nitelendiriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgvrgpx2xwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            evlenen kadınların nüfus kaydına dair aym kararı ne anlama geliyor?
+            anayasa mahkemesi (aym), evlenen kadının nüfus kaydının kocasının hanesine taşınmasını öngören düzenlemenin anayasa'ya aykırı olmadığına karar verdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Evlenen kadınların nüfus kaydına dair AYM kararı ne anlama geliyor?</h3>
+                    <p>Anayasa Mahkemesi (AYM), evlenen kadının nüfus kaydının kocasının hanesine taşınmasını öngören düzenlemenin Anayasa'ya aykırı olmadığına karar verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3d3llr8d2do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güneş tutulması ne zaman olacak?
+            dünyanın bazı bölgelerinde yakında tam veya kısmi güneş tutulması yaşanacak. peki, güneş tutulmasını nasıl izleyebilirsiniz?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Güneş tutulması ne zaman olacak?</h3>
+                    <p>Dünyanın bazı bölgelerinde yakında tam veya kısmi güneş tutulması yaşanacak. Peki, güneş tutulmasını nasıl izleyebilirsiniz?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgq5ev1ze2ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            halı yüklü tır dereye devrildi
+            i̇stanbul'un esenler ilçesinde halı ve kilim yüklü tır dereye devrildi. kaza sonucu yaralanan tır şoförü hastaneye kaldırıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Halı yüklü tır dereye devrildi</h3>
+                    <p>İstanbul'un Esenler ilçesinde halı ve kilim yüklü tır dereye devrildi. Kaza sonucu yaralanan tır şoförü hastaneye kaldırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/hali-yuklu-tir-dereye-devrildi-953712.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ebola salgınında can kaybı 2 bini aştı: virüs aylarca fark edilmeden yayıldı
+            dünya sağlık örgütü, tarihin en hızlı yayılan ve en ölümcül ikinci ebola salgınının resmi açıklamadan aylar önce, şubat ayında başladığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ebola salgınında can kaybı 2 bini aştı: Virüs aylarca fark edilmeden yayıldı</h3>
+                    <p>Dünya Sağlık Örgütü, tarihin en hızlı yayılan ve en ölümcül ikinci Ebola salgınının resmi açıklamadan aylar önce, şubat ayında başladığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ebola-salgininda-can-kaybi-2-bini-asti-virus-aylarca-fark-edilmeden-yayildi-953707.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazze'de katil i̇srail saldırısında yıkılan evin enkazından 13 filistinlinin cenazesi çıkarılıyor
+            gazze şeridi'nde sivil savunma ekipleri, i̇srail saldırılarında yıkılan bir evin enkazı altında kalan 13 filistinlinin cenazesini çıkarma çalışmalarına başladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazze'de katil İsrail saldırısında yıkılan evin enkazından 13 Filistinlinin cenazesi çıkarılıyor</h3>
+                    <p>Gazze Şeridi'nde sivil savunma ekipleri, İsrail saldırılarında yıkılan bir evin enkazı altında kalan 13 Filistinlinin cenazesini çıkarma çalışmalarına başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/gazzede-katil-israil-saldirisinda-yikilan-evin-enkazindan-13-filistinlinin-cenazesi-cikariliyor-953703.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray'ın taraftar grubu ultraslan'ın lideri sebahattin şirin adli kontrolle serbest bırakıldı
+            gözaltına alınan galatasaray'ın taraftar gruplarından ultraslan'ın tribün lideri sebahattin şirin adıyla bilinen muzaffer şirin ev hapsi ve yurt dışına çıkış yasağı şeklinde adli kontrol şartıyla serbest bırakıldı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray'ın taraftar grubu UltrAslan'ın lideri Sebahattin Şirin adli kontrolle serbest bırakıldı</h3>
+                    <p>Gözaltına alınan Galatasaray'ın taraftar gruplarından UltrAslan'ın tribün lideri Sebahattin Şirin adıyla bilinen Muzaffer Şirin ev hapsi ve yurt dışına çıkış yasağı şeklinde adli kontrol şartıyla serbest bırakıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy74186zknjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fenerbahçe şampiyonlar ligi'nde play-off'a kaldı, rakip olimpik lyon
+            fenerbahçe, ilk maçı 2-0 kazandığı uefa şampiyonlar ligi üçüncü ön eleme turu rövanşında avusturya'nın sturm graz takımını deplasmanda 1-0 yendi ve tur atladı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Fenerbahçe Şampiyonlar Ligi'nde play-off'a kaldı, rakip Olimpik Lyon</h3>
+                    <p>Fenerbahçe, ilk maçı 2-0 kazandığı UEFA Şampiyonlar Ligi üçüncü ön eleme turu rövanşında Avusturya'nın Sturm Graz takımını deplasmanda 1-0 yendi ve tur atladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn7nreynp3yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump: ankara'da güvenlik nedeniyle uçak değiştirdim
+            abd medyası, donald trump'ın, türkiye'deki nato zirvesinden ayrılırken olası bir i̇ran tehdidine karşılık uçağını gizlilik içerisinde değiştirdiğine dair yeni detayları haber yaptı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump: Ankara'da güvenlik nedeniyle uçak değiştirdim</h3>
+                    <p>ABD medyası, Donald Trump'ın, Türkiye'deki NATO zirvesinden ayrılırken olası bir İran tehdidine karşılık uçağını gizlilik içerisinde değiştirdiğine dair yeni detayları haber yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ceqewvj141eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
