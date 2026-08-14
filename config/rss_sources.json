@@ -10,6 +10,10 @@
   {
     "name": "Anadolu Ajansı",
     "url": "https://www.aa.com.tr/tr/rss/default?cat=sondakika"
+    },
+  {
+    "name": "CNN ",
+    "url": "http://rss.cnn.com/rss/cnn_topstories.rss"
     }
 
 
