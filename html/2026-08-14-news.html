@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>10</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-14 11:14</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-ceyrek-asirlik-birikim-simdi-turkiye-yuzyilinin-yeni-atilimlarina-donusuyor-953958.html" target="_blank">
+                <strong>İletişim Başkanı Duran: Çeyrek asırlık birikim, şimdi Türkiye Yüzyılı'nın yeni atılımlarına dönüşüyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AKP'nin 25. kuruluş yıldönümü için Ankara'da mitingli kutlama</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn8npnd78dxo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Sahte bir hamilelik ve bebek kaçırma: Annelik hayali bir kadını nasıl suça sürükledi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-fidandan-misir-ziyaretiyle-ilgili-aciklama-953961.html" target="_blank">
+                <strong>Bakan Fidan'dan Mısır ziyaretiyle ilgili açıklama</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-demir-yolu-agi-24-yilda-yaklasik-3-bin-kilometre-buyudu-953956.html" target="_blank">
+                <strong>Türkiye'nin demir yolu ağı 24 yılda yaklaşık 3 bin kilometre büyüdü</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran: çeyrek asırlık birikim, şimdi türkiye yüzyılı'nın yeni atılımlarına dönüşüyor
+            i̇letişim başkanı burhanettin duran, "cumhurbaşkanımızın ortaya koyduğu vizyon; demokrasisi güçlü, ekonomisi üretken, teknolojide öncü, dış politikada etkili ve toplumsal dayanışması sağlam bir türkiye'yi cumhuriyetimizin ikinci asrında çok daha ileriye taşımaktır. çeyrek asırlık birikim, şimdi türkiye yüzyılı'nın yeni atılımlarına dönüşüyor" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İletişim Başkanı Duran: Çeyrek asırlık birikim, şimdi Türkiye Yüzyılı'nın yeni atılımlarına dönüşüyor</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, "Cumhurbaşkanımızın ortaya koyduğu vizyon; demokrasisi güçlü, ekonomisi üretken, teknolojide öncü, dış politikada etkili ve toplumsal dayanışması sağlam bir Türkiye'yi Cumhuriyetimizin ikinci asrında çok daha ileriye taşımaktır. Çeyrek asırlık birikim, şimdi Türkiye Yüzyılı'nın yeni atılımlarına dönüşüyor" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-ceyrek-asirlik-birikim-simdi-turkiye-yuzyilinin-yeni-atilimlarina-donusuyor-953958.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ssb 13 sözleşmeli bilişim personeli alacak
+            savunma sanayii başkanlığı, siber güvenlik, yapay zeka ve yazılım gibi stratejik alanlarda görevlendirmek üzere 13 sözleşmeli bilişim personeli istihdam edecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>SSB 13 sözleşmeli bilişim personeli alacak</h3>
+                    <p>Savunma Sanayii Başkanlığı, siber güvenlik, yapay zeka ve yazılım gibi stratejik alanlarda görevlendirmek üzere 13 sözleşmeli bilişim personeli istihdam edecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ssb-13-sozlesmeli-bilisim-personeli-alacak-953963.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yurt dışından geçici getirilen araçlara ilişkin esaslar düzenlendi
+            ticaret bakanlığınca, yurt dışında yaşayan kişilerce geçici olarak türkiye'ye getirilen araçlara ilişkin esaslar yeniden belirlendi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yurt dışından geçici getirilen araçlara ilişkin esaslar düzenlendi</h3>
+                    <p>Ticaret Bakanlığınca, yurt dışında yaşayan kişilerce geçici olarak Türkiye'ye getirilen araçlara ilişkin esaslar yeniden belirlendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/yurt-disindan-gecici-getirilen-araclara-iliskin-esaslar-duzenlendi-953957.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk savunma sanayii 25 yılda stratejik dönüşüme imza attı
+            türk savunma sanayii, yaklaşık 25 yıllık dönemde ölçek, teknolojik yetkinlik, yerlilik, ihracat ve ürün çeşitliliği bakımından önemli dönüşüm geçirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türk savunma sanayii 25 yılda stratejik dönüşüme imza attı</h3>
+                    <p>Türk savunma sanayii, yaklaşık 25 yıllık dönemde ölçek, teknolojik yetkinlik, yerlilik, ihracat ve ürün çeşitliliği bakımından önemli dönüşüm geçirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/turk-savunma-sanayii-25-yilda-stratejik-donusume-imza-atti-953955.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            akp'nin 25. kuruluş yıldönümü için ankara'da mitingli kutlama
+            akp'nin 25. kuruluş yıldönümü cumhurbaşkanı ve parti genel başkanı recep tayyip erdoğan'ın katılımıyla ankara millet bahçesi'nde düzenlenecek miting ile kutlanacak.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>AKP'nin 25. kuruluş yıldönümü için Ankara'da mitingli kutlama</h3>
+                    <p>AKP'nin 25. kuruluş yıldönümü Cumhurbaşkanı ve parti genel başkanı Recep Tayyip Erdoğan'ın katılımıyla Ankara Millet Bahçesi'nde düzenlenecek miting ile kutlanacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sahte bir hamilelik ve bebek kaçırma: annelik hayali bir kadını nasıl suça sürükledi?
+            yeni belgesel-drama filmi 'a child of my own' (bana ait bir çocuk), annelik hayalini gerçekleştirmek için suça karışan genç bir meksikalı kadının kamuoyunda geniş yankı uyandıran hikayesini ele alıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Sahte bir hamilelik ve bebek kaçırma: Annelik hayali bir kadını nasıl suça sürükledi?</h3>
+                    <p>Yeni belgesel-drama filmi 'A Child of My Own' (Bana ait bir çocuk), annelik hayalini gerçekleştirmek için suça karışan genç bir Meksikalı kadının kamuoyunda geniş yankı uyandıran hikayesini ele alıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn8npnd78dxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin demir yolu ağı 24 yılda yaklaşık 3 bin kilometre büyüdü
+            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, son 24 yılda yürütülen çalışmalarla demir yolu ağının 13 bin 919 kilometreye yükseltildiğini ve sıfırdan 2 bin 251 kilometre hızlı tren hattı inşa edildiğini bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'nin demir yolu ağı 24 yılda yaklaşık 3 bin kilometre büyüdü</h3>
+                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, son 24 yılda yürütülen çalışmalarla demir yolu ağının 13 bin 919 kilometreye yükseltildiğini ve sıfırdan 2 bin 251 kilometre hızlı tren hattı inşa edildiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-demir-yolu-agi-24-yilda-yaklasik-3-bin-kilometre-buyudu-953956.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ortadoğu'daki abd uçak gemisinde ruh sağlığı sorunları ve denize düşen asker haberleri
+            i̇ran savaşının başlaması öncesi bölgeye sevkedilen bir abd uçak gemisindeki denizciler arasında ruh sağlığı problemlerinin baş gösterdiği bildiriliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ortadoğu'daki ABD uçak gemisinde ruh sağlığı sorunları ve denize düşen asker haberleri</h3>
+                    <p>İran savaşının başlaması öncesi bölgeye sevkedilen bir ABD uçak gemisindeki denizciler arasında ruh sağlığı problemlerinin baş gösterdiği bildiriliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg94e9nnv4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beşiktaş avrupa ligi'nde play-off'a yükseldi
+            beşiktaş, uefa avrupa ligi üçüncü ön eleme turunda çek cumhuriyeti ekibi hradec kralove'yi eleyerek play-off'ya yükseldi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beşiktaş Avrupa Ligi'nde play-off'a yükseldi</h3>
+                    <p>Beşiktaş, UEFA Avrupa Ligi üçüncü ön eleme turunda Çek Cumhuriyeti ekibi Hradec Kralove'yi eleyerek play-off'ya yükseldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly899d2l8vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan'dan mısır ziyaretiyle ilgili açıklama
+            dışişleri bakanı hakan fidan, "mısır'a gerçekleştirdiğimiz ziyaret, mükemmel düzeyde seyreden ikili iş birliğimizi ve bölgemizdeki gelişmeleri ele almak bakımından son derece önemli bir fırsat teşkil etti" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Fidan'dan Mısır ziyaretiyle ilgili açıklama</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, "Mısır'a gerçekleştirdiğimiz ziyaret, mükemmel düzeyde seyreden ikili iş birliğimizi ve bölgemizdeki gelişmeleri ele almak bakımından son derece önemli bir fırsat teşkil etti" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidandan-misir-ziyaretiyle-ilgili-aciklama-953961.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin imzaladığı mekke paktının küresel dengelere etkisi ne olabilir?
+            türkiye, suudi arabistan ve pakistan'ın 7 ağustos'ta ortak savunma anlaşması imzalaması bölgedeki jeopolitik hizalanmalara dair tartışma yarattı. i̇ttifakın i̇ran ve i̇srail'i hedef aldığına dair eleştiriler yapıldı. peki ülkelerin tutumu ve öncelikleri ne? ortak savunma vaadi nasıl hayata geçirilecek?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'nin imzaladığı Mekke paktının küresel dengelere etkisi ne olabilir?</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan'ın 7 Ağustos'ta ortak savunma anlaşması imzalaması bölgedeki jeopolitik hizalanmalara dair tartışma yarattı. İttifakın İran ve İsrail'i hedef aldığına dair eleştiriler yapıldı. Peki ülkelerin tutumu ve öncelikleri ne? Ortak savunma vaadi nasıl hayata geçirilecek?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdewpw38lk3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'çerçeve yasa' selahattin demirtaş'ın tahliyesinin önünü açabilir mi?
+            tbmm'den geçen ve kamuoyunda "çerçeve yasa" olarak bilinen düzenlemenin ardından, 2016'dan bu yana cezaevinde bulunan eski hdp eş genel başkanı selahattin demirtaş'ın yasadan yararlanıp yararlanamayacağı tartışılıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Çerçeve yasa' Selahattin Demirtaş'ın tahliyesinin önünü açabilir mi?</h3>
+                    <p>TBMM'den geçen ve kamuoyunda "çerçeve yasa" olarak bilinen düzenlemenin ardından, 2016'dan bu yana cezaevinde bulunan eski HDP Eş Genel Başkanı Selahattin Demirtaş'ın yasadan yararlanıp yararlanamayacağı tartışılıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg0zzyy97vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            maddenin temel yapısına dair 50 yıllık gizem aydınlanıyor
+            fizikçiler, atom çekirdeğinde yer alan proton ve nötron gibi parçacıkların kimliğini belirleyen temel özelliğin kuarklar tarafından değil, onları bir arada tutan "gluon" yapısı tarafından taşındığına dair ilk güçlü deneysel kanıtlara ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Maddenin temel yapısına dair 50 yıllık gizem aydınlanıyor</h3>
+                    <p>Fizikçiler, atom çekirdeğinde yer alan proton ve nötron gibi parçacıkların kimliğini belirleyen temel özelliğin kuarklar tarafından değil, onları bir arada tutan "gluon" yapısı tarafından taşındığına dair ilk güçlü deneysel kanıtlara ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/maddenin-temel-yapisina-dair-50-yillik-gizem-aydinlaniyor-953960.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'li milletvekili ahmet baran yazgan'a 'taciz ve darp' olayı nedeniyle kesin ihraç istemi
+            chp, bir evde çekilen darp görüntüleri ortaya çıkan edirne milletvekili ahmet baran yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP'li milletvekili Ahmet Baran Yazgan'a 'taciz ve darp' olayı nedeniyle kesin ihraç istemi</h3>
+                    <p>CHP, bir evde çekilen darp görüntüleri ortaya çıkan Edirne Milletvekili Ahmet Baran Yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg8qv0ge0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bumble'dan tartışmalı adım: i̇lk mesajı erkekler de gönderebilecek
+            flört uygulaması bumble, yalnızca kadınların eşleştikleri kişiye ilk mesajı göndermesine izin veren kendine özgü kuralını kaldırarak kullanıcılarını ikiye böldü.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bumble'dan tartışmalı adım: İlk mesajı erkekler de gönderebilecek</h3>
+                    <p>Flört uygulaması Bumble, yalnızca kadınların eşleştikleri kişiye ilk mesajı göndermesine izin veren kendine özgü kuralını kaldırarak kullanıcılarını ikiye böldü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0jlygp6191o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            süleymancılar cemaatinin lideri alihan kuriş örgüt suçlamasıyla gözaltında
+            ankara cumhuriyet başsavcılığı, örgüt kurma ve örgüte üye olma gibi suçlamalarla aralarında alihan kuriş'in de bulunduğu 33 şüphelinin gözaltına alındığını duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Süleymancılar cemaatinin lideri Alihan Kuriş örgüt suçlamasıyla gözaltında</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı, örgüt kurma ve örgüte üye olma gibi suçlamalarla aralarında Alihan Kuriş'in de bulunduğu 33 şüphelinin gözaltına alındığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjejpp92gw8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suç örgütü elebaşı serkan kurtuluş türkiye'ye getiriliyor
+            organize suç örgütü elebaşı serkan kurtuluş arjantin'den türkiye'ye getiriliyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Suç örgütü elebaşı Serkan Kurtuluş Türkiye'ye getiriliyor</h3>
+                    <p>Organize suç örgütü elebaşı Serkan Kurtuluş Arjantin'den Türkiye'ye getiriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/suc-orgutu-elebasi-serkan-kurtulus-turkiyeye-getiriliyor-953965.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tadilattaki binanın duvarında yaklaşık 9 milyon avro değerinde altın bulundu
+            belçika'nın dendermonde kentinde tadilat sırasında bir binanın duvarına gizlenmiş yaklaşık 9 milyon avro değerinde altın bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Tadilattaki binanın duvarında yaklaşık 9 milyon avro değerinde altın bulundu</h3>
+                    <p>Belçika'nın Dendermonde kentinde tadilat sırasında bir binanın duvarına gizlenmiş yaklaşık 9 milyon avro değerinde altın bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/tadilattaki-binanin-duvarinda-yaklasik-9-milyon-avro-degerinde-altin-bulundu-953964.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇yi parti'de bir istifa daha
+            i̇yi parti milletvekili ömer karakaş partisinden istifa etti. i̇yi parti'nin vekil sayısı 27'ye düştü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İyi Parti'de bir istifa daha</h3>
+                    <p>İyi Parti Milletvekili Ömer Karakaş partisinden istifa etti. İyi Parti'nin vekil sayısı 27'ye düştü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iyi-partide-bir-istifa-daha-953962.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            akaryakıt fiyatlarına zam: motorinde yaklaşık 9 lira artış
+            motorinde uygulanan özel tüketim vergisi (ötv) ay sonuna kadar sıfırlandı. vergi eylül ayından itibaren kademeli olarak geri gelecek.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Akaryakıt fiyatlarına zam: Motorinde yaklaşık 9 lira artış</h3>
+                    <p>Motorinde uygulanan Özel Tüketim Vergisi (ÖTV) ay sonuna kadar sıfırlandı. Vergi eylül ayından itibaren kademeli olarak geri gelecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0qv2x4pk7jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
