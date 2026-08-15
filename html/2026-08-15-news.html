@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-15 05:27</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/irandan-trumpa-hurmuz-bogazi-yaniti-ne-tweetle-ne-ucak-gemisiyle-ele-gecirilebilir-954003.html" target="_blank">
+                <strong>İran'dan Trump'a Hürmüz Boğazı yanıtı: Ne tweetle ne uçak gemisiyle ele geçirilebilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckgv5l43xpno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Abdullah Gül anlatıyor: Adalet ve Kalkınma Partisi nasıl kuruldu?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Bu partiyi millet kurdu'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn8npnd78dxo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Sahte bir hamilelik ve bebek kaçırma: Annelik hayali bir kadını nasıl suça sürükledi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/organize-suc-orgutu-elebasi-serkan-kurtulus-turkiyeye-getirildi-954002.html" target="_blank">
+                <strong>Organize suç örgütü elebaşı Serkan Kurtuluş Türkiye'ye getirildi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran'dan trump'a hürmüz boğazı yanıtı: ne tweetle ne uçak gemisiyle ele geçirilebilir
+            i̇ran dışişleri bakan yardımcısı kazım garibabadi, abd başkanı donald trump'ın, hürmüz boğazı'nı "amerikan toprağı ilan edeceğine" dair iddiasına, "hürmüz boğazı, ne tweetle ele geçirilebilir ne uçak gemisiyle ne emir çıkararak ne de seçim konuşmasıyla." ifadesiyle yanıt verdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran'dan Trump'a Hürmüz Boğazı yanıtı: Ne tweetle ne uçak gemisiyle ele geçirilebilir</h3>
+                    <p>İran Dışişleri Bakan Yardımcısı Kazım Garibabadi, ABD Başkanı Donald Trump'ın, Hürmüz Boğazı'nı "Amerikan toprağı ilan edeceğine" dair iddiasına, "Hürmüz Boğazı, ne tweetle ele geçirilebilir ne uçak gemisiyle ne emir çıkararak ne de seçim konuşmasıyla." ifadesiyle yanıt verdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/irandan-trumpa-hurmuz-bogazi-yaniti-ne-tweetle-ne-ucak-gemisiyle-ele-gecirilebilir-954003.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abdullah gül anlatıyor: adalet ve kalkınma partisi nasıl kuruldu?
+            abdullah gül, adalet ve kalkınma partisi'nin önde gelen kurucularından... türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. gül, i̇stanbul'daki çalışma ofisinde bbc türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. mahmut hamsici ve osman kaytazoğlu'nun haberi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Abdullah Gül anlatıyor: Adalet ve Kalkınma Partisi nasıl kuruldu?</h3>
+                    <p>Abdullah Gül, Adalet ve Kalkınma Partisi'nin önde gelen kurucularından... Türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. Gül, İstanbul'daki çalışma ofisinde BBC Türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. Mahmut Hamsici ve Osman Kaytazoğlu'nun haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgv5l43xpno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sahte bir hamilelik ve bebek kaçırma: annelik hayali bir kadını nasıl suça sürükledi?
+            yeni belgesel-drama filmi 'a child of my own' (bana ait bir çocuk), annelik hayalini gerçekleştirmek için suça karışan genç bir meksikalı kadının kamuoyunda geniş yankı uyandıran hikayesini ele alıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Sahte bir hamilelik ve bebek kaçırma: Annelik hayali bir kadını nasıl suça sürükledi?</h3>
+                    <p>Yeni belgesel-drama filmi 'A Child of My Own' (Bana ait bir çocuk), annelik hayalini gerçekleştirmek için suça karışan genç bir Meksikalı kadının kamuoyunda geniş yankı uyandıran hikayesini ele alıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn8npnd78dxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ortadoğu'daki abd uçak gemisinde ruh sağlığı sorunları ve denize düşen asker haberleri
+            i̇ran savaşının başlaması öncesi bölgeye sevkedilen bir abd uçak gemisindeki denizciler arasında ruh sağlığı problemlerinin baş gösterdiği bildiriliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ortadoğu'daki ABD uçak gemisinde ruh sağlığı sorunları ve denize düşen asker haberleri</h3>
+                    <p>İran savaşının başlaması öncesi bölgeye sevkedilen bir ABD uçak gemisindeki denizciler arasında ruh sağlığı problemlerinin baş gösterdiği bildiriliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg94e9nnv4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            endonezya'da 7,7 büyüklüğünde deprem
+            abd jeolojik araştırma merkezinden yapılan açıklamada, depremin merkez üssünün endonezya'nın flores bölgesinin 68 kilometre kuzeybatısı olduğu bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Endonezya'da 7,7 büyüklüğünde deprem</h3>
+                    <p>ABD Jeolojik Araştırma Merkezinden yapılan açıklamada, depremin merkez üssünün Endonezya'nın Flores bölgesinin 68 kilometre kuzeybatısı olduğu bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/endonezyada-77-buyuklugunde-deprem-954005.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran dışişleri bakanı arakçi: abd ile müzakere konusunda henüz bir karar almadık
+            i̇ran dışişleri bakanı abbas arakçi, abd ile müzakerelere yeniden başlama konusunda henüz bir karar almadıklarını söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Dışişleri Bakanı Arakçi: ABD ile müzakere konusunda henüz bir karar almadık</h3>
+                    <p>İran Dışişleri Bakanı Abbas Arakçi, ABD ile müzakerelere yeniden başlama konusunda henüz bir karar almadıklarını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-disisleri-bakani-arakci-abd-ile-muzakere-konusunda-henuz-bir-karar-almadik-954004.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump: yakında hürmüz boğazı'nı abd toprağı ilan edeceğim
+            abd başkanı donald trump, "i̇ran'ı tamamen mağlup ettikten sonra, çok geçmeden hürmüz boğazı'nı abd toprağı ilan edeceğim." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump: Yakında Hürmüz Boğazı'nı ABD toprağı ilan edeceğim</h3>
+                    <p>ABD Başkanı Donald Trump, "İran'ı tamamen mağlup ettikten sonra, çok geçmeden Hürmüz Boğazı'nı ABD toprağı ilan edeceğim." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-yakinda-hurmuz-bogazini-abd-topragi-ilan-edecegim-954000.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            akp'nin 25. kuruluş yıldönümünde erdoğan: 'bu partiyi millet kurdu'
+            adalet ve kalkınma partisi'nin 25. kuruluş yıldönümü cumhurbaşkanı ve partinin genel başkanı recep tayyip erdoğan'ın katılımıyla ankara millet bahçesi'ndeki miting ile kutlanıyor. kalabalığın toplandığı etkinlik alanında erdoğan konuşma yapıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Bu partiyi millet kurdu'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin 25. kuruluş yıldönümü Cumhurbaşkanı ve partinin genel başkanı Recep Tayyip Erdoğan'ın katılımıyla Ankara Millet Bahçesi'ndeki miting ile kutlanıyor. Kalabalığın toplandığı etkinlik alanında Erdoğan konuşma yapıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meb'den bakanlığın adı kullanılarak para talep edenlere karşı uyarı
+            milli eğitim bakanlığı, bakanlık birimleri ve birim amirlerinin adlarını kullanarak, vatandaşlardan ve firmalardan para talep edenlere ilişkin uyarıda bulundu, söz konusu dolandırıcılık girişimleriyle ilgili sorumlular hakkında suç duyurusunda bulunulduğunu bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>MEB'den Bakanlığın adı kullanılarak para talep edenlere karşı uyarı</h3>
+                    <p>Milli Eğitim Bakanlığı, Bakanlık birimleri ve birim amirlerinin adlarını kullanarak, vatandaşlardan ve firmalardan para talep edenlere ilişkin uyarıda bulundu, söz konusu dolandırıcılık girişimleriyle ilgili sorumlular hakkında suç duyurusunda bulunulduğunu bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/mebden-bakanligin-adi-kullanilarak-para-talep-edenlere-karsi-uyari-954001.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ak parti'ye 3 milletvekili ve 7 belediye başkanı katıldı
+            cumhurbaşkanı ve ak parti genel başkanı recep tayyip erdoğan, başkent millet bahçesi'nde düzenlenen 'ak parti 25. kuruluş yıl dönümü programı'na katıldı. erdoğan, programda, partisine katılan milletvekili ve belediye başkanlarına rozetlerini taktı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>AK Parti'ye 3 milletvekili ve 7 belediye başkanı katıldı</h3>
+                    <p>Cumhurbaşkanı ve AK Parti Genel Başkanı Recep Tayyip Erdoğan, Başkent Millet Bahçesi'nde düzenlenen 'AK Parti 25. Kuruluş Yıl Dönümü Programı'na katıldı. Erdoğan, programda, partisine katılan milletvekili ve belediye başkanlarına rozetlerini taktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ak-partiye-3-milletvekili-ve-7-belediye-baskani-katildi-953999.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akp'ye katılan milletvekilleri ve belediye başkanlarına rozetleri takıldı
+            muhalif parti üyesi dört milletvekili ve üç belediye başkanı akp'ye katıldı. cumhurbaşkanı erdoğan, yeni üyelere partinin 25. yıl dönümünde düzenlenen törende parti rozetlerini taktı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>AKP'ye katılan milletvekilleri ve belediye başkanlarına rozetleri takıldı</h3>
+                    <p>Muhalif parti üyesi dört milletvekili ve üç belediye başkanı AKP'ye katıldı. Cumhurbaşkanı Erdoğan, yeni üyelere partinin 25. yıl dönümünde düzenlenen törende parti rozetlerini taktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg7ew6nnxdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin imzaladığı mekke paktının küresel dengelere etkisi ne olabilir?
+            türkiye, suudi arabistan ve pakistan'ın 7 ağustos'ta ortak savunma anlaşması imzalaması bölgedeki jeopolitik hizalanmalara dair tartışma yarattı. i̇ttifakın i̇ran ve i̇srail'i hedef aldığına dair eleştiriler yapıldı. peki ülkelerin tutumu ve öncelikleri ne? ortak savunma vaadi nasıl hayata geçirilecek?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'nin imzaladığı Mekke paktının küresel dengelere etkisi ne olabilir?</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan'ın 7 Ağustos'ta ortak savunma anlaşması imzalaması bölgedeki jeopolitik hizalanmalara dair tartışma yarattı. İttifakın İran ve İsrail'i hedef aldığına dair eleştiriler yapıldı. Peki ülkelerin tutumu ve öncelikleri ne? Ortak savunma vaadi nasıl hayata geçirilecek?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdewpw38lk3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de reform partisi lideri farage rakiplerinin boykot ettiği ara seçimi kazandı
+            i̇ngiltere'de yükselişteki sağcı reform partisi'nin lideri nigel farage, büyük siyasi partilerin boykot ederek aday çıkarmadığı clacton'daki ara seçimi 22 binden fazla oy alarak kazandı. hakkındaki soruşturma bundan saatler sonra yeniden başladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'de Reform Partisi lideri Farage rakiplerinin boykot ettiği ara seçimi kazandı</h3>
+                    <p>İngiltere'de yükselişteki sağcı Reform Partisi'nin lideri Nigel Farage, büyük siyasi partilerin boykot ederek aday çıkarmadığı Clacton'daki ara seçimi 22 binden fazla oy alarak kazandı. Hakkındaki soruşturma bundan saatler sonra yeniden başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgjexgyz4jno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beklentiler, tereddütler ve eleştiriler: 'çerçeve yasa' diyarbakır'da nasıl karşılandı?
+            tbmm"de 10 ağustos'ta 467 oyla kabul edilen "milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun teklifi", diyarbakır'da hem beklentileri hem de eleştirileri beraberinde getirdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Beklentiler, tereddütler ve eleştiriler: 'Çerçeve yasa' Diyarbakır'da nasıl karşılandı?</h3>
+                    <p>TBMM"de 10 Ağustos'ta 467 oyla kabul edilen "Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun Teklifi", Diyarbakır'da hem beklentileri hem de eleştirileri beraberinde getirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c79gyqqz1pwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afgan kadınlar taliban yönetimindeki beş yılı bbc'ye anlattı
+            taliban'ın afganistan cumhuriyeti'ni devirip ülkede iktidarı ele geçirmesinin üzerinden beş yıl geçti. bbc, taliban rejiminin beşinci yılında ülkede hakları giderek kısıtlanan kadınlarla konuştu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Afgan kadınlar Taliban yönetimindeki beş yılı BBC'ye anlattı</h3>
+                    <p>Taliban'ın Afganistan Cumhuriyeti'ni devirip ülkede iktidarı ele geçirmesinin üzerinden beş yıl geçti. BBC, Taliban rejiminin beşinci yılında ülkede hakları giderek kısıtlanan kadınlarla konuştu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce8lk4z28nko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'li milletvekili ahmet baran yazgan'a 'taciz ve darp' olayı nedeniyle kesin ihraç istemi
+            chp, bir evde çekilen darp görüntüleri ortaya çıkan edirne milletvekili ahmet baran yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP'li milletvekili Ahmet Baran Yazgan'a 'taciz ve darp' olayı nedeniyle kesin ihraç istemi</h3>
+                    <p>CHP, bir evde çekilen darp görüntüleri ortaya çıkan Edirne Milletvekili Ahmet Baran Yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg8qv0ge0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kabine üyelerinden ak parti'nin 25. yıl özel mitingi'ne ilişkin paylaşım
+            cumhurbaşkanlığı kabinesi üyeleri, sosyal medya hesaplarından ak parti'nin 25. yıl özel mitingi'ne ilişkin paylaşımlarda bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kabine üyelerinden AK Parti'nin 25. Yıl Özel Mitingi'ne ilişkin paylaşım</h3>
+                    <p>Cumhurbaşkanlığı Kabinesi üyeleri, sosyal medya hesaplarından AK Parti'nin 25. Yıl Özel Mitingi'ne ilişkin paylaşımlarda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kabine-uyelerinden-ak-partinin-25-yil-ozel-mitingine-iliskin-paylasim-954007.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jandarma ve sahil güvenlik komutanlığına ilişkin atamalar resmi gazete'de
+            jandarma genel komutanlığı ve sahil güvenlik komutanlığına ilişkin atamalar resmi gazete'de yayımlandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Jandarma ve Sahil Güvenlik Komutanlığına ilişkin atamalar Resmi Gazete'de</h3>
+                    <p>Jandarma Genel Komutanlığı ve Sahil Güvenlik Komutanlığına ilişkin atamalar Resmi Gazete'de yayımlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/jandarma-ve-sahil-guvenlik-komutanligina-iliskin-atamalar-resmi-gazetede-954006.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm: gazze'de geçen hafta i̇srail saldırılarından yaklaşık 290 hane etkilendi
+            birleşmiş milletler (bm), gazze'de geçen hafta boyunca i̇srail'in düzenlediği saldırılardan yaklaşık 290 hanenin etkilendiğini ve bölge halkının yerinden edildiğini bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>BM: Gazze'de geçen hafta İsrail saldırılarından yaklaşık 290 hane etkilendi</h3>
+                    <p>Birleşmiş Milletler (BM), Gazze'de geçen hafta boyunca İsrail'in düzenlediği saldırılardan yaklaşık 290 hanenin etkilendiğini ve bölge halkının yerinden edildiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bm-gazzede-gecen-hafta-israil-saldirilarindan-yaklasik-290-hane-etkilendi-953998.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            organize suç örgütü elebaşı serkan kurtuluş türkiye'ye getirildi
+            i̇çişleri bakanlığı, kırmızı bültenle uluslararası seviyede aranan organize suç örgütü elebaşı serkan kurtuluş'un arjantin’de yakalanmasının ardından brezilya’dan aktarmalı olarak i̇stanbul havalimanı’na getirildiğini açıkladı.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Organize suç örgütü elebaşı Serkan Kurtuluş Türkiye'ye getirildi</h3>
+                    <p>İçişleri Bakanlığı, kırmızı bültenle uluslararası seviyede aranan organize suç örgütü elebaşı Serkan Kurtuluş'un Arjantin’de yakalanmasının ardından Brezilya’dan aktarmalı olarak İstanbul Havalimanı’na getirildiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/organize-suc-orgutu-elebasi-serkan-kurtulus-turkiyeye-getirildi-954002.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
