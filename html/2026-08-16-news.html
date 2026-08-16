@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-16 05:31</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Daha nice yıllar Türkiye'ye hizmet mücadelesi içinde olacağım'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckgv5l43xpno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Abdullah Gül anlatıyor: Adalet ve Kalkınma Partisi nasıl kuruldu?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckg44v98gwzo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İkinci el kitap satışları patlama yaşıyor: Bunun nedeni yapay zekâ mı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/hamas-gazzedeki-ateskes-anlasmasinin-kalici-hale-getirilmesi-icin-kahireye-gidiyor-954061.html" target="_blank">
+                <strong>Hamas, Gazze'deki ateşkes anlaşmasının kalıcı hale getirilmesi için Kahire'ye gidiyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/kolombiyada-depremde-olenlerin-sayisi-294e-yukseldi-954054.html" target="_blank">
+                <strong>Kolombiya'da depremde ölenlerin sayısı 294'e yükseldi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            akp'nin 25. kuruluş yıldönümünde erdoğan: 'daha nice yıllar türkiye'ye hizmet mücadelesi içinde olacağım'
+            adalet ve kalkınma partisi'nin 25. kuruluş yıldönümü cumhurbaşkanı ve partinin genel başkanı recep tayyip erdoğan'ın katılımıyla ankara millet bahçesi'ndeki miting ile kutlanıyor. kalabalığın toplandığı etkinlik alanında erdoğan konuşma yaptı
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Daha nice yıllar Türkiye'ye hizmet mücadelesi içinde olacağım'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin 25. kuruluş yıldönümü Cumhurbaşkanı ve partinin genel başkanı Recep Tayyip Erdoğan'ın katılımıyla Ankara Millet Bahçesi'ndeki miting ile kutlanıyor. Kalabalığın toplandığı etkinlik alanında Erdoğan konuşma yaptı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abdullah gül anlatıyor: adalet ve kalkınma partisi nasıl kuruldu?
+            abdullah gül, adalet ve kalkınma partisi'nin önde gelen kurucularından... türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. gül, i̇stanbul'daki çalışma ofisinde bbc türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. mahmut hamsici ve osman kaytazoğlu'nun haberi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Abdullah Gül anlatıyor: Adalet ve Kalkınma Partisi nasıl kuruldu?</h3>
+                    <p>Abdullah Gül, Adalet ve Kalkınma Partisi'nin önde gelen kurucularından... Türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. Gül, İstanbul'daki çalışma ofisinde BBC Türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. Mahmut Hamsici ve Osman Kaytazoğlu'nun haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgv5l43xpno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇kinci el kitap satışları patlama yaşıyor: bunun nedeni yapay zekâ mı?
+            yapay zekâ şirketlerinin modellerini eğitmek için büyük miktarlarda kitap satın aldığı şüphesi, ikinci el kitap satışlarını artırırken eserlerin tarandıktan sonra imha edilmesi etik ve hukuki tartışmalara yol açıyor
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İkinci el kitap satışları patlama yaşıyor: Bunun nedeni yapay zekâ mı?</h3>
+                    <p>Yapay zekâ şirketlerinin modellerini eğitmek için büyük miktarlarda kitap satın aldığı şüphesi, ikinci el kitap satışlarını artırırken eserlerin tarandıktan sonra imha edilmesi etik ve hukuki tartışmalara yol açıyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckg44v98gwzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hamas, gazze'deki ateşkes anlaşmasının kalıcı hale getirilmesi için kahire'ye gidiyor
+            hamas siyasi büro başkanı halil el-hayye başkanlığındaki üst düzey heyet, gazze şeridi'ndeki ateşkes anlaşmasının kalıcı hale getirilmesi başta olmak üzere filistin meselesine ilişkin gelişmeleri görüşmek üzere mısır'ın başkenti kahire'ye gidecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hamas, Gazze'deki ateşkes anlaşmasının kalıcı hale getirilmesi için Kahire'ye gidiyor</h3>
+                    <p>Hamas Siyasi Büro Başkanı Halil el-Hayye başkanlığındaki üst düzey heyet, Gazze Şeridi'ndeki ateşkes anlaşmasının kalıcı hale getirilmesi başta olmak üzere Filistin meselesine ilişkin gelişmeleri görüşmek üzere Mısır'ın başkenti Kahire'ye gidecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hamas-gazzedeki-ateskes-anlasmasinin-kalici-hale-getirilmesi-icin-kahireye-gidiyor-954061.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kolombiya'da depremde ölenlerin sayısı 294'e yükseldi
+            güney amerika ülkesi kolombiya'da 10 ağustos'ta meydana gelen 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısı 294'e çıktı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kolombiya'da depremde ölenlerin sayısı 294'e yükseldi</h3>
+                    <p>Güney Amerika ülkesi Kolombiya'da 10 Ağustos'ta meydana gelen 7,4 büyüklüğündeki depremde hayatını kaybedenlerin sayısı 294'e çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kolombiyada-depremde-olenlerin-sayisi-294e-yukseldi-954054.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da sürücüler dikkat: çok sayıda yol trafiğe kapandı
+            i̇stanbul'da, 2026 uluslararası asya ve avrupa triatlon şampiyonası dolayısıyla bazı yollar trafiğe kapatıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul'da sürücüler dikkat: Çok sayıda yol trafiğe kapandı</h3>
+                    <p>İstanbul'da, 2026 Uluslararası Asya ve Avrupa Triatlon Şampiyonası dolayısıyla bazı yollar trafiğe kapatıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-suruculer-dikkat-cok-sayida-yol-trafige-kapandi-954062.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            alihan kuriş suç örgütü soruşturmasında şüpheli para trafiği deşifre edildi
+            "alihan kuriş çıkar amaçlı suç örgütü"ne yönelik soruşturma kapsamında hazırlanan masak raporunda, örgütle bağlantılı şirketlerin, aralarında suudi arabistan, birleşik arap emirlikleri ve abd'nin de bulunduğu ülkelerdeki hesaplarla 66 milyar lirayı aşan para trafiği gerçekleştirdiği belirlendi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Alihan Kuriş suç örgütü soruşturmasında şüpheli para trafiği deşifre edildi</h3>
+                    <p>"Alihan Kuriş çıkar amaçlı suç örgütü"ne yönelik soruşturma kapsamında hazırlanan MASAK raporunda, örgütle bağlantılı şirketlerin, aralarında Suudi Arabistan, Birleşik Arap Emirlikleri ve ABD'nin de bulunduğu ülkelerdeki hesaplarla 66 milyar lirayı aşan para trafiği gerçekleştirdiği belirlendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/alihan-kuris-suc-orgutu-sorusturmasinda-supheli-para-trafigi-desifre-edildi-954052.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ayşe böhürler ile akp'nin 25 yılı: 'kendimizle yüzleşen bir partiyiz, esneme kabiliyetimiz var'
+            adalet ve kalkınma partisi'nin kurucularından, hali hazırda kayseri milletvekili olan ayşe böhürler, bbc türkçe'nin sorularını yanıtladı. böhürler, seçmen kitlesindeki değişimi gördüklerini söylüyor, ak parti'nin "esneme kabiliyeti" olduğunu özellikle vurguluyor. mahmut hamsici ve osman kaytazoğlu'nun haberi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ayşe Böhürler ile AKP'nin 25 yılı: 'Kendimizle yüzleşen bir partiyiz, esneme kabiliyetimiz var'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin kurucularından, hali hazırda Kayseri milletvekili olan Ayşe Böhürler, BBC Türkçe'nin sorularını yanıtladı. Böhürler, seçmen kitlesindeki değişimi gördüklerini söylüyor, AK Parti'nin "esneme kabiliyeti" olduğunu özellikle vurguluyor. Mahmut Hamsici ve Osman Kaytazoğlu'nun haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crk5v8yj3e5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            endonezya'daki 7,7 büyüklüğündeki depremde en az 47 kişi hayatını kaybetti
+            endonezya'da cumartesi sabahı meydana gelen 7,7 büyüklüğündeki depremde en az 47 kişi hayatını kaybetti
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Endonezya'daki 7,7 büyüklüğündeki depremde en az 47 kişi hayatını kaybetti</h3>
+                    <p>Endonezya'da Cumartesi sabahı meydana gelen 7,7 büyüklüğündeki depremde en az 47 kişi hayatını kaybetti</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd9w512yvwqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ak parti genel başkan yardımcısı zorlu: türkiye ve macaristan birbirinden ayrılamaz
+            ak parti genel başkan yardımcısı ve türk devletleri ile i̇lişkiler başkanı prof. dr. kürşad zorlu, "tarihte, hunlar göktürklerden nasıl ayrılamazsa bugün de türkiye, macaristan'dan kesinlikle ayrılamaz." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>AK Parti Genel Başkan Yardımcısı Zorlu: Türkiye ve Macaristan birbirinden ayrılamaz</h3>
+                    <p>AK Parti Genel Başkan Yardımcısı ve Türk Devletleri ile İlişkiler Başkanı Prof. Dr. Kürşad Zorlu, "Tarihte, Hunlar Göktürklerden nasıl ayrılamazsa bugün de Türkiye, Macaristan'dan kesinlikle ayrılamaz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turk-dunyasi/ak-parti-genel-baskan-yardimcisi-zorlu-turkiye-ve-macaristan-birbirinden-ayrilamaz-954056.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail filistinli ailelerin evlerine saldırıyor
+            i̇şgal altındaki batı şeria’ya bağlı nablus’un güneyinde bulunan kusra beldesinden filistinli i̇brahim fevzi, filistin topraklarını gasbeden i̇sraillilerin, evine girerek kendisine saldırdığını, boğazını sıktığını; eşiyle çocuklarını ise bir odaya kapattığını belirterek, söz konusu saldırılar nedeniyle evlerinden ayrılmak zorunda kaldıklarını söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrail Filistinli ailelerin evlerine saldırıyor</h3>
+                    <p>İşgal altındaki Batı Şeria’ya bağlı Nablus’un güneyinde bulunan Kusra beldesinden Filistinli İbrahim Fevzi, Filistin topraklarını gasbeden İsraillilerin, evine girerek kendisine saldırdığını, boğazını sıktığını; eşiyle çocuklarını ise bir odaya kapattığını belirterek, söz konusu saldırılar nedeniyle evlerinden ayrılmak zorunda kaldıklarını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-filistinli-ailelerin-evlerine-saldiriyor-954053.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            taliban'ın iktidarının beşinci yılında batı'nın afganistan'da hâlâ etkisi var mı?
+            taliban’ın afganistan’da iktidara gelişinden beş yıl sonra, kadınlara yönelik ağır kısıtlamalar sürerken uluslararası toplum ülkede anlamlı bir değişimi nasıl sağlayabileceğini tartışıyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Taliban'ın iktidarının beşinci yılında Batı'nın Afganistan'da hâlâ etkisi var mı?</h3>
+                    <p>Taliban’ın Afganistan’da iktidara gelişinden beş yıl sonra, kadınlara yönelik ağır kısıtlamalar sürerken uluslararası toplum ülkede anlamlı bir değişimi nasıl sağlayabileceğini tartışıyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgldgegryjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp milletvekili yazgan: dokunulmazlığımın kaldırılmasını isteyeceğim
+            chp, bir evde çekilen darp görüntüleri ortaya çıkan edirne milletvekili ahmet baran yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP Milletvekili Yazgan: Dokunulmazlığımın kaldırılmasını isteyeceğim</h3>
+                    <p>CHP, bir evde çekilen darp görüntüleri ortaya çıkan Edirne Milletvekili Ahmet Baran Yazgan'ı "kesin ihraç" talebiyle disipline sevk etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg8qv0ge0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yayıncılardan ret aldı ve 500 kopya bastığı kitabıyla netflix'e uzandı
+            zimbabveli romancı sue nyathi ilk romanını kendi imkanlarıyla finanse etti, kitabı dünya çapında bir netflix fenomenine dönüştü.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yayıncılardan ret aldı ve 500 kopya bastığı kitabıyla Netflix'e uzandı</h3>
+                    <p>Zimbabveli romancı Sue Nyathi ilk romanını kendi imkanlarıyla finanse etti, kitabı dünya çapında bir Netflix fenomenine dönüştü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/czdme09vv04o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akşam yemeği vakti neden önemli, en doğru saat ne?
+            önemli olan sadece ne yediğiniz değil. vücut saatiniz de besinleri nasıl metabolize ettiğinizde önemli bir rol oynuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Akşam yemeği vakti neden önemli, en doğru saat ne?</h3>
+                    <p>Önemli olan sadece ne yediğiniz değil. Vücut saatiniz de besinleri nasıl metabolize ettiğinizde önemli bir rol oynuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0m721lm3pwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güney kore küresel sağlık turizmi merkezlerinden biri haline geliyor
+            güney kore'ye gidenler, uygun fiyatlar, hızlı sonuçlar ve i̇ngilizce dil desteği sebebiyle seyahat programlarına giderek artan bir şekilde kapsamlı sağlık kontrollerini ekliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Güney Kore küresel sağlık turizmi merkezlerinden biri haline geliyor</h3>
+                    <p>Güney Kore'ye gidenler, uygun fiyatlar, hızlı sonuçlar ve İngilizce dil desteği sebebiyle seyahat programlarına giderek artan bir şekilde kapsamlı sağlık kontrollerini ekliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/czxqpz12dl2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail ordusu ateşkese rağmen lübnan'ın güneyine yönelik saldırılarını sürdürüyor
+            i̇srail ordusu, ateşkese rağmen lübnan'ın güneyindeki çeşitli bölgelere yönelik saldırılarına devam ediyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İsrail ordusu ateşkese rağmen Lübnan'ın güneyine yönelik saldırılarını sürdürüyor</h3>
+                    <p>İsrail ordusu, ateşkese rağmen Lübnan'ın güneyindeki çeşitli bölgelere yönelik saldırılarına devam ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/israil-ordusu-ateskese-ragmen-lubnanin-guneyine-yonelik-saldirilarini-surduruyor-954058.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tbmm başkanı kurtulmuş: bu memlekette artık ne ayrılıkçı söze ne de ayrımcılık sözlerine yer yoktur
+            tbmm başkanı numan kurtulmuş, terörsüz türkiye sürecine ilişkin, "bu memlekette artık ne ayrılıkçı söze ne de ayrımcılık sözlerine yer yoktur." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TBMM Başkanı Kurtulmuş: Bu memlekette artık ne ayrılıkçı söze ne de ayrımcılık sözlerine yer yoktur</h3>
+                    <p>TBMM Başkanı Numan Kurtulmuş, Terörsüz Türkiye sürecine ilişkin, "Bu memlekette artık ne ayrılıkçı söze ne de ayrımcılık sözlerine yer yoktur." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tbmm-baskani-kurtulmus-bu-memlekette-artik-ne-ayrilikci-soze-ne-de-ayrimcilik-sozlerine-yer-yoktur-954057.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            organize suç örgütü elebaşı serkan kurtuluş tutuklandı
+            kırmızı bültenle uluslararası seviyede aranırken arjantin'de yakalanarak türkiye'ye iade edilen organize suç örgütü elebaşı serkan kurtuluş, i̇zmir 3. ağır ceza mahkemesince tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Organize suç örgütü elebaşı Serkan Kurtuluş tutuklandı</h3>
+                    <p>Kırmızı bültenle uluslararası seviyede aranırken Arjantin'de yakalanarak Türkiye'ye iade edilen organize suç örgütü elebaşı Serkan Kurtuluş, İzmir 3. Ağır Ceza Mahkemesince tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/organize-suc-orgutu-elebasi-serkan-kurtulus-tutuklandi-954055.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            stadyumda küçük çocuğa forma müdahalesi: soruşturma başlatıldı
+            ankara cumhuriyet başsavcılığı, gençlerbirliği-fenerbahçe müsabakasında küçük bir çocuğun üzerinden formasının çıkarttırılmasına ilişkin soruşturma başlattı.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>Stadyumda küçük çocuğa forma müdahalesi: Soruşturma başlatıldı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı, Gençlerbirliği-Fenerbahçe müsabakasında küçük bir çocuğun üzerinden formasının çıkarttırılmasına ilişkin soruşturma başlattı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/stadyumda-kucuk-cocuga-forma-mudahalesi-sorusturma-baslatildi-954063.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
