@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>21</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-17 05:37</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cr499d52e3xo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD ve Türkiye'nin Ukrayna'ya silah transferi planı neden tartışılıyor, Moskova ne diyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdrvv7l25l6o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye kriterleri yerine getirirse vizesiz AB hemen gelecek mi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cvg4d4jlvgpo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>17 Ağustos Depremi: 1999 ve sonrasında neler yaşandı, kaç kişi hayatını kaybetti?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cgk44236z5do?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan Mısır'ın Mekke paktına katılabileceğini açıkladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Daha nice yıllar Türkiye'ye hizmet mücadelesi içinde olacağım'</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd ve türkiye'nin ukrayna'ya silah transferi planı neden tartışılıyor, moskova ne diyor?
+            rusya, ukrayna'ya yeni silahlar tedarik edilmesinin moskova ile ilişkilerine zarar verebileceğini belirterek abd ve türkiye'yi bu yönde bir adımdan kaçınmaları konusunda uyardı. abd dışişleri bakanlığı tarafından kongre'ye gönderilen 6 ağustos tarihli bildirime göre, yaklaşık 256 milyon dolar değerindeki önemli savunma ekipmanlarının ukrayna'ya transfer edilmesi planlanıyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD ve Türkiye'nin Ukrayna'ya silah transferi planı neden tartışılıyor, Moskova ne diyor?</h3>
+                    <p>Rusya, Ukrayna'ya yeni silahlar tedarik edilmesinin Moskova ile ilişkilerine zarar verebileceğini belirterek ABD ve Türkiye'yi bu yönde bir adımdan kaçınmaları konusunda uyardı. ABD Dışişleri Bakanlığı tarafından Kongre'ye gönderilen 6 Ağustos tarihli bildirime göre, yaklaşık 256 milyon dolar değerindeki önemli savunma ekipmanlarının Ukrayna'ya transfer edilmesi planlanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr499d52e3xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye kriterleri yerine getirirse vizesiz ab hemen gelecek mi?
+            avrupa birliği'nin (ab) vize muafiyeti uyguladığı ülkeler arasında yer almak isteyen türkiye, kalan son altı kriteri karşılamak için geçtiğimiz günlerde bakanlıklar arasında çalışma başlattı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye kriterleri yerine getirirse vizesiz AB hemen gelecek mi?</h3>
+                    <p>Avrupa Birliği'nin (AB) vize muafiyeti uyguladığı ülkeler arasında yer almak isteyen Türkiye, kalan son altı kriteri karşılamak için geçtiğimiz günlerde bakanlıklar arasında çalışma başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdrvv7l25l6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan mısır'ın mekke paktına katılabileceğini açıkladı
+            cumhurbaşkanı erdoğan, el cezire kanalında yayımlanan röportajında, mekke güvenlik paktından suriye'ye ve avrupa birliği üyeliğine türkiye'nin dış politikasına dair önemli konularda açıklamalarda bulundu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan Mısır'ın Mekke paktına katılabileceğini açıkladı</h3>
+                    <p>Cumhurbaşkanı Erdoğan, El Cezire kanalında yayımlanan röportajında, Mekke güvenlik paktından Suriye'ye ve Avrupa Birliği üyeliğine Türkiye'nin dış politikasına dair önemli konularda açıklamalarda bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgk44236z5do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akp'nin 25. kuruluş yıldönümünde erdoğan: 'daha nice yıllar türkiye'ye hizmet mücadelesi içinde olacağım'
+            adalet ve kalkınma partisi'nin 25. kuruluş yıldönümü cumhurbaşkanı ve partinin genel başkanı recep tayyip erdoğan'ın katılımıyla ankara millet bahçesi'ndeki miting ile kutlanıyor. kalabalığın toplandığı etkinlik alanında erdoğan konuşma yaptı
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>AKP'nin 25. kuruluş yıldönümünde Erdoğan: 'Daha nice yıllar Türkiye'ye hizmet mücadelesi içinde olacağım'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin 25. kuruluş yıldönümü Cumhurbaşkanı ve partinin genel başkanı Recep Tayyip Erdoğan'ın katılımıyla Ankara Millet Bahçesi'ndeki miting ile kutlanıyor. Kalabalığın toplandığı etkinlik alanında Erdoğan konuşma yaptı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crrv8q7elnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abdullah gül anlatıyor: adalet ve kalkınma partisi nasıl kuruldu?
+            abdullah gül, adalet ve kalkınma partisi'nin önde gelen kurucularından... türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. gül, i̇stanbul'daki çalışma ofisinde bbc türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. mahmut hamsici ve osman kaytazoğlu'nun haberi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Abdullah Gül anlatıyor: Adalet ve Kalkınma Partisi nasıl kuruldu?</h3>
+                    <p>Abdullah Gül, Adalet ve Kalkınma Partisi'nin önde gelen kurucularından... Türkiye'de başbakanlık, başbakanlık yardımcılığı, dışişleri bakanlığı ve cumhurbaşkanlığı yaptı. Gül, İstanbul'daki çalışma ofisinde BBC Türkçe'nin partinin kuruluşuyla ilgili sorularını yanıtladı. Mahmut Hamsici ve Osman Kaytazoğlu'nun haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgv5l43xpno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meta bu davayı kaybederse, instagram ve facebook sonsuza dek değişebilir
+            abd'de kaliforniya ve new york'un da aralarında bulunduğu 30 eyaletin meta'ya açtığı çocuk gizliliği davasında duruşmalar başlıyor. dava sonucunda instagram ve facebook platformlarında köklü değişiklikler yapılması isteniyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Meta bu davayı kaybederse, Instagram ve Facebook sonsuza dek değişebilir</h3>
+                    <p>ABD'de Kaliforniya ve New York'un da aralarında bulunduğu 30 eyaletin Meta'ya açtığı çocuk gizliliği davasında duruşmalar başlıyor. Dava sonucunda Instagram ve Facebook platformlarında köklü değişiklikler yapılması isteniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/meta-bu-davayi-kaybederse-instagram-ve-facebook-sonsuza-dek-degisebilir-954119.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya, ukrayna'nın 2026 yılındaki en büyük drone saldırısında en az yedi kişinin öldüğünü açıkladı
+            rus yetkililer, ukrayna'nın bu yıl gerçekleştirdiği en geniş kapsamlı drone saldırısında rusya genelinde en az yedi kişinin hayatını kaybettiğini bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya, Ukrayna'nın 2026 yılındaki en büyük drone saldırısında en az yedi kişinin öldüğünü açıkladı</h3>
+                    <p>Rus yetkililer, Ukrayna'nın bu yıl gerçekleştirdiği en geniş kapsamlı drone saldırısında Rusya genelinde en az yedi kişinin hayatını kaybettiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynanin-2026-yilindaki-en-buyuk-drone-saldirisinda-en-az-yedi-kisinin-oldugunu-acikladi-954118.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            17 ağustos depremi: 1999 ve sonrasında neler yaşandı, kaç kişi hayatını kaybetti?
+            türkiye'nin yakın tarihinin en büyük felaketi olarak gösterilen 17 ağustos depremi'nin üzerinden 25 yıl geçti. 1999 yılında 16 ağustos'u 17 ağustos'a bağlayan gece meydana gelen 7,4 büyüklüğündeki yer sarsıntısı, türkiye tarihinin en büyük ikinci depremi olarak kayıtlara geçti. merkez üssü gölcük olan deprem, marmara bölgesi'nin genelinde hissedildi. kuzey anadolu fay hattı'nın kırılmasıyla meydana gelen deprem, i̇stanbul, bolu, bursa, eskişehir, kocaeli, sakarya ve yalova'da can ve mal kaybına neden oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>17 Ağustos Depremi: 1999 ve sonrasında neler yaşandı, kaç kişi hayatını kaybetti?</h3>
+                    <p>Türkiye'nin yakın tarihinin en büyük felaketi olarak gösterilen 17 Ağustos Depremi'nin üzerinden 25 yıl geçti. 1999 yılında 16 Ağustos'u 17 Ağustos'a bağlayan gece meydana gelen 7,4 büyüklüğündeki yer sarsıntısı, Türkiye tarihinin en büyük ikinci depremi olarak kayıtlara geçti. Merkez üssü Gölcük olan deprem, Marmara Bölgesi'nin genelinde hissedildi. Kuzey Anadolu Fay Hattı'nın kırılmasıyla meydana gelen deprem, İstanbul, Bolu, Bursa, Eskişehir, Kocaeli, Sakarya ve Yalova'da can ve mal kaybına neden oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvg4d4jlvgpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bülent arınç'ın gözünden akp'nin 25 yılı: 'sistemi düzeltin, ehliyete, liyakate, istişareye önem verin'
+            adalet ve kalkınma partisi'nin kurucularından, eski başbakan yardımcısı bülent arınç bbc türkçe'nin sorularını yanıtladı. arınç, kurucusu olduğu partiyi savunurken "kuruluş ilkelerine dönme" çağrısı yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bülent Arınç'ın gözünden AKP'nin 25 yılı: 'Sistemi düzeltin, ehliyete, liyakate, istişareye önem verin'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin kurucularından, eski Başbakan Yardımcısı Bülent Arınç BBC Türkçe'nin sorularını yanıtladı. Arınç, kurucusu olduğu partiyi savunurken "kuruluş ilkelerine dönme" çağrısı yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cre42v0vppzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            17 ağustos'un üzerinden 27 yıl geçti: deprem kentleri yeniden ayağa kalktı
+            17 ağustos 1999'da 45 saniye süren deprem, marmara bölgesi'nde büyük yıkıma neden oldu. aradan geçen 27 yılda depremden ağır yara alan kentlerde kentsel dönüşüm, yeni yerleşim alanları ve depreme dayanıklı yapılaşma çalışmaları hayata geçirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>17 Ağustos'un üzerinden 27 yıl geçti: Deprem kentleri yeniden ayağa kalktı</h3>
+                    <p>17 Ağustos 1999'da 45 saniye süren deprem, Marmara Bölgesi'nde büyük yıkıma neden oldu. Aradan geçen 27 yılda depremden ağır yara alan kentlerde kentsel dönüşüm, yeni yerleşim alanları ve depreme dayanıklı yapılaşma çalışmaları hayata geçirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/17-agustosun-uzerinden-27-yil-gecti-deprem-kentleri-yeniden-ayaga-kalkti-954123.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aşırı sıcaklar ve kuraklık dünyayı yakıyor: orman yangınları üç ülkenin toplam yüzölçümüne ulaştı
+            dünya genelinde rekor kıran sıcaklıklar ve şiddetli kuraklık nedeniyle çıkan orman yangınları, yıl başından bu yana i̇spanya, fransa ve almanya'nın toplam yüzölçümüne denk gelen bir alanı küle çevirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Aşırı sıcaklar ve kuraklık dünyayı yakıyor: Orman yangınları üç ülkenin toplam yüzölçümüne ulaştı</h3>
+                    <p>Dünya genelinde rekor kıran sıcaklıklar ve şiddetli kuraklık nedeniyle çıkan orman yangınları, yıl başından bu yana İspanya, Fransa ve Almanya'nın toplam yüzölçümüne denk gelen bir alanı küle çevirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/asiri-sicaklar-ve-kuraklik-dunyayi-yakiyor-orman-yanginlari-uc-ulkenin-toplam-yuzolcumune-ulasti-954122.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'da bir müzeden rönesans dönemine ait dört değerli tablo çalındı
+            i̇talya kültür bakanı alessandro giuli, messina bölgesel disiplinlerarası müzesi'nden antonello da messina'ya atfedilen san gregorio poliptiği'nin üç paneli ile çocuklu meryem ve mesih konulu çift taraflı bir panelin cumartesi gecesi çalındığını doğruladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalya'da bir müzeden Rönesans dönemine ait dört değerli tablo çalındı</h3>
+                    <p>İtalya Kültür Bakanı Alessandro Giuli, Messina Bölgesel Disiplinlerarası Müzesi'nden Antonello da Messina'ya atfedilen San Gregorio Poliptiği'nin üç paneli ile Çocuklu Meryem ve Mesih konulu çift taraflı bir panelin cumartesi gecesi çalındığını doğruladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/italyada-bir-muzeden-ronesans-donemine-ait-dort-degerli-tablo-calindi-954120.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇bb davasında ikinci celse bugün başlıyor
+            i̇stanbul 33. ağır ceza mahkemesi'nde görülen i̇stanbul büyükşehir belediyesi (i̇bb) davasına 40 günlük aranın ardından bugün devam edilecek. dava, silivri'deki marmara kapalı ceza i̇nfaz kurumu'nun karşısında bulunan yeni duruşma salonunda görülüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İBB davasında ikinci celse bugün başlıyor</h3>
+                    <p>İstanbul 33. Ağır Ceza Mahkemesi'nde görülen İstanbul Büyükşehir Belediyesi (İBB) davasına 40 günlük aranın ardından bugün devam edilecek. Dava, Silivri'deki Marmara Kapalı Ceza İnfaz Kurumu'nun karşısında bulunan yeni duruşma salonunda görülüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yvvv1z4yko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ayşe böhürler ile akp'nin 25 yılı: 'kendimizle yüzleşen bir partiyiz, esneme kabiliyetimiz var'
+            adalet ve kalkınma partisi'nin kurucularından, hali hazırda kayseri milletvekili olan ayşe böhürler, bbc türkçe'nin sorularını yanıtladı. böhürler, seçmen kitlesindeki değişimi gördüklerini söylüyor, ak parti'nin "esneme kabiliyeti" olduğunu özellikle vurguluyor. mahmut hamsici ve osman kaytazoğlu'nun haberi
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ayşe Böhürler ile AKP'nin 25 yılı: 'Kendimizle yüzleşen bir partiyiz, esneme kabiliyetimiz var'</h3>
+                    <p>Adalet ve Kalkınma Partisi'nin kurucularından, hali hazırda Kayseri milletvekili olan Ayşe Böhürler, BBC Türkçe'nin sorularını yanıtladı. Böhürler, seçmen kitlesindeki değişimi gördüklerini söylüyor, AK Parti'nin "esneme kabiliyeti" olduğunu özellikle vurguluyor. Mahmut Hamsici ve Osman Kaytazoğlu'nun haberi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crk5v8yj3e5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan kuzey kore'ye i̇ran savaşı jesti
+            trump, güney kore'nin i̇ran savaşına katılmaması üzerine ortak askeri tatbikatların ölçeğini küçülteceğini söyledi
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Trump'tan Kuzey Kore'ye İran savaşı jesti</h3>
+                    <p>Trump, Güney Kore'nin İran savaşına katılmaması üzerine ortak askeri tatbikatların ölçeğini küçülteceğini söyledi</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trumptan-kuzey-koreye-iran-savasi-jesti-954117.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli: terörsüz türkiye milletin eseri olacak
+            'terörsüz türkiye' hedefinin milletin ortak eseri olacağını vurgulayan mhp genel başkanı devlet bahçeli, kapalı kapılar ardında bir pazarlığın söz konusu olmadığını belirtti, provokasyonlara karşı dikkatli olunması çağrısında bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahçeli: Terörsüz Türkiye milletin eseri olacak</h3>
+                    <p>'Terörsüz Türkiye' hedefinin milletin ortak eseri olacağını vurgulayan MHP Genel Başkanı Devlet Bahçeli, kapalı kapılar ardında bir pazarlığın söz konusu olmadığını belirtti, provokasyonlara karşı dikkatli olunması çağrısında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bahceli-terorsuz-turkiye-milletin-eseri-olacak-954115.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni haftada hava nasıl olacak?
+            yeni haftada kuzey kesimlerde yağış aralıklarla sürecek. yarından itibaren iç ve güney bölgelerde yağış azalacak. çarşamba ve perşembe marmara ve karadeniz yeni yağışlı sistemin etkisine girecek. sıcaklık hafta ortasında birkaç derece artacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni haftada hava nasıl olacak?</h3>
+                    <p>Yeni haftada kuzey kesimlerde yağış aralıklarla sürecek. Yarından itibaren iç ve güney bölgelerde yağış azalacak. Çarşamba ve perşembe Marmara ve Karadeniz yeni yağışlı sistemin etkisine girecek. Sıcaklık hafta ortasında birkaç derece artacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/yeni-haftada-hava-nasil-olacak-954114.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mükemmel köpekbalığı fotoğrafını çekmeye çalışırken ısırılan internet fenomenleri
+            tayane dalazen, brezilya'da köpekbalığı dalışı gezisindeyken saldırıya uğradı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mükemmel köpekbalığı fotoğrafını çekmeye çalışırken ısırılan internet fenomenleri</h3>
+                    <p>Tayane Dalazen, Brezilya'da köpekbalığı dalışı gezisindeyken saldırıya uğradı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9355exgv5go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaybolan kedi, 10 yıl sonra evine geri döndü
+            on yıl önce kaybolan 13 yaşındaki kedi charlie evine geri döndü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaybolan kedi, 10 yıl sonra evine geri döndü</h3>
+                    <p>On yıl önce kaybolan 13 yaşındaki kedi Charlie evine geri döndü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kaybolan-kedi-10-yil-sonra-evine-geri-dondu-954121.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail ordusundan lübnan'ın güneyine hava saldırısı
+            katil i̇srail ordusu, ateşkese rağmen lübnan'ın güneyindeki huceyr vadisi'ne hava saldırısı düzenledi, hiyam beldesine otomatik silahlarla ateş açtı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail ordusundan Lübnan'ın güneyine hava saldırısı</h3>
+                    <p>Katil İsrail ordusu, ateşkese rağmen Lübnan'ın güneyindeki Huceyr Vadisi'ne hava saldırısı düzenledi, Hiyam beldesine otomatik silahlarla ateş açtı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israil-ordusundan-lubnanin-guneyine-hava-saldirisi-954116.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
