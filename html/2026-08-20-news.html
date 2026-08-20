@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>17</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-20 05:34</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c0rdl1v0pljo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Financial Times: İran, Avrupa'daki ABD hedeflerini vurmayı değerlendirdi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/iran-saldirisinda-yaralanan-abd-askeri-sayisi-750yi-asti-954417.html" target="_blank">
+                <strong>İran saldırısında yaralanan ABD askeri sayısı 750'yi aştı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj9dk1zg0ddo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Suriye Dışişleri Bakanı: İsrail'in vurduğu üste Türk askeri varlığı planı yok</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj4k710ydx9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump'ın Kuzey Kore açıklamalarının ardından; Güney Kore ile ABD'nin savaş tatbikatının süresi kısalıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwymr2k11k3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump'tan, İran'a yardım eden ülkelere 'ekonomi' tehdidi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            financial times: i̇ran, avrupa'daki abd hedeflerini vurmayı değerlendirdi
+            i̇ngiltere merkezli financial times gazetesi, ismini vermediği iki kaynağa dayanarak, savaşın tırmanması halinde i̇ran'ın avrupa'daki amerikan askeri varlıklarını vurmayı değerlendirdiğini yazdı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Financial Times: İran, Avrupa'daki ABD hedeflerini vurmayı değerlendirdi</h3>
+                    <p>İngiltere merkezli Financial Times gazetesi, ismini vermediği iki kaynağa dayanarak, savaşın tırmanması halinde İran'ın Avrupa'daki Amerikan askeri varlıklarını vurmayı değerlendirdiğini yazdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0rdl1v0pljo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran saldırısında yaralanan abd askeri sayısı 750'yi aştı
+            abd savunma bakanlığı'nın (pentagon) savaş zayiatı veritabanına göre, i̇ran ile başlayan savaştan bu yana yaralanan amerikan askerlerinin sayısı 750'yi geçti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran saldırısında yaralanan ABD askeri sayısı 750'yi aştı</h3>
+                    <p>ABD Savunma Bakanlığı'nın (Pentagon) savaş zayiatı veritabanına göre, İran ile başlayan savaştan bu yana yaralanan Amerikan askerlerinin sayısı 750'yi geçti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-saldirisinda-yaralanan-abd-askeri-sayisi-750yi-asti-954417.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'ın kuzey kore açıklamalarının ardından; güney kore ile abd'nin savaş tatbikatının süresi kısalıyor
+            güney kore savunma bakanlığı, abd ile her yıl düzenlenen ortak askeri tatbikatların washington'ın talebi üzerine altı gün kısaltılacağını duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump'ın Kuzey Kore açıklamalarının ardından; Güney Kore ile ABD'nin savaş tatbikatının süresi kısalıyor</h3>
+                    <p>Güney Kore Savunma Bakanlığı, ABD ile her yıl düzenlenen ortak askeri tatbikatların Washington'ın talebi üzerine altı gün kısaltılacağını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj4k710ydx9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            moderna mrna kanser aşısında başarı açıkladı, şirketin değeri ikiye katlandı
+            abd'li tıp şirketleri moderna ve merck, hastaların tümörlerine özel geliştirilen bir melanoma (cilt kanseri) aşısının geniş çaplı deneylerinin başarılı olduğunu ve hastalarda kanserin tekrar ortaya çıkmasını büyük oranda engellediğini duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Moderna mRNA kanser aşısında başarı açıkladı, şirketin değeri ikiye katlandı</h3>
+                    <p>ABD'li tıp şirketleri Moderna ve Merck, hastaların tümörlerine özel geliştirilen bir melanoma (cilt kanseri) aşısının geniş çaplı deneylerinin başarılı olduğunu ve hastalarda kanserin tekrar ortaya çıkmasını büyük oranda engellediğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr49yq17929o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'da yüzlerce kadın bir kamu görevlisini 'idrar kaçırmaları' için kendilerine ilaç vermekle suçluyor
+            200'den fazla kadın, christian nègre'nin iş görüşmelerinde idrar kaçırmalarına yol açmak için kendilerine ilaç verdiğini iddia ediyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Fransa'da yüzlerce kadın bir kamu görevlisini 'idrar kaçırmaları' için kendilerine ilaç vermekle suçluyor</h3>
+                    <p>200'den fazla kadın, Christian Nègre'nin iş görüşmelerinde idrar kaçırmalarına yol açmak için kendilerine ilaç verdiğini iddia ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvgjygr0qv6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna: rusya'nın kiev'e düzenlediği saldırıda 8 kişi öldü, 33 kişi yaralandı
+            rus ordusunun ukrayna'nın başkenti kiev'e yönelik hava saldırısında ilk belirlemelere göre 8 kişinin öldüğü, 33 kişinin yaralandığı bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ukrayna: Rusya'nın Kiev'e düzenlediği saldırıda 8 kişi öldü, 33 kişi yaralandı</h3>
+                    <p>Rus ordusunun Ukrayna'nın başkenti Kiev'e yönelik hava saldırısında ilk belirlemelere göre 8 kişinin öldüğü, 33 kişinin yaralandığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ukrayna-rusyanin-kieve-duzenledigi-saldirida-8-kisi-oldu-33-kisi-yaralandi-954423.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bursa'da örnek davranış: bulduğu para dolu çantayı polise teslim etti
+            bursa'nın i̇negöl ilçesinde yasin akduman, park halindeki bir aracın kaputunda bulduğu ve içerisinde yaklaşık 30 bin tl bulunan çantayı sahibine ulaştırılması için polise teslim etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bursa'da örnek davranış: Bulduğu para dolu çantayı polise teslim etti</h3>
+                    <p>Bursa'nın İnegöl ilçesinde Yasin Akduman, park halindeki bir aracın kaputunda bulduğu ve içerisinde yaklaşık 30 bin TL bulunan çantayı sahibine ulaştırılması için polise teslim etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/yasam/bursada-ornek-davranis-buldugu-para-dolu-cantayi-polise-teslim-etti-954420.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, kim jongun ile bu yıl görüşmeyi planladığını açıkladı
+            abd başkanı donald trump, kuzey kore lideri kim jong-un ile bu yılın ilerleyen dönemlerinde bir araya gelmeyi planladığını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, Kim Jongun ile bu yıl görüşmeyi planladığını açıkladı</h3>
+                    <p>ABD Başkanı Donald Trump, Kuzey Kore lideri Kim Jong-un ile bu yılın ilerleyen dönemlerinde bir araya gelmeyi planladığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-kim-jong-un-ile-bu-yil-gorusmeyi-planladigini-acikladi-954418.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            suriye dışişleri bakanı: i̇srail'in vurduğu üste türk askeri varlığı planı yok
+            suriye dışişleri bakanı esad el-şeybani, i̇srail'in salı günü vurduğu ebu el-duhur hava üssünde bir türk askeri üssü kurma planı bulunmadığını i̇srail'e açıkça ilettiğini, tesisin suriye hava kuvvetleri tarafından kullanılmak üzere elden geçirildiğini belirtti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suriye Dışişleri Bakanı: İsrail'in vurduğu üste Türk askeri varlığı planı yok</h3>
+                    <p>Suriye Dışişleri Bakanı Esad el-Şeybani, İsrail'in Salı günü vurduğu Ebu el-Duhur hava üssünde bir Türk askeri üssü kurma planı bulunmadığını İsrail'e açıkça ilettiğini, tesisin Suriye Hava Kuvvetleri tarafından kullanılmak üzere elden geçirildiğini belirtti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj9dk1zg0ddo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            furkan vakfı: kurucusu alparslan kuytul'a gözaltı ile gündeme gelen i̇slamcı oluşum
+            furkan eğitim ve hizmet vakfı başkanı alparslan kuytul ve eşi semra kuytul'un da aralarında bulunduğu çok sayıda kişi 19 ağustos sabahı düzenlenen bir operasyonda adana'da gözaltına alındı. peki furkan vakfı hakkında neler biliniyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Furkan Vakfı: Kurucusu Alparslan Kuytul'a gözaltı ile gündeme gelen İslamcı oluşum</h3>
+                    <p>Furkan Eğitim ve Hizmet Vakfı Başkanı Alparslan Kuytul ve eşi Semra Kuytul'un da aralarında bulunduğu çok sayıda kişi 19 Ağustos sabahı düzenlenen bir operasyonda Adana'da gözaltına alındı. Peki Furkan Vakfı hakkında neler biliniyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx8wgxp0d0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            100 yaşını aşan bireylerin bağışıklık sisteminde kanserle mücadele eden hücrelerin arttığı tespit edildi
+            yapılan yeni bir araştırma, 100 yaşını aşan kişilerin kanser ve hastalıklardan korunmasında etkili olabilecek biyolojik bir mekanizmayı ortaya koydu. cell press dergisinde yayımlanan çalışmaya göre, bu bireylerin bağışıklık sisteminde nadir görülen bir t hücre türünün zamanla artış gösterdiği ve adapte olduğu belirlendi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>100 yaşını aşan bireylerin bağışıklık sisteminde kanserle mücadele eden hücrelerin arttığı tespit edildi</h3>
+                    <p>Yapılan yeni bir araştırma, 100 yaşını aşan kişilerin kanser ve hastalıklardan korunmasında etkili olabilecek biyolojik bir mekanizmayı ortaya koydu. Cell Press dergisinde yayımlanan çalışmaya göre, bu bireylerin bağışıklık sisteminde nadir görülen bir T hücre türünün zamanla artış gösterdiği ve adapte olduğu belirlendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/100-yasini-asan-bireylerin-bagisiklik-sisteminde-kanserle-mucadele-eden-hucrelerin-arttigi-tespit-edildi-954421.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hind receb'in öldürülmesi: i̇srail'den iki gazze saldırısıyla ilgili cezai soruşturma
+            i̇srail ordusu, altı yaşındaki hind receb'in gazze'de öldürülmesiyle ilgili olarak cezai soruşturma başlatılması emrini verdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hind Receb'in öldürülmesi: İsrail'den iki Gazze saldırısıyla ilgili cezai soruşturma</h3>
+                    <p>İsrail ordusu, altı yaşındaki Hind Receb'in Gazze'de öldürülmesiyle ilgili olarak cezai soruşturma başlatılması emrini verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g6182g28jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            furkan vakfı'na operasyon: alparslan kuytul ve eşi semra kuytul gözaltına alındı
+            adana'da furkan vakfı başkanı alparslan kuytul'a yönelik sabahın erken saatlerinde düzenlenen operasyonda alparslan kuytul ve eşi semra kuytul dahil çok sayıda vakıf üyesi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Furkan Vakfı'na operasyon: Alparslan Kuytul ve eşi Semra Kuytul gözaltına alındı</h3>
+                    <p>Adana'da Furkan Vakfı Başkanı Alparslan Kuytul'a yönelik sabahın erken saatlerinde düzenlenen operasyonda Alparslan Kuytul ve eşi Semra Kuytul dahil çok sayıda vakıf üyesi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq6dn26n521o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            süleymancılar: arif ahmet denizolgun'un mezarına fethi kabir yapıldı
+            bakırköy cumhuriyet başsavcılığı, süleymancılar cemaatinin eski lideri arif ahmet denizolgun'un ölümü ilgili soruşturma başlattı. denizolgun'un karacaahmet mezarlığı'ndaki mezarı açıldı
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Süleymancılar: Arif Ahmet Denizolgun'un mezarına fethi kabir yapıldı</h3>
+                    <p>Bakırköy Cumhuriyet Başsavcılığı, Süleymancılar cemaatinin eski lideri Arif Ahmet Denizolgun'un ölümü ilgili soruşturma başlattı. Denizolgun'un Karacaahmet Mezarlığı'ndaki mezarı açıldı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c934e494wj1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rüzgara dayanamayan çam ağacı araçların üzerine devrildi
+            çorum'da rüzgarın etkisiyle devrilen çam ağacı, park halindeki araçlara zarar verdi. yol, belediye ekiplerinin çalışmasının ardından yeniden ulaşıma açıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rüzgara dayanamayan çam ağacı araçların üzerine devrildi</h3>
+                    <p>Çorum'da rüzgarın etkisiyle devrilen çam ağacı, park halindeki araçlara zarar verdi. Yol, belediye ekiplerinin çalışmasının ardından yeniden ulaşıma açıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ruzgara-dayanamayan-cam-agaci-araclarin-uzerine-devrildi-954422.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nasa'nın batmakta olan uzay teleskobunu kurtarma görevi başarısızlıkla sonuçlandı
+            nasa, yörüngesinde hızla irtifa kaybeden neil gehrels swift uzay teleskobunu kurtarmak ve atmosfere girerek yanmasını önlemek amacıyla başlatılan misyonun başarısızlıkla sonuçlandığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>NASA'nın batmakta olan uzay teleskobunu kurtarma görevi başarısızlıkla sonuçlandı</h3>
+                    <p>NASA, yörüngesinde hızla irtifa kaybeden Neil Gehrels Swift Uzay Teleskobunu kurtarmak ve atmosfere girerek yanmasını önlemek amacıyla başlatılan misyonun başarısızlıkla sonuçlandığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/nasanin-batmakta-olan-uzay-teleskobunu-kurtarma-gorevi-basarisizlikla-sonuclandi-954419.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aşıdaki çığır açan gelişme, kanserin klinik denemelerde tekrarlamasını engelledi
+            cilt kanseri tedavisinde çığır açabilecek kişiselleştirilmiş mrna aşısı intismeran, yürütülen klinik deneylerde önemli bir başarı elde etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Aşıdaki çığır açan gelişme, kanserin klinik denemelerde tekrarlamasını engelledi</h3>
+                    <p>Cilt kanseri tedavisinde çığır açabilecek kişiselleştirilmiş mRNA aşısı Intismeran, yürütülen klinik deneylerde önemli bir başarı elde etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/asidaki-cigir-acan-gelisme-kanserin-klinik-denemelerde-tekrarlamasini-engelledi-954416.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan, i̇ran'a yardım eden ülkelere 'ekonomi' tehdidi
+            abd başkan donald trump, i̇ran'a yardım eden veya i̇ran'la iş yapan ülkeleri abd'nin "çok ağır ekonomik sonuçlar" ile karşı karşıya bırakacağını söyledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Trump'tan, İran'a yardım eden ülkelere 'ekonomi' tehdidi</h3>
+                    <p>ABD Başkan Donald Trump, İran'a yardım eden veya İran'la iş yapan ülkeleri ABD'nin "çok ağır ekonomik sonuçlar" ile karşı karşıya bırakacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwymr2k11k3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan i̇ran'a yardım eden ülkelere ekonomik tehdit
+            abd başkanı donald trump, i̇ran'a yardım eden veya bu ülkeyle ticari ilişkilerini sürdüren her ülkeye "devasa ekonomik yaptırımlar" uygulanacağını açıkladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Trump'tan İran'a yardım eden ülkelere ekonomik tehdit</h3>
+                    <p>ABD Başkanı Donald Trump, İran'a yardım eden veya bu ülkeyle ticari ilişkilerini sürdüren her ülkeye "devasa ekonomik yaptırımlar" uygulanacağını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trumptan-irana-yardim-eden-ulkelere-ekonomik-tehdit-954415.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin kamu borcu ilk kez 40 trilyon doları aştı
+            abd'nin toplam kamu borcu, tarihte ilk kez 40 trilyon dolar seviyesinin üzerine çıktı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD'nin kamu borcu ilk kez 40 trilyon doları aştı</h3>
+                    <p>ABD'nin toplam kamu borcu, tarihte ilk kez 40 trilyon dolar seviyesinin üzerine çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdnin-kamu-borcu-ilk-kez-40-trilyon-dolari-asti-954414.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
