@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>14</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-21 05:35</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwymr2k11k3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD Hazine Bakanı: Yaptırımlar İran ekonomisini 'ezip geçecek' ve hükümeti 'çökertecek'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/avrupadaki-orman-yanginlari-en-iyi-iklim-senaryosunda-bile-yuzde-39-artacak-954520.html" target="_blank">
+                <strong>Avrupa'daki orman yangınları en iyi iklim senaryosunda bile yüzde 39 artacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9d8zz1w729o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İsrail Savunma Bakanı Katz: 'Erdoğan Türkiye'yi Suriye'de tehlikeli maceralara sürüklüyor'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/kamu-borclarinin-yapilandirilmasinda-son-gunler-954525.html" target="_blank">
+                <strong>Kamu borçlarının yapılandırılmasında son günler</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/belediye-baskanini-elektrikli-bisiklet-capti-bisiklet-surmek-yasaklandi-954516.html" target="_blank">
+                <strong>Belediye başkanını elektrikli bisiklet çaptı, bisiklet sürmek yasaklandı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd hazine bakanı: yaptırımlar i̇ran ekonomisini 'ezip geçecek' ve hükümeti 'çökertecek'
+            abd hazine bakanı scott bessent, müttefiklerini washington'ın i̇ran ekonomisini "çökertme" çabalarına destek vermeye çağırdı. bessent, "bu rejimi çökerteceğiz. müttefiklerimizin ve dünyanın geri kalanının bir karar verme zamanı geldi" dedi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD Hazine Bakanı: Yaptırımlar İran ekonomisini 'ezip geçecek' ve hükümeti 'çökertecek'</h3>
+                    <p>ABD Hazine Bakanı Scott Bessent, müttefiklerini Washington'ın İran ekonomisini "çökertme" çabalarına destek vermeye çağırdı. Bessent, "Bu rejimi çökerteceğiz. Müttefiklerimizin ve dünyanın geri kalanının bir karar verme zamanı geldi" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwymr2k11k3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kamu borçlarının yapılandırılmasında son günler
+            kamuya borcu olan mükelleflere ve esnafa nefes aldıracak yapılandırma için başvurular devam ediyor. düzenleme kapsamında, bazı borçlar 72 aya kadar taksitlendirilebiliyor. düzenleme, faiz ve teminat yükünü de hafifletiyor. son başvuru tarihi ise 31 ağustos pazartesi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Kamu borçlarının yapılandırılmasında son günler</h3>
+                    <p>Kamuya borcu olan mükelleflere ve esnafa nefes aldıracak yapılandırma için başvurular devam ediyor. Düzenleme kapsamında, bazı borçlar 72 aya kadar taksitlendirilebiliyor. Düzenleme, faiz ve teminat yükünü de hafifletiyor. Son başvuru tarihi ise 31 Ağustos Pazartesi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kamu-borclarinin-yapilandirilmasinda-son-gunler-954525.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'ın 'ekonomik çıkartması' i̇ran'a ne kadar zarar verebilir?
+            i̇ran, ekonomisine yıllardır uygulanan ağır yaptırımların etrafından dolaşmanın yollarını bulmakta şimdiye kadar oldukça başarılı olduğunu kanıtladı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Trump'ın 'ekonomik çıkartması' İran'a ne kadar zarar verebilir?</h3>
+                    <p>İran, ekonomisine yıllardır uygulanan ağır yaptırımların etrafından dolaşmanın yollarını bulmakta şimdiye kadar oldukça başarılı olduğunu kanıtladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8dnv1mmq1ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiliz sinemaları korsan korkusu nedeniyle meta akıllı gözlüklerini yasaklamayı tartışıyor
+            i̇ngiltere genelindeki sinemalar, filmlerin korsan yollarla kaydedilmesinde kullanılabileceği endişesiyle müşterilerin meta üretimi akıllı gözlükleri takmasını yasaklamayı gündemine aldı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İngiliz sinemaları korsan korkusu nedeniyle Meta akıllı gözlüklerini yasaklamayı tartışıyor</h3>
+                    <p>İngiltere genelindeki sinemalar, filmlerin korsan yollarla kaydedilmesinde kullanılabileceği endişesiyle müşterilerin Meta üretimi akıllı gözlükleri takmasını yasaklamayı gündemine aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ingiliz-sinemalari-korsan-korkusu-nedeniyle-meta-akilli-gozluklerini-yasaklamayi-tartisiyor-954521.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'daki orman yangınları en iyi iklim senaryosunda bile yüzde 39 artacak
+            yeni bir araştırma, gezegenin ısınmasını durdurmaya yönelik en iyi senaryoda dahi gerekli önlemler alınmadığı takdirde yüzyılın sonuna kadar avrupa'da yanan alanların yüzde 39 oranında artacağını ortaya koydu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'daki orman yangınları en iyi iklim senaryosunda bile yüzde 39 artacak</h3>
+                    <p>Yeni bir araştırma, gezegenin ısınmasını durdurmaya yönelik en iyi senaryoda dahi gerekli önlemler alınmadığı takdirde yüzyılın sonuna kadar Avrupa'da yanan alanların yüzde 39 oranında artacağını ortaya koydu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/avrupadaki-orman-yanginlari-en-iyi-iklim-senaryosunda-bile-yuzde-39-artacak-954520.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            belediye başkanını elektrikli bisiklet çaptı, bisiklet sürmek yasaklandı
+            i̇talya'nın tarihi como kentinin belediye başkanı, elektrikli bisiklet çarpması sonucu yaralanmasının ardından kentin belirli bölgelerinde bisiklet sürülmesini yasakladı. alessandro rapinese, kamu güvenliğini artırmak için bu yasağın gerekli olduğunu ifade etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Belediye başkanını elektrikli bisiklet çaptı, bisiklet sürmek yasaklandı</h3>
+                    <p>İtalya'nın tarihi Como kentinin belediye başkanı, elektrikli bisiklet çarpması sonucu yaralanmasının ardından kentin belirli bölgelerinde bisiklet sürülmesini yasakladı. Alessandro Rapinese, kamu güvenliğini artırmak için bu yasağın gerekli olduğunu ifade etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/belediye-baskanini-elektrikli-bisiklet-capti-bisiklet-surmek-yasaklandi-954516.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇sviçreli turist, kutsal sessizlik gününü bozduğu için bali'de hapse atıldı
+            26 yaşındaki genç, kutsal bayramla ilgili küfür dolu bir paylaşım yaparak tepkilere neden oldu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İsviçreli turist, kutsal Sessizlik Gününü bozduğu için Bali'de hapse atıldı</h3>
+                    <p>26 yaşındaki genç, kutsal bayramla ilgili küfür dolu bir paylaşım yaparak tepkilere neden oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1w1r37l1l9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere, fransa, almanya, i̇talya ve kanada'dan i̇srail'in batı şeria'daki yerleşim projesine kınama
+            avrupa ülkeleri ve kanada, i̇srail'in işgal altındaki batı şeria'nın stratejik açıdan hayati önem taşıyan bir bölgesinde yerleşim yerlerini genişletme planları konusunda baskıyı artırıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İngiltere, Fransa, Almanya, İtalya ve Kanada'dan İsrail'in Batı Şeria'daki yerleşim projesine kınama</h3>
+                    <p>Avrupa ülkeleri ve Kanada, İsrail'in işgal altındaki Batı Şeria'nın stratejik açıdan hayati önem taşıyan bir bölgesinde yerleşim yerlerini genişletme planları konusunda baskıyı artırıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ceqe4x22en5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            el nino stratejik güzergahı vurdu: panama kanalı gemi geçişlerini azaltıyor
+            orta amerika'da yaşanan şiddetli kuraklık nedeniyle atlantik ve pasifik okyanuslarını birbirine bağlayan stratejik su yolunda yeni kısıtlamaların uygulanması bekleniyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>El Nino stratejik güzergahı vurdu: Panama Kanalı gemi geçişlerini azaltıyor</h3>
+                    <p>Orta Amerika'da yaşanan şiddetli kuraklık nedeniyle Atlantik ve Pasifik okyanuslarını birbirine bağlayan stratejik su yolunda yeni kısıtlamaların uygulanması bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/el-nino-stratejik-guzergahi-vurdu-panama-kanali-gemi-gecislerini-azaltiyor-954519.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            2027 için alarm verildi: en sıcak el nino olacak
+            i̇ngiltere meteoroloji ofisi (met office), pasifik okyanusu'nda gelişmekte olan el nino olayının insan hafızasındaki en güçlü seviyeye ulaşmasının muhtemel olduğu konusunda uyarıda bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>2027 için alarm verildi: En sıcak El Nino olacak</h3>
+                    <p>İngiltere Meteoroloji Ofisi (Met Office), Pasifik Okyanusu'nda gelişmekte olan El Nino olayının insan hafızasındaki en güçlü seviyeye ulaşmasının muhtemel olduğu konusunda uyarıda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/2027-icin-alarm-verildi-en-sicak-el-nino-olacak-954517.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, kim jong un ile arkadaş olmak istiyor
+            abd ve güney kore'nin her yıl ortaklaşa düzenlediği ulchi freedom shield askeri tatbikatı, abd başkanı donald trump'ın kararıyla erken sonlandırıldı. normal şartlarda 11 gün sürmesi planlanan dev tatbikat, beşinci gününde aniden durduruldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, Kim Jong Un ile arkadaş olmak istiyor</h3>
+                    <p>ABD ve Güney Kore'nin her yıl ortaklaşa düzenlediği Ulchi Freedom Shield askeri tatbikatı, ABD Başkanı Donald Trump'ın kararıyla erken sonlandırıldı. Normal şartlarda 11 gün sürmesi planlanan dev tatbikat, beşinci gününde aniden durduruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/trump-kim-jong-un-ile-arkadas-olmak-istiyor-954515.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pervin buldan: 'öcalan silahsızlanma ve siyasallaşma kurulunda yer alacak'
+            dem parti i̇mralı heyeti üyesi ve van milletvekili pervin buldan, pkk lideri abdullah öcalan'ın "silahsızlanma ve siyasallaşma" adıyla kurulması planlanan alt kurulda yer alacağını söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Pervin Buldan: 'Öcalan silahsızlanma ve siyasallaşma kurulunda yer alacak'</h3>
+                    <p>DEM Parti İmralı heyeti üyesi ve Van Milletvekili Pervin Buldan, PKK lideri Abdullah Öcalan'ın "Silahsızlanma ve Siyasallaşma" adıyla kurulması planlanan alt kurulda yer alacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y0n1dg4zqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uss lincoln, orta doğu'daki uzun süreli görevinden sonra abd'ye dönüyor
+            i̇ran ile yaşanan çatışmalar kapsamında orta doğu'da görev yapan nimitz sınıfı uçak gemisi uss abraham lincoln, dokuz aylık uzatmalı görevinin ardından abd'ye dönmek üzere yola çıktı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>USS Lincoln, Orta Doğu'daki uzun süreli görevinden sonra ABD'ye dönüyor</h3>
+                    <p>İran ile yaşanan çatışmalar kapsamında Orta Doğu'da görev yapan Nimitz sınıfı uçak gemisi USS Abraham Lincoln, dokuz aylık uzatmalı görevinin ardından ABD'ye dönmek üzere yola çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/uss-lincoln-orta-dogudaki-uzun-sureli-gorevinden-sonra-abdye-donuyor-954522.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail savunma bakanı katz: 'erdoğan türkiye'yi suriye'de tehlikeli maceralara sürüklüyor'
+            i̇srail'in suriye'nin kuzeyinde bir hava üssünü "türkiye'den yığınak" iddiasıyla vurmasının ardından i̇srail savunma bakanı israel katz, sosyal medya hesabından türkçe yaptığı paylaşımda “erdoğan türkiye’yi suriye’de tehlikeli maceralara sürüklüyor” ifadelerini kullandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İsrail Savunma Bakanı Katz: 'Erdoğan Türkiye'yi Suriye'de tehlikeli maceralara sürüklüyor'</h3>
+                    <p>İsrail'in Suriye'nin kuzeyinde bir hava üssünü "Türkiye'den yığınak" iddiasıyla vurmasının ardından İsrail Savunma Bakanı Israel Katz, sosyal medya hesabından Türkçe yaptığı paylaşımda “Erdoğan Türkiye’yi Suriye’de tehlikeli maceralara sürüklüyor” ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9d8zz1w729o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye ve yunanistan'dan karşılıklı adımlar: ege denizi'nde gerilim neden arttı?
+            nisan ve mayıs aylarında silahlanma ve askeri girişimler nedeniyle gerilen türk-yunan ilişkileri, şimdi de tarafların ege denizi'nde ekoloji ve enerji alanlarında yeni mekansal alanlar ilan etmesi nedeniyle tırmanma işareti veriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye ve Yunanistan'dan karşılıklı adımlar: Ege Denizi'nde gerilim neden arttı?</h3>
+                    <p>Nisan ve mayıs aylarında silahlanma ve askeri girişimler nedeniyle gerilen Türk-Yunan ilişkileri, şimdi de tarafların Ege Denizi'nde ekoloji ve enerji alanlarında yeni mekansal alanlar ilan etmesi nedeniyle tırmanma işareti veriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce97lk57zjro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            alberta, kanada'dan ayrılıp bağımsızlığını ilan edecek mi?
+            kanada'nın petrol ve doğal gaz zengini alberta eyaleti, ülkenin geleceğini ve birliğini doğrudan etkileyebilecek tarihi bir oylamaya hazırlanıyor. eyalet, ekim ayında vatandaşlara alberta'nın kanada'nın bir parçası olarak kalması mı gerektiği yoksa bağımsızlık konusunda bağlayıcı bir referandum sürecinin mi başlatılması gerektiği sorusunu soracak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Alberta, Kanada'dan ayrılıp bağımsızlığını ilan edecek mi?</h3>
+                    <p>Kanada'nın petrol ve doğal gaz zengini Alberta eyaleti, ülkenin geleceğini ve birliğini doğrudan etkileyebilecek tarihi bir oylamaya hazırlanıyor. Eyalet, ekim ayında vatandaşlara Alberta'nın Kanada'nın bir parçası olarak kalması mı gerektiği yoksa bağımsızlık konusunda bağlayıcı bir referandum sürecinin mi başlatılması gerektiği sorusunu soracak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/alberta-kanadadan-ayrilip-bagimsizligini-ilan-edecek-mi-954523.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail medyası ebu zuhur hava üssü saldırısını nasıl yorumladı?
+            i̇srail'de sağ çizgideki medya, i̇srail'in türkiye sınırına yakın bir suriye hava üssünü vurmasının ardından türkiye ile gerilimin tırmanma ihtimaline karşı uyarıda bulundu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İsrail medyası Ebu Zuhur Hava Üssü saldırısını nasıl yorumladı?</h3>
+                    <p>İsrail'de sağ çizgideki medya, İsrail'in Türkiye sınırına yakın bir Suriye hava üssünü vurmasının ardından Türkiye ile gerilimin tırmanma ihtimaline karşı uyarıda bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cevmrjxz484o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇bb davasında ikinci celse: duruşmalarda neler yaşandı?
+            görevden uzaklaştırılan i̇stanbul büyükşehir belediye başkanı ekrem i̇mamoğlu'nun yargılandığı davanın 17 ağustos'ta başlayan ikinci celsesi sürüyor. savunmalardan öne çıkanları aktarıyoruz.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İBB davasında ikinci celse: Duruşmalarda neler yaşandı?</h3>
+                    <p>Görevden uzaklaştırılan İstanbul Büyükşehir Belediye Başkanı Ekrem İmamoğlu'nun yargılandığı davanın 17 Ağustos'ta başlayan ikinci celsesi sürüyor. Savunmalardan öne çıkanları aktarıyoruz.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyr0ee0k00o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            zonguldak'ta 2 gün denize girmek yasak
+            zonguldak’ta olumsuz hava koşulları nedeniyle bugün tam gün, yarın saat 12.00’ye kadar denize girmek yasaklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Zonguldak'ta 2 gün denize girmek yasak</h3>
+                    <p>Zonguldak’ta olumsuz hava koşulları nedeniyle bugün tam gün, yarın saat 12.00’ye kadar denize girmek yasaklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/zonguldakta-2-gun-denize-girmek-yasak-954518.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            acun ilıcalı bbc türkçe'ye konuştu: hull city ile premier league hayali nasıl gerçek oldu?
+            hull city’yi dokuz sezonluk aranın ardından premier league’e taşıyan acun ilıcalı, bbc türkçe’ye yükseliş hikâyesini, i̇ngiliz ve türk futbolu arasındaki farkları ve yeni sezon hedeflerini anlatıyor
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Acun Ilıcalı BBC Türkçe'ye konuştu: Hull City ile Premier League hayali nasıl gerçek oldu?</h3>
+                    <p>Hull City’yi dokuz sezonluk aranın ardından Premier League’e taşıyan Acun Ilıcalı, BBC Türkçe’ye yükseliş hikâyesini, İngiliz ve Türk futbolu arasındaki farkları ve yeni sezon hedeflerini anlatıyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwymr41drlmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
