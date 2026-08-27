@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-27 16:15</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynanin-saldirilarina-karsi-ingiliz-askeri-tesisleri-hedef-alinabilir-955127.html" target="_blank">
+                <strong>Rusya: Ukrayna'nın saldırılarına karşı İngiliz askeri tesisleri hedef alınabilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/ispanyada-muze-soygunu-3-bin-yillik-paha-bicilemez-altin-hazine-dort-dakikada-calindi-955133.html" target="_blank">
+                <strong>İspanya'da müze soygunu: 3 bin yıllık paha biçilemez altın hazine dört dakikada çalındı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c1dlp509329o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Savaş suçlusu Ratko Mladiç cezaevinde öldü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c2096y1ey0go?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Pankreas kanserinde 'çığır açıcı tedavi' ABD'de onaylandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cly899d2l8vo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Beşiktaş Avrupa Ligi için Litvanya'da avantajlı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: ukrayna'nın saldırılarına karşı i̇ngiliz askeri tesisleri hedef alınabilir
+            rusya dışişleri bakanlığı sözcüsü mariya zaharova, rus topraklarına yönelik saldırılara cevaben ukrayna dışında i̇ngiliz askeri tesislerinin hedef alınabileceğini belirterek "ülkemizin sivil halkına karşı savaş suçu işleyenler, uygun şekilde cezalandırılacak." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Ukrayna'nın saldırılarına karşı İngiliz askeri tesisleri hedef alınabilir</h3>
+                    <p>Rusya Dışişleri Bakanlığı Sözcüsü Mariya Zaharova, Rus topraklarına yönelik saldırılara cevaben Ukrayna dışında İngiliz askeri tesislerinin hedef alınabileceğini belirterek "Ülkemizin sivil halkına karşı savaş suçu işleyenler, uygun şekilde cezalandırılacak." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynanin-saldirilarina-karsi-ingiliz-askeri-tesisleri-hedef-alinabilir-955127.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya'da müze soygunu: 3 bin yıllık paha biçilemez altın hazine dört dakikada çalındı
+            i̇spanya’nın güneydoğusundaki villena kentinde bir müzeye baskın düzenleyen hırsızlar, avrupa’nın en önemli tarih öncesi koleksiyonları arasında gösterilen bronz çağı’na ait altın hazineyi yalnızca dört dakika içinde çaldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İspanya'da müze soygunu: 3 bin yıllık paha biçilemez altın hazine dört dakikada çalındı</h3>
+                    <p>İspanya’nın güneydoğusundaki Villena kentinde bir müzeye baskın düzenleyen hırsızlar, Avrupa’nın en önemli tarih öncesi koleksiyonları arasında gösterilen Bronz Çağı’na ait altın hazineyi yalnızca dört dakika içinde çaldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ispanyada-muze-soygunu-3-bin-yillik-paha-bicilemez-altin-hazine-dort-dakikada-calindi-955133.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pankreas kanserinde 'çığır açıcı tedavi' abd'de onaylandı
+            uzmanlar, daraksonrasib adlı ilacı, en ölümcül kanser türlerinden biri için "çığır açıcı bir ilaç" olarak nitelendirdi. çalışmalarda ilaç, hastaların hayatta kalma süresini ortalama iki katına çıkardı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Pankreas kanserinde 'çığır açıcı tedavi' ABD'de onaylandı</h3>
+                    <p>Uzmanlar, daraksonrasib adlı ilacı, en ölümcül kanser türlerinden biri için "çığır açıcı bir ilaç" olarak nitelendirdi. Çalışmalarda ilaç, hastaların hayatta kalma süresini ortalama iki katına çıkardı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c2096y1ey0go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beşiktaş avrupa ligi için litvanya'da avantajlı
+            beşiktaş, uefa avrupa ligi'ne kalabilmek için bu akşam litvanya'da kauno zalgiris ile karşılaşacak. siyah beyazlılar i̇stanbul'daki ilk maçı 3-0 kazanmıştı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beşiktaş Avrupa Ligi için Litvanya'da avantajlı</h3>
+                    <p>Beşiktaş, UEFA Avrupa Ligi'ne kalabilmek için bu akşam Litvanya'da Kauno Zalgiris ile karşılaşacak. Siyah beyazlılar İstanbul'daki ilk maçı 3-0 kazanmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly899d2l8vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail, batı şeria'daki tubas'ta bazı yapıları yıktı, filistinlilere ait 30 yapı için yıkım tebligatı gönderdi
+            i̇şgalci i̇srail ordusunun işgal altındaki batı şeria'nın kuzeyindeki tubas kentinde bazı konut ve tarım amaçlı yapıları yıktığı, işgal altındaki doğu kudüs'te filistinlilere ait 30 yapı için de yıkım tebligatı gönderdiği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İşgalci İsrail, Batı Şeria'daki Tubas'ta bazı yapıları yıktı, Filistinlilere ait 30 yapı için yıkım tebligatı gönderdi</h3>
+                    <p>İşgalci İsrail ordusunun işgal altındaki Batı Şeria'nın kuzeyindeki Tubas kentinde bazı konut ve tarım amaçlı yapıları yıktığı, işgal altındaki Doğu Kudüs'te Filistinlilere ait 30 yapı için de yıkım tebligatı gönderdiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-bati-seriadaki-tubasta-bazi-yapilari-yikti-filistinlilere-ait-30-yapi-icin-yikim-tebligati-gonderdi-955129.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sdg'nin feshi türkiye ve suriye kürtleri için ne anlama geliyor?
+            suriye demokratik güçleri (sdf) lideri mazlum abdi, 25 ağustos'ta grubun kendini feshettiğini açıkladı. peki bundan sonra suriyeli kürtleri ne bekliyor? hamle, türkiye için ne anlama geliyor?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>SDG'nin feshi Türkiye ve Suriye Kürtleri için ne anlama geliyor?</h3>
+                    <p>Suriye Demokratik Güçleri (SDF) lideri Mazlum Abdi, 25 Ağustos'ta grubun kendini feshettiğini açıkladı. Peki bundan sonra Suriyeli Kürtleri ne bekliyor? Hamle, Türkiye için ne anlama geliyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ceq8nq9l8y4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal-tibet sınırında meydana gelen sel felaketine ne sebep oldu?
+            abd jeolojik araştırmalar kurumu, felaketin ardında bir buzul çökmesinin olduğunu söylüyor ancak uzmanlar selin aşağı havzada nasıl geliştiğini hala araştırıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Nepal-Tibet sınırında meydana gelen sel felaketine ne sebep oldu?</h3>
+                    <p>ABD Jeolojik Araştırmalar Kurumu, felaketin ardında bir buzul çökmesinin olduğunu söylüyor ancak uzmanlar selin aşağı havzada nasıl geliştiğini hala araştırıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjw5dwjyj4do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            savaş suçlusu ratko mladiç cezaevinde öldü
+            bosnalı sırp savaş suçlusu ratko mladiç, lahey'deki bm hapishanesinde 84 yaşında öldü. mladiç, srebrenitsa soykırımına "büyük ölçüde katkıda bulunduğu" gerekçesiyle ömür boyu hapis cezası çarptırmıştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Savaş suçlusu Ratko Mladiç cezaevinde öldü</h3>
+                    <p>Bosnalı Sırp savaş suçlusu Ratko Mladiç, Lahey'deki BM hapishanesinde 84 yaşında öldü. Mladiç, Srebrenitsa soykırımına "büyük ölçüde katkıda bulunduğu" gerekçesiyle ömür boyu hapis cezası çarptırmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1dlp509329o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manifest grubunun menajeri tolga akış gözaltına alındı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında, manifest grubunun menajeri tolga akış gözaltına alındı. adliye kaynaklarına göre soruşturma, akış hakkında, "müstehcenlik", "uyuşturucu madde kullanma" ve "suçtan kaynaklanan mal varlığı değerlerini aklama" şüphesiyle yürütülüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Manifest grubunun menajeri Tolga Akış gözaltına alındı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında, Manifest grubunun menajeri Tolga Akış gözaltına alındı. Adliye kaynaklarına göre soruşturma, Akış hakkında, "müstehcenlik", "uyuşturucu madde kullanma" ve "suçtan kaynaklanan mal varlığı değerlerini aklama" şüphesiyle yürütülüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c93eqpwjd7wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çocukların ekran kullanımına nitelikli ve güvenilir alternatifler trt çocuktan
+            yaz tatiliyle birlikte çocukların günlük rutinleri değişirken ekran karşısında geçirdikleri süre de artıyor. trt çocuk, sunduğu dijital uygulamalarla çocukları güvenle keşfettikleri, okudukları ve oyun oynadıkları bir dünyaya davet ediyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Çocukların ekran kullanımına nitelikli ve güvenilir alternatifler TRT Çocuktan</h3>
+                    <p>Yaz tatiliyle birlikte çocukların günlük rutinleri değişirken ekran karşısında geçirdikleri süre de artıyor. TRT Çocuk, sunduğu dijital uygulamalarla çocukları güvenle keşfettikleri, okudukları ve oyun oynadıkları bir dünyaya davet ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/cocuklarin-ekran-kullanimina-nitelikli-ve-guvenilir-alternatifler-trt-cocuktan-955132.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hollanda'da batı nil virüsünden bir kişi öldü
+            hollanda'da, batı nil virüsü nedeniyle bir kişi hayatını kaybederken, ulusal halk sağlığı ve çevre enstitüsü (rivm), virüse yakalandığından şüphelenen veya belirti gösteren kişilerin kurumla iletişime geçmesi çağrısı yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Hollanda'da Batı Nil virüsünden bir kişi öldü</h3>
+                    <p>Hollanda'da, Batı Nil virüsü nedeniyle bir kişi hayatını kaybederken, Ulusal Halk Sağlığı ve Çevre Enstitüsü (RIVM), virüse yakalandığından şüphelenen veya belirti gösteren kişilerin kurumla iletişime geçmesi çağrısı yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hollandada-bati-nil-virusunden-bir-kisi-oldu-955131.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da yasa dışı bahis operasyonunda 2 şirketin altınlarına el konuldu
+            i̇stanbul'da, yasa dışı bahis gelirlerinin aklanmasına yönelik soruşturmada, dinamik elektronik para ve ödeme hizmetleri aş ile dinamik menkul değerler aş'ye ait 25,5 kilogram altına el konulduğu bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da yasa dışı bahis operasyonunda 2 şirketin altınlarına el konuldu</h3>
+                    <p>İstanbul'da, yasa dışı bahis gelirlerinin aklanmasına yönelik soruşturmada, Dinamik Elektronik Para ve Ödeme Hizmetleri AŞ ile Dinamik Menkul Değerler AŞ'ye ait 25,5 kilogram altına el konulduğu bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-yasa-disi-bahis-operasyonunda-2-sirketin-altinlarina-el-konuldu-955124.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uefa, infantino hakkında suç duyurusuna hazırlanıyor
+            uefa, dünya kupası'ndaki hisselerin satılmasına ilişkin iptal edilen plan nedeniyle fifa başkanı gianni infantino hakkında cezai işlem başlatıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>UEFA, Infantino hakkında suç duyurusuna hazırlanıyor</h3>
+                    <p>UEFA, Dünya Kupası'ndaki hisselerin satılmasına ilişkin iptal edilen plan nedeniyle FIFA Başkanı Gianni Infantino hakkında cezai işlem başlatıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crl6nnzng98o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp sözcüsü sarı 'mansur yavaş chp'de siyaset yapacak' dedi, ankara büyükşehir belediyesi yalanladı
+            ankara büyükşehir belediyesi (abb), chp sözcüsü müslim sarı'nın mansur yavaş'ın 'siyasete chp'de devam edeceği' şeklindeki açıklamalarına yanıt verdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP Sözcüsü Sarı 'Mansur Yavaş CHP'de siyaset yapacak' dedi, Ankara Büyükşehir Belediyesi yalanladı</h3>
+                    <p>Ankara Büyükşehir Belediyesi (ABB), CHP Sözcüsü Müslim Sarı'nın Mansur Yavaş'ın 'siyasete CHP'de devam edeceği' şeklindeki açıklamalarına yanıt verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ced70d3w04xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal-tibet sınırında sel felaketi: ölü sayısı 350’yi aştı, yüzlerce kayıp var
+            nepal tarafında yetkililerin son açıklamasında hayatını kaybedenlerin sayısının 359'a ulaştığı duyuruldu. tibet ve nepal'de aralarında turistlerin de olduğu yüzlerce kişiyse halen kayıp.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nepal-Tibet sınırında sel felaketi: Ölü sayısı 350’yi aştı, yüzlerce kayıp var</h3>
+                    <p>Nepal tarafında yetkililerin son açıklamasında hayatını kaybedenlerin sayısının 359'a ulaştığı duyuruldu. Tibet ve Nepal'de aralarında turistlerin de olduğu yüzlerce kişiyse halen kayıp.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1583l5q711o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal'de yakınlar anlatıyor: 'ailem gözlerimin önünde sele kapıldı'
+            nepal'in kuzeyini etkisi altına alan ve büyük yıkım yaratan sellerde 1000'den fazla kayıp var. görgü tanıklarının ifadeleri aniden yaşanan dehşeti gözler önüne seriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nepal'de yakınlar anlatıyor: 'Ailem gözlerimin önünde sele kapıldı'</h3>
+                    <p>Nepal'in kuzeyini etkisi altına alan ve büyük yıkım yaratan sellerde 1000'den fazla kayıp var. Görgü tanıklarının ifadeleri aniden yaşanan dehşeti gözler önüne seriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp84lzdngmeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manifest'in kurucusu tolga akış gözaltına alındı
+            kamuoyunda "manifest" olarak bilinen grubun kurucusu ve menajeri tolga akış, hakkında yürütülen soruşturma kapsamında gözaltına alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Manifest'in kurucusu Tolga Akış gözaltına alındı</h3>
+                    <p>Kamuoyunda "Manifest" olarak bilinen grubun kurucusu ve menajeri Tolga Akış, hakkında yürütülen soruşturma kapsamında gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/manifestin-kurucusu-tolga-akis-gozaltina-alindi-955123.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan'dan diplomasi trafiği
+            cumhurbaşkanı recep tayyip erdoğan, kazakistan cumhurbaşkanı kasım cömert tokayev, kongo demokratik cumhuriyeti cumhurbaşkanı félix tshisekedi ve ruanda cumhurbaşkanı paul kagame ile telefon görüşmesi gerçekleştirdi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan'dan diplomasi trafiği</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kazakistan Cumhurbaşkanı Kasım Cömert Tokayev, Kongo Demokratik Cumhuriyeti Cumhurbaşkanı Félix Tshisekedi ve Ruanda Cumhurbaşkanı Paul Kagame ile telefon görüşmesi gerçekleştirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogandan-diplomasi-trafigi-955128.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan kongolu mevkidaşıyla görüştü
+            cumhurbaşkanı recep tayyip erdoğan, kongo demokratik cumhuriyeti cumhurbaşkanı félix tshisekedi ile bir telefon görüşmesi gerçekleştirdi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan Kongolu mevkidaşıyla görüştü</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kongo Demokratik Cumhuriyeti Cumhurbaşkanı Félix Tshisekedi ile bir telefon görüşmesi gerçekleştirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kongolu-mevkidasiyla-gorustu-955126.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan kazakistanlı mevkidaşıyla görüştü
+            cumhurbaşkanı recep tayyip erdoğan, kazakistan cumhurbaşkanı kasım cömert tokayev ile bir telefon görüşmesi gerçekleştirdi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan Kazakistanlı mevkidaşıyla görüştü</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kazakistan Cumhurbaşkanı Kasım Cömert Tokayev ile bir telefon görüşmesi gerçekleştirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kazakistanli-mevkidasiyla-gorustu-955125.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
