@@ -3,7 +3,8 @@ name: Daily AI News
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 5 * * *"
+    - cron: "17 8 * * *"
+      timezone: "Europe/Istanbul"
 
 permissions:
   contents: write
