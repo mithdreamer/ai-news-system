@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>19</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-08-30 10:29</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy7zd1vnjedo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İzlandalılar AB üyeliği için müzakerelerin başlatılması planını reddetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c99dvg31d3mo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Füceyre nerede ve İran ile BAE arasında neden gerilime yol açtı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwyzdgek2g8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD'nin Venezuela ile vardığı 65 milyar varillik petrol anlaşması hakkında neler biliniyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri-gunu-mesaji-955362.html" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan'dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-ciftciterorsuz-turkiye-surecine-engel-cikaranlara-musamaha-gosterilmeyecek-955361.html" target="_blank">
+                <strong>Bakan Çiftçi:Terörsüz Türkiye sürecine engel çıkaranlara müsamaha gösterilmeyecek</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇zlandalılar ab üyeliği için müzakerelerin başlatılması planını reddetti
+            i̇zlandalılar, avrupa birliği ile üyelik müzakerelerinin yeniden başlatılması için yapılan referandumda "hayır" dedi. hükümetin brüksel ile üyelik müzakereleri başlatma planı yüzde 5,5'ten fazla bir farkla reddedildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İzlandalılar AB üyeliği için müzakerelerin başlatılması planını reddetti</h3>
+                    <p>İzlandalılar, Avrupa Birliği ile üyelik müzakerelerinin yeniden başlatılması için yapılan referandumda "Hayır" dedi. Hükümetin Brüksel ile üyelik müzakereleri başlatma planı yüzde 5,5'ten fazla bir farkla reddedildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy7zd1vnjedo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mehdi zana için diyarbakır'da cenaze töreni
+            seksen beş yaşında hayatını kaybeden kürt siyasetinin tanınan isimlerinden ve eski diyarbakır belediye başkanı mehdi zana bugün toprağa verilecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mehdi Zana için Diyarbakır'da cenaze töreni</h3>
+                    <p>Seksen beş yaşında hayatını kaybeden Kürt siyasetinin tanınan isimlerinden ve eski Diyarbakır Belediye Başkanı Mehdi Zana bugün toprağa verilecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz6zl7jz1gzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇zlanda'yı bölen ab referandumu: egemenlik, balıkçılık ve trump etkisi tartışılıyor
+            cumartesi günkü avrupa birliği (ab) referandumu i̇zlanda'yı bölmüş görünüyor. referandumda doğrudan ab'ye üyelik değil, üyelik müzakerelerinin yeniden başlatılıp başlatılmamasına karar verilecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İzlanda'yı bölen AB referandumu: Egemenlik, balıkçılık ve Trump etkisi tartışılıyor</h3>
+                    <p>Cumartesi günkü Avrupa Birliği (AB) referandumu İzlanda'yı bölmüş görünüyor. Referandumda doğrudan AB'ye üyelik değil, üyelik müzakerelerinin yeniden başlatılıp başlatılmamasına karar verilecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0m30dmyrlpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küba verimli topraklarına rağmen neden halkını doyuramıyor?
+            küba, onlarca yıldır süren kötü planlama, şekere bağımlılık ve abd yaptırımları nedeniyle, tarımsal potansiyeline rağmen, gıdasının %80'ini ithal ediyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Küba verimli topraklarına rağmen neden halkını doyuramıyor?</h3>
+                    <p>Küba, onlarca yıldır süren kötü planlama, şekere bağımlılık ve ABD yaptırımları nedeniyle, tarımsal potansiyeline rağmen, gıdasının %80'ini ithal ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly52mj1483o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            füceyre nerede ve i̇ran ile bae arasında neden gerilime yol açtı?
+            füceyre, bae'nin petrolünün bir kısmını hürmüz boğazı'ndan geçirmeden ihraç etmesi bakımından hayati bir güzergâh işlevi görüyor. fakat i̇ran'ın savaşı tam da bu avantajın limanı ve altyapısını aynı zamanda daha savunmasız hale getirebileceğini gösterdi.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Füceyre nerede ve İran ile BAE arasında neden gerilime yol açtı?</h3>
+                    <p>Füceyre, BAE'nin petrolünün bir kısmını Hürmüz Boğazı'ndan geçirmeden ihraç etmesi bakımından hayati bir güzergâh işlevi görüyor. Fakat İran'ın savaşı tam da bu avantajın limanı ve altyapısını aynı zamanda daha savunmasız hale getirebileceğini gösterdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c99dvg31d3mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin venezuela ile vardığı 65 milyar varillik petrol anlaşması hakkında neler biliniyor?
+            donald trump, venezuela ile 65 milyar varilden fazla petrol rezervinin abd kontrolüne geçeceği bir anlaşmaya varıldığını duyurdu. venezuela'nın geçici devlet başkanı, bu alışılmadık anlaşmanın ülkesinin ekonomisini canlandırmaya yardımcı olacağını söyledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD'nin Venezuela ile vardığı 65 milyar varillik petrol anlaşması hakkında neler biliniyor?</h3>
+                    <p>Donald Trump, Venezuela ile 65 milyar varilden fazla petrol rezervinin ABD kontrolüne geçeceği bir anlaşmaya varıldığını duyurdu. Venezuela'nın geçici devlet başkanı, bu alışılmadık anlaşmanın ülkesinin ekonomisini canlandırmaya yardımcı olacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyzdgek2g8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mekke anlaşması kapsamında kurulan komite ilk kez i̇stanbul'da toplanacak
+            türkiye, pakistan ve suudi arabistan arasında imzalanan mekke ortak savunma anlaşması kapsamında kurulan stratejik siyasi ve savunma komitesi, ilk toplantısını yarın i̇stanbul’da yapacak. toplantıda savunma iş birliği, ortak üretim, terörle mücadele ve uluslararası güvenlik başlıkları ele alınacak.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Mekke Anlaşması kapsamında kurulan komite ilk kez İstanbul'da toplanacak</h3>
+                    <p>Türkiye, Pakistan ve Suudi Arabistan arasında imzalanan Mekke Ortak Savunma Anlaşması kapsamında kurulan Stratejik Siyasi ve Savunma Komitesi, ilk toplantısını yarın İstanbul’da yapacak. Toplantıda savunma iş birliği, ortak üretim, terörle mücadele ve uluslararası güvenlik başlıkları ele alınacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/mekke-anlasmasi-kapsaminda-kurulan-komite-ilk-kez-istanbulda-toplanacak-955366.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin büyüme rakamları yarın açıklanacak
+            türkiye ekonomisinin bu yılın ikinci çeyreğine ilişkin büyüme rakamları yarın kamuoyuyla paylaşılacak.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türkiye'nin büyüme rakamları yarın açıklanacak</h3>
+                    <p>Türkiye ekonomisinin bu yılın ikinci çeyreğine ilişkin büyüme rakamları yarın kamuoyuyla paylaşılacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-buyume-rakamlari-yarin-aciklanacak-955358.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan'dan 30 ağustos türk silahlı kuvvetleri günü mesajı
+            cumhurbaşkanı recep tayyip erdoğan, türk silahlı kuvvetlerinin 2 bin 235 yıllık şanlı mazisiyle türkiye'nin gururu ve milletin göz bebeği olduğunu belirterek, kahraman mehmetçiklere muvaffakiyetler diledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan'dan 30 Ağustos Türk Silahlı Kuvvetleri Günü mesajı</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Türk Silahlı Kuvvetlerinin 2 bin 235 yıllık şanlı mazisiyle Türkiye'nin gururu ve milletin göz bebeği olduğunu belirterek, kahraman Mehmetçiklere muvaffakiyetler diledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogandan-30-agustos-turk-silahli-kuvvetleri-gunu-mesaji-955362.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan çiftçi:terörsüz türkiye sürecine engel çıkaranlara müsamaha gösterilmeyecek
+            i̇çişleri bakanı mustafa çiftçi, diyarbakır'da terör örgütü mensuplarının posterlerini asarak provokasyon girişiminde bulunan 4 kişinin gözaltına alındığını belirterek, "terörsüz türkiye sürecine engel çıkaran hiç kimseye müsamaha gösterilmeyecektir" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Çiftçi:Terörsüz Türkiye sürecine engel çıkaranlara müsamaha gösterilmeyecek</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, Diyarbakır'da terör örgütü mensuplarının posterlerini asarak provokasyon girişiminde bulunan 4 kişinin gözaltına alındığını belirterek, "Terörsüz Türkiye sürecine engel çıkaran hiç kimseye müsamaha gösterilmeyecektir" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-ciftciterorsuz-turkiye-surecine-engel-cikaranlara-musamaha-gosterilmeyecek-955361.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            muğla'dan antalya kaş'a sıçrayan yangında evler hasar gördü, can kaybı yok
+            muğla'nın seydikemer ilçesinde başlayıp rüzgarın etkisiyle antalya'nın kaş ilçesine sıçrayan orman yangınına müdahale ediliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Muğla'dan Antalya Kaş'a sıçrayan yangında evler hasar gördü, can kaybı yok</h3>
+                    <p>Muğla'nın Seydikemer ilçesinde başlayıp rüzgarın etkisiyle Antalya'nın Kaş ilçesine sıçrayan orman yangınına müdahale ediliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn078109kjeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cevdet yılmaz'dan 30 ağustos mesajı: büyük zafer'in ruhunu geleceğe taşıyacağız
+            cumhurbaşkanı yardımcısı cevdet yılmaz, 30 ağustos'un milletin vatan sevgisi, bağımsız yaşama azmi ve sarsılmaz iradesiyle kazanılan büyük bir zafer olduğunu vurguladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cevdet Yılmaz'dan 30 Ağustos mesajı: Büyük Zafer'in ruhunu geleceğe taşıyacağız</h3>
+                    <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, 30 Ağustos'un milletin vatan sevgisi, bağımsız yaşama azmi ve sarsılmaz iradesiyle kazanılan büyük bir zafer olduğunu vurguladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cevdet-yilmazdan-30-agustos-mesaji-buyuk-zaferin-ruhunu-gelecege-tasiyacagiz-955364.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hürjet'te tarihi gün: gök vatan'la buluştu
+            hava kuvvetleri komutanlığına teslim edilecek ilk hürjet jet eğitim uçağı, yer ve taksi testlerinin ardından ilk uçuşunu başarıyla gerçekleştirdi. hürjet, büyük zafer'in 104. yıl dönümünde 18 dakika havada kaldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>HÜRJET'te tarihi gün: Gök Vatan'la buluştu</h3>
+                    <p>Hava Kuvvetleri Komutanlığına teslim edilecek ilk HÜRJET Jet Eğitim Uçağı, yer ve taksi testlerinin ardından ilk uçuşunu başarıyla gerçekleştirdi. HÜRJET, Büyük Zafer'in 104. yıl dönümünde 18 dakika havada kaldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/hurjette-tarihi-gun-gok-vatanla-bulustu-955363.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yatırım teşviklerinde imalat zirvede: 1770 belge verildi
+            türkiye'de bu yılın ilk 6 ayında 2 bin 410 yatırım teşvik belgesi düzenlendi. i̇malat sektörü 1770 belgeyle ilk sırada yer aldı. sektörde 189,6 milyar liralık yatırım ve 41 bin 914 kişilik istihdam öngörüldü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yatırım teşviklerinde imalat zirvede: 1770 belge verildi</h3>
+                    <p>Türkiye'de bu yılın ilk 6 ayında 2 bin 410 yatırım teşvik belgesi düzenlendi. İmalat sektörü 1770 belgeyle ilk sırada yer aldı. Sektörde 189,6 milyar liralık yatırım ve 41 bin 914 kişilik istihdam öngörüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yatirim-tesviklerinde-imalat-zirvede-1770-belge-verildi-955360.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            devlet bahçeli: bu vatan üzerinde son söz türk milletinindir
+            mhp genel başkanı devlet bahçeli, 30 ağustos zafer bayramı'nın 104. yıl dönümü dolayısıyla yayımladığı mesajda, "30 ağustos 1922, iki asrı aşan ricat devrinin tersine çevrildiği; türk süngüsünün istikametinde batıya doğru sürüldüğü gündür" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Devlet Bahçeli: Bu vatan üzerinde son söz Türk milletinindir</h3>
+                    <p>MHP Genel Başkanı Devlet Bahçeli, 30 Ağustos Zafer Bayramı'nın 104. yıl dönümü dolayısıyla yayımladığı mesajda, "30 Ağustos 1922, iki asrı aşan ricat devrinin tersine çevrildiği; Türk süngüsünün istikametinde batıya doğru sürüldüğü gündür" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/devlet-bahceli-bu-vatan-uzerinde-son-soz-turk-milletinindir-955357.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal-tibet'teki sel felaketinde can kaybı 750'yi aştı, arazi koşulları yardım ulaştırmayı zorlaştırıyor
+            yerel yetkililerin açıklamasına göre, 26 ağustos çarşamba günü meydana gelen ani sel felaketinin ardından nepal'de en az 752 kişi hayatını kaybetti, 2.500'den fazla kişi de kayıp.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nepal-Tibet'teki sel felaketinde can kaybı 750'yi aştı, arazi koşulları yardım ulaştırmayı zorlaştırıyor</h3>
+                    <p>Yerel yetkililerin açıklamasına göre, 26 Ağustos Çarşamba günü meydana gelen ani sel felaketinin ardından Nepal'de en az 752 kişi hayatını kaybetti, 2.500'den fazla kişi de kayıp.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9803mv5nlmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de 1840'ta yaşanan buzul çökmesine bağlı sel tekrarlanabilir mi?
+            dünyanın en hızlı ısınan kuşaklarından akdeniz'de yer alan türkiye'de benzer olaylar yaşandı mı? ağrı dağı'ndan cilo'ya risk var mı? uzmanlar yanıtlıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de 1840'ta yaşanan buzul çökmesine bağlı sel tekrarlanabilir mi?</h3>
+                    <p>Dünyanın en hızlı ısınan kuşaklarından Akdeniz'de yer alan Türkiye'de benzer olaylar yaşandı mı? Ağrı Dağı'ndan Cilo'ya risk var mı? Uzmanlar yanıtlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2zypd2vkzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            katil i̇srail'in gazze'ye son 24 saatte düzenlediği saldırılarda 5 kişi hayatını kaybetti
+            katil i̇srail ordusunun ateşkese rağmen gazze şeridi'ne düzenlediği saldırılarda son 24 saatte 5 kişi yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Katil İsrail'in Gazze'ye son 24 saatte düzenlediği saldırılarda 5 kişi hayatını kaybetti</h3>
+                    <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi'ne düzenlediği saldırılarda son 24 saatte 5 kişi yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-son-24-saatte-duzenledigi-saldirilarda-5-kisi-hayatini-kaybetti-955359.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇sviçre'nin aargau kantonundaki silahlı saldırıda 1 kişi öldü, 5 kişi yaralandı
+            i̇sviçre'nin aargau kantonundaki schachen bölgesinde silahlı saldırı sonucu 1 kişinin öldüğü, 5 kişinin yaralandığı duyuruldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İsviçre'nin Aargau kantonundaki silahlı saldırıda 1 kişi öldü, 5 kişi yaralandı</h3>
+                    <p>İsviçre'nin Aargau kantonundaki Schachen bölgesinde silahlı saldırı sonucu 1 kişinin öldüğü, 5 kişinin yaralandığı duyuruldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isvicrenin-aargau-kantonundaki-silahli-saldirida-1-kisi-oldu-5-kisi-yaralandi-955356.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇kiz rahipler ve ikiz kilise görevlilerinin yönettiği düğünle evlenen ikiz çiftler hindistan'da viral oldu
+            hindistan'da iki ayrı ikiz kardeşlerin yer aldığı bir düğün fotoğrafı viral oldu. fotoğrafta ikiz erkek kardeşlerin ikiz kız kardeşlerle evlendiği, töreni ikiz rahiplerin yönettiği ve ikiz kilise görevlisi çocukların yardımcı olduğu görülüyor. olağanüstü düğün, yıllarca süren titiz planlamanın sonucuydu.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>İkiz rahipler ve ikiz kilise görevlilerinin yönettiği düğünle evlenen ikiz çiftler Hindistan'da viral oldu</h3>
+                    <p>Hindistan'da iki ayrı ikiz kardeşlerin yer aldığı bir düğün fotoğrafı viral oldu. Fotoğrafta ikiz erkek kardeşlerin ikiz kız kardeşlerle evlendiği, töreni ikiz rahiplerin yönettiği ve ikiz kilise görevlisi çocukların yardımcı olduğu görülüyor. Olağanüstü düğün, yıllarca süren titiz planlamanın sonucuydu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp93zm7npeno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
