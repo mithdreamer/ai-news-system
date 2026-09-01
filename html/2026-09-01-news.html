@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>17</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-01 10:09</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c770re8k23no?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İngiltere Merkez Bankası Başkanı: Yapay zeka küresel ekonomik durgunluğa yol açabilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/bilim-teknoloji/turk-oyunlari-dunyada-buyuyor-gelir-6-yilda-yuzde-450-artti-955546.html" target="_blank">
+                <strong>Türk oyunları dünyada büyüyor: Gelir 6 yılda yüzde 450 arttı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/bilim-teknoloji/nukleer-teknolojilerde-genc-muhendislerin-tasarimlari-yarisacak-955540.html" target="_blank">
+                <strong>Nükleer teknolojilerde genç mühendislerin tasarımları yarışacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/enerji-ve-tabii-kaynaklar-bakanliginin-bursuna-basvurular-basladi-955539.html" target="_blank">
+                <strong>Enerji ve Tabii Kaynaklar Bakanlığının bursuna başvurular başladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c4gvzyyq2jwo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Girne açıklarında batan yolcu feribotu: Son kayıp sayısı 20 olarak açıklandı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere merkez bankası başkanı: yapay zeka küresel ekonomik durgunluğa yol açabilir
+            i̇ngiltere merkez bankası başkanı andrew bailey, g20 maliye bakanlarını yapay zekanın küresel bir ekonomik durgunluğa yol açabileceği konusunda uyardı. finansal sistemler için önemli bir siber güvenlik riski oluşturabileceğini ifade etti.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İngiltere Merkez Bankası Başkanı: Yapay zeka küresel ekonomik durgunluğa yol açabilir</h3>
+                    <p>İngiltere Merkez Bankası Başkanı Andrew Bailey, G20 maliye bakanlarını yapay zekanın küresel bir ekonomik durgunluğa yol açabileceği konusunda uyardı. Finansal sistemler için önemli bir siber güvenlik riski oluşturabileceğini ifade etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c770re8k23no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk oyunları dünyada büyüyor: gelir 6 yılda yüzde 450 arttı
+            türkiye'nin 1 milyar dolar değerlemeyi aşarak "turcorn" (unicorn) ünvanı alan 8 teknoloji şirketinden 3'ü oyun sektöründe faaliyet gösterirken türk mobil oyun geliştiricileri küresel gelirlerini ve yatırım çekme kabiliyetlerini hızla artırıyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türk oyunları dünyada büyüyor: Gelir 6 yılda yüzde 450 arttı</h3>
+                    <p>Türkiye'nin 1 milyar dolar değerlemeyi aşarak "Turcorn" (unicorn) ünvanı alan 8 teknoloji şirketinden 3'ü oyun sektöründe faaliyet gösterirken Türk mobil oyun geliştiricileri küresel gelirlerini ve yatırım çekme kabiliyetlerini hızla artırıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/turk-oyunlari-dunyada-buyuyor-gelir-6-yilda-yuzde-450-artti-955546.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            nükleer teknolojilerde genç mühendislerin tasarımları yarışacak
+            teknofest nükleer enerji teknolojileri tasarım yarışması’nda 193 takımdan 733 yarışmacının geliştirdiği projeler arasından finale kalan 42 takım, türkiye’nin nükleer teknoloji geleceği için tasarladıkları çözümlerle yarışacak.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Nükleer teknolojilerde genç mühendislerin tasarımları yarışacak</h3>
+                    <p>TEKNOFEST Nükleer Enerji Teknolojileri Tasarım Yarışması’nda 193 takımdan 733 yarışmacının geliştirdiği projeler arasından finale kalan 42 takım, Türkiye’nin nükleer teknoloji geleceği için tasarladıkları çözümlerle yarışacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/nukleer-teknolojilerde-genc-muhendislerin-tasarimlari-yarisacak-955540.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            enerji ve tabii kaynaklar bakanlığının bursuna başvurular başladı
+            enerji ve tabii kaynaklar bakanlığının ilgili kuruluşu türkiye enerji, nükleer ve maden araştırma kurumu (tenmak) tarafından lisans öğrencilerine yönelik hazırlanan yurt i̇çi lisans başarı bursu programı için başvurular başladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Enerji ve Tabii Kaynaklar Bakanlığının bursuna başvurular başladı</h3>
+                    <p>Enerji ve Tabii Kaynaklar Bakanlığının ilgili kuruluşu Türkiye Enerji, Nükleer ve Maden Araştırma Kurumu (TENMAK) tarafından lisans öğrencilerine yönelik hazırlanan Yurt İçi Lisans Başarı Bursu Programı için başvurular başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/enerji-ve-tabii-kaynaklar-bakanliginin-bursuna-basvurular-basladi-955539.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pakistan: abd ile i̇ran arasında varılan mutabakatın uygulanması, ilerlemenin tek yoludur
+            pakistan dışişleri bakanı muhammed i̇shak dar, i̇ran dışişleri bakanı abbas erakçi ile görüşmesinde, abd ile i̇ran arasında varılan i̇slamabad mutabakatı'nın samimi şekilde uygulanmasının, ilerlemenin tek yolu olduğunu belirtti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Pakistan: ABD ile İran arasında varılan mutabakatın uygulanması, ilerlemenin tek yoludur</h3>
+                    <p>Pakistan Dışişleri Bakanı Muhammed İshak Dar, İran Dışişleri Bakanı Abbas Erakçi ile görüşmesinde, ABD ile İran arasında varılan İslamabad Mutabakatı'nın samimi şekilde uygulanmasının, ilerlemenin tek yolu olduğunu belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/pakistan-abd-ile-iran-arasinda-varilan-mutabakatin-uygulanmasi-ilerlemenin-tek-yoludur-955547.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bolu belediyesi'ne 'hayalet araç' operasyonu, 22 kişiye gözaltı
+            bolu belediyesi'ne yönelik yedi ilde "hayalet araç" operasyonu düzenlendi. operasyon kapsamında 22 şüpheli için gözaltı kararı verildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bolu Belediyesi'ne 'hayalet araç' operasyonu, 22 kişiye gözaltı</h3>
+                    <p>Bolu Belediyesi'ne yönelik yedi ilde "hayalet araç" operasyonu düzenlendi. Operasyon kapsamında 22 şüpheli için gözaltı kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlg9n5pwyqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal'deki selde hayatını kaybedenlerin sayısı 1003'e yükseldi
+            nepal'in çin sınırına yakın rasuwa bölgesi ve çevresinde meydana gelen selde hayatını kaybedenlerin sayısının 1003'e çıktığı bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Nepal'deki selde hayatını kaybedenlerin sayısı 1003'e yükseldi</h3>
+                    <p>Nepal'in Çin sınırına yakın Rasuwa bölgesi ve çevresinde meydana gelen selde hayatını kaybedenlerin sayısının 1003'e çıktığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/nepaldeki-selde-hayatini-kaybedenlerin-sayisi-1003e-yukseldi-955550.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'li rapçi tupac shakur cinayetinde eski çete elebaşı davis suçlu bulundu
+            abd'li rapçi tupac shakur'un 1996'da öldürülmesine ilişkin görülen davada duane keith davis, cinayetten suçlu bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'li rapçi Tupac Shakur cinayetinde eski çete elebaşı Davis suçlu bulundu</h3>
+                    <p>ABD'li rapçi Tupac Shakur'un 1996'da öldürülmesine ilişkin görülen davada Duane Keith Davis, cinayetten suçlu bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdli-rapci-tupac-shakur-cinayetinde-eski-cete-elebasi-davis-suclu-bulundu-955543.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            girne açıklarında batan yolcu feribotu: son kayıp sayısı 20 olarak açıklandı
+            kıbrıs'ın kuzeyinde girne açıklarında bir yolcu feribotu, limandan ayrıldıktan kısa bir süre sonra alabora oldu. feribotta 259 yolcu ve sekiz mürettebat bulunuyordu. kaptan ve yedi mürettebat gözaltına alındı.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Girne açıklarında batan yolcu feribotu: Son kayıp sayısı 20 olarak açıklandı</h3>
+                    <p>Kıbrıs'ın kuzeyinde Girne açıklarında bir yolcu feribotu, limandan ayrıldıktan kısa bir süre sonra alabora oldu. Feribotta 259 yolcu ve sekiz mürettebat bulunuyordu. Kaptan ve yedi mürettebat gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gvzyyq2jwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            girne açıklarında batan feribotun arkada bıraktığı sorular neler?
+            30 ağustos pazar günü kıbrıs'ın kuzeyinde girne'den mersin'e giden bir yolcu feribotunun limandan ayrıldıktan kısa bir süre sonra batması arkasında cevaplanması zor sorular bıraktı.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Girne açıklarında batan feribotun arkada bıraktığı sorular neler?</h3>
+                    <p>30 Ağustos Pazar günü Kıbrıs'ın kuzeyinde Girne'den Mersin'e giden bir yolcu feribotunun limandan ayrıldıktan kısa bir süre sonra batması arkasında cevaplanması zor sorular bıraktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crl6k0g5lzro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            şanghay i̇şbirliği örgütü'nün 25. yılı: türkiye'nin ilişkisi nasıl şekillendi?
+            şangay i̇şbirliği örgütü, kırgızistan'ın başkenti bişkek’te yapılan zirvede 25. yılını kutluyor. türkiye’nin örgütle ilişkisi ise asya açılımı, batı ile yaşanan gerilimler ve çok kutupluluk tartışmaları bağlamında yeniden gündemde.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Şanghay İşbirliği Örgütü'nün 25. yılı: Türkiye'nin ilişkisi nasıl şekillendi?</h3>
+                    <p>Şangay İşbirliği Örgütü, Kırgızistan'ın başkenti Bişkek’te yapılan zirvede 25. yılını kutluyor. Türkiye’nin örgütle ilişkisi ise Asya açılımı, Batı ile yaşanan gerilimler ve çok kutupluluk tartışmaları bağlamında yeniden gündemde.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly4e5dr0vgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal selinde ölü sayısı 1.000'i geçti, santralde kalan 600 çalışan aranıyor
+            nepal'in afet kurumu tarafından yapılan açıklamaya göre, 26 ağustos çarşamba tibet sınırında meydana gelen yıkıcı sellerde hayatını kaybedenlerin sayısı 1.000'i aştı. 3.900'den fazla kişi hâlâ kayıp. bunların 600'den fazlasını, trishuli nehri üzerindeki hidroelektrik santralinde çalışanlar oluşturuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nepal selinde ölü sayısı 1.000'i geçti, santralde kalan 600 çalışan aranıyor</h3>
+                    <p>Nepal'in afet kurumu tarafından yapılan açıklamaya göre, 26 Ağustos Çarşamba Tibet sınırında meydana gelen yıkıcı sellerde hayatını kaybedenlerin sayısı 1.000'i aştı. 3.900'den fazla kişi hâlâ kayıp. Bunların 600'den fazlasını, Trishuli Nehri üzerindeki hidroelektrik santralinde çalışanlar oluşturuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9803mv5nlmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            girne'deki feribot kazasında kaybolan 20 kişiyi arama çalışmaları devam ediyor
+            kuzey kıbrıs türk cumhuriyeti'nin (kktc) girne kenti açıklarında pazar günü yolcu gemisinin alabora olması sonucu kaybolan 20 kişinin aranmasına devam ediliyor. türk deniz kuvvetlerine bağlı kurtarma ve yedekleme gemisi tcg işın, arama faaliyetlerine katıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Girne'deki feribot kazasında kaybolan 20 kişiyi arama çalışmaları devam ediyor</h3>
+                    <p>Kuzey Kıbrıs Türk Cumhuriyeti'nin (KKTC) Girne kenti açıklarında pazar günü yolcu gemisinin alabora olması sonucu kaybolan 20 kişinin aranmasına devam ediliyor. Türk Deniz Kuvvetlerine bağlı kurtarma ve yedekleme gemisi TCG Işın, arama faaliyetlerine katıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/girnedeki-feribot-kazasinda-kaybolan-20-kisiyi-arama-calismalari-devam-ediyor-955541.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kemal öztürk, nusayrilere yönelik sözleri nedeniyle ifade verecek
+            gazeteci ve yazar kemal öztürk hakkında, ntv'de yayımlanan bir programda nusayrilere yönelik ifadeleri nedeniyle samandağ cumhuriyet başsavcılığı tarafından soruşturma başlatıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kemal Öztürk, Nusayrilere yönelik sözleri nedeniyle ifade verecek</h3>
+                    <p>Gazeteci ve yazar Kemal Öztürk hakkında, NTV'de yayımlanan bir programda Nusayrilere yönelik ifadeleri nedeniyle Samandağ Cumhuriyet Başsavcılığı tarafından soruşturma başlatıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8jd81d42mlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tupac shakur davasında jüri, duane davis'i cinayetten suçlu buldu
+            eski çete lideri, 63 yaşındaki duane "keffe d" davis, rapçi tupac shakur'u öldürmekten suçlu bulundu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tupac Shakur davasında jüri, Duane Davis'i cinayetten suçlu buldu</h3>
+                    <p>Eski çete lideri, 63 yaşındaki Duane "Keffe D" Davis, rapçi Tupac Shakur'u öldürmekten suçlu bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c07lk0glg24o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            deniz göktaş'a tahliye kararı verilen suçlardan tekrar tutuklama
+            komedyen deniz göktaş, hakkında 28 ağustos'ta tahliye kararı verilen suçlamalardan tekrar tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Deniz Göktaş'a tahliye kararı verilen suçlardan tekrar tutuklama</h3>
+                    <p>Komedyen Deniz Göktaş, hakkında 28 Ağustos'ta tahliye kararı verilen suçlamalardan tekrar tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0qxdyl8zw3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küçükçekmece'de usulsüz çakar kullanımına 346 bin 784 lira ceza kesildi
+            küçükçekmece'de yapılan denetimde çakar ve siren tertibatı bulunduğu tespit edilen araca 346 bin 784 lira idari para cezası kesildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Küçükçekmece'de usulsüz çakar kullanımına 346 bin 784 lira ceza kesildi</h3>
+                    <p>Küçükçekmece'de yapılan denetimde çakar ve siren tertibatı bulunduğu tespit edilen araca 346 bin 784 lira idari para cezası kesildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kucukcekmecede-usulsuz-cakar-kullanimina-346-bin-784-lira-ceza-kesildi-955544.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail ordusu, gazze şeridi'nde 10 balıkçıyı alıkoydu
+            soykırımcı i̇srail ordusu, gazze şeridi'nde denizde avlandıkları sırada 10 filistinli balıkçıyı alıkoydu. cibaliya mülteci kampı yakınlarında açılan ateş sonucu 1 filistinli yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail ordusu, Gazze Şeridi'nde 10 balıkçıyı alıkoydu</h3>
+                    <p>Soykırımcı İsrail ordusu, Gazze Şeridi'nde denizde avlandıkları sırada 10 Filistinli balıkçıyı alıkoydu. Cibaliya Mülteci Kampı yakınlarında açılan ateş sonucu 1 Filistinli yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israil-ordusu-gazze-seridinde-10-balikciyi-alikoydu-955542.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kosgeb'den kobi̇'lere 6 ayda 27 milyar liralık destek
+            küçük ve orta ölçekli i̇şletmeleri geliştirme ve destekleme i̇daresi başkanlığı (kosgeb) tarafından yılın ilk 6 ayında 24 bin 424 işletmeye 27 milyar 79 milyon 887 bin 920 lira destek sağlandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>KOSGEB'den KOBİ'lere 6 ayda 27 milyar liralık destek</h3>
+                    <p>Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi Başkanlığı (KOSGEB) tarafından yılın ilk 6 ayında 24 bin 424 işletmeye 27 milyar 79 milyon 887 bin 920 lira destek sağlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kosgebden-kobilere-6-ayda-27-milyar-liralik-destek-955538.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            diyarbakır'da amedspor - trabzonspor maçı: neler yaşandı?
+            diyarbakır'da maç heyecanı oldukça yüksekti. amedspor ile trabzonspor a takımı düzeyinde ilk defa karşılaştı. biletler günler öncesinden tükendi. galibiyet sokaklarda kutlandı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Diyarbakır'da Amedspor - Trabzonspor maçı: Neler yaşandı?</h3>
+                    <p>Diyarbakır'da maç heyecanı oldukça yüksekti. Amedspor ile Trabzonspor A takımı düzeyinde ilk defa karşılaştı. Biletler günler öncesinden tükendi. Galibiyet sokaklarda kutlandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cevwen201rko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
