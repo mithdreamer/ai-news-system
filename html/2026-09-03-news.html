@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>23</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-03 09:52</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c750znwyye5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran: ABD düğüne saldırarak savaş suçu işledi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yilliklandirilmis-ihracatta-cumhuriyet-tarihinin-rekoru-kirildi-955775.html" target="_blank">
+                <strong>Yıllıklandırılmış ihracatta Cumhuriyet tarihinin rekoru kırıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yapay-zekanin-gelecegi-elektrige-bagli-955774.html" target="_blank">
+                <strong>Yapay zekanın geleceği elektriğe bağlı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckgx12zp8dyo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ahmet Davutoğlu hakkında 'cumhurbaşkanına hakaret' soruşturması başlatıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn9wv9v881xo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>TÜİK ağustos enflasyonunu % 31,51; ENAG % 49,03 olarak açıkladı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: abd düğüne saldırarak savaş suçu işledi
+            abd merkez komutanlığı (centcom), amerikan güçlerinin 1 eylül salı günü i̇ran'a yönelik saldırıları yeniden başlattığını bildirdi. i̇ran, abd'nin bir düğün evini bombalayarak savaş suçu işlediğini açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran: ABD düğüne saldırarak savaş suçu işledi</h3>
+                    <p>ABD Merkez Komutanlığı (CENTCOM), Amerikan güçlerinin 1 Eylül Salı günü İran'a yönelik saldırıları yeniden başlattığını bildirdi. İran, ABD'nin bir düğün evini bombalayarak savaş suçu işlediğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c750znwyye5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yıllıklandırılmış ihracatta cumhuriyet tarihinin rekoru kırıldı
+            ticaret bakanı ömer bolat, ağustos ayı ihracatının, yıllık yüzde 8,1 artışla 23,5 milyar dolara çıkarak en yüksek ağustos ayı rakamı olarak kayıtlara geçtiğini belirterek, "ocak-ağustos döneminde de ihracatımız 185 milyar dolarla rekor kırdı, ağustosta yıllıklandırılmış ihracatımız 280,3 milyar dolarla cumhuriyet tarihimizin en yükseği oldu" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yıllıklandırılmış ihracatta Cumhuriyet tarihinin rekoru kırıldı</h3>
+                    <p>Ticaret Bakanı Ömer Bolat, ağustos ayı ihracatının, yıllık yüzde 8,1 artışla 23,5 milyar dolara çıkarak en yüksek ağustos ayı rakamı olarak kayıtlara geçtiğini belirterek, "Ocak-ağustos döneminde de ihracatımız 185 milyar dolarla rekor kırdı, ağustosta yıllıklandırılmış ihracatımız 280,3 milyar dolarla Cumhuriyet tarihimizin en yükseği oldu" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yilliklandirilmis-ihracatta-cumhuriyet-tarihinin-rekoru-kirildi-955775.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yapay zekanın geleceği elektriğe bağlı
+            küresel veri merkezi yatırımlarının yapay zeka talebiyle 2050'ye kadar 31,6 trilyon dolara ulaşması beklenirken, bu devasa kaynağın hangi ülkelere yöneleceğini uygun maliyetli ve güvenilir elektrik altyapısı belirleyecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yapay zekanın geleceği elektriğe bağlı</h3>
+                    <p>Küresel veri merkezi yatırımlarının yapay zeka talebiyle 2050'ye kadar 31,6 trilyon dolara ulaşması beklenirken, bu devasa kaynağın hangi ülkelere yöneleceğini uygun maliyetli ve güvenilir elektrik altyapısı belirleyecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yapay-zekanin-gelecegi-elektrige-bagli-955774.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tüi̇k ağustos enflasyonunu % 31,51; enag % 49,03 olarak açıkladı
+            türkiye i̇statistik kurumu (tüi̇k), ağustos ayı enflasyon verilerini duyurdu. açıklanan verilere göre ağustos ayında enflasyon yüzde 1,84, yıllık enflasyon ise yüzde 31,51 olarak hesaplandı. enag'a göre ise yıllık enflasyon artış oranı ise yüzde 49,03 düzeyinde.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>TÜİK ağustos enflasyonunu % 31,51; ENAG % 49,03 olarak açıkladı</h3>
+                    <p>Türkiye İstatistik Kurumu (TÜİK), ağustos ayı enflasyon verilerini duyurdu. Açıklanan verilere göre ağustos ayında enflasyon yüzde 1,84, yıllık enflasyon ise yüzde 31,51 olarak hesaplandı. ENAG'a göre ise yıllık enflasyon artış oranı ise yüzde 49,03 düzeyinde.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn9wv9v881xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan şimşek: enflasyonda düşüş devam ediyor
+            hazine ve maliye bakanı mehmet şimşek, enflasyon verilerine ilişkin yaptığı değerlendirmede, küresel ve dönemsel olumsuzluklara rağmen dezenflasyon sürecinin sürdüğünü bildirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakan Şimşek: Enflasyonda düşüş devam ediyor</h3>
+                    <p>Hazine ve Maliye Bakanı Mehmet Şimşek, enflasyon verilerine ilişkin yaptığı değerlendirmede, küresel ve dönemsel olumsuzluklara rağmen dezenflasyon sürecinin sürdüğünü bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-simsek-enflasyonda-dusus-devam-ediyor-955769.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ahmet davutoğlu hakkında 'cumhurbaşkanına hakaret' soruşturması başlatıldı
+            ankara cumhuriyet başsavcılığı, sosyal medyada paylaşılan ve cumhurbaşkanı'na hakaret içerdiği değerlendirilen ifadeler nedeniyle gelecek partisi'nin eski genel başkanı ahmet davutoğlu hakkında soruşturma başlattı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ahmet Davutoğlu hakkında 'cumhurbaşkanına hakaret' soruşturması başlatıldı</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı, sosyal medyada paylaşılan ve Cumhurbaşkanı'na hakaret içerdiği değerlendirilen ifadeler nedeniyle Gelecek Partisi'nin eski genel başkanı Ahmet Davutoğlu hakkında soruşturma başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckgx12zp8dyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            msb: suriye'ye yönelik desteğimiz devam edecek
+            milli savunma bakanlığı,yaptığı açıklamada, "türkiye, suriye’nin güvenlik ve istikrarının güçlendirilmesine, kurumsal kapasitesinin geliştirilmesine ve suriye halkının huzur ve refahına yönelik desteğini sürdürmeye devam edecektir." ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>MSB: Suriye'ye yönelik desteğimiz devam edecek</h3>
+                    <p>Milli Savunma Bakanlığı,yaptığı açıklamada, "Türkiye, Suriye’nin güvenlik ve istikrarının güçlendirilmesine, kurumsal kapasitesinin geliştirilmesine ve Suriye halkının huzur ve refahına yönelik desteğini sürdürmeye devam edecektir." ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/msb-suriyeye-yonelik-destegimiz-devam-edecek-955777.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kira sözleşmesinde edevlet dönemi: anlaşmazlıklarda anahtar olacak
+            hazine ve maliye bakanlığınca devreye alınan 'kira sözleşmelerinin e-devlet üzerinden yapılması' uygulamasıyla ev sahibi-kiracı bilgilerinin dijital ortamda kayıt altına alınması ve kilitlenen anlaşmazlıklarda anahtar rolü oynaması bekleniyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kira sözleşmesinde eDevlet dönemi: Anlaşmazlıklarda anahtar olacak</h3>
+                    <p>Hazine ve Maliye Bakanlığınca devreye alınan 'kira sözleşmelerinin e-Devlet üzerinden yapılması' uygulamasıyla ev sahibi-kiracı bilgilerinin dijital ortamda kayıt altına alınması ve kilitlenen anlaşmazlıklarda anahtar rolü oynaması bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kira-sozlesmesinde-e-devlet-donemi-anlasmazliklarda-anahtar-olacak-955776.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            marmara denizi'ndeki gemi çarpışması: 9 kişi gözaltına alındı
+            marmara denizi'nde silivri açıklarında sabaha karşı 03.00 sıralarında iki gemi çarpıştı. bir gemide hasar bulunmazken, batmış olabileceği belirtilen diğer gemideki 10 denizciyle irtibat kurulamadı. bölgede arama kurtarma çalışmaları sürüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Marmara Denizi'ndeki gemi çarpışması: 9 kişi gözaltına alındı</h3>
+                    <p>Marmara Denizi'nde Silivri açıklarında sabaha karşı 03.00 sıralarında iki gemi çarpıştı. Bir gemide hasar bulunmazken, batmış olabileceği belirtilen diğer gemideki 10 denizciyle irtibat kurulamadı. Bölgede arama kurtarma çalışmaları sürüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2z034d3pdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yedikleriniz ruh halinizi etkiliyor olabilir: deneyebileceğiniz 4 şey
+            yedikleriniz her ruh sağlığı sorununu çözmez. ancak araştırmalar kan şekeri düşüşlerinden bağırsak sağlığına kadar çeşitli etkenler sayesinde beslenmenin ruh hali ve stres üzerinde şaşırtıcı bir etkisi olabileceğini gösteriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yedikleriniz ruh halinizi etkiliyor olabilir: Deneyebileceğiniz 4 şey</h3>
+                    <p>Yedikleriniz her ruh sağlığı sorununu çözmez. Ancak araştırmalar kan şekeri düşüşlerinden bağırsak sağlığına kadar çeşitli etkenler sayesinde beslenmenin ruh hali ve stres üzerinde şaşırtıcı bir etkisi olabileceğini gösteriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3ren0znvd7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇bb'ye yeni operasyon: satın alma dairesi başkanı ve kent lokantaları sorumlusu gözaltında
+            i̇stanbul büyükşehir belediyesi'ne (i̇bb) düzenlenen yeni operasyonda i̇bb satın alma dairesi başkanı mustafa sökmen ve kent lokantaları'ndan sorumlu şube müdürünün de aralarında bulunduğu çok sayıda kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İBB'ye yeni operasyon: Satın Alma Dairesi Başkanı ve Kent Lokantaları sorumlusu gözaltında</h3>
+                    <p>İstanbul Büyükşehir Belediyesi'ne (İBB) düzenlenen yeni operasyonda İBB satın alma dairesi başkanı Mustafa Sökmen ve Kent Lokantaları'ndan sorumlu şube müdürünün de aralarında bulunduğu çok sayıda kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2z08zq02yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tuğberk i̇mamoğlu yük gemisinin battığı kazaya dair ne biliyoruz?
+            marmara denizi'nde 2 eylül sabahı iki geminin çarpışması sonucu alsu adlı tankerin çarptığı tuğberk i̇mamoğlu adlı yük gemisi battı, mürettebatından haber alınamıyor. konuya dair silivri başsavcılığı tarafından soruşturma açıldı. uzmanlar, karara dair merak edilenleri bbc türkçe'ye değerlendirdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tuğberk İmamoğlu yük gemisinin battığı kazaya dair ne biliyoruz?</h3>
+                    <p>Marmara Denizi'nde 2 Eylül sabahı iki geminin çarpışması sonucu ALSU adlı tankerin çarptığı Tuğberk İmamoğlu adlı yük gemisi battı, mürettebatından haber alınamıyor. Konuya dair Silivri Başsavcılığı tarafından soruşturma açıldı. Uzmanlar, karara dair merak edilenleri BBC Türkçe'ye değerlendirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2zel73rxzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇bb davasında bugün tutukluluk incelemeleri yapılacak
+            görevden uzaklaştırılan i̇stanbul büyükşehir belediye (i̇bb) başkanı ekrem i̇mamoğlu'nun tutuklu olarak yargılandığı 414 sanıklı i̇bb davasının 17 ağustos'ta başlayan ikinci celsesi devam ediyor. 3 eylül perşembe günü mahkeme heyetinin tahliyelere ilişkin ara karar açıklaması bekleniyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İBB davasında bugün tutukluluk incelemeleri yapılacak</h3>
+                    <p>Görevden uzaklaştırılan İstanbul Büyükşehir Belediye (İBB) Başkanı Ekrem İmamoğlu'nun tutuklu olarak yargılandığı 414 sanıklı İBB davasının 17 Ağustos'ta başlayan ikinci celsesi devam ediyor. 3 Eylül Perşembe günü mahkeme heyetinin tahliyelere ilişkin ara karar açıklaması bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c93vk2el415o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tmo'dan, hububat alım ve ödemesinde rekor
+            bakan yumaklı: "tmo, hasat sezonunun başından bugüne kadar 12,1 milyon ton ürün aldı, 170 milyar liralık ödeme yaptı. bu hububat alım miktarı ve ürün ödemesinde yeni bir rekor"
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TMO'dan, hububat alım ve ödemesinde rekor</h3>
+                    <p>Bakan Yumaklı: "TMO, hasat sezonunun başından bugüne kadar 12,1 milyon ton ürün aldı, 170 milyar liralık ödeme yaptı. Bu hububat alım miktarı ve ürün ödemesinde yeni bir rekor"</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tmodan-hububat-alim-ve-odemesinde-rekor-955771.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan memişoğlu: 31 bin aile hekimiyle sağlık hizmeti veriyoruz
+            bakanı kemal memişoğlu, 8 bin 401 aile sağlığı merkezinde, 31 bin aile hekimiyle vatandaşlara en yakın noktada sağlık hizmeti verdiklerini belirtti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Memişoğlu: 31 bin aile hekimiyle sağlık hizmeti veriyoruz</h3>
+                    <p>Bakanı Kemal Memişoğlu, 8 bin 401 Aile Sağlığı Merkezinde, 31 bin aile hekimiyle vatandaşlara en yakın noktada sağlık hizmeti verdiklerini belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/bakan-memisoglu-31-bin-aile-hekimiyle-saglik-hizmeti-veriyoruz-955770.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bbc işgal altındaki lübnan'da son durumu inceledi
+            bbc ekibi, i̇srail birliklerinin mevzilerini güçlendirdiğini ve yıkımlara devam ettiğini söyleyen bm barış gücünün insani yardım misyonuna katıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>BBC işgal altındaki Lübnan'da son durumu inceledi</h3>
+                    <p>BBC ekibi, İsrail birliklerinin mevzilerini güçlendirdiğini ve yıkımlara devam ettiğini söyleyen BM barış gücünün insani yardım misyonuna katıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clyrd4955q2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üsküdar belediyesi'nde başkan vekili seçimi öncesinde gözaltılar
+            i̇stanbul valiliği'nin 5 eylül'de yapılacağını açıkladığı üsküdar belediye meclisi'ndeki başkan vekili seçimi öncesi, bazı belediye meclis üyeleri gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Üsküdar Belediyesi'nde başkan vekili seçimi öncesinde gözaltılar</h3>
+                    <p>İstanbul Valiliği'nin 5 Eylül'de yapılacağını açıkladığı Üsküdar Belediye Meclisi'ndeki başkan vekili seçimi öncesi, bazı belediye meclis üyeleri gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz7dn28e0y4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın ve gümüşte 7 ayın en hızlı aylık yükselişi gerçekleşti
+            ons altın ağustos ayında yüzde 10, gümüş ise yüzde 15,4 değer kazanarak son 7 ayın en güçlü aylık performansını sergiledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Altın ve gümüşte 7 ayın en hızlı aylık yükselişi gerçekleşti</h3>
+                    <p>Ons altın ağustos ayında yüzde 10, gümüş ise yüzde 15,4 değer kazanarak son 7 ayın en güçlü aylık performansını sergiledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-ve-gumuste-7-ayin-en-hizli-aylik-yukselisi-gerceklesti-955773.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de gelecek yıl 323 fuar düzenlenecek
+            türkiye genelinde gelecek yıl 99'u uluslararası olmak üzere 323 fuar organize edilecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de gelecek yıl 323 fuar düzenlenecek</h3>
+                    <p>Türkiye genelinde gelecek yıl 99'u uluslararası olmak üzere 323 fuar organize edilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyede-gelecek-yil-323-fuar-duzenlenecek-955772.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kişisel bilgileri koruyamayan şirkete 1 milyon lira ceza
+            kişisel verileri koruma kurumu, 505 bin 337 müşterisinin kişisel verisini koruyamayan şirkete 1 milyon lira idari para cezası uyguladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kişisel bilgileri koruyamayan şirkete 1 milyon lira ceza</h3>
+                    <p>Kişisel Verileri Koruma Kurumu, 505 bin 337 müşterisinin kişisel verisini koruyamayan şirkete 1 milyon lira idari para cezası uyguladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kisisel-bilgileri-koruyamayan-sirkete-1-milyon-lira-ceza-955767.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
