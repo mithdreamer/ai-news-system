@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-04 09:41</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cn45jlzx34zo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>FIFA, Infantino'ya karşı yürütülen 'karalama kampanyası' nedeniyle UEFA'yı suçladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yapay-zeka-buyume-bolgeleri-enerjinin-rotasina-gore-sekillenecek-955874.html" target="_blank">
+                <strong>Yapay Zeka Büyüme Bölgeleri enerjinin rotasına göre şekillenecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy7z05g0d78o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Çözüm sürecinde alt komisyonlar nasıl çalışacak, Öcalan'ın rolü ne olacak?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cx2zel73rxzo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Tuğberk İmamoğlu yük gemisinin battığı olaya dair ne biliyoruz?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj4j9r87gjjo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Kızım elimden kayıp gitti tutamadım'</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fifa, infantino'ya karşı yürütülen 'karalama kampanyası' nedeniyle uefa'yı suçladı
+            uluslararası futbol federasyonları birliği (fifa), başkan gianni infantino'nun dünya kupası'ndaki payların özel yatırımcılara satılmasına yönelik iptal edilen planıyla ilgili dava sürecinde, avrupa futbol federasyonları birliği'ni (uefa) "kendisine ve liderliğine karşı bir karalama kampanyası yürütmekle" suçladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>FIFA, Infantino'ya karşı yürütülen 'karalama kampanyası' nedeniyle UEFA'yı suçladı</h3>
+                    <p>Uluslararası Futbol Federasyonları Birliği (FIFA), Başkan Gianni Infantino'nun Dünya Kupası'ndaki payların özel yatırımcılara satılmasına yönelik iptal edilen planıyla ilgili dava sürecinde, Avrupa Futbol Federasyonları Birliği'ni (UEFA) "kendisine ve liderliğine karşı bir karalama kampanyası yürütmekle" suçladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn45jlzx34zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çözüm sürecinde alt komisyonlar nasıl çalışacak, öcalan'ın rolü ne olacak?
+            süreç kapsamında oluşturulan dört alt komisyonun çalışma esasları ay sonunda netleşecek. pkk lideri abdullah öcalan’a resmi bir statü verilmeyecek ancak öcalan silahsızlanma aşamasında ihtiyaç duyulursa sürece dolaylı katkı sunabilir. ayşe sayın'ın haberi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Çözüm sürecinde alt komisyonlar nasıl çalışacak, Öcalan'ın rolü ne olacak?</h3>
+                    <p>Süreç kapsamında oluşturulan dört alt komisyonun çalışma esasları ay sonunda netleşecek. PKK lideri Abdullah Öcalan’a resmi bir statü verilmeyecek ancak Öcalan silahsızlanma aşamasında ihtiyaç duyulursa sürece dolaylı katkı sunabilir. Ayşe Sayın'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy7z05g0d78o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de insana nakledilen domuz böbreği 271 gün boyunca işlev görerek rekor kırdı
+            abd'de bir domuzdan nakledilen böbrek, bir hastanın vücudunda 271 gün boyunca işlev gördü. bu, şimdiye kadar kaydedilen en uzun süre.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de insana nakledilen domuz böbreği 271 gün boyunca işlev görerek rekor kırdı</h3>
+                    <p>ABD'de bir domuzdan nakledilen böbrek, bir hastanın vücudunda 271 gün boyunca işlev gördü. Bu, şimdiye kadar kaydedilen en uzun süre.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cn4kw13lmvlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yapay zeka büyüme bölgeleri enerjinin rotasına göre şekillenecek
+            türkiye yapay zeka eylem planı kapsamında hayata geçirilecek "yapay zeka büyüme bölgeleri"nin yer seçimi ve kapasite planlamasında, enerji projeksiyonları ve şebeke bağlantı kapasiteleri doğrudan belirleyici olacak
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yapay Zeka Büyüme Bölgeleri enerjinin rotasına göre şekillenecek</h3>
+                    <p>Türkiye Yapay Zeka Eylem Planı kapsamında hayata geçirilecek "Yapay Zeka Büyüme Bölgeleri"nin yer seçimi ve kapasite planlamasında, enerji projeksiyonları ve şebeke bağlantı kapasiteleri doğrudan belirleyici olacak</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yapay-zeka-buyume-bolgeleri-enerjinin-rotasina-gore-sekillenecek-955874.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk lirasıyla dış ticaret hacmi 8 ayda 1 trilyon lirayı aştı
+            türk lirasıyla dış ticaret hacmi, ocak-ağustos döneminde geçen yılın aynı dönemine kıyasla yüzde 11,3 artarak 1 trilyon 51 milyar 355 milyon liraya ulaştı ve 8 aylık dönemlerin en yüksek seviyesine çıktı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türk lirasıyla dış ticaret hacmi 8 ayda 1 trilyon lirayı aştı</h3>
+                    <p>Türk lirasıyla dış ticaret hacmi, ocak-ağustos döneminde geçen yılın aynı dönemine kıyasla yüzde 11,3 artarak 1 trilyon 51 milyar 355 milyon liraya ulaştı ve 8 aylık dönemlerin en yüksek seviyesine çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turk-lirasiyla-dis-ticaret-hacmi-8-ayda-1-trilyon-lirayi-asti-955870.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin mal ihracatındaki artış g20 ortalamasını aştı
+            türkiye'nin mal ihracatı, bu yılın ikinci çeyreğinde bir önceki çeyreğe göre yüzde 8,5 artarak yüzde 5,9 olan g20 ortalamasının üzerinde gerçekleşti.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türkiye'nin mal ihracatındaki artış G20 ortalamasını aştı</h3>
+                    <p>Türkiye'nin mal ihracatı, bu yılın ikinci çeyreğinde bir önceki çeyreğe göre yüzde 8,5 artarak yüzde 5,9 olan G20 ortalamasının üzerinde gerçekleşti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-mal-ihracatindaki-artis-g20-ortalamasini-asti-955872.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            tuğberk i̇mamoğlu yük gemisinin battığı olaya dair ne biliyoruz?
+            marmara denizi'nde 2 eylül sabahı iki geminin çarpışması sonucu alsu adlı tankerin çarptığı tuğberk i̇mamoğlu adlı yük gemisi battı, mürettebatından haber alınamıyor. konuya dair silivri başsavcılığı tarafından soruşturma açıldı. uzmanlar, karara dair merak edilenleri bbc türkçe'ye değerlendirdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tuğberk İmamoğlu yük gemisinin battığı olaya dair ne biliyoruz?</h3>
+                    <p>Marmara Denizi'nde 2 Eylül sabahı iki geminin çarpışması sonucu ALSU adlı tankerin çarptığı Tuğberk İmamoğlu adlı yük gemisi battı, mürettebatından haber alınamıyor. Konuya dair Silivri Başsavcılığı tarafından soruşturma açıldı. Uzmanlar, karara dair merak edilenleri BBC Türkçe'ye değerlendirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2zel73rxzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'kızım elimden kayıp gitti tutamadım'
+            kıbrıs'ın kuzeyinde girne açıklarındaki feribotun batışı öncesi ve sonrasına ait çok sayıda görüntü sosyal medyada paylaşıldı. kurtulan yolculardan bazıları katamaran seyir halindeyken içeri su dolmaya başladığını aktardı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Kızım elimden kayıp gitti tutamadım'</h3>
+                    <p>Kıbrıs'ın kuzeyinde Girne açıklarındaki feribotun batışı öncesi ve sonrasına ait çok sayıda görüntü sosyal medyada paylaşıldı. Kurtulan yolculardan bazıları katamaran seyir halindeyken içeri su dolmaya başladığını aktardı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj4j9r87gjjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal'deki selin ardından bir hidroelektrik santrali tünelinden iki kişi kurtarıldı
+            nepal'de 1200'den fazla kişinin ölümüne neden olan ani sel felaketinden dokuz gün sonra, arama kurtarma çalışmalarının yoğun şekilde devam ettiği trishuli 3a hidroelektrik santrali tünelinden iki kişi sağ çıkarıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nepal'deki selin ardından bir hidroelektrik santrali tünelinden iki kişi kurtarıldı</h3>
+                    <p>Nepal'de 1200'den fazla kişinin ölümüne neden olan ani sel felaketinden dokuz gün sonra, arama kurtarma çalışmalarının yoğun şekilde devam ettiği Trishuli 3A Hidroelektrik Santrali tünelinden iki kişi sağ çıkarıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cg7k0vev9dmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'den halka acil durum uyarısı: el nino nedeniyle evinizde erzak depolayın
+            birleşmiş milletler'in son bin yılın en güçlü el nino hava olayının yaklaştığı yönündeki uyarısının ardından i̇ngiliz hükümeti, vatandaşlarına elektrik ve su kesintilerine karşı evlerinde birkaç gün yetecek gıda ve su bulundurmaları çağrısında bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'den halka acil durum uyarısı: El Nino nedeniyle evinizde erzak depolayın</h3>
+                    <p>Birleşmiş Milletler'in son bin yılın en güçlü El Nino hava olayının yaklaştığı yönündeki uyarısının ardından İngiliz hükümeti, vatandaşlarına elektrik ve su kesintilerine karşı evlerinde birkaç gün yetecek gıda ve su bulundurmaları çağrısında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ingiltereden-halka-acil-durum-uyarisi-el-nino-nedeniyle-evinizde-erzak-depolayin-955878.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            thy, dünyanın en değerli 100 markası arasına girmeyi hedefliyor
+            thy genel müdürü, yönetim kurulu ve i̇cra komitesi üyesi ahmet olmuştur, türkiye’nin en değerli markası olan türk hava yollarının marka değerini daha da yukarı taşımak istediklerini belirterek, "dünyanın en değerli 100 markası arasına giren ilk türk markası olmayı hedefliyoruz." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>THY, dünyanın en değerli 100 markası arasına girmeyi hedefliyor</h3>
+                    <p>THY Genel Müdürü, Yönetim Kurulu ve İcra Komitesi Üyesi Ahmet Olmuştur, Türkiye’nin en değerli markası olan Türk Hava Yollarının marka değerini daha da yukarı taşımak istediklerini belirterek, "Dünyanın en değerli 100 markası arasına giren ilk Türk markası olmayı hedefliyoruz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/thy-dunyanin-en-degerli-100-markasi-arasina-girmeyi-hedefliyor-955877.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm'ye göre i̇srail'in batı şeria'daki ilhakını pekiştirme politikası uluslararası hukuka aykırı
+            birleşmiş milletler (bm) i̇nsan hakları yüksek komiserliği sözcüsü thameen al-kheetan, i̇srail'in doğu kudüs dahil işgal altındaki batı şeria'nın ilhakını pekiştirme politikasının kalıcı olması konusunda endişelerinin olduğunu bildirerek, bu durumun uluslararası hukuka ve temel insan haklarına aykırı olduğunu kaydetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>BM'ye göre İsrail'in Batı Şeria'daki ilhakını pekiştirme politikası uluslararası hukuka aykırı</h3>
+                    <p>Birleşmiş Milletler (BM) İnsan Hakları Yüksek Komiserliği Sözcüsü Thameen Al-Kheetan, İsrail'in Doğu Kudüs dahil işgal altındaki Batı Şeria'nın ilhakını pekiştirme politikasının kalıcı olması konusunda endişelerinin olduğunu bildirerek, bu durumun uluslararası hukuka ve temel insan haklarına aykırı olduğunu kaydetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bmye-gore-israilin-bati-seriadaki-ilhakini-pekistirme-politikasi-uluslararasi-hukuka-aykiri-955873.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            volkswagen 2030 yılına kadar 100 bin çalışanını işten çıkaracağını duyurdu
+            alman otomotiv devi volkswagen, küresel rekabet ve artan maliyetler nedeniyle 2030 yılına kadar iş gücünün yaklaşık yüzde 15'ini oluşturan 100 bin pozisyonu sonlandırma kararı aldı. sektör tarihinin en büyük yeniden yapılanma hamlesi kapsamında ürün gamının yarı yarıya düşürülmesi ve almanya'daki dört fabrikanın kapatılması gündeme geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Volkswagen 2030 yılına kadar 100 bin çalışanını işten çıkaracağını duyurdu</h3>
+                    <p>Alman otomotiv devi Volkswagen, küresel rekabet ve artan maliyetler nedeniyle 2030 yılına kadar iş gücünün yaklaşık yüzde 15'ini oluşturan 100 bin pozisyonu sonlandırma kararı aldı. Sektör tarihinin en büyük yeniden yapılanma hamlesi kapsamında ürün gamının yarı yarıya düşürülmesi ve Almanya'daki dört fabrikanın kapatılması gündeme geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/volkswagen-2030-yilina-kadar-100-bin-calisanini-isten-cikaracagini-duyurdu-955871.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kahramanmaraş okul saldırısında tutuklu baba oğlundan şikayetçi oldu
+            kahramanmaraş'ta 10 kişinin hayatını kaybettiği okul saldırısının ilk duruşmasında, tutuklu baba uğur mersinli saldırıyı gerçekleştiren oğlundan şikayetçi oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kahramanmaraş okul saldırısında tutuklu baba oğlundan şikayetçi oldu</h3>
+                    <p>Kahramanmaraş'ta 10 kişinin hayatını kaybettiği okul saldırısının ilk duruşmasında, tutuklu baba Uğur Mersinli saldırıyı gerçekleştiren oğlundan şikayetçi oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjdvxe08kxyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            benzin ve motorin fiyatlarına zam
+            benzinin litre fiyatına 2,48 tl, motorinin litre fiyatına 7,72 tl zam geldi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Benzin ve motorin fiyatlarına zam</h3>
+                    <p>Benzinin litre fiyatına 2,48 TL, motorinin litre fiyatına 7,72 TL zam geldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cp80k4806xjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            marmara denizi'ndeki kazada alsu'nun birinci ve üçüncü kaptanı tutuklandı
+            marmara denizi'nde silivri açıklarında 2 eylül'de sabaha karşı 03.00 sıralarında çarpışan iki gemiden biri battı. i̇lgili ön raporda, kazanın temel sebepleri sayıldı ve karşılıklı ihmaller sıralandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Marmara Denizi'ndeki kazada Alsu'nun birinci ve üçüncü kaptanı tutuklandı</h3>
+                    <p>Marmara Denizi'nde Silivri açıklarında 2 Eylül'de sabaha karşı 03.00 sıralarında çarpışan iki gemiden biri battı. İlgili ön raporda, kazanın temel sebepleri sayıldı ve karşılıklı ihmaller sıralandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2z034d3pdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kan bağışı yaz aylarında arttı
+            türk kızılay, 2026'nın 8 ayında 2 milyon 7 bin 440 ünite kan bağışı toplarken, yaz aylarında bağışlar geçen yılın aynı dönemine göre yüzde 7,7 arttı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kan bağışı yaz aylarında arttı</h3>
+                    <p>Türk Kızılay, 2026'nın 8 ayında 2 milyon 7 bin 440 ünite kan bağışı toplarken, yaz aylarında bağışlar geçen yılın aynı dönemine göre yüzde 7,7 arttı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kan-bagisi-yaz-aylarinda-artti-955876.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kpss maratonu pazar günü başlayacak
+            kamu personeli seçme sınavı (kpss) süreci, ölçme, seçme ve yerleştirme merkezince (ösym) 6 eylül pazar günü yapılacak genel yetenek-genel kültür oturumuyla başlayacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>KPSS maratonu pazar günü başlayacak</h3>
+                    <p>Kamu Personeli Seçme Sınavı (KPSS) süreci, Ölçme, Seçme ve Yerleştirme Merkezince (ÖSYM) 6 Eylül Pazar günü yapılacak Genel Yetenek-Genel Kültür oturumuyla başlayacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kpss-maratonu-pazar-gunu-baslayacak-955875.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            girne'deki gemide can kaybı 12'ye yükseldi
+            kuzey kıbrıs türk cumhuriyeti'nin (kktc) girne limanı açığında alabora olan yolcu gemisindeki 2 kişinin daha cesedine ulaşılmasıyla can kaybı 12'ye çıktı. kayıp 16 kişi ise arama çalışmaları devam ediyor.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Girne'deki gemide can kaybı 12'ye yükseldi</h3>
+                    <p>Kuzey Kıbrıs Türk Cumhuriyeti'nin (KKTC) Girne Limanı açığında alabora olan yolcu gemisindeki 2 kişinin daha cesedine ulaşılmasıyla can kaybı 12'ye çıktı. Kayıp 16 kişi ise arama çalışmaları devam ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/girnedeki-gemide-can-kaybi-12ye-yukseldi-955869.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            girne açıklarında batan feribotta can kaybı 12'ye çıktı
+            31 ağustos pazar günü girne limanından ayrıldıktan sonra alabora olan feribottaki iki kişinin daha cenazesine ulaşıldı ve resmi ölü sayısı 12'ye yükseldi.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Girne açıklarında batan feribotta can kaybı 12'ye çıktı</h3>
+                    <p>31 Ağustos Pazar günü Girne limanından ayrıldıktan sonra alabora olan feribottaki iki kişinin daha cenazesine ulaşıldı ve resmi ölü sayısı 12'ye yükseldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/clye4w3ll51o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
