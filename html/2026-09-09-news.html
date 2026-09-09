@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-09 09:49</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cy9z8q1w0e5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yunanistan İtalya'dan yüz milyonlarca euroluk savaş gemileri alıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crl6z2z69kyo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD İran petrol tankerlerine saldırdı, Tahran Ürdün'deki Amerikan üssünü hedef aldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj9xw104kevo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Dünyanın en yüksek maaşlı ülke liderine 1 milyon dolarlık zam</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5y7k59r7dzo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mao Zedong'un ölümünün 50. yılı: Z kuşağı 'Öğretmen'e neden bu kadar ilgi duyuyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/ozyes-sonuclari-aciklandi-956340.html" target="_blank">
+                <strong>ÖZYES sonuçları açıklandı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yunanistan i̇talya'dan yüz milyonlarca euroluk savaş gemileri alıyor
+            yunanistan, i̇talya'dan savaş gemileri almak için sözleşme imzaladı. yunanistan savunma bakanı bu yeni gemilerin "yunan donanması'nın temel gücü" olacağını söyledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yunanistan İtalya'dan yüz milyonlarca euroluk savaş gemileri alıyor</h3>
+                    <p>Yunanistan, İtalya'dan savaş gemileri almak için sözleşme imzaladı. Yunanistan Savunma Bakanı bu yeni gemilerin "Yunan Donanması'nın temel gücü" olacağını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy9z8q1w0e5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd i̇ran petrol tankerlerine saldırdı, tahran ürdün'deki amerikan üssünü hedef aldı
+            abd ve i̇ran arasında karşılıklı saldırıların tırmanmasının ardından petrol fiyatları varil başına 100 dolara yaklaştı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD İran petrol tankerlerine saldırdı, Tahran Ürdün'deki Amerikan üssünü hedef aldı</h3>
+                    <p>ABD ve İran arasında karşılıklı saldırıların tırmanmasının ardından petrol fiyatları varil başına 100 dolara yaklaştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crl6z2z69kyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünyanın en yüksek maaşlı ülke liderine 1 milyon dolarlık zam
+            singapur hükümeti, dünyanın en yüksek maaş alan siyasi lideri olan başbakanlarının maaşına yıllık brüt 1 milyon doların üstünde zam yapılacağını açıkladı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Dünyanın en yüksek maaşlı ülke liderine 1 milyon dolarlık zam</h3>
+                    <p>Singapur hükümeti, dünyanın en yüksek maaş alan siyasi lideri olan başbakanlarının maaşına yıllık brüt 1 milyon doların üstünde zam yapılacağını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj9xw104kevo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail, i̇ngiltere'nin doğu kudüs'teki konsolosluğunu kapatacağını açıkladı
+            i̇ngiltere, işgal altındaki batı şeria'da bulunan i̇srail yerleşimlerinde üretilen mallara yönelik bir ticaret ambargosu açıkladı. kararın ardından i̇srail i̇ngiltere'nin doğu kudüs'teki konsolosluğunu kapatacağını duyurdu.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İsrail, İngiltere'nin Doğu Kudüs'teki konsolosluğunu kapatacağını açıkladı</h3>
+                    <p>İngiltere, işgal altındaki Batı Şeria'da bulunan İsrail yerleşimlerinde üretilen mallara yönelik bir ticaret ambargosu açıkladı. Kararın ardından İsrail İngiltere'nin Doğu Kudüs'teki konsolosluğunu kapatacağını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62m8pygnd9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            instagram'da sahte telif hakkı iddialarıyla fidye talebi
+            instagram içerik üreticileri, sahte telif hakkı iddiaları nedeniyle hesaplarının askıya alınması veya kapatılması sonucu binlerce dolar kaybettiklerini söylüyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Instagram'da sahte telif hakkı iddialarıyla fidye talebi</h3>
+                    <p>Instagram içerik üreticileri, sahte telif hakkı iddiaları nedeniyle hesaplarının askıya alınması veya kapatılması sonucu binlerce dolar kaybettiklerini söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c78348j5edlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mao zedong'un ölümünün 50. yılı: z kuşağı 'öğretmen'e neden bu kadar ilgi duyuyor?
+            50 yıl önce hayatını kaybeden komünist liderin videoları internette milyonlarca kez izleniyor, kitapları günümüz sorunlarını açıklamakta rehber olarak kullanılıyor. çinli gençler mao'yu nasıl bir lider olarak tanıyor?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mao Zedong'un ölümünün 50. yılı: Z kuşağı 'Öğretmen'e neden bu kadar ilgi duyuyor?</h3>
+                    <p>50 yıl önce hayatını kaybeden komünist liderin videoları internette milyonlarca kez izleniyor, kitapları günümüz sorunlarını açıklamakta rehber olarak kullanılıyor. Çinli gençler Mao'yu nasıl bir lider olarak tanıyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y7k59r7dzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özyes sonuçları açıklandı
+            ölçme, seçme ve yerleştirme merkezi (ösym) başkanlığı, 2026-yks kapsamında spor bilimleri i̇çin özel yetenek sınavı (özyes) sonuçlarını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ÖZYES sonuçları açıklandı</h3>
+                    <p>Ölçme, Seçme ve Yerleştirme Merkezi (ÖSYM) Başkanlığı, 2026-YKS kapsamında Spor Bilimleri İçin Özel Yetenek Sınavı (ÖZYES) sonuçlarını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/ozyes-sonuclari-aciklandi-956340.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye, cop31'de sağlık sistemleri için işbirliğini güçlendirmeyi hedefliyor
+            türkiye, birleşmiş milletler i̇klim değişikliği çerçeve sözleşmesi'nin (unfccc) 31. taraflar konferansı'nda (cop31), iklim değişikliğinin sağlık üzerindeki etkileriyle mücadele ve sağlık sistemlerinin iklim risklerine karşı dayanıklılığının artırılmasına yönelik küresel işbirliğini güçlendirmeyi hedefliyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye, COP31'de sağlık sistemleri için işbirliğini güçlendirmeyi hedefliyor</h3>
+                    <p>Türkiye, Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi'nin (UNFCCC) 31. Taraflar Konferansı'nda (COP31), iklim değişikliğinin sağlık üzerindeki etkileriyle mücadele ve sağlık sistemlerinin iklim risklerine karşı dayanıklılığının artırılmasına yönelik küresel işbirliğini güçlendirmeyi hedefliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/turkiye-cop31de-saglik-sistemleri-icin-isbirligini-guclendirmeyi-hedefliyor-956336.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuzey kore ile rusya'yı birbirine bağlayan ilk kara yolu köprüsü açıldı
+            kuzey kore ile rusya arasında, ikili işbirliğinin genişletilmesi hedefiyle, sınırdaki tumen nehri'nde iki ülkeyi birbirine bağlayan ilk kara yolu köprüsünün açılışı yapıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kuzey Kore ile Rusya'yı birbirine bağlayan ilk kara yolu köprüsü açıldı</h3>
+                    <p>Kuzey Kore ile Rusya arasında, ikili işbirliğinin genişletilmesi hedefiyle, sınırdaki Tumen Nehri'nde iki ülkeyi birbirine bağlayan ilk kara yolu köprüsünün açılışı yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kuzey-kore-ile-rusyayi-birbirine-baglayan-ilk-kara-yolu-koprusu-acildi-956337.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal'deki sel felaketinde hayatını kaybedenlerin sayısı 1367'ye çıktı
+            nepal'in çin sınırına yakın rasuwa bölgesi ve çevresinde meydana gelen selde hayatını kaybedenlerin sayısının 1367'ye yükseldiği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Nepal'deki sel felaketinde hayatını kaybedenlerin sayısı 1367'ye çıktı</h3>
+                    <p>Nepal'in Çin sınırına yakın Rasuwa bölgesi ve çevresinde meydana gelen selde hayatını kaybedenlerin sayısının 1367'ye yükseldiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/nepaldeki-sel-felaketinde-hayatini-kaybedenlerin-sayisi-1367ye-cikti-956335.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            seçim yasasında değişiklik tartışması: akp ve mhp'de hangi seçenekler konuşuluyor?
+            i̇ktidar cephesinde seçim ve siyasi partiler yasalarında değişiklik tartışması yeniden alevlendi. akp ve mhp farklı başlıklara odaklanmışa benziyor. i̇ttifak sistemi ve küçük partilerin seçimlerdeki konumuna ilişkin olası düzenlemeler yeni yasama döneminde gündeme gelebilir.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Seçim yasasında değişiklik tartışması: AKP ve MHP'de hangi seçenekler konuşuluyor?</h3>
+                    <p>İktidar cephesinde seçim ve siyasi partiler yasalarında değişiklik tartışması yeniden alevlendi. AKP ve MHP farklı başlıklara odaklanmışa benziyor. İttifak sistemi ve küçük partilerin seçimlerdeki konumuna ilişkin olası düzenlemeler yeni yasama döneminde gündeme gelebilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyz148n5kdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan'dan husi saldırılarına misilleme yemini
+            suudi arabistan, yemen'deki i̇ran destekli husilerin ülkedeki enerji tesisleri ve sivil altyapılara onlarca i̇ha ve füzeyle düzenlediği saldırılarda 73 kişinin yaralandığını açıkladı. suudi öncülüğündeki koalisyon, saldırılara karşılık verileceğini açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suudi Arabistan'dan Husi saldırılarına misilleme yemini</h3>
+                    <p>Suudi Arabistan, Yemen'deki İran destekli Husilerin ülkedeki enerji tesisleri ve sivil altyapılara onlarca İHA ve füzeyle düzenlediği saldırılarda 73 kişinin yaralandığını açıkladı. Suudi öncülüğündeki koalisyon, saldırılara karşılık verileceğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly748xzle0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            pisa'da çevre bilimi başarısı: türkiye 68 ülkeyi geride bıraktı
+            türkiye, uluslararası öğrenci değerlendirme programı (pisa) 2025 sonuçlarına göre, fen bilimleri alt ölçeği olarak ilk kez değerlendirilen "çevre bilimi" alanında 494 ortalama puanla 85 ülkenin ortalaması olan 447 ve oecd ortalaması olan 480 puanın üzerinde performans gösterdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>PISA'da çevre bilimi başarısı: Türkiye 68 ülkeyi geride bıraktı</h3>
+                    <p>Türkiye, Uluslararası Öğrenci Değerlendirme Programı (PISA) 2025 sonuçlarına göre, fen bilimleri alt ölçeği olarak ilk kez değerlendirilen "çevre bilimi" alanında 494 ortalama puanla 85 ülkenin ortalaması olan 447 ve OECD ortalaması olan 480 puanın üzerinde performans gösterdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/cevre/pisada-cevre-bilimi-basarisi-turkiye-68-ulkeyi-geride-birakti-956344.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            batı karadeniz'de petrol aranacak
+            enerji ve tabii kaynaklar bakanı alparslan bayraktar, "batı karadeniz'de yakın zamanda petrol hedefli sondaja başlayacağız" müjdesini paylaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Batı Karadeniz'de petrol aranacak</h3>
+                    <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, "Batı Karadeniz'de yakın zamanda petrol hedefli sondaja başlayacağız" müjdesini paylaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bati-karadenizde-petrol-aranacak-956341.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'deki devlet okulları pisa 2025'e damga vurdu
+            uluslararası öğrenci değerlendirme programı (pisa) 2025 sonuçlarına göre türkiye'de resmi okullar, fen bilimleri, okuma becerileri ve matematik alanlarının tamamında özel okulları geride bıraktı, iki okul türü arasındaki başarı farkı resmi okullar lehine artış gösterdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'deki devlet okulları PISA 2025'e damga vurdu</h3>
+                    <p>Uluslararası Öğrenci Değerlendirme Programı (PISA) 2025 sonuçlarına göre Türkiye'de resmi okullar, fen bilimleri, okuma becerileri ve matematik alanlarının tamamında özel okulları geride bıraktı, iki okul türü arasındaki başarı farkı resmi okullar lehine artış gösterdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/turkiyedeki-devlet-okullari-pisa-2025e-damga-vurdu-956339.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yaşlı nüfus 9,6 milyona ulaştı: uzun dönemli bakım sigortası gündemde
+            türkiye'de yaşlı nüfus, 5 yılda yüzde 20,5 artarak 9 milyon 583 bin 59 kişiye ulaştı. yaşlı nüfusta görülen artış oranları ve gelişmelerin sosyal güvenlik dengesine etkilerini dikkate alınarak "uzun dönemli bakım sigortası" başta olmak üzere çeşitli uygulamalar sisteme uyarlanacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yaşlı nüfus 9,6 milyona ulaştı: Uzun dönemli bakım sigortası gündemde</h3>
+                    <p>Türkiye'de yaşlı nüfus, 5 yılda yüzde 20,5 artarak 9 milyon 583 bin 59 kişiye ulaştı. Yaşlı nüfusta görülen artış oranları ve gelişmelerin sosyal güvenlik dengesine etkilerini dikkate alınarak "uzun dönemli bakım sigortası" başta olmak üzere çeşitli uygulamalar sisteme uyarlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yasli-nufus-96-milyona-ulasti-uzun-donemli-bakim-sigortasi-gundemde-956338.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: sanal şöhret suçun gizlenmesine perde olamayacak
+            adalet bakanı akın gürlek, "tavrımız nettir: sosyal medyada oluşturulan sanal şöhret, suçun ve suç gelirlerinin gizlenmesine perde olamayacaktır." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Gürlek: Sanal şöhret suçun gizlenmesine perde olamayacak</h3>
+                    <p>Adalet Bakanı Akın Gürlek, "Tavrımız nettir: Sosyal medyada oluşturulan sanal şöhret, suçun ve suç gelirlerinin gizlenmesine perde olamayacaktır." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-sanal-sohret-sucun-gizlenmesine-perde-olamayacak-956333.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çok sıcak içecekler yemek borusuna zarar verebilir ve kanser riskini artırabilir
+            uzmanlar, çok sıcak sıvıların mideye doğru inerken hücre zarlarına zarar verebileceğini söylüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çok sıcak içecekler yemek borusuna zarar verebilir ve kanser riskini artırabilir</h3>
+                    <p>Uzmanlar, çok sıcak sıvıların mideye doğru inerken hücre zarlarına zarar verebileceğini söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cg5901eqd39o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ayşe tokyaz cinayeti davasında karar duruşması
+            üniversite öğrencisi ayşe tokyaz'ın cinayetiyle ilgili davanın karar duruşması bugün i̇stanbul küçükçekmece'de görülecek. dördüncü duruşmada savcı mütalaasını sunmuştu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ayşe Tokyaz cinayeti davasında karar duruşması</h3>
+                    <p>Üniversite öğrencisi Ayşe Tokyaz'ın cinayetiyle ilgili davanın karar duruşması bugün İstanbul Küçükçekmece'de görülecek. Dördüncü duruşmada savcı mütalaasını sunmuştu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gyx7qqw59o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nato, anka iiiü paylaştı
+            nato, tusaş’ın geliştirdiği anka iii’ü sosyal medya hesabından paylaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>NATO, ANKA IIIü paylaştı</h3>
+                    <p>NATO, TUSAŞ’ın geliştirdiği ANKA III’ü sosyal medya hesabından paylaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/nato-anka-iiiu-paylasti-956342.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
