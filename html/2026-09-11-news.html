@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-11 09:44</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cz9zjp501d5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Depremde 35 kişinin öldüğü Ezgi Apartmanı davasında karar açıklandı: Tahliye ve beraat</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/turk-devletleri-arasinda-turkpol-kuruluyor-956570.html" target="_blank">
+                <strong>Türk devletleri arasında TÜRKPOL kuruluyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9dwx5ww8zeo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yemenli Husilerin Suudi Arabistan'a saldırıları Mekke İttifakı için 'sınama' mı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cdx0qk408n2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump gerçekten her yetişkin Amerikalıya 5 bin dolar ödeyebilir mi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/iran-cumhurbaskani-pezeskiyan-savasin-devam-etmesine-katilmiyorum-956564.html" target="_blank">
+                <strong>İran Cumhurbaşkanı Pezeşkiyan: Savaşın devam etmesine katılmıyorum</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            depremde 35 kişinin öldüğü ezgi apartmanı davasında karar açıklandı: tahliye ve beraat
+            kahramanmaraş'ta 6 şubat 2023 depremlerinde 35 kişinin hayatını kaybettiği ezgi apartmanı davasında karar açıklandı. 'olası kast'la yargılanan sanıklardan tutuklu olan ikisi için tahliye, biri için de beraat kararı çıktı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Depremde 35 kişinin öldüğü Ezgi Apartmanı davasında karar açıklandı: Tahliye ve beraat</h3>
+                    <p>Kahramanmaraş'ta 6 Şubat 2023 depremlerinde 35 kişinin hayatını kaybettiği Ezgi Apartmanı davasında karar açıklandı. 'Olası kast'la yargılanan sanıklardan tutuklu olan ikisi için tahliye, biri için de beraat kararı çıktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cz9zjp501d5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yemenli husilerin suudi arabistan'a saldırıları mekke i̇ttifakı için 'sınama' mı?
+            yemen merkezli husilerin suudi arabistan'a saldırısından sonra mekke ittifakının ortak savunma maddesinin devreye girip girmeyeceği tartışılıyor. pakistan saldırıları kınadı ve husilerin saldırıları sürdürmesi durumunda ittifakın "devreye gireceğini" söyledi. türkiye ise kınama açıklamasında ittifaka atıfta bulunmadı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yemenli Husilerin Suudi Arabistan'a saldırıları Mekke İttifakı için 'sınama' mı?</h3>
+                    <p>Yemen merkezli Husilerin Suudi Arabistan'a saldırısından sonra Mekke ittifakının ortak savunma maddesinin devreye girip girmeyeceği tartışılıyor. Pakistan saldırıları kınadı ve Husilerin saldırıları sürdürmesi durumunda ittifakın "devreye gireceğini" söyledi. Türkiye ise kınama açıklamasında ittifaka atıfta bulunmadı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9dwx5ww8zeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran cumhurbaşkanı pezeşkiyan: savaşın devam etmesine katılmıyorum
+            i̇ran cumhurbaşkanı mesud pezeşkiyan, abd ile savaşa ilişkin "savaşın devam etmesine katılmıyorum ancak ilerleyen süreç karşısında ülkenin direncini artırmalıyız." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Cumhurbaşkanı Pezeşkiyan: Savaşın devam etmesine katılmıyorum</h3>
+                    <p>İran Cumhurbaşkanı Mesud Pezeşkiyan, ABD ile savaşa ilişkin "Savaşın devam etmesine katılmıyorum ancak ilerleyen süreç karşısında ülkenin direncini artırmalıyız." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-cumhurbaskani-pezeskiyan-savasin-devam-etmesine-katilmiyorum-956564.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nepal'deki sel felaketinde hayatını kaybedenlerin sayısı 1385'e yükseldi
+            nepal'in çin sınırına yakın rasuwa bölgesi ve çevresinde 26 ağustos'ta meydana gelen selde hayatını kaybedenlerin sayısının 1385'e yükseldiği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Nepal'deki sel felaketinde hayatını kaybedenlerin sayısı 1385'e yükseldi</h3>
+                    <p>Nepal'in Çin sınırına yakın Rasuwa bölgesi ve çevresinde 26 Ağustos'ta meydana gelen selde hayatını kaybedenlerin sayısının 1385'e yükseldiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/nepaldeki-sel-felaketinde-hayatini-kaybedenlerin-sayisi-1385e-yukseldi-956568.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türk devletleri arasında türkpol kuruluyor
+            i̇çişleri bakanı mustafa çiftçi, türk devletleri teşkilatı 3. i̇çişleri bakanları toplantısı'nda suçla mücadelede ortak hareket kabiliyetini artırmak amacıyla interpol ve europol benzeri "türkpol" teşkilatının kurulmasını teklif ettiklerini duyurdu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türk devletleri arasında TÜRKPOL kuruluyor</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, Türk Devletleri Teşkilatı 3. İçişleri Bakanları Toplantısı'nda suçla mücadelede ortak hareket kabiliyetini artırmak amacıyla Interpol ve Europol benzeri "TÜRKPOL" teşkilatının kurulmasını teklif ettiklerini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/turk-devletleri-arasinda-turkpol-kuruluyor-956570.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump gerçekten her yetişkin amerikalıya 5 bin dolar ödeyebilir mi?
+            analistler, abd'de ara seçimlerde iki ay süre kala başkanın teklifinin uygulanabilir, yasal veya karşılanabilir olup olmadığını sorguluyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Trump gerçekten her yetişkin Amerikalıya 5 bin dolar ödeyebilir mi?</h3>
+                    <p>Analistler, ABD'de ara seçimlerde iki ay süre kala başkanın teklifinin uygulanabilir, yasal veya karşılanabilir olup olmadığını sorguluyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cdx0qk408n2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tübi̇tak bi̇gg yatırım programı 2026 yılı 2. çağrısı açıldı
+            sanayi ve teknoloji bakanı mehmet fatih kacır, bi̇gg yatırım programı'nın 2026 yılı ikinci çağrısını başlattıklarını belirterek, girişimcileri desteklemeyi sürdüreceklerini kaydetti.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>TÜBİTAK BİGG Yatırım Programı 2026 yılı 2. çağrısı açıldı</h3>
+                    <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, BİGG Yatırım Programı'nın 2026 yılı ikinci çağrısını başlattıklarını belirterek, girişimcileri desteklemeyi sürdüreceklerini kaydetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/tubitak-bigg-yatirim-programi-2026-yili-2-cagrisi-acildi-956561.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fenerbahçe teknik direktörü i̇smail kartal istifa etti, aziz yıldırım 'görevinin başında' dedi
+            fenerbahçe teknik direktörü i̇smail kartal, takımının kendi evindeki şampiyonlar ligi maçında 1-1 berabere kalmasının ardından istifa ettiğini açıkladı. fenerbahçe başkanı aziz yıldırım ise, "devam edeceksin' dedim ve bitti" açıklamasını yaptı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Fenerbahçe Teknik Direktörü İsmail Kartal istifa etti, Aziz Yıldırım 'görevinin başında' dedi</h3>
+                    <p>Fenerbahçe Teknik Direktörü İsmail Kartal, takımının kendi evindeki Şampiyonlar Ligi maçında 1-1 berabere kalmasının ardından istifa ettiğini açıkladı. Fenerbahçe Başkanı Aziz Yıldırım ise, "Devam edeceksin' dedim ve bitti" açıklamasını yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cyvz7pqn4qjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            toki̇ kiralık sosyal konut başvuruları başlıyor, koşullar neler?
+            toplu konut i̇daresi'nin i̇stanbul'un iki yakasında uygun fiyatlarla kiraya vereceği sosyal konutların başvuru şartlarını ve özellikleri açıkladı. peki proje kiraları etkileyebilir mi, başka illere de uygulanabilir mi?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>TOKİ kiralık sosyal konut başvuruları başlıyor, koşullar neler?</h3>
+                    <p>Toplu Konut İdaresi'nin İstanbul'un iki yakasında uygun fiyatlarla kiraya vereceği sosyal konutların başvuru şartlarını ve özellikleri açıkladı. Peki proje kiraları etkileyebilir mi, başka illere de uygulanabilir mi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ce8e6y8rp2mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filistin'i destekleyen rumlardan i̇srail'in gkry ziyaretine tepki
+            i̇srail cumhurbaşkanı isaac herzog'un güney kıbrıs rum yönetimi'ni (gkry) ziyareti, filistin'i destekleyen rumlardan yoğun tepki gördü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Filistin'i destekleyen Rumlardan İsrail'in GKRY ziyaretine tepki</h3>
+                    <p>İsrail Cumhurbaşkanı Isaac Herzog'un Güney Kıbrıs Rum Yönetimi'ni (GKRY) ziyareti, Filistin'i destekleyen Rumlardan yoğun tepki gördü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/filistini-destekleyen-rumlardan-israilin-gkry-ziyaretine-tepki-956567.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'daki okullarda 3 bin 13 bahçe görevlisi göreve başlayacak
+            i̇stanbul'da 2026-2027 eğitim öğretim yılında okullarda güvenlik tedbirleri artırılacak. öğrencilerin güvenli giriş çıkışlarının sağlanmasına ve okul bahçelerindeki güvenlik ve koordinasyona katkı sunacak 3 bin 13 bahçe görevlisi de pazartesi göreve başlayacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'daki okullarda 3 bin 13 bahçe görevlisi göreve başlayacak</h3>
+                    <p>İstanbul'da 2026-2027 eğitim öğretim yılında okullarda güvenlik tedbirleri artırılacak. Öğrencilerin güvenli giriş çıkışlarının sağlanmasına ve okul bahçelerindeki güvenlik ve koordinasyona katkı sunacak 3 bin 13 bahçe görevlisi de pazartesi göreve başlayacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbuldaki-okullarda-3-bin-13-bahce-gorevlisi-goreve-baslayacak-956565.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            18 ilde göçmen kaçakçılığı operasyonu: 43 organizatör tutuklandı
+            i̇çişleri bakanlığı, 18 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 43 göçmen kaçakçılığı organizatörünün tutuklandığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>18 ilde göçmen kaçakçılığı operasyonu: 43 organizatör tutuklandı</h3>
+                    <p>İçişleri Bakanlığı, 18 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 43 göçmen kaçakçılığı organizatörünün tutuklandığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/18-ilde-gocmen-kacakciligi-operasyonu-43-organizator-tutuklandi-956563.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            başvurular başlıyor i̇şte kiralık sosyal konutlarla ilgili merak edilenler
+            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, i̇stanbul’da hayata geçirilecek kiralık sosyal konut kampanyasına ilişkin merak edilenleri paylaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Başvurular başlıyor İşte kiralık sosyal konutlarla ilgili merak edilenler</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, İstanbul’da hayata geçirilecek kiralık sosyal konut kampanyasına ilişkin merak edilenleri paylaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/basvurular-basliyor-iste-kiralik-sosyal-konutlarla-ilgili-merak-edilenler-956560.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            casuslar, stratejiler ve kaçırılan fırsatlar: 11 eylül saldırılarından çıkarılan dersler
+            dünyayı değiştiren i̇kiz kuleler saldırılarından strateji ve istihbarat konusunda dersler çıkarıldı, ancak saldırılara verilen yanıtla ilgili sorular hâlâ devam ediyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Casuslar, stratejiler ve kaçırılan fırsatlar: 11 Eylül saldırılarından çıkarılan dersler</h3>
+                    <p>Dünyayı değiştiren İkiz Kuleler saldırılarından strateji ve istihbarat konusunda dersler çıkarıldı, ancak saldırılara verilen yanıtla ilgili sorular hâlâ devam ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gkqv4w5neo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti i̇stanbul i̇l başkanı çelik ifade verdi: 'üsküdar son iki yılda olanlardan bağımsız değil'
+            yeni parti i̇stanbul i̇l başkanı özgür çelik, üsküdar belediyesi başkan vekili seçimleriyle ilgili ifadeleri nedeniyle hakkında soruşturma kapsamında çağlayan'daki i̇stanbul adliyesi'nde ifade verdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti İstanbul İl Başkanı Çelik ifade verdi: 'Üsküdar son iki yılda olanlardan bağımsız değil'</h3>
+                    <p>Yeni Parti İstanbul İl Başkanı Özgür Çelik, Üsküdar Belediyesi başkan vekili seçimleriyle ilgili ifadeleri nedeniyle hakkında soruşturma kapsamında Çağlayan'daki İstanbul Adliyesi'nde ifade verdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cgk5rpnmeego?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            seferihisar belediyesi'nde 'rüşvet' soruşturmasında yeni operasyon: 43 gözaltı
+            i̇zmir'in seferihisar belediyesin'e yönelik "rüşvet" ve "usulsüzlük" iddialarıyla başlatılan soruşturma kapsamında haklarında gözaltı kararı verilen 48 kişiden 43'ü gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Seferihisar Belediyesi'nde 'rüşvet' soruşturmasında yeni operasyon: 43 gözaltı</h3>
+                    <p>İzmir'in Seferihisar Belediyesin'e yönelik "rüşvet" ve "usulsüzlük" iddialarıyla başlatılan soruşturma kapsamında haklarında gözaltı kararı verilen 48 kişiden 43'ü gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1eygdvp8w8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇nsanlar uyuşturucu kullanmaya '25 bin yıl önce başlamış olabilir'
+            yeni araştırmalar ve 25 bin yıllık insan iskeletleri, insanların zihin değiştirici maddeleri bilim insanlarının tahminlerinden çok daha eski dönemlerde kullanmış olabileceğini gösteriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İnsanlar uyuşturucu kullanmaya '25 bin yıl önce başlamış olabilir'</h3>
+                    <p>Yeni araştırmalar ve 25 bin yıllık insan iskeletleri, insanların zihin değiştirici maddeleri bilim insanlarının tahminlerinden çok daha eski dönemlerde kullanmış olabileceğini gösteriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c980d9l8jnlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            maduro'nun eşinin avukatları sağlık sorunları nedeniyle ev hapsi istedi
+            maduro'nun eşinin avukatları "sağlık sorunlarını" gerekçe göstererek ev hapsi talep etti
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Maduro'nun eşinin avukatları sağlık sorunları nedeniyle ev hapsi istedi</h3>
+                    <p>Maduro'nun eşinin avukatları "sağlık sorunlarını" gerekçe göstererek ev hapsi talep etti</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/maduronun-esinin-avukatlari-saglik-sorunlari-nedeniyle-ev-hapsi-istedi-956562.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            husiler yemen'de stratejik muha limanını ele geçirdi
+            askeri kaynaklar ve görgü tanıklarının aktardığına göre, yemen'deki husi milisleri, suudi arabistan destekli hükümet yanlısı güçlerin elindeki stratejik kızıldeniz liman kenti muha'yı ele geçirdi.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Husiler Yemen'de stratejik Muha limanını ele geçirdi</h3>
+                    <p>Askeri kaynaklar ve görgü tanıklarının aktardığına göre, Yemen'deki Husi milisleri, Suudi Arabistan destekli hükümet yanlısı güçlerin elindeki stratejik Kızıldeniz liman kenti Muha'yı ele geçirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cly748xzle0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güney kıbrıs rum yönetimi'nde uçağa bomba ihbarı
+            güney kıbrıs rum yönetimi'nin (gkry) larnaka havalimanı'ndan sefere hazırlanan bir yolcu uçağında bomba olduğuna dair ihbar yapılması üzerine yolcularının tahliye edildiği bildirildi.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Güney Kıbrıs Rum Yönetimi'nde uçağa bomba ihbarı</h3>
+                    <p>Güney Kıbrıs Rum Yönetimi'nin (GKRY) Larnaka Havalimanı'ndan sefere hazırlanan bir yolcu uçağında bomba olduğuna dair ihbar yapılması üzerine yolcularının tahliye edildiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/guney-kibris-rum-yonetiminde-ucaga-bomba-ihbari-956566.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
