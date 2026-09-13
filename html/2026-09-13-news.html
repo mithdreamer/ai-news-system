@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>23</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-13 10:19</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/okullarda-guvenlik-seferberligi-31-bin-okul-bahce-gorevlisi-sahada-956698.html" target="_blank">
+                <strong>Okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c36lkde7ke8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yemen savaşın eşiğinde: 'Birbirimize sarılıp ölmeyi bekliyoruz'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/evlilik-hazirligindaki-genclere-1191-firmadan-indirim-destegi-956699.html" target="_blank">
+                <strong>Evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/turkiye/istanbul-havalimaninin-yeni-pisti-icin-acilis-tarihi-belli-oldu-956695.html" target="_blank">
+                <strong>İstanbul Havalimanı'nın yeni pisti için açılış tarihi belli oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynada-lojistik-merkezi-enerji-ve-demir-yolu-altyapi-tesislerini-vurduk-956692.html" target="_blank">
+                <strong>Rusya: Ukrayna'da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduk</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada
+            i̇çişleri bakanı mustafa çiftçi, 2026-2027 eğitim öğretim yılında öğrencilerin huzur ve güven içinde eğitim görmesi amacıyla okul ve çevrelerinde güvenlik tedbirlerinin artırılacağını söyledi. 81 ilde 31 bin okul bahçe görevlisi için planlama tamamlandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada</h3>
+                    <p>İçişleri Bakanı Mustafa Çiftçi, 2026-2027 eğitim öğretim yılında öğrencilerin huzur ve güven içinde eğitim görmesi amacıyla okul ve çevrelerinde güvenlik tedbirlerinin artırılacağını söyledi. 81 ilde 31 bin okul bahçe görevlisi için planlama tamamlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/okullarda-guvenlik-seferberligi-31-bin-okul-bahce-gorevlisi-sahada-956698.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul havalimanı'nın yeni pisti için açılış tarihi belli oldu
+            i̇stanbul havalimanı'nın 4. ana pisti, cumhurbaşkanı recep tayyip erdoğan'ın katılımlarıyla 18 eylül'de hizmete açılacak. bununla birlikte havalimanındaki pist sayısı 6'ya çıkmış olacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul Havalimanı'nın yeni pisti için açılış tarihi belli oldu</h3>
+                    <p>İstanbul Havalimanı'nın 4. ana pisti, Cumhurbaşkanı Recep Tayyip Erdoğan'ın katılımlarıyla 18 Eylül'de hizmete açılacak. Bununla birlikte havalimanındaki pist sayısı 6'ya çıkmış olacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-havalimaninin-yeni-pisti-icin-acilis-tarihi-belli-oldu-956695.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: ukrayna'da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduk
+            rusya savunma bakanlığı, ukrayna'da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduklarını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Ukrayna'da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduk</h3>
+                    <p>Rusya Savunma Bakanlığı, Ukrayna'da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduklarını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynada-lojistik-merkezi-enerji-ve-demir-yolu-altyapi-tesislerini-vurduk-956692.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yemen savaşın eşiğinde: 'birbirimize sarılıp ölmeyi bekliyoruz'
+            i̇ran destekli husiler ile suudi arabistan destekli ve uluslararası alanda tanınan hükümet arasındaki ateşkesin çökeceğine dair endişeler artarken, yemen'in kuzeybatı bölgeleri üzerindeki semalarda savaş uçaklarının sesi yeniden duyuluyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yemen savaşın eşiğinde: 'Birbirimize sarılıp ölmeyi bekliyoruz'</h3>
+                    <p>İran destekli Husiler ile Suudi Arabistan destekli ve uluslararası alanda tanınan hükümet arasındaki ateşkesin çökeceğine dair endişeler artarken, Yemen'in kuzeybatı bölgeleri üzerindeki semalarda savaş uçaklarının sesi yeniden duyuluyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c36lkde7ke8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği
+            aile ve sosyal hizmetler bakanlığınca hayata geçirilen "evlenecek gençlerin desteklenmesi projesi" kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191'e ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanlığınca hayata geçirilen "Evlenecek Gençlerin Desteklenmesi Projesi" kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191'e ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/evlilik-hazirligindaki-genclere-1191-firmadan-indirim-destegi-956699.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            aşil kalkanı: türkiye ve yunanistan arasındaki yumuşama bitiyor mu?
+            türkiye ve yunanistan'ın son dönemde yaptığı karşılıklı deniz parkı ve deniz mekânsal planlama açıklamaları, hava sahası ihlali iddiaları ve farklı bölgesel aktörlerle hizalanmaları ege'de suların tekrar kızışabileceğine işaret ediyor. peki ege'nin iki kıyısında gerilim tekrar artacak mı? yakınlaşma dönemi sona mı erecek?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Aşil Kalkanı: Türkiye ve Yunanistan arasındaki yumuşama bitiyor mu?</h3>
+                    <p>Türkiye ve Yunanistan'ın son dönemde yaptığı karşılıklı deniz parkı ve deniz mekânsal planlama açıklamaları, hava sahası ihlali iddiaları ve farklı bölgesel aktörlerle hizalanmaları Ege'de suların tekrar kızışabileceğine işaret ediyor. Peki Ege'nin iki kıyısında gerilim tekrar artacak mı? Yakınlaşma dönemi sona mı erecek?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4g7vdwzp1yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dışişleri bakanlığı, irak'tan suudi arabistan'a düzenlenen si̇ha saldırısını kınadı
+            irak, i̇ran sınırındaki bir bölgeden gelen saldırıyla ilgili soruşturma başlattı ve bir komutanı görevden aldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dışişleri Bakanlığı, Irak'tan Suudi Arabistan'a düzenlenen SİHA saldırısını kınadı</h3>
+                    <p>Irak, İran sınırındaki bir bölgeden gelen saldırıyla ilgili soruşturma başlattı ve bir komutanı görevden aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c62e097r6rqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇sveç'te genel seçim öncesi sağ ve sol bloklar arasında başa baş yarış
+            başbakan ulf kristersson, aşırı sağcı i̇sveç demokratları'na kabinede yer sözü verdi ancak rakip sol blok anketlerde az farkla önde.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İsveç'te genel seçim öncesi sağ ve sol bloklar arasında başa baş yarış</h3>
+                    <p>Başbakan Ulf Kristersson, aşırı sağcı İsveç Demokratları'na kabinede yer sözü verdi ancak rakip sol blok anketlerde az farkla önde.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3wj9nzy2nzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kpss alan bilgisi üçüncü oturumu yapıldı
+            ölçme, seçme ve yerleştirme merkezi (ösym) başkanlığınca düzenlenen kamu personel seçme sınavı'nın (kpss) alan bilgisi sınavlarının üçüncü oturumu sona erdi. sınavın sonuçları 7 ekim'de açıklanacak ve 2 yıl geçerli olacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>KPSS Alan Bilgisi üçüncü oturumu yapıldı</h3>
+                    <p>Ölçme, Seçme ve Yerleştirme Merkezi (ÖSYM) Başkanlığınca düzenlenen Kamu Personel Seçme Sınavı'nın (KPSS) Alan Bilgisi sınavlarının üçüncü oturumu sona erdi. Sınavın sonuçları 7 Ekim'de açıklanacak ve 2 yıl geçerli olacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/kpss-alan-bilgisi-ucuncu-oturumu-yapildi-956701.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kırtasiye ürünlerinde sıkı denetim: 5,9 milyon ürün incelendi
+            ağustos boyunca ve eylülün ilk 10 gününde yapılan kırtasiye denetimlerinde, toplam 33 bin 182 firma denetlendi, 5 milyon 952 bin ürün incelendi ve toplam 182 milyon 559 bin lira idari yaptırım uygulandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kırtasiye ürünlerinde sıkı denetim: 5,9 milyon ürün incelendi</h3>
+                    <p>Ağustos boyunca ve eylülün ilk 10 gününde yapılan kırtasiye denetimlerinde, toplam 33 bin 182 firma denetlendi, 5 milyon 952 bin ürün incelendi ve toplam 182 milyon 559 bin lira idari yaptırım uygulandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/kirtasiye-urunlerinde-siki-denetim-59-milyon-urun-incelendi-956694.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaos gl'ye yönelik 'müstehcenlik' soruşturmasında yöneticiler gözaltına alındı
+            kaos gl derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaos GL'ye yönelik 'müstehcenlik' soruşturmasında yöneticiler gözaltına alındı</h3>
+                    <p>Kaos GL Derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hindistan'daki su sorununun çözümünde antik su sistemlerinden nasıl yararlanılıyor?
+            su kıtlığı ve iklim değişikliği toplulukları, yüzyıllar önce inşa edilmiş geleneksel su yapılarını yeniden canlandırmaya ve bunları 21. yüzyılda tekrar kullanıma açmaya yöneltiyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hindistan'daki su sorununun çözümünde antik su sistemlerinden nasıl yararlanılıyor?</h3>
+                    <p>Su kıtlığı ve iklim değişikliği toplulukları, yüzyıllar önce inşa edilmiş geleneksel su yapılarını yeniden canlandırmaya ve bunları 21. yüzyılda tekrar kullanıma açmaya yöneltiyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yj3y4nw68o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            onlarca yıl en iyi arkadaşlardı, dna testiyle kardeş oldukları anlaşıldı
+            meena geltink ve minal tijssen, 1980'lerde mumbai'deki yetimhanelerden evlat edinildiler ve hollanda'da büyüdüler. yıllar sonra ise kardeş oldukları ortaya çıktı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Onlarca yıl en iyi arkadaşlardı, DNA testiyle kardeş oldukları anlaşıldı</h3>
+                    <p>Meena Geltink ve Minal Tijssen, 1980'lerde Mumbai'deki yetimhanelerden evlat edinildiler ve Hollanda'da büyüdüler. Yıllar sonra ise kardeş oldukları ortaya çıktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cy4zd24g507o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kadınlar neden erkeklerden daha fazla migren atağı geçiriyor?
+            hormonlar, yetersiz uyku ve stres, kadınların bu yıpratıcı nörolojik rahatsızlığa daha yatkın olmasının nedenlerini açıklamaya yardımcı oluyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kadınlar neden erkeklerden daha fazla migren atağı geçiriyor?</h3>
+                    <p>Hormonlar, yetersiz uyku ve stres, kadınların bu yıpratıcı nörolojik rahatsızlığa daha yatkın olmasının nedenlerini açıklamaya yardımcı oluyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c4gkddz9d10o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaşif kozinoğlu soruşturması: gazeteci selahattin günday tutuklandı
+            eski mi̇t görevlisi kaşif kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz zanlı adliyeye sevk edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaşif Kozinoğlu soruşturması: Gazeteci Selahattin Günday tutuklandı</h3>
+                    <p>Eski MİT görevlisi Kaşif Kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz zanlı adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'vanlı kara haydır'ın i̇stanbul'da yakalanan eşi çağla öz van'a götürüldü
+            "vanlı kara haydar" olarak bilinen ve sosyal medyadaki paylaşımların ardından tutuklanan mehmet fatih tançalan'ın i̇stanbul'da gözaltına alınan eşi çağla öz tançalan van'a götürüldü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>'Vanlı Kara Haydır'ın İstanbul'da yakalanan eşi Çağla Öz Van'a götürüldü</h3>
+                    <p>"Vanlı Kara Haydar" olarak bilinen ve sosyal medyadaki paylaşımların ardından tutuklanan Mehmet Fatih Tançalan'ın İstanbul'da gözaltına alınan eşi Çağla Öz Tançalan Van'a götürüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/vanli-kara-haydirin-istanbulda-yakalanan-esi-cagla-oz-vana-goturuldu-956700.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇kiz öğrencilerin buluşma noktası: bu okuldan 212 ikiz mezun oldu
+            i̇zmir'de bugüne kadar 212 ikizin mezun olduğu makbule süleyman alkan ortaokulunda yeni eğitim yılında 9 ikiz öğrenci daha kayıt yaptırdı. okuldaki ikiz öğrenci sayısı 26 oldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İkiz öğrencilerin buluşma noktası: Bu okuldan 212 ikiz mezun oldu</h3>
+                    <p>İzmir'de bugüne kadar 212 ikizin mezun olduğu Makbule Süleyman Alkan Ortaokulunda yeni eğitim yılında 9 ikiz öğrenci daha kayıt yaptırdı. Okuldaki ikiz öğrenci sayısı 26 oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/yasam/ikiz-ogrencilerin-bulusma-noktasi-bu-okuldan-212-ikiz-mezun-oldu-956696.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kırsal kalkınma yatırımlarına 12,5 milyar liralık hibe desteği
+            2026 yılı kırsal kalkınma yatırım programı (kkyp) kapsamında, toplamda 12,5 milyar liralık hibe desteği sağlanacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kırsal kalkınma yatırımlarına 12,5 milyar liralık hibe desteği</h3>
+                    <p>2026 Yılı Kırsal Kalkınma Yatırım Programı (KKYP) kapsamında, toplamda 12,5 milyar liralık hibe desteği sağlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kirsal-kalkinma-yatirimlarina-125-milyar-liralik-hibe-destegi-956693.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            anthropic'in patronu: yapay zeka geliştirme çalışmaları yavaşlamalı
+            önde gelen yapay zeka şirketlerinden anthropic'in başkanı, yapay zeka modellerinin geliştirilme hızının yavaşlatılması ve yakından izlenmesi çağrısında bulundu.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Anthropic'in patronu: Yapay zeka geliştirme çalışmaları yavaşlamalı</h3>
+                    <p>Önde gelen yapay zeka şirketlerinden Anthropic'in başkanı, yapay zeka modellerinin geliştirilme hızının yavaşlatılması ve yakından izlenmesi çağrısında bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cg7knd5nk28o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mersin limanı'nda 350 kilo uyuşturucu madde ele geçirildi
+            mersin emniyet müdürlüğünce düzenlenen operasyonda, mersin limanı'na gelen bir gemi içerisinde gizlenmiş halde 350 kg kokain uyuşturucu maddesi ele geçirildi, 9 şüpheli hakkında işlem başlatıldı.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Mersin Limanı'nda 350 kilo uyuşturucu madde ele geçirildi</h3>
+                    <p>Mersin Emniyet Müdürlüğünce düzenlenen operasyonda, Mersin Limanı'na gelen bir gemi içerisinde gizlenmiş halde 350 kg kokain uyuşturucu maddesi ele geçirildi, 9 şüpheli hakkında işlem başlatıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/mersin-limaninda-350-kilo-uyusturucu-madde-ele-gecirildi-956697.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
