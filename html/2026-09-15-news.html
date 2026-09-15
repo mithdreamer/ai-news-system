@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-15 10:06</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cx2zd5yj113o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Anthropic'in kurucu ortağı: Yapay zekayı 'acil durdurma düğmesinin' zorunlu olması gerekebilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/elon-musktan-yapay-zeka-tehdidine-esprili-yanit-956889.html" target="_blank">
+                <strong>Elon Musk'tan yapay zeka tehdidine esprili yanıt</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-yatirimcimiz-hukuk-duzenine-guvenmeli-956887.html" target="_blank">
+                <strong>Bakan Gürlek: Yatırımcımız hukuk düzenine güvenmeli</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cv62knwzzlpgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Evrensel gazetesi ve Af Örgütü'nün de aralarında bulunduğu çok sayıda hesaba erişim engeli</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c6pwlkvgnyl0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Galler, İskoçya ve Kuzey İrlanda liderleri: Merkezi yönetim devri bitiyor</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            anthropic'in kurucu ortağı: yapay zekayı 'acil durdurma düğmesinin' zorunlu olması gerekebilir
+            dünyanın en büyük yapay zeka şirketlerinden birinin kurucu ortağı, üçüncü bir taraf tarafından kontrol edilebilen bir yapay zeka "acil durdurma düğmesinin" şirketler için zorunlu hale getirilmesi gerekebileceğini söyledi.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Anthropic'in kurucu ortağı: Yapay zekayı 'acil durdurma düğmesinin' zorunlu olması gerekebilir</h3>
+                    <p>Dünyanın en büyük yapay zeka şirketlerinden birinin kurucu ortağı, üçüncü bir taraf tarafından kontrol edilebilen bir yapay zeka "acil durdurma düğmesinin" şirketler için zorunlu hale getirilmesi gerekebileceğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2zd5yj113o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            elon musk'tan yapay zeka tehdidine esprili yanıt
+            abd'nin los angeles kentinde düzenlenen yapay zeka ve inovasyon zirvesi all-in summit 2026'ya konuşmacı olarak katılan musk, yapay zeka teknolojilerinin hızla gelişmesine ilişkin artan endişeleri değerlendirdi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Elon Musk'tan yapay zeka tehdidine esprili yanıt</h3>
+                    <p>ABD'nin Los Angeles kentinde düzenlenen yapay zeka ve inovasyon zirvesi All-In Summit 2026'ya konuşmacı olarak katılan Musk, yapay zeka teknolojilerinin hızla gelişmesine ilişkin artan endişeleri değerlendirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/elon-musktan-yapay-zeka-tehdidine-esprili-yanit-956889.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de akıl sağlığı merkezinde hasta cinayeti: olay nasıl gelişti, ihmaller neler?
+            londra'nın doğusundaki, i̇ngiltere sağlık hizmetleri'ne (nhs) bağlı akıl sağlığı merkezinde bir hastanın başka bir hasta tarafından öldürüldüğü gece, personelin uyuduğu, telefonlarıyla ilgilendiği ve kayıtları tahrif ettiği soruşturmada ortaya çıktı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>İngiltere'de akıl sağlığı merkezinde hasta cinayeti: Olay nasıl gelişti, ihmaller neler?</h3>
+                    <p>Londra'nın doğusundaki, İngiltere Sağlık Hizmetleri'ne (NHS) bağlı akıl sağlığı merkezinde bir hastanın başka bir hasta tarafından öldürüldüğü gece, personelin uyuduğu, telefonlarıyla ilgilendiği ve kayıtları tahrif ettiği soruşturmada ortaya çıktı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9j3d87le55lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: yatırımcımız hukuk düzenine güvenmeli
+            adalet bakanı akın gürlek, "güçlü bir ekonomi ancak öngörülebilir bir hukuk düzeni ve güven veren bir adalet sistemi üzerine kalıcı hale gelecektir. bizim görevimiz reel ekonomimiz üzerinde geçmişten gelen mevzuat yüklerini ya da hukuki boşluklardan kaynaklanan baskıları tek tek ortadan kaldırmaktır" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakan Gürlek: Yatırımcımız hukuk düzenine güvenmeli</h3>
+                    <p>Adalet Bakanı Akın Gürlek, "Güçlü bir ekonomi ancak öngörülebilir bir hukuk düzeni ve güven veren bir adalet sistemi üzerine kalıcı hale gelecektir. Bizim görevimiz reel ekonomimiz üzerinde geçmişten gelen mevzuat yüklerini ya da hukuki boşluklardan kaynaklanan baskıları tek tek ortadan kaldırmaktır" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-yatirimcimiz-hukuk-duzenine-guvenmeli-956887.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            evrensel gazetesi ve af örgütü'nün de aralarında bulunduğu çok sayıda hesaba erişim engeli
+            i̇fade özgürlüğü derneği aralarında evrensel gazetesi, af örgütü (amnesty türkiye) ve i̇smail korkmaz vakfı'nın da bulunduğu çok sayıda örgütün sosyal medya hesapları için erişim engeli kararı verildiğini duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Evrensel gazetesi ve Af Örgütü'nün de aralarında bulunduğu çok sayıda hesaba erişim engeli</h3>
+                    <p>İfade Özgürlüğü Derneği aralarında Evrensel gazetesi, Af Örgütü (Amnesty Türkiye) ve İsmail Korkmaz Vakfı'nın da bulunduğu çok sayıda örgütün sosyal medya hesapları için erişim engeli kararı verildiğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cv62knwzzlpgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd uzayda silahlarının bulunduğunu ilk kez açıkça kabul etti
+            abd hava kuvvetleri bakanı troy meink, abd'nin yörüngede bir uzay silahı konuşlandırdığını kabul etti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD uzayda silahlarının bulunduğunu ilk kez açıkça kabul etti</h3>
+                    <p>ABD Hava Kuvvetleri Bakanı Troy Meink, ABD'nin yörüngede bir uzay silahı konuşlandırdığını kabul etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5lymd84glvzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            78. emmy ödülleri'nde kazananlar belli oldu
+            abd'nin dizi endüstrisindeki en prestijli ödüllerinden emmy ödülleri töreni los angeles'ta düzenlendi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>78. Emmy Ödülleri'nde kazananlar belli oldu</h3>
+                    <p>ABD'nin dizi endüstrisindeki en prestijli ödüllerinden Emmy Ödülleri töreni Los Angeles'ta düzenlendi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmqxvq3wrdz8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            galler, i̇skoçya ve kuzey i̇rlanda liderleri: merkezi yönetim devri bitiyor
+            galler, i̇skoçya ve kuzey i̇rlanda özerk yönetimleri başbakanları, i̇ngiltere'nin de dahil olduğu birleşik krallık'ta londra'daki merkezi yönetimi ifade eden "westminster'ın devrinin sona erdiğini" ve birleşik krallık hükümetinin "anayasal değişikliklere hazırlanması gerektiğini" açıkladılar.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Galler, İskoçya ve Kuzey İrlanda liderleri: Merkezi yönetim devri bitiyor</h3>
+                    <p>Galler, İskoçya ve Kuzey İrlanda özerk yönetimleri başbakanları, İngiltere'nin de dahil olduğu Birleşik Krallık'ta Londra'daki merkezi yönetimi ifade eden "Westminster'ın devrinin sona erdiğini" ve Birleşik Krallık hükümetinin "anayasal değişikliklere hazırlanması gerektiğini" açıkladılar.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6pwlkvgnyl0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sonbahar geldi, orman yangını tehlikesi geçmedi
+            uzmanlar, sonbahara girilmesine karşın orman yangınları açısından riskin devam ettiğini belirterek, yangına hassas bölgelerde önleyici tedbirlerin meteorolojik koşullara göre sürdürülmesinin önemli olduğunu söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sonbahar geldi, orman yangını tehlikesi geçmedi</h3>
+                    <p>Uzmanlar, sonbahara girilmesine karşın orman yangınları açısından riskin devam ettiğini belirterek, yangına hassas bölgelerde önleyici tedbirlerin meteorolojik koşullara göre sürdürülmesinin önemli olduğunu söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/cevre/sonbahar-geldi-orman-yangini-tehlikesi-gecmedi-956883.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp'nin temyizden feragat kararı: kurultay ve yargıtay sürecini nasıl etkileyebilir?
+            chp, "mutlak butlan" kararına karşı özgür özel ekibinin yaptığı temyiz başvurusundan feragat etti. chp yönetimi, kararın olağan kongre takviminin gecikmemesi amacıyla alındığını açıkladı. özel ve yönetimi, feragat kararının dosyanın yargıtay tarafından incelenmesini engellemeyeceğini savunuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP'nin temyizden feragat kararı: Kurultay ve Yargıtay sürecini nasıl etkileyebilir?</h3>
+                    <p>CHP, "mutlak butlan" kararına karşı Özgür Özel ekibinin yaptığı temyiz başvurusundan feragat etti. CHP yönetimi, kararın olağan kongre takviminin gecikmemesi amacıyla alındığını açıkladı. Özel ve yönetimi, feragat kararının dosyanın Yargıtay tarafından incelenmesini engellemeyeceğini savunuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c670lryj945eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'ailem güvende' operasyonlarına karşı i̇zmir'de düzenlenen protestoya polis müdahalesi
+            türkiye genelinde aralarında lgbti̇+ aktivistlerinin de olduğu çok sayıda kişinin tutuklanması ya da gözaltına alınasının ardından 14 eylül pazartesi akşamı i̇zmir'de protesto gösterisi düzenlendi. i̇nsan hakları derneği, gösteride biri avukat iki kişinin "darbedilerek gözaltına alındığını" duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Ailem güvende' operasyonlarına karşı İzmir'de düzenlenen protestoya polis müdahalesi</h3>
+                    <p>Türkiye genelinde aralarında LGBTİ+ aktivistlerinin de olduğu çok sayıda kişinin tutuklanması ya da gözaltına alınasının ardından 14 Eylül Pazartesi akşamı İzmir'de protesto gösterisi düzenlendi. İnsan Hakları Derneği, gösteride biri avukat iki kişinin "darbedilerek gözaltına alındığını" duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm: gazze'deki birçok bölge enkaz altındakilere saygı gösterilmeksizin dümdüz ediliyor
+            birleşmiş milletler (bm) i̇nsan hakları yüksek komiseri volker türk, "i̇srail ordusunun konuşlandığı gazze'deki birçok bölge, enkaz altındaki ölülere hiçbir saygı gösterilmeksizin buldozerlerle dümdüz ediliyor." ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>BM: Gazze'deki birçok bölge enkaz altındakilere saygı gösterilmeksizin dümdüz ediliyor</h3>
+                    <p>Birleşmiş Milletler (BM) İnsan Hakları Yüksek Komiseri Volker Türk, "İsrail ordusunun konuşlandığı Gazze'deki birçok bölge, enkaz altındaki ölülere hiçbir saygı gösterilmeksizin buldozerlerle dümdüz ediliyor." ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bm-gazzedeki-bircok-bolge-enkaz-altindakilere-saygi-gosterilmeksizin-dumduz-ediliyor-956890.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye kültür yolu festivali'nin yeni durağı ankara
+            kültür ve turizm bakanlığı, türkiye kültür yolu festivali'nin 19. durağının ankara olacağını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye Kültür Yolu Festivali'nin yeni durağı Ankara</h3>
+                    <p>Kültür ve Turizm Bakanlığı, Türkiye Kültür Yolu Festivali'nin 19. durağının Ankara olacağını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/turkiye-kultur-yolu-festivalinin-yeni-duragi-ankara-956885.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            milli havacılıkta önemli bir adım daha: hürkuşii'ye askeri tip sertifikası verildi
+            türkiye'de yerli olarak geliştirilen bir hava platformuna, uluslararası standartlara uygun ve tamamen milli insan kaynağıyla yürütülen kapsamlı sertifikasyon süreci sonunda ilk kez askeri tip sertifikası verildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Milli havacılıkta önemli bir adım daha: HÜRKUŞII'ye askeri tip sertifikası verildi</h3>
+                    <p>Türkiye'de yerli olarak geliştirilen bir hava platformuna, uluslararası standartlara uygun ve tamamen milli insan kaynağıyla yürütülen kapsamlı sertifikasyon süreci sonunda ilk kez Askeri Tip Sertifikası verildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/milli-havacilikta-onemli-bir-adim-daha-hurkus-iiye-askeri-tip-sertifikasi-verildi-956882.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şanlıurfa'da tefecilik operasyonu: 1,5 milyar liralık para hareketliliği
+            şanlıurfa'da "yeni nesil suç örgütleri"ne finansman sağladıkları ve tefecilik yaptıkları belirlenen 7 şüpheli, jandarma ekiplerince düzenlenen operasyonla yakalandı. şüphelilerin hesaplarında yaklaşık 1,5 milyar liralık para hareketliliği tespit edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Şanlıurfa'da tefecilik operasyonu: 1,5 milyar liralık para hareketliliği</h3>
+                    <p>Şanlıurfa'da "Yeni Nesil Suç Örgütleri"ne finansman sağladıkları ve tefecilik yaptıkları belirlenen 7 şüpheli, jandarma ekiplerince düzenlenen operasyonla yakalandı. Şüphelilerin hesaplarında yaklaşık 1,5 milyar liralık para hareketliliği tespit edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/sanliurfada-tefecilik-operasyonu-15-milyar-liralik-para-hareketliligi-956881.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gülistan doku soruşturmasında 4 zanlı daha tutuklandı
+            tunceli'de 5 ocak 2020'den beri haber alınamayan üniversite öğrencisi gülistan doku ile ilgili son soruşturma kapsamında adliyeye sevk edilen 5 zanlıdan 4'ü tutuklandı, 1'i adli kontrol şartıyla serbest bırakıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gülistan Doku soruşturmasında 4 zanlı daha tutuklandı</h3>
+                    <p>Tunceli'de 5 Ocak 2020'den beri haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgili son soruşturma kapsamında adliyeye sevk edilen 5 zanlıdan 4'ü tutuklandı, 1'i adli kontrol şartıyla serbest bırakıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gulistan-doku-sorusturmasinda-4-zanli-daha-tutuklandi-956880.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            maarif modeli'ne geçişte son yıl: i̇ki farklı müfredat okullarda nasıl uygulanacak?
+            türkiye'nin maarif model ile kademeli müfredat geçişi, 2026-2027 eğitim öğretim yılında üçüncü yılına giriyor. bu model sınıflarda nasıl uygulanıyor, eski müfredattan farkı ne?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Maarif Modeli'ne geçişte son yıl: İki farklı müfredat okullarda nasıl uygulanacak?</h3>
+                    <p>Türkiye'nin Maarif Model ile kademeli müfredat geçişi, 2026-2027 eğitim öğretim yılında üçüncü yılına giriyor. Bu model sınıflarda nasıl uygulanıyor, eski müfredattan farkı ne?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5yej7v0nz9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            seferihisar belediyesi'nde 'rüşvet' soruşturmasında 47 kişi adliyeye sevk edildi
+            i̇zmir'in seferihisar belediyesin'e yönelik "rüşvet" ve "usulsüzlük" iddialarıyla başlatılan soruşturma kapsamında gözaltına alınan 47 kişi adliyeye sevk edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Seferihisar Belediyesi'nde 'rüşvet' soruşturmasında 47 kişi adliyeye sevk edildi</h3>
+                    <p>İzmir'in Seferihisar Belediyesin'e yönelik "rüşvet" ve "usulsüzlük" iddialarıyla başlatılan soruşturma kapsamında gözaltına alınan 47 kişi adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c1eygdvp8w8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail'in gazze'ye düzenlediği saldırılarda can kaybı 73 bin 789'a yükseldi
+            soykırımcı i̇srail ordusunun ateşkese rağmen gazze şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişinin daha yaşamını yitirmesiyle ekim 2023'ten bu yana toplam can kaybı 73 bin 789'a çıktı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail'in Gazze'ye düzenlediği saldırılarda can kaybı 73 bin 789'a yükseldi</h3>
+                    <p>Soykırımcı İsrail ordusunun ateşkese rağmen Gazze Şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişinin daha yaşamını yitirmesiyle Ekim 2023'ten bu yana toplam can kaybı 73 bin 789'a çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-gazzeye-duzenledigi-saldirilarda-can-kaybi-73-bin-789a-yukseldi-956884.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            etna yanardağı'nın kül püskürtmesi hava ulaşımını olumsuz etkilemeye devam ediyor
+            i̇talya'nın sicilya adası'ndaki aktif yanardağ etna'nın dünden bu yana yoğun biçimde kül püskürtmesi nedeniyle, hava ulaşımının hala olumsuz etkilendiği ve katanya havalimanı'nın iç ve dış hat uçuşlarının bir süre daha yapılamayacağı bildirildi.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Etna Yanardağı'nın kül püskürtmesi hava ulaşımını olumsuz etkilemeye devam ediyor</h3>
+                    <p>İtalya'nın Sicilya Adası'ndaki aktif yanardağ Etna'nın dünden bu yana yoğun biçimde kül püskürtmesi nedeniyle, hava ulaşımının hala olumsuz etkilendiği ve Katanya Havalimanı'nın iç ve dış hat uçuşlarının bir süre daha yapılamayacağı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/etna-yanardaginin-kul-puskurtmesi-hava-ulasimini-olumsuz-etkilemeye-devam-ediyor-956888.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
