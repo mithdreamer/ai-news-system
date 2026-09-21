@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>7</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>15</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-21 10:46</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/rusyada-duma-secimlerinin-galibi-putinin-birlesik-rusya-partisi-oldu-957522.html" target="_blank">
+                <strong>Rusya'da Duma seçimlerinin galibi Putinin Birleşik Rusya partisi oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm5ydr0kxp4xo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rusya'daki seçimlerde sürpriz yok ama Kremlin'in sonuçları nasıl değerlendireceği önemli</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Berlin'de seçimleri kazanan Sol Parti'nin başbakan adayı Elif Eralp kimdir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>TOKİ'de %25 indirim yarın başlıyor: Kampanya hakkında bilinenler</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/ogretmen-veli-gorusmeleri-icin-telefonla-randevu-alinabilecek-957528.html" target="_blank">
+                <strong>Öğretmenveli görüşmeleri için telefonla randevu alınabilecek</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'da duma seçimlerinin galibi putinin birleşik rusya partisi oldu
+            rusya’da parlamentonun alt kanadı devlet duması için yapılan milletvekili seçiminde kesin olmayan ilk sonuçlara göre rusya devlet başkanı vladimir putin’in partisi birleşik rusya yüzde 57,82 oy alarak birinci oldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'da Duma seçimlerinin galibi Putinin Birleşik Rusya partisi oldu</h3>
+                    <p>Rusya’da parlamentonun alt kanadı Devlet Duması için yapılan milletvekili seçiminde kesin olmayan ilk sonuçlara göre Rusya Devlet Başkanı Vladimir Putin’in partisi Birleşik Rusya yüzde 57,82 oy alarak birinci oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusyada-duma-secimlerinin-galibi-putinin-birlesik-rusya-partisi-oldu-957522.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'daki seçimlerde sürpriz yok ama kremlin'in sonuçları nasıl değerlendireceği önemli
+            vladimir putin'in rusya'daki parlamento seçimlerinin sonuçlarına dayanarak rusların büyük çoğunluğunun ukrayna'daki "özel askeri operasyonu" desteklediğini iddia etmesi muhtemel. bbc rusya editörü steve rosenberg'in haberi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'daki seçimlerde sürpriz yok ama Kremlin'in sonuçları nasıl değerlendireceği önemli</h3>
+                    <p>Vladimir Putin'in Rusya'daki parlamento seçimlerinin sonuçlarına dayanarak Rusların büyük çoğunluğunun Ukrayna'daki "özel askeri operasyonu" desteklediğini iddia etmesi muhtemel. BBC Rusya editörü Steve Rosenberg'in haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm5ydr0kxp4xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toki̇'de %25 indirim yarın başlıyor: kampanya hakkında bilinenler
+            çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığı (toki̇), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>TOKİ'de %25 indirim yarın başlıyor: Kampanya hakkında bilinenler</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan bm kürsüsünden dünyaya seslenecek
+            cumhurbaşkanı erdoğan, birleşmiş milletler 81. genel kurulu'na katılmak ve çeşitli temaslarda bulunmak üzere abd'nin new york şehrine gitti. cumhurbaşkanı erdoğan, new york'taki türkevi'nde vatandaşlar tarafından yoğun ilgiyle karşılandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan BM kürsüsünden dünyaya seslenecek</h3>
+                    <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler 81. Genel Kurulu'na katılmak ve çeşitli temaslarda bulunmak üzere ABD'nin New York şehrine gitti. Cumhurbaşkanı Erdoğan, New York'taki Türkevi'nde vatandaşlar tarafından yoğun ilgiyle karşılandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bm-kursusunden-dunyaya-seslenecek-957525.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uykunuzu takip etmek uyumanızı kötüleştirebilir mi?
+            uykunuzu iyileştirmek için yaptığınız şeyler uykunuzu kötüleştirebilir. peki nelere dikkat etmek lazım?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Uykunuzu takip etmek uyumanızı kötüleştirebilir mi?</h3>
+                    <p>Uykunuzu iyileştirmek için yaptığınız şeyler uykunuzu kötüleştirebilir. Peki nelere dikkat etmek lazım?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqx2zp497895o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            boyun kütletmenin gizli tehlikesi: solunum durması ve ani ölüm riski
+            boyun ağrılarını dindirmek için gelişigüzel yapılan "kütletme" gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Boyun kütletmenin gizli tehlikesi: Solunum durması ve ani ölüm riski</h3>
+                    <p>Boyun ağrılarını dindirmek için gelişigüzel yapılan "kütletme" gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/boyun-kutletmenin-gizli-tehlikesi-solunum-durmasi-ve-ani-olum-riski-957521.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna'dan moskova'ya yüzlerce i̇ha ile 'en büyük' saldırı
+            moskova belediye başkanı, ukrayna'nın bugüne kadarki en büyük insansız hava aracı saldırısını düzenlediğini, şehrin ana petrol rafinerisi ve bir apartmanın vurulduğunu söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ukrayna'dan Moskova'ya yüzlerce İHA ile 'en büyük' saldırı</h3>
+                    <p>Moskova belediye başkanı, Ukrayna'nın bugüne kadarki en büyük insansız hava aracı saldırısını düzenlediğini, şehrin ana petrol rafinerisi ve bir apartmanın vurulduğunu söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c207gpxnrggo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            berlin'de seçimleri kazanan sol parti'nin başbakan adayı elif eralp kimdir?
+            kamu yayıncıları ard ve zdf'nin sandık çıkış anketlerine göre, sol parti (die linke), başbakan friedrich merz'in liderliğindeki merkez sağ cdu'yu mağlup etti. sol parti'nin adayı elif eralp %25 civarındaki oy oranı ile önde görünüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Berlin'de seçimleri kazanan Sol Parti'nin başbakan adayı Elif Eralp kimdir?</h3>
+                    <p>Kamu yayıncıları ARD ve ZDF'nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz'in liderliğindeki merkez sağ CDU'yu mağlup etti. Sol Parti'nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            genç çiftlere 2 milyar 76 milyon liralık evlilik desteği
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, aile kurumunun desteklenmesi ve genç çiftlerin evlilik süreçlerine katkı sağlanması amacıyla kurulan aile ve gençlik fonu kapsamında bu ay 18 bin 334 gence toplam 2 milyar 76 milyon lira ödeme yapıldığını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Genç çiftlere 2 milyar 76 milyon liralık evlilik desteği</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, aile kurumunun desteklenmesi ve genç çiftlerin evlilik süreçlerine katkı sağlanması amacıyla kurulan Aile ve Gençlik Fonu kapsamında bu ay 18 bin 334 gence toplam 2 milyar 76 milyon lira ödeme yapıldığını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/genc-ciftlere-2-milyar-76-milyon-liralik-evlilik-destegi-957526.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            almanya başbakanı merz, eyalet seçimlerindeki 'felakete' rağmen görevde kalacağı mesajı verdi
+            sandık çıkış anketleri, merz'in merkez sağ cdu partisinin berlin ve mecklenburg-vorpommern eyaletlerinde ağır kayıplar yaşadığını gösteriyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Almanya Başbakanı Merz, eyalet seçimlerindeki 'felakete' rağmen görevde kalacağı mesajı verdi</h3>
+                    <p>Sandık çıkış anketleri, Merz'in merkez sağ CDU partisinin Berlin ve Mecklenburg-Vorpommern eyaletlerinde ağır kayıplar yaşadığını gösteriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjly4p21g5e1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaşif kozinoğlu soruşturmasında son gelişmeler neler?
+            eski mi̇t görevlisi kaşif kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. diğer üç kişinin bugün adliyeye sevk edilmeleri bekleniyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaşif Kozinoğlu soruşturmasında son gelişmeler neler?</h3>
+                    <p>Eski MİT görevlisi Kaşif Kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. Diğer üç kişinin bugün adliyeye sevk edilmeleri bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            slovenya'da muhalefet, i̇srail'le yakınlaşma nedeniyle dışişleri bakanı hakkında gensoru önergesi verecek
+            slovenya'da muhalefet partileri, hükümetin katil i̇srail'le yakınlaşma politikası ve dış politikada izlediği yeni çizgi nedeniyle dışişleri bakanı tone kajzer hakkında gensoru önergesi sunacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Slovenya'da muhalefet, İsrail'le yakınlaşma nedeniyle Dışişleri Bakanı hakkında gensoru önergesi verecek</h3>
+                    <p>Slovenya'da muhalefet partileri, hükümetin katil İsrail'le yakınlaşma politikası ve dış politikada izlediği yeni çizgi nedeniyle Dışişleri Bakanı Tone Kajzer hakkında gensoru önergesi sunacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/slovenyada-muhalefet-israille-yakinlasma-nedeniyle-disisleri-bakani-hakkinda-gensoru-onergesi-verecek-957520.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cindy crawford'ın oğlu presley gerber 27 yaşında hayatını kaybetti
+            modellik yapan gerber, 20 eylül pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. ölüm nedeni açıklanmadı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cindy Crawford'ın oğlu Presley Gerber 27 yaşında hayatını kaybetti</h3>
+                    <p>Modellik yapan Gerber, 20 Eylül Pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. Ölüm nedeni açıklanmadı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm5ye7l3685do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ateşkese rağmen soykırımcı i̇srail saldırılarının sürdüğü gazze'de hastanelere son 24 saatte 4 cenaze getirildi
+            ateşkese rağmen soykırımcı i̇srail saldırılarının devam ettiği gazze'de son 24 saatte 4 kişinin cenazesinin hastanelere getirildiği bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ateşkese rağmen soykırımcı İsrail saldırılarının sürdüğü Gazze'de hastanelere son 24 saatte 4 cenaze getirildi</h3>
+                    <p>Ateşkese rağmen soykırımcı İsrail saldırılarının devam ettiği Gazze'de son 24 saatte 4 kişinin cenazesinin hastanelere getirildiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ateskese-ragmen-soykirimci-israil-saldirilarinin-surdugu-gazzede-hastanelere-son-24-saatte-4-cenaze-getirildi-957524.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            öğretmenveli görüşmeleri için telefonla randevu alınabilecek
+            milli eğitim bakanlığınca (meb) hayata geçirilen "okul randevu sistemi" ile velilere, meb i̇letişim merkezi (mebi̇m) üzerinden 7 gün 24 saat telefonla randevu alabilme imkanı sunuldu.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Öğretmenveli görüşmeleri için telefonla randevu alınabilecek</h3>
+                    <p>Milli Eğitim Bakanlığınca (MEB) hayata geçirilen "Okul Randevu Sistemi" ile velilere, MEB İletişim Merkezi (MEBİM) üzerinden 7 gün 24 saat telefonla randevu alabilme imkanı sunuldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/ogretmen-veli-gorusmeleri-icin-telefonla-randevu-alinabilecek-957528.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            katılımevim soruşturmasında 15 kişi gözaltına alındı
+            i̇stanbul cumhuriyet başsavcılığı, katılımevim tasarruf finansman aş paylarında "piyasa dolandırıcılığı" yapıldığı iddiasıyla yürütülen soruşturmada 21 eylül'de 15 kişinin gözaltına alındığını, firari 10 şüphelinin arandığını açıkladı
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Katılımevim soruşturmasında 15 kişi gözaltına alındı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı, Katılımevim Tasarruf Finansman AŞ paylarında "piyasa dolandırıcılığı" yapıldığı iddiasıyla yürütülen soruşturmada 21 Eylül'de 15 kişinin gözaltına alındığını, firari 10 şüphelinin arandığını açıkladı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqkg08p7v814o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avustralya, 2060'tan önce ülkedeki doğumların, ölümlerin gerisinde kalacağını tahmin ediyor
+            avustralya'da hükümet, doğum sayısının 2060'tan önce ölüm sayısının altında kalacağını ve nüfustaki yaşlanmanın ekonomik büyümeyi yavaşlatıcı rol oynayacağını öngörüyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Avustralya, 2060'tan önce ülkedeki doğumların, ölümlerin gerisinde kalacağını tahmin ediyor</h3>
+                    <p>Avustralya'da hükümet, doğum sayısının 2060'tan önce ölüm sayısının altında kalacağını ve nüfustaki yaşlanmanın ekonomik büyümeyi yavaşlatıcı rol oynayacağını öngörüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/avustralya-2060tan-once-ulkedeki-dogumlarin-olumlerin-gerisinde-kalacagini-tahmin-ediyor-957527.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            spk fonların tasfiye sürecini altı aya uzattı
+            sermaye piyasası kurulu (spk) tasfiyesine karar verilen 131 yatırım fonunun tasfiye sürecini üç aydan altı aya çıkardı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>SPK fonların tasfiye sürecini altı aya uzattı</h3>
+                    <p>Sermaye Piyasası Kurulu (SPK) tasfiyesine karar verilen 131 yatırım fonunun tasfiye sürecini üç aydan altı aya çıkardı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq36l32j8w1lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere deniz ticaret operasyonları: hürmüz boğazı'nda petrol tankeri vuruldu
+            i̇ngiltere deniz ticaret operasyonları (ukmto), hürmüz boğazı'nda bir petrol tankerinin vurulduğunu ve mürettebattan 2 kişinin yaralandığını bildirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>İngiltere Deniz Ticaret Operasyonları: Hürmüz Boğazı'nda petrol tankeri vuruldu</h3>
+                    <p>İngiltere Deniz Ticaret Operasyonları (UKMTO), Hürmüz Boğazı'nda bir petrol tankerinin vurulduğunu ve mürettebattan 2 kişinin yaralandığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ingiltere-deniz-ticaret-operasyonlari-hurmuz-bogazinda-petrol-tankeri-vuruldu-957523.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            basketbolda cumhurbaşkanlığı kupası'nın sahibi yarın belli olacak
+            basketbol 39. erkekler cumhurbaşkanlığı kupası'nda fenerbahçe tarfin ile beşiktaş, 22 eylül salı günü saat 20.00'de sinan erdem spor salonu'nda karşı karşıya gelecek. mücadele trt 1'den canlı yayınlanacak.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>Basketbolda Cumhurbaşkanlığı Kupası'nın sahibi yarın belli olacak</h3>
+                    <p>Basketbol 39. Erkekler Cumhurbaşkanlığı Kupası'nda Fenerbahçe Tarfin ile Beşiktaş, 22 Eylül Salı günü saat 20.00'de Sinan Erdem Spor Salonu'nda karşı karşıya gelecek. Mücadele TRT 1'den canlı yayınlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/basketbolda-cumhurbaskanligi-kupasinin-sahibi-yarin-belli-olacak-957519.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
