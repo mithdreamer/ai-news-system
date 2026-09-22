@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>24</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-22 09:59</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj20723yqvq9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Merz'in siyasi krizi, istikrar konusunda takıntılı Almanya için risk oluşturuyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c63reyd07vq9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İngiltere'den Suudi Arabistan'a 'savunma' amaçlı askeri destek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>TOKİ'de %25 indirim bugün başlıyor: Kampanya hakkında bilinenler</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Berlin'de seçimleri kazanan Sol Parti'nin başbakan adayı Elif Eralp kimdir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-yardimcisi-yilmaz-mavi-vatanin-cografi-veri-kapasitesini-ileri-bir-seviyeye-tasiyacagiz-957648.html" target="_blank">
+                <strong>Cumhurbaşkanı Yardımcısı Yılmaz: Mavi Vatan'ın coğrafi veri kapasitesini ileri bir seviyeye taşıyacağız</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            merz'in siyasi krizi, istikrar konusunda takıntılı almanya için risk oluşturuyor
+            bbc avrupa editörü katya adler'in analizine göre, almanya'daki siyasi değişimler avrupa'da ve ötesinde yakından izleniyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Merz'in siyasi krizi, istikrar konusunda takıntılı Almanya için risk oluşturuyor</h3>
+                    <p>BBC Avrupa Editörü Katya Adler'in analizine göre, Almanya'daki siyasi değişimler Avrupa'da ve ötesinde yakından izleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj20723yqvq9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'den suudi arabistan'a 'savunma' amaçlı askeri destek
+            i̇ngiltere, yemen'deki i̇ran destekli husi milislerinin saldırıları ile mücadele eden suudi arabistan'a "savunma amaçlı havadan havaya yakıt ikmali" desteği sağlayacağını açıkladı. tek bir uçağı içerecek destek, "belli bir süre için" verilecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İngiltere'den Suudi Arabistan'a 'savunma' amaçlı askeri destek</h3>
+                    <p>İngiltere, Yemen'deki İran destekli Husi milislerinin saldırıları ile mücadele eden Suudi Arabistan'a "savunma amaçlı havadan havaya yakıt ikmali" desteği sağlayacağını açıkladı. Tek bir uçağı içerecek destek, "belli bir süre için" verilecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c63reyd07vq9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toki̇'de %25 indirim bugün başlıyor: kampanya hakkında bilinenler
+            çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığı (toki̇), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>TOKİ'de %25 indirim bugün başlıyor: Kampanya hakkında bilinenler</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            berlin'de seçimleri kazanan sol parti'nin başbakan adayı elif eralp kimdir?
+            kamu yayıncıları ard ve zdf'nin sandık çıkış anketlerine göre, sol parti (die linke), başbakan friedrich merz'in liderliğindeki merkez sağ cdu'yu mağlup etti. sol parti'nin adayı elif eralp %25 civarındaki oy oranı ile önde görünüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Berlin'de seçimleri kazanan Sol Parti'nin başbakan adayı Elif Eralp kimdir?</h3>
+                    <p>Kamu yayıncıları ARD ve ZDF'nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz'in liderliğindeki merkez sağ CDU'yu mağlup etti. Sol Parti'nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı yardımcısı yılmaz: mavi vatan'ın coğrafi veri kapasitesini ileri bir seviyeye taşıyacağız
+            cumhurbaşkanı yardımcısı cevdet yılmaz, "msb deniz kuvvetleri komutanlığımızın 'ulusal deniz coğrafi veri merkezinin kurulması' projesiyle mavi vatanımızın coğrafi veri altyapısını güçlendirerek ülkemizin deniz coğrafi veri kapasitesini ileri bir seviyeye taşımayı hedefliyoruz." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Yardımcısı Yılmaz: Mavi Vatan'ın coğrafi veri kapasitesini ileri bir seviyeye taşıyacağız</h3>
+                    <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, "MSB Deniz Kuvvetleri Komutanlığımızın 'Ulusal Deniz Coğrafi Veri Merkezinin Kurulması' Projesiyle Mavi Vatanımızın coğrafi veri altyapısını güçlendirerek ülkemizin deniz coğrafi veri kapasitesini ileri bir seviyeye taşımayı hedefliyoruz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-yardimcisi-yilmaz-mavi-vatanin-cografi-veri-kapasitesini-ileri-bir-seviyeye-tasiyacagiz-957648.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan göktaş: 25 kişilik psikososyal destek ekibimizle ilk andan itibaren sahada
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, manisa'nın turgutlu ilçesindeki i̇nci üzmez mesleki ve teknik anadolu lisesi yakınındaki silahlı saldırının ilk anından itibaren, 25 kişilik psikososyal destek ekibiyle öğrencilerin ve ailelerinin yanında olduklarını belirtti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Göktaş: 25 kişilik psikososyal destek ekibimizle ilk andan itibaren sahada</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, Manisa'nın Turgutlu ilçesindeki İnci Üzmez Mesleki ve Teknik Anadolu Lisesi yakınındaki silahlı saldırının ilk anından itibaren, 25 kişilik psikososyal destek ekibiyle öğrencilerin ve ailelerinin yanında olduklarını belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-goktas-25-kisilik-psikososyal-destek-ekibimizle-ilk-andan-itibaren-sahada-957645.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afet ve acil durumlardan etkilenen 26 binden fazla kişiye psikososyal destek
+            aile ve sosyal hizmetler bakanlığı, ocak-eylül döneminde 45 afet ve acil durumda 26 binden fazla kişiye psikososyal destek verdi. bakanlık ekipleri, 2013'ten bu yana 329 olayda 6 milyondan fazla kişiye ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Afet ve acil durumlardan etkilenen 26 binden fazla kişiye psikososyal destek</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanlığı, ocak-eylül döneminde 45 afet ve acil durumda 26 binden fazla kişiye psikososyal destek verdi. Bakanlık ekipleri, 2013'ten bu yana 329 olayda 6 milyondan fazla kişiye ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/afet-ve-acil-durumlardan-etkilenen-26-binden-fazla-kisiye-psikososyal-destek-957640.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan'dan bm güvenlik konseyi'nin veto hakkının kaldırılması çağrısı
+            cumhurbaşkanı recep tayyip erdoğan, bugün birleşmiş milletler 81. genel kurulu'na hitap edecek. erdoğan konuşması öncesinde bm genel konseyi'nde veto hakkının kaldırılması çağrısında bulundu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan'dan BM Güvenlik Konseyi'nin veto hakkının kaldırılması çağrısı</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, bugün Birleşmiş Milletler 81. Genel Kurulu'na hitap edecek. Erdoğan konuşması öncesinde BM Genel Konseyi'nde veto hakkının kaldırılması çağrısında bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6j4jpklxx0do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manisa'da okul önünde silahlı saldırı: i̇kisi ağır 11 yaralı
+            manisa'nın turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Manisa'da okul önünde silahlı saldırı: İkisi ağır 11 yaralı</h3>
+                    <p>Manisa'nın Turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. Saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5y4z071pz6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            g7'den i̇ran'a husilere desteği bırakma çağrısı
+            g7 ülkelerinin dışişleri bakanları ortak bir açıklamada, i̇ran'a yemen'deki husi milislerine verdiği silah ve desteği sona erdirme çağrısı yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>G7'den İran'a Husilere desteği bırakma çağrısı</h3>
+                    <p>G7 ülkelerinin dışişleri bakanları ortak bir açıklamada, İran'a Yemen'deki Husi milislerine verdiği silah ve desteği sona erdirme çağrısı yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj3v4yk5xxdlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manisa'da okulun yakınındaki saldırıyla ilgili 2 mülkiye başmüfettişi ve 2 polis başmüfettişi görevlendirildi
+            i̇çişleri bakanlığı, manisa'nın turgutlu ilçesinde meydana gelen silahlı saldırı olayını her yönüyle incelemek üzere 2 mülkiye başmüfettişi ile 2 polis başmüfettişi görevlendirildiğini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Manisa'da okulun yakınındaki saldırıyla ilgili 2 mülkiye başmüfettişi ve 2 polis başmüfettişi görevlendirildi</h3>
+                    <p>İçişleri Bakanlığı, Manisa'nın Turgutlu ilçesinde meydana gelen silahlı saldırı olayını her yönüyle incelemek üzere 2 mülkiye başmüfettişi ile 2 polis başmüfettişi görevlendirildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/manisada-okulun-yakinindaki-saldiriyla-ilgili-2-mulkiye-basmufettisi-ve-2-polis-basmufettisi-gorevlendirildi-957647.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tbmm başkanı kurtulmuş'tan manisa'daki saldırıya ilişkin geçmiş olsun mesajı
+            tbmm başkanı numan kurtulmuş, manisa'nın turgutlu ilçesindeki i̇nci üzmez mesleki ve teknik anadolu lisesi yakınındaki silahlı saldırıya ilişkin, "manisa'nın turgutlu ilçesinde bir okulun yakınında meydana gelen saldırıdan etkilenen başta öğrencilerimiz ve ailelerimiz olmak üzere herkese geçmiş olsun dileklerimi iletiyorum." ifadesini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TBMM Başkanı Kurtulmuş'tan Manisa'daki saldırıya ilişkin geçmiş olsun mesajı</h3>
+                    <p>TBMM Başkanı Numan Kurtulmuş, Manisa'nın Turgutlu ilçesindeki İnci Üzmez Mesleki ve Teknik Anadolu Lisesi yakınındaki silahlı saldırıya ilişkin, "Manisa'nın Turgutlu ilçesinde bir okulun yakınında meydana gelen saldırıdan etkilenen başta öğrencilerimiz ve ailelerimiz olmak üzere herkese geçmiş olsun dileklerimi iletiyorum." ifadesini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tbmm-baskani-kurtulmustan-manisadaki-saldiriya-iliskin-gecmis-olsun-mesaji-957643.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran: öğrencilerimizin yaralanması hepimizi derinden üzmüştür
+            i̇letişim başkanı burhanettin duran, manisa'nın turgutlu ilçesinde, okul binası dışında meydana gelen silahlı saldırıya ilişkin, "hadisenin tüm yönleriyle aydınlatılması amacıyla ilgili kurumlarımız çalışmalarını titizlikle sürdürmektedir." ifadesini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İletişim Başkanı Duran: Öğrencilerimizin yaralanması hepimizi derinden üzmüştür</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, Manisa'nın Turgutlu ilçesinde, okul binası dışında meydana gelen silahlı saldırıya ilişkin, "Hadisenin tüm yönleriyle aydınlatılması amacıyla ilgili kurumlarımız çalışmalarını titizlikle sürdürmektedir." ifadesini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-ogrencilerimizin-yaralanmasi-hepimizi-derinden-uzmustur-957641.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cindy crawford'ın oğlu presley gerber'in ölümüne aşırı doz soruşturması
+            modellik yapan gerber, 20 eylül pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. ölüm nedeni açıklanmadı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cindy Crawford'ın oğlu Presley Gerber'in ölümüne aşırı doz soruşturması</h3>
+                    <p>Modellik yapan Gerber, 20 Eylül Pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. Ölüm nedeni açıklanmadı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm5ye7l3685do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hakan tosun davasında karar duruşması bugün görülecek
+            gazeteci, belgeselci ve ekoloji aktivisti hakan tosun cinayeti davasında karar duruşması bugün görülecek
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hakan Tosun davasında karar duruşması bugün görülecek</h3>
+                    <p>Gazeteci, belgeselci ve ekoloji aktivisti Hakan Tosun cinayeti davasında karar duruşması bugün görülecek</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3v6lv5w05no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manisa'da okulun yakınındaki saldırıyla ilgili yayın yasağı kararı
+            radyo ve televizyon üst kurulu (rtük), manisa'da okulun yakınındaki saldırıyla ilgili yayın yasağı kararı verildiğini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Manisa'da okulun yakınındaki saldırıyla ilgili yayın yasağı kararı</h3>
+                    <p>Radyo ve Televizyon Üst Kurulu (RTÜK), Manisa'da okulun yakınındaki saldırıyla ilgili yayın yasağı kararı verildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/manisada-okulun-yakinindaki-saldiriyla-ilgili-yayin-yasagi-karari-957646.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail ordusu batı şeria'da 9 filistinliyi gözaltına aldı
+            i̇şgalci i̇srail ordusu, batı şeria'da düzenlediği baskınlarda biri kadın ikisi yaşlı 9 filistinliyi gözaltına aldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrail ordusu Batı Şeria'da 9 Filistinliyi gözaltına aldı</h3>
+                    <p>İşgalci İsrail ordusu, Batı Şeria'da düzenlediği baskınlarda biri kadın ikisi yaşlı 9 Filistinliyi gözaltına aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-bati-seriada-9-filistinliyi-gozaltina-aldi-957644.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ateşkese rağmen katil i̇srail saldırılarını sürdüyor
+            ateşkese rağmen i̇srail saldırılarının sürdüğü gazze'de son 24 saatte 5 kişi hayatını kaybetti
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ateşkese rağmen katil İsrail saldırılarını sürdüyor</h3>
+                    <p>Ateşkese rağmen İsrail saldırılarının sürdüğü Gazze'de son 24 saatte 5 kişi hayatını kaybetti</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ateskese-ragmen-katil-israil-saldirilarini-surduyor-957642.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            birleşmiş milletler'den naza belgeselinin yönetmenlerinin korunması çağrısı
+            bm'den katil i̇srail'in gazze'deki katliamını anlatan naza belgeselinin yönetmenlerinin korunması çağrısı yapıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Birleşmiş Milletler'den NAZA belgeselinin yönetmenlerinin korunması çağrısı</h3>
+                    <p>BM'den Katil İsrail'in Gazze'deki katliamını anlatan NAZA belgeselinin yönetmenlerinin korunması çağrısı yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/birlesmis-milletlerden-naza-belgeselinin-yonetmenlerinin-korunmasi-cagrisi-957639.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            motorin 100 lirayı gördü: günlük yaşamı ve üretimi nasıl etkileyebilir?
+            türkiye'de motorinin litre fiyatı 17 eylül'de yapılan zamla birçok kentte ilk kez üç haneye çıktı ve 100 lirayı aştı. peki, sektörler bu artıştan nasıl etkilenecek?
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Motorin 100 lirayı gördü: Günlük yaşamı ve üretimi nasıl etkileyebilir?</h3>
+                    <p>Türkiye'de motorinin litre fiyatı 17 Eylül'de yapılan zamla birçok kentte ilk kez üç haneye çıktı ve 100 lirayı aştı. Peki, sektörler bu artıştan nasıl etkilenecek?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c80463wg09d1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
