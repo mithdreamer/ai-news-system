@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>16</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-23 10:01</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c539myv9vpkdo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump: 'Ara seçimlerden sonra İran ile anlaşma yapabiliriz'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/ab-uzaya-erisimde-kapasite-acigiyla-karsi-karsiya-957824.html" target="_blank">
+                <strong>AB, uzaya erişimde kapasite açığıyla karşı karşıya</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/tdt-ulkelerinin-ekonomisi-211-trilyon-dolara-ulasti-957818.html" target="_blank">
+                <strong>TDT ülkelerinin ekonomisi 2,11 trilyon dolara ulaştı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckddvl6g04l1o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İtalyan siyasetçiler neden mini etekli fotoğraf paylaşıyor?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump: 'ara seçimlerden sonra i̇ran ile anlaşma yapabiliriz'
+            abd başkanı donald trump, ülkesinin kasım ayında yapılacak ara seçimlerden sonra i̇ran ile bir anlaşma yapabileceğine inandığını söyledi. trump, rusya-ukrayna savaşının da düşünülenden daha çabuk sona erebileceğini vurguladı. abd başkanı ayrıca yapay zekaya artık "süper zeka" denmesi önerisi yaptı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Trump: 'Ara seçimlerden sonra İran ile anlaşma yapabiliriz'</h3>
+                    <p>ABD Başkanı Donald Trump, ülkesinin kasım ayında yapılacak ara seçimlerden sonra İran ile bir anlaşma yapabileceğine inandığını söyledi. Trump, Rusya-Ukrayna savaşının da düşünülenden daha çabuk sona erebileceğini vurguladı. ABD Başkanı ayrıca yapay zekaya artık "süper zeka" denmesi önerisi yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c539myv9vpkdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ab, uzaya erişimde kapasite açığıyla karşı karşıya
+            avrupa birliği (ab) komisyonunun savunma ve uzaydan sorumlu üyesi andrius kubilius, avrupa’nın fırlatma araçları konusunda yaşadığı krizi geride bıraktığını ancak artan uydu talebi nedeniyle yeni kapasite açığıyla karşı karşıya olduğunu söyledi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>AB, uzaya erişimde kapasite açığıyla karşı karşıya</h3>
+                    <p>Avrupa Birliği (AB) Komisyonunun Savunma ve Uzaydan Sorumlu Üyesi Andrius Kubilius, Avrupa’nın fırlatma araçları konusunda yaşadığı krizi geride bıraktığını ancak artan uydu talebi nedeniyle yeni kapasite açığıyla karşı karşıya olduğunu söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ab-uzaya-erisimde-kapasite-acigiyla-karsi-karsiya-957824.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            tdt ülkelerinin ekonomisi 2,11 trilyon dolara ulaştı
+            türk devletleri teşkilatı (tdt) üyesi ve gözlemci ülkelerin toplam gayri safi yurt i̇çi hasılası (gsyh) 2,11 trilyon dolara ulaşırken, bölgedeki ekonomik entegrasyon ve lojistik bağlantılar güçleniyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>TDT ülkelerinin ekonomisi 2,11 trilyon dolara ulaştı</h3>
+                    <p>Türk Devletleri Teşkilatı (TDT) üyesi ve gözlemci ülkelerin toplam Gayri Safi Yurt İçi Hasılası (GSYH) 2,11 trilyon dolara ulaşırken, bölgedeki ekonomik entegrasyon ve lojistik bağlantılar güçleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tdt-ulkelerinin-ekonomisi-211-trilyon-dolara-ulasti-957818.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?
+            türkiye'deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül'de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+                    <p>Türkiye'deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül'de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            imf'den i̇ngiltere ve abd'ye borç uyarısı
+            uluslararası para fonu (imf), gelişmiş ekonomilerin artan borç maliyetleriyle başa çıkabilmek için acilen borçlanmayı azaltması ve mali disiplin sağlaması gerektiğini bildirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>IMF'den İngiltere ve ABD'ye borç uyarısı</h3>
+                    <p>Uluslararası Para Fonu (IMF), gelişmiş ekonomilerin artan borç maliyetleriyle başa çıkabilmek için acilen borçlanmayı azaltması ve mali disiplin sağlaması gerektiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/imfden-ingiltere-ve-abdye-borc-uyarisi-957821.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tübi̇tak'tan yeşil dönüşüm projelerine 51,5 milyon liraya kadar destek
+            tübi̇tak, sanayide enerji ve su tasarrufu sağlayacak, atıkları azaltacak ve yeşil teknolojilerin ticarileşmesini hızlandıracak ar-ge projeleriyle birlikte sürdürülebilir tarım ve akıllı ulaşım projelerine 51,5 milyon liraya kadar destek sağlayacak. başvurular 12 ekim'de sona erecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>TÜBİTAK'tan yeşil dönüşüm projelerine 51,5 milyon liraya kadar destek</h3>
+                    <p>TÜBİTAK, sanayide enerji ve su tasarrufu sağlayacak, atıkları azaltacak ve yeşil teknolojilerin ticarileşmesini hızlandıracak AR-GE projeleriyle birlikte sürdürülebilir tarım ve akıllı ulaşım projelerine 51,5 milyon liraya kadar destek sağlayacak. Başvurular 12 Ekim'de sona erecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tubitaktan-yesil-donusum-projelerine-515-milyon-liraya-kadar-destek-957819.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            airbus'tan türkiye'ye stratejik iş birliği mesajı
+            airbus savunma ve uzay kurumsal i̇ş büyümesi i̇ş geliştirme birimi satış direktörü carlo mirra, türkiye'de bazı olası işbirliği fırsatları üzerine tübi̇tak ile görüşmeler yaptıklarını belirterek, "bu alanlardan biri kuşkusuz uzay ve özellikle de ay'ın keşfi. i̇nsanlı uzay uçuşları ve uydu haberleşmesi de diğer alanlar" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Airbus'tan Türkiye'ye stratejik iş birliği mesajı</h3>
+                    <p>Airbus Savunma ve Uzay Kurumsal İş Büyümesi İş Geliştirme Birimi Satış Direktörü Carlo Mirra, Türkiye'de bazı olası işbirliği fırsatları üzerine TÜBİTAK ile görüşmeler yaptıklarını belirterek, "Bu alanlardan biri kuşkusuz uzay ve özellikle de Ay'ın keşfi. İnsanlı uzay uçuşları ve uydu haberleşmesi de diğer alanlar" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/airbustan-turkiyeye-stratejik-is-birligi-mesaji-957817.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talyan siyasetçiler neden mini etekli fotoğraf paylaşıyor?
+            i̇talya'da başbakan yardımcısı ve dışişleri bakanı antonio tajani'nin "evlenilecek kadın uzun etekli olmalı" minvalindeki sözleri büyük bir tartışma çıkardı. muhalif siyasetçiler tepki olarak sosyal medyada etekli fotoğraflar paylaşmaya başladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalyan siyasetçiler neden mini etekli fotoğraf paylaşıyor?</h3>
+                    <p>İtalya'da Başbakan Yardımcısı ve Dışişleri Bakanı Antonio Tajani'nin "evlenilecek kadın uzun etekli olmalı" minvalindeki sözleri büyük bir tartışma çıkardı. Muhalif siyasetçiler tepki olarak sosyal medyada etekli fotoğraflar paylaşmaya başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckddvl6g04l1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fatf: türkiye'de gri liste riski yok
+            hazine ve maliye bakanlığı, mali eylem görev gücü (fatf) tarafından hazırlanan değerlendirme raporunda türkiye’nin stratejik bir eksikliğinin ve gri liste riskinin bulunmadığının tescillendiğini duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>FATF: Türkiye'de gri liste riski yok</h3>
+                    <p>Hazine ve Maliye Bakanlığı, Mali Eylem Görev Gücü (FATF) tarafından hazırlanan değerlendirme raporunda Türkiye’nin stratejik bir eksikliğinin ve gri liste riskinin bulunmadığının tescillendiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/fatf-turkiyede-gri-liste-riski-yok-957826.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            adalar belediyesi akp'ye geçti
+            i̇stanbul'un adalar belediyesi'nde başkan vekili seçiminde akp'nin adayı kemal türkyılmaz, dördüncü turda 5 oy alarak başkan vekili seçildi. son yerel seçim sonrası oluşan tabloda 12 koltuklu belediye meclisinde chp'nin 10, akp'nin ise 2 üyesi bulunuyordu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Adalar Belediyesi AKP'ye geçti</h3>
+                    <p>İstanbul'un Adalar Belediyesi'nde başkan vekili seçiminde AKP'nin adayı Kemal Türkyılmaz, dördüncü turda 5 oy alarak başkan vekili seçildi. Son yerel seçim sonrası oluşan tabloda 12 koltuklu belediye meclisinde CHP'nin 10, AKP'nin ise 2 üyesi bulunuyordu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlymw9ld9yjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manisa'da okula silahlı saldırıda üç çocuk yoğun bakımda
+            manisa'nın turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Manisa'da okula silahlı saldırıda üç çocuk yoğun bakımda</h3>
+                    <p>Manisa'nın Turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. Saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5y4z071pz6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaçış rotasında 'şık' taktik: 12 düzensiz göçmen yakalandı
+            muğla'nın milas ilçesinde, yelkenli tekneyle yurt dışına çıkmaya çalışan 12 düzensiz göçmen ile 2 göçmen kaçakçısı şüphelisi yakalandı. düzensiz göçmenlerin, dikkat çekmemek amacıyla günlük ve şık kıyafetler giymesi dikkat çekti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaçış rotasında 'şık' taktik: 12 düzensiz göçmen yakalandı</h3>
+                    <p>Muğla'nın Milas ilçesinde, yelkenli tekneyle yurt dışına çıkmaya çalışan 12 düzensiz göçmen ile 2 göçmen kaçakçısı şüphelisi yakalandı. Düzensiz göçmenlerin, dikkat çekmemek amacıyla günlük ve şık kıyafetler giymesi dikkat çekti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kacis-rotasinda-sik-taktik-12-duzensiz-gocmen-yakalandi-957825.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            menderes belediyesi'ne yeni operasyon: eski başkanvekili gözaltında
+            menderes belediyesi'ne yönelik yolsuzluk soruşturması kapsamında, 23 eylül'de yeni bir operasyon gerçekleştirildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Menderes Belediyesi'ne yeni operasyon: Eski Başkanvekili gözaltında</h3>
+                    <p>Menderes Belediyesi'ne yönelik yolsuzluk soruşturması kapsamında, 23 Eylül'de yeni bir operasyon gerçekleştirildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c0kmpngkdpmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            açık yaralar ve kapanmayan gözler: kadınlar ucuz göz kapağı ameliyatı konusunda uyarıyor
+            doktorlar, yurtdışında ucuz göz kapağı ameliyatı olan ve sorun yaşayan hastaların sayısında endişe verici bir artış olduğunu belirtiyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Açık yaralar ve kapanmayan gözler: Kadınlar ucuz göz kapağı ameliyatı konusunda uyarıyor</h3>
+                    <p>Doktorlar, yurtdışında ucuz göz kapağı ameliyatı olan ve sorun yaşayan hastaların sayısında endişe verici bir artış olduğunu belirtiyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw24jyz3qe13o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filistin: halkımızın sesinin dünyaya ulaşmasını engelleme girişimleri başarısız olacak
+            filistin devlet başkanlığı sözcüsü nebil ebu rudeyne, filistin devleti'ni yok saymaya ve halkının sesinin dünyaya ulaşmasını engellemeye yönelik tüm girişimlerin başarısız olacağını söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Filistin: Halkımızın sesinin dünyaya ulaşmasını engelleme girişimleri başarısız olacak</h3>
+                    <p>Filistin Devlet Başkanlığı Sözcüsü Nebil Ebu Rudeyne, Filistin Devleti'ni yok saymaya ve halkının sesinin dünyaya ulaşmasını engellemeye yönelik tüm girişimlerin başarısız olacağını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/filistin-halkimizin-sesinin-dunyaya-ulasmasini-engelleme-girisimleri-basarisiz-olacak-957823.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            şi cinping her şeyini kaybettikten sonra nasıl çin'in güçlü lideri oldu?
+            şi cinping 11 yıl sonra abd'ye ilk resmi ziyaretini çarşamba günü yapıyor. çin devlet başkanı hakkında bilinenleri derledik.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Şi Cinping her şeyini kaybettikten sonra nasıl Çin'in güçlü lideri oldu?</h3>
+                    <p>Şi Cinping 11 yıl sonra ABD'ye ilk resmi ziyaretini çarşamba günü yapıyor. Çin devlet Başkanı hakkında bilinenleri derledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmn8epqn5n65o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazze'de çocuk yaşta evliliklerde artış: 'i̇ki çuval un için evlendirildi'
+            birleşmiş milletler nüfus fonu da erken yaşta ve zorla evliliklerin sayısında "ciddi bir artış" yaşandığını belirtiyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Gazze'de çocuk yaşta evliliklerde artış: 'İki çuval un için evlendirildi'</h3>
+                    <p>Birleşmiş Milletler Nüfus Fonu da erken yaşta ve zorla evliliklerin sayısında "ciddi bir artış" yaşandığını belirtiyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmgjqx57we0po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gençler için gerçekten işe yarayan basit cilt bakımı rutini
+            sivilcelerle mücadeleden yeterli uykuya kadar, uzmanlar ergenlik çağında cilt bakımı için en iyi yöntemler hakkında tavsiyelerini paylaşıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Gençler için gerçekten işe yarayan basit cilt bakımı rutini</h3>
+                    <p>Sivilcelerle mücadeleden yeterli uykuya kadar, uzmanlar ergenlik çağında cilt bakımı için en iyi yöntemler hakkında tavsiyelerini paylaşıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6y4z91px2yvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dev el nino: 6 ay içinde 450 binden fazla ölüm öngörülüyor
+            yeni yayımlanan rapora göre dev el nino, önümüzdeki 6 ayda sıcaklıkları artırarak yüz binlerce ek ölüme yol açabileceği tahmin ediliyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Dev El Nino: 6 ay içinde 450 binden fazla ölüm öngörülüyor</h3>
+                    <p>Yeni yayımlanan rapora göre Dev El Nino, önümüzdeki 6 ayda sıcaklıkları artırarak yüz binlerce ek ölüme yol açabileceği tahmin ediliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/dev-el-nino-6-ay-icinde-450-binden-fazla-olum-ongoruluyor-957822.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'dan i̇ran'a diplomasi yoluna dönmesi çağrısı
+            fransız hükümeti, hürmüz boğazı ve abd ile yaşanan gerilim bağlamında i̇ran'a diplomasi yolunu tercih etmesi çağrısı yaptı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Fransa'dan İran'a diplomasi yoluna dönmesi çağrısı</h3>
+                    <p>Fransız hükümeti, Hürmüz Boğazı ve ABD ile yaşanan gerilim bağlamında İran'a diplomasi yolunu tercih etmesi çağrısı yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransadan-irana-diplomasi-yoluna-donmesi-cagrisi-957820.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
