@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>19</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-24 10:03</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c539myv9vpkdo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Pezeşkiyan BM'de konuştu: 'Başımızı eğmeyecek, diz çökmeyeceğiz'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c6p93leplpj9o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Manisa'daki okul saldırısı: Yedi bakanlığın ortak güvenlik protokolü ne getiriyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ck6241668yj2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD'nin yeni yaptırımları İran'a uçuşların önünü kapatabilir mi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqj9xgd7memgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mansur Yavaş'ı istifaya götüren süreç: Bundan sonra ne yapacak?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/kultur-sanat/kapadokyada-riskli-peribacalari-icin-restorasyon-calismasi-957979.html" target="_blank">
+                <strong>Kapadokya'da riskli peribacaları için restorasyon çalışması</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            pezeşkiyan bm'de konuştu: 'başımızı eğmeyecek, diz çökmeyeceğiz'
+            abd başkanı donald trump, ülkesinin kasım ayında yapılacak ara seçimlerden sonra i̇ran ile bir anlaşma yapabileceğine inandığını söyledi. trump, rusya-ukrayna savaşının da düşünülenden daha çabuk sona erebileceğini vurguladı. abd başkanı ayrıca yapay zekaya artık "süper zeka" denmesi önerisi yaptı
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Pezeşkiyan BM'de konuştu: 'Başımızı eğmeyecek, diz çökmeyeceğiz'</h3>
+                    <p>ABD Başkanı Donald Trump, ülkesinin kasım ayında yapılacak ara seçimlerden sonra İran ile bir anlaşma yapabileceğine inandığını söyledi. Trump, Rusya-Ukrayna savaşının da düşünülenden daha çabuk sona erebileceğini vurguladı. ABD Başkanı ayrıca yapay zekaya artık "süper zeka" denmesi önerisi yaptı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c539myv9vpkdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            open ai'ın yapay zeka ajanı, avustralya resmi sağlık sistemine sızdı
+            openai'a ait bir yapay zeka ajanının avustralya'nın resmi sağlık portalı medicare veri tabanındaki dosyalara eriştiği ortaya çıktı. olayın ardından avustralya acil inceleme başlattı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Open AI'ın yapay zeka ajanı, Avustralya resmi sağlık sistemine sızdı</h3>
+                    <p>OpenAI'a ait bir yapay zeka ajanının Avustralya'nın resmi sağlık portalı Medicare veri tabanındaki dosyalara eriştiği ortaya çıktı. Olayın ardından Avustralya acil inceleme başlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwn74nvn6ppdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gözleriniz yaşlanma hızınızı gösteriyor
+            güney koreli bilim insanlarının geliştirdiği yapay zeka modeli, retina görüntülerinden kişinin yaşını yaklaşık 2,5 yıllık hata payıyla tahmin etti.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Gözleriniz yaşlanma hızınızı gösteriyor</h3>
+                    <p>Güney Koreli bilim insanlarının geliştirdiği yapay zeka modeli, retina görüntülerinden kişinin yaşını yaklaşık 2,5 yıllık hata payıyla tahmin etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/gozleriniz-yaslanma-hizinizi-gosteriyor-957974.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            manisa'daki okul saldırısı: yedi bakanlığın ortak güvenlik protokolü ne getiriyor?
+            manisa'nın turgutlu ilçesinde 11 öğrencinin yaralandığı silahlı saldırı, yedi bakanlığın okul güvenliğini artırmak için imzaladığı protokolden bir gün sonra gerçekleşti. protokol ne getiriyor, uzmanlar nasıl değerlendiriyor?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Manisa'daki okul saldırısı: Yedi bakanlığın ortak güvenlik protokolü ne getiriyor?</h3>
+                    <p>Manisa'nın Turgutlu ilçesinde 11 öğrencinin yaralandığı silahlı saldırı, yedi bakanlığın okul güvenliğini artırmak için imzaladığı protokolden bir gün sonra gerçekleşti. Protokol ne getiriyor, uzmanlar nasıl değerlendiriyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6p93leplpj9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin yeni yaptırımları i̇ran'a uçuşların önünü kapatabilir mi?
+            savaş ve bölgesel gerilimlerin ardından yabancı havayollarının i̇ran'a uçuşları fiilen durmuşken, abd i̇ran'ın havacılık sektörüne yönelik yeni yaptırımlar uyguladı. bu yaptırımlar, güvenlik riskleri ortadan kalksa bile bu uçuşların yeniden başlamasını daha da karmaşık ve zor hale getirebilir.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin yeni yaptırımları İran'a uçuşların önünü kapatabilir mi?</h3>
+                    <p>Savaş ve bölgesel gerilimlerin ardından yabancı havayollarının İran'a uçuşları fiilen durmuşken, ABD İran'ın havacılık sektörüne yönelik yeni yaptırımlar uyguladı. Bu yaptırımlar, güvenlik riskleri ortadan kalksa bile bu uçuşların yeniden başlamasını daha da karmaşık ve zor hale getirebilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck6241668yj2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kapadokya'da riskli peribacaları için restorasyon çalışması
+            unesco dünya mirası listesi'nde yer alan kapadokya'da risk oluşturan peribacalarının, asırlar boyunca oluşan tahribat ve aşınmalara karşı korunması amacıyla başlatılan restorasyon çalışmaları devam ediyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kapadokya'da riskli peribacaları için restorasyon çalışması</h3>
+                    <p>UNESCO Dünya Mirası Listesi'nde yer alan Kapadokya'da risk oluşturan peribacalarının, asırlar boyunca oluşan tahribat ve aşınmalara karşı korunması amacıyla başlatılan restorasyon çalışmaları devam ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/kapadokyada-riskli-peribacalari-icin-restorasyon-calismasi-957979.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan'dan abd'de yoğun diplomasi trafiği
+            cumhurbaşkanı recep tayyip erdoğan, birleşmiş milletler genel kurulu'na katılmak üzere gittiği abd'de yoğun bir görüşme trafiği yürüttü. erdoğan, dünyaya hitap ettiği konuşmasının ardından liderler diplomasisini sürdürdü. görüşmelerde ikili ilişkiler, bölgesel ve küresel gelişmeler ele alındı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan'dan ABD'de yoğun diplomasi trafiği</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Birleşmiş Milletler Genel Kurulu'na katılmak üzere gittiği ABD'de yoğun bir görüşme trafiği yürüttü. Erdoğan, dünyaya hitap ettiği konuşmasının ardından liderler diplomasisini sürdürdü. Görüşmelerde ikili ilişkiler, bölgesel ve küresel gelişmeler ele alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogandan-abdde-yogun-diplomasi-trafigi-957971.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şi'nin abd ziyareti başladı: çin, i̇ran konusunda trump'la nasıl ayrışıyor?
+            çin devlet başkanı şi cinping'in kritik abd ziyareti, kırmızı halı içeren bir karşılama töreni ile başladı. abd başkanı donald trump ile çin lideri arasındaki kritik başlıklardan biri i̇ran olacak.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Şi'nin ABD ziyareti başladı: Çin, İran konusunda Trump'la nasıl ayrışıyor?</h3>
+                    <p>Çin Devlet Başkanı Şi Cinping'in kritik ABD ziyareti, kırmızı halı içeren bir karşılama töreni ile başladı. ABD Başkanı Donald Trump ile Çin lideri arasındaki kritik başlıklardan biri İran olacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq2e0y8x8w9mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şi cinping her şeyini kaybettikten sonra nasıl çin'in güçlü lideri oldu?
+            şi cinping 11 yıl sonra abd'ye ilk resmi ziyaretini çarşamba günü yapıyor. çin devlet başkanı hakkında bilinenleri derledik.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Şi Cinping her şeyini kaybettikten sonra nasıl Çin'in güçlü lideri oldu?</h3>
+                    <p>Şi Cinping 11 yıl sonra ABD'ye ilk resmi ziyaretini çarşamba günü yapıyor. Çin devlet Başkanı hakkında bilinenleri derledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmn8epqn5n65o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mansur yavaş'ı istifaya götüren süreç: bundan sonra ne yapacak?
+            cumhurbaşkanı adaylığı uzun süredir kulislerde konuşulan mansur yavaş'ın, yalnızca chp veya yeni parti'nin adayı olmayı değil, dem parti dışında muhalefetin ortak adayı olması halinde cumhurbaşkanı adaylığını değerlendirdiği belirtiliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mansur Yavaş'ı istifaya götüren süreç: Bundan sonra ne yapacak?</h3>
+                    <p>Cumhurbaşkanı adaylığı uzun süredir kulislerde konuşulan Mansur Yavaş'ın, yalnızca CHP veya Yeni Parti'nin adayı olmayı değil, DEM Parti dışında muhalefetin ortak adayı olması halinde cumhurbaşkanı adaylığını değerlendirdiği belirtiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqj9xgd7memgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kurtlar vadisi: dizi bugüne kadar hangi tartışmalarla gündeme geldi?
+            silivri cumhuriyet başsavcılığı, 2011’de cezaevinde ölen eski mi̇t görevlisi kozinoğlu’yla ilgili soruşturma kapsamında kurtlar vadisi pusu dizisinin de incelenmesine karar verdi. geçmişten bugüne kurtlar vadisi'yle ilgili merak edilenleri inceledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kurtlar Vadisi: Dizi bugüne kadar hangi tartışmalarla gündeme geldi?</h3>
+                    <p>Silivri Cumhuriyet Başsavcılığı, 2011’de cezaevinde ölen eski MİT görevlisi Kozinoğlu’yla ilgili soruşturma kapsamında Kurtlar Vadisi Pusu dizisinin de incelenmesine karar verdi. Geçmişten bugüne Kurtlar Vadisi'yle ilgili merak edilenleri inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvj64g18kd9po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tutuklu gazeteci selahattin günday: 'çekmediğim bir görüntüden sorumlu tutuldum'
+            eski mi̇t görevlisi kaşif kozinoğlu soruşturmasında tutuklanan gazeteci selahattin günday, x hesabından yaptığı paylaşımla hakkındaki suçlamaları reddetti. günday, paylaşımında "ben gazeteciyim, ne bir suçun faili ne de suç örgütü yöneticisiyim" ifadelerini kullandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Tutuklu gazeteci Selahattin Günday: 'Çekmediğim bir görüntüden sorumlu tutuldum'</h3>
+                    <p>Eski MİT görevlisi Kaşif Kozinoğlu soruşturmasında tutuklanan gazeteci Selahattin Günday, X hesabından yaptığı paylaşımla hakkındaki suçlamaları reddetti. Günday, paylaşımında "Ben gazeteciyim, ne bir suçun faili ne de suç örgütü yöneticisiyim" ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx2z3j9kgz4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            spk soruşturmasında 387 milyon lira donduruldu, 362 milyon liraya el konuldu
+            spk soruşturması kapsamında masak ile yapılan çalışmalarda 387 milyon 461 bin lira donduruldu. muhammed yarız’a ait 105 milyon lira ile tera portföy üzerinden transfer edilmek istenen 257 milyon liraya da el konulurken, dondurulan ve el konulan toplam tutar 750 milyon liraya ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>SPK soruşturmasında 387 milyon lira donduruldu, 362 milyon liraya el konuldu</h3>
+                    <p>SPK soruşturması kapsamında MASAK ile yapılan çalışmalarda 387 milyon 461 bin lira donduruldu. Muhammed Yarız’a ait 105 milyon lira ile TERA Portföy üzerinden transfer edilmek istenen 257 milyon liraya da el konulurken, dondurulan ve el konulan toplam tutar 750 milyon liraya ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/spk-sorusturmasinda-387-milyon-lira-donduruldu-362-milyon-liraya-el-konuldu-957980.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rize'de sağanağın yol açtığı hasar 1 milyar 42 milyon lira
+            rize'de 19 eylül'deki sağanağın ardından şu ana kadar tespit edilen araç, iş yeri ve evlerdeki maddi zararlar ile duvar ve ev hasarlarının toplamının yaklaşık 1 milyar 42 milyon lira olduğu öğrenildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rize'de sağanağın yol açtığı hasar 1 milyar 42 milyon lira</h3>
+                    <p>Rize'de 19 Eylül'deki sağanağın ardından şu ana kadar tespit edilen araç, iş yeri ve evlerdeki maddi zararlar ile duvar ve ev hasarlarının toplamının yaklaşık 1 milyar 42 milyon lira olduğu öğrenildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/rizede-saganagin-yol-actigi-hasar-1-milyar-42-milyon-lira-957977.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sırbistan'daki orman yangını 52 gün sonra söndürülebildi
+            sırbistan'ın kuzeydoğusunda bulunan deliblato kumları bölgesinde 2 ağustos'ta çıkan orman yangınının 52 gün sonra söndürüldüğü bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sırbistan'daki orman yangını 52 gün sonra söndürülebildi</h3>
+                    <p>Sırbistan'ın kuzeydoğusunda bulunan Deliblato Kumları bölgesinde 2 Ağustos'ta çıkan orman yangınının 52 gün sonra söndürüldüğü bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/sirbistandaki-orman-yangini-52-gun-sonra-sondurulebildi-957976.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            konaklama tesislerinin yatak kapasitesi 1,9 milyonu aştı
+            kültür ve turizm bakanlığı belgeli konaklama tesislerinin toplam yatak kapasitesi, ağustos itibarıyla 1 milyon 939 bin 125'e ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Konaklama tesislerinin yatak kapasitesi 1,9 milyonu aştı</h3>
+                    <p>Kültür ve Turizm Bakanlığı belgeli konaklama tesislerinin toplam yatak kapasitesi, ağustos itibarıyla 1 milyon 939 bin 125'e ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/konaklama-tesislerinin-yatak-kapasitesi-19-milyonu-asti-957973.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kaşif kozinoğlu soruşturması: kurtlar vadisi senaryosuna dahli olan bir kişi tutuklandı
+            eski mi̇t görevlisi kaşif kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. diğer üç kişi adliyeye sevk edildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kaşif Kozinoğlu soruşturması: Kurtlar Vadisi senaryosuna dahli olan bir kişi tutuklandı</h3>
+                    <p>Eski MİT görevlisi Kaşif Kozinoğlu'nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. Diğer üç kişi adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de yılın ilk 8 ayı en sıcak 14 dönem arasına girdi
+            türkiye'de 2026'nın ocak-ağustos döneminde ortalama sıcaklık 14,9 derece olarak ölçülürken, yılın ilk 8 ayı 1971'den bu yana en sıcak 14 dönem arasına girdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de yılın ilk 8 ayı en sıcak 14 dönem arasına girdi</h3>
+                    <p>Türkiye'de 2026'nın ocak-ağustos döneminde ortalama sıcaklık 14,9 derece olarak ölçülürken, yılın ilk 8 ayı 1971'den bu yana en sıcak 14 dönem arasına girdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/hava-durumu/turkiyede-yilin-ilk-8-ayi-en-sicak-14-donem-arasina-girdi-957975.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazze'yle ilgili nefret söylemine 8 ay hapis istendi
+            fransa'da gazze'yle ilgili nefret söyleminde bulunan öğretmenin 8 ay hapsi istendi
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazze'yle ilgili nefret söylemine 8 ay hapis istendi</h3>
+                    <p>Fransa'da Gazze'yle ilgili nefret söyleminde bulunan öğretmenin 8 ay hapsi istendi</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/gazzeyle-ilgili-nefret-soylemine-8-ay-hapis-istendi-957972.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            alihan kuriş çıkar amaçlı suç örgütü soruşturmasında 20 tutuklama
+            ankara'da "alihan kuriş çıkar amaçlı suç örgütü" soruşturması kapsamında gözaltına alınan 25 şüpheliden 20'si tutuklandı, 5'i hakkında adli kontrol tedbiri uygulandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Alihan Kuriş çıkar amaçlı suç örgütü soruşturmasında 20 tutuklama</h3>
+                    <p>Ankara'da "Alihan Kuriş çıkar amaçlı suç örgütü" soruşturması kapsamında gözaltına alınan 25 şüpheliden 20'si tutuklandı, 5'i hakkında adli kontrol tedbiri uygulandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/alihan-kuris-cikar-amacli-suc-orgutu-sorusturmasinda-20-tutuklama-957970.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
