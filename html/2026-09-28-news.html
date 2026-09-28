@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>19</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-09-28 11:43</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>SPK'dan tasfiye süreci için 16 ve 17 Eylül ayrımı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5vgyjmypd29o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD'nin İran'a karşı kullandığı İngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/israilin-soykirimci-bakani-gazzelileri-goce-zorlamak-icin-yeniden-insa-umudunun-yok-edilmesini-istedi-958415.html" target="_blank">
+                <strong>İsrail'in soykırımcı Bakanı, Gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            spk'dan tasfiye süreci için 16 ve 17 eylül ayrımı
+            sermaye piyasası kurulu (spk), krizin merkezindeki yatırım fonlarının türkiye elektronik fon dağıtım sistemi'nde (tefas) işleme kapatıldığı gün verilen çıkış emirleriyle ilgili bir açıklama yayımladı. diğer yandan hazine ve maliye bakanı mehmet şimşek, 28 eylül'de sosyal medya hesabından yaptığı açıklamada soruşturmanın piyasalara olası etkileriyle ilgili tedbirleri aldıklarını söyledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>SPK'dan tasfiye süreci için 16 ve 17 Eylül ayrımı</h3>
+                    <p>Sermaye Piyasası Kurulu (SPK), krizin merkezindeki yatırım fonlarının Türkiye Elektronik Fon Dağıtım Sistemi'nde (TEFAS) işleme kapatıldığı gün verilen çıkış emirleriyle ilgili bir açıklama yayımladı. Diğer yandan Hazine ve Maliye Bakanı Mehmet Şimşek, 28 Eylül'de sosyal medya hesabından yaptığı açıklamada soruşturmanın piyasalara olası etkileriyle ilgili tedbirleri aldıklarını söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?
+            türkiye'deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül'de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+                    <p>Türkiye'deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül'de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizinde spk neden eleştiriliyor?
+            kurumu eleştirenler sermaye piyasası kurulu'nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. peki spk, bu krizin neresinde yer alıyor?
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon krizinde SPK neden eleştiriliyor?</h3>
+                    <p>Kurumu eleştirenler Sermaye Piyasası Kurulu'nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. Peki SPK, bu krizin neresinde yer alıyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6kg09x8yjn8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            haluk görgün: yakında hürkuş'un ihracat haberlerini paylaşacağız
+            cumhurbaşkanlığı savunma sanayii başkanı haluk görgün, "2027 yılında türk hava kuvvetlerinde hürkuş filolarını göreceğiz. 2028 yılı sonuna kadar da 55 uçağın tamamını hava kuvvetlerimizin envanterine kazandırmayı planlıyoruz. çok yakında hürkuş'un ihracat haberlerini sizlerle paylaşmaya başlayacağız" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Haluk Görgün: Yakında HÜRKUŞ'un ihracat haberlerini paylaşacağız</h3>
+                    <p>Cumhurbaşkanlığı Savunma Sanayii Başkanı Haluk Görgün, "2027 yılında Türk Hava Kuvvetlerinde HÜRKUŞ filolarını göreceğiz. 2028 yılı sonuna kadar da 55 uçağın tamamını Hava Kuvvetlerimizin envanterine kazandırmayı planlıyoruz. Çok yakında HÜRKUŞ'un ihracat haberlerini sizlerle paylaşmaya başlayacağız" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/haluk-gorgun-yakinda-hurkusun-ihracat-haberlerini-paylasacagiz-958414.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin i̇ran'a karşı kullandığı i̇ngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor?
+            i̇ngiltere'de abd hava kuvvetleri tarafından da kullanılan fairford hava üssü yakınlarında "terör eylemi hazırlığı içinde oldukları" şüphesiyle beş kişi gözaltına alındı. saldırı hazırlığında olduklarından şüphelenilen kişiler, bölgedeki bir kadın çiftçinin ihbarıyla durduruldu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin İran'a karşı kullandığı İngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor?</h3>
+                    <p>İngiltere'de ABD hava kuvvetleri tarafından da kullanılan Fairford Hava Üssü yakınlarında "terör eylemi hazırlığı içinde oldukları" şüphesiyle beş kişi gözaltına alındı. Saldırı hazırlığında olduklarından şüphelenilen kişiler, bölgedeki bir kadın çiftçinin ihbarıyla durduruldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5vgyjmypd29o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail'in soykırımcı bakanı, gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi
+            i̇srail'in aşırı sağcı maliye bakanı bezalel smotrich, gazze şeridi'ndeki filistinlileri göçe zorlamak için bölgenin yeniden inşa edilmesi umudunun yok edilmesini istedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İsrail'in soykırımcı Bakanı, Gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi</h3>
+                    <p>İsrail'in aşırı sağcı Maliye Bakanı Bezalel Smotrich, Gazze Şeridi'ndeki Filistinlileri göçe zorlamak için bölgenin yeniden inşa edilmesi umudunun yok edilmesini istedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/israilin-soykirimci-bakani-gazzelileri-goce-zorlamak-icin-yeniden-insa-umudunun-yok-edilmesini-istedi-958415.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            komedyen deniz göktaş için tahliye kararı
+            seksen sekiz gündür tutuklu olan ve çağlayan adliyesi'nde ilk kez hakim karşısına çıkan tutuklu komedyen deniz göktaş için tahliye kararı verildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Komedyen Deniz Göktaş için tahliye kararı</h3>
+                    <p>Seksen sekiz gündür tutuklu olan ve Çağlayan Adliyesi'nde ilk kez hakim karşısına çıkan tutuklu komedyen Deniz Göktaş için tahliye kararı verildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq99d8grynjxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            üç uyku pozisyonu için mükemmel yastığı bulmanın ipuçları
+            dr. chris mccarthy, yastık satın almadan önce dikkate almanız gereken dört noktayı açıklıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Üç uyku pozisyonu için mükemmel yastığı bulmanın ipuçları</h3>
+                    <p>Dr. Chris McCarthy, yastık satın almadan önce dikkate almanız gereken dört noktayı açıklıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqvgyrkne0m7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            batı karadeniz için fırtına uyarısı
+            batı karadeniz için yarın fırtına uyarısında bulunuldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Batı Karadeniz için fırtına uyarısı</h3>
+                    <p>Batı Karadeniz için yarın fırtına uyarısında bulunuldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/bati-karadeniz-icin-firtina-uyarisi-958416.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizinde yatırımcıların parası nasıl geri ödenebilir?
+            türkiye'de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+                    <p>Türkiye'de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sırbistan'da cumhurbaşkanı vucic istifa etti, erken seçimlerin önü açıldı
+            sırbistan cumhurbaşkanı, bir yıldan uzun süredir devam eden öğrenci protestoları ve hükümet yolsuzluğu iddialarına ilişkin artan kamuoyu hoşnutsuzluğunun ardından istifa etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sırbistan'da Cumhurbaşkanı Vucic istifa etti, erken seçimlerin önü açıldı</h3>
+                    <p>Sırbistan Cumhurbaşkanı, bir yıldan uzun süredir devam eden öğrenci protestoları ve hükümet yolsuzluğu iddialarına ilişkin artan kamuoyu hoşnutsuzluğunun ardından istifa etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmgjq9wn29pxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            siyasalaskeri casusluk soruşturması: fetö bağlantılı 4 şüpheliye tutuklama talebi
+            masak başkanlığının kritik dijital altyapısının geliştirilmesi ve sürdürülmesi süreçlerinde fetullahçı terör örgütü'nün (fetö) gizli yapılanmasıyla bağlantılı kişi ve şirketlerin etkili olduğuna yönelik "siyasal veya askeri casusluk" soruşturması kapsamında gözaltına alınan 4 şüpheli tutuklama talebiyle sulh ceza hakimliğine sevk edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Siyasalaskeri casusluk soruşturması: FETÖ bağlantılı 4 şüpheliye tutuklama talebi</h3>
+                    <p>MASAK Başkanlığının kritik dijital altyapısının geliştirilmesi ve sürdürülmesi süreçlerinde Fetullahçı Terör Örgütü'nün (FETÖ) gizli yapılanmasıyla bağlantılı kişi ve şirketlerin etkili olduğuna yönelik "siyasal veya askeri casusluk" soruşturması kapsamında gözaltına alınan 4 şüpheli tutuklama talebiyle sulh ceza hakimliğine sevk edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/siyasal-askeri-casusluk-sorusturmasi-feto-baglantili-4-supheliye-tutuklama-talebi-958418.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail'in aşırı sağcı bakanı bengvir, polis korumasında mescidi aksa'ya baskın düzenledi
+            soykırımcı i̇srail'in aşırı sağcı ulusal güvenlik bakanı itamar ben-gvir, işgal altındaki doğu kudüs'te bulunan mescid-i aksa'ya i̇srail polisinin yoğun koruması altında baskın düzenledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail'in aşırı sağcı bakanı BenGvir, polis korumasında Mescidi Aksa'ya baskın düzenledi</h3>
+                    <p>Soykırımcı İsrail'in aşırı sağcı Ulusal Güvenlik Bakanı Itamar Ben-Gvir, işgal altındaki Doğu Kudüs'te bulunan Mescid-i Aksa'ya İsrail polisinin yoğun koruması altında baskın düzenledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-asiri-sagci-bakani-ben-gvir-polis-korumasinda-mescid-i-aksaya-baskin-duzenledi-958413.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇dris demir: sigarayı bırakalı 3 ay oldu, sağlık sorunlarımın çoğu gitti
+            kayseri'de yaşayan 63 yaşındaki işçi emeklisi i̇dris demir günde 3 paket sigara tüketiyordu. sağlık sorunlarından dolayı sigarayı bırakma polikliniği'ne başvurdu. 3 aydır sigara kullanmayan demir, "merdiven çıkamıyordum, nefesim kesiliyordu. astım bronşit oldum, bacaklarımda varis vardı. sağlık sorunlarımın çoğu gitti" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İdris Demir: Sigarayı bırakalı 3 ay oldu, sağlık sorunlarımın çoğu gitti</h3>
+                    <p>Kayseri'de yaşayan 63 yaşındaki işçi emeklisi İdris Demir günde 3 paket sigara tüketiyordu. Sağlık sorunlarından dolayı Sigarayı Bırakma Polikliniği'ne başvurdu. 3 aydır sigara kullanmayan Demir, "Merdiven çıkamıyordum, nefesim kesiliyordu. Astım bronşit oldum, bacaklarımda varis vardı. Sağlık sorunlarımın çoğu gitti" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/idris-demir-sigarayi-birakali-3-ay-oldu-saglik-sorunlarimin-cogu-gitti-958412.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            milli dayanışma ve bütünleşme koordinasyon kurulu toplandı
+            milli dayanışma ve bütünleşme koordinasyon kurulu, toplumsal bütünleşmeyi pekiştirecek adımları görüşmek üzere külliye’de bir araya geldi. kanunun uygulanmasına yönelik faaliyetlerin ele alındığı toplantıda, kurumlar arası eşgüdümün önemine vurgu yapıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Milli Dayanışma ve Bütünleşme Koordinasyon Kurulu toplandı</h3>
+                    <p>Milli Dayanışma ve Bütünleşme Koordinasyon Kurulu, toplumsal bütünleşmeyi pekiştirecek adımları görüşmek üzere Külliye’de bir araya geldi. Kanunun uygulanmasına yönelik faaliyetlerin ele alındığı toplantıda, kurumlar arası eşgüdümün önemine vurgu yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/milli-dayanisma-ve-butunlesme-koordinasyon-kurulu-toplandi-958410.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇rlanda'nın, i̇srail maçındaki eylemi: 'dünya çapında farkındalık yarattı'
+            i̇rlanda cumhuriyeti teknik direktörü heimir hallgrimsson, oyuncularının i̇srail ile maç öncesi törenlere katılmamayı tercih etmelerinin ardından "dünya çapında farkındalık yarattığını" söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İrlanda'nın, İsrail maçındaki eylemi: 'Dünya çapında farkındalık yarattı'</h3>
+                    <p>İrlanda Cumhuriyeti teknik direktörü Heimir Hallgrimsson, oyuncularının İsrail ile maç öncesi törenlere katılmamayı tercih etmelerinin ardından "dünya çapında farkındalık yarattığını" söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9vgyr88d0d6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fatma betül sayan kaya, fon iddiaları sonrasında akp'deki görevinden istifa etti
+            akp genel başkan yardımcısı fatma betül sayan kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fatma Betül Sayan Kaya, fon iddiaları sonrasında AKP'deki görevinden istifa etti</h3>
+                    <p>AKP Genel Başkan Yardımcısı Fatma Betül Sayan Kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3rr448q5xdvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kongo demokratik cumhuriyeti'nde ebola vakası sayısı 8 bini aştı
+            kongo demokratik cumhuriyeti'nde (kdc) devam eden ebola salgınında doğrulanmış vaka sayısı 8 bin 67'ye, hayatını kaybedenlerin sayısı 3 bin 901'e yükseldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kongo Demokratik Cumhuriyeti'nde Ebola vakası sayısı 8 bini aştı</h3>
+                    <p>Kongo Demokratik Cumhuriyeti'nde (KDC) devam eden Ebola salgınında doğrulanmış vaka sayısı 8 bin 67'ye, hayatını kaybedenlerin sayısı 3 bin 901'e yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kongo-demokratik-cumhuriyetinde-ebola-vakasi-sayisi-8-bini-asti-958423.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fırtına deniz ulaşımını olumsuz etkiliyor
+            marmara denizi'nde 2 gündür etkili olan fırtına, tekirdağ'da deniz ulaşımında aksamalara neden oluyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fırtına deniz ulaşımını olumsuz etkiliyor</h3>
+                    <p>Marmara Denizi'nde 2 gündür etkili olan fırtına, Tekirdağ'da deniz ulaşımında aksamalara neden oluyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/firtina-deniz-ulasimini-olumsuz-etkiliyor-958422.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            güney afrika'da johannesburg'un doğusunda bulunan kadın cesedi sayısı 11e yükseldi
+            güney afrika cumhuriyeti’nin gauteng eyaletinde, johannesburg'un doğusundaki ekurhuleni bölgesinde temmuzdan bu yana bulunan kadın cesedi sayısı 11’e yükseldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Güney Afrika'da Johannesburg'un doğusunda bulunan kadın cesedi sayısı 11e yükseldi</h3>
+                    <p>Güney Afrika Cumhuriyeti’nin Gauteng eyaletinde, Johannesburg'un doğusundaki Ekurhuleni bölgesinde temmuzdan bu yana bulunan kadın cesedi sayısı 11’e yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/guney-afrikada-johannesburgun-dogusunda-bulunan-kadin-cesedi-sayisi-11e-yukseldi-958417.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
