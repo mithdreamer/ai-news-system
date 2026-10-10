@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-10 11:12</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmjwedxjxyvpo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İran savaşında ABD, hangi Avrupa üslerini kullandı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump, Rus dizeli anlaşmasını duyurdu, Zelenskiy 'Putin'e hediye' dedi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cd1103ddn9ko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Ankara Gar saldırısının 12. yılı: O gün neler yaşandı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>AKP'nin fon teklifi Meclis'te: Düzenleme neler öngörüyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fon krizi AKP'de nasıl tartışılıyor, hangi adımlar atılabilir?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran savaşında abd, hangi avrupa üslerini kullandı?
+            abd, i̇ran savaşı, saldırılar, nakliyesi, yakıt ikmali ve destek faaliyetleri için avrupa'daki çeşitli üsleri kullandı. ancak bazı hükümetler üslerinin kullanımına kısıtlamalar getirdi. bu durum kimi zaman washington ile gerginliklere yol açtı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran savaşında ABD, hangi Avrupa üslerini kullandı?</h3>
+                    <p>ABD, İran savaşı, saldırılar, nakliyesi, yakıt ikmali ve destek faaliyetleri için Avrupa'daki çeşitli üsleri kullandı. Ancak bazı hükümetler üslerinin kullanımına kısıtlamalar getirdi. Bu durum kimi zaman Washington ile gerginliklere yol açtı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmjwedxjxyvpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump, rus dizeli anlaşmasını duyurdu, zelenskiy 'putin'e hediye' dedi
+            ukrayna cumhurbaşkanı bu adımı sert bir şekilde eleştirdi ve bunun "uzatılmaması, aksine sona erdirilmesi gereken bir savaşa yapılan yatırım" olduğunu söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, Rus dizeli anlaşmasını duyurdu, Zelenskiy 'Putin'e hediye' dedi</h3>
+                    <p>Ukrayna Cumhurbaşkanı bu adımı sert bir şekilde eleştirdi ve bunun "uzatılmaması, aksine sona erdirilmesi gereken bir savaşa yapılan yatırım" olduğunu söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ankara gar saldırısının 12. yılı: o gün neler yaşandı?
+            barış mitingi için 10 ekim 2015'te ankara garı önünde toplanan kalabalığa işi̇d tarafından düzenlenen ve 103 kişi hayatını kaybettiği bombalı saldırının üzerinden 12 yıl geçti. peki o gün neler yaşandı?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ankara Gar saldırısının 12. yılı: O gün neler yaşandı?</h3>
+                    <p>Barış Mitingi için 10 Ekim 2015'te Ankara Garı önünde toplanan kalabalığa IŞİD tarafından düzenlenen ve 103 kişi hayatını kaybettiği bombalı saldırının üzerinden 12 yıl geçti. Peki o gün neler yaşandı?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cd1103ddn9ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akp'nin fon teklifi meclis'te: düzenleme neler öngörüyor?
+            adalet ve kalkınma partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini tbmm başkanlığı'na sundu. net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. ankara'dan ayşe sayın'ın haberi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>AKP'nin fon teklifi Meclis'te: Düzenleme neler öngörüyor?</h3>
+                    <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı'na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara'dan Ayşe Sayın'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            akın gürlek: '214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti'
+            adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah'ta 9 ekim'de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141'inin gerçek, 73'ünün tüzel kişi olduğunu söyledi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Akın Gürlek: '214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti'</h3>
+                    <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah'ta 9 Ekim'de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141'inin gerçek, 73'ünün tüzel kişi olduğunu söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk dünyasından gelen futbolcular türk statüsünde sayılacak
+            ak parti genel başkan yardımcısı kürşad zorlu, türk dünyasından türkiye'ye gelen futbolcuların yabancı değil "türk statüsünde" oynaması ve iki yılda bir "türk kupası" futbol turnuvası düzenlenmesi için çalışma başlatıldığını söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türk dünyasından gelen futbolcular Türk statüsünde sayılacak</h3>
+                    <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, Türk dünyasından Türkiye'ye gelen futbolcuların yabancı değil "Türk statüsünde" oynaması ve iki yılda bir "Türk Kupası" futbol turnuvası düzenlenmesi için çalışma başlatıldığını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/spor/turk-dunyasindan-gelen-futbolcular-turk-statusunde-sayilacak-959739.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna: rusya'nın zaporijya kentine düzenlediği saldırıda 8 kişi öldü
+            rus ordusunun zaporijya kentine düzenlediği hava saldırısı sonucu en az 8 sivilin hayatını kaybettiği, 12 kişinin de yaralandığı bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Ukrayna: Rusya'nın Zaporijya kentine düzenlediği saldırıda 8 kişi öldü</h3>
+                    <p>Rus ordusunun Zaporijya kentine düzenlediği hava saldırısı sonucu en az 8 sivilin hayatını kaybettiği, 12 kişinin de yaralandığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ukrayna-rusyanin-zaporijya-kentine-duzenledigi-saldirida-8-kisi-oldu-959740.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mavi medresenin dijital ikizi oluşturuldu
+            sivas'ta üzerindeki gök mavisi çinilerden dolayı "mavi medrese" olarak da anılan gök medrese'nin üç boyutlu dijital ikizi oluşturuldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mavi Medresenin dijital ikizi oluşturuldu</h3>
+                    <p>Sivas'ta üzerindeki gök mavisi çinilerden dolayı "Mavi Medrese" olarak da anılan Gök Medrese'nin üç boyutlu dijital ikizi oluşturuldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/kultur-sanat/mavi-medresenin-dijital-ikizi-olusturuldu-959737.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizi akp'de nasıl tartışılıyor, hangi adımlar atılabilir?
+            akp kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fon krizi AKP'de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+                    <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sağlık bakanı memişoğlu: sigara satışı kimlikle olacak
+            sağlık bakanı kemal memişoğlu, sigara ile mücadele kapsamında yeni düzenlemeler hazırladıklarını belirterek, tütün ürünü satışlarında yaş doğrulama sistemine geçileceğini ve sigaranın görünürlüğünün kısıtlanacağını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sağlık Bakanı Memişoğlu: Sigara satışı kimlikle olacak</h3>
+                    <p>Sağlık Bakanı Kemal Memişoğlu, sigara ile mücadele kapsamında yeni düzenlemeler hazırladıklarını belirterek, tütün ürünü satışlarında yaş doğrulama sistemine geçileceğini ve sigaranın görünürlüğünün kısıtlanacağını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/saglik-bakani-memisoglu-sigara-satisi-kimlikle-olacak-959736.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sözcü editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı, ağırel ve saymaz'a ev hapsi
+            kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı, Ağırel ve Saymaz'a ev hapsi</h3>
+                    <p>Kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özgür özel, bakan mahinur özdemir göktaş'ın babasından özür diledi
+            mersin'deki parti mitinginde konuşan özgür özel, "mahinur hanım, senin baban incindi, ellerinden öperim" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Özgür Özel, Bakan Mahinur Özdemir Göktaş'ın babasından özür diledi</h3>
+                    <p>Mersin'deki parti mitinginde konuşan Özgür Özel, "Mahinur Hanım, senin baban incindi, ellerinden öperim" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6kg59j745mno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yüksek limitli kredi kartı vaadine kandı, 412 bin lirasından oldu
+            ankara'da piknik ve mangal ürünleri satışı yapan 52 yaşındaki murat em, sosyal medyada gördüğü "yüksek limitli kredi kartı" başvuru ilanının ardından irtibata geçtiği kişiler tarafından 412 bin lira dolandırıldığını iddia ederek suç duyurusunda bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yüksek limitli kredi kartı vaadine kandı, 412 bin lirasından oldu</h3>
+                    <p>Ankara'da piknik ve mangal ürünleri satışı yapan 52 yaşındaki Murat Em, sosyal medyada gördüğü "yüksek limitli kredi kartı" başvuru ilanının ardından irtibata geçtiği kişiler tarafından 412 bin lira dolandırıldığını iddia ederek suç duyurusunda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/yuksek-limitli-kredi-karti-vaadine-kandi-412-bin-lirasindan-oldu-959743.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            vanlı kara haydar soruşturmasında 1,5 milyar liraya daha el konuldu
+            ankara cumhuriyet başsavcılığı'nın 'vanlı kara haydar' olarak bilinen mehmet fatih tançalan hakkında yürüttüğü soruşturma kapsamında antalya'daki bir iş yerinde 1 milyar 541 milyon 395 bin tl'ye el konuldu. soruşturmada ele geçirilen paraların toplamı 2 milyar 475 milyon tl'ye ulaştı. bu paraların bir kısmının sahte olabileceği değerlendiriliyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Vanlı Kara Haydar soruşturmasında 1,5 milyar liraya daha el konuldu</h3>
+                    <p>Ankara Cumhuriyet Başsavcılığı'nın 'Vanlı Kara Haydar' olarak bilinen Mehmet Fatih Tançalan hakkında yürüttüğü soruşturma kapsamında Antalya'daki bir iş yerinde 1 milyar 541 milyon 395 bin TL'ye el konuldu. Soruşturmada ele geçirilen paraların toplamı 2 milyar 475 milyon TL'ye ulaştı. Bu paraların bir kısmının sahte olabileceği değerlendiriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/vanli-kara-haydar-sorusturmasinda-15-milyar-liraya-daha-el-konuldu-959742.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            33 ilde göçmen kaçakçılığı operasyonu: 47 kişi tutuklandı
+            i̇çişleri bakanlığı, 33 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 51 şüphelinin yakalandığını, bunlardan 47'sinin tutuklandığını bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>33 ilde göçmen kaçakçılığı operasyonu: 47 kişi tutuklandı</h3>
+                    <p>İçişleri Bakanlığı, 33 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 51 şüphelinin yakalandığını, bunlardan 47'sinin tutuklandığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/33-ilde-gocmen-kacakciligi-operasyonu-47-kisi-tutuklandi-959741.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sosyal medyada sonsuz akış tuzağı
+            sosyal medya platformları, günümüzde kullanıcıları 'sonsuz akış' döngüsüne hapsederek dijital bir tuzağa dönüştü. uzmanlar, günceli kaçırma korkusuyla (fomo) tetiklenen bu sorunlu kullanımın, bireyler üzerinde depresyon, kaygı ve stres gibi ciddi psikolojik etkiler bıraktığına dikkat çekiyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sosyal medyada sonsuz akış tuzağı</h3>
+                    <p>Sosyal medya platformları, günümüzde kullanıcıları 'sonsuz akış' döngüsüne hapsederek dijital bir tuzağa dönüştü. Uzmanlar, günceli kaçırma korkusuyla (FOMO) tetiklenen bu sorunlu kullanımın, bireyler üzerinde depresyon, kaygı ve stres gibi ciddi psikolojik etkiler bıraktığına dikkat çekiyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/sosyal-medyada-sonsuz-akis-tuzagi-959735.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ataşehir belediyesi akp'ye geçti
+            ataşehir başkanvekili murat güneş ve eyüpsultan belediye başkanı mithat bülent özmen'in tutuklanması sonrası i̇stanbul valiliği iki ismin de görevden uzaklaştırıldığını açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Ataşehir Belediyesi AKP'ye geçti</h3>
+                    <p>Ataşehir Başkanvekili Murat Güneş ve Eyüpsultan Belediye Başkanı Mithat Bülent Özmen'in tutuklanması sonrası İstanbul Valiliği iki ismin de görevden uzaklaştırıldığını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy83n4l3qexo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dondurulmuş yumurtalık dokusundan nasıl çocuk sahibi oldular?
+            kassandra bacon'dan 23 yıl önce alınan biyopsiler başarılı bir şekilde tekrar vücuduna nakledildi ve bu sayede 44 yaşında bir oğul dünyaya getirebildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dondurulmuş yumurtalık dokusundan nasıl çocuk sahibi oldular?</h3>
+                    <p>Kassandra Bacon'dan 23 yıl önce alınan biyopsiler başarılı bir şekilde tekrar vücuduna nakledildi ve bu sayede 44 yaşında bir oğul dünyaya getirebildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmly04918v0go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            anthropic'in yapay zeka modeli sahte cinayet ihbarında bulundu
+            anthropic şirketinin yapay zeka modelinin abd'nin pensilvanya eyaletindeki philadelphia şehrinde sahte cinayet ihbarında bulunduğu ortaya çıktı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Anthropic'in yapay zeka modeli sahte cinayet ihbarında bulundu</h3>
+                    <p>Anthropic şirketinin yapay zeka modelinin ABD'nin Pensilvanya eyaletindeki Philadelphia şehrinde sahte cinayet ihbarında bulunduğu ortaya çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/anthropicin-yapay-zeka-modeli-sahte-cinayet-ihbarinda-bulundu-959738.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            çay ihracatı 9 ayda 25 milyon doları aştı
+            türkiye'nin 9 aylık çay ihracatı 25 milyon 21 bin 548 dolara ulaştı. türk çayı, ocak-eylül döneminde birleşik krallık başta olmak üzere 119 ülke, özerk ve serbest bölgeye satıldı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Çay ihracatı 9 ayda 25 milyon doları aştı</h3>
+                    <p>Türkiye'nin 9 aylık çay ihracatı 25 milyon 21 bin 548 dolara ulaştı. Türk çayı, ocak-eylül döneminde Birleşik Krallık başta olmak üzere 119 ülke, özerk ve serbest bölgeye satıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/cay-ihracati-9-ayda-25-milyon-dolari-asti-959734.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
