@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>19</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-14 10:16</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/bakan-bayraktar-turkiye-dunyanin-en-buyuk-ve-en-gelismis-lpg-pazarlarindan-birine-sahip-960098.html" target="_blank">
+                <strong>Bakan Bayraktar: Türkiye, dünyanın en büyük ve en gelişmiş LPG pazarlarından birine sahip</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqzrdv24elemo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye'den Avrupa Birliği'nde vize muafiyeti hamlesi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/abden-ukraynaya-286-milyar-euro-savunma-destegi-960094.html" target="_blank">
+                <strong>AB'den Ukrayna'ya 2,86 milyar euro savunma desteği</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-cica-devlet-ve-hukumet-baskanlari-toplantisina-katilacak-960097.html" target="_blank">
+                <strong>Bakan Fidan, CICA Devlet ve Hükümet Başkanları Toplantısı'na katılacak</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan bayraktar: türkiye, dünyanın en büyük ve en gelişmiş lpg pazarlarından birine sahip
+            bakan bayraktar, küresel enerjideki zorluklara karşı kaynak çeşitlendirmenin önemine dikkati çekerek, "tek bir enerji kaynağına, teknolojiye veya nakliye güzergahına bağımlı kalmayı göze alamayız. türkiye, dünyanın en büyük ve en gelişmiş lpg pazarlarından birine sahip. geçen yıl, toplam lpg tüketiminde avrupa'da ikinci sırada yer aldık" dedi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Bakan Bayraktar: Türkiye, dünyanın en büyük ve en gelişmiş LPG pazarlarından birine sahip</h3>
+                    <p>Bakan Bayraktar, küresel enerjideki zorluklara karşı kaynak çeşitlendirmenin önemine dikkati çekerek, "Tek bir enerji kaynağına, teknolojiye veya nakliye güzergahına bağımlı kalmayı göze alamayız. Türkiye, dünyanın en büyük ve en gelişmiş LPG pazarlarından birine sahip. Geçen yıl, toplam LPG tüketiminde Avrupa'da ikinci sırada yer aldık" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/bakan-bayraktar-turkiye-dunyanin-en-buyuk-ve-en-gelismis-lpg-pazarlarindan-birine-sahip-960098.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'den avrupa birliği'nde vize muafiyeti hamlesi
+            avrupa birliği'nden (ab) vize muafiyeti alabilmek için ağustos ayında bakanlıklar arasında çalışma başlatan türkiye, ilk somut adımı kişisel verilerin korunmasına ilişkin mevzuatta atıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'den Avrupa Birliği'nde vize muafiyeti hamlesi</h3>
+                    <p>Avrupa Birliği'nden (AB) vize muafiyeti alabilmek için ağustos ayında bakanlıklar arasında çalışma başlatan Türkiye, ilk somut adımı kişisel verilerin korunmasına ilişkin mevzuatta atıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqzrdv24elemo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump: erdoğan husiler konusunda 'istediğimi yapacaktır'
+            donald trump, suudi arabistan'ı desteklemek üzere, yemen'e olası bir askeri müdahaleye türkiye'nin de katılmasını isteyebileceğini söyledi. abd başkanı, 13 ekim'de alaska'da katılacağı bir mitingine doğru yola çıkmadan önce beyaz saray'ın önünde basından gelen soruları yanıtladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump: Erdoğan Husiler konusunda 'istediğimi yapacaktır'</h3>
+                    <p>Donald Trump, Suudi Arabistan'ı desteklemek üzere, Yemen'e olası bir askeri müdahaleye Türkiye'nin de katılmasını isteyebileceğini söyledi. ABD Başkanı, 13 Ekim'de Alaska'da katılacağı bir mitingine doğru yola çıkmadan önce Beyaz Saray'ın önünde basından gelen soruları yanıtladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckz7x9g347yzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meteoroloji'den 18 il için sarı ve turuncu kodlu uyarı
+            meteoroloji genel müdürlüğü (mgm), kuvvetli sağanak ve fırtına beklentisi nedeniyle i̇stanbul'un da aralarında bulunduğu 18 il için sarı ve turuncu kodlu uyarı yayımladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Meteoroloji'den 18 il için sarı ve turuncu kodlu uyarı</h3>
+                    <p>Meteoroloji Genel Müdürlüğü (MGM), kuvvetli sağanak ve fırtına beklentisi nedeniyle İstanbul'un da aralarında bulunduğu 18 il için sarı ve turuncu kodlu uyarı yayımladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/meteorolojiden-18-il-icin-sari-ve-turuncu-kodlu-uyari-960095.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ab'den ukrayna'ya 2,86 milyar euro savunma desteği
+            avrupa birliği (ab) komisyonu, ukrayna'ya dron, hava savunma sistemi, füze, radar, elektronik harp sistemi ve mühimmat tedarik etmesi için 2,86 milyar euroluk ödeme yaptı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>AB'den Ukrayna'ya 2,86 milyar euro savunma desteği</h3>
+                    <p>Avrupa Birliği (AB) Komisyonu, Ukrayna'ya dron, hava savunma sistemi, füze, radar, elektronik harp sistemi ve mühimmat tedarik etmesi için 2,86 milyar euroluk ödeme yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abden-ukraynaya-286-milyar-euro-savunma-destegi-960094.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gümrük birliği'nin güncellenmesinde bazı alanlarda ilerleme sağlandı
+            ticaret bakanı ömer bolat, avrupa birliği (ab) ile gümrük birliği'nin güncellenmesinde e-ticaret, kamu alımları, yatırımlar ve tarım ürünleri gibi bazı alanlarda ilerleme kaydedildiğini söyledi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Gümrük Birliği'nin güncellenmesinde bazı alanlarda ilerleme sağlandı</h3>
+                    <p>Ticaret Bakanı Ömer Bolat, Avrupa Birliği (AB) ile Gümrük Birliği'nin güncellenmesinde e-ticaret, kamu alımları, yatırımlar ve tarım ürünleri gibi bazı alanlarda ilerleme kaydedildiğini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/gumruk-birliginin-guncellenmesinde-bazi-alanlarda-ilerleme-saglandi-960093.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'klip editörü' gençler sosyal medyadan nasıl yüz binlerce dolar kazanıyor?
+            sosyal medya "klip editörleri", instagram ve tiktok gibi platformlarda yayınlanan kısa, dikey videolar oluşturuyorlar. viral kliplerden yüz binlerce dolar kazanabiliyorlar.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>'Klip editörü' gençler sosyal medyadan nasıl yüz binlerce dolar kazanıyor?</h3>
+                    <p>Sosyal medya "klip editörleri", Instagram ve TikTok gibi platformlarda yayınlanan kısa, dikey videolar oluşturuyorlar. Viral kliplerden yüz binlerce dolar kazanabiliyorlar.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c620r92jve4qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bbc görüntüledi: yemen çölünde küresel etkilere sahip bir savaş sürüyor
+            yemen'deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. fakat liman kenti aden'de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. bbc'den orla guerin'in haberi.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</h3>
+                    <p>Yemen'deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. Fakat liman kenti Aden'de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. BBC'den Orla Guerin'in haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            husiler kimdir, nasıl bu kadar güçlendiler?
+            yemen'in başkenti sana, uzun süredir husilerin kontrolünde bulunuyor. son günlerde suudi arabistan'daki havalimanlarını hedef alan saldırılar ve buna karşılık düzenlenen askeri operasyonlarla ülkedeki çatışmalar yeniden alevlendi.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Husiler kimdir, nasıl bu kadar güçlendiler?</h3>
+                    <p>Yemen'in başkenti Sana, uzun süredir Husilerin kontrolünde bulunuyor. Son günlerde Suudi Arabistan'daki havalimanlarını hedef alan saldırılar ve buna karşılık düzenlenen askeri operasyonlarla ülkedeki çatışmalar yeniden alevlendi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmj4jk7e9ergo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan, cica devlet ve hükümet başkanları toplantısı'na katılacak
+            dışişleri bakanı hakan fidan, yarın azerbaycan'ın başkenti bakü'de düzenlenecek olan, asya'da i̇şbirliği ve güven artırıcı önlemler konferansı (cica) devlet ve hükümet başkanları konseyi yedinci toplantısı'na katılacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Fidan, CICA Devlet ve Hükümet Başkanları Toplantısı'na katılacak</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, yarın Azerbaycan'ın başkenti Bakü'de düzenlenecek olan, Asya'da İşbirliği ve Güven Artırıcı Önlemler Konferansı (CICA) Devlet ve Hükümet Başkanları Konseyi Yedinci Toplantısı'na katılacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-cica-devlet-ve-hukumet-baskanlari-toplantisina-katilacak-960097.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            halk tv'ye kayyum atandı, haber yayını durduruldu
+            halk tv televizyonuna 14 ekim sabah saatlerinde kayyum atandı ve kanalın normal yayın akışı durduruldu. i̇stanbul cumhuriyet başsavcılığı, kanalın sahibi cafer mahiroğlu'na yönelik soruşturmada 11 kişinin gözaltında olduğunu açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Halk TV'ye kayyum atandı, haber yayını durduruldu</h3>
+                    <p>Halk TV televizyonuna 14 Ekim sabah saatlerinde kayyum atandı ve kanalın normal yayın akışı durduruldu. İstanbul Cumhuriyet Başsavcılığı, kanalın sahibi Cafer Mahiroğlu'na yönelik soruşturmada 11 kişinin gözaltında olduğunu açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy0eyerev48o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suudi arabistan yemen'de akaryakıt deposunu vurdu; riyad yakınlarında füze saldırısı engellendi
+            milliyetçi hareket partisi genel başkanı devlet bahçeli, tbmm'deki grup toplantısında husilerin saldırılarını artırdığı suudi arabistan'a karşı "caydırıcı güç" kullanılmasının seçenekler arasında olabileceğini söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suudi Arabistan Yemen'de akaryakıt deposunu vurdu; Riyad yakınlarında füze saldırısı engellendi</h3>
+                    <p>Milliyetçi Hareket Partisi Genel Başkanı Devlet Bahçeli, TBMM'deki grup toplantısında Husilerin saldırılarını artırdığı Suudi Arabistan'a karşı "caydırıcı güç" kullanılmasının seçenekler arasında olabileceğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqj9kevpyl4ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye, son 56 yılın en sıcak 13'üncü eylülünü yaşadı
+            türkiye'de 2026 yılı eylül ayı, ortalama 21,5 derece sıcaklıkla son 56 yılın en sıcak 13'üncü eylül ayı olarak kayıtlara geçti. çanakkale'de 36,1, antalya'nın kaş ilçesinde ise 39,4 dereceyle eylül ayına ait en yüksek sıcaklık rekorları kırıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye, son 56 yılın en sıcak 13'üncü eylülünü yaşadı</h3>
+                    <p>Türkiye'de 2026 yılı eylül ayı, ortalama 21,5 derece sıcaklıkla son 56 yılın en sıcak 13'üncü eylül ayı olarak kayıtlara geçti. Çanakkale'de 36,1, Antalya'nın Kaş ilçesinde ise 39,4 dereceyle eylül ayına ait en yüksek sıcaklık rekorları kırıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/turkiye-son-56-yilin-en-sicak-13uncu-eylulunu-yasadi-960096.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da metrekareye 50 ila 95 kilogram yağış düştü
+            i̇stanbul'da sağanak birçok ilçede etkili oldu. caddeler ve sokaklar sular altında kaldı, sürücüler trafikte ilerlemekte güçlük çekti. megakentte beykoz, sarıyer, eyüpsultan, arnavutköy, başakşehir, sultangazi ve büyükçekmece ilçelerinde metrekareye 50 ila 95 kilogram yağış düştü.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da metrekareye 50 ila 95 kilogram yağış düştü</h3>
+                    <p>İstanbul'da sağanak birçok ilçede etkili oldu. Caddeler ve sokaklar sular altında kaldı, sürücüler trafikte ilerlemekte güçlük çekti. Megakentte Beykoz, Sarıyer, Eyüpsultan, Arnavutköy, Başakşehir, Sultangazi ve Büyükçekmece ilçelerinde metrekareye 50 ila 95 kilogram yağış düştü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-metrekareye-50-ila-95-kilogram-yagis-dustu-960090.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇mamoğlu'nun savunması başladı: 'sürecin aktörleri türk yargısı önünde hesap verecek'
+            tutuklandıktan sonra görevden uzaklaştırılan i̇stanbul büyükşehir belediye başkanı ekrem i̇mamoğlu, i̇stanbul büyükşehir belediyesi (i̇bb) davasında yaklaşık 600 gün sonra savunma yapıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İmamoğlu'nun savunması başladı: 'Sürecin aktörleri Türk yargısı önünde hesap verecek'</h3>
+                    <p>Tutuklandıktan sonra görevden uzaklaştırılan İstanbul Büyükşehir Belediye Başkanı Ekrem İmamoğlu, İstanbul Büyükşehir Belediyesi (İBB) davasında yaklaşık 600 gün sonra savunma yapıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy93v7l7pleo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            halk tv'ye kayyum atamasına ne tepkiler geliyor?
+            halk tv'ye yapılan kayyum atamasına sendika ve siyasilerden tepki geliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Halk TV'ye kayyum atamasına ne tepkiler geliyor?</h3>
+                    <p>Halk TV'ye yapılan kayyum atamasına sendika ve siyasilerden tepki geliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvrlydy5zeero?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            annesiyle birlikte ölü bulunan hifa i̇kra'nın istismar davasında baba bugün yargılanıyor
+            i̇stanbul'da zeytinburnu sahilinde 2 mart 2026 akşamı sekiz yaşındaki kızı hifa i̇kra şengüler ile birlikte ölü bulunan fatmanur çelik davasında baba a. şengüler yargılanıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Annesiyle birlikte ölü bulunan Hifa İkra'nın istismar davasında baba bugün yargılanıyor</h3>
+                    <p>İstanbul'da Zeytinburnu sahilinde 2 Mart 2026 akşamı sekiz yaşındaki kızı Hifa İkra Şengüler ile birlikte ölü bulunan Fatmanur Çelik davasında baba A. Şengüler yargılanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y66k386l3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şarkıcı alpay hayatını kaybetti
+            'fabrika kızı' ve 'eylülde gel' şarkılarıyla hafızalara kazınan türk pop müziğinin usta isimlerinden alpay nazikioğlu 91 yaşında hayatını kaybetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Şarkıcı Alpay hayatını kaybetti</h3>
+                    <p>'Fabrika Kızı' ve 'Eylülde Gel' şarkılarıyla hafızalara kazınan Türk pop müziğinin usta isimlerinden Alpay Nazikioğlu 91 yaşında hayatını kaybetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/sarkici-alpay-hayatini-kaybetti-960092.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            noterler birliği 'güvenli kapora sistemi' dolandırıcılığına karşı uyardı
+            araç ve taşınmaz alım satımlarında noterlerde "güvenli kapora sistemi" adlı bir uygulama bulunduğunu öne süren dolandırıcılar, vatandaşları bu yolla tuzağa düşürüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Noterler Birliği 'Güvenli Kapora Sistemi' dolandırıcılığına karşı uyardı</h3>
+                    <p>Araç ve taşınmaz alım satımlarında noterlerde "Güvenli Kapora Sistemi" adlı bir uygulama bulunduğunu öne süren dolandırıcılar, vatandaşları bu yolla tuzağa düşürüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/noterler-birligi-guvenli-kapora-sistemi-dolandiriciligina-karsi-uyardi-960091.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            air india uçağı, kaçırılma alarmı iddiası üzerine acil iniş yaptı
+            almanya'nın frankfurt kentinden hindistan'a giden air india'ya ait yolcu uçağı, pilotun olası uçak kaçırma olayına ilişkin alarm verdiği iddiasının ardından acil iniş yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Air India uçağı, kaçırılma alarmı iddiası üzerine acil iniş yaptı</h3>
+                    <p>Almanya'nın Frankfurt kentinden Hindistan'a giden Air India'ya ait yolcu uçağı, pilotun olası uçak kaçırma olayına ilişkin alarm verdiği iddiasının ardından acil iniş yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/air-india-ucagi-kacirilma-alarmi-iddiasi-uzerine-acil-inis-yapti-960089.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
