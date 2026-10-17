@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>22</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-17 09:24</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/ipard-iii-kapsaminda-95-projeye-12-milyar-lira-hibe-960395.html" target="_blank">
+                <strong>IPARD III kapsamında 95 projeye 1,2 milyar lira hibe</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm75przp0ldvo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>MSCI'dan Türkiye kararı: Piyasa sınıflandırması nasıl değişebilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/istanbul-valisi-gul-sel-magdurlarina-para-yardimi-yapildi-960399.html" target="_blank">
+                <strong>İstanbul Valisi Gül: Sel mağdurlarına para yardımı yapıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/okullarin-2027-yili-pansiyon-ucretleri-belli-oldu-960397.html" target="_blank">
+                <strong>Okulların 2027 yılı pansiyon ücretleri belli oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-bayraktar-gabardan-yakin-zamanda-yeni-bir-mujde-verebiliriz-960394.html" target="_blank">
+                <strong>Bakan Bayraktar: Gabar'dan yakın zamanda yeni bir müjde verebiliriz</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ipard iii kapsamında 95 projeye 1,2 milyar lira hibe
+            tarım ve orman bakanı i̇brahim yumaklı, ipard iii programı'nın 11. başvuru sonuçlarının açıklandığını bildirerek, "et, süt, yumurta, su ürünleri ile meyve-sebze işlenmesi ve soğuk hava depoları yatırımlarında 95 proje, 1,2 milyar lira hibe almaya hak kazandı." ifadesini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>IPARD III kapsamında 95 projeye 1,2 milyar lira hibe</h3>
+                    <p>Tarım ve Orman Bakanı İbrahim Yumaklı, IPARD III Programı'nın 11. başvuru sonuçlarının açıklandığını bildirerek, "Et, süt, yumurta, su ürünleri ile meyve-sebze işlenmesi ve soğuk hava depoları yatırımlarında 95 proje, 1,2 milyar lira hibe almaya hak kazandı." ifadesini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ipard-iii-kapsaminda-95-projeye-12-milyar-lira-hibe-960395.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            okulların 2027 yılı pansiyon ücretleri belli oldu
+            milli eğitim bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri, yeni yılda ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki eğitim kurumlarında 75 bin lira olacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Okulların 2027 yılı pansiyon ücretleri belli oldu</h3>
+                    <p>Milli Eğitim Bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri, yeni yılda ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki eğitim kurumlarında 75 bin lira olacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/okullarin-2027-yili-pansiyon-ucretleri-belli-oldu-960397.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'a düşen 'rekor' yağışın sele dönüşmesi nasıl önlenebilirdi?
+            i̇stanbul'da, 14 ekim'den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. bbc türkçe'ye konuşan uzmanlar yağışın şiddetinden daha çok i̇stanbul'da kentleşme sorunlarının sellere neden olduğunu söylüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'a düşen 'rekor' yağışın sele dönüşmesi nasıl önlenebilirdi?</h3>
+                    <p>İstanbul'da, 14 Ekim'den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. BBC Türkçe'ye konuşan uzmanlar yağışın şiddetinden daha çok İstanbul'da kentleşme sorunlarının sellere neden olduğunu söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c687zjl55p3qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'daki öğrenci eylemleri: ülke kırılma noktasında mı?
+            fransa başbakanı, öğrenci öfkesinin bir silah olarak kullanıldığını öne sürdü. sendikalar ve diğer protestocular da bugün yeniden sokaklara çıkmaya hazırlanıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa'daki öğrenci eylemleri: Ülke kırılma noktasında mı?</h3>
+                    <p>Fransa Başbakanı, öğrenci öfkesinin bir silah olarak kullanıldığını öne sürdü. Sendikalar ve diğer protestocular da bugün yeniden sokaklara çıkmaya hazırlanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c51kd8vm9912o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇mamoğlu'ndan kılıçdaroğlu'na 'dava siyasi değil' tepkisi: 'senin alnını karışlarım'
+            i̇bb davasında savunmasını sürdüren ekrem i̇mamoğlu, kemal kılıçdaroğlu’nun davanın siyasi olmadığı yönündeki sözlerine “senin alnını karışlarım” diyerek tepki gösterdi. davanın temelinde “i̇stanbul i̇ttifakı”nın başarısına duyulan siyasi husumetin bulunduğunu savunan i̇mamoğlu, “i̇ster bir partinin kayyumu ol, ister ne olursan ol” dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İmamoğlu'ndan Kılıçdaroğlu'na 'Dava siyasi değil' tepkisi: 'Senin alnını karışlarım'</h3>
+                    <p>İBB davasında savunmasını sürdüren Ekrem İmamoğlu, Kemal Kılıçdaroğlu’nun davanın siyasi olmadığı yönündeki sözlerine “Senin alnını karışlarım” diyerek tepki gösterdi. Davanın temelinde “İstanbul İttifakı”nın başarısına duyulan siyasi husumetin bulunduğunu savunan İmamoğlu, “İster bir partinin kayyumu ol, ister ne olursan ol” dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c63dj1xgdkgxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            batı şeria'da, yahudi yerleşimciler zeytin hasadına saldırdı
+            i̇şgal altındaki batı şeria'da her yıl yapılan zeytin hasadı sırasında, onlarca maskeli yahudi yerleşimci filistinlilere saldırdı, araçları ve zeytin ağaçlarını ateşe verdi. bbc ekibi, filistin'in ebu falah köyü yakınlarındaki tarım arazisinde meydana gelen saldırılardan birine tanık oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Batı Şeria'da, Yahudi yerleşimciler zeytin hasadına saldırdı</h3>
+                    <p>İşgal altındaki Batı Şeria'da her yıl yapılan zeytin hasadı sırasında, onlarca maskeli Yahudi yerleşimci Filistinlilere saldırdı, araçları ve zeytin ağaçlarını ateşe verdi. BBC ekibi, Filistin'in Ebu Falah köyü yakınlarındaki tarım arazisinde meydana gelen saldırılardan birine tanık oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8rzpez6p31o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çözüm sürecinde dönüş takvimi: dem parti'nin beklentisi ne?
+            silahsızlanma sürecinin ardından pkk'lıların dönüşünün nasıl ve ne zaman gerçekleşeceği tartışılıyor. dem parti kaynakları, ilk etapta 200 ila 400 kişinin dönüşünün söz konusu olabileceğini öngörüyor. ankara'dan ayşe sayın'ın haberi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çözüm sürecinde dönüş takvimi: DEM Parti'nin beklentisi ne?</h3>
+                    <p>Silahsızlanma sürecinin ardından PKK'lıların dönüşünün nasıl ve ne zaman gerçekleşeceği tartışılıyor. DEM Parti kaynakları, ilk etapta 200 ila 400 kişinin dönüşünün söz konusu olabileceğini öngörüyor. Ankara'dan Ayşe Sayın'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crz98kgldqxxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'de su yılı yağışlarında 66 yılın rekoru kırıldı
+            türkiye'de 1 ekim 2025-30 eylül 2026 dönemini kapsayan 2026 su yılı yağışları, uzun yıllar ortalamasına göre yüzde 29 artarak son 66 yılın en yüksek seviyesine ulaştı. yağışlar tüm bölgelerde normalin üzerinde gerçekleşirken, en fazla artış yüzde 45 ile akdeniz ve güneydoğu anadolu bölgelerinde kaydedildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'de su yılı yağışlarında 66 yılın rekoru kırıldı</h3>
+                    <p>Türkiye'de 1 Ekim 2025-30 Eylül 2026 dönemini kapsayan 2026 su yılı yağışları, uzun yıllar ortalamasına göre yüzde 29 artarak son 66 yılın en yüksek seviyesine ulaştı. Yağışlar tüm bölgelerde normalin üzerinde gerçekleşirken, en fazla artış yüzde 45 ile Akdeniz ve Güneydoğu Anadolu bölgelerinde kaydedildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/turkiyede-su-yili-yagislarinda-66-yilin-rekoru-kirildi-960401.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            muğla büyükşehir belediye başkanı ahmet aras chp'den istifa ettiğini açıkladı
+            muğla büyükşehir belediye başkanı ahmet aras 16 ekim'de sosyal medya üzerinden bir açıklama yaparak chp'den ayrıldığını ifade etti. aras, "görevimi bağımsız olarak sürdürme kararı aldım" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Muğla Büyükşehir Belediye Başkanı Ahmet Aras CHP'den istifa ettiğini açıkladı</h3>
+                    <p>Muğla Büyükşehir Belediye Başkanı Ahmet Aras 16 Ekim'de sosyal medya üzerinden bir açıklama yaparak CHP'den ayrıldığını ifade etti. Aras, "Görevimi bağımsız olarak sürdürme kararı aldım" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq33x5l3p8vko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇nsan boyunun inişli ve çıkışlı tarihinde kritik dönüm noktaları neler?
+            bugün 100 yıl öncesine göre yaklaşık 10 cm daha uzunuz ancak bu artış kesintisiz gerçekleşmedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İnsan boyunun inişli ve çıkışlı tarihinde kritik dönüm noktaları neler?</h3>
+                    <p>Bugün 100 yıl öncesine göre yaklaşık 10 cm daha uzunuz ancak bu artış kesintisiz gerçekleşmedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck240qpgj39do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'daki yağışlarda can kaybı dörde çıktı
+            i̇stanbul'da 14 ekim'deki yağışlar nedeniyle can kaybı sayısı dörde yükseldi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'daki yağışlarda can kaybı dörde çıktı</h3>
+                    <p>İstanbul'da 14 Ekim'deki yağışlar nedeniyle can kaybı sayısı dörde yükseldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9e8l1xvnv40o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kurallara aykırı bozulabilir gıda taşımacılığına 12 bin 758 lira ceza verilecek
+            bozulabilir gıda maddelerinin taşınmasına ilişkin kurallara aykırı hareket edenlere 12 bin 758 lira idari para cezası uygulanacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kurallara aykırı bozulabilir gıda taşımacılığına 12 bin 758 lira ceza verilecek</h3>
+                    <p>Bozulabilir gıda maddelerinin taşınmasına ilişkin kurallara aykırı hareket edenlere 12 bin 758 lira idari para cezası uygulanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kurallara-aykiri-bozulabilir-gida-tasimaciligina-12-bin-758-lira-ceza-verilecek-960400.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srailliler, batı şeria'da filistinlilere ait 20 kuzuyu bıçaklayarak öldürdü
+            i̇şgalci i̇sraillilerin, işgal altındaki batı şeria'nın ramallah kenti yakınlarındaki kefr malik beldesinde 20 kuzuyu bıçakla saldırarak telef ettiği bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrailliler, Batı Şeria'da Filistinlilere ait 20 kuzuyu bıçaklayarak öldürdü</h3>
+                    <p>İşgalci İsraillilerin, işgal altındaki Batı Şeria'nın Ramallah kenti yakınlarındaki Kefr Malik beldesinde 20 kuzuyu bıçakla saldırarak telef ettiği bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israilliler-bati-seriada-filistinlilere-ait-20-kuzuyu-bicaklayarak-oldurdu-960398.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yargıtay'dan eski damadından kira isteyen kayınbabaya ret
+            yargıtay 3. hukuk dairesi, kızının boşandığı eşinden kira talep eden kayınbabanın açtığı davanın reddine ilişkin yerel mahkeme kararını hukuka uygun buldu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yargıtay'dan eski damadından kira isteyen kayınbabaya ret</h3>
+                    <p>Yargıtay 3. Hukuk Dairesi, kızının boşandığı eşinden kira talep eden kayınbabanın açtığı davanın reddine ilişkin yerel mahkeme kararını hukuka uygun buldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/yargitaydan-eski-damadindan-kira-isteyen-kayinbabaya-ret-960393.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            msci'dan türkiye kararı: piyasa sınıflandırması nasıl değişebilir?
+            küresel endeks şirketi morgan stanley capital international (msci), türkiye'deki endekslerine dair bazı işlemleri dondurduğunu açıkladı. şirket, türkiye'de hisse senetleri konusunda gerekli önlemlerin alınmaması durumunda piyasa sınıflandırmasının düşürülmesine dair istişare süreci başlatabileceği mesajını verdi. peki msci açıklaması türkiye için ne anlama geliyor?
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>MSCI'dan Türkiye kararı: Piyasa sınıflandırması nasıl değişebilir?</h3>
+                    <p>Küresel endeks şirketi Morgan Stanley Capital International (MSCI), Türkiye'deki endekslerine dair bazı işlemleri dondurduğunu açıkladı. Şirket, Türkiye'de hisse senetleri konusunda gerekli önlemlerin alınmaması durumunda piyasa sınıflandırmasının düşürülmesine dair istişare süreci başlatabileceği mesajını verdi. Peki MSCI açıklaması Türkiye için ne anlama geliyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm75przp0ldvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan bayraktar: gabar'dan yakın zamanda yeni bir müjde verebiliriz
+            enerji ve tabii kaynaklar bakanı alparslan bayraktar, türkiye'nin karada ve denizde petrol ile doğal gaz arama faaliyetlerini kararlılıkla sürdürdüğünü belirterek, gabar'daki üretim sahasında yürütülen çalışmalar kapsamında yakın zamanda yeni bir keşif müjdesi verebileceklerini açıkladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakan Bayraktar: Gabar'dan yakın zamanda yeni bir müjde verebiliriz</h3>
+                    <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, Türkiye'nin karada ve denizde petrol ile doğal gaz arama faaliyetlerini kararlılıkla sürdürdüğünü belirterek, Gabar'daki üretim sahasında yürütülen çalışmalar kapsamında yakın zamanda yeni bir keşif müjdesi verebileceklerini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-bayraktar-gabardan-yakin-zamanda-yeni-bir-mujde-verebiliriz-960394.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            burhanettin duran: karadeniz'in enerjisi, türkiye'nin geleceğine güç katıyor
+            i̇letişim başkanı burhanettin duran, türkiye'nin ilk yüzer üretim platformu osman gazi'nin bugün gerçekleştirilecek törenle filyos'tan mavi vatan'daki görev yerine uğurlanacağını belirterek, "enerjide tam bağımsızlık hedefimize bir adım daha yaklaşıyoruz" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Burhanettin Duran: Karadeniz'in enerjisi, Türkiye'nin geleceğine güç katıyor</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, Türkiye'nin ilk yüzer üretim platformu Osman Gazi'nin bugün gerçekleştirilecek törenle Filyos'tan Mavi Vatan'daki görev yerine uğurlanacağını belirterek, "Enerjide tam bağımsızlık hedefimize bir adım daha yaklaşıyoruz" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/burhanettin-duran-karadenizin-enerjisi-turkiyenin-gelecegine-guc-katiyor-960391.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul valisi gül: sel mağdurlarına para yardımı yapıldı
+            i̇stanbul valisi davut gül, sel felaketinin ardından yürütülen çalışmalara ilişkin, dere yataklarını işgal eden yapıların yıkımına başlandığını, acil ihtiyaçlar için 5 binden fazla kişinin hesabına 10'ar bin lira yatırıldığını ve zarar tespit ödemelerinin de pazartesi günü yapılacağını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul Valisi Gül: Sel mağdurlarına para yardımı yapıldı</h3>
+                    <p>İstanbul Valisi Davut Gül, sel felaketinin ardından yürütülen çalışmalara ilişkin, dere yataklarını işgal eden yapıların yıkımına başlandığını, acil ihtiyaçlar için 5 binden fazla kişinin hesabına 10'ar bin lira yatırıldığını ve zarar tespit ödemelerinin de pazartesi günü yapılacağını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/istanbul-valisi-gul-sel-magdurlarina-para-yardimi-yapildi-960399.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            starlink interneti ukrayna savaş alanında neden bu kadar önemli?
+            ukrayna'daki askeri iletişimin omurgasını oluşturan starlink, ülke genelindeki askeri güçlere hayati önem taşıyan yüksek hızlı internet hizmeti sağlıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Starlink interneti Ukrayna savaş alanında neden bu kadar önemli?</h3>
+                    <p>Ukrayna'daki askeri iletişimin omurgasını oluşturan Starlink, ülke genelindeki askeri güçlere hayati önem taşıyan yüksek hızlı internet hizmeti sağlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx1l3dz05r8go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bütçeden tarımsal destekler için 235 milyar lira ayrıldı
+            türkiye büyük millet meclisine (tbmm) sunulan 2027 yılı bütçe teklifiyle, tarımsal destekler için 235 milyar lira ve tarım sektörü yatırımları için 268 milyar lira ödenek öngörüldü.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bütçeden tarımsal destekler için 235 milyar lira ayrıldı</h3>
+                    <p>Türkiye Büyük Millet Meclisine (TBMM) sunulan 2027 yılı bütçe teklifiyle, tarımsal destekler için 235 milyar lira ve tarım sektörü yatırımları için 268 milyar lira ödenek öngörüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/butceden-tarimsal-destekler-icin-235-milyar-lira-ayrildi-960392.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
