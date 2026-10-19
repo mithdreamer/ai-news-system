@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-19 10:48</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqgm02rx8ng3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>'Polis kontrolü kaybetti' diyen Fransa İçişleri Bakanı istifa etti, Macron kabul etmedi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cv5ynp4kprz6o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Rusya içinde Ukrayna'ya çalışan Putin karşıtı casus şebekesi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/endonezyada-yangin-alarmi-orangutanlari-kurtarmak-icin-zamanla-yaris-960517.html" target="_blank">
+                <strong>Endonezya'da yangın alarmı: Orangutanları kurtarmak için zamanla yarış</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/bakan-tekinden-unesco-uyelerine-cop31-daveti-960511.html" target="_blank">
+                <strong>Bakan Tekin'den UNESCO üyelerine COP31 daveti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/selin-vurdugu-ayazagada-kentsel-donusum-mesaisi-basladi-960518.html" target="_blank">
+                <strong>Selin vurduğu Ayazağa'da kentsel dönüşüm mesaisi başladı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            'polis kontrolü kaybetti' diyen fransa i̇çişleri bakanı istifa etti, macron kabul etmedi
+            fransa i̇çişleri bakanı laurent nuñez, hafta sonu bazı kentlerde düzenlenen protestolarda polisin "kontrolü kaybettiğini" söyledi. "yaşananların tümünden kendisini sorumlu hissettiği" için cumhurbaşkanı emmanuel macron'a istifasını sunduğunu açıkladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>'Polis kontrolü kaybetti' diyen Fransa İçişleri Bakanı istifa etti, Macron kabul etmedi</h3>
+                    <p>Fransa İçişleri Bakanı Laurent Nuñez, hafta sonu bazı kentlerde düzenlenen protestolarda polisin "kontrolü kaybettiğini" söyledi. "Yaşananların tümünden kendisini sorumlu hissettiği" için Cumhurbaşkanı Emmanuel Macron'a istifasını sunduğunu açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqgm02rx8ng3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya içinde ukrayna'ya çalışan putin karşıtı casus şebekesi
+            i̇ki adam, savaş sırasında ukrayna istihbaratını desteklemek için yaptıklarını söyledikleri çalışmaları anlattı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya içinde Ukrayna'ya çalışan Putin karşıtı casus şebekesi</h3>
+                    <p>İki adam, savaş sırasında Ukrayna istihbaratını desteklemek için yaptıklarını söyledikleri çalışmaları anlattı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cv5ynp4kprz6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            endonezya'da yangın alarmı: orangutanları kurtarmak için zamanla yarış
+            endonezya'da aylardır devam eden orman yangınları, nesli tükenme tehlikesi altındaki borneo orangutanlarının yaşamını tehdit ediyor. yetkililer ve gönüllüler, yangınlardan etkilenen hayvanları kurtararak güvenli bölgelere ulaştırmaya çalışıyor. ağustos ayından bu yana 51 orangutanın kurtarıldığı bildirildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Endonezya'da yangın alarmı: Orangutanları kurtarmak için zamanla yarış</h3>
+                    <p>Endonezya'da aylardır devam eden orman yangınları, nesli tükenme tehlikesi altındaki Borneo orangutanlarının yaşamını tehdit ediyor. Yetkililer ve gönüllüler, yangınlardan etkilenen hayvanları kurtararak güvenli bölgelere ulaştırmaya çalışıyor. Ağustos ayından bu yana 51 orangutanın kurtarıldığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/endonezyada-yangin-alarmi-orangutanlari-kurtarmak-icin-zamanla-yaris-960517.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan tekin'den unesco üyelerine cop31 daveti
+            milli eğitim bakanı yusuf tekin, unesco yeşil eğitim ortaklığı'na üye ülkeleri kasım ayında türkiye'de düzenlenecek cop31'e davet ederek, "yeşil vatan'da büyüttüğümüz eğitim anlayışını, cop31'in ortak iradesiyle yeşil bir dünya ve daha adil bir gelecek için birlikte geliştirmeye kararlıyız." ifadelerini kullandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Tekin'den UNESCO üyelerine COP31 daveti</h3>
+                    <p>Milli Eğitim Bakanı Yusuf Tekin, UNESCO Yeşil Eğitim Ortaklığı'na üye ülkeleri kasım ayında Türkiye'de düzenlenecek COP31'e davet ederek, "Yeşil Vatan'da büyüttüğümüz eğitim anlayışını, COP31'in ortak iradesiyle yeşil bir dünya ve daha adil bir gelecek için birlikte geliştirmeye kararlıyız." ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/bakan-tekinden-unesco-uyelerine-cop31-daveti-960511.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            selin vurduğu ayazağa'da kentsel dönüşüm mesaisi başladı
+            sarıyer ayazağa'da yaşanan sel baskınlarının ardından bölgede kalıcı çözüm için kentsel dönüşüm ofisi açıldı. kentsel dönüşüm başkanı hakkı alp, vatandaşlara "yarısı bizden" kampanyası ve toki̇ eliyle alan bazlı dönüşüm olmak üzere iki farklı model sunduklarını belirterek görüşmelere başladıklarını duyurdu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Selin vurduğu Ayazağa'da kentsel dönüşüm mesaisi başladı</h3>
+                    <p>Sarıyer Ayazağa'da yaşanan sel baskınlarının ardından bölgede kalıcı çözüm için Kentsel Dönüşüm Ofisi açıldı. Kentsel Dönüşüm Başkanı Hakkı Alp, vatandaşlara "Yarısı Bizden" kampanyası ve TOKİ eliyle alan bazlı dönüşüm olmak üzere iki farklı model sunduklarını belirterek görüşmelere başladıklarını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/selin-vurdugu-ayazagada-kentsel-donusum-mesaisi-basladi-960518.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye ihracatında 9 ayda 211 milyar dolarlık rekor
+            türkiye'nin ocak-eylül dönemi ihracatı yıllık bazda yüzde 5,2 artarak 211 milyar dolara ulaşırken, 26 sektörden 18'i ihracatını artırdı. en yüksek artış yüzde 42 ile yaş meyve ve sebze sektöründe kaydedildi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Türkiye ihracatında 9 ayda 211 milyar dolarlık rekor</h3>
+                    <p>Türkiye'nin ocak-eylül dönemi ihracatı yıllık bazda yüzde 5,2 artarak 211 milyar dolara ulaşırken, 26 sektörden 18'i ihracatını artırdı. En yüksek artış yüzde 42 ile yaş meyve ve sebze sektöründe kaydedildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiye-ihracatinda-9-ayda-211-milyar-dolarlik-rekor-960515.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mars'ın uydusundan parça almayı amaçlayan uzay aracı bugün fırlatılıyor
+            bir uzay aracı, mars uydusundan 10 gram toz alıp dünya'ya geri getirmek üzere iddialı bir görev için fırlatılmaya hazırlanıyor.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Mars'ın uydusundan parça almayı amaçlayan uzay aracı bugün fırlatılıyor</h3>
+                    <p>Bir uzay aracı, Mars uydusundan 10 gram toz alıp Dünya'ya geri getirmek üzere iddialı bir görev için fırlatılmaya hazırlanıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c933x6p8rgp3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            27 ilde siber suç operasyonu: 643 şüpheli yakalandı
+            emniyet genel müdürlüğü koordinesinde 27 ilde "yasa dışı bahis", "çevrim içi çocuk müstehcenliği" ve "nitelikli dolandırıcılık" başta olmak üzere siber suçlara yönelik son 6 günde düzenlenen operasyonlarda yakalanan 643 şüpheliden 303'ü tutuklandı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>27 ilde siber suç operasyonu: 643 şüpheli yakalandı</h3>
+                    <p>Emniyet Genel Müdürlüğü koordinesinde 27 ilde "yasa dışı bahis", "çevrim içi çocuk müstehcenliği" ve "nitelikli dolandırıcılık" başta olmak üzere siber suçlara yönelik son 6 günde düzenlenen operasyonlarda yakalanan 643 şüpheliden 303'ü tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/27-ilde-siber-suc-operasyonu-643-supheli-yakalandi-960512.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bir yardım kuruluşu, suriye'de çocukların kaybolması konusunda neden hedefte?
+            uluslararası yardım kuruluşu sos çocuk köyleri, 140'tan fazla çocuğun suriye güvenlik güçleri tarafından yönetimlerindeki yetimhanelere götürüldüğünü kabul etti. ancak kuruluş olaydaki rolüne dair raporu yayımlamama kararı aldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bir yardım kuruluşu, Suriye'de çocukların kaybolması konusunda neden hedefte?</h3>
+                    <p>Uluslararası yardım kuruluşu SOS Çocuk Köyleri, 140'tan fazla çocuğun Suriye güvenlik güçleri tarafından yönetimlerindeki yetimhanelere götürüldüğünü kabul etti. Ancak kuruluş olaydaki rolüne dair raporu yayımlamama kararı aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8ez6dlpx32o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bbc araştırdı: i̇srail ordusu, askeri soruşturmaların akibetini neden açıklamıyor?
+            bbc'nin doğrulama birimi bbc verify, i̇srail ordusunun insanları öldürmek ve yaralamakla suçlandığı 254 olayla ilgili açılan soruşturmaların sonuçlarının kamuoyuna açıklanmadığını tespit etti. bu olaylar, gazze, işgal altındaki batı şeria, lübnan ve i̇srail'de gerçekleşti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>BBC araştırdı: İsrail ordusu, askeri soruşturmaların akibetini neden açıklamıyor?</h3>
+                    <p>BBC'nin doğrulama birimi BBC Verify, İsrail ordusunun insanları öldürmek ve yaralamakla suçlandığı 254 olayla ilgili açılan soruşturmaların sonuçlarının kamuoyuna açıklanmadığını tespit etti. Bu olaylar, Gazze, işgal altındaki Batı Şeria, Lübnan ve İsrail'de gerçekleşti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqdjv982nl4eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran aliya i̇zetbegoviç'i andı
+            i̇letişim başkanı burhanettin duran, aliya i̇zetbegoviç'in vefatının yıl dönümüne ilişkin, "doğu ile batı arasında insanın anlamını, inancı, ahlakı ve medeniyeti sorgulayan büyük bir düşünürdü. ardında bağımsız bir vatanın yanı sıra insanlık onurunu, birlikte yaşama iradesini ve adaleti esas alan güçlü bir fikir mirası bıraktı" ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İletişim Başkanı Duran Aliya İzetbegoviç'i andı</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, Aliya İzetbegoviç'in vefatının yıl dönümüne ilişkin, "Doğu ile Batı arasında insanın anlamını, inancı, ahlakı ve medeniyeti sorgulayan büyük bir düşünürdü. Ardında bağımsız bir vatanın yanı sıra insanlık onurunu, birlikte yaşama iradesini ve adaleti esas alan güçlü bir fikir mirası bıraktı" ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-aliya-izetbegovici-andi-960516.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'da şiddet olayları sonrası meloni'den acil durum toplantısı
+            i̇talya'da başta milano olmak üzere bazı kentlerde hafta sonunda düzenlenen gösterilerde yaşanan şiddet olayları ve gözaltıların ardından hükümet olağanüstü "kamu düzeni" toplantısı düzenliyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalya'da şiddet olayları sonrası Meloni'den acil durum toplantısı</h3>
+                    <p>İtalya'da başta Milano olmak üzere bazı kentlerde hafta sonunda düzenlenen gösterilerde yaşanan şiddet olayları ve gözaltıların ardından hükümet olağanüstü "kamu düzeni" toplantısı düzenliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm4g1j150z6wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çukurova belediyesi'ne operasyon: belediye başkanı dahil 44 kişi gözaltına alındı
+            adana'da çukurova belediyesine yönelik soruşturma kapsamında, aralarında mevcut belediye başkanı emrah kozay ve önceki dönem belediye başkanı soner çetin'in de bulunduğu 44 kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çukurova Belediyesi'ne operasyon: Belediye Başkanı dahil 44 kişi gözaltına alındı</h3>
+                    <p>Adana'da Çukurova Belediyesine yönelik soruşturma kapsamında, aralarında mevcut Belediye Başkanı Emrah Kozay ve önceki dönem belediye başkanı Soner Çetin'in de bulunduğu 44 kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq70pxdzldldo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'alihan kuriş' soruşturmasında 22 kişi daha gözaltına alındı
+            alihan kuriş'in liderliğinde "çıkar amaçlı suç örgütü kurma ve örgüte üye olma" gibi iddialarla yürütülen soruşturma kapsamında düzenlenen yeni dalga operasyonda 22 kişi daha gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'Alihan Kuriş' soruşturmasında 22 kişi daha gözaltına alındı</h3>
+                    <p>Alihan Kuriş'in liderliğinde "çıkar amaçlı suç örgütü kurma ve örgüte üye olma" gibi iddialarla yürütülen soruşturma kapsamında düzenlenen yeni dalga operasyonda 22 kişi daha gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjejpp92gw8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            manifest'in wembley konserinde neler yaşandı?
+            kıyafetleri ve dansları nedeniyle türkiye’de yargılanan manifest, londra’daki wembley arena’da sahneye çıkarken türkçe şarkılarıyla dünyaya ulaşmayı ve kız çocuklarına ilham vermeyi hedefliyor
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Manifest'in Wembley konserinde neler yaşandı?</h3>
+                    <p>Kıyafetleri ve dansları nedeniyle Türkiye’de yargılanan Manifest, Londra’daki Wembley Arena’da sahneye çıkarken Türkçe şarkılarıyla dünyaya ulaşmayı ve kız çocuklarına ilham vermeyi hedefliyor</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwly348ymv1do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul ve kocaeli'ndeki sellerde ölenlerin sayısı sekize yükseldi
+            i̇stanbul ve kocaeli'deki sellerde kaybolan iki kişinin daha cesedinin bulunmasının ardından afette hayatını kaybedenlerin sayısı sekize yükseldi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul ve Kocaeli'ndeki sellerde ölenlerin sayısı sekize yükseldi</h3>
+                    <p>İstanbul ve Kocaeli'deki sellerde kaybolan iki kişinin daha cesedinin bulunmasının ardından afette hayatını kaybedenlerin sayısı sekize yükseldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9e8l1xvnv40o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm dünya gıda programı: finansman yetersizliği nedeniyle 500 bin gazzeliye yardım kesilecek
+            birleşmiş milletler dünya gıda programı (wfp), finansman yetersizliği nedeniyle 500 bin gazzeliye yönelik yardımları sonlandıracağını açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>BM Dünya Gıda Programı: Finansman yetersizliği nedeniyle 500 bin Gazzeliye yardım kesilecek</h3>
+                    <p>Birleşmiş Milletler Dünya Gıda Programı (WFP), finansman yetersizliği nedeniyle 500 bin Gazzeliye yönelik yardımları sonlandıracağını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bm-dunya-gida-programi-finansman-yetersizligi-nedeniyle-500-bin-gazzeliye-yardim-kesilecek-960519.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rekabet kurulu, 10 yemek şirketi hakkında soruşturma başlattı
+            rekabet kurulu, kamu kurum ve kuruluşlarının toplu yemek hizmeti alımlarına yönelik ihalelerde danışıklı hareket ederek kamu zararına yol açtıkları iddiasıyla 10 şirket hakkında soruşturma başlattı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rekabet Kurulu, 10 yemek şirketi hakkında soruşturma başlattı</h3>
+                    <p>Rekabet Kurulu, kamu kurum ve kuruluşlarının toplu yemek hizmeti alımlarına yönelik ihalelerde danışıklı hareket ederek kamu zararına yol açtıkları iddiasıyla 10 şirket hakkında soruşturma başlattı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/rekabet-kurulu-10-yemek-sirketi-hakkinda-sorusturma-baslatti-960514.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fetö şüphelilerinin kaçışı çamura saplanan araçla son buldu
+            edirne'nin uzunköprü ilçesinde, yasa dışı yollarla yurt dışına çıkmaya hazırlanırken yakalanan 4 fetullahçı terör örgütü (fetö) şüphelisinden 3'ü tutuklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>FETÖ şüphelilerinin kaçışı çamura saplanan araçla son buldu</h3>
+                    <p>Edirne'nin Uzunköprü ilçesinde, yasa dışı yollarla yurt dışına çıkmaya hazırlanırken yakalanan 4 Fetullahçı Terör Örgütü (FETÖ) şüphelisinden 3'ü tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/feto-suphelilerinin-kacisi-camura-saplanan-aracla-son-buldu-960513.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'deki mobil abone sayısının 105 milyona ulaşması bekleniyor
+            türkiye'de bu yılın ikinci çeyreği itibarıyla 102,2 milyon olan mobil abone sayısının 2027'de 105 milyona ulaşması öngörülüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'deki mobil abone sayısının 105 milyona ulaşması bekleniyor</h3>
+                    <p>Türkiye'de bu yılın ikinci çeyreği itibarıyla 102,2 milyon olan mobil abone sayısının 2027'de 105 milyona ulaşması öngörülüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/turkiyedeki-mobil-abone-sayisinin-105-milyona-ulasmasi-bekleniyor-960510.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
