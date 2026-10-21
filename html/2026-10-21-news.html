@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>21</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-21 10:12</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Kanada'dan Türkiye'ye başbakan düzeyinde ilk resmi ziyaret: 'Yeni bir stratejik ilişkinin başlangıcı'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/emine-erdogan-savas-bolgelerindeki-cocuklarin-sesi-olmak-insanlik-vazifemiz-960756.html" target="_blank">
+                <strong>Emine Erdoğan: Savaş bölgelerindeki çocukların sesi olmak insanlık vazifemiz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/deprem-bolgesindeki-11-ilin-ihracati-156-milyar-dolari-asti-960751.html" target="_blank">
+                <strong>Deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm8xzrxwggv8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Zelenskiy ile görüşen ABD özel temsilcisi Witkoff, Rusya'da Putin ile biraraya gelecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/tanzanyaya-bir-yilda-ikinci-demir-yolu-araci-ihracati-960755.html" target="_blank">
+                <strong>Tanzanya'ya bir yılda ikinci demir yolu aracı ihracatı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            kanada'dan türkiye'ye başbakan düzeyinde ilk resmi ziyaret: 'yeni bir stratejik ilişkinin başlangıcı'
+            mark carney bugün kanada'dan türkiye'ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle türkiye-kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. i̇ki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Kanada'dan Türkiye'ye başbakan düzeyinde ilk resmi ziyaret: 'Yeni bir stratejik ilişkinin başlangıcı'</h3>
+                    <p>Mark Carney bugün Kanada'dan Türkiye'ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. Ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle Türkiye-Kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. İki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı
+            deprem bölgesindeki 11 ilin ocak-eylül dönemi ihracatı, 2026'da geçen yılın aynı dönemine göre 1,42 milyar dolar artış gösterdi. gaziantep yaklaşık 8 milyar dolarla ilk sırada yer alırken, elazığ'ın ihracatı yüzde 193,3 yükseldi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı</h3>
+                    <p>Deprem bölgesindeki 11 ilin ocak-eylül dönemi ihracatı, 2026'da geçen yılın aynı dönemine göre 1,42 milyar dolar artış gösterdi. Gaziantep yaklaşık 8 milyar dolarla ilk sırada yer alırken, Elazığ'ın ihracatı yüzde 193,3 yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/deprem-bolgesindeki-11-ilin-ihracati-156-milyar-dolari-asti-960751.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tanzanya'ya bir yılda ikinci demir yolu aracı ihracatı
+            tanzanya'ya daha önce gerçekleştirilen de10000 tipi ana hat lokomotifi ihracatının ardından aynı ülkeye bir yıl içinde ikinci demir yolu aracı dış satımı yapılacak. türasaş tarafından yerli ve milli imkanlarla üretilecek 100 yük vagon daha tanzanya'ya ihraç edilecek.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Tanzanya'ya bir yılda ikinci demir yolu aracı ihracatı</h3>
+                    <p>Tanzanya'ya daha önce gerçekleştirilen DE10000 tipi ana hat lokomotifi ihracatının ardından aynı ülkeye bir yıl içinde ikinci demir yolu aracı dış satımı yapılacak. TÜRASAŞ tarafından yerli ve milli imkanlarla üretilecek 100 yük vagon daha Tanzanya'ya ihraç edilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tanzanyaya-bir-yilda-ikinci-demir-yolu-araci-ihracati-960755.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            emine erdoğan: savaş bölgelerindeki çocukların sesi olmak insanlık vazifemiz
+            cumhurbaşkanı recep tayyip erdoğan'ın eşi emine erdoğan, "bizim nazarımızda çocuk, insanlığın kalbidir. onlara dair meseleler her zaman küresel gündemin merkezinde tutulmalıdır. özellikle gazze başta olmak üzere savaş bölgelerindeki çocukların sesi olmayı insanlık vazifemiz olarak görüyoruz" ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Emine Erdoğan: Savaş bölgelerindeki çocukların sesi olmak insanlık vazifemiz</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, "Bizim nazarımızda çocuk, insanlığın kalbidir. Onlara dair meseleler her zaman küresel gündemin merkezinde tutulmalıdır. Özellikle Gazze başta olmak üzere savaş bölgelerindeki çocukların sesi olmayı insanlık vazifemiz olarak görüyoruz" ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/emine-erdogan-savas-bolgelerindeki-cocuklarin-sesi-olmak-insanlik-vazifemiz-960756.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek oecd toplantısı kapsamında 4 ülkeden mevkidaşıyla görüştü
+            adalet bakanı gürlek, 2026 oecd adalete eşit erişim küresel yuvarlak masa toplantısı kapsamında i̇spanya, hırvatistan, bosna hersek ve benin cumhuriyeti'nin adalet bakanları ve heyetleriyle bir araya geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Gürlek OECD Toplantısı kapsamında 4 ülkeden mevkidaşıyla görüştü</h3>
+                    <p>Adalet Bakanı Gürlek, 2026 OECD Adalete Eşit Erişim Küresel Yuvarlak Masa Toplantısı kapsamında İspanya, Hırvatistan, Bosna Hersek ve Benin Cumhuriyeti'nin adalet bakanları ve heyetleriyle bir araya geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-oecd-toplantisi-kapsaminda-4-ulkeden-mevkidasiyla-gorustu-960753.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm'nin 1,5 derece raporunda türkiye ile ilgili hangi uyarılar var?
+            birleşmiş milletler 21 ekim'de yayımladığı kritik uyarıda, 1,5 derece eşiğiyle ilgili acilen ve sert önlemler çağrısında bulundu. birleşmiş milletler çevre programı'nın (unep) emissions gap report 2026 raporu, ülkelerin açıkladığı iklim hedefleri ile ülkelerin gerçekte neden olduğu sera gazı salımları arasında büyük bir uçurum olduğunu söylüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>BM'nin 1,5 derece raporunda Türkiye ile ilgili hangi uyarılar var?</h3>
+                    <p>Birleşmiş Milletler 21 Ekim'de yayımladığı kritik uyarıda, 1,5 derece eşiğiyle ilgili acilen ve sert önlemler çağrısında bulundu. Birleşmiş Milletler Çevre Programı'nın (UNEP) Emissions Gap Report 2026 raporu, ülkelerin açıkladığı iklim hedefleri ile ülkelerin gerçekte neden olduğu sera gazı salımları arasında büyük bir uçurum olduğunu söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwg7xd7180e2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'da gösteriler sonrası kararname: reşit olmayanlara gözaltı, milano'ya 500 ek asker
+            i̇talya'da başta milano olmak üzere bazı kentlerde geçen hafta sonu hayat pahalılığına karşı yapılan gösterilerde yaşanan şiddet olaylarının ardından hükümet yeni bir kararnameyi kabul etti. yeni tedbirler arasında 14-18 yaş arası çocukların da gözaltına alınması ve olası hasarların bedelini ailelerinin ödemesi de var.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalya'da gösteriler sonrası kararname: Reşit olmayanlara gözaltı, Milano'ya 500 ek asker</h3>
+                    <p>İtalya'da başta Milano olmak üzere bazı kentlerde geçen hafta sonu hayat pahalılığına karşı yapılan gösterilerde yaşanan şiddet olaylarının ardından hükümet yeni bir kararnameyi kabul etti. Yeni tedbirler arasında 14-18 yaş arası çocukların da gözaltına alınması ve olası hasarların bedelini ailelerinin ödemesi de var.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cked35py829zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            chp kurultay ceza davasında mütalaa açıklandı
+            ankara’da chp’nin 38’inci olağan kurultayı’na ilişkin usulsüzlük iddialarıyla açılan davada, savcı mütalaasını açıkladı. duruşma, 11 kasım’a ertelendi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>CHP kurultay ceza davasında mütalaa açıklandı</h3>
+                    <p>Ankara’da CHP’nin 38’inci Olağan Kurultayı’na ilişkin usulsüzlük iddialarıyla açılan davada, savcı mütalaasını açıkladı. Duruşma, 11 Kasım’a ertelendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/chp-kurultay-ceza-davasinda-mutalaa-aciklandi-960748.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yarısı bizden kampanyası ile dönüşümü tamamlanan konut sayısı 123 bini aştı
+            i̇stanbul'da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen "yarısı bizden kampanyası" kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 eylül'den bu yana 5 bin 482 artarak 123 bin 396'ya yükseldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yarısı Bizden Kampanyası ile dönüşümü tamamlanan konut sayısı 123 bini aştı</h3>
+                    <p>İstanbul'da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen "Yarısı Bizden Kampanyası" kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 Eylül'den bu yana 5 bin 482 artarak 123 bin 396'ya yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/yarisi-bizden-kampanyasi-ile-donusumu-tamamlanan-konut-sayisi-123-bini-asti-960747.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uşak'ta fabrika yangını: gökyüzü siyaha büründü
+            uşak'ta tekstil geri dönüşüm fabrikasında yangın çıktı. i̇tfaiye ekiplerinin müdahalesi sürerken gökyüzü siyah dumanlarla kaplandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Uşak'ta fabrika yangını: Gökyüzü siyaha büründü</h3>
+                    <p>Uşak'ta tekstil geri dönüşüm fabrikasında yangın çıktı. İtfaiye ekiplerinin müdahalesi sürerken gökyüzü siyah dumanlarla kaplandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/usakta-fabrika-yangini-gokyuzu-siyaha-burundu-960746.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon soruşturmasında 26 gözaltı, nusret altınbaş hakkında yakalama kararı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen fon soruşturması kapsamında 31 kişi hakkında daha gözaltı kararı verildi. 26 kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fon soruşturmasında 26 gözaltı, Nusret Altınbaş hakkında yakalama kararı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen fon soruşturması kapsamında 31 kişi hakkında daha gözaltı kararı verildi. 26 kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c574pjl4l40no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gözaltına alınan gazeteci i̇smail arı adliyeye sevk edildi
+            birgün gazetesi, gözaltına alınan muhabiri i̇smail arı'nın 21 ekim sabah saatlerinde adliyeye sevk edildiğini bildirdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Gözaltına alınan gazeteci İsmail Arı adliyeye sevk edildi</h3>
+                    <p>BirGün gazetesi, gözaltına alınan muhabiri İsmail Arı'nın 21 Ekim sabah saatlerinde adliyeye sevk edildiğini bildirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck20re4212ylo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mustafa sarıgül: i̇ddialar yalan, ağırel’in tutuklamasından dolayı üzgünüm
+            yeni parti erzincan milletvekili mustafa sarıgül, "suçtan kaynaklanan mal varlığı değerlerini aklama" iddiasıyla yürütülen soruşturmada ailesi ve kendisi hakkındaki iddiaları yalanladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mustafa Sarıgül: İddialar yalan, Ağırel’in tutuklamasından dolayı üzgünüm</h3>
+                    <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, "suçtan kaynaklanan mal varlığı değerlerini aklama" iddiasıyla yürütülen soruşturmada ailesi ve kendisi hakkındaki iddiaları yalanladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meclis'e sunulan 16 maddelik mekke i̇ttifakı anlaşması'nın içeriği ne?
+            türkiye, pakistan ve suudi arabistan arasında imzalanan mekke i̇ttifakı anlaşması'na dair kanun teklifi türkiye büyük millet meclisi başkanlığına sunuldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Meclis'e sunulan 16 maddelik Mekke İttifakı Anlaşması'nın içeriği ne?</h3>
+                    <p>Türkiye, Pakistan ve Suudi Arabistan arasında imzalanan Mekke İttifakı Anlaşması'na dair kanun teklifi Türkiye Büyük Millet Meclisi Başkanlığına sunuldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwj0l71r8lq9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bolu belediyesi davasında tanju özcan'a yedi yıl hapis cezası
+            bolu belediyesi'ne yönelik davadan tutuklu yargılanan tanju özcan, 7 yıl 3 ay 15 gün hapis cezasına çarptırıldı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bolu Belediyesi davasında Tanju Özcan'a yedi yıl hapis cezası</h3>
+                    <p>Bolu Belediyesi'ne yönelik davadan tutuklu yargılanan Tanju Özcan, 7 yıl 3 ay 15 gün hapis cezasına çarptırıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlg9n5pwyqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beton mikseriyle yola harç döken sürücüye 109 bin lira ceza
+            i̇stanbul küçükçekmece'de yola harç dökerek ilerleyen beton mikserinin sürücüsüne 109 bin 662 lira para cezası kesildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Beton mikseriyle yola harç döken sürücüye 109 bin lira ceza</h3>
+                    <p>İstanbul Küçükçekmece'de yola harç dökerek ilerleyen beton mikserinin sürücüsüne 109 bin 662 lira para cezası kesildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/beton-mikseriyle-yola-harc-doken-surucuye-109-bin-lira-ceza-960754.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            zelenskiy ile görüşen abd özel temsilcisi witkoff, rusya'da putin ile biraraya gelecek
+            steve witkoff, rusya'nın ukrayna ile yıllardır süren çatışmasını sona erdirmeye yönelik önerileri görüşmek üzere st. petersburg'a gitti. witkoff bundan önce ukrayna devlet başkanı volodimir zelenskiy ile oslo'da görüştü. bir abd yetkilisi görüşmeleri "yapıcı" olarak nitelendirdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Zelenskiy ile görüşen ABD özel temsilcisi Witkoff, Rusya'da Putin ile biraraya gelecek</h3>
+                    <p>Steve Witkoff, Rusya'nın Ukrayna ile yıllardır süren çatışmasını sona erdirmeye yönelik önerileri görüşmek üzere St. Petersburg'a gitti. Witkoff bundan önce Ukrayna Devlet Başkanı Volodimir Zelenskiy ile Oslo'da görüştü. Bir ABD yetkilisi görüşmeleri "yapıcı" olarak nitelendirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm8xzrxwggv8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin uzay ve havacılık faaliyetleri için 100 milyar liraya yakın ödenek
+            türkiye'nin uzay ve havacılık faaliyetlerinin geliştirilmesi amacıyla 2027'de 24 milyar 587 milyon lira, 2028'de 30 milyar 597 milyon lira, 2029'da 36 milyar 953 milyon lira olmak üzere gelecek 3 yılda 100 milyar liraya yakın kaynak kullanılması öngörülüyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye'nin uzay ve havacılık faaliyetleri için 100 milyar liraya yakın ödenek</h3>
+                    <p>Türkiye'nin uzay ve havacılık faaliyetlerinin geliştirilmesi amacıyla 2027'de 24 milyar 587 milyon lira, 2028'de 30 milyar 597 milyon lira, 2029'da 36 milyar 953 milyon lira olmak üzere gelecek 3 yılda 100 milyar liraya yakın kaynak kullanılması öngörülüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/turkiyenin-uzay-ve-havacilik-faaliyetleri-icin-100-milyar-liraya-yakin-odenek-960750.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'dan abd'ye dizel taşıyan ilk tankerin yarın yola çıkması planlanıyor
+            rusya başbakan yardımcısı aleksandr novak, abd'ye dizel taşıyacak ilk tankerin yarın limandan hareket edeceğini söyledi.​​​​​​​
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'dan ABD'ye dizel taşıyan ilk tankerin yarın yola çıkması planlanıyor</h3>
+                    <p>Rusya Başbakan Yardımcısı Aleksandr Novak, ABD'ye dizel taşıyacak ilk tankerin yarın limandan hareket edeceğini söyledi.​​​​​​​</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusyadan-abdye-dizel-tasiyan-ilk-tankerin-yarin-yola-cikmasi-planlaniyor-960749.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray fransa’da lille deplasmanında
+            galatasaray, uefa şampiyonlar ligi'ndeki üçüncü karşılaşmasında fransa’nın lille ekibiyle karşılaşacak.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray Fransa’da Lille deplasmanında</h3>
+                    <p>Galatasaray, UEFA Şampiyonlar Ligi'ndeki üçüncü karşılaşmasında Fransa’nın Lille ekibiyle karşılaşacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
