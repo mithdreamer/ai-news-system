@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>21</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-26 11:09</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/iran-tahran-toplantisi-bolge-ic-guvenliginin-sekillenmesi-icin-baslangic-olabilir-961229.html" target="_blank">
+                <strong>İran: Tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9zrd444vl5jo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Cumhurbaşkanı Başdanışmanı Saral istifa etti: 'İnandığım değerlerden geri adım anlamına gelmiyor'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cw0k0ey5en0yo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Brezilya'da Lula benzeri görülmemiş bir seçim zaferi elde etti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cq8jz33m09j1o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İstanbul Barosu'nun yeni başkanı Ümit Kocasakal oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/norvecten-trumpa-nobel-komitesinin-bagimsiz-oldugu-cevabi-961232.html" target="_blank">
+                <strong>Norveç'ten Trump'a, Nobel Komitesinin bağımsız olduğu cevabı</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran: tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir
+            i̇ran dışişleri bakanlığı sözcüsü i̇smail bekayi, mekke i̇ttifakı üyesi suudi arabistan, pakistan ve türkiye'den üst düzey yetkililerin tahran'a gerçekleştireceği ziyarete ilişkin, "tahran toplantısı, bölge iç güvenliğinin şekillenmesi için başlangıç olabilir." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran: Tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir</h3>
+                    <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, Mekke İttifakı üyesi Suudi Arabistan, Pakistan ve Türkiye'den üst düzey yetkililerin Tahran'a gerçekleştireceği ziyarete ilişkin, "Tahran toplantısı, bölge iç güvenliğinin şekillenmesi için başlangıç olabilir." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-tahran-toplantisi-bolge-ic-guvenliginin-sekillenmesi-icin-baslangic-olabilir-961229.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brezilya'da lula benzeri görülmemiş bir seçim zaferi elde etti
+            brezilyalılar, yeni devlet başkanlarını seçmek için 25 ekim pazar günü sandık başına gitti. ülkenin yüksek seçim kurulu, görevdeki lula da silva'nın oyların yüzde 51,79'unu alarak yeniden devlet başkanı seçildiğini ilan etti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Brezilya'da Lula benzeri görülmemiş bir seçim zaferi elde etti</h3>
+                    <p>Brezilyalılar, yeni devlet başkanlarını seçmek için 25 Ekim Pazar günü sandık başına gitti. Ülkenin Yüksek Seçim Kurulu, görevdeki Lula da Silva'nın oyların yüzde 51,79'unu alarak yeniden devlet başkanı seçildiğini ilan etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw0k0ey5en0yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul barosu'nun yeni başkanı ümit kocasakal oldu
+            dünyanın en büyük barolarından birisi olan i̇stanbul barosu'nda 128. olağan genel kurul kapsamında başkanlık seçimi için binlerce avukat sandık başındaydı. cumhuriyetçi güç birliği başkan adayı ümit kocasakal, açılan 126 sandıkta en çok oyu alan başkan adayı oldu ve i̇stanbul barosu başkanı seçildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul Barosu'nun yeni başkanı Ümit Kocasakal oldu</h3>
+                    <p>Dünyanın en büyük barolarından birisi olan İstanbul Barosu'nda 128. Olağan Genel Kurul kapsamında başkanlık seçimi için binlerce avukat sandık başındaydı. Cumhuriyetçi Güç Birliği Başkan Adayı Ümit Kocasakal, açılan 126 sandıkta en çok oyu alan başkan adayı oldu ve İstanbul Barosu Başkanı seçildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8jz33m09j1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            norveç'ten trump'a, nobel komitesinin bağımsız olduğu cevabı
+            norveç dışişleri bakanı espen barth eide, ülkesindeki nobel komitesini hedef alan abd başkanı donald trump'a yanıt vererek, "nobel komitesinin bağımsız bir kurum olduğunu kendisi çok iyi biliyor." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Norveç'ten Trump'a, Nobel Komitesinin bağımsız olduğu cevabı</h3>
+                    <p>Norveç Dışişleri Bakanı Espen Barth Eide, ülkesindeki Nobel Komitesini hedef alan ABD Başkanı Donald Trump'a yanıt vererek, "Nobel Komitesinin bağımsız bir kurum olduğunu kendisi çok iyi biliyor." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/norvecten-trumpa-nobel-komitesinin-bagimsiz-oldugu-cevabi-961232.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brezilya'da seçimi kaybeden bolsonaro, sonuçları tanımadığını duyurdu
+            brezilya'da devlet başkanlığı seçiminin ikinci turunda resmi olmayan sonuçlara göre luiz inacio lula da silva'ya yenilen sağcı aday flavio bolsonaro, sonuçları tanımadığını ve seçimlerin iptali için yargıya başvuracağını açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Brezilya'da seçimi kaybeden Bolsonaro, sonuçları tanımadığını duyurdu</h3>
+                    <p>Brezilya'da devlet başkanlığı seçiminin ikinci turunda resmi olmayan sonuçlara göre Luiz Inacio Lula da Silva'ya yenilen sağcı aday Flavio Bolsonaro, sonuçları tanımadığını ve seçimlerin iptali için yargıya başvuracağını açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/brezilyada-secimi-kaybeden-bolsonaro-sonuclari-tanimadigini-duyurdu-961227.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı başdanışmanı saral istifa etti: 'i̇nandığım değerlerden geri adım anlamına gelmiyor'
+            cumhurbaşkanı başdanışmanı oktay saral, görevinden istifa ettiğini açıkladı. saral, sosyal medya hesabından yaptığı paylaşımda, "2016 yılından bu yana büyük bir onur, şeref ve sorumlulukla yürüttüğüm cumhurbaşkanımız sayın recep tayyip erdoğan'ın başdanışmanlığı görevinden istifamı sunmuş bulunuyorum" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Başdanışmanı Saral istifa etti: 'İnandığım değerlerden geri adım anlamına gelmiyor'</h3>
+                    <p>Cumhurbaşkanı Başdanışmanı Oktay Saral, görevinden istifa ettiğini açıkladı. Saral, sosyal medya hesabından yaptığı paylaşımda, "2016 yılından bu yana büyük bir onur, şeref ve sorumlulukla yürüttüğüm Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan'ın Başdanışmanlığı görevinden istifamı sunmuş bulunuyorum" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9zrd444vl5jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mekke i̇ttifakı'nın i̇ran ile ilk teması bugün: türkiye'yi kalın temsil edecek
+            i̇ranlı ve suudi yetkililerin verdiği bilgiye göre, suudi arabistan, türkiye ve pakistan'dan üst düzey yetkililer, bölgesel güvenlik konularını görüşmek üzere bugün tahran'da i̇ranlı yetkililerle bir araya gelecek.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mekke İttifakı'nın İran ile ilk teması bugün: Türkiye'yi Kalın temsil edecek</h3>
+                    <p>İranlı ve Suudi yetkililerin verdiği bilgiye göre, Suudi Arabistan, Türkiye ve Pakistan'dan üst düzey yetkililer, bölgesel güvenlik konularını görüşmek üzere bugün Tahran'da İranlı yetkililerle bir araya gelecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3x2w09gn4lwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sırbistan'da iktidardaki vucic'in öğrenci hareketine yenilmesi sonrası kutlamalar yapılıyor
+            uzun süredir iktidarda bulunan sağcı popülist lider aleksandar vucic, ülkedeki parlamento seçimlerinde öğrencilerin öncülüğündeki protesto hareketi karşısında yenilgiyi kabul etti. öğrenci listesi'nin liste başı adayı ilija srdanovic, bbc sırpça servisine verdiği demeçte, "burası özgür bir devlet olacak" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sırbistan'da iktidardaki Vucic'in öğrenci hareketine yenilmesi sonrası kutlamalar yapılıyor</h3>
+                    <p>Uzun süredir iktidarda bulunan sağcı popülist lider Aleksandar Vucic, ülkedeki parlamento seçimlerinde öğrencilerin öncülüğündeki protesto hareketi karşısında yenilgiyi kabul etti. Öğrenci Listesi'nin liste başı adayı Ilija Srdanovic, BBC Sırpça servisine verdiği demeçte, "Burası özgür bir devlet olacak" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqdjv8yvw2myo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            binyamin netanyahu: 'bay güvenlik' i̇srail'de yedinci kez başbakan olabilir mi?
+            i̇srail'in en uzun süre görev yapan başbakanı, 27 ekim'de yapılacak parlamento seçimlerinde bir dönem daha görevde kalmayı umuyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Binyamin Netanyahu: 'Bay Güvenlik' İsrail'de yedinci kez başbakan olabilir mi?</h3>
+                    <p>İsrail'in en uzun süre görev yapan başbakanı, 27 Ekim'de yapılacak parlamento seçimlerinde bir dönem daha görevde kalmayı umuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c94g1p2m21xlo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul dahil 10 şehirde 'sansüre hayır, habere özgürlük' yürüyüşleri
+            i̇stanbul, ankara, i̇zmir ve diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. eş zamanlı olarak milliyetçi hareket partisi genel başkan yardımcısı feti yıldız "yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur" mesajlı bir paylaşım yaptı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul dahil 10 şehirde 'Sansüre Hayır, Habere Özgürlük' yürüyüşleri</h3>
+                    <p>İstanbul, Ankara, İzmir ve Diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. Eş zamanlı olarak Milliyetçi Hareket Partisi Genel Başkan Yardımcısı Feti Yıldız "yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur" mesajlı bir paylaşım yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw77p30rplj3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            simit tezgahına not bırakıp kpss'ye girdi: ücreti fazlasıyla içerisine bırakmışlardı
+            elazığ’da simit tezgahına "simit 20 tl ücreti poşete bırak, sınava gireceğim" notunu bırakıp kpss’ye giren barış sertkaya, "elazığ halkını biliyorum, aldığı ücreti fazlasıyla içerisine bırakmışlardı" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Simit tezgahına not bırakıp KPSS'ye girdi: Ücreti fazlasıyla içerisine bırakmışlardı</h3>
+                    <p>Elazığ’da simit tezgahına "Simit 20 TL ücreti poşete bırak, sınava gireceğim" notunu bırakıp KPSS’ye giren Barış Sertkaya, "Elazığ halkını biliyorum, aldığı ücreti fazlasıyla içerisine bırakmışlardı" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/simit-tezgahina-not-birakip-kpssye-girdi-ucreti-fazlasiyla-icerisine-birakmislardi-961231.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tavşanlı höyük kazılarında 4 bin yıllık pati izleri bulundu
+            kültür ve turizm bakanı mehmet nuri ersoy, tavşanlı höyük'te yaklaşık 4 bin yıllık pati izleri bulunduğunu duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Tavşanlı Höyük kazılarında 4 bin yıllık pati izleri bulundu</h3>
+                    <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Tavşanlı Höyük'te yaklaşık 4 bin yıllık pati izleri bulunduğunu duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tavsanli-hoyuk-kazilarinda-4-bin-yillik-pati-izleri-bulundu-961228.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ulusal staj programı'na başvurular bugün başladı
+            çalışma ve sosyal güvenlik bakanı vedat işıkhan, ulusal staj programı başvurularının başladığını duyurdu. program kapsamında üniversite öğrencilerine staj, iş gölgeleme ve eğitim imkanları sunulacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ulusal Staj Programı'na başvurular bugün başladı</h3>
+                    <p>Çalışma ve Sosyal Güvenlik Bakanı Vedat Işıkhan, Ulusal Staj Programı başvurularının başladığını duyurdu. Program kapsamında üniversite öğrencilerine staj, iş gölgeleme ve eğitim imkanları sunulacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ulusal-staj-programina-basvurular-bugun-basladi-961225.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mumyalar ve viking geçitleri: buzlar eriyince ortaya çıkan sırlar
+            i̇klim değişikliği nedeniyle dünyada buzların erime hızı artıyor ve bu durum, binlerce yıldır mükemmel bir şekilde korunmuş antik eserleri gün yüzüne çıkarıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mumyalar ve Viking geçitleri: Buzlar eriyince ortaya çıkan sırlar</h3>
+                    <p>İklim değişikliği nedeniyle dünyada buzların erime hızı artıyor ve bu durum, binlerce yıldır mükemmel bir şekilde korunmuş antik eserleri gün yüzüne çıkarıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6j9kzj1478eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bolu belediyesi'ne operasyon: başkan yardımcısı dahil dört kişi gözaltında
+            bolu belediyesi'ne yönelik "ihaleye fesat karıştırma" ve "zimmet" iddialarıyla düzenlenen operasyonda belediye başkan yardımcısı rasim özdemir'in de aralarında olduğu dört kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bolu Belediyesi'ne operasyon: Başkan Yardımcısı dahil dört kişi gözaltında</h3>
+                    <p>Bolu Belediyesi'ne yönelik "ihaleye fesat karıştırma" ve "zimmet" iddialarıyla düzenlenen operasyonda Belediye Başkan Yardımcısı Rasim Özdemir'in de aralarında olduğu dört kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c680z18x71gdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meghan markle'ın babası hakkındaki istismar iddialarıyla ilgili neler biliniyor?
+            bbc'nin edindiği bilgiye göre sussex düşesi, babasına gönderdiği bir mektupta genç kızlara cinsel istismarda bulunduğunu kendisinin ve yetkililerin bildiğini söyledi ve onunla iletişimi kesti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Meghan Markle'ın babası hakkındaki istismar iddialarıyla ilgili neler biliniyor?</h3>
+                    <p>BBC'nin edindiği bilgiye göre Sussex Düşesi, babasına gönderdiği bir mektupta genç kızlara cinsel istismarda bulunduğunu kendisinin ve yetkililerin bildiğini söyledi ve onunla iletişimi kesti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm70p18ldrwjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ücretsiz dijital üniversite platformu başvurularında son gün
+            yükseköğretim kurulu (yök) himayesinde hayata geçirilen dijital üniversite platformu'na başvurular, bugün saat 23.59'da sona erecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ücretsiz Dijital Üniversite Platformu başvurularında son gün</h3>
+                    <p>Yükseköğretim Kurulu (YÖK) himayesinde hayata geçirilen Dijital Üniversite Platformu'na başvurular, bugün saat 23.59'da sona erecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/ucretsiz-dijital-universite-platformu-basvurularinda-son-gun-961233.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            el halil kentinde kuşatmasını sürdüren i̇srail ordusu 2 bin 649 filistinliyi yerinden etti
+            i̇şgal altındaki batı şeria'nın el halil kentinde dört gündür kuşatmasını sürdüren katil i̇srail ordusu, 2 bin 649 filistinliyi zorla evlerinden çıkararak yerinden etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>El Halil kentinde kuşatmasını sürdüren İsrail ordusu 2 bin 649 Filistinliyi yerinden etti</h3>
+                    <p>İşgal altındaki Batı Şeria'nın El Halil kentinde dört gündür kuşatmasını sürdüren katil İsrail ordusu, 2 bin 649 Filistinliyi zorla evlerinden çıkararak yerinden etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/el-halil-kentinde-kusatmasini-surduren-israil-ordusu-2-bin-649-filistinliyi-yerinden-etti-961226.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yunan basını: türkiyenin yükselişi biz yalnızlaştırıyor
+            türk savunma sanayiinin yükselişi ve birçok ülkeyle yapılan anlaşmalar, yunan basınında tedirginlik yaratmaya devam ediyor. yayınlanan bir analizde, türkiye’nin yükselen gücünün yunanistan’da yalnız kalma endişesi yarattığı belirtildi. “türkiye’nin kurduğu savunma ortaklıkları, manevra alanımızı gitgide kısıtlıyor” ifadesi kullanıldı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yunan basını: Türkiyenin yükselişi biz yalnızlaştırıyor</h3>
+                    <p>Türk Savunma Sanayiinin yükselişi ve birçok ülkeyle yapılan anlaşmalar, Yunan basınında tedirginlik yaratmaya devam ediyor. Yayınlanan bir analizde, Türkiye’nin yükselen gücünün Yunanistan’da yalnız kalma endişesi yarattığı belirtildi. “Türkiye’nin kurduğu savunma ortaklıkları, manevra alanımızı gitgide kısıtlıyor” ifadesi kullanıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yunan-basini-turkiyenin-yukselisi-biz-yalnizlastiriyor-961234.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon soruşturması kapsamında gözaltına alınan nusret altınbaş adliyede
+            sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında gözaltına alınan altınbaş holding'in sahibi şüpheli nusret altınbaş adliyeye sevk edildi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon soruşturması kapsamında gözaltına alınan Nusret Altınbaş adliyede</h3>
+                    <p>Sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında gözaltına alınan Altınbaş Holding'in sahibi şüpheli Nusret Altınbaş adliyeye sevk edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/fon-sorusturmasi-kapsaminda-gozaltina-alinan-nusret-altinbas-adliyede-961230.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
