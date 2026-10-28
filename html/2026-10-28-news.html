@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-28 11:22</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/yeni-eba-ile-okullara-yapay-zeka-destekli-altyapi-geliyor-961489.html" target="_blank">
+                <strong>Yeni EBA ile okullara yapay zeka destekli altyapı geliyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c6ewez914w98o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İsrail seçim sonuçları: Partiler meclis çoğunluğunu sağlayamıyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Mustafa Sarıgül: Soruşturma sonuçlanana kadar Yeni Parti üyeliğimi askıya aldıracağım</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwx284my7y5ko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Brezilya'da seçimi kaybeden sağcı lider Bolsonaro ABD'ye gitti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqkg5lp7r4xno?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Şiddet mağduru kadınlar için Diyarbakır'da buluşma: 'Her kapı çaldığında irkiliyorum'</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yeni eba ile okullara yapay zeka destekli altyapı geliyor
+            milli eğitim bakanı yusuf tekin, 6 milyon aktif kullanıcıya ulaşan eba'nın artık yapay zekâ ile güçlendirildiğini belirterek, okulları akademik başarılarından insan kaynağı ihtiyacına kadar bütün anormallikleri anında raporlayabilecek bir yapay zeka destekli altyapıya kavuşturmuş olduklarını söyledi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Yeni EBA ile okullara yapay zeka destekli altyapı geliyor</h3>
+                    <p>Milli Eğitim Bakanı Yusuf Tekin, 6 milyon aktif kullanıcıya ulaşan EBA'nın artık yapay zekâ ile güçlendirildiğini belirterek, okulları akademik başarılarından insan kaynağı ihtiyacına kadar bütün anormallikleri anında raporlayabilecek bir yapay zeka destekli altyapıya kavuşturmuş olduklarını söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/yeni-eba-ile-okullara-yapay-zeka-destekli-altyapi-geliyor-961489.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dijital üniversite platformu'nda başvurular 233 bini aştı
+            yükseköğretim kurulu (yök), dijital üniversite platformu'na bir yılda 233 bin 229 kişi başvuru yaptı. en fazla talep yapay zeka okulu'na yapılırken eğitimler 3 kasım'da başlayacak.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Dijital Üniversite Platformu'nda başvurular 233 bini aştı</h3>
+                    <p>Yükseköğretim Kurulu (YÖK), Dijital Üniversite Platformu'na bir yılda 233 bin 229 kişi başvuru yaptı. En fazla talep Yapay Zeka Okulu'na yapılırken eğitimler 3 Kasım'da başlayacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/dijital-universite-platformunda-basvurular-233-bini-asti-961481.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail seçim sonuçları: partiler meclis çoğunluğunu sağlayamıyor
+            i̇srail seçimlerinde oyların %70'i sayıldı. merkez seçim komitesi'nin açıkladığı kısmi sonuçlara göre başbakan netanyahu'nun liderliğindeki blok 54 sandalye, rakibi eisenkot'un bloğu ise 47 sandalye kazanıyor. kilit rol oynaması beklenen arap partileri ise 19 sandalyeyle şimdiden rekor bir sonuç elde etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İsrail seçim sonuçları: Partiler meclis çoğunluğunu sağlayamıyor</h3>
+                    <p>İsrail seçimlerinde oyların %70'i sayıldı. Merkez Seçim Komitesi'nin açıkladığı kısmi sonuçlara göre Başbakan Netanyahu'nun liderliğindeki blok 54 sandalye, rakibi Eisenkot'un bloğu ise 47 sandalye kazanıyor. Kilit rol oynaması beklenen Arap partileri ise 19 sandalyeyle şimdiden rekor bir sonuç elde etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6ewez914w98o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            71 bin 899 hesaba 68 milyar lira tutarında ayni ve nakdi tasfiye ödemesi yapıldı
+            8. fon koordinasyon kurulu toplantısı, cumhurbaşkanı yardımcısı cevdet yılmaz başkanlığında gerçekleştirildi. tasfiye sürecinde olan fonların sayısı 131'den 38'e düştü, 71 bin 899 hesaba toplam 68 milyar lira tutarında ayni ve nakdi tasfiye ödemesi yapıldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>71 bin 899 hesaba 68 milyar lira tutarında ayni ve nakdi tasfiye ödemesi yapıldı</h3>
+                    <p>8. Fon Koordinasyon Kurulu Toplantısı, Cumhurbaşkanı Yardımcısı Cevdet Yılmaz başkanlığında gerçekleştirildi. Tasfiye sürecinde olan fonların sayısı 131'den 38'e düştü, 71 bin 899 hesaba toplam 68 milyar lira tutarında ayni ve nakdi tasfiye ödemesi yapıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/71-bin-899-hesaba-68-milyar-lira-tutarinda-ayni-ve-nakdi-tasfiye-odemesi-yapildi-961488.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kurum, ankara büyükşehir belediye başkanı yavaş'ı kabul etti
+            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, ankara büyükşehir belediye başkanı mansur yavaş'ı bakanlıkta kabul etti. görüşmede başkentin ihtiyaçları, kente değer katacak adımlar ele alındı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Kurum, Ankara Büyükşehir Belediye Başkanı Yavaş'ı kabul etti</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, Ankara Büyükşehir Belediye Başkanı Mansur Yavaş'ı Bakanlıkta kabul etti. Görüşmede başkentin ihtiyaçları, kente değer katacak adımlar ele alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-ankara-buyuksehir-belediye-baskani-yavasi-kabul-etti-961485.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tdt dışişleri bakanları konseyi toplantısı ankara'da yapılacak
+            dışişleri bakanı hakan fidan, 29-30 ekim'de ankara'da düzenlenecek türk devletleri teşkilatının (tdt) 13. zirvesi kapsamında, yarın gerçekleştirilecek dışişleri bakanları konseyi toplantısı'na ev sahipliği yapacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TDT Dışişleri Bakanları Konseyi Toplantısı Ankara'da yapılacak</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, 29-30 Ekim'de Ankara'da düzenlenecek Türk Devletleri Teşkilatının (TDT) 13. Zirvesi kapsamında, yarın gerçekleştirilecek Dışişleri Bakanları Konseyi Toplantısı'na ev sahipliği yapacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tdt-disisleri-bakanlari-konseyi-toplantisi-ankarada-yapilacak-961482.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'daki protestolar perakende sektörünü de vurdu
+            fransa genelinde devam eden kitlesel protestolar ve beraberindeki şiddet olayları alışverişlere olumsuz etki ederken protestolardan etkilenen şehir merkezlerindeki mağazaların satışlarının da yüzde 80 gerilediği açıklandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa'daki protestolar perakende sektörünü de vurdu</h3>
+                    <p>Fransa genelinde devam eden kitlesel protestolar ve beraberindeki şiddet olayları alışverişlere olumsuz etki ederken protestolardan etkilenen şehir merkezlerindeki mağazaların satışlarının da yüzde 80 gerilediği açıklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransadaki-protestolar-perakende-sektorunu-de-vurdu-961479.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emekli maaşlarına iyileştirme: yaş ve hane geliri kriterleri tartışılıyor
+            akp kaynaklarının verdiği bilgiye göre yıl sonuna kadar yapılacak düzenlemede, emeklilere normal yıllık zammın yanı sıra, "refah payı" veya "seyyanen zam" seçeneği masada. emekli maaşlarına yapılacak iyileştirmenin miktarında yaş, çalışma durumu, konut sahipliği veyahane geliri gibi kriterlerin esas alınması seçeneği de değerlendiriliyor. ankara'dan ayşe sayın'ın haberi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Emekli maaşlarına iyileştirme: Yaş ve hane geliri kriterleri tartışılıyor</h3>
+                    <p>AKP kaynaklarının verdiği bilgiye göre yıl sonuna kadar yapılacak düzenlemede, emeklilere normal yıllık zammın yanı sıra, "refah payı" veya "seyyanen zam" seçeneği masada. Emekli maaşlarına yapılacak iyileştirmenin miktarında yaş, çalışma durumu, konut sahipliği veyahane geliri gibi kriterlerin esas alınması seçeneği de değerlendiriliyor. Ankara'dan Ayşe Sayın'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y43w14wzm4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de acil durumlara hazırlık çağrısından sonra konserve ve radyo satışında artış
+            hükümetin kriz ihtimaline karşı stok yapılması çağrısının ardından temel ihtiyaç maddelerinin satışlarında önemli bir artış görüldü.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İngiltere'de acil durumlara hazırlık çağrısından sonra konserve ve radyo satışında artış</h3>
+                    <p>Hükümetin kriz ihtimaline karşı stok yapılması çağrısının ardından temel ihtiyaç maddelerinin satışlarında önemli bir artış görüldü.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6j47zlnjqlxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uyuşturucuyla mücadelede farkındalık artırılacak
+            başta çocuklar ve gençler olmak üzere toplumun farklı kesimlerinden 732 bin kişiye uyuşturucuyla mücadele konusunda bilgilendirme yapılması hedefleniyor. uyuşturucuyla mücadelede kolluk kuvvetlerinin kapasitesinin artırılması amacıyla 30 bin personele eğitim verilecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Uyuşturucuyla mücadelede farkındalık artırılacak</h3>
+                    <p>Başta çocuklar ve gençler olmak üzere toplumun farklı kesimlerinden 732 bin kişiye uyuşturucuyla mücadele konusunda bilgilendirme yapılması hedefleniyor. Uyuşturucuyla mücadelede kolluk kuvvetlerinin kapasitesinin artırılması amacıyla 30 bin personele eğitim verilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/uyusturucuyla-mucadelede-farkindalik-artirilacak-961486.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya'daki hızlı tren kazasında en az 30 ölü
+            i̇spanya'nın başkenti madrid'in güneyindeki toledo kentindeki hızlı tren hattında içlerinde 500'den fazla yolcunun bulunduğu iki tren çarpıştı. yetkililer can kaybının 30'a ulaştığını aktardı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya'daki hızlı tren kazasında en az 30 ölü</h3>
+                    <p>İspanya'nın başkenti Madrid'in güneyindeki Toledo kentindeki hızlı tren hattında içlerinde 500'den fazla yolcunun bulunduğu iki tren çarpıştı. Yetkililer can kaybının 30'a ulaştığını aktardı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmx23v6nx3n2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            katil i̇srail'in gazze'ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti
+            katil i̇srail ordusunun ateşkese rağmen gazze şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi, 11 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Katil İsrail'in Gazze'ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti</h3>
+                    <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi, 11 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-duzenledigi-saldirilarda-son-24-saatte-3-kisi-hayatini-kaybetti-961476.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            mustafa sarıgül: soruşturma sonuçlanana kadar yeni parti üyeliğimi askıya aldıracağım
+            yeni parti erzincan milletvekili mustafa sarıgül, kendisi ve ailesine yönelik 16 ekim'de başlatılan soruşturmaya tamamlanıncaya kadar yeni parti üyeliğinin askıya alınması için partisinin yetkili organlarına başvuracağını duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mustafa Sarıgül: Soruşturma sonuçlanana kadar Yeni Parti üyeliğimi askıya aldıracağım</h3>
+                    <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, kendisi ve ailesine yönelik 16 Ekim'de başlatılan soruşturmaya tamamlanıncaya kadar Yeni Parti üyeliğinin askıya alınması için partisinin yetkili organlarına başvuracağını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            brezilya'da seçimi kaybeden sağcı lider bolsonaro abd'ye gitti
+            brezilya polisi, seçimleri kaybeden sağcı cumhurbaşkanı adayı flávio bolsonaro'nun pasaportlarını teslim etme emrine uymamasının ardından pasaportlarını iptal ettiğini açıkladı. abd'den gelen vize onayının ardından bolsonaro'nun abd'ye gittiği doğrulandı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Brezilya'da seçimi kaybeden sağcı lider Bolsonaro ABD'ye gitti</h3>
+                    <p>Brezilya polisi, seçimleri kaybeden sağcı cumhurbaşkanı adayı Flávio Bolsonaro'nun pasaportlarını teslim etme emrine uymamasının ardından pasaportlarını iptal ettiğini açıkladı. ABD'den gelen vize onayının ardından Bolsonaro'nun ABD'ye gittiği doğrulandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwx284my7y5ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            şiddet mağduru kadınlar için diyarbakır'da buluşma: 'her kapı çaldığında irkiliyorum'
+            diyarbakır'da kadın örgütlerinin biraraya gelerek oluşturduğu "amed (diyarbakır) şiddetle mücadele ağı", öldürülen ve şüpheli şekilde yaşamını yitiren kadınlar için bir süre önce "kadın, adalet ve hafıza nöbeti" adıyla haftalık eylem başlatma kararı aldı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Şiddet mağduru kadınlar için Diyarbakır'da buluşma: 'Her kapı çaldığında irkiliyorum'</h3>
+                    <p>Diyarbakır'da kadın örgütlerinin biraraya gelerek oluşturduğu "Amed (Diyarbakır) Şiddetle Mücadele Ağı", öldürülen ve şüpheli şekilde yaşamını yitiren kadınlar için bir süre önce "Kadın, Adalet ve Hafıza Nöbeti" adıyla haftalık eylem başlatma kararı aldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqkg5lp7r4xno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump'tan senatör adayına 'cihatçı' suçlaması: 'metal dedektöründen geçmeli'
+            abd başkanı donald trump, michigan eyaletinden abd senatosuna girmek için yarışacak demokrat aday abdul el-sayed'e yönelik sözlü saldırısında 11 eylül olaylarını gündeme getirmesinin ardından tepkiyle karşılandı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump'tan senatör adayına 'cihatçı' suçlaması: 'Metal dedektöründen geçmeli'</h3>
+                    <p>ABD Başkanı Donald Trump, Michigan eyaletinden ABD Senatosuna girmek için yarışacak Demokrat aday Abdul El-Sayed'e yönelik sözlü saldırısında 11 Eylül olaylarını gündeme getirmesinin ardından tepkiyle karşılandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq0k01dpg2jjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tasfiye sürecindeki fonlarda ilk ara ödeme cuma günü başlıyor
+            tasfiye sürecindeki yatırım fonları kapsamında bugüne kadar 71 bin 899 hesaba toplam 68 milyar lira ödendi. olağanüstü tasfiye kapsamındaki fonlar için ilk ara ödemeler ise 30 ekim cuma günü başlayacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Tasfiye sürecindeki fonlarda ilk ara ödeme cuma günü başlıyor</h3>
+                    <p>Tasfiye sürecindeki yatırım fonları kapsamında bugüne kadar 71 bin 899 hesaba toplam 68 milyar lira ödendi. Olağanüstü tasfiye kapsamındaki fonlar için ilk ara ödemeler ise 30 Ekim Cuma günü başlayacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/tasfiye-surecindeki-fonlarda-ilk-ara-odeme-cuma-gunu-basliyor-961484.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fenerbahçe'de i̇smail kartal yerine geçici olarak dirk kuyt görevlendirildi
+            fenerbahçe, futbol takımının teknik direktörü olarak haziran ayında göreve başlayan i̇smail kartal ile yolların ayrıldığını duyurdu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Fenerbahçe'de İsmail Kartal yerine geçici olarak Dirk Kuyt görevlendirildi</h3>
+                    <p>Fenerbahçe, futbol takımının teknik direktörü olarak Haziran ayında göreve başlayan İsmail Kartal ile yolların ayrıldığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3vgxjqk8rzxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            antalya'da hortumda dört işçi hayatını kaybetti: müteahhit ve şantiye şefi gözaltında
+            antalya'da 26 ekim gece saatlerinde meydana gelen hortumda, site inşaatında çalışan dört işçi hayatını kaybetti, bir işçi yaralandı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Antalya'da hortumda dört işçi hayatını kaybetti: Müteahhit ve şantiye şefi gözaltında</h3>
+                    <p>Antalya'da 26 Ekim gece saatlerinde meydana gelen hortumda, site inşaatında çalışan dört işçi hayatını kaybetti, bir işçi yaralandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c674p3vwlje2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa günü 11.165,44 puandan tamamladı
+            borsa i̇stanbul'da bist 100 endeksi, günü yüzde 0,13 değer kazanarak 11.165,44 puandan tamamladı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa günü 11.165,44 puandan tamamladı</h3>
+                    <p>Borsa İstanbul'da BIST 100 endeksi, günü yüzde 0,13 değer kazanarak 11.165,44 puandan tamamladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gunu-1116544-puandan-tamamladi-961478.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
