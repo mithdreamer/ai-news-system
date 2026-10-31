@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-10-31 10:56</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD, Ukrayna'ya 500 adet Patriot füzesi satışını onayladı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmvgx3520dewo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>GTA 6: Yılın merakla beklenen oyunu için Türkçe dil desteği gelecek mi?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmvg7zwd2xdzo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Aliyev'in katılmadığı Türk Devletleri Zirvesi'nden hangi sonuçlar çıktı?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm0e025gw751o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Polonya'da siyasi gerginlik: Anayasa Mahkemesi'ne polis konuşlandırıldı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/sinavsiz-mudur-ve-mudur-yardimcisi-atamalarina-3-yil-sarti-getirildi-961817.html" target="_blank">
+                <strong>Sınavsız müdür ve müdür yardımcısı atamalarına 3 yıl şartı getirildi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd, ukrayna'ya 500 adet patriot füzesi satışını onayladı
+            amerika birleşik devletleri, rusya'nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet patriot füzesinin ukrayna'ya satışını onayladı. amerikan yapımı füze önleme sistemleri, rusya'nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD, Ukrayna'ya 500 adet Patriot füzesi satışını onayladı</h3>
+                    <p>Amerika Birleşik Devletleri, Rusya'nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet Patriot füzesinin Ukrayna'ya satışını onayladı. Amerikan yapımı füze önleme sistemleri, Rusya'nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sınavsız müdür ve müdür yardımcısı atamalarına 3 yıl şartı getirildi
+            görevde yükselme sınavına tabi olmayan müdür ve müdür yardımcıları ya da daha üst yönetici kadrolarındaki personelin, görevde yükselme sınavına tabi tutulmaksızın genel hükümlere göre atanabilmeleri için bu görevlerde kesintisiz en az 3 yıl asaleten ve fiilen görev yapmış olmaları gerekecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Sınavsız müdür ve müdür yardımcısı atamalarına 3 yıl şartı getirildi</h3>
+                    <p>Görevde yükselme sınavına tabi olmayan müdür ve müdür yardımcıları ya da daha üst yönetici kadrolarındaki personelin, görevde yükselme sınavına tabi tutulmaksızın genel hükümlere göre atanabilmeleri için bu görevlerde kesintisiz en az 3 yıl asaleten ve fiilen görev yapmış olmaları gerekecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/sinavsiz-mudur-ve-mudur-yardimcisi-atamalarina-3-yil-sarti-getirildi-961817.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'daki kara para aklama soruşturmasında 2 şüpheli daha tutuklandı
+            yurt içinde ve yurt dışında kurulan şirketler aracılığıyla kaynağı belirsiz yüksek miktarda paranın aklandığı iddialarına ilişkin emir ve ömer sarıgül'ün de aralarında bulunduğu 22 şüphelinin tutuklandığı soruşturmada 2 şüpheli daha tutuklandı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul'daki kara para aklama soruşturmasında 2 şüpheli daha tutuklandı</h3>
+                    <p>Yurt içinde ve yurt dışında kurulan şirketler aracılığıyla kaynağı belirsiz yüksek miktarda paranın aklandığı iddialarına ilişkin Emir ve Ömer Sarıgül'ün de aralarında bulunduğu 22 şüphelinin tutuklandığı soruşturmada 2 şüpheli daha tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/istanbuldaki-kara-para-aklama-sorusturmasinda-2-supheli-daha-tutuklandi-961811.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'gazze ya da hiç': i̇srail'e destek, abd ara seçimlerinde gerilim noktası haline geldi
+            michigan, abd'de 3 kasım'da yapılacak ara seçimlerde yarışın en çekişmeli geçmesi beklenen yerlerden biri. abd'nin i̇srail'e verdiği desteğe dair endişeler gazze tartışmasının her iki tarafındaki michiganlı seçmenlerin oy tercihlerini şekillendiriyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>'Gazze ya da hiç': İsrail'e destek, ABD ara seçimlerinde gerilim noktası haline geldi</h3>
+                    <p>Michigan, ABD'de 3 Kasım'da yapılacak ara seçimlerde yarışın en çekişmeli geçmesi beklenen yerlerden biri. ABD'nin İsrail'e verdiği desteğe dair endişeler Gazze tartışmasının her iki tarafındaki Michiganlı seçmenlerin oy tercihlerini şekillendiriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqvg0zd84rd1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ara seçimleri neden önemli? yedi temel soru
+            abd'li seçmenler, donald trump'ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 kasım'da sandık başına gidecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ara seçimleri neden önemli? Yedi temel soru</h3>
+                    <p>ABD'li seçmenler, Donald Trump'ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 Kasım'da sandık başına gidecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmq8nwyxk1gdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de idam girişiminden sağ çıkan christa pike: 'acı içinde uyandım'
+            abd'de idam cezasına çarptırılan christa pike, eylül ayında başarısızlıkla sonuçlanan infaz girişiminin ardından ilk kez kamuoyuna açıklama yaptı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de idam girişiminden sağ çıkan Christa Pike: 'Acı içinde uyandım'</h3>
+                    <p>ABD'de idam cezasına çarptırılan Christa Pike, Eylül ayında başarısızlıkla sonuçlanan infaz girişiminin ardından ilk kez kamuoyuna açıklama yaptı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6x2v1j3ezn7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            elektrikte mesken sınırı 3 bin kilovatsaat olacak
+            1 ocak 2027'den itibaren konutlar ve apartman ortak sayaçları için yıllık tüketim limiti 3 bin kilovatsaat olarak uygulanacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Elektrikte mesken sınırı 3 bin kilovatsaat olacak</h3>
+                    <p>1 Ocak 2027'den itibaren konutlar ve apartman ortak sayaçları için yıllık tüketim limiti 3 bin kilovatsaat olarak uygulanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/elektrikte-mesken-siniri-3-bin-kilovatsaat-olacak-961810.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trump döneminde abd'nin göç politikası nasıl değişti?
+            abd başkanı donald trump, ikinci döneminde göçmenlere karşı sert adımlar attı. peki trump'ın yaklaşımı abd'nin göç politikasını nasıl değiştirdi?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump döneminde ABD'nin göç politikası nasıl değişti?</h3>
+                    <p>ABD Başkanı Donald Trump, ikinci döneminde göçmenlere karşı sert adımlar attı. Peki Trump'ın yaklaşımı ABD'nin göç politikasını nasıl değiştirdi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqrky1552r25o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin, körfez ülkelerini i̇ran'a saldırıların 4 kasım'da başlayabileceği konusunda uyardığı iddia edildi
+            abd başkanı donald trump yönetiminin, körfez ülkelerini 4 kasım gibi erken bir tarihte i̇ran'a yönelik "kısa ve yoğun bir saldırı dalgası"na hazır olmaları konusunda uyardığı ileri sürüldü.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin, Körfez ülkelerini İran'a saldırıların 4 Kasım'da başlayabileceği konusunda uyardığı iddia edildi</h3>
+                    <p>ABD Başkanı Donald Trump yönetiminin, Körfez ülkelerini 4 Kasım gibi erken bir tarihte İran'a yönelik "kısa ve yoğun bir saldırı dalgası"na hazır olmaları konusunda uyardığı ileri sürüldü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdnin-korfez-ulkelerini-irana-saldirilarin-4-kasimda-baslayabilecegi-konusunda-uyardigi-iddia-edildi-961808.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            gta 6: yılın merakla beklenen oyunu için türkçe dil desteği gelecek mi?
+            rockstar games'in 10 yılı aşkın süredir geliştirdiği grand theft auto (gta) 6, 19 kasım'da piyasaya sürülecek. oyuncular, içerik üreticileri ve sektör profesyonelleri türkçe dil desteği getirilmesi için kampanya yürütüyor. peki rockstar'ın konuya yaklaşımı ne? bir gta oyunu ilk kez türkçe oynanabilecek mi?
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>GTA 6: Yılın merakla beklenen oyunu için Türkçe dil desteği gelecek mi?</h3>
+                    <p>Rockstar Games'in 10 yılı aşkın süredir geliştirdiği Grand Theft Auto (GTA) 6, 19 Kasım'da piyasaya sürülecek. Oyuncular, içerik üreticileri ve sektör profesyonelleri Türkçe dil desteği getirilmesi için kampanya yürütüyor. Peki Rockstar'ın konuya yaklaşımı ne? Bir GTA oyunu ilk kez Türkçe oynanabilecek mi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmvgx3520dewo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            aliyev'in katılmadığı türk devletleri zirvesi'nden hangi sonuçlar çıktı?
+            cumhurbaşkanı recep tayyip erdoğan'ın ev sahipliğinde gerçekleştirilen 13. türk devletleri teşkilatı liderler zirvesine (tdt) ankara-bakü arasında yaşanan gerilim ve azerbaycan devlet başkanı i̇lham aliyev'in katılmaması damga vurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Aliyev'in katılmadığı Türk Devletleri Zirvesi'nden hangi sonuçlar çıktı?</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın ev sahipliğinde gerçekleştirilen 13. Türk Devletleri Teşkilatı liderler zirvesine (TDT) Ankara-Bakü arasında yaşanan gerilim ve Azerbaycan Devlet Başkanı İlham Aliyev'in katılmaması damga vurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmvg7zwd2xdzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            polonya'da siyasi gerginlik: anayasa mahkemesi'ne polis konuşlandırıldı
+            polonya'da hükümet ile anayasa mahkemesi başkanı ve yardımcısı arasında tırmanan gerilim üzerine, mahkeme binasına çevik kuvvet polisleri konuşlandırıldı. başbakan donald tusk hükümeti ile ana muhalefetteki sağcı hukuk ve adalet partisi (pis) liderleri arasında anayasa mahkemesi üzerinden bir gerilim yaşanıyor. gerilimin sebebi pis hükümeti döneminde atanan anayasa mahkemesi üyeleri.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Polonya'da siyasi gerginlik: Anayasa Mahkemesi'ne polis konuşlandırıldı</h3>
+                    <p>Polonya'da hükümet ile Anayasa Mahkemesi başkanı ve yardımcısı arasında tırmanan gerilim üzerine, mahkeme binasına çevik kuvvet polisleri konuşlandırıldı. Başbakan Donald Tusk hükümeti ile ana muhalefetteki sağcı Hukuk ve Adalet Partisi (PiS) liderleri arasında Anayasa Mahkemesi üzerinden bir gerilim yaşanıyor. Gerilimin sebebi PiS hükümeti döneminde atanan Anayasa Mahkemesi üyeleri.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm0e025gw751o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            antalya expo alanı türkiye'nin en büyük fuar ve kongre merkezine dönüşüyor
+            kültür ve turizm bakanı mehmet nuri ersoy, cop31 i̇klim zirvesi'nin ardından antalya expo alanında türkiye'nin en büyük fuar, kongre ve etkinlik merkezlerinden birinin kurulacağını ve tga çatısı altında profesyonel bir yönetim modeline geçileceğini açıkladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Antalya EXPO alanı Türkiye'nin en büyük fuar ve kongre merkezine dönüşüyor</h3>
+                    <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, COP31 İklim Zirvesi'nin ardından Antalya EXPO alanında Türkiye'nin en büyük fuar, kongre ve etkinlik merkezlerinden birinin kurulacağını ve TGA çatısı altında profesyonel bir yönetim modeline geçileceğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/antalya-expo-alani-turkiyenin-en-buyuk-fuar-ve-kongre-merkezine-donusuyor-961809.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suriye'de geçim krizi: 'nüfusun önemli kısmı esad dönemine kıyasla daha kötü durumda'
+            suriye'de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, ahmed şara yönetiminin önündeki en büyük sorun olarak görülüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suriye'de geçim krizi: 'Nüfusun önemli kısmı Esad dönemine kıyasla daha kötü durumda'</h3>
+                    <p>Suriye'de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, Ahmed Şara yönetiminin önündeki en büyük sorun olarak görülüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwy8l23nylm0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çiğ sütün sağlığa faydalı olduğu doğru mu, içmek güvenli mi?
+            çiğ süte talep artıyor ve internet ünlüleri sağlığa yararlarını övüyor. beslenmeden bağırsak sağlığına, alerjilerden gıda zehirlenmesi riskine kadar, uzmanların pastörize edilmemiş süt tüketimi hakkındaki görüşlerini aldık.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çiğ sütün sağlığa faydalı olduğu doğru mu, içmek güvenli mi?</h3>
+                    <p>Çiğ süte talep artıyor ve internet ünlüleri sağlığa yararlarını övüyor. Beslenmeden bağırsak sağlığına, alerjilerden gıda zehirlenmesi riskine kadar, uzmanların pastörize edilmemiş süt tüketimi hakkındaki görüşlerini aldık.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c623d9ypmj9po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emine erdoğan'dan 'türk devletleri teşkilatı 13. zirvesi' paylaşımı
+            cumhurbaşkanı recep tayyip erdoğan'ın eşi emine erdoğan, türk devletleri teşkilatı (tdt) 13. zirvesi'ne ilişkin paylaşım yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Emine Erdoğan'dan 'Türk Devletleri Teşkilatı 13. Zirvesi' paylaşımı</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, Türk Devletleri Teşkilatı (TDT) 13. Zirvesi'ne ilişkin paylaşım yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/emine-erdogandan-turk-devletleri-teskilati-13-zirvesi-paylasimi-961819.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fındık sektörüne sıkı takip sürüyor
+            rekabet kurumu başkanı birol küle, fındık alım-satım pazarının önde gelen 6 teşebbüsü hakkında "ciddi rekabet ihlali" şüphesiyle soruşturma açtıklarını belirterek, "i̇ncelemelerimiz sürecinde çiftçimizi mağdur eden, rekabeti ihlal eden ilave teşebbüsler tespit etmemiz durumunda onları da tereddütsüz soruşturmaya dahil edeceğiz" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fındık sektörüne sıkı takip sürüyor</h3>
+                    <p>Rekabet Kurumu Başkanı Birol Küle, fındık alım-satım pazarının önde gelen 6 teşebbüsü hakkında "ciddi rekabet ihlali" şüphesiyle soruşturma açtıklarını belirterek, "İncelemelerimiz sürecinde çiftçimizi mağdur eden, rekabeti ihlal eden ilave teşebbüsler tespit etmemiz durumunda onları da tereddütsüz soruşturmaya dahil edeceğiz" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/findik-sektorune-siki-takip-suruyor-961818.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cop31 alanı türkiye'nin en büyük açık hava sahnesi olacak
+            çevre, şehircilik ve i̇klim değişikliği bakanlığı, antalya'daki cop31 alanının tamamını copart projesi kapsamında aynı zamanda açık ve kapalı sanat galerisi olarak kullanacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>COP31 alanı Türkiye'nin en büyük açık hava sahnesi olacak</h3>
+                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Antalya'daki COP31 alanının tamamını COPArt Projesi kapsamında aynı zamanda açık ve kapalı sanat galerisi olarak kullanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cop31-alani-turkiyenin-en-buyuk-acik-hava-sahnesi-olacak-961814.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            soykırımcı i̇srail'in saldırıları altındaki gazze'de can kaybı 74 bin 594'e yükseldi
+            ateşkese rağmen soykırımcı i̇srail'in saldırılarını sürdürdüğü gazze şeridi'nde hayatını kaybedenlerin sayısı son 48 saatte 6 artarak, 74 bin 594'e yükseldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Soykırımcı İsrail'in saldırıları altındaki Gazze'de can kaybı 74 bin 594'e yükseldi</h3>
+                    <p>Ateşkese rağmen soykırımcı İsrail'in saldırılarını sürdürdüğü Gazze Şeridi'nde hayatını kaybedenlerin sayısı son 48 saatte 6 artarak, 74 bin 594'e yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-saldirilari-altindaki-gazzede-can-kaybi-74-bin-594e-yukseldi-961813.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sahara çölü'nde bulunan gül rengi göktaşı 4,1 milyar yıllık mars parçası çıktı
+            sahara çölü'nde keşfedilen gül rengindeki gizemli göktaşının, kızıl gezegen'in en eski kabuk yapısına ışık tutan 4,1 milyar yıllık nadir bir mars parçası olduğu nasa araştırmasıyla kanıtlandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sahara Çölü'nde bulunan gül rengi göktaşı 4,1 milyar yıllık Mars parçası çıktı</h3>
+                    <p>Sahara Çölü'nde keşfedilen gül rengindeki gizemli göktaşının, Kızıl Gezegen'in en eski kabuk yapısına ışık tutan 4,1 milyar yıllık nadir bir Mars parçası olduğu NASA araştırmasıyla kanıtlandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/sahara-colunde-bulunan-gul-rengi-goktasi-41-milyar-yillik-mars-parcasi-cikti-961812.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
