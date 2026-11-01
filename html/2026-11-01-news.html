@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-01 11:51</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/saglik/bakan-memisoglu-robotik-cerrahi-cihazi-turkiyede-uretilecek-961873.html" target="_blank">
+                <strong>Bakan Memişoğlu: Robotik cerrahi cihazı Türkiye'de üretilecek</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cw0k0rknd1pgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump döneminde ABD ekonomisinin durumu nasıl?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmy0e2x95l48o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>BM Genel Sekreterliği yarışında Türkiye'nin hamlesi ne anlama geliyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/bulgaristanda-halk-cumhurbaskani-seciminin-ikinci-turu-icin-sandik-basinda-961879.html" target="_blank">
+                <strong>Bulgaristan'da halk cumhurbaşkanı seçiminin ikinci turu için sandık başında</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/ogrencilerin-beceri-duzeyleri-okul-tabanli-izlemeyle-belirlenecek-961872.html" target="_blank">
+                <strong>Öğrencilerin beceri düzeyleri okul tabanlı izlemeyle belirlenecek</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan memişoğlu: robotik cerrahi cihazı türkiye'de üretilecek
+            sağlık bakanı kemal memişoğlu, yerli robotik cerrahi cihazı geliştirmeyi hedeflediklerini belirterek, en geç 2027'nin başında tüseb aracılığıyla çağrıya çıkacaklarını ve teknolojiyi yazılımıyla birlikte türkiye'de üreteceklerini söyledi.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Bakan Memişoğlu: Robotik cerrahi cihazı Türkiye'de üretilecek</h3>
+                    <p>Sağlık Bakanı Kemal Memişoğlu, yerli robotik cerrahi cihazı geliştirmeyi hedeflediklerini belirterek, en geç 2027'nin başında TÜSEB aracılığıyla çağrıya çıkacaklarını ve teknolojiyi yazılımıyla birlikte Türkiye'de üreteceklerini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/bakan-memisoglu-robotik-cerrahi-cihazi-turkiyede-uretilecek-961873.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump döneminde abd ekonomisinin durumu nasıl?
+            ara seçimler öncesinde trump, abd ekonomisinin performansıyla övünmüştü. bbc doğrulama servisi verify, ülkedeki enflasyon, istihdam ve ekonomik büyümeyi inceledi.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Trump döneminde ABD ekonomisinin durumu nasıl?</h3>
+                    <p>Ara seçimler öncesinde Trump, ABD ekonomisinin performansıyla övünmüştü. BBC Doğrulama Servisi Verify, ülkedeki enflasyon, istihdam ve ekonomik büyümeyi inceledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw0k0rknd1pgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            borsa i̇stanbul genel müdürü korkmaz enes ergun gözaltına alındı
+            borsa i̇stanbul genel müdürü korkmaz enes ergun, fon soruşturmaları kapsamında gözaltına alındı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada ergun'a, "suç işlemek amacıyla kurulan örgüte üye olma" ve rüşvet" suçlamaları yöneltiliyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun gözaltına alındı</h3>
+                    <p>Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun, fon soruşturmaları kapsamında gözaltına alındı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada Ergun'a, "suç işlemek amacıyla kurulan örgüte üye olma" ve rüşvet" suçlamaları yöneltiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqz0vjm7rjedo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kobi̇'lere 50 milyar liralık yeni nefes kredisi imkanı
+            türkiye odalar ve borsalar birliği (tobb), kredi garanti fonu (kgf) ve bankaların iş birliğiyle yürütülen nefes kredisi'nde yeni dönem başvuruları 3 kasım'da başlayacak. yeni dilim kapsamında kobi̇'lere 50 milyar lira finansman sağlanırken, firma başına kredi limiti 5 milyon liraya yükseltildi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>KOBİ'lere 50 milyar liralık yeni Nefes Kredisi imkanı</h3>
+                    <p>Türkiye Odalar ve Borsalar Birliği (TOBB), Kredi Garanti Fonu (KGF) ve bankaların iş birliğiyle yürütülen Nefes Kredisi'nde yeni dönem başvuruları 3 Kasım'da başlayacak. Yeni dilim kapsamında KOBİ'lere 50 milyar lira finansman sağlanırken, firma başına kredi limiti 5 milyon liraya yükseltildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kobilere-50-milyar-liralik-yeni-nefes-kredisi-imkani-961878.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon soruşturması kapsamında umut güner gözaltında
+            sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında dünya gazetesi'nin sahibi umut güner gözaltına alındı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon soruşturması kapsamında Umut Güner gözaltında</h3>
+                    <p>Sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında Dünya Gazetesi'nin sahibi Umut Güner gözaltına alındı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/fon-sorusturmasi-kapsaminda-umut-guner-gozaltinda-961880.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bm genel sekreterliği yarışında türkiye'nin hamlesi ne anlama geliyor?
+            birleşmiş milletler genel sekreteri antonio guterres'in görev süresi 31 aralık 2026'da sona erecek. yerine kimin seçileceğine dair yarışa türkiye de katıldı. 31 ekim'de adaylık başvurusunu yaptığı açıklayan türkiye, avrupa güvenlik ve i̇şbirliği teşkilatı (agi̇t) genel sekreteri görevini yürüten feridun sinirlioğlu'na güveniyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>BM Genel Sekreterliği yarışında Türkiye'nin hamlesi ne anlama geliyor?</h3>
+                    <p>Birleşmiş Milletler Genel Sekreteri Antonio Guterres'in görev süresi 31 Aralık 2026'da sona erecek. Yerine kimin seçileceğine dair yarışa Türkiye de katıldı. 31 Ekim'de adaylık başvurusunu yaptığı açıklayan Türkiye, Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) Genel Sekreteri görevini yürüten Feridun Sinirlioğlu'na güveniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy0e2x95l48o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bulgaristan'da halk cumhurbaşkanı seçiminin ikinci turu için sandık başında
+            bulgaristan'da seçmenler, cumhurbaşkanı seçiminin ikinci turu için sandık başına gidiyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bulgaristan'da halk cumhurbaşkanı seçiminin ikinci turu için sandık başında</h3>
+                    <p>Bulgaristan'da seçmenler, cumhurbaşkanı seçiminin ikinci turu için sandık başına gidiyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/bulgaristanda-halk-cumhurbaskani-seciminin-ikinci-turu-icin-sandik-basinda-961879.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'da gençler sokakta: onları birleştiren ne?
+            geçtiğimiz ay boyunca avrupa genelinde gençler öncülüğünde gösteriler yapıldı. peki, bu eylemleri birbirine bağlayan ne? bbc avrupa editörü katya adler yazdı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'da gençler sokakta: Onları birleştiren ne?</h3>
+                    <p>Geçtiğimiz ay boyunca Avrupa genelinde gençler öncülüğünde gösteriler yapıldı. Peki, bu eylemleri birbirine bağlayan ne? BBC Avrupa Editörü Katya Adler yazdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmlydeprkeryo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            öğrencilerin beceri düzeyleri okul tabanlı izlemeyle belirlenecek
+            milli eğitim bakanlığı (meb), türkiye yüzyılı maarif modeli kapsamında ortaokul ve liselerde türkçe, matematik ve fen bilimleri alanlarında çoktan seçmeli ve açık uçlu soruların yer aldığı "okul tabanlı izleme" uygulamasıyla öğrencilerin öğrenme çıktılarını ve beceri düzeylerini belirleyecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Öğrencilerin beceri düzeyleri okul tabanlı izlemeyle belirlenecek</h3>
+                    <p>Milli Eğitim Bakanlığı (MEB), Türkiye Yüzyılı Maarif Modeli kapsamında ortaokul ve liselerde Türkçe, matematik ve fen bilimleri alanlarında çoktan seçmeli ve açık uçlu soruların yer aldığı "okul tabanlı izleme" uygulamasıyla öğrencilerin öğrenme çıktılarını ve beceri düzeylerini belirleyecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/ogrencilerin-beceri-duzeyleri-okul-tabanli-izlemeyle-belirlenecek-961872.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            suriye'de geçim krizi: 'nüfusun önemli kısmı esad dönemine kıyasla daha kötü durumda'
+            suriye'de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, ahmed şara yönetiminin önündeki en büyük sorun olarak görülüyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Suriye'de geçim krizi: 'Nüfusun önemli kısmı Esad dönemine kıyasla daha kötü durumda'</h3>
+                    <p>Suriye'de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, Ahmed Şara yönetiminin önündeki en büyük sorun olarak görülüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwy8l23nylm0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan, güney kore'yi ziyaret edecek
+            cumhurbaşkanı recep tayyip erdoğan, kore cumhuriyeti cumhurbaşkanı lee jae myung’un davetine icabetle, 1-4 kasım tarihlerinde seul’u ziyaret edecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan, Güney Kore'yi ziyaret edecek</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kore Cumhuriyeti Cumhurbaşkanı Lee Jae Myung’un davetine icabetle, 1-4 Kasım tarihlerinde Seul’u ziyaret edecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-guney-koreyi-ziyaret-edecek-961876.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            almanya'da hayat pahalılığına karşı protestolarda bazı dükkanlar yağmalandı
+            cumartesi günü berlin, hamburg ve frankfurt dahil olmak üzere almanya'nın çeşitli şehirlerindeki protestolara, fransa'da da aynı gün yüz binlerce kişinin katıldığı gösteriler eşlik etti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Almanya'da hayat pahalılığına karşı protestolarda bazı dükkanlar yağmalandı</h3>
+                    <p>Cumartesi günü Berlin, Hamburg ve Frankfurt dahil olmak üzere Almanya'nın çeşitli şehirlerindeki protestolara, Fransa'da da aynı gün yüz binlerce kişinin katıldığı gösteriler eşlik etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cxp8grj2gqpgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çocuklara yönelik sosyal medya yasağı yürürlüğe girdi
+            türkiye'de sosyal medya platformlarında yaş sınırlamayı öngören ve yaş doğrulama zorunluluğu getiren yönetmelik yürürlüğe girdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çocuklara yönelik sosyal medya yasağı yürürlüğe girdi</h3>
+                    <p>Türkiye'de sosyal medya platformlarında yaş sınırlamayı öngören ve yaş doğrulama zorunluluğu getiren yönetmelik yürürlüğe girdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjy56vqv4l5do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            keten tohumu gerçekten sağlığa faydalı mı, bilim ne diyor?
+            keten tohumu genellikle besin açısından çok zengin bir kaynak olarak tanıtılıyor ama gerçekten sağlığınızı iyileştirebilir mi?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Keten tohumu gerçekten sağlığa faydalı mı, bilim ne diyor?</h3>
+                    <p>Keten tohumu genellikle besin açısından çok zengin bir kaynak olarak tanıtılıyor ama gerçekten sağlığınızı iyileştirebilir mi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq1m4krm3e29o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            çok çaba harcamadan da egzersiz yapabilirsiniz
+            günlük küçük aktiviteler, kalp damar hastalıkları ve hatta ölüm riskimizi azaltabilir. bunu bir toplantıda, uçakta veya bu makaleyi okurken, basit şekillerde deneyebilirsiniz.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Çok çaba harcamadan da egzersiz yapabilirsiniz</h3>
+                    <p>Günlük küçük aktiviteler, kalp damar hastalıkları ve hatta ölüm riskimizi azaltabilir. Bunu bir toplantıda, uçakta veya bu makaleyi okurken, basit şekillerde deneyebilirsiniz.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c680zmv2p9ggo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            28 yıldır yürüyen karl bushby, 58 bin km yol kat ettikten sonra evine döndü
+            dünyayı yürüyerek dolaşan karl bushby, 28 yıl sonra yolculuğunun sonuna neredeyse yaklaştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>28 yıldır yürüyen Karl Bushby, 58 bin km yol kat ettikten sonra evine döndü</h3>
+                    <p>Dünyayı yürüyerek dolaşan Karl Bushby, 28 yıl sonra yolculuğunun sonuna neredeyse yaklaştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckm23dng4rlqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            antalyaalanya otoyolu ile 2,5 saatlik yol 36 dakikaya düşecek
+            antalya-alanya otoyolu'nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahat 36 dakikaya düşecek ve yıllık 23,9 milyar lira tasarruf sağlanacak.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>AntalyaAlanya Otoyolu ile 2,5 saatlik yol 36 dakikaya düşecek</h3>
+                    <p>Antalya-Alanya Otoyolu'nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahat 36 dakikaya düşecek ve yıllık 23,9 milyar lira tasarruf sağlanacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/antalya-alanya-otoyolu-ile-25-saatlik-yol-36-dakikaya-dusecek-961877.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            burdur'da iki otomobil çarpıştı: 2 ölü, 4 yaralı
+            burdur'un çavdır ilçesinde iki otomobilin çarpışması sonucu 2 kişi öldü, 4 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Burdur'da iki otomobil çarpıştı: 2 ölü, 4 yaralı</h3>
+                    <p>Burdur'un Çavdır ilçesinde iki otomobilin çarpışması sonucu 2 kişi öldü, 4 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/burdurda-iki-otomobil-carpisti-2-olu-4-yarali-961875.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk dünyası diyalog forumu tamamlandı
+            türkiye'nin ev sahipliği yaptığı türk devletleri teşkilatı (tdt) 13. zirvesi marjında, başkanlık tarafından 30-31 ekim tarihlerinde "türk dünyası diyalog forumu" ankara'da gerçekleştirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türk Dünyası Diyalog Forumu tamamlandı</h3>
+                    <p>Türkiye'nin ev sahipliği yaptığı Türk Devletleri Teşkilatı (TDT) 13. Zirvesi marjında, başkanlık tarafından 30-31 Ekim tarihlerinde "Türk Dünyası Diyalog Forumu" Ankara'da gerçekleştirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turk-dunyasi/turk-dunyasi-diyalog-forumu-tamamlandi-961874.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇sviçre'nin zürih ve basel şehirlerindeki gösterilerde olaylar çıktı
+            i̇sviçre'nin zürih ve basel şehirlerinde protestolarda olaylar çıkarken barikatlar kurup bunları ateşe veren göstericiler polisle çatıştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İsviçre'nin Zürih ve Basel şehirlerindeki gösterilerde olaylar çıktı</h3>
+                    <p>İsviçre'nin Zürih ve Basel şehirlerinde protestolarda olaylar çıkarken barikatlar kurup bunları ateşe veren göstericiler polisle çatıştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isvicrenin-zurih-ve-basel-sehirlerindeki-gosterilerde-olaylar-cikti-961871.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
