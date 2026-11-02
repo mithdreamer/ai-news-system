@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>16</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-02 13:32</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yeka-res-2026-yarismalarindan-755-milyon-euroluk-katki-961971.html" target="_blank">
+                <strong>YEKA RES2026 yarışmalarından 75,5 milyon euroluk katkı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/iran-savasi-sona-erdirmek-icin-7-sartta-israr-ediyor-961969.html" target="_blank">
+                <strong>İran, savaşı sona erdirmek için 7 şartta ısrar ediyor</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9146ym5302eo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Öcalan'ın İmralı'daki yeni konumu hakkında neler biliniyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/merkez-bankasi-rezervleri-1622-milyar-dolar-oldu-961970.html" target="_blank">
+                <strong>Merkez Bankası rezervleri 162,2 milyar dolar oldu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/ab-ingilterenin-olasi-yeniden-uyeligine-iliskin-muzakereler-kolay-olmayacak-961966.html" target="_blank">
+                <strong>AB: İngiltere'nin olası yeniden üyeliğine ilişkin müzakereler kolay olmayacak</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yeka res2026 yarışmalarından 75,5 milyon euroluk katkı
+            enerji ve tabii kaynaklar bakanı alparslan bayraktar, 1500 megavatlık rüzgar enerjisine dayalı yenilenebilir enerji kaynak alanları (yeka res-2026) yarışmaları sonucunda kdv dahil toplam 75,5 milyon euro katkı bedeli ortaya çıktığını bildirdi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>YEKA RES2026 yarışmalarından 75,5 milyon euroluk katkı</h3>
+                    <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, 1500 megavatlık rüzgar enerjisine dayalı Yenilenebilir Enerji Kaynak Alanları (YEKA RES-2026) yarışmaları sonucunda KDV dahil toplam 75,5 milyon euro katkı bedeli ortaya çıktığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yeka-res-2026-yarismalarindan-755-milyon-euroluk-katki-961971.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            merkez bankası rezervleri 162,2 milyar dolar oldu
+            türkiye cumhuriyet merkez bankasının (tcmb) toplam rezervleri, 23 ekim haftasında bir önceki haftaya göre 6 milyar 906 milyon dolar azalarak 162 milyar 191 milyon dolar oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Merkez Bankası rezervleri 162,2 milyar dolar oldu</h3>
+                    <p>Türkiye Cumhuriyet Merkez Bankasının (TCMB) toplam rezervleri, 23 Ekim haftasında bir önceki haftaya göre 6 milyar 906 milyon dolar azalarak 162 milyar 191 milyon dolar oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/merkez-bankasi-rezervleri-1622-milyar-dolar-oldu-961970.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran, savaşı sona erdirmek için 7 şartta ısrar ediyor
+            abd ve i̇srail’in i̇ran’a karşı yürüttüğü savaşı sona erdirmeye yönelik diplomatik çabalar hız kazanırken, tahran yönetimi barış görüşmelerinin başlayabilmesi için öne sürdüğü 7 şartın yerine getirilmesinde ısrar ediyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran, savaşı sona erdirmek için 7 şartta ısrar ediyor</h3>
+                    <p>ABD ve İsrail’in İran’a karşı yürüttüğü savaşı sona erdirmeye yönelik diplomatik çabalar hız kazanırken, Tahran yönetimi barış görüşmelerinin başlayabilmesi için öne sürdüğü 7 şartın yerine getirilmesinde ısrar ediyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-savasi-sona-erdirmek-icin-7-sartta-israr-ediyor-961969.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            öcalan'ın i̇mralı'daki yeni konumu hakkında neler biliniyor?
+            dem parti i̇mralı heyeti üyesi mithat sancar, pkk lideri abdullah öcalan'ın i̇mralı'da kendisi için hazırlanan yeni bir yere geçtiğini açıkladı. sancar, bu gelişmenin yürütülen sürecin hızlandırılmasını gerektirdiğini savundu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Öcalan'ın İmralı'daki yeni konumu hakkında neler biliniyor?</h3>
+                    <p>DEM Parti İmralı Heyeti üyesi Mithat Sancar, PKK lideri Abdullah Öcalan'ın İmralı'da kendisi için hazırlanan yeni bir yere geçtiğini açıkladı. Sancar, bu gelişmenin yürütülen sürecin hızlandırılmasını gerektirdiğini savundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9146ym5302eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ab: i̇ngiltere'nin olası yeniden üyeliğine ilişkin müzakereler kolay olmayacak
+            avrupa birliği (ab) dış i̇lişkiler ve güvenlik politikası yüksek temsilcisi kaja kallas, "ab'de brexit sürecinden dolayı ciddi hayal kırıklığı yaşayan ve bu süreçten olumsuz etkilenen çok sayıda insanın bulunduğunu da belirtmeliyim. bu nedenle müzakereler kolay olmayacak." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>AB: İngiltere'nin olası yeniden üyeliğine ilişkin müzakereler kolay olmayacak</h3>
+                    <p>Avrupa Birliği (AB) Dış İlişkiler ve Güvenlik Politikası Yüksek Temsilcisi Kaja Kallas, "AB'de Brexit sürecinden dolayı ciddi hayal kırıklığı yaşayan ve bu süreçten olumsuz etkilenen çok sayıda insanın bulunduğunu da belirtmeliyim. Bu nedenle müzakereler kolay olmayacak." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ab-ingilterenin-olasi-yeniden-uyeligine-iliskin-muzakereler-kolay-olmayacak-961966.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trafikte can kayıplarını azaltmak için yeni yol güvenliği
+            trafik kazalarından kaynaklanan can kayıplarının azaltılması amacıyla yol kullanıcılarının hata yapabileceğini esas alan "güvenli sistem yaklaşımı" benimsenecek. kara yollarında "kendini ifade eden yollar" ve "affedici yol kenarları" uygulamalarıyla güvenlik standartları yükseltilecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trafikte can kayıplarını azaltmak için yeni yol güvenliği</h3>
+                    <p>Trafik kazalarından kaynaklanan can kayıplarının azaltılması amacıyla yol kullanıcılarının hata yapabileceğini esas alan "güvenli sistem yaklaşımı" benimsenecek. Kara yollarında "kendini ifade eden yollar" ve "affedici yol kenarları" uygulamalarıyla güvenlik standartları yükseltilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/trafikte-can-kayiplarini-azaltmak-icin-yeni-yol-guvenligi-961965.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türk üniversiteleri çin eğitim fuarı'na katıldı
+            türk üniversiteleri, türkiye ulusal ajansı organizasyonuyla çin'in başkenti pekin'de düzenlenen çin eğitim fuarı'na (cee) katıldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türk Üniversiteleri Çin Eğitim Fuarı'na katıldı</h3>
+                    <p>Türk üniversiteleri, Türkiye Ulusal Ajansı organizasyonuyla Çin'in başkenti Pekin'de düzenlenen Çin Eğitim Fuarı'na (CEE) katıldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/turk-universiteleri-cin-egitim-fuarina-katildi-961973.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mekke anlaşması tbmm genel kurulu'na geliyor
+            türkiye, pakistan ve suudi arabistan arasında ortak savunma i̇çin mekke anlaşması'nın onaylanmasının uygun bulunduğuna dair kanun teklifi çarşamba günü tbmm genel kurulu'nda görüşülecek.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Mekke Anlaşması TBMM Genel Kurulu'na geliyor</h3>
+                    <p>Türkiye, Pakistan ve Suudi Arabistan Arasında Ortak Savunma İçin Mekke Anlaşması'nın onaylanmasının uygun bulunduğuna dair kanun teklifi Çarşamba günü TBMM Genel Kurulu'nda görüşülecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/mekke-anlasmasi-tbmm-genel-kuruluna-geliyor-961968.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ara seçimleri: kim, nasıl kazanabilir ya da kaybedebilir?
+            trump'ın başkanlığının son iki yılını belirleyecek olan seçim öncesinde, önemli anketlere, yarışlara ve meselelere derinlemesine bir analiz.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ara seçimleri: Kim, nasıl kazanabilir ya da kaybedebilir?</h3>
+                    <p>Trump'ın başkanlığının son iki yılını belirleyecek olan seçim öncesinde, önemli anketlere, yarışlara ve meselelere derinlemesine bir analiz.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj5ynrx0dgego?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            florida'da özel uçak şehre düştü, 9 kişi hayatını kaybetti
+            abd’nin florida eyaletinde, teksas’tan bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Florida'da özel uçak şehre düştü, 9 kişi hayatını kaybetti</h3>
+                    <p>ABD’nin Florida eyaletinde, Teksas’tan Bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crz65v4wxxljo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan memişoğlu: tütün her yıl 100 binden fazla insanımızın hayatına mal oluyor
+            sağlık bakanı kemal memişoğlu, "tütün her yıl 100 binden fazla insanımızın hayatına mal oluyor. bugün türkiye ne yazık ki sigara içme oranında dünya genelinde ikinci sırada yer alıyor. ülkemizde maalesef her 3 kişiden 1'i, nüfusumuzun yüzde 33'ü tütün kullanıyor." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Memişoğlu: Tütün her yıl 100 binden fazla insanımızın hayatına mal oluyor</h3>
+                    <p>Sağlık Bakanı Kemal Memişoğlu, "Tütün her yıl 100 binden fazla insanımızın hayatına mal oluyor. Bugün Türkiye ne yazık ki sigara içme oranında dünya genelinde ikinci sırada yer alıyor. Ülkemizde maalesef her 3 kişiden 1'i, nüfusumuzun yüzde 33'ü tütün kullanıyor." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-memisoglu-tutun-her-yil-100-binden-fazla-insanimizin-hayatina-mal-oluyor-961964.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇bb davasında üçüncü celse: gizli tanıklar dinleniyor
+            görevden uzaklaştırılan i̇bb başkanı ekrem i̇mamoğlu'nun da aralarında bulunduğu 46'sı tutuklu 436 sanığın yargılandığı i̇bb davasının üçüncü celsesi bugün silivri'deki marmara kapalı cezaevi'nde başladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İBB davasında üçüncü celse: Gizli tanıklar dinleniyor</h3>
+                    <p>Görevden uzaklaştırılan İBB Başkanı Ekrem İmamoğlu'nun da aralarında bulunduğu 46'sı tutuklu 436 sanığın yargılandığı İBB davasının üçüncü celsesi bugün Silivri'deki Marmara Kapalı Cezaevi'nde başladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm87zngy4y5no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇liyana yotova bulgaristan'ın ilk kadın cumhurbaşkanı oldu
+            bulgaristan'da iliana iotova, çok düşük katılımla yapılan cumhurbaşkanlığı seçimleri sonrası ülkenin ilk seçilmiş kadın devlet başkanı oldu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İliyana Yotova Bulgaristan'ın ilk kadın cumhurbaşkanı oldu</h3>
+                    <p>Bulgaristan'da Iliana Iotova, çok düşük katılımla yapılan cumhurbaşkanlığı seçimleri sonrası ülkenin ilk seçilmiş kadın devlet başkanı oldu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c60e0yyyy9d3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yargıtay'dan doğum izni sonrası görev değişikliğine ayrımcılık kararı
+            yargıtay, doğum izninden döndükten sonra uzmanlık alanı dışındaki bir göreve verildiğini, primlerinin ödenmediğini ve emsallerine göre düşük zam aldığını öne süren kadın çalışanın açtığı davada, ayrımcılık tazminatı talebinin kabul edilmesi gerektiğine hükmetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yargıtay'dan doğum izni sonrası görev değişikliğine ayrımcılık kararı</h3>
+                    <p>Yargıtay, doğum izninden döndükten sonra uzmanlık alanı dışındaki bir göreve verildiğini, primlerinin ödenmediğini ve emsallerine göre düşük zam aldığını öne süren kadın çalışanın açtığı davada, ayrımcılık tazminatı talebinin kabul edilmesi gerektiğine hükmetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/yargitaydan-dogum-izni-sonrasi-gorev-degisikligine-ayrimcilik-karari-961967.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yerel seçimlerde 'kent uzlaşısı' ile seçilen meclis üyeleri dem parti'ye katılıyor
+            dem parti, 31 mart 2024 yerel seçimlerindeki kent uzlaşısı stratejisi kampasında seçilen belediye meclis üyelerinin partiye katılacağını açıkladı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yerel seçimlerde 'kent uzlaşısı' ile seçilen meclis üyeleri DEM Parti'ye katılıyor</h3>
+                    <p>DEM Parti, 31 Mart 2024 yerel seçimlerindeki kent uzlaşısı stratejisi kampasında seçilen belediye meclis üyelerinin partiye katılacağını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck0j0lw68749o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli'den 19 yeni il önerisi: bir ilçenin il olması ne anlama geliyor?
+            mhp lideri devlet bahçeli türkiye'de 19 yeni il ve 78 yeni ilçe kurulmasını önerdi. bir ilçenin il olması ne anlama geliyor? i̇l olan bir ilçede neler değişiyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bahçeli'den 19 yeni il önerisi: Bir ilçenin il olması ne anlama geliyor?</h3>
+                    <p>MHP lideri Devlet Bahçeli Türkiye'de 19 yeni il ve 78 yeni ilçe kurulmasını önerdi. Bir ilçenin il olması ne anlama geliyor? İl olan bir ilçede neler değişiyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwe9l7g8z9d7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kimi antonelli: 'garajda doğan' en genç f1 dünya şampiyonu
+            babasına göre kimi antonelli, daha üç yaşında doğuştan yetenekli bir sürücüydü. i̇şte 20 yaşında formula 1 şampiyonluğuna uzanan antonelli'nin yaşam hikayesi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kimi Antonelli: 'Garajda doğan' en genç F1 dünya şampiyonu</h3>
+                    <p>Babasına göre Kimi Antonelli, daha üç yaşında doğuştan yetenekli bir sürücüydü. İşte 20 yaşında Formula 1 şampiyonluğuna uzanan Antonelli'nin yaşam hikayesi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmkgev0g9kkxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bir zamanlar gökyüzüne hükmeden, insan avlayan dev kartallar
+            dinozorların sonunu getiren asteroit çarptıktan sonra, dev kuşlar onlarca milyon yıl boyunca en üst düzey yırtıcılar haline geldi ve insanlar da avları arasındaydı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bir zamanlar gökyüzüne hükmeden, insan avlayan dev kartallar</h3>
+                    <p>Dinozorların sonunu getiren asteroit çarptıktan sonra, dev kuşlar onlarca milyon yıl boyunca en üst düzey yırtıcılar haline geldi ve insanlar da avları arasındaydı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c679p4qlr359o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ukrayna'nın başkenti kiev'de sahte radyasyon alarmı uyarısıyla korku
+            ukrayna'da hava saldırılarına karşı uyarı amacıyla telefonlarda bulunan uygulama dün gece saatlerinde radyasyon alarmı uyarısı yaptı. moskova da acil durum uyarı uygulamasının "büyük çaplı bir siber saldırı"dan etkilendiğini açıkladı.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Ukrayna'nın başkenti Kiev'de sahte radyasyon alarmı uyarısıyla korku</h3>
+                    <p>Ukrayna'da hava saldırılarına karşı uyarı amacıyla telefonlarda bulunan uygulama dün gece saatlerinde radyasyon alarmı uyarısı yaptı. Moskova da acil durum uyarı uygulamasının "büyük çaplı bir siber saldırı"dan etkilendiğini açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5vgj0dgerm1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            siber suçlarla mücadelede 11 ilde operasyon: 86 tutuklama
+            5 günde 11 ilde düzenlenen operasyonlarda yasa dışı bahis, nitelikli dolandırıcılık ve çevrim içi çocuk istismarı suçlarına karıştığı belirlenen 120 şüpheli yakalandı. şüphelilerden 86'sı tutuklandı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Siber suçlarla mücadelede 11 ilde operasyon: 86 tutuklama</h3>
+                    <p>5 günde 11 ilde düzenlenen operasyonlarda yasa dışı bahis, nitelikli dolandırıcılık ve çevrim içi çocuk istismarı suçlarına karıştığı belirlenen 120 şüpheli yakalandı. Şüphelilerden 86'sı tutuklandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/siber-suclarla-mucadelede-11-ilde-operasyon-86-tutuklama-961972.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
