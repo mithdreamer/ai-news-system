@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>5</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>15</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-03 12:49</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmzxjn4205xqo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bakan Gürlek: Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/emine-erdogan-izzet-keribarin-cektigi-fotograflardan-olusan-sergiyi-ziyaret-etti-962093.html" target="_blank">
+                <strong>Emine Erdoğan, İzzet Keribar'ın çektiği fotoğraflardan oluşan sergiyi ziyaret etti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cj5ynrx0dgego?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD ara seçimleri: Kim, nasıl kazanabilir ya da kaybedebilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckqxn781l88po?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>ABD ara seçimleri Ankara-Washington ilişkilerini nasıl etkileyebilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqglwjdx3043o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Özel Kılıçdaroğlu'nu neden eleştirdi, Emir Sarıgül'ün iddialarına ne yanıt verdi?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan gürlek: fon soruşturmasında kapsamlı bir suç yapısı tespit edildi
+            adalet bakanı akın gürlek, "fon soruşturmasında kapsamlı bir suç yapısı tespit edildi. bu örgütsel yapının içindeki isimler arasında hiyerarşik ve sistemli bir iş birliğinin delillerine ulaştık" dedi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Gürlek: Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi</h3>
+                    <p>Adalet Bakanı Akın Gürlek, "Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi. Bu örgütsel yapının içindeki isimler arasında hiyerarşik ve sistemli bir iş birliğinin delillerine ulaştık" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmzxjn4205xqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emine erdoğan, i̇zzet keribar'ın çektiği fotoğraflardan oluşan sergiyi ziyaret etti
+            cumhurbaşkanı recep tayyip erdoğan'ın eşi emine erdoğan, fotoğraf sanatçısı i̇zzet keribar'ın, askerliğini yapmak için 1956'da geldiği güney kore'de çektiği fotoğraflardan oluşan ve cumhurbaşkanlığı i̇letişim başkanlığı tarafından hazırlanan "bir dostluğun doğuşu: bir türk fotoğrafçının objektifinden 70 yıl önceki kore sergisi"ni ziyaret etti.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Emine Erdoğan, İzzet Keribar'ın çektiği fotoğraflardan oluşan sergiyi ziyaret etti</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, fotoğraf sanatçısı İzzet Keribar'ın, askerliğini yapmak için 1956'da geldiği Güney Kore'de çektiği fotoğraflardan oluşan ve Cumhurbaşkanlığı İletişim Başkanlığı tarafından hazırlanan "Bir Dostluğun Doğuşu: Bir Türk Fotoğrafçının Objektifinden 70 Yıl Önceki Kore Sergisi"ni ziyaret etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/emine-erdogan-izzet-keribarin-cektigi-fotograflardan-olusan-sergiyi-ziyaret-etti-962093.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd ara seçimleri: kim, nasıl kazanabilir ya da kaybedebilir?
+            abd'de seçmenler, donald trump'ın ikinci başkanlık döneminde kalan iki yıllık sürenin nasıl şekilleneceğine karar vermek için bugün sandık başına gitti. kongre'nin iki kanadı da şu anda başkan trump'ın mensubu olduğu cumhuriyetçi parti'nin kontrolünde. trump'ın görevinde geri kalan süredeki başarısı veya başarısızlığı, bu seçimlerin sonucuna bağlı olabilir.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD ara seçimleri: Kim, nasıl kazanabilir ya da kaybedebilir?</h3>
+                    <p>ABD'de seçmenler, Donald Trump'ın ikinci başkanlık döneminde kalan iki yıllık sürenin nasıl şekilleneceğine karar vermek için bugün sandık başına gitti. Kongre'nin iki kanadı da şu anda Başkan Trump'ın mensubu olduğu Cumhuriyetçi Parti'nin kontrolünde. Trump'ın görevinde geri kalan süredeki başarısı veya başarısızlığı, bu seçimlerin sonucuna bağlı olabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj5ynrx0dgego?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özel kılıçdaroğlu'nu neden eleştirdi, emir sarıgül'ün iddialarına ne yanıt verdi?
+            yeni parti genel başkanı özgür özel, chp genel başkanı kemal kılıçdaroğlu'nu anayasa değişikliği ve dokunulmazlıkların kaldırılmaları konusunda eleştirdi: "nasıl selahattin başkanın [demirtaş] anayasa değişikliğiyle içeriye girmesine sebep olduysa, gerekirse yeni partili kadrolar için de yaparım' diyor."
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Özel Kılıçdaroğlu'nu neden eleştirdi, Emir Sarıgül'ün iddialarına ne yanıt verdi?</h3>
+                    <p>Yeni Parti Genel Başkanı Özgür Özel, CHP Genel Başkanı Kemal Kılıçdaroğlu'nu anayasa değişikliği ve dokunulmazlıkların kaldırılmaları konusunda eleştirdi: "Nasıl Selahattin Başkanın [Demirtaş] anayasa değişikliğiyle içeriye girmesine sebep olduysa, gerekirse Yeni Partili kadrolar için de yaparım' diyor."</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqglwjdx3043o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye, ab'de tescilli coğrafi işaretli ürün sayısını 80'e çıkaracak
+            türkiye'nin avrupa birliği (ab) nezdinde tescillenen coğrafi işaretli ürünlerinin artırılması için çalışmalar sürerken, 46 olan sayının 2027'de 80'e yükseltilmesi amaçlanıyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye, AB'de tescilli coğrafi işaretli ürün sayısını 80'e çıkaracak</h3>
+                    <p>Türkiye'nin Avrupa Birliği (AB) nezdinde tescillenen coğrafi işaretli ürünlerinin artırılması için çalışmalar sürerken, 46 olan sayının 2027'de 80'e yükseltilmesi amaçlanıyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiye-abde-tescilli-cografi-isaretli-urun-sayisini-80e-cikaracak-962084.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de ara seçimlerde oy kullanma işlemi başladı
+            abd'de başkan donald trump yönetiminin yasama gücünü ve kongredeki siyasi dengeyi şekillendirecek ara seçimlerde oy verme işlemi başladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de ara seçimlerde oy kullanma işlemi başladı</h3>
+                    <p>ABD'de Başkan Donald Trump yönetiminin yasama gücünü ve Kongredeki siyasi dengeyi şekillendirecek ara seçimlerde oy verme işlemi başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/abdde-ara-secimlerde-oy-kullanma-islemi-basladi-962090.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            abd ara seçimleri ankara-washington ilişkilerini nasıl etkileyebilir?
+            bugünkü ara seçimler, abd'nin iç politikasının yanı sıra dış politikasında da önemli değişimlere yol açabilir. cumhuriyetçilerin, senato ve temsilciler meclisi'nde çoğunluğu kaybetmesi, türkiye'nin savunma sanayi yaptırımlarının kaldırılması ve f-35 savaş uçağı programına geri dönüş çabalarını zorlaştırabilir.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>ABD ara seçimleri Ankara-Washington ilişkilerini nasıl etkileyebilir?</h3>
+                    <p>Bugünkü ara seçimler, ABD'nin iç politikasının yanı sıra dış politikasında da önemli değişimlere yol açabilir. Cumhuriyetçilerin, Senato ve Temsilciler Meclisi'nde çoğunluğu kaybetmesi, Türkiye'nin savunma sanayi yaptırımlarının kaldırılması ve F-35 savaş uçağı programına geri dönüş çabalarını zorlaştırabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckqxn781l88po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ekim ayı enflasyonu tüi̇k'e göre yüzde 29,77; enag'a göre 45,12
+            enflasyon, tüi̇k verilerine göre ekimde aylık bazda yüzde 2,58, yıllık bazda yüzde 29,77 oldu. akademisyenlerden oluşan bağımsız enflasyon araştırma grubu'na (enag) göre ise ekimde aylık bazda enflasyon %2,68, yıllık bazda ise %45,12 olarak gerçekleşti.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ekim ayı enflasyonu TÜİK'e göre yüzde 29,77; ENAG'a göre 45,12</h3>
+                    <p>Enflasyon, TÜİK verilerine göre ekimde aylık bazda yüzde 2,58, yıllık bazda yüzde 29,77 oldu. Akademisyenlerden oluşan bağımsız Enflasyon Araştırma Grubu'na (ENAG) göre ise ekimde aylık bazda enflasyon %2,68, yıllık bazda ise %45,12 olarak gerçekleşti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cked3j59ld35o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hürmüz boğazı'nın kapanması ab'nin yakıt faturasını 127 milyar euro artırdı
+            avrupa birliği (ab) komisyonu başkanı ursula von der leyen, hürmüz boğazı'nın kapanmasından bu yana ithal fosil yakıtların avrupa'ya 127 milyar euro ek maliyet getirdiğini belirtti.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Hürmüz Boğazı'nın kapanması AB'nin yakıt faturasını 127 milyar euro artırdı</h3>
+                    <p>Avrupa Birliği (AB) Komisyonu Başkanı Ursula von der Leyen, Hürmüz Boğazı'nın kapanmasından bu yana ithal fosil yakıtların Avrupa'ya 127 milyar euro ek maliyet getirdiğini belirtti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hurmuz-bogazinin-kapanmasi-abnin-yakit-faturasini-127-milyar-euro-artirdi-962092.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni nesil aselsan deniz savunma sistemleri euronaval'da boy gösteriyor
+            aselsan, euronaval 2026'da yeni nesil deniz savunma sistemlerini uluslararası ziyaretçilerle buluşturuyor.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yeni nesil ASELSAN deniz savunma sistemleri EURONAVAL'da boy gösteriyor</h3>
+                    <p>ASELSAN, EURONAVAL 2026'da yeni nesil deniz savunma sistemlerini uluslararası ziyaretçilerle buluşturuyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/savunma/yeni-nesil-aselsan-deniz-savunma-sistemleri-euronavalda-boy-gosteriyor-962088.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            eski borsa i̇stanbul genel müdürü korkmaz enes ergun tutuklandı
+            i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada 31 ekim'de gözaltına alınan eski borsa i̇stanbul genel müdürü korkmaz enes ergun, "rüşvet almak" suçundan tutuklandı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Eski Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun tutuklandı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada 31 Ekim'de gözaltına alınan eski Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun, "rüşvet almak" suçundan tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqz0vjm7rjedo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan: 24 yıl önce bugün bir anadolu ihtilaline imza attık
+            cumhurbaşkanı recep tayyip erdoğan, "24 yıl önce bugün bir anadolu ihtilaline imza attık, milletimizin teveccühüne ilk kez mazhar olduğumuz 3 kasım 2002 seçimleriyle büyük ve güçlü türkiye’nin kapılarını araladık. allah’ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan: 24 yıl önce bugün bir Anadolu ihtilaline imza attık</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, "24 yıl önce bugün bir Anadolu ihtilaline imza attık, milletimizin teveccühüne ilk kez mazhar olduğumuz 3 Kasım 2002 seçimleriyle büyük ve güçlü Türkiye’nin kapılarını araladık. Allah’ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-24-yil-once-bugun-bir-anadolu-ihtilaline-imza-attik-962091.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            erdoğan'dan güney kore'ye: uzak ama kalben yakın iki milletiz
+            cumhurbaşkanı recep tayyip erdoğan, "asya'nın iki ucunda birbirlerinden uzak ama kalben yakın iki milletiz. eğer kader insanları buluşturacaksa, mesafelerin engel olamayacağına en güzel örneğiz." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Erdoğan'dan Güney Kore'ye: Uzak ama kalben yakın iki milletiz</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, "Asya'nın iki ucunda birbirlerinden uzak ama kalben yakın iki milletiz. Eğer kader insanları buluşturacaksa, mesafelerin engel olamayacağına en güzel örneğiz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/erdogandan-guney-koreye-uzak-ama-kalben-yakin-iki-milletiz-962089.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            büyü, fal, ruhlar ve casuslar: i̇ran siyasetinin doğaüstü dünyası
+            ali hamaney’in falla ilgilenmesinden ilgilenmesinden, ahmedinejad yönetiminin "cin çıkaranlar ve falcılarla" bağlantılı olduğu yönündeki suçlamalara ve i̇srail’in büyü ve sihir kullandığına dair iddialara kadar doğaüstü inanışlar i̇ran'da iktidarın en üst kademelerine nasıl sızdı?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Büyü, fal, ruhlar ve casuslar: İran siyasetinin doğaüstü dünyası</h3>
+                    <p>Ali Hamaney’in falla ilgilenmesinden ilgilenmesinden, Ahmedinejad yönetiminin "cin çıkaranlar ve falcılarla" bağlantılı olduğu yönündeki suçlamalara ve İsrail’in büyü ve sihir kullandığına dair iddialara kadar doğaüstü inanışlar İran'da iktidarın en üst kademelerine nasıl sızdı?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwly0xr8dmz0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            30. yılında susurluk skandalı: 3 kasım 1996'daki kaza sonrası neler yaşandı?
+            3 kasım 1996'da yaşanan susurluk kazasını, tetiklediği tartışmaları ve olayın bugüne kadar uzanan etkilerini inceledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>30. yılında Susurluk skandalı: 3 Kasım 1996'daki kaza sonrası neler yaşandı?</h3>
+                    <p>3 Kasım 1996'da yaşanan Susurluk kazasını, tetiklediği tartışmaları ve olayın bugüne kadar uzanan etkilerini inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq5e3z1edp9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail'de muhalefet liderleri, acil hükümet kurma gündemiyle bir araya geldi
+            i̇srail'de, sandıktan koalisyon belirsizliğinin çıktığı 27 ekim seçimlerinin ardından, muhalefet bloku liderleri "acil hükümet kurma" gündemiyle bir araya geldi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İsrail'de muhalefet liderleri, acil hükümet kurma gündemiyle bir araya geldi</h3>
+                    <p>İsrail'de, sandıktan koalisyon belirsizliğinin çıktığı 27 Ekim seçimlerinin ardından, muhalefet bloku liderleri "acil hükümet kurma" gündemiyle bir araya geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/israilde-muhalefet-liderleri-acil-hukumet-kurma-gundemiyle-bir-araya-geldi-962087.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yargıtay'dan emsal karar: dede ve babaanne torununu yatılı görebilecek
+            yargıtay, torunlarıyla görüşme süresini yetersiz bulduğu babaanne ve dedenin her ayın ilk hafta sonu ve ağustosun ilk haftası yatılı görüşmesine karar verdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Yargıtay'dan emsal karar: Dede ve babaanne torununu yatılı görebilecek</h3>
+                    <p>Yargıtay, torunlarıyla görüşme süresini yetersiz bulduğu babaanne ve dedenin her ayın ilk hafta sonu ve ağustosun ilk haftası yatılı görüşmesine karar verdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/yargitaydan-emsal-karar-dede-ve-babaanne-torununu-yatili-gorebilecek-962086.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avukatlık asgari ücret tarifesi belirlendi
+            türkiye barolar birliğince (tbb) hazırlanan yeni avukatlık asgari ücret tarifesi, resmi gazete'de yayımlanarak yürürlüğe girdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Avukatlık asgari ücret tarifesi belirlendi</h3>
+                    <p>Türkiye Barolar Birliğince (TBB) hazırlanan yeni avukatlık asgari ücret tarifesi, Resmi Gazete'de yayımlanarak yürürlüğe girdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/avukatlik-asgari-ucret-tarifesi-belirlendi-962085.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanyol futbolcu jesus de miguel sahadaki çarpışma sonucu hayatını kaybetti
+            tenerife'nin 30 yaşındaki forvet oyuncusu jesus de miguel, i̇spanya ikinci ligi maçındaki çarpışmada aldığı ağır sakatlığın ardından hayatını kaybetti.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>İspanyol futbolcu Jesus De Miguel sahadaki çarpışma sonucu hayatını kaybetti</h3>
+                    <p>Tenerife'nin 30 yaşındaki forvet oyuncusu Jesus de Miguel, İspanya ikinci ligi maçındaki çarpışmada aldığı ağır sakatlığın ardından hayatını kaybetti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cx5yn0j3e2yyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray, şampiyonlar ligi'nde evinde stuttgart'ı ağırlıyor
+            galatasaray, uefa şampiyonlar ligi'nin dördüncü hafta maçında almanya temsilcisi stuttgart'ı konuk edecek
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray, Şampiyonlar Ligi'nde evinde Stuttgart'ı ağırlıyor</h3>
+                    <p>Galatasaray, UEFA Şampiyonlar Ligi'nin dördüncü hafta maçında Almanya temsilcisi Stuttgart'ı konuk edecek</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
