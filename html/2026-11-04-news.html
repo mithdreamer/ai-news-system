@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>16</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-04 13:01</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/bilim-teknoloji/yapay-zeka-destekli-yerli-uydu-gezgin-1-icin-hedef-2028-962230.html" target="_blank">
+                <strong>Yapay zeka destekli yerli uydu GEZGİN1 için hedef 2028</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cxyvrzeldp61o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Hamaney'den ara seçim mesajı: ABD'nin politikası değişir sananlar yanılır</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç için 11 ve 19 yıla kadar hapis istemi</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cqe9lez7j1r8o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Öcalan'ın İmralı'da yeni yere geçişi ne anlama geliyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c8kgev55zxywo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Türkiye-Azerbaycan hattında gerginliğin nedenleri neler?</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yapay zeka destekli yerli uydu gezgi̇n1 için hedef 2028
+            türkiye, milli uydu teknolojileri alanındaki çalışmalarına gezgi̇n-1 ile devam ediyor. 75 kilogramın altında olması hedeflenen yerli mikro uydu, yüksek çözünürlüklü görüntüleme ve yapay zeka destekli analiz yetenekleriyle 2028'in son çeyreğinde uzaya gönderilecek.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Yapay zeka destekli yerli uydu GEZGİN1 için hedef 2028</h3>
+                    <p>Türkiye, milli uydu teknolojileri alanındaki çalışmalarına GEZGİN-1 ile devam ediyor. 75 kilogramın altında olması hedeflenen yerli mikro uydu, yüksek çözünürlüklü görüntüleme ve yapay zeka destekli analiz yetenekleriyle 2028'in son çeyreğinde uzaya gönderilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/yapay-zeka-destekli-yerli-uydu-gezgin-1-icin-hedef-2028-962230.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            hamaney'den ara seçim mesajı: abd'nin politikası değişir sananlar yanılır
+            i̇ran'ın dini lideri ali hamaney, abd'de trump ve cumhuriyetçi parti'nin yenilgisiyle sonuçlanan ara seçimlerden sonraki ilk açıklamasında abd politikasında bir değişiklik bekleyen herkesin "ciddi bir yanılgı içinde" olduğunu belirtti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hamaney'den ara seçim mesajı: ABD'nin politikası değişir sananlar yanılır</h3>
+                    <p>İran'ın dini lideri Ali Hamaney, ABD'de Trump ve Cumhuriyetçi Parti'nin yenilgisiyle sonuçlanan ara seçimlerden sonraki ilk açıklamasında ABD politikasında bir değişiklik bekleyen herkesin "ciddi bir yanılgı içinde" olduğunu belirtti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cxyvrzeldp61o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sözcü editörü mustafa balcı ve gazeteci şaban sevinç için 11 ve 19 yıla kadar hapis istemi
+            i̇stanbul cumhuriyet başsavcılığı'nın "kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar" soruşturmasında tutuklanan sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç hakkında iddianame düzenlendi. üç ayrı suçtan cezalandırılmaları istenen gazetecilerden sevinç için 18 yıl 11 ay 15 güne, balcı için ise 10 yıl 10 aya kadar hapis cezası talep edildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç için 11 ve 19 yıla kadar hapis istemi</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı'nın "kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar" soruşturmasında tutuklanan Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç hakkında iddianame düzenlendi. Üç ayrı suçtan cezalandırılmaları istenen gazetecilerden Sevinç için 18 yıl 11 ay 15 güne, Balcı için ise 10 yıl 10 aya kadar hapis cezası talep edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            öcalan'ın i̇mralı'da yeni yere geçişi ne anlama geliyor?
+            pkk lideri abdullah öcalan'ın i̇mralı cezaevi'nde kendisi için hazırlanan yeni alana geçmesi, yürütülen çözüm sürecinde yeni bir aşamaya geçilip geçilmediği tartışmasını gündeme getirdi. ankara'da dem partili ve akp'li kaynaklara, i̇mralı'daki değişikliği nasıl yorumladıklarını sorduk.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Öcalan'ın İmralı'da yeni yere geçişi ne anlama geliyor?</h3>
+                    <p>PKK lideri Abdullah Öcalan'ın İmralı Cezaevi'nde kendisi için hazırlanan yeni alana geçmesi, yürütülen çözüm sürecinde yeni bir aşamaya geçilip geçilmediği tartışmasını gündeme getirdi. Ankara'da DEM Partili ve AKP'li kaynaklara, İmralı'daki değişikliği nasıl yorumladıklarını sorduk.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqe9lez7j1r8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            zorlu holding yönetim kurulu başkanı ahmet nazif zorlu'ya son görev
+            82 yaşında hayatını kaybeden zorlu holding yönetim kurulu başkanı ahmet nazif zorlu için levent'teki barbaros hayrettin paşa camisi'nde cenaze töreni düzenlendi. zorlu'nun naaşı, namazın ardından zincirlikuyu mezarlığı'na defnedildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu'ya son görev</h3>
+                    <p>82 yaşında hayatını kaybeden Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu için Levent'teki Barbaros Hayrettin Paşa Camisi'nde cenaze töreni düzenlendi. Zorlu'nun naaşı, namazın ardından Zincirlikuyu Mezarlığı'na defnedildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/zorlu-holding-yonetim-kurulu-baskani-ahmet-nazif-zorluya-son-gorev-962233.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            lübnan başbakanından hizbullaha üstü kapalı uyarı: ülkeyi yeni bir savaşa sürüklemeyin
+            lübnan başbakanı nevvaf selam, abd/i̇srail-i̇ran savaşı'nın yeniden başlama riski karşısında lübnan'ı yeni bir savaşa sürüklememeye karşı üstü kapalı hizbullah'a uyarıda bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Lübnan Başbakanından Hizbullaha üstü kapalı uyarı: Ülkeyi yeni bir savaşa sürüklemeyin</h3>
+                    <p>Lübnan Başbakanı Nevvaf Selam, ABD/İsrail-İran Savaşı'nın yeniden başlama riski karşısında Lübnan'ı yeni bir savaşa sürüklememeye karşı üstü kapalı Hizbullah'a uyarıda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/lubnan-basbakanindan-hizbullaha-ustu-kapali-uyari-ulkeyi-yeni-bir-savasa-suruklemeyin-962232.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de ara seçimler: demokratlar kongre'nin iki kanadında da çoğunluğu kazandı
+            abd'de seçmenler, kongre'nin hangi partinin kontrolünde olacağını belirlemek için sandığa gitti. demokratlar, senato ve temsilciler meclisi'nde cumhuriyetçilerin sahip olduğu çoğunluğu ele geçirdi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de ara seçimler: Demokratlar Kongre'nin iki kanadında da çoğunluğu kazandı</h3>
+                    <p>ABD'de seçmenler, Kongre'nin hangi partinin kontrolünde olacağını belirlemek için sandığa gitti. Demokratlar, Senato ve Temsilciler Meclisi'nde Cumhuriyetçilerin sahip olduğu çoğunluğu ele geçirdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck62yep62nyjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de ara seçimler: 'demokratlar trump'ın siyasi haritasını paramparça etti'
+            abd'de ara seçimlerde demokratlar hem temsilciler meclisi hem de senato'da çoğunluğu cumhuriyetçilerin elinden aldı. peki seçim sonuçları nasıl yorumlanıyor? demokratların zaferi trump'ın bundan sonraki başkanlığını nasıl etkileyecek?
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de ara seçimler: 'Demokratlar Trump'ın siyasi haritasını paramparça etti'</h3>
+                    <p>ABD'de ara seçimlerde Demokratlar hem Temsilciler Meclisi hem de Senato'da çoğunluğu Cumhuriyetçilerin elinden aldı. Peki seçim sonuçları nasıl yorumlanıyor? Demokratların zaferi Trump'ın bundan sonraki başkanlığını nasıl etkileyecek?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq4g1rpk0rr5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            florida'da düşen uçağın kritik parçaları kaza yerinden kilometrelerce uzakta bulundu
+            abd’nin florida eyaletinde, teksas’tan bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti. olayı soruşturan yetkililer düşen uçağın kritik parçalarının kaza yerinden kilometrelerce uzakta bulunduğunu açıkladı
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Florida'da düşen uçağın kritik parçaları kaza yerinden kilometrelerce uzakta bulundu</h3>
+                    <p>ABD’nin Florida eyaletinde, Teksas’tan Bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti. Olayı soruşturan yetkililer düşen uçağın kritik parçalarının kaza yerinden kilometrelerce uzakta bulunduğunu açıkladı</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crz65v4wxxljo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            hamaney: abd seçimleri i̇ran politikasını değiştirmeyecek
+            i̇ran lideri mücteba hamaney, abd’deki ara seçim sonuçlarının ardından, amerikan siyasetindeki değişikliklerin washington’ın “i̇ran’a yönelik düşmanlığını” değiştirmeyeceğini söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Hamaney: ABD seçimleri İran politikasını değiştirmeyecek</h3>
+                    <p>İran lideri Mücteba Hamaney, ABD’deki ara seçim sonuçlarının ardından, Amerikan siyasetindeki değişikliklerin Washington’ın “İran’a yönelik düşmanlığını” değiştirmeyeceğini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/hamaney-abd-secimleri-iran-politikasini-degistirmeyecek-962236.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye-azerbaycan hattında gerginliğin nedenleri neler?
+            ankara-bakü hattında başörtüsü tartışması ile başlayan gerilim, cumhurbaşkanı i̇lham aliyev'in türkiye'de düzenlenen türk devletleri teşkilatı zirvesine katılmamasıyla gündemde. peki "tek millet iki devlet" ilkesini benimseyen stratejik ortakların arası nasıl açıldı? tartışma neden bu noktaya geldi? diplomatlara ve uzmanlara sorduk.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye-Azerbaycan hattında gerginliğin nedenleri neler?</h3>
+                    <p>Ankara-Bakü hattında başörtüsü tartışması ile başlayan gerilim, Cumhurbaşkanı İlham Aliyev'in Türkiye'de düzenlenen Türk Devletleri Teşkilatı zirvesine katılmamasıyla gündemde. Peki "tek millet iki devlet" ilkesini benimseyen stratejik ortakların arası nasıl açıldı? Tartışma neden bu noktaya geldi? Diplomatlara ve uzmanlara sorduk.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c8kgev55zxywo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiyegüney kore stratejik iş birlikleri uluslararası basında
+            cumhurbaşkanı recep tayyip erdoğan, 8 yıl aradan sonra güney kore'ye 3 günlük resmi ziyaret gerçekleştirdi. ziyaret ve yeni iş birlikleri uluslararası basına da yansıdı. haberlerde, türkiye ve güney kore'nin stratejik alanlarda iş birliklerini derinleştirdikleri vurgusu öne çıktı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TürkiyeGüney Kore stratejik iş birlikleri uluslararası basında</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 8 yıl aradan sonra Güney Kore'ye 3 günlük resmi ziyaret gerçekleştirdi. Ziyaret ve yeni iş birlikleri uluslararası basına da yansıdı. Haberlerde, Türkiye ve Güney Kore'nin stratejik alanlarda iş birliklerini derinleştirdikleri vurgusu öne çıktı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/turkiye-guney-kore-stratejik-is-birlikleri-uluslararasi-basinda-962238.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            mustafa sarıgül: partiler, polemikler, soruşturmalar ve yerelden ulusal siyasete uzanan kariyer
+            mustafa sarıgül, 1980'lerden bu yana sürekli gazete manşetlerinde yer almış bir siyasetçi. son günlerde ise bir kara para aklama soruşturmasındaki iddialar nedeniyle gündemde. peki sarıgül kim ve nasıl bir siyasi geçmişe sahip?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Mustafa Sarıgül: Partiler, polemikler, soruşturmalar ve yerelden ulusal siyasete uzanan kariyer</h3>
+                    <p>Mustafa Sarıgül, 1980'lerden bu yana sürekli gazete manşetlerinde yer almış bir siyasetçi. Son günlerde ise bir kara para aklama soruşturmasındaki iddialar nedeniyle gündemde. Peki Sarıgül kim ve nasıl bir siyasi geçmişe sahip?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6n9rnz9lnl5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan memişoğlu'ndan organ bağışı çağrısı: 32 bin kişi umut bekliyor
+            sağlık bakanı kemal memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bakan Memişoğlu'ndan organ bağışı çağrısı: 32 bin kişi umut bekliyor</h3>
+                    <p>Sağlık Bakanı Kemal Memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/bakan-memisoglundan-organ-bagisi-cagrisi-32-bin-kisi-umut-bekliyor-962237.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            vatandaşları 464 milyon lira dolandıran 198 şüpheli tutuklandı
+            21 ilde nitelikli dolandırıcılık suçuna yönelik düzenlenen operasyonlarda 327 şüpheli yakalandı. vatandaşları 464 milyon lira dolandırdığı belirlenen şüphelilerden 198'i tutuklanırken, hesaplarında 27 milyar 509 milyon liralık işlem hacmi tespit edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Vatandaşları 464 milyon lira dolandıran 198 şüpheli tutuklandı</h3>
+                    <p>21 ilde nitelikli dolandırıcılık suçuna yönelik düzenlenen operasyonlarda 327 şüpheli yakalandı. Vatandaşları 464 milyon lira dolandırdığı belirlenen şüphelilerden 198'i tutuklanırken, hesaplarında 27 milyar 509 milyon liralık işlem hacmi tespit edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/vatandaslari-464-milyon-lira-dolandiran-198-supheli-tutuklandi-962228.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇şgalci i̇srail ordusu, batı şeria'da 45 filistinliyi gözaltına aldı
+            i̇şgalci i̇srail ordusu, batı şeria'nın farklı bölgelerine düzenlediği baskınlarda 2'si gazeteci, 5'i kadın 45 filistinliyi gözaltına aldı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İşgalci İsrail ordusu, Batı Şeria'da 45 Filistinliyi gözaltına aldı</h3>
+                    <p>İşgalci İsrail ordusu, Batı Şeria'nın farklı bölgelerine düzenlediği baskınlarda 2'si gazeteci, 5'i kadın 45 Filistinliyi gözaltına aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-bati-seriada-45-filistinliyi-gozaltina-aldi-962235.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            katil i̇srail'in gazze'ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti
+            katil i̇srail ordusunun ateşkese rağmen gazze şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Katil İsrail'in Gazze'ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti</h3>
+                    <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi'ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-duzenledigi-saldirilarda-son-24-saatte-3-kisi-hayatini-kaybetti-962231.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da metrobüs kazası: 6 yaralı
+            esenyurt'ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da metrobüs kazası: 6 yaralı</h3>
+                    <p>Esenyurt'ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-metrobus-kazasi-6-yarali-962229.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            emre belözoğlu: fenerbahçe'nin ikinci kez teknik direktörlük görevine getirdiği eski kaptanı
+            emre belözoğlu, daha önce 2020-2021 sezonunun son 10 haftasında fenerbahçe'nin başında teknik direktör olarak görev almıştı. belözoğlu'nun pazar günü oynanacak çorumspor maçında takımın başında yer alması bekleniyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Emre Belözoğlu: Fenerbahçe'nin ikinci kez teknik direktörlük görevine getirdiği eski kaptanı</h3>
+                    <p>Emre Belözoğlu, daha önce 2020-2021 sezonunun son 10 haftasında Fenerbahçe'nin başında teknik direktör olarak görev almıştı. Belözoğlu'nun Pazar günü oynanacak Çorumspor maçında takımın başında yer alması bekleniyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy93wr2w2p0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray, şampiyonlar ligi'nde evinde stuttgart'ı 2-0 yendi
+            galatasaray, uefa şampiyonlar ligi'nin dördüncü hafta maçında aleksey batrakov'un attığı iki golle almanya temsilcisi stuttgart'ı 2-0 yendi
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray, Şampiyonlar Ligi'nde evinde Stuttgart'ı 2-0 yendi</h3>
+                    <p>Galatasaray, UEFA Şampiyonlar Ligi'nin dördüncü hafta maçında Aleksey Batrakov'un attığı iki golle Almanya temsilcisi Stuttgart'ı 2-0 yendi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
