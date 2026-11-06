@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>20</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-06 12:58</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cxvgdd06y2m4o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Küresel piyasalarda yapay zeka depremi: Teknoloji devleri trilyonlarca dolar zarar etti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmvgxx5xn42qo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Avrupa'da yolcu uçaklarına sahte bomba ihbarlarının arkasında kim olabilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cr15j811q309o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Erdoğan'dan fon açıklaması: 'Hiç ummadığınız insanlar bu işlerin içerisine girmişler'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cw77p42vg76do?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Fatma Betül Sayan Kaya tutuklandı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/crq8njjvyg4vo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>TBMM'de kabul edildi: Beş soruda Mekke Anlaşması</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            küresel piyasalarda yapay zeka depremi: teknoloji devleri trilyonlarca dolar zarar etti
+            teknoloji devlerinin hisselerinde yapay zeka yatırımlarının yavaşlama ihtimaline dair endişeler sebebiyle trilyonlarca dolarlık düşüş yaşandı. uzmanlara göre düşüşün ardında yatırımcıların yapay zeka yatırımlarından geri dönüşlere dair endişeleri ve abd ara seçimlerinde yapay zeka karşıtı adayların kazanması var.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Küresel piyasalarda yapay zeka depremi: Teknoloji devleri trilyonlarca dolar zarar etti</h3>
+                    <p>Teknoloji devlerinin hisselerinde yapay zeka yatırımlarının yavaşlama ihtimaline dair endişeler sebebiyle trilyonlarca dolarlık düşüş yaşandı. Uzmanlara göre düşüşün ardında yatırımcıların yapay zeka yatırımlarından geri dönüşlere dair endişeleri ve ABD ara seçimlerinde yapay zeka karşıtı adayların kazanması var.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cxvgdd06y2m4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fatma betül sayan kaya tutuklandı
+            savcılığın, "sermaye piyasası kanunu'na muhalefet" ile "suç işlemek amacıyla kurulan örgüte üye olma" suçlarından tutuklama talep ettiği eski akp'li bakan fatma betül sayan kaya, çıkarıldığı nöbetçi mahkemece tutuklandı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fatma Betül Sayan Kaya tutuklandı</h3>
+                    <p>Savcılığın, "Sermaye Piyasası Kanunu'na muhalefet" ile "suç işlemek amacıyla kurulan örgüte üye olma" suçlarından tutuklama talep ettiği eski AKP'li bakan Fatma Betül Sayan Kaya, çıkarıldığı nöbetçi mahkemece tutuklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw77p42vg76do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'da yolcu uçaklarına sahte bomba ihbarlarının arkasında kim olabilir?
+            avrupa'da havayolu şirketleri ve havalimanlarına yönelik bomba tehditlerinini arkasında kim olduğu henüz bilinmiyor. rusya ve i̇ran'dan şüphelenilse de henüz bu iki ülke veya onlara bağlı grupları ihbarlara bağlayan bir kanıt ortaya çıkmadı. 5 kasım'da sahte ihbarlar yüzünden 20'den fazla uçuş etkilendi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'da yolcu uçaklarına sahte bomba ihbarlarının arkasında kim olabilir?</h3>
+                    <p>Avrupa'da havayolu şirketleri ve havalimanlarına yönelik bomba tehditlerinini arkasında kim olduğu henüz bilinmiyor. Rusya ve İran'dan şüphelenilse de henüz bu iki ülke veya onlara bağlı grupları ihbarlara bağlayan bir kanıt ortaya çıkmadı. 5 Kasım'da sahte ihbarlar yüzünden 20'den fazla uçuş etkilendi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmvgxx5xn42qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tbmm'de kabul edildi: beş soruda mekke anlaşması
+            türkiye, suudi arabistan ve pakistan'ı askeri bir ittifakta bir araya getiren mekke ortak savunma anlaşması tbmm'de onaylandı. böylece üç ülke de anlaşmanın yürürlüğe girmesi için gerekli iç onay süreçlerini tamamlamış oldu. mekke i̇ttifakı'nı ve türkiye'de muhalefetin anlaşmaya itirazlarını beş soruda inceledik.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>TBMM'de kabul edildi: Beş soruda Mekke Anlaşması</h3>
+                    <p>Türkiye, Suudi Arabistan ve Pakistan'ı askeri bir ittifakta bir araya getiren Mekke Ortak Savunma Anlaşması TBMM'de onaylandı. Böylece üç ülke de anlaşmanın yürürlüğe girmesi için gerekli iç onay süreçlerini tamamlamış oldu. Mekke İttifakı'nı ve Türkiye'de muhalefetin anlaşmaya itirazlarını beş soruda inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/crq8njjvyg4vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye ve ab'den vize mesajları: ankara muafiyet, brüksel uyum istiyor
+            türkiye'nin avrupa birliği'nden öncelikli beklentilerinden biri, türk vatandaşlarına schengen bölgesi'nde vize muafiyeti. ab, bu konuda adım atması gerekenin türkiye olduğu görüşünde. brüksel'in ankara'dan bir talebi var daha var: vize politikasının değiştirilmesi. güven özalp'ın haberi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Türkiye ve AB'den vize mesajları: Ankara muafiyet, Brüksel uyum istiyor</h3>
+                    <p>Türkiye'nin Avrupa Birliği'nden öncelikli beklentilerinden biri, Türk vatandaşlarına Schengen Bölgesi'nde vize muafiyeti. AB, bu konuda adım atması gerekenin Türkiye olduğu görüşünde. Brüksel'in Ankara'dan bir talebi var daha var: Vize politikasının değiştirilmesi. Güven Özalp'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5y43z3pdk3wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            avrupa'da uçaklara yönelik bugün de bomba ihbarı yapıldı
+            avrupa'nın farklı ülkelerinde hava trafiğini aksatan bomba ihbarları sürerken, bazı yolcu uçakları acil iniş yapmak zorunda kalıyor ve güvenlik kontrolleri gerçekleştiriliyor.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Avrupa'da uçaklara yönelik bugün de bomba ihbarı yapıldı</h3>
+                    <p>Avrupa'nın farklı ülkelerinde hava trafiğini aksatan bomba ihbarları sürerken, bazı yolcu uçakları acil iniş yapmak zorunda kalıyor ve güvenlik kontrolleri gerçekleştiriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/avrupada-ucaklara-yonelik-bugun-de-bomba-ihbari-yapildi-962444.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            erdoğan'dan fon açıklaması: 'hiç ummadığınız insanlar bu işlerin içerisine girmişler'
+            cumhurbaşkanı recep tayyip erdoğan, yüzbinlerce yatırımcıyı etkileyen ve hacmi yüzmilyarlarca lirayı aşan fon krizine "ummadığı kişilerin" dahil olduğunu öğrendiklerini söyledi, "yargının gerekeni yaptığını" belirtti.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Erdoğan'dan fon açıklaması: 'Hiç ummadığınız insanlar bu işlerin içerisine girmişler'</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, yüzbinlerce yatırımcıyı etkileyen ve hacmi yüzmilyarlarca lirayı aşan fon krizine "ummadığı kişilerin" dahil olduğunu öğrendiklerini söyledi, "yargının gerekeni yaptığını" belirtti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr15j811q309o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan: trt, 62 senedir çizgisini bozmadan yoluna devam ediyor
+            cumhurbaşkanı recep tayyip erdoğan, "trt gerek konvansiyonel medyada gerekse dijital alanda ilkeli ve sorumlu yayıncılık anlayışıyla çizgisini hiç bozmadan tam 62 senedir istikrarlı bir şekilde yoluna devam ediyor" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan: TRT, 62 senedir çizgisini bozmadan yoluna devam ediyor</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, "TRT gerek konvansiyonel medyada gerekse dijital alanda ilkeli ve sorumlu yayıncılık anlayışıyla çizgisini hiç bozmadan tam 62 senedir istikrarlı bir şekilde yoluna devam ediyor" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-trt-62-senedir-cizgisini-bozmadan-yoluna-devam-ediyor-962439.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sarıgül ailesi soruşturması: 11 yeni gözaltı, şişli meslek yüksekokulu'na kayyum atandı
+            i̇stanbul cumhuriyet başsavcılığı'nın para aklama iddiasıyla yürüttüğü ve mustafa sarıgül'ün aile üyelerinin de tutuklandığı soruşturmada 11 kişi daha gözaltına alındı, şişli meslek yüksekokulu'na kayyum atandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Sarıgül ailesi soruşturması: 11 yeni gözaltı, Şişli Meslek Yüksekokulu'na kayyum atandı</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı'nın para aklama iddiasıyla yürüttüğü ve Mustafa Sarıgül'ün aile üyelerinin de tutuklandığı soruşturmada 11 kişi daha gözaltına alındı, Şişli Meslek Yüksekokulu'na kayyum atandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm86zz07qlx5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti ilk kurultayına hazırlanıyor: özel'den kapsamlı kadro revizyonu
+            yeni parti genel başkan özgür özel, partisinin 14-15 kasım'da yapılacak ilk olağan kurultayına hazırlanıyor. özel, kuruluş sürecinde oluşturulan geçici yönetim yapısını geride bırakarak partiyi iktidar hedefine taşıyacak daha geniş ve işlevsel bir kadro oluşturmayı hedefliyor. ankara'dan ayşe sayın'ın haberi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti ilk kurultayına hazırlanıyor: Özel'den kapsamlı kadro revizyonu</h3>
+                    <p>Yeni Parti Genel Başkan Özgür Özel, partisinin 14-15 Kasım'da yapılacak ilk olağan kurultayına hazırlanıyor. Özel, kuruluş sürecinde oluşturulan geçici yönetim yapısını geride bırakarak partiyi iktidar hedefine taşıyacak daha geniş ve işlevsel bir kadro oluşturmayı hedefliyor. Ankara'dan Ayşe Sayın'ın haberi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6d7q9128xqvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            filistin çevre kalitesi kurumu: i̇srail, batı şeria'da 760 saldırıyla çevresel soykırım gerçekleştirdi
+            filistin çevre kalitesi kurumu, katil i̇srail ordusu ve filistin topraklarını gasbeden i̇sraillilerin, yılbaşından eylül ayı sonuna kadar işgal altındaki batı şeria'da tarım arazileri, bitki örtüsü, su kaynakları ve altyapıya yönelik 760 saldırı düzenleyerek "çevresel soykırım" gerçekleştirdiğini bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Filistin Çevre Kalitesi Kurumu: İsrail, Batı Şeria'da 760 saldırıyla çevresel soykırım gerçekleştirdi</h3>
+                    <p>Filistin Çevre Kalitesi Kurumu, katil İsrail ordusu ve Filistin topraklarını gasbeden İsraillilerin, yılbaşından eylül ayı sonuna kadar işgal altındaki Batı Şeria'da tarım arazileri, bitki örtüsü, su kaynakları ve altyapıya yönelik 760 saldırı düzenleyerek "çevresel soykırım" gerçekleştirdiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/filistin-cevre-kalitesi-kurumu-israil-bati-seriada-760-saldiriyla-cevresel-soykirim-gerceklestirdi-962448.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin zengin gastronomi kültürü cop31'de tanıtılacak
+            birleşmiş milletler (bm) i̇klim değişikliği çerçeve sözleşmesi 31. taraflar konferansı'na (cop31) ev sahipliği yapmaya hazırlanan antalya'da yerli ve yabancı ziyaretçiler, "7 bölge 7 mutfak" yaklaşımıyla kurulacak yemek evlerinde, anadolu'nun mutfak kültürünü deneyimleyecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'nin zengin gastronomi kültürü COP31'de tanıtılacak</h3>
+                    <p>Birleşmiş Milletler (BM) İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı'na (COP31) ev sahipliği yapmaya hazırlanan Antalya'da yerli ve yabancı ziyaretçiler, "7 Bölge 7 Mutfak" yaklaşımıyla kurulacak yemek evlerinde, Anadolu'nun mutfak kültürünü deneyimleyecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-zengin-gastronomi-kulturu-cop31de-tanitilacak-962447.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trt genel müdürü sobacı: küresel düzenin merkezi hızla çözülüp dağılıyor
+            bu yıl 10'uncusu düzenlenen trt world forum'un açılışında konuşan trt genel müdürü mehmet zahid sobacı, 1945 sonrası kurulan küresel sistemin iflas ettiğine dikkat çekerek, "bugün hiçbir ülke dünyanın yegane merkezi olduğunu iddia edemiyor. türkiye ise kaba gücün devirdiği masaları yeniden kuruyor" dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TRT Genel Müdürü Sobacı: Küresel düzenin merkezi hızla çözülüp dağılıyor</h3>
+                    <p>Bu yıl 10'uncusu düzenlenen TRT World Forum'un açılışında konuşan TRT Genel Müdürü Mehmet Zahid Sobacı, 1945 sonrası kurulan küresel sistemin iflas ettiğine dikkat çekerek, "Bugün hiçbir ülke dünyanın yegane merkezi olduğunu iddia edemiyor. Türkiye ise kaba gücün devirdiği masaları yeniden kuruyor" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/trt-genel-muduru-sobaci-kuresel-duzenin-merkezi-hizla-cozulup-dagiliyor-962446.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            tmo, çks kaydını başkasına kullandıran üreticiden fındık almayacak
+            toprak mahsulleri ofisi (tmo), tüccarların üreticilere ait belgelerle ürün satmaya çalıştığını belirterek, çks kaydını bilerek başkasına kullandıran üreticilerden 2 yıl süreyle kabuklu fındık alınmayacağını ve ilgililer hakkında hukuki süreç başlatılacağını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TMO, ÇKS kaydını başkasına kullandıran üreticiden fındık almayacak</h3>
+                    <p>Toprak Mahsulleri Ofisi (TMO), tüccarların üreticilere ait belgelerle ürün satmaya çalıştığını belirterek, ÇKS kaydını bilerek başkasına kullandıran üreticilerden 2 yıl süreyle kabuklu fındık alınmayacağını ve ilgililer hakkında hukuki süreç başlatılacağını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/tmo-cks-kaydini-baskasina-kullandiran-ureticiden-findik-almayacak-962445.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            afyon'da 8 kişiyi öldüren saldırgan yakalandı
+            afyonkarahisar valiliği, ilde meydana gelen silahlı saldırılarda sekiz kişinin hayatını kaybettiğini ve bir kişinin de yaralandığını duyurdu. eskişehir valiliği saldırganın yakalandığını duyurdu.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Afyon'da 8 kişiyi öldüren saldırgan yakalandı</h3>
+                    <p>Afyonkarahisar Valiliği, ilde meydana gelen silahlı saldırılarda sekiz kişinin hayatını kaybettiğini ve bir kişinin de yaralandığını duyurdu. Eskişehir Valiliği saldırganın yakalandığını duyurdu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm8xzzl5q98xo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇rlanda'da epostayla bombalı saldırı tehdidi alan 4 medya şirketinden 3'ü binalarını boşalttı
+            i̇rlanda'da e-postayla bombalı saldırı tehdidi alan, aralarında kamu yayıncısı rte'nin de bulunduğu 4 medya şirketinden 3'ü binalarını tahliye etti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İrlanda'da epostayla bombalı saldırı tehdidi alan 4 medya şirketinden 3'ü binalarını boşalttı</h3>
+                    <p>İrlanda'da e-postayla bombalı saldırı tehdidi alan, aralarında kamu yayıncısı RTE'nin de bulunduğu 4 medya şirketinden 3'ü binalarını tahliye etti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/irlandada-e-postayla-bombali-saldiri-tehdidi-alan-4-medya-sirketinden-3u-binalarini-bosaltti-962443.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            trt world forum başladı: küresel sistemin geleceği i̇stanbul'da tartışılıyor
+            trt world forum, 10. yılında "merkezsiz dünya: kurallar geçersiz kaldığında kim liderlik eder?" temasıyla i̇stanbul'da başladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>TRT World Forum başladı: Küresel sistemin geleceği İstanbul'da tartışılıyor</h3>
+                    <p>TRT World Forum, 10. yılında "Merkezsiz Dünya: Kurallar Geçersiz Kaldığında Kim Liderlik Eder?" temasıyla İstanbul'da başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/trt-world-forum-basladi-kuresel-sistemin-gelecegi-istanbulda-tartisiliyor-962441.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fransa'da okul otobüsünün kaza yapması sonucu 2 kişi öldü, 16 kişi yaralandı
+            fransa'nın ain ilinde okul otobüsünün yaptığı kazada 2 kişinin hayatını kaybettiği, 3'ü ağır 16 kişinin yaralandığı bildirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Fransa'da okul otobüsünün kaza yapması sonucu 2 kişi öldü, 16 kişi yaralandı</h3>
+                    <p>Fransa'nın Ain ilinde okul otobüsünün yaptığı kazada 2 kişinin hayatını kaybettiği, 3'ü ağır 16 kişinin yaralandığı bildirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/fransada-okul-otobusunun-kaza-yapmasi-sonucu-2-kisi-oldu-16-kisi-yaralandi-962440.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            a milli futbol takımı aday kadrosu açıklandı
+            a milli takım teknik direktörü sergen yalçın, türkiye'nin uefa uluslar a ligi’nde 12 kasım’da belçika ve 15 kasım’da fransa ile oynayacağı karşılaşmaların aday kadrosunu açıkladı.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>A Milli Futbol Takımı aday kadrosu açıklandı</h3>
+                    <p>A Milli Takım Teknik Direktörü Sergen Yalçın, Türkiye'nin UEFA Uluslar A Ligi’nde 12 Kasım’da Belçika ve 15 Kasım’da Fransa ile oynayacağı karşılaşmaların aday kadrosunu açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/spor/a-milli-futbol-takimi-aday-kadrosu-aciklandi-962442.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cristiano ronaldo milli takım kariyerini noktaladı
+            portekiz futbolunun efsane ismi cristiano ronaldo, milli takım kariyerini noktaladığını açıkladı.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Cristiano Ronaldo milli takım kariyerini noktaladı</h3>
+                    <p>Portekiz futbolunun efsane ismi Cristiano Ronaldo, milli takım kariyerini noktaladığını açıkladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c69qzr8gn0wro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
