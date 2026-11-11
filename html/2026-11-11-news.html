@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-11 12:44</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmvg2rvpg774o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İspanya'da 14 yıl sonra ilk genel grev</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5742lzd1m20o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>BDDK Başkanı Şahap Kavcıoğlu istifa etti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/ebrdden-turkiyenin-yesil-donusumune-14-milyar-euroluk-katki-962945.html" target="_blank">
+                <strong>EBRD'den Türkiye'nin yeşil dönüşümüne 14 milyar euroluk katkı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-milyonlarca-tohumu-ve-fidani-toprakla-bulusturuyoruz-962942.html" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan: Milyonlarca tohumu ve fidanı toprakla buluşturuyoruz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c60qjenvxzqko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Real Madrid'li Vinicius Jr'dan Sudan'daki savaşta bacaklarını kaybeden çocuğa sürpriz mesaj</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya'da 14 yıl sonra ilk genel grev
+            i̇spanya'da işçiler 14 yıl sonra ilk kez genel greve çıktı. ülkenin en büyük iki sendikasının desteklediği grevin nedeni konut krizi ve hayat pahalılığı. i̇şçiler konut fiyatları ve kiraların düşmesini ve maaşların artmasını talep ediyor. başbakan pedro sanchez, konut reformunu geçiremedikten sonra erken seçime gitme kararı almıştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya'da 14 yıl sonra ilk genel grev</h3>
+                    <p>İspanya'da işçiler 14 yıl sonra ilk kez genel greve çıktı. Ülkenin en büyük iki sendikasının desteklediği grevin nedeni konut krizi ve hayat pahalılığı. İşçiler konut fiyatları ve kiraların düşmesini ve maaşların artmasını talep ediyor. Başbakan Pedro Sanchez, konut reformunu geçiremedikten sonra erken seçime gitme kararı almıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmvg2rvpg774o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan: milyonlarca tohumu ve fidanı toprakla buluşturuyoruz
+            cumhurbaşkanı recep tayyip erdoğan, milli ağaçlandırma günü mesajında, "i̇klim krizine karşı küresel dayanışmamızı artırıyor, diğer taraftan ülkemiz genelinde milyonlarca tohumu ve fidanı “geleceğe nefes, dünyaya barış” diyerek toprakla buluşturuyoruz" ifadelerini kullandı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan: Milyonlarca tohumu ve fidanı toprakla buluşturuyoruz</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Milli Ağaçlandırma Günü mesajında, "İklim krizine karşı küresel dayanışmamızı artırıyor, diğer taraftan ülkemiz genelinde milyonlarca tohumu ve fidanı “Geleceğe Nefes, Dünyaya Barış” diyerek toprakla buluşturuyoruz" ifadelerini kullandı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-milyonlarca-tohumu-ve-fidani-toprakla-bulusturuyoruz-962942.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            emine erdoğan'dan 11 kasım milli ağaçlandırma günü paylaşımı
+            cumhurbaşkanı recep tayyip erdoğan'ın eşi emine erdoğan, "11 kasım milli ağaçlandırma günü kutlu olsun. bir fidanı toprakla buluşturmak, yıllar sonra da varlığını sürdürecek bir iyiliğe vesile olmaktır" paylaşımında bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Emine Erdoğan'dan 11 Kasım Milli Ağaçlandırma Günü paylaşımı</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, "11 Kasım Milli Ağaçlandırma Günü kutlu olsun. Bir fidanı toprakla buluşturmak, yıllar sonra da varlığını sürdürecek bir iyiliğe vesile olmaktır" paylaşımında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/emine-erdogandan-11-kasim-milli-agaclandirma-gunu-paylasimi-962943.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küllerinden doğan mahalle sıfır atık köyüne dönüşüyor
+            antalya'nın manavgat ilçesinde 2021'deki orman yangınında ağır hasar gören ve toki̇ tarafından yeniden inşa edilen demirciler mahallesi, cop31 kapsamında "sıfır atık köyü"ne dönüştürülüyor. mahallede ekolojik park, geri dönüşüm cihazı ve atölye gibi çevreci uygulamalar hayata geçiriliyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Küllerinden doğan mahalle Sıfır Atık Köyüne dönüşüyor</h3>
+                    <p>Antalya'nın Manavgat ilçesinde 2021'deki orman yangınında ağır hasar gören ve TOKİ tarafından yeniden inşa edilen Demirciler Mahallesi, COP31 kapsamında "Sıfır Atık Köyü"ne dönüştürülüyor. Mahallede ekolojik park, geri dönüşüm cihazı ve atölye gibi çevreci uygulamalar hayata geçiriliyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kullerinden-dogan-mahalle-sifir-atik-koyune-donusuyor-962941.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            habaş'ta geçmişte yaşanan iş kazaları hakkında ne biliyoruz?
+            i̇zmir'in aliağa ilçesindeki habaş demir çelik fabrikasında 9 kasım'da meydana gelen kazada 18 işçi hayatını kaybetti, 14 işçi yaralandı. habaş, geçmişte de iş kazalarıyla gündeme gelen bir şirket. bbc türkçe'nin açık kaynaktan derlediği bilgilere göre 2018'den bu yana en az 28 işçi hayatını kaybetti. şirket, 2025'te yayımladığı bir raporda iş güvenliğine dair endişelere de değindi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>HABAŞ'ta geçmişte yaşanan iş kazaları hakkında ne biliyoruz?</h3>
+                    <p>İzmir'in Aliağa ilçesindeki HABAŞ Demir Çelik fabrikasında 9 Kasım'da meydana gelen kazada 18 işçi hayatını kaybetti, 14 işçi yaralandı. HABAŞ, geçmişte de iş kazalarıyla gündeme gelen bir şirket. BBC Türkçe'nin açık kaynaktan derlediği bilgilere göre 2018'den bu yana en az 28 işçi hayatını kaybetti. Şirket, 2025'te yayımladığı bir raporda iş güvenliğine dair endişelere de değindi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmlylyr44wzdo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon soruşturması: eski takasbank genel müdürü, adil katılım bankası ortağı tutuklandı
+            fon soruşturmalarıyla ilgili 11 kasım'da omg capital advisors yönetim kurulu başkanı ömer murat gülkan, eski takasbank genel müdürü yunus arıncı ve adil katılım bankası ortaklarından ali paslı tutuklandı. dört kişi hakkında ev hapsi kararı verildi. soruşturmada tutuklu sayısı 123'e yükseldi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fon soruşturması: Eski Takasbank genel müdürü, Adil Katılım Bankası ortağı tutuklandı</h3>
+                    <p>Fon soruşturmalarıyla ilgili 11 Kasım'da OMG Capital Advisors Yönetim Kurulu Başkanı Ömer Murat Gülkan, eski Takasbank Genel Müdürü Yunus Arıncı ve Adil Katılım Bankası ortaklarından Ali Paslı tutuklandı. Dört kişi hakkında ev hapsi kararı verildi. Soruşturmada tutuklu sayısı 123'e yükseldi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr62y2xq09ppo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇sveç i̇klim elçisi'nden türkiye'ye cop31 övgüsü
+            i̇sveç i̇klim elçisi mattias frumerie, türkiye'nin cop31 kapsamında iklim eylemlerine ve ülkeler arası işbirliğine verdiği önemi memnuniyetle karşıladıklarını belirterek, iki ülke arasındaki güçlü ilişkilerin enerji dönüşümünde de sürmesini istediklerini söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İsveç İklim Elçisi'nden Türkiye'ye COP31 övgüsü</h3>
+                    <p>İsveç İklim Elçisi Mattias Frumerie, Türkiye'nin COP31 kapsamında iklim eylemlerine ve ülkeler arası işbirliğine verdiği önemi memnuniyetle karşıladıklarını belirterek, iki ülke arasındaki güçlü ilişkilerin enerji dönüşümünde de sürmesini istediklerini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/isvec-iklim-elcisinden-turkiyeye-cop31-ovgusu-962944.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'nin coğrafi işaretli ürün sayısı 1912'ye ulaştı
+            anadolu'nun yöresel lezzetleri ve geleneksel el sanatları coğrafi işaret tesciliyle koruma altına alınmaya devam ediyor. yılın 10 ayında 102 ürünün daha tescillenmesiyle türkiye'nin coğrafi işaretli ürün sayısı 1912'ye ulaştı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'nin coğrafi işaretli ürün sayısı 1912'ye ulaştı</h3>
+                    <p>Anadolu'nun yöresel lezzetleri ve geleneksel el sanatları coğrafi işaret tesciliyle koruma altına alınmaya devam ediyor. Yılın 10 ayında 102 ürünün daha tescillenmesiyle Türkiye'nin coğrafi işaretli ürün sayısı 1912'ye ulaştı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/turkiyenin-cografi-isaretli-urun-sayisi-1912ye-ulasti-962938.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kuş gribi nedeniyle bir türün nesli tükenebilir
+            bilim insanları, en az 40 kuş türünün virüs nedeniyle tehdit altında olduğunu belirterek salgının bazı türleri yok olmanın eşiğine getirebileceği uyarısında bulundu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Kuş gribi nedeniyle bir türün nesli tükenebilir</h3>
+                    <p>Bilim insanları, en az 40 kuş türünün virüs nedeniyle tehdit altında olduğunu belirterek salgının bazı türleri yok olmanın eşiğine getirebileceği uyarısında bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/kus-gribi-nedeniyle-bir-turun-nesli-tukenebilir-962947.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talyada 300 okula yönelik bomba ihbarı
+            i̇talya’da, ülke genelindeki 300 okul, e-posta yoluyla gönderilen bomba ihbarlarının ardından güvenlik gerekçesiyle tahliye edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalyada 300 okula yönelik bomba ihbarı</h3>
+                    <p>İtalya’da, ülke genelindeki 300 okul, e-posta yoluyla gönderilen bomba ihbarlarının ardından güvenlik gerekçesiyle tahliye edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/italyada-300-okula-yonelik-bomba-ihbari-962946.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bddk başkanı şahap kavcıoğlu istifa etti
+            bankacılık düzenleme ve denetleme kurumu (bddk) başkanı şahap kavcıoğlu fon kriziyle ilgili hakkında çıkan iddialar nedeniyle görevinden istifa ettiğini duyurdu. kavcıoğlu bu kararı "kurumun daha fazla yıpranmaması için aldığını" söyledi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>BDDK Başkanı Şahap Kavcıoğlu istifa etti</h3>
+                    <p>Bankacılık Düzenleme ve Denetleme Kurumu (BDDK) Başkanı Şahap Kavcıoğlu fon kriziyle ilgili hakkında çıkan iddialar nedeniyle görevinden istifa ettiğini duyurdu. Kavcıoğlu bu kararı "kurumun daha fazla yıpranmaması için aldığını" söyledi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5742lzd1m20o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            netanyahu'dan knesset'teki arap partilere 'terör destekçileri ve i̇srail düşmanları' suçlamaları
+            i̇srail'in yeni parlamentosu yemin etti; muhalefet lideri gadi eisenkot hükümeti kurmak için girişimlerde bulunuyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Netanyahu'dan Knesset'teki Arap partilere 'terör destekçileri ve İsrail düşmanları' suçlamaları</h3>
+                    <p>İsrail'in yeni parlamentosu yemin etti; muhalefet lideri Gadi Eisenkot hükümeti kurmak için girişimlerde bulunuyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3j4rxxn0yy2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            james bond: yeni 007 kim olacak? ne zaman gösterime girecek?
+            josh o'connor, jack lowden ve callum turner'ın daniel craig'in yerine geçmesi için düşünülen isimler arasında olduğu bildiriliyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>James Bond: Yeni 007 kim olacak? Ne zaman gösterime girecek?</h3>
+                    <p>Josh O'Connor, Jack Lowden ve Callum Turner'ın Daniel Craig'in yerine geçmesi için düşünülen isimler arasında olduğu bildiriliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwvgrgvg64deo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇rlanda'da, eski abd başkanı biden'a filistin protestosu
+            eski abd başkanı joe biden, i̇rlanda'da bir üniversitede katıldığı etkinlik sırasında, filistin yanlısı eylemciler tarafından protesto edildi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İrlanda'da, eski ABD Başkanı Biden'a Filistin protestosu</h3>
+                    <p>Eski ABD Başkanı Joe Biden, İrlanda'da bir üniversitede katıldığı etkinlik sırasında, Filistin yanlısı eylemciler tarafından protesto edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/irlandada-eski-abd-baskani-bidena-filistin-protestosu-962940.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ebrd'den türkiye'nin yeşil dönüşümüne 14 milyar euroluk katkı
+            avrupa i̇mar ve kalkınma bankası (ebrd) başkanı odile renaud-basso, türkiye'ye yaptıkları yatırımların yarısından fazlasına karşılık gelen 14 milyar euroyu yeşil enerjiye ayırdıklarını belirterek, türkiye'nin yenilenebilir enerji potansiyelinin yüksek olduğunu aktardı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>EBRD'den Türkiye'nin yeşil dönüşümüne 14 milyar euroluk katkı</h3>
+                    <p>Avrupa İmar ve Kalkınma Bankası (EBRD) Başkanı Odile Renaud-Basso, Türkiye'ye yaptıkları yatırımların yarısından fazlasına karşılık gelen 14 milyar euroyu yeşil enerjiye ayırdıklarını belirterek, Türkiye'nin yenilenebilir enerji potansiyelinin yüksek olduğunu aktardı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ebrdden-turkiyenin-yesil-donusumune-14-milyar-euroluk-katki-962945.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünyada 130 kişide rastlanan hastalığın tedavisi bulunmuş olabilir
+            yeni bir gen terapisi çocukların hayatını değiştirebilir, ancak klinik denemeler için 3,5 milyon dolar toplanması gerekiyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Dünyada 130 kişide rastlanan hastalığın tedavisi bulunmuş olabilir</h3>
+                    <p>Yeni bir gen terapisi çocukların hayatını değiştirebilir, ancak klinik denemeler için 3,5 milyon dolar toplanması gerekiyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw1l05494ynro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fon krizi borsayı ne kadar etkiledi, uzmanlar ve yatırımcılar ne diyor?
+            fon krizinin üzerinden yaklaşık 1,5 ay geçti. kriz, türkiye'de borsayı da etkiledi. peki bu etkinin şekli ve boyutu ne oldu? bbc türkçe araştırdı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Fon krizi borsayı ne kadar etkiledi, uzmanlar ve yatırımcılar ne diyor?</h3>
+                    <p>Fon krizinin üzerinden yaklaşık 1,5 ay geçti. Kriz, Türkiye'de borsayı da etkiledi. Peki bu etkinin şekli ve boyutu ne oldu? BBC Türkçe araştırdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmzxlxwzlkrqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            real madrid'li vinicius jr'dan sudan'daki savaşta bacaklarını kaybeden çocuğa sürpriz mesaj
+            i̇ki bacağı da ampute edilmiş olan zaher, geçen yıl bbc dünya servisi'ne en sevdiği futbolcudan ve tekrar yürüyebilme hayalinden bahsetmişti. real madrid'in yıldız oyuncusu vinicius jr ise küçük çocuğa bir video mesajıyla seslendi ve maçına davet etti.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Real Madrid'li Vinicius Jr'dan Sudan'daki savaşta bacaklarını kaybeden çocuğa sürpriz mesaj</h3>
+                    <p>İki bacağı da ampute edilmiş olan Zaher, geçen yıl BBC Dünya Servisi'ne en sevdiği futbolcudan ve tekrar yürüyebilme hayalinden bahsetmişti. Real Madrid'in yıldız oyuncusu Vinicius Jr ise küçük çocuğa bir video mesajıyla seslendi ve maçına davet etti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c60qjenvxzqko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cop31'de bm genel sekreteri'nden fosil yakıtın vergilendirilmesi çağrısı: 'kirleten ödemeli'
+            türkiye ve avustralya eş başkanlığında antalya'da düzenlenen düzenlenen birleşmiş milletler iklim konferansı cop31'de liderler zirvesi başladı. zirvede ilk konuşmayı yapan bm genel sekreteri antonio guterres, fosil yakıt şirketlerinin dinozorlar gibi yok olması gerektiğini söyledi. şirketlerin olağanüstü karlarının vergilendirmesi gerektiğini belirtti.
+            gümrük
+            bbc türkçe
+            "
+                    data-category="gümrük"
+                >
+                    <h3>COP31'de BM Genel Sekreteri'nden fosil yakıtın vergilendirilmesi çağrısı: 'Kirleten ödemeli'</h3>
+                    <p>Türkiye ve Avustralya eş başkanlığında Antalya'da düzenlenen düzenlenen Birleşmiş Milletler iklim konferansı COP31'de liderler zirvesi başladı. Zirvede ilk konuşmayı yapan BM Genel Sekreteri Antonio Guterres, fosil yakıt şirketlerinin dinozorlar gibi yok olması gerektiğini söyledi. Şirketlerin olağanüstü karlarının vergilendirmesi gerektiğini belirtti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwz0v0rv0lvxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul havalimanı'nın 4. pistiyle uçuşlarda yüzde 25 yakıt tasarrufu
+            i̇stanbul havalimanı'nın eylülde hizmete alınan 4. pisti sayesinde doğu yönlü uçuşlarda yüzde 25 yakıt tasarrufu sağlandığı ve 2 ayda karbon emisyonunun 2 bin ton azaltıldığı öğrenildi.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>İstanbul Havalimanı'nın 4. pistiyle uçuşlarda yüzde 25 yakıt tasarrufu</h3>
+                    <p>İstanbul Havalimanı'nın eylülde hizmete alınan 4. pisti sayesinde doğu yönlü uçuşlarda yüzde 25 yakıt tasarrufu sağlandığı ve 2 ayda karbon emisyonunun 2 bin ton azaltıldığı öğrenildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-havalimaninin-4-pistiyle-ucuslarda-yuzde-25-yakit-tasarrufu-962939.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
