@@ -1,43 +1,83 @@
 [
   {
     "source": "BBC Türkçe",
+    "title": "AKP'de fon krizi nasıl tartışılıyor, hangi seçenekler konuşuluyor?",
+    "summary": "AKP içinde, kamuoyunda büyük tepki yaratan fon skandalının ardından krizin nasıl aşılacağı tartışılıyor. Yaşananları \"24 yıllık iktidarımızda yaşadığımız en büyük kriz\" diye nitelendiren bazı AKP'li siyasetçiler, fon skandalı nedeniyle, bütün partililerin \"zan altında kaldığına\" dikkat çekerek, \"vurguncu listesi\"nin açıklanmasını istiyor. Ankara'dan Ayşe Sayın'ın haberi.",
+    "link": "https://www.bbc.com/turkce/articles/c6205jnldngwo?at_medium=RSS&at_campaign=rss",
+    "published": "Fri, 13 Nov 2026 00:02:26 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767178",
+    "importance_score": 3,
+    "category": "dünya"
+  },
+  {
+    "source": "BBC Türkçe",
     "title": "Merkez Bankası yıl sonu enflasyon tahminini %29,5'e yükseltti",
     "summary": "Merkez Bankası Enflasyon Raporu'nda yıl sonu enflasyon tahminlerini yükseltti. 2026 yıl sonu tahmini %28'den %29,5'e çıkarıldı. Ekonomistler nasıl değerlendirdi?",
     "link": "https://www.bbc.com/turkce/articles/ck1l05363jevo?at_medium=RSS&at_campaign=rss",
     "published": "Thu, 12 Nov 2026 09:58:19 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401697",
+    "fetched_at": "2026-11-13T13:09:15.767209",
     "importance_score": 3,
     "category": "ekonomi"
   },
   {
     "source": "TRT Haber",
-    "title": "Bakan Gürlek: Yakalama kararı bulunan kişilerin adalet önüne çıkarılması için çalışmalarımızı kararlılıkla sürdüreceğiz",
-    "summary": "Adalet Bakanı Akın Gürlek, kırmızı bültenle aranan \"yeni nesil organize suç örgütü\" elebaşı Sercan Sayal'ın Türkiye'ye iadesine ilişkin, \"Hiçbir sınırın suçla mücadelede kararlılığımıza engel olmasına izin vermeyecek, haklarında yakalama kararı bulunan kişilerin adalet önüne çıkarılması için çalışmalarımızı kararlılıkla sürdüreceğiz\" dedi.",
-    "link": "https://www.trthaber.com/haber/gundem/bakan-gurlek-yakalama-karari-bulunan-kisilerin-adalet-onune-cikarilmasi-icin-calismalarimizi-kararlilikla-surdurecegiz-963081.html",
-    "published": "Thu, 12 Nov 2026 16:19:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328903",
+    "title": "Küresel çapta kesinti: Claude çöktü, binlerce kullanıcı erişim sağlayamadı",
+    "summary": "Microsoft altyapısında yaşanan genel aksaklıkların ikinci gününde, yapay zeka asistanı Claude dünya genelinde büyük bir kesintiyle karşı karşıya kaldı. Binlerce kullanıcı sisteme giriş yapamazken, şirket yetkilileri sorunun çözümü için çalışmaların sürdüğünü açıkladı.",
+    "link": "https://www.trthaber.com/haber/dunya/kuresel-capta-kesinti-claude-coktu-binlerce-kullanici-erisim-saglayamadi-963195.html",
+    "published": "Fri, 13 Nov 2026 15:53:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762938",
     "importance_score": 3,
-    "category": "dünya"
+    "category": "teknoloji"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "MEB okullarda yenilikçi sınıfların sayısını artıracak",
+    "summary": "Milli Eğitim Bakanlığınca (MEB), öğrencilerin dijital becerilerinin geliştirilmesi ve okulların teknolojik altyapısının güçlendirilmesi amacıyla 2027'de 2 bin bilişim teknolojileri laboratuvarı ve 500 yenilikçi sınıf daha kurulması hedefleniyor.",
+    "link": "https://www.trthaber.com/haber/egitim/meb-okullarda-yenilikci-siniflarin-sayisini-artiracak-963188.html",
+    "published": "Fri, 13 Nov 2026 14:37:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762969",
+    "importance_score": 3,
+    "category": "teknoloji"
   },
   {
     "source": "BBC Türkçe",
-    "title": "HABAŞ patlaması: Dokuz kişi tutuklandı, yönetim kurulu başkanı adli kontrolle serbest",
-    "summary": "İzmir'in Aliağa ilçesinde faaliyet gösteren HABAŞ Demir Çelik Fabrikası'nda 19 işçinin öldüğü patlamanın ardından gözaltına alınan 11 kişiden 9'u tutuklandı. Şirketin yönetim kurulu başkanı Mehmet Rüştü Başaran dahil iki şüpheli, ev hapsiyle adli kontrol şartı uygulanarak serbest bırakıldı.",
-    "link": "https://www.bbc.com/turkce/articles/crx2d2p8yjjvo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 01:04:46 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401703",
+    "title": "Microsoft uygulamalarında küresel kesinti: Outlook ve Teams neden çalışmıyor?",
+    "summary": "Dünya çapında yüz milyonlarca kullanıcısı olan Microsoft işletim sistemine ait bazı uygulamalara birçok ülkede erişim sorunu yaşanıyor. Şirket, sorunun siber saldırı kaynaklı olmadığını ve çözüm üzerinde çalıştıklarını açıkladı. Özellikle Microsoft 365 uygulamalarından Outlook, Teams ve yapay zeka uygulaması Copilot'a erişimde sorun yaşanıyor.",
+    "link": "https://www.bbc.com/turkce/articles/c5n4ez3gvp1zo?at_medium=RSS&at_campaign=rss",
+    "published": "Fri, 13 Nov 2026 10:16:01 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767185",
     "importance_score": 2,
-    "category": "dünya"
+    "category": "teknoloji"
   },
   {
     "source": "BBC Türkçe",
-    "title": "Nvidia CEO'su Huang'a ilişkin ikinci ilişki iddiası sonrası şirketin yönetim kurulu toplanıyor",
-    "summary": "Wall Street Journal ve Financial Times’ın haberlerine göre Nvidia’nın yönetim kurulu, uzun süredir şirketi yöneten Jensen Huang’ın evlilik dışı iki ilişki yaşadığına dair haberler üzerine, CEO’yu görevden alıp almamayı değerlendirmek için bugün toplanıyor",
+    "title": "Nvidia CEO'su Huang, ABD Kongresi'nde ifade verecek",
+    "summary": "Teknoloji milyarderi Jensen Huang, dünyanın en değerli şirketlerinden birinde patlak veren büyük bir skandalın ardından, ABD ulusal güvenliğine ilişkin Kongre önünde ifade vermeye hazır olduğunu belirtti.",
     "link": "https://www.bbc.com/turkce/articles/cvj6l247pr4ro?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 09:12:44 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401707",
+    "published": "Fri, 13 Nov 2026 07:04:48 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767192",
     "importance_score": 2,
-    "category": "dünya"
+    "category": "teknoloji"
+  },
+  {
+    "source": "BBC Türkçe",
+    "title": "İBB davasında İmamoğlu'nun avukatı Mehmet Pehlivan dahil sekiz tahliye",
+    "summary": "Görevden uzaklaştırılan İBB Başkanı Ekrem İmamoğlu'nun da aralarında bulunduğu 46'sı tutuklu 436 sanığın yargılandığı İBB davasında ara karar açıklandı ve sekiz kişi hakkında tahliye kararı verildi. Duruşma 4 Ocak 2027'ye ertelendi.",
+    "link": "https://www.bbc.com/turkce/articles/cm87zngy4y5no?at_medium=RSS&at_campaign=rss",
+    "published": "Thu, 12 Nov 2026 20:59:59 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767200",
+    "importance_score": 2,
+    "category": "genel"
+  },
+  {
+    "source": "BBC Türkçe",
+    "title": "Malatya'daki helikopter kazasında dört asker hayatını kaybetti",
+    "summary": "Milli Savunma Bakanlığı, Malatya'da Skorsky tipi bir helikopterin düştüğünü ve dört askerin hayatını kaybettiğini duyurdu. Şehitlerden birinin cenazesi Ankara'da defnedilecek, diğerleri ise memleketlerine uğurlanacak.",
+    "link": "https://www.bbc.com/turkce/articles/cj4gn99v0693o?at_medium=RSS&at_campaign=rss",
+    "published": "Fri, 13 Nov 2026 09:00:24 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767205",
+    "importance_score": 2,
+    "category": "genel"
   },
   {
     "source": "BBC Türkçe",
@@ -45,87 +85,67 @@
     "summary": "Bağımsız Erzincan Milletvekili Mustafa Sarıgül hakkında cinsel istismar ve nitelikli cinsel saldırı iddialarının da yer aldığı soruşturma dosyasının Ankara Cumhuriyet Başsavcılığı'na gönderilmesi, milletvekili dokunulmazlıklarının kaldırılması tartışmasını yeniden gündeme getirdi.",
     "link": "https://www.bbc.com/turkce/articles/cv1j6lk0x3xwo?at_medium=RSS&at_campaign=rss",
     "published": "Thu, 12 Nov 2026 00:29:49 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401711",
+    "fetched_at": "2026-11-13T13:09:15.767212",
+    "importance_score": 2,
+    "category": "dünya"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "Süreç başladı: eimzalar AB ile karşılıklı tanınacak",
+    "summary": "Türkiye ile Avrupa Birliği (AB) arasında elektronik imzaların (e-imza) karşılıklı tanınmasına yönelik süreç başladı. Sürecin tamamlanmasıyla Türkiye'de kullanılan nitelikli e-imzaların ve mühürlerin AB ülkelerinde de tanınmasının önü açılacak.",
+    "link": "https://www.trthaber.com/haber/ekonomi/surec-basladi-e-imzalar-ab-ile-karsilikli-taninacak-963193.html",
+    "published": "Fri, 13 Nov 2026 15:10:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762950",
     "importance_score": 2,
     "category": "dünya"
   },
   {
     "source": "BBC Türkçe",
-    "title": "İspanya'da 14 yıl sonra ilk genel grev: Milyonlarca kişi sokağa çıktı",
-    "summary": "İspanya'da işçiler 14 yıl sonra ilk kez genel greve çıktı. Ülkenin en büyük iki sendikasının desteklediği grevin nedeni konut krizi ve hayat pahalılığı. Madrid ve Barcelona'da toplam 200 bine yakın kişi eylem yaparken ülke genelinde üç milyondan fazla kişi sokağa çıktı.",
-    "link": "https://www.bbc.com/turkce/articles/cmvg2rvpg774o?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 10:14:51 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401712",
-    "importance_score": 2,
-    "category": "genel"
-  },
-  {
-    "source": "BBC Türkçe",
-    "title": "ABD Savunma Bakanı Hegseth'e nöbetçi askerden sözlü uyarı",
-    "summary": "ABD Savunma Bakanı Pete Hegseth ve birlikte bulunduğu danışmanlardan oluşan bir grup, çarşamba günü Arlington Ulusal Mezarlığı'ndaki Meçhul Asker Mezarı'nda bir nöbetçi asker tarafından sert şekilde uyarıldı.",
+    "title": "ABD Savunma Bakanı Hegseth'ten sözlü uyarı yapan askere madalya",
+    "summary": "ABD Savunma Bakanı Pete Hegseth, beraberindeki grupla birlikte kendisini uyaran askere hizmet madalyası taktı.",
     "link": "https://www.bbc.com/turkce/articles/cmwy43jnqg9zo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 00:28:39 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401717",
-    "importance_score": 2,
-    "category": "dünya"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Bakan Çiftçi: Hiçbir çeteye, haramiye ve suçluya kaçış yok",
-    "summary": "İçişleri Bakanı Mustafa Çiftçi, kırmızı bültenle aranan ve Yunanistan'da yakalanarak Türkiye'ye getirilen suç örgütü elebaşı Sercan Sayal'a ilişkin, \"Dünyanın neresine giderlerse gitsinler; hiçbir çeteye, haramiye ve suçluya kaçış yok\" ifadesini kullandı.",
-    "link": "https://www.trthaber.com/haber/gundem/bakan-ciftci-hicbir-ceteye-haramiye-ve-sucluya-kacis-yok-963083.html",
-    "published": "Thu, 12 Nov 2026 16:25:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328892",
-    "importance_score": 2,
-    "category": "genel"
-  },
-  {
-    "source": "BBC Türkçe",
-    "title": "Beyaz ailenin büyüttüğü siyah kız çocuğu: 'Bana gerçeği neden söylemediniz?'",
-    "summary": "Lacey Tezino, Teksas'ta ırkçılığın kol gezdiği bir kasabada beyaz bir aile tarafından büyütüldü. Babası Ronnie ile mutlu bir çocukluk geçirdi. Öldüğü söylenen annesinin izini sürdüğünde ise hakikatle yüzleşti.",
-    "link": "https://www.bbc.com/turkce/articles/ckz6qx8841zjo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 00:29:30 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401719",
-    "importance_score": 1,
-    "category": "genel"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Antalya'nın 7 ilçesindeki kamu personeli yarın da izinli sayılacak",
-    "summary": "Antalya'da düzenlenen Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı (COP31) dolayısıyla 7 ilçedeki kamu kurum ve kuruluşlarında görevli personel 13 Kasım'da da idari izinli sayılacak.",
-    "link": "https://www.trthaber.com/haber/turkiye/antalyanin-7-ilcesindeki-kamu-personeli-yarin-da-izinli-sayilacak-963080.html",
-    "published": "Thu, 12 Nov 2026 16:12:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328905",
-    "importance_score": 1,
-    "category": "genel"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Enerjiden istihdama kritik düzenlemeler Meclis'e sunuldu",
-    "summary": "Meclis'e sunulan yeni kanun teklifi; 2017 öncesi GSS prim borçlarının silinmesinden ilave istihdam teşviklerinin uzatılmasına, yenilenebilir enerjide lisans kolaylığından BOTAŞ'ın vergi mahsuplarına kadar birçok alanda önemli düzenlemeler içeriyor.",
-    "link": "https://www.trthaber.com/haber/gundem/enerjiden-istihdama-kritik-duzenlemeler-meclise-sunuldu-963079.html",
-    "published": "Thu, 12 Nov 2026 16:03:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328907",
-    "importance_score": 1,
-    "category": "gümrük"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Denizler için fırtına uyarısı",
-    "summary": "Batı Karadeniz, Marmara ve Kuzey Ege için fırtına uyarısında bulunuldu.",
-    "link": "https://www.trthaber.com/haber/turkiye/denizler-icin-firtina-uyarisi-963075.html",
-    "published": "Thu, 12 Nov 2026 15:30:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328914",
+    "published": "Fri, 13 Nov 2026 11:32:26 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767189",
     "importance_score": 1,
     "category": "dünya"
   },
   {
     "source": "TRT Haber",
-    "title": "Dünya'da sel kaynaklı ölümler son 13 yılın zirvesinde",
-    "summary": "Uluslararası yardım kuruluşu Oxfam, dünya genelinde bu yıl seller nedeniyle en az 8 bin kişinin hayatını kaybettiğini ve sel kaynaklı ölümlerin 2013'ten bu yana \"en yüksek seviyeye\" çıktığını bildirdi.",
-    "link": "https://www.trthaber.com/haber/dunya/dunyada-sel-kaynakli-olumler-son-13-yilin-zirvesinde-963074.html",
-    "published": "Thu, 12 Nov 2026 15:18:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328919",
+    "title": "DSÖ: Gazze'de tahminen 950 bin yerinden edilmiş insan sel riski taşıyan bölgelerde yaşıyor",
+    "summary": "Dünya Sağlık Örgütünün (DSÖ) işgal altında bulunan Filistin topraklarındaki temsilcisi Reinhilde Van de Weerdt, \"Tahminen 950 bin yerinden edilmiş insan sel riski taşıyan bölgelerde yaşıyor, bunların 400 bini ise son derece yüksek risk altındaki noktalarda bulunuyor.\" dedi.",
+    "link": "https://www.trthaber.com/haber/dunya/dso-gazzede-tahminen-950-bin-yerinden-edilmis-insan-sel-riski-tasiyan-bolgelerde-yasiyor-963194.html",
+    "published": "Fri, 13 Nov 2026 15:21:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762945",
+    "importance_score": 1,
+    "category": "genel"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "Yeni Parti'de ilk kurultay hafta sonu yapılacak",
+    "summary": "Yeni Parti'de gözler birinci olağan kurultaya çevrildi. Ankara Spor Salonu'nda yaklaşık bin 200 delegenin katılımıyla yapılacak kurultayda tek genel başkan adayı Özgür Özel. Özel'in kurultayın ardından Merkez Yönetim Kurulu kadrosunda yeni isimlere yer vermesi bekleniyor.",
+    "link": "https://www.trthaber.com/haber/gundem/yeni-partide-ilk-kurultay-hafta-sonu-yapilacak-963192.html",
+    "published": "Fri, 13 Nov 2026 15:01:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762953",
+    "importance_score": 1,
+    "category": "spor"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "Okullarda ara tatil başladı",
+    "summary": "Milli Eğitim Bakanlığına (MEB) bağlı ilk ve ortaöğretim kurumlarındaki yaklaşık 17 milyon öğrenci, 16-20 Kasım'da 2026-2027 eğitim öğretim yılının ilk ara tatilini yapacak.",
+    "link": "https://www.trthaber.com/haber/egitim/okullarda-ara-tatil-basladi-963190.html",
+    "published": "Fri, 13 Nov 2026 14:53:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762959",
+    "importance_score": 1,
+    "category": "genel"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "64 ilde kaçakçılara operasyon: 371 şüpheli hakkında adli işlem",
+    "summary": "İçişleri Bakanlığı, 64 ildeki kaçakçılık suçlarıyla mücadele kapsamında düzenlenen operasyonlarda 371 şüpheli hakkında adli işlem yapıldığını bildirdi.",
+    "link": "https://www.trthaber.com/haber/gundem/64-ilde-kacakcilara-operasyon-371-supheli-hakkinda-adli-islem-963186.html",
+    "published": "Fri, 13 Nov 2026 14:30:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762975",
     "importance_score": 1,
     "category": "genel"
   },
@@ -135,7 +155,7 @@
     "summary": "A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.",
     "link": "https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn",
     "published": "Tue, 18 Apr 2023 21:17:44 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900837",
+    "fetched_at": "2026-11-13T13:09:19.147063",
     "importance_score": 1,
     "category": "genel"
   },
@@ -145,7 +165,7 @@
     "summary": "• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee",
     "link": "https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html",
     "published": "Tue, 18 Apr 2023 20:34:45 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900840",
+    "fetched_at": "2026-11-13T13:09:19.147066",
     "importance_score": 1,
     "category": "genel"
   },
@@ -155,79 +175,59 @@
     "summary": "Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The \"Avengers\" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.",
     "link": "https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn",
     "published": "Tue, 18 Apr 2023 14:09:43 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900843",
+    "fetched_at": "2026-11-13T13:09:19.147071",
     "importance_score": 1,
     "category": "genel"
   },
   {
     "source": "BBC Türkçe",
-    "title": "Manifest'in menajerine 'müstehcen yayın' davasının ilk duruşmasında tahliye",
-    "summary": "İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında tutuklanan Manifest grubunun menajeri Tolga Akış hakkında altı aydan üç yıla kadar hapis istemiyle iddianame düzenlendi.",
-    "link": "https://www.bbc.com/turkce/articles/c93eqpwjd7wo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 11:44:46 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401705",
+    "title": "Dünya'nın yeni bir 'mini ay'ı var",
+    "summary": "2026 QQ8 adlı mini uydu ağustos ayında keşfedildi, ancak bu Dünya'ya eşlik eden tek geçici gök cismi değil.",
+    "link": "https://www.bbc.com/turkce/articles/cq8e0lprzn93o?at_medium=RSS&at_campaign=rss",
+    "published": "Fri, 13 Nov 2026 10:36:22 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767195",
     "importance_score": 0,
-    "category": "genel"
+    "category": "teknoloji"
   },
   {
     "source": "BBC Türkçe",
-    "title": "Araştırma: 'Escitalopram' depresyonun nüksetmesini engellemede daha etkili bir ilaç",
-    "summary": "Üç ilaç en üst sırada yer aldı ve çok sayıda hastada depresyonun yeniden ortaya çıkmasını önlemede Prozac'tan daha iyi performans gösterdi.",
-    "link": "https://www.bbc.com/turkce/articles/c69w9j8k9y2zo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 08:49:05 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401709",
-    "importance_score": 0,
-    "category": "genel"
-  },
-  {
-    "source": "BBC Türkçe",
-    "title": "Sergen Yalçın yönetimindeki A Milli Takımın ilk sınavı bu akşam Belçika ile",
-    "summary": "Türkiye A Milli Futbol Takımı bu akşam UEFA Uluslar A Ligi 1'inci Grup'taki 5'inci maçında Belçika'yı konuk edecek.",
-    "link": "https://www.bbc.com/turkce/articles/c6x299pm5zrxo?at_medium=RSS&at_campaign=rss",
-    "published": "Thu, 12 Nov 2026 08:39:46 GMT",
-    "fetched_at": "2026-11-12T13:47:58.401715",
-    "importance_score": 0,
-    "category": "spor"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "Altın günü yüzde 2,2 düşüşle kapattı",
-    "summary": "Borsa İstanbul Kıymetli Madenler ve Kıymetli Taşlar Piyasası'nda (KMKTP) standart altının kilogram fiyatı, günün sonunda 6 milyon 379 bin liraya geriledi.",
-    "link": "https://www.trthaber.com/haber/ekonomi/altin-gunu-yuzde-22-dususle-kapatti-963082.html",
-    "published": "Thu, 12 Nov 2026 16:30:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328900",
-    "importance_score": 0,
-    "category": "ekonomi"
-  },
-  {
-    "source": "TRT Haber",
-    "title": "İstanbul'da lodos etkili: Bazı vapur seferleri iptal edildi",
-    "summary": "İstanbul'da etkili olan lodos nedeniyle sahil kesimlerinde yüksek dalgalar oluşurken, bazı vapur seferleri iptal edildi, metro seferlerinde ise aksama yaşandı.",
-    "link": "https://www.trthaber.com/haber/turkiye/istanbulda-lodos-etkili-bazi-vapur-seferleri-iptal-edildi-963078.html",
-    "published": "Thu, 12 Nov 2026 15:48:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328909",
+    "title": "'Arda Güler'in golüyle şaşırdılar ve sonra tekrar ayağa kalktılar'",
+    "summary": "Belçika medyası, İzmir'de Gürsel Aksel Stadyumu'nda oynanan karşılaşmaya geniş yer ayırdı.",
+    "link": "https://www.bbc.com/turkce/articles/c9p83m2e2ze6o?at_medium=RSS&at_campaign=rss",
+    "published": "Fri, 13 Nov 2026 00:04:01 GMT",
+    "fetched_at": "2026-11-13T13:09:15.767198",
     "importance_score": 0,
     "category": "genel"
   },
   {
     "source": "TRT Haber",
-    "title": "Meksika göçmenleri durdurmazsa Trump vergiyi ikiye katlayacak",
-    "summary": "Trump, Meksika'yı göçmen akınını durdurmazsa gümrük vergilerini 2 katına çıkarmakla tehdit etti.",
-    "link": "https://www.trthaber.com/haber/dunya/meksika-gocmenleri-durdurmazsa-trump-vergiyi-ikiye-katlayacak-963077.html",
-    "published": "Thu, 12 Nov 2026 15:37:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328911",
+    "title": "Pakistan'da çalıştığı çiftlikte kaplan saldırısına uğrayan genç hayatını kaybetti",
+    "summary": "Pakistan'ın Lahor kentinde bir çiftlikte beslenen kaplanın saldırısına uğrayan çalışan yaşamını yitirdi, olayla bağlantılı 2 kişi gözaltına alındı.",
+    "link": "https://www.trthaber.com/haber/dunya/pakistanda-calistigi-ciftlikte-kaplan-saldirisina-ugrayan-genc-hayatini-kaybetti-963191.html",
+    "published": "Fri, 13 Nov 2026 15:03:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762956",
     "importance_score": 0,
-    "category": "gümrük"
+    "category": "genel"
   },
   {
     "source": "TRT Haber",
-    "title": "Gökçeada ve Bozcaada feribot seferlerine hava engeli",
-    "summary": "Ege Denizi'nin kuzeyindeki olumsuz hava koşulları nedeniyle Kabatepe-Gökçeada ve Geyikli-Bozcaada hattındaki feribot seferlerinin tümü iptal edildi.",
-    "link": "https://www.trthaber.com/haber/turkiye/gokceada-ve-bozcaada-feribot-seferlerine-hava-engeli-963076.html",
-    "published": "Thu, 12 Nov 2026 15:32:00 +0300",
-    "fetched_at": "2026-11-12T13:47:59.328913",
+    "title": "Japonya'da kuş gribi salgını nedeniyle bir çiftlikteki yaklaşık 40 bin tavuk itlaf edilecek",
+    "summary": "Japonya'nın Çiba eyaletindeki çiftlikte kuş gribi salgını tespit edilmesinin ardından yaklaşık 40 bin tavuğun itlafına karar verildi.",
+    "link": "https://www.trthaber.com/haber/dunya/japonyada-kus-gribi-salgini-nedeniyle-bir-ciftlikteki-yaklasik-40-bin-tavuk-itlaf-edilecek-963189.html",
+    "published": "Fri, 13 Nov 2026 14:40:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762966",
     "importance_score": 0,
     "category": "genel"
+  },
+  {
+    "source": "TRT Haber",
+    "title": "İran: ABD'nin tehditleri sürdükçe UAEA ile nükleer denetim görüşmeleri yürütülemeyecek",
+    "summary": "İran, ABD'nin askeri saldırı tehditleri devam ettiği sürece Uluslararası Atom Enerjisi Ajansı (UAEA) ile nükleer denetimlerin yeniden başlatılmasına ilişkin görüşmelerin yürütülemeyeceğini bildirdi.",
+    "link": "https://www.trthaber.com/haber/dunya/iran-abdnin-tehditleri-surdukce-uaea-ile-nukleer-denetim-gorusmeleri-yurutulemeyecek-963187.html",
+    "published": "Fri, 13 Nov 2026 14:33:00 +0300",
+    "fetched_at": "2026-11-13T13:09:16.762972",
+    "importance_score": 0,
+    "category": "dünya"
   },
   {
     "source": "CNN ",
@@ -235,7 +235,7 @@
     "summary": "• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies",
     "link": "https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html",
     "published": "Mon, 17 Apr 2023 16:01:11 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900834",
+    "fetched_at": "2026-11-13T13:09:19.147057",
     "importance_score": 0,
     "category": "genel"
   },
@@ -245,7 +245,7 @@
     "summary": "The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.",
     "link": "https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html",
     "published": "Wed, 19 Apr 2023 08:28:17 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900836",
+    "fetched_at": "2026-11-13T13:09:19.147060",
     "importance_score": 0,
     "category": "genel"
   },
@@ -255,7 +255,7 @@
     "summary": "• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say",
     "link": "https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html",
     "published": "Wed, 19 Apr 2023 04:29:05 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900841",
+    "fetched_at": "2026-11-13T13:09:19.147069",
     "importance_score": 0,
     "category": "genel"
   },
@@ -265,7 +265,7 @@
     "summary": "It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.",
     "link": "https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html",
     "published": "Tue, 18 Apr 2023 14:40:32 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900844",
+    "fetched_at": "2026-11-13T13:09:19.147074",
     "importance_score": 0,
     "category": "genel"
   },
@@ -275,7 +275,7 @@
     "summary": "A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.",
     "link": "https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html",
     "published": "Tue, 18 Apr 2023 17:38:16 GMT",
-    "fetched_at": "2026-11-12T13:48:01.900846",
+    "fetched_at": "2026-11-13T13:09:19.147077",
     "importance_score": 0,
     "category": "genel"
   }
