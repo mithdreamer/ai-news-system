@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>8</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>18</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-15 12:46</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c6jeq0vy4vz0o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bir Başkadır'ın ikinci sezonu bize ne anlatıyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-her-platformda-filistin-davasini-en-guclu-sekilde-savunacagiz-963344.html" target="_blank">
+                <strong>Cumhurbaşkanı Erdoğan: Her platformda Filistin davasını en güçlü şekilde savunacağız</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/turkiye/kara-yollari-iha-ve-sihalara-pist-olacak-963338.html" target="_blank">
+                <strong>Kara yolları İHA ve SİHA'lara pist olacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/turkiye-ab-iliskileri-ve-karadeniz-guvenligi-brukselde-masaya-yatirilacak-963337.html" target="_blank">
+                <strong>TürkiyeAB ilişkileri ve Karadeniz güvenliği Brüksel'de masaya yatırılacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/mebden-ogrencilere-ara-tatil-destegi-963336.html" target="_blank">
+                <strong>MEB'den öğrencilere ara tatil desteği</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bir başkadır'ın ikinci sezonu bize ne anlatıyor?
+            bir başkadır dizisi, altı yıl sonra dört bölümlük ikinci sezonla geri döndü. dizi bu sezonda da yine türkiye'nin farklı sosyo-ekonomik sınıflarından karakterleri, günlük hayatın akışı içinde biraraya getiriyor.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bir Başkadır'ın ikinci sezonu bize ne anlatıyor?</h3>
+                    <p>Bir Başkadır dizisi, altı yıl sonra dört bölümlük ikinci sezonla geri döndü. Dizi bu sezonda da yine Türkiye'nin farklı sosyo-ekonomik sınıflarından karakterleri, günlük hayatın akışı içinde biraraya getiriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6jeq0vy4vz0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kasım ayı sed ödemeleri hesaplara yatırıldı
+            aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, kasım ayına ait sosyal ve ekonomik destek (sed) ödemelerinin hesaplara yatırıldığını duyurdu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Kasım ayı SED ödemeleri hesaplara yatırıldı</h3>
+                    <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, kasım ayına ait Sosyal ve Ekonomik Destek (SED) ödemelerinin hesaplara yatırıldığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kasim-ayi-sed-odemeleri-hesaplara-yatirildi-963345.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan: her platformda filistin davasını en güçlü şekilde savunacağız
+            cumhurbaşkanı recep tayyip erdoğan, "türkiye olarak filistin davasını her platformda en güçlü şekilde savunmaya; 1967 sınırları temelinde, başkenti doğu kudüs olan, bağımsız, egemen ve coğrafi bütünlüğü haiz filistin devletinin vücut bulması için kararlılıkla mücadele etmeye devam edeceğiz" dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan: Her platformda Filistin davasını en güçlü şekilde savunacağız</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, "Türkiye olarak Filistin davasını her platformda en güçlü şekilde savunmaya; 1967 sınırları temelinde, başkenti Doğu Kudüs olan, bağımsız, egemen ve coğrafi bütünlüğü haiz Filistin devletinin vücut bulması için kararlılıkla mücadele etmeye devam edeceğiz" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-her-platformda-filistin-davasini-en-guclu-sekilde-savunacagiz-963344.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kara yolları i̇ha ve si̇ha'lara pist olacak
+            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, kara yolu ağında fiziki standartları sağlayan 9 bin 562 kesimin incelendiğini, bunlar arasından i̇ha ve si̇ha'ların iniş, kalkış ve konuşlanması için 52 potansiyel kesim belirlendiğini söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kara yolları İHA ve SİHA'lara pist olacak</h3>
+                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, kara yolu ağında fiziki standartları sağlayan 9 bin 562 kesimin incelendiğini, bunlar arasından İHA ve SİHA'ların iniş, kalkış ve konuşlanması için 52 potansiyel kesim belirlendiğini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/kara-yollari-iha-ve-sihalara-pist-olacak-963338.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiyeab ilişkileri ve karadeniz güvenliği brüksel'de masaya yatırılacak
+            dışişleri bakanı hakan fidan, yarın brüksel'de avrupa birliği (ab) dış i̇lişkiler konseyi kapsamında düzenlenecek bölgelerarası güvenlik ve bağlantısallık konulu i̇kinci bakanlar toplantısı'na katılacak.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>TürkiyeAB ilişkileri ve Karadeniz güvenliği Brüksel'de masaya yatırılacak</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, yarın Brüksel'de Avrupa Birliği (AB) Dış İlişkiler Konseyi kapsamında düzenlenecek Bölgelerarası Güvenlik ve Bağlantısallık Konulu İkinci Bakanlar Toplantısı'na katılacak.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/turkiye-ab-iliskileri-ve-karadeniz-guvenligi-brukselde-masaya-yatirilacak-963337.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meb'den öğrencilere ara tatil desteği
+            milli eğitim bakanlığı (meb) ara tatil için okul öncesine yönelik "okul öncesi eğitim ara tatili aile çocuk etkinlik takvimi", ilkokul ve ortaokul öğrencileri için "arada 1 etkinlik kitapları" ve lise kademesi için "ara tatil rehberi" hazırladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>MEB'den öğrencilere ara tatil desteği</h3>
+                    <p>Milli Eğitim Bakanlığı (MEB) ara tatil için okul öncesine yönelik "Okul Öncesi Eğitim Ara Tatili Aile Çocuk Etkinlik Takvimi", ilkokul ve ortaokul öğrencileri için "Arada 1 Etkinlik Kitapları" ve lise kademesi için "Ara Tatil Rehberi" hazırladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/mebden-ogrencilere-ara-tatil-destegi-963336.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya gerçekten bir 'öpüşme ülkesi' mi?
+            i̇spanya'da, insanların toplum içinde öpüşmesi gündelik bir manzara. ancak ülkenin, kamusal alanda sevgi gösterilerinde bulunma konusundaki bu rahatlığı, baskı ve başkaldırıyla dolu şaşırtıcı bir geçmişi gözler önüne seriyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İspanya gerçekten bir 'öpüşme ülkesi' mi?</h3>
+                    <p>İspanya'da, insanların toplum içinde öpüşmesi gündelik bir manzara. Ancak ülkenin, kamusal alanda sevgi gösterilerinde bulunma konusundaki bu rahatlığı, baskı ve başkaldırıyla dolu şaşırtıcı bir geçmişi gözler önüne seriyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq36gnknx14lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇letişim başkanı duran'dan filistin mesajı
+            i̇letişim başkanı burhanettin duran, türkiye'nin 1967 sınırları temelinde, başkenti doğu kudüs olan bağımsız ve egemen filistin devleti'nin kurulması ve bölgede kalıcı barışın sağlanması için filistin halkının yanında olmayı sürdüreceğini vurguladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İletişim Başkanı Duran'dan Filistin mesajı</h3>
+                    <p>İletişim Başkanı Burhanettin Duran, Türkiye'nin 1967 sınırları temelinde, başkenti Doğu Kudüs olan bağımsız ve egemen Filistin Devleti'nin kurulması ve bölgede kalıcı barışın sağlanması için Filistin halkının yanında olmayı sürdüreceğini vurguladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-durandan-filistin-mesaji-963340.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beyaz saray: trump, putin ve şi çin'de görüşmeyi planlıyor
+            beyaz saray'dan yapılan açıklamaya göre, donald trump, vladimir putin ve şi jinping önümüzdeki hafta çin'de düzenlenecek bir zirve kapsamında biraraya gelmeyi planlıyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beyaz Saray: Trump, Putin ve Şi Çin'de görüşmeyi planlıyor</h3>
+                    <p>Beyaz Saray'dan yapılan açıklamaya göre, Donald Trump, Vladimir Putin ve Şi Jinping önümüzdeki hafta Çin'de düzenlenecek bir zirve kapsamında biraraya gelmeyi planlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cj4gn22rlw0do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'de hava trafiğinin durdurulmasına ne yol açtı?
+            abd'de hava trafik kontrolündeki "iletişim sorunu" nedeniyle yaklaşık dört saat boyunca ülkede tüm hava trafiği durduruldu. flightaware verilerine göre, süreçte 8.500'den fazla uçuş ertelendi ve yaklaşık 8.000 uçuş iptal edildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'de hava trafiğinin durdurulmasına ne yol açtı?</h3>
+                    <p>ABD'de hava trafik kontrolündeki "iletişim sorunu" nedeniyle yaklaşık dört saat boyunca ülkede tüm hava trafiği durduruldu. FlightAware verilerine göre, süreçte 8.500'den fazla uçuş ertelendi ve yaklaşık 8.000 uçuş iptal edildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqx2wyd99w13o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            19. yüzyılda osmanlı'da kölelik var mıydı?
+            eski i̇ngiltere başbakanı boris johnson 19. yüzyılda büyük büyük büyükannesinin çocuk yaşta i̇stanbul'da kapalıçarşı'da köle olarak satıldığını söyledi. "biz johnsonlar kölelikten gelen bir aileyiz" dedi. peki 19. yüzyılda osmanlı'da kölelik var mıydı?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>19. yüzyılda Osmanlı'da kölelik var mıydı?</h3>
+                    <p>Eski İngiltere başbakanı Boris Johnson 19. yüzyılda büyük büyük büyükannesinin çocuk yaşta İstanbul'da Kapalıçarşı'da köle olarak satıldığını söyledi. "Biz Johnsonlar kölelikten gelen bir aileyiz" dedi. Peki 19. yüzyılda Osmanlı'da kölelik var mıydı?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmy8604pv718o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti'nin ilk kurultayı: 160 kişiye çıkarılan pm'de kimler var?
+            yeni parti'nin "türkiye yenileniyor" sloganıyla yaptığı ilk kurultayında ikinci gün 160 kişilik parti meclisi (pm) ve 15 kişilik yüksek disiplin kurulu (ydk) aday listeleri açıklandı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti'nin ilk kurultayı: 160 kişiye çıkarılan PM'de kimler var?</h3>
+                    <p>Yeni Parti'nin "Türkiye yenileniyor" sloganıyla yaptığı ilk kurultayında ikinci gün 160 kişilik Parti Meclisi (PM) ve 15 kişilik Yüksek Disiplin Kurulu (YDK) aday listeleri açıklandı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwlylvd3374po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            300 yıllık gulliver'in gezileri romanı neden bu kadar yanlış anlaşılıyor?
+            i̇lk kez 1726'da yayımlanan jonathan swift'in macera romanı, o günden bu yana pek çok kez kısaltıldı, değiştirildi ve uyarlandı. peki bu eser, "insanlardan nefret eden bir hiciv" mi, yoksa "fantastik bir çocuk masalı" mı?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>300 yıllık Gulliver'in Gezileri romanı neden bu kadar yanlış anlaşılıyor?</h3>
+                    <p>İlk kez 1726'da yayımlanan Jonathan Swift'in macera romanı, o günden bu yana pek çok kez kısaltıldı, değiştirildi ve uyarlandı. Peki bu eser, "insanlardan nefret eden bir hiciv" mi, yoksa "fantastik bir çocuk masalı" mı?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6zjryk78z4ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti kurultayında ilk gün neler yaşandı, özgür özel ne mesajlar verdi?
+            yeni parti, ilk olağan "kuruluş kurultayı"nı 14-15 kasım tarihlerinde ankara'da gerçekleştiriyor. kurultayın ilk gününde özgür özel konuşmasına, "bu salonda yenilgiyi kabul kaybetmeyenleri, teslim olmayanları görüyorum" diyerek başladı. özel'in başkan seçildiği kurultayda ikinci gün pm ve ydk üyeleri belirlenecek.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti kurultayında ilk gün neler yaşandı, Özgür Özel ne mesajlar verdi?</h3>
+                    <p>Yeni Parti, ilk olağan "Kuruluş Kurultayı"nı 14-15 Kasım tarihlerinde Ankara'da gerçekleştiriyor. Kurultayın ilk gününde Özgür Özel konuşmasına, "Bu salonda yenilgiyi kabul kaybetmeyenleri, teslim olmayanları görüyorum" diyerek başladı. Özel'in başkan seçildiği kurultayda ikinci gün PM ve YDK üyeleri belirlenecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq1k9n3d3vrvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rekabet kurumu reytingleri mercek altına aldı
+            rekabet kurumu başkanı birol küle, reyting ölçümlerindeki farklılıkların reklam bütçelerinin kanallar arasında dağılımını, reklam fiyatlarını ve yayıncıların rekabetçi konumlarını etkileyebileceğini söyledi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rekabet Kurumu reytingleri mercek altına aldı</h3>
+                    <p>Rekabet Kurumu Başkanı Birol Küle, reyting ölçümlerindeki farklılıkların reklam bütçelerinin kanallar arasında dağılımını, reklam fiyatlarını ve yayıncıların rekabetçi konumlarını etkileyebileceğini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/rekabet-kurumu-reytingleri-mercek-altina-aldi-963343.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            sigara bırakma polikliniklerine başvuruda tüm zamanların rekoru
+            sağlık bakanlığı, bu yıl sigara bırakma polikliniklerinde 356 bin kişiye hizmet sunulduğunu ve hizmet alan kişi sayısında tüm zamanların en yüksek seviyesine ulaşıldığını duyurdu.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Sigara bırakma polikliniklerine başvuruda tüm zamanların rekoru</h3>
+                    <p>Sağlık Bakanlığı, bu yıl sigara bırakma polikliniklerinde 356 bin kişiye hizmet sunulduğunu ve hizmet alan kişi sayısında tüm zamanların en yüksek seviyesine ulaşıldığını duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/saglik/sigara-birakma-polikliniklerine-basvuruda-tum-zamanlarin-rekoru-963339.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kanada'ya özgü fransızca küfürler nasıl yaygınlaştı?
+            kanada’nın quebec eyaletinde katolikliğin kutsal sözcüklerinden türeyen küfürler, kilise’ye karşı direnişin dilinden kültürel kimliğin simgesine dönüştü
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Kanada'ya özgü Fransızca küfürler nasıl yaygınlaştı?</h3>
+                    <p>Kanada’nın Quebec eyaletinde Katolikliğin kutsal sözcüklerinden türeyen küfürler, Kilise’ye karşı direnişin dilinden kültürel kimliğin simgesine dönüştü</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckd6d60482geo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dünya dışı yaşamın arandığı alışılmadık yerler
+            dünya'dan başka yerlerde yaşam varsa, bu yaşam dünya benzeri yerlerde olmayabilir. i̇şte bilim insanlarının yaşam aradığı sıra dışı yerlerden bazıları.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dünya dışı yaşamın arandığı alışılmadık yerler</h3>
+                    <p>Dünya'dan başka yerlerde yaşam varsa, bu yaşam Dünya benzeri yerlerde olmayabilir. İşte bilim insanlarının yaşam aradığı sıra dışı yerlerden bazıları.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmjrede2p3vro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            belçika'nın liege kentindeki öğrenci gösterilerinde polise 116 yasa dışı eylem suçlaması
+            belçika'nın liege kentinde ekim ayında düzenlenen öğrenci gösterileri sırasında polisin 116 yasa dışı eylemde bulunduğu, bunların 47'sinin fiziksel şiddet içerdiği iddia edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Belçika'nın Liege kentindeki öğrenci gösterilerinde polise 116 yasa dışı eylem suçlaması</h3>
+                    <p>Belçika'nın Liege kentinde ekim ayında düzenlenen öğrenci gösterileri sırasında polisin 116 yasa dışı eylemde bulunduğu, bunların 47'sinin fiziksel şiddet içerdiği iddia edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/belcikanin-liege-kentindeki-ogrenci-gosterilerinde-polise-116-yasa-disi-eylem-suclamasi-963342.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ekimde ortalama sıcaklık 15,3 derece olarak ölçüldü
+            meteoroloji genel müdürlüğünün raporuna göre, türkiye'de ekim ayı ortalama sıcaklığı 15,3 dereceyle 1991-2020 dönemini kapsayan mevsim normallerinin 0,3 derece altında gerçekleşti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Ekimde ortalama sıcaklık 15,3 derece olarak ölçüldü</h3>
+                    <p>Meteoroloji Genel Müdürlüğünün raporuna göre, Türkiye'de ekim ayı ortalama sıcaklığı 15,3 dereceyle 1991-2020 dönemini kapsayan mevsim normallerinin 0,3 derece altında gerçekleşti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/ekimde-ortalama-sicaklik-153-derece-olarak-olculdu-963341.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
