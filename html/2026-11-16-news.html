@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>13</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>12</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-16 13:41</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cjdx1y7p47ydo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Trump, Şi ve Putin'den tarihi zirve: Dünya için nasıl sonuçlar çıkabilir?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ckr5g6207ezro?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>İsrail'de Netanyahu'ya 'sahte seçim hırsızlığı ihbarı' suçlaması: 'Bu bir darbe girişimiydi'</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-brukselde-yunan-mevkidasi-gerapetritis-ile-gorustu-963436.html" target="_blank">
+                <strong>Bakan Fidan, Brüksel'de Yunan mevkidaşı Gerapetritis ile görüştü</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-kacir-cop31in-bir-uygulama-copu-olmasini-onemsiyoruz-963432.html" target="_blank">
+                <strong>Bakan Kacır: COP31'in bir uygulama COP'u olmasını önemsiyoruz</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/dunya/finlandiya-cumhurbaskani-stubbdan-turkiyenin-avrupa-guvenligindeki-rolune-vurgu-963431.html" target="_blank">
+                <strong>Finlandiya Cumhurbaşkanı Stubbdan Türkiyenin Avrupa güvenliğindeki rolüne vurgu</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            trump, şi ve putin'den tarihi zirve: dünya için nasıl sonuçlar çıkabilir?
+            abd, çin ve rusya liderlerinin tarihte ilk kez düzenlenecek üçlü toplantısına yönelik hazırlıklar avrupa'nın dikkatini çekiyor. bazıları bu durumla i̇kinci dünya savaşı sonrasında dünyanın nüfuz alanlarına bölünmesi arasında paralellikler kuruyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Trump, Şi ve Putin'den tarihi zirve: Dünya için nasıl sonuçlar çıkabilir?</h3>
+                    <p>ABD, Çin ve Rusya liderlerinin tarihte ilk kez düzenlenecek üçlü toplantısına yönelik hazırlıklar Avrupa'nın dikkatini çekiyor. Bazıları bu durumla İkinci Dünya Savaşı sonrasında dünyanın nüfuz alanlarına bölünmesi arasında paralellikler kuruyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cjdx1y7p47ydo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇srail'de netanyahu'ya 'sahte seçim hırsızlığı ihbarı' suçlaması: 'bu bir darbe girişimiydi'
+            i̇srail başbakanı binyamin netanyahu'nun ofisinin, geçen ayki genel seçimlerden önce i̇srailli arapların oy verdiği bir partinin üyelerini, seçim yolsuzluğu iddiasına dayanak yapmak için tutuklatmaya çalıştığı iddia edildi. i̇ki i̇srailli muhalif lider olayı "darbe girişimi" olarak tanımladı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İsrail'de Netanyahu'ya 'sahte seçim hırsızlığı ihbarı' suçlaması: 'Bu bir darbe girişimiydi'</h3>
+                    <p>İsrail Başbakanı Binyamin Netanyahu'nun ofisinin, geçen ayki genel seçimlerden önce İsrailli Arapların oy verdiği bir partinin üyelerini, seçim yolsuzluğu iddiasına dayanak yapmak için tutuklatmaya çalıştığı iddia edildi. İki İsrailli muhalif lider olayı "darbe girişimi" olarak tanımladı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckr5g6207ezro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan, brüksel'de yunan mevkidaşı gerapetritis ile görüştü
+            dışişleri bakanı hakan fidan, avrupa birliği dış i̇lişkiler konseyi kapsamında brüksel'de düzenlenen bölgelerarası güvenlik ve bağlantısallık konulu i̇kinci bakanlar toplantısı marjında yunanistan dışişleri bakanı giorgos gerapetritis ile bir araya geldi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Fidan, Brüksel'de Yunan mevkidaşı Gerapetritis ile görüştü</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Avrupa Birliği Dış İlişkiler Konseyi kapsamında Brüksel'de düzenlenen Bölgelerarası Güvenlik ve Bağlantısallık Konulu İkinci Bakanlar Toplantısı marjında Yunanistan Dışişleri Bakanı Giorgos Gerapetritis ile bir araya geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-brukselde-yunan-mevkidasi-gerapetritis-ile-gorustu-963436.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            finlandiya cumhurbaşkanı stubbdan türkiyenin avrupa güvenliğindeki rolüne vurgu
+            finlandiya cumhurbaşkanı alexander stubb, türkiye’nin avrupa güvenliğinin önemli bir aktörü ve vazgeçilmez bir nato müttefiki olduğunu vurgulayarak, ortak çıkarların bulunduğu alanlarda işbirliğinin derinleştirilmesi gerektiğini söyledi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Finlandiya Cumhurbaşkanı Stubbdan Türkiyenin Avrupa güvenliğindeki rolüne vurgu</h3>
+                    <p>Finlandiya Cumhurbaşkanı Alexander Stubb, Türkiye’nin Avrupa güvenliğinin önemli bir aktörü ve vazgeçilmez bir NATO müttefiki olduğunu vurgulayarak, ortak çıkarların bulunduğu alanlarda işbirliğinin derinleştirilmesi gerektiğini söyledi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/finlandiya-cumhurbaskani-stubbdan-turkiyenin-avrupa-guvenligindeki-rolune-vurgu-963431.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            ab, rusya'ya yönelik yaptırım listesini genişletti
+            avrupa birliği (ab), rusya'nın ukrayna ile savaşını finanse etmesine katkı sağladıkları gerekçesiyle 12 kişi ve 101 kuruluşa yaptırım uygulama kararı aldı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>AB, Rusya'ya yönelik yaptırım listesini genişletti</h3>
+                    <p>Avrupa Birliği (AB), Rusya'nın Ukrayna ile savaşını finanse etmesine katkı sağladıkları gerekçesiyle 12 kişi ve 101 kuruluşa yaptırım uygulama kararı aldı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/ab-rusyaya-yonelik-yaptirim-listesini-genisletti-963429.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti'nin ilk kurultayı: 160 kişiye çıkarılan parti meclisi'nde kimler var?
+            yeni parti'nin "türkiye yenileniyor" sloganıyla ankara spor salonu'nda gerçekleştirdiği 1. olağan kurultayı'nın ikinci gününde parti meclisi (pm) ve 15 üyeli yüksek disiplin kurulu (ydk) üyelikleri için seçim yapıldı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Yeni Parti'nin ilk kurultayı: 160 kişiye çıkarılan Parti Meclisi'nde kimler var?</h3>
+                    <p>Yeni Parti'nin "Türkiye Yenileniyor" sloganıyla Ankara Spor Salonu'nda gerçekleştirdiği 1. Olağan Kurultayı'nın ikinci gününde Parti Meclisi (PM) ve 15 üyeli Yüksek Disiplin Kurulu (YDK) üyelikleri için seçim yapıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwlylvd3374po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de russell brand davasının ardından cinsel rıza yaşı tartışması
+            i̇ngiltere'de komedyen ve aktör russell brand'ın tecavüz ve cinsel saldırı suçlarından 10 yıldan fazla hapis cezasına çarptırılmasının ardından, cinsel rıza yaşı tartışmaları başladı. bir kampanya grubu 16 ve 17 yaşındakiler için kademeli rıza yaşı uygulaması için yasa değişikliği talep ediyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İngiltere'de Russell Brand davasının ardından cinsel rıza yaşı tartışması</h3>
+                    <p>İngiltere'de komedyen ve aktör Russell Brand'ın tecavüz ve cinsel saldırı suçlarından 10 yıldan fazla hapis cezasına çarptırılmasının ardından, cinsel rıza yaşı tartışmaları başladı. Bir kampanya grubu 16 ve 17 yaşındakiler için kademeli rıza yaşı uygulaması için yasa değişikliği talep ediyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cvp8678kx3gzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan, brüksel'de maltalı mevkidaşı fearne ile görüştü
+            dışişleri bakanı hakan fidan, brüksel'de malta dışişleri ve avrupa i̇şleri bakanı chris fearne ile bir araya geldi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Fidan, Brüksel'de Maltalı mevkidaşı Fearne ile görüştü</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Brüksel'de Malta Dışişleri ve Avrupa İşleri Bakanı Chris Fearne ile bir araya geldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-brukselde-maltali-mevkidasi-fearne-ile-gorustu-963435.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya'nın mega zenginleri, putin sonrası dönemi hayal etmeye başladı
+            bazı rus işadamları, iş dünyasının iktidarın nimetlerinden yararlandığı 1990'lardaki oligarşi sistemine geri dönmek istiyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya'nın mega zenginleri, Putin sonrası dönemi hayal etmeye başladı</h3>
+                    <p>Bazı Rus işadamları, iş dünyasının iktidarın nimetlerinden yararlandığı 1990'lardaki oligarşi sistemine geri dönmek istiyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ckr5gmy19j61o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            beş ab ülkesi, göçmenler için ruanda'da sınırdışı merkezi kuruyor
+            beş ab ülkesi, almanya, hollanda, avusturya, yunanistan ve danimarka'nın, afrika ülkesi ruanda'da bir mülteci sınırdışı merkezi açacaklarını duyuracakları belirtildi.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Beş AB ülkesi, göçmenler için Ruanda'da sınırdışı merkezi kuruyor</h3>
+                    <p>Beş AB ülkesi, Almanya, Hollanda, Avusturya, Yunanistan ve Danimarka'nın, Afrika ülkesi Ruanda'da bir mülteci sınırdışı merkezi açacaklarını duyuracakları belirtildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cve87n0233k4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            meteoroloji 13 ili sarı kodla uyardı
+            meteoroloji genel müdürlüğü, yarın beklenen kuvvetli yağış nedeniyle 13 il için sarı kodlu uyarıda bulundu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Meteoroloji 13 ili sarı kodla uyardı</h3>
+                    <p>Meteoroloji Genel Müdürlüğü, yarın beklenen kuvvetli yağış nedeniyle 13 il için sarı kodlu uyarıda bulundu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/meteoroloji-13-ili-sari-kodla-uyardi-963433.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: ukrayna'da geçici ateşkes yerine yıllarca sürecek barış istiyoruz
+            kremlin sözcüsü dmitriy peskov, ukrayna'da geçici ateşkes yerine yıllarca sürecek barış istediklerini belirterek, "müzakere süreci ise bizi bu barışa götürmesi gereken bir süreçtir." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Ukrayna'da geçici ateşkes yerine yıllarca sürecek barış istiyoruz</h3>
+                    <p>Kremlin Sözcüsü Dmitriy Peskov, Ukrayna'da geçici ateşkes yerine yıllarca sürecek barış istediklerini belirterek, "Müzakere süreci ise bizi bu barışa götürmesi gereken bir süreçtir." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-ukraynada-gecici-ateskes-yerine-yillarca-surecek-baris-istiyoruz-963427.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            abd'nin üçüncü uçak gemisi de ortadoğu'ya ulaştı
+            abd ordusuna ait theodore roosevelt uçak gemisi ortadoğu'ya ulaştı. gemi, bölgede daha önce faaliyet gösteren uss george h.w. bush ve uss george washington'a katıldı.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>ABD'nin üçüncü uçak gemisi de Ortadoğu'ya ulaştı</h3>
+                    <p>ABD ordusuna ait Theodore Roosevelt uçak gemisi Ortadoğu'ya ulaştı. Gemi, bölgede daha önce faaliyet gösteren USS George H.W. Bush ve USS George Washington'a katıldı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm4gnznnnxvxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kacır: cop31'in bir uygulama cop'u olmasını önemsiyoruz
+            sanayi ve teknoloji bakanı mehmet fatih kacır, "bizler cop31'in bir uygulama cop'u olmasını önemsiyoruz. yani sadece hedeflerin ve programların değil, doğrudan uygulama adımlarının da hayata geçmesine vesile olan bir platform olmasını ümit ediyoruz" dedi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bakan Kacır: COP31'in bir uygulama COP'u olmasını önemsiyoruz</h3>
+                    <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, "Bizler COP31'in bir uygulama COP'u olmasını önemsiyoruz. Yani sadece hedeflerin ve programların değil, doğrudan uygulama adımlarının da hayata geçmesine vesile olan bir platform olmasını ümit ediyoruz" dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-kacir-cop31in-bir-uygulama-copu-olmasini-onemsiyoruz-963432.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rekabet kurulu'ndan siemens'e soruşturma
+            rekabet kurulu, siemens aktiengesellschaft, siemens beteiligungen europa gmbh ve siemens industry software yazılım hizmetleri aş'den oluşan ekonomik bütünlük, siemens'in distribütörü boğaziçi yazılım aş ile bu şirketin 7 bayisi hakkında soruşturma açılmasını kararlaştırdı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Rekabet Kurulu'ndan Siemens'e soruşturma</h3>
+                    <p>Rekabet Kurulu, Siemens Aktiengesellschaft, Siemens Beteiligungen Europa GmbH ve Siemens Industry Software Yazılım Hizmetleri AŞ'den oluşan ekonomik bütünlük, Siemens'in distribütörü Boğaziçi Yazılım AŞ ile bu şirketin 7 bayisi hakkında soruşturma açılmasını kararlaştırdı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/rekabet-kurulundan-siemense-sorusturma-963428.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            80 yaşında ölen 'patronların patronu' uyuşturucu baronu gallardo'nun sıradışı hayatı
+            'patronların patronu' olarak bilinen miguel angel felix gallardo, kolombiya kartelleriyle ortaklık kurarak, and dağları'ndaki üretimi meksika sınırından abd'ye taşıdı.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>80 yaşında ölen 'patronların patronu' uyuşturucu baronu Gallardo'nun sıradışı hayatı</h3>
+                    <p>'Patronların Patronu' olarak bilinen Miguel Angel Felix Gallardo, Kolombiya kartelleriyle ortaklık kurarak, And Dağları'ndaki üretimi Meksika sınırından ABD'ye taşıdı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqj9m00mz8vvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            babacan'dan fon krizi yorumu: 'tarihin en büyük dolandırıcılık vakası'
+            deva partisi genel başkanı ali babacan, en az dört yıldır sürdüğünü belirttiği fon dolandırıcılığının siyasi ve bürokratik destek olmadan gerçekleşmesinin mümkün olmadığını savundu. babacan, dolandırıcılığa konu paraların büyük bölümünün yurt dışına çıkarılmış, olayın elebaşlarının da türkiye'den kaçmış olabileceğini söyledi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Babacan'dan fon krizi yorumu: 'Tarihin en büyük dolandırıcılık vakası'</h3>
+                    <p>DEVA Partisi Genel Başkanı Ali Babacan, en az dört yıldır sürdüğünü belirttiği fon dolandırıcılığının siyasi ve bürokratik destek olmadan gerçekleşmesinin mümkün olmadığını savundu. Babacan, dolandırıcılığa konu paraların büyük bölümünün yurt dışına çıkarılmış, olayın elebaşlarının da Türkiye'den kaçmış olabileceğini söyledi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cme87n2yjr86o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bugün vücut sıcaklığımız neden atalarımızdan daha düşük?
+            150 yıl önce, ortalama insan vücut ısısının günümüzdekinden daha yüksek olduğu görülüyor. bilim insanları bunun tam olarak nedenini hâlâ araştırıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Bugün vücut sıcaklığımız neden atalarımızdan daha düşük?</h3>
+                    <p>150 yıl önce, ortalama insan vücut ısısının günümüzdekinden daha yüksek olduğu görülüyor. Bilim insanları bunun tam olarak nedenini hâlâ araştırıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6wyvv1vvjv5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bolu dağı'nda zorunlu kış lastiği denetimi yapıldı
+            d-100 kara yolunun bolu dağı geçişinde şehirler arası yük ve yolcu taşıyan ticari araçlara yönelik zorunlu kış lastiği uygulaması kapsamında denetim gerçekleştirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Bolu Dağı'nda zorunlu kış lastiği denetimi yapıldı</h3>
+                    <p>D-100 kara yolunun Bolu Dağı geçişinde şehirler arası yük ve yolcu taşıyan ticari araçlara yönelik zorunlu kış lastiği uygulaması kapsamında denetim gerçekleştirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/bolu-daginda-zorunlu-kis-lastigi-denetimi-yapildi-963434.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇talya'da bazı okullara yeniden bomba ve zehirleme tehdidi içeren epostalar gönderildi
+            i̇talya'da geçen hafta binlerce okula gönderilen ve asılsız olduğu belirlenen bomba ihbarı e-postalarının ardından bugün de bazı okullara benzer tehdit içerikli e-postalar gönderildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İtalya'da bazı okullara yeniden bomba ve zehirleme tehdidi içeren epostalar gönderildi</h3>
+                    <p>İtalya'da geçen hafta binlerce okula gönderilen ve asılsız olduğu belirlenen bomba ihbarı e-postalarının ardından bugün de bazı okullara benzer tehdit içerikli e-postalar gönderildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/italyada-bazi-okullara-yeniden-bomba-ve-zehirleme-tehdidi-iceren-e-postalar-gonderildi-963430.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
