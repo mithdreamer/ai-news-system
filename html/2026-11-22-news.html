@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>2</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>9</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>15</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>gümrük</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-22 13:23</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/ck987ypp95ddo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Anthropic'in yükselişiyle dolar milyarderi olan yedi kişi kim?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/yusufeli-barajindan-ekonomiye-16-milyar-lirayi-asan-katki-964140.html" target="_blank">
+                <strong>Yusufeli Barajı'ndan ekonomiye 16 milyar lirayı aşan katkı</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-ortu-karar-taslak-metni-icin-yuksek-cogunlukla-bir-uzlasi-var-964137.html" target="_blank">
+                <strong>Bakan Kurum: Örtü Karar taslak metni için yüksek çoğunlukla bir uzlaşı var</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c5rmg31g88glo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>COP31: 'Antalya Paktı' kabul edilmedi, müzakereler çökebilir</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cm702e55rp84o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Kapadokya'daki antik yeraltı şehrinden iklim dersleri</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            anthropic'in yükselişiyle dolar milyarderi olan yedi kişi kim?
+            bir zamanların bilinmeyen girişimi anthropic, yalnızca beş yıl içinde bir teknoloji devine dönüşerek değeri 1 trilyon doların üzerine çıkan bir şirket haline geldi. şirketin yedi kurucusu, bugün kağıt üzerinde milyarderler kulübüne katılmış durumda
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Anthropic'in yükselişiyle dolar milyarderi olan yedi kişi kim?</h3>
+                    <p>Bir zamanların bilinmeyen girişimi Anthropic, yalnızca beş yıl içinde bir teknoloji devine dönüşerek değeri 1 trilyon doların üzerine çıkan bir şirket haline geldi. Şirketin yedi kurucusu, bugün kağıt üzerinde milyarderler kulübüne katılmış durumda</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck987ypp95ddo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yusufeli barajı'ndan ekonomiye 16 milyar lirayı aşan katkı
+            bakan yumaklı, yusufeli barajı ve hidroelektrik santrali'nin (hes) 4 yaşında olduğunu belirterek, "yusufeli, 275 metre gövde yüksekliği, ürettiği 5,6 milyar kilovatsaat elektrik ve ekonomimize sağladığı 16,7 milyar lirayı aşan katkıyla ülkemizin gururu olmaya devam ediyor" açıklamasını yaptı.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Yusufeli Barajı'ndan ekonomiye 16 milyar lirayı aşan katkı</h3>
+                    <p>Bakan Yumaklı, Yusufeli Barajı ve Hidroelektrik Santrali'nin (HES) 4 yaşında olduğunu belirterek, "Yusufeli, 275 metre gövde yüksekliği, ürettiği 5,6 milyar kilovatsaat elektrik ve ekonomimize sağladığı 16,7 milyar lirayı aşan katkıyla ülkemizin gururu olmaya devam ediyor" açıklamasını yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/yusufeli-barajindan-ekonomiye-16-milyar-lirayi-asan-katki-964140.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan kurum: örtü karar taslak metni için yüksek çoğunlukla bir uzlaşı var
+            cop31 başkanı ve çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, zirvedeki son "örtü karar" taslak metnine ilişkin, "gördüğümüz yüksek çoğunlukla bir uzlaşı var. çok ufak tefek konular kaldı. bu karar çıktığı zaman çok önemli işler başarmış olacağız." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Kurum: Örtü Karar taslak metni için yüksek çoğunlukla bir uzlaşı var</h3>
+                    <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, zirvedeki son "Örtü Karar" taslak metnine ilişkin, "Gördüğümüz yüksek çoğunlukla bir uzlaşı var. Çok ufak tefek konular kaldı. Bu karar çıktığı zaman çok önemli işler başarmış olacağız." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-ortu-karar-taslak-metni-icin-yuksek-cogunlukla-bir-uzlasi-var-964137.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cop31: 'antalya paktı' kabul edilmedi, müzakereler çökebilir
+            20 kasım cuma günü sona ermesi gereken birleşmiş milletler (bm) iklim konferansı cop31'de uzayan görüşmelerin ardından antalya paktı adı verilen bir taslak yayımlandı. avrupa birliği ve panama'nın teklifi resmen reddetmesiyle müzakereler çökmenin eşiğine geldi. antalya'daki konferanstan son gelişmeleri aktarıyoruz.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>COP31: 'Antalya Paktı' kabul edilmedi, müzakereler çökebilir</h3>
+                    <p>20 Kasım Cuma günü sona ermesi gereken Birleşmiş Milletler (BM) iklim konferansı COP31'de uzayan görüşmelerin ardından Antalya Paktı adı verilen bir taslak yayımlandı. Avrupa Birliği ve Panama'nın teklifi resmen reddetmesiyle müzakereler çökmenin eşiğine geldi. Antalya'daki konferanstan son gelişmeleri aktarıyoruz.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c5rmg31g88glo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            kapadokya'daki antik yeraltı şehrinden iklim dersleri
+            yüzyıllar önce kapadokyalılar düşmanlarından kaçmak için yer altına sığınmış ve aşırı hava koşullarından da korunmuşlardı. bugün ise yer altı mağaraları iklim krizinde yeniden bir çözüm sunabilir.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Kapadokya'daki antik yeraltı şehrinden iklim dersleri</h3>
+                    <p>Yüzyıllar önce Kapadokyalılar düşmanlarından kaçmak için yer altına sığınmış ve aşırı hava koşullarından da korunmuşlardı. Bugün ise yer altı mağaraları iklim krizinde yeniden bir çözüm sunabilir.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm702e55rp84o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            can atalay'dan ai̇hm kararı sonrası tahliye çağrısı
+            milletvekilliği düşürülmüş tutuklu avukat can atalay, avrupa i̇nsan hakları mahkemesi'nin (ai̇hm) hakkındaki kararının ardından derhal tahliye edilmesini ve seçildiği hatay milletvekili olarak meclis çalışmalarına katılmasının sağlanmasını istedi
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Can Atalay'dan AİHM kararı sonrası tahliye çağrısı</h3>
+                    <p>Milletvekilliği düşürülmüş tutuklu avukat Can Atalay, Avrupa İnsan Hakları Mahkemesi'nin (AİHM) hakkındaki kararının ardından derhal tahliye edilmesini ve seçildiği Hatay milletvekili olarak Meclis çalışmalarına katılmasının sağlanmasını istedi</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c3y0xnx8vk5ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            22 il için 'sarı' kodlu uyarı: fırtına ve yağmur geliyor
+            yeni haftanın ilk günlerinde yurt genelinde yağış ve kuvvetli rüzgar etkili olacak. batı karadeniz, marmara ve ege'de fırtına etkisini gün boyu sürdürecek. yurdun doğusunda ise sağanak, yüksek kesimlerde ise karla karışık yağmur ve kar bekleniyor. 22 il için 'sarı' kodlu uyarı verilirken burada yaşayan vatandaşlardan tedbirli olmaları istendi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>22 il için 'sarı' kodlu uyarı: Fırtına ve yağmur geliyor</h3>
+                    <p>Yeni haftanın ilk günlerinde yurt genelinde yağış ve kuvvetli rüzgar etkili olacak. Batı Karadeniz, Marmara ve Ege'de fırtına etkisini gün boyu sürdürecek. Yurdun doğusunda ise sağanak, yüksek kesimlerde ise karla karışık yağmur ve kar bekleniyor. 22 il için 'sarı' kodlu uyarı verilirken burada yaşayan vatandaşlardan tedbirli olmaları istendi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/22-il-icin-sari-kodlu-uyari-firtina-ve-yagmur-geliyor-964133.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cop31 müzakereleri fosil yakıt tartışmalarında düğümlendi
+            antalya'da 20 kasım'da sona ermesi planlanan bm'nin iklim konferansı cop31'de ülkeler nihai bir anlaşmaya varamadı. delegeler bir karar metninde uzlaşmak için müzakerelerini sürdürüyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi</h3>
+                    <p>Antalya'da 20 Kasım'da sona ermesi planlanan BM'nin iklim konferansı COP31'de ülkeler nihai bir anlaşmaya varamadı. Delegeler bir karar metninde uzlaşmak için müzakerelerini sürdürüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cq8j40d29kneo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul için fırtına ve kuvvetli sağanak uyarısı
+            i̇stanbul valiliği, kentte yarın fırtına ve kuvvetli sağanağın beklendiğini açıkladı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul için fırtına ve kuvvetli sağanak uyarısı</h3>
+                    <p>İstanbul Valiliği, kentte yarın fırtına ve kuvvetli sağanağın beklendiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-icin-firtina-ve-kuvvetli-saganak-uyarisi-964139.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            zelenski: bu hafta ukrayna'nın 20 bölgesi, rus füzeleriyle vuruldu
+            ukrayna devlet başkanı volodimir zelenski, rus ordusunun son bir haftada ülkesinin 20 farklı bölgesini hedef aldığını bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Zelenski: Bu hafta Ukrayna'nın 20 bölgesi, Rus füzeleriyle vuruldu</h3>
+                    <p>Ukrayna Devlet Başkanı Volodimir Zelenski, Rus ordusunun son bir haftada ülkesinin 20 farklı bölgesini hedef aldığını bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/zelenski-bu-hafta-ukraynanin-20-bolgesi-rus-fuzeleriyle-vuruldu-964135.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ran devrim muhafızları: hürmüz boğazı'nın doğusunda abd yapımı i̇ha düşürüldü
+            i̇ran devrim muhafızları ordusu, hürmüz boğazı'nın doğusunda abd yapımı mq-1 tipi insansız hava aracının (i̇ha) ülke hava savunma sistemleri tarafından düşürüldüğünü öne sürdü.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İran Devrim Muhafızları: Hürmüz Boğazı'nın doğusunda ABD yapımı İHA düşürüldü</h3>
+                    <p>İran Devrim Muhafızları Ordusu, Hürmüz Boğazı'nın doğusunda ABD yapımı MQ-1 tipi insansız hava aracının (İHA) ülke hava savunma sistemleri tarafından düşürüldüğünü öne sürdü.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-hurmuz-bogazinin-dogusunda-abd-yapimi-iha-dusuruldu-964132.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            son dönemde yaşanan teknolojik kesinti, saldırı ve güvenlik açıklarının sebebi ne?
+            kesintiler ve bilgi ile teknoloji arızaları yaygın olsa da bu ölçekte yaşanması alışılmadık bir durum. bunların birbiriyle bağlantılı olduğuna dair hiçbir kanıt yok ame sürekli yaşanan kesintiler endişe verici olabiliyor.
+            teknoloji
+            bbc türkçe
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Son dönemde yaşanan teknolojik kesinti, saldırı ve güvenlik açıklarının sebebi ne?</h3>
+                    <p>Kesintiler ve bilgi ile teknoloji arızaları yaygın olsa da bu ölçekte yaşanması alışılmadık bir durum. Bunların birbiriyle bağlantılı olduğuna dair hiçbir kanıt yok ame sürekli yaşanan kesintiler endişe verici olabiliyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cw7728xx70z5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            hgs icra takiplerine soruşturma
+            adalet bakanı akın gürlek, hgs icra takipleriyle ilgili iddialar üzerine i̇stanbul cumhuriyet başsavcılığı tarafından soruşturma başlatıldığını duyurdu. bakan gürlek, "hiç kimse, hukuki süreçleri ve icra mekanizmalarını kötüye kullanarak vatandaşlarımızı haksız borç yükü altında bırakamaz" açıklamasını yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>HGS icra takiplerine soruşturma</h3>
+                    <p>Adalet Bakanı Akın Gürlek, HGS icra takipleriyle ilgili iddialar üzerine İstanbul Cumhuriyet Başsavcılığı tarafından soruşturma başlatıldığını duyurdu. Bakan Gürlek, "Hiç kimse, hukuki süreçleri ve icra mekanizmalarını kötüye kullanarak vatandaşlarımızı haksız borç yükü altında bırakamaz" açıklamasını yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/hgs-icra-takiplerine-sorusturma-964141.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'i̇nsanlar konuşmaktan çekiniyor': altı erkekten birinde görülen varikosel hastalığı nedir?
+            dünyanın tedavi edilebilir en yaygın erkek kısırlığı hastalığı olan varikosel, her altı erkekten birini etkiliyor. ancak çoğu erkeğin teşhis alana kadar hastalıktan haberi bile olmuyor. peki bu hastalık teşhis ve tedavi süreci nasıl ilerliyor? ameliyat olanlar ne diyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>'İnsanlar konuşmaktan çekiniyor': Altı erkekten birinde görülen varikosel hastalığı nedir?</h3>
+                    <p>Dünyanın tedavi edilebilir en yaygın erkek kısırlığı hastalığı olan varikosel, her altı erkekten birini etkiliyor. Ancak çoğu erkeğin teşhis alana kadar hastalıktan haberi bile olmuyor. Peki bu hastalık teşhis ve tedavi süreci nasıl ilerliyor? Ameliyat olanlar ne diyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2l5jn0r8q8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yeni 'bond kızı' kim olacak?
+            pattinson'ın 007 olarak açıklanmasının ardından yorumcular, başrol kadın oyuncusunun kim olacağını tahmin etmeye çalışıyor. ancak "bond kızı" ile ilgili daha büyük bir soru daha var: bu rol artık değişmeli mi?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni 'Bond kızı' kim olacak?</h3>
+                    <p>Pattinson'ın 007 olarak açıklanmasının ardından yorumcular, başrol kadın oyuncusunun kim olacağını tahmin etmeye çalışıyor. Ancak "Bond kızı" ile ilgili daha büyük bir soru daha var: Bu rol artık değişmeli mi?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqr7g82mg2llo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            oruç reis 50 kişilik ekibiyle pakistan açıklarında görevde
+            oruç reis sismik araştırma gemisi, somali'deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında pakistan açıklarında sismik araştırma çalışmalarına başladı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Oruç Reis 50 kişilik ekibiyle Pakistan açıklarında görevde</h3>
+                    <p>Oruç Reis Sismik Araştırma Gemisi, Somali'deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında Pakistan açıklarında sismik araştırma çalışmalarına başladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/oruc-reis-50-kisilik-ekibiyle-pakistan-aciklarinda-gorevde-964138.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            arap koalisyonu: husilerin riyad bölgesine yönelik i̇ha saldırısı engellendi
+            yemen'deki meşru hükümete destek veren suudi arabistan öncülüğündeki arap koalisyonu, i̇ran destekli husilerin suudi arabistan'ın başkenti riyad bölgesine düzenlediği insansız hava aracı (i̇ha) saldırısının önlendiğini bildirdi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Arap Koalisyonu: Husilerin Riyad bölgesine yönelik İHA saldırısı engellendi</h3>
+                    <p>Yemen'deki meşru hükümete destek veren Suudi Arabistan öncülüğündeki Arap Koalisyonu, İran destekli Husilerin Suudi Arabistan'ın başkenti Riyad bölgesine düzenlediği insansız hava aracı (İHA) saldırısının önlendiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/arap-koalisyonu-husilerin-riyad-bolgesine-yonelik-iha-saldirisi-engellendi-964136.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            antalya kepez belediyesi'ne soruşturma: 20 kişi gözaltına alındı
+            antalya cumhuriyet başsavcılığı tarafından antalya kepez belediyesi'ne karşı yürütülen soruşturma kapsamında 20 kişinin gözaltına alındığı bildirildi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Antalya Kepez Belediyesi'ne soruşturma: 20 kişi gözaltına alındı</h3>
+                    <p>Antalya Cumhuriyet Başsavcılığı tarafından Antalya Kepez Belediyesi'ne karşı yürütülen soruşturma kapsamında 20 kişinin gözaltına alındığı bildirildi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6y0xy47q4wpo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            galler prensesi kate yeni belgeselde kanser yolculuğunu anlatıyor
+            bbc'nin yeni belgeseli galler prensesi catherine'in kanser sürecini anlatıyor. prenses, "kanser teşhisinin sizde değiştirdiği şeylerin çok daha derin bir boyutu var" diyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Galler Prensesi Kate yeni belgeselde kanser yolculuğunu anlatıyor</h3>
+                    <p>BBC'nin yeni belgeseli Galler Prensesi Catherine'in kanser sürecini anlatıyor. Prenses, "Kanser teşhisinin sizde değiştirdiği şeylerin çok daha derin bir boyutu var" diyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6z7490p3l8no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GÜMRÜK</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            belçika'da ulusal grev nedeniyle yarın tüm uçuşlar iptal edilecek
+            belçika'da federal hükümetin kemer sıkma politikalarını protesto etmek amacıyla yarın düzenlenecek ulusal grev ve gösteri nedeniyle ülkedeki havalimanlarında tüm uçuşlar iptal edilirken, toplu ulaşım ve atık toplama hizmetlerinde de ciddi aksamalar yaşanması bekleniyor.
+            gümrük
+            trt haber
+            "
+                    data-category="gümrük"
+                >
+                    <h3>Belçika'da ulusal grev nedeniyle yarın tüm uçuşlar iptal edilecek</h3>
+                    <p>Belçika'da federal hükümetin kemer sıkma politikalarını protesto etmek amacıyla yarın düzenlenecek ulusal grev ve gösteri nedeniyle ülkedeki havalimanlarında tüm uçuşlar iptal edilirken, toplu ulaşım ve atık toplama hizmetlerinde de ciddi aksamalar yaşanması bekleniyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/belcikada-ulusal-grev-nedeniyle-yarin-tum-ucuslar-iptal-edilecek-964134.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
