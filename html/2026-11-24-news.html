@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>17</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>ekonomi</strong>
+            <span>4</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>spor</strong>
+            <span>3</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-24 15:55</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c61wr385xervo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Schengen vize serbestisi için Türkiye'yi hangi zorluklar bekliyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/egitim/bakan-tekin-ogretmenlere-seslendi-siz-var-oldugunuz-icin-basarili-olacagiz-964338.html" target="_blank">
+                <strong>Bakan Tekin öğretmenlere seslendi: Siz var olduğunuz için başarılı olacağız</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/c9p836157vreo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Hikmet Çetin 89 yaşında hayatını kaybetti</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cwn70zz4zg0lo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Libya'daki Rus gemisine saldırı, Ukrayna savaşının yayılmasına dair ne gösteriyor?</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/ticaret-bakanligindan-sislideki-otomotiv-servisine-cezai-islem-964345.html" target="_blank">
+                <strong>Ticaret Bakanlığı'ndan Şişli'deki otomotiv servisine cezai işlem</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            schengen vize serbestisi için türkiye'yi hangi zorluklar bekliyor?
+            dışişleri bakanı hakan fidan'ın son açıklamaları, türkiye ile ab arasında yıllardır dondurulmuş olan vize serbestisi diyaloğunun yeniden canlandığını ortaya koydu. ankara'daki diplomatik kaynaklara göre, vize serbestisi diyaloğu teknik ve siyasi nedenlerden dolayı zorlu bir süreçten geçecek.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Schengen vize serbestisi için Türkiye'yi hangi zorluklar bekliyor?</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan'ın son açıklamaları, Türkiye ile AB arasında yıllardır dondurulmuş olan vize serbestisi diyaloğunun yeniden canlandığını ortaya koydu. Ankara'daki diplomatik kaynaklara göre, vize serbestisi diyaloğu teknik ve siyasi nedenlerden dolayı zorlu bir süreçten geçecek.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c61wr385xervo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bakan tekin öğretmenlere seslendi: siz var olduğunuz için başarılı olacağız
+            milli eğitim bakanı yusuf tekin, 24 kasım öğretmenler günü dolayısıyla eğitimcilerle bir araya geldi. tekin, "hem toplumun ihtiyaçlarını, toplumun eğitimden beklentilerini hem uluslararası gelişmeleri, uluslararası yönelimlerini hem de okullarımızın ve öğretmenlerimizin itibarını maksimum düzeyde karşılayacak şekilde çalışıyoruz" açıklamasını yaptı
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Tekin öğretmenlere seslendi: Siz var olduğunuz için başarılı olacağız</h3>
+                    <p>Milli Eğitim Bakanı Yusuf Tekin, 24 Kasım Öğretmenler günü dolayısıyla eğitimcilerle bir araya geldi. Tekin, "Hem toplumun ihtiyaçlarını, toplumun eğitimden beklentilerini hem uluslararası gelişmeleri, uluslararası yönelimlerini hem de okullarımızın ve öğretmenlerimizin itibarını maksimum düzeyde karşılayacak şekilde çalışıyoruz" açıklamasını yaptı</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/bakan-tekin-ogretmenlere-seslendi-siz-var-oldugunuz-icin-basarili-olacagiz-964338.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            libya'daki rus gemisine saldırı, ukrayna savaşının yayılmasına dair ne gösteriyor?
+            ukrayna devlet başkanı volodimir zelenskiy, pazar günü biri savaş gemisi olmak üzere rusya'ya ait iki gemiyi libya kıyılarında vurduklarını kaydetti.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Libya'daki Rus gemisine saldırı, Ukrayna savaşının yayılmasına dair ne gösteriyor?</h3>
+                    <p>Ukrayna Devlet Başkanı Volodimir Zelenskiy, Pazar günü biri savaş gemisi olmak üzere Rusya'ya ait iki gemiyi Libya kıyılarında vurduklarını kaydetti.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cwn70zz4zg0lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            9 bin 400'den fazla filistinli esir işkence ve açlık çekiyor
+            katil i̇srail'in hapishanelerindeki 9 bin 400'den fazla filistinli esirin her gün işkence, aç bırakma ve kötü muameleye maruz kaldığını belirterek, tedavi haklarından mahrum kalmalarının hayatları için ciddi tehdit oluşturduğu uyarısında bulunuldu.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>9 bin 400'den fazla Filistinli esir işkence ve açlık çekiyor</h3>
+                    <p>Katil İsrail'in hapishanelerindeki 9 bin 400'den fazla Filistinli esirin her gün işkence, aç bırakma ve kötü muameleye maruz kaldığını belirterek, tedavi haklarından mahrum kalmalarının hayatları için ciddi tehdit oluşturduğu uyarısında bulunuldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/9-bin-400den-fazla-filistinli-esir-iskence-ve-aclik-cekiyor-964340.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            hikmet çetin 89 yaşında hayatını kaybetti
+            cumhuriyet halk partisi'nin eski liderlerinden hikmet çetin, tedavi gördüğü hastanede 89 yaşında hayatını kaybetti. çetin, chp genel başkanlığının yanı sıra dışişleri bakanı ve nato'nun afganistan'daki ilk kıdemli sivil temsilcisi olarak görev yapmıştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Hikmet Çetin 89 yaşında hayatını kaybetti</h3>
+                    <p>Cumhuriyet Halk Partisi'nin eski liderlerinden Hikmet Çetin, tedavi gördüğü hastanede 89 yaşında hayatını kaybetti. Çetin, CHP genel başkanlığının yanı sıra Dışişleri Bakanı ve NATO'nun Afganistan'daki ilk kıdemli sivil temsilcisi olarak görev yapmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c9p836157vreo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            demirtaş: süreci bozacak davranışlardan kaçınmak ahlaki zorunluluktur
+            on yıldır cezaevinde bulunan eski hdp eş genel başkanı selahattin demirtaş yaptığı yeni açıklamada, "sürecin ritmini, motivasyonunu bozacak her türlü davranıştan kaçınmak ahlaki bir zorunluluktur" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Demirtaş: Süreci bozacak davranışlardan kaçınmak ahlaki zorunluluktur</h3>
+                    <p>On yıldır cezaevinde bulunan eski HDP Eş Genel Başkanı Selahattin Demirtaş yaptığı yeni açıklamada, "Sürecin ritmini, motivasyonunu bozacak her türlü davranıştan kaçınmak ahlaki bir zorunluluktur" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmwy0wy2gr84o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            nvidia ceo'su huang'ın göreve dönmesiyle şirketin hisseleri %31 arttı
+            nvidia yönetim kurulu, evlilik dışı ilişkisiyle ilgili tartışmaların ardından 12 kasım'da istifa eden ceo jensen huang'ı derhal geçerli olmak üzere yeniden göreve getirdi. şirketin hisseleri yüzde 30'un üzerinde artış gösterdi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Nvidia CEO'su Huang'ın göreve dönmesiyle şirketin hisseleri %31 arttı</h3>
+                    <p>Nvidia yönetim kurulu, evlilik dışı ilişkisiyle ilgili tartışmaların ardından 12 Kasım'da istifa eden CEO Jensen Huang'ı derhal geçerli olmak üzere yeniden göreve getirdi. Şirketin hisseleri yüzde 30'un üzerinde artış gösterdi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm5y1evywyrqo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dsö: gazze'de menenjit vakalarında bildirilen artışı yakından takip ediyoruz
+            dünya sağlık örgütü (dsö) sözcüsü christian lindmeier, gazze'de menenjit vakalarında bildirilen artışı yakından takip ettiklerini bildirerek, "şu an itibarıyla 533'ten fazla vaka ve 4 ölüm kaydedildi." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>DSÖ: Gazze'de menenjit vakalarında bildirilen artışı yakından takip ediyoruz</h3>
+                    <p>Dünya Sağlık Örgütü (DSÖ) Sözcüsü Christian Lindmeier, Gazze'de menenjit vakalarında bildirilen artışı yakından takip ettiklerini bildirerek, "Şu an itibarıyla 533'ten fazla vaka ve 4 ölüm kaydedildi." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/dso-gazzede-menenjit-vakalarinda-bildirilen-artisi-yakindan-takip-ediyoruz-964343.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rami kütüphanesi'nde ileri düzey masal anlatıcılığı eğitimi düzenlenecek
+            rami kütüphanesi, sözlü kültür mirasının önemli unsurlarından masal anlatıcılığı geleneğini yaşatmak ve bu alanda yeni anlatıcılar yetiştirmek amacıyla "drama teknikleri ile i̇leri düzey masal anlatıcılığı eğitimi" programı düzenleyecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Rami Kütüphanesi'nde ileri düzey masal anlatıcılığı eğitimi düzenlenecek</h3>
+                    <p>Rami Kütüphanesi, sözlü kültür mirasının önemli unsurlarından masal anlatıcılığı geleneğini yaşatmak ve bu alanda yeni anlatıcılar yetiştirmek amacıyla "Drama Teknikleri ile İleri Düzey Masal Anlatıcılığı Eğitimi" programı düzenleyecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/rami-kutuphanesinde-ileri-duzey-masal-anlaticiligi-egitimi-duzenlenecek-964336.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            fatma betül sayan kaya'ya ev hapsi kararıyla tahliye
+            fon soruşturmasında tutuklanan fatma betül sayan kaya hakkında ev hapsi ile tahliye kararı verildi. fatma betül sayan kaya 6 kasım'da şüpheli sıfatıyla ikinci kez ifade vermesi sonrası tutuklanmıştı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Fatma Betül Sayan Kaya'ya ev hapsi kararıyla tahliye</h3>
+                    <p>Fon soruşturmasında tutuklanan Fatma Betül Sayan Kaya hakkında ev hapsi ile tahliye kararı verildi. Fatma Betül Sayan Kaya 6 Kasım'da şüpheli sıfatıyla ikinci kez ifade vermesi sonrası tutuklanmıştı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cv2d9594753go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            papa francesco: 'şeytanı üç kez gördüm'
+            geçtiğimiz yıl hayatını kaybeden papa francesco, özel günlüğünden kamuoyuna yansıyan yeni bölümlerde, hayatı boyunca üç kez şeytanı gördüğünü yazıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Papa Francesco: 'Şeytanı üç kez gördüm'</h3>
+                    <p>Geçtiğimiz yıl hayatını kaybeden Papa Francesco, özel günlüğünden kamuoyuna yansıyan yeni bölümlerde, hayatı boyunca üç kez şeytanı gördüğünü yazıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/ck1wr3w05qd2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            yök'ten uluslararası öğrencilerine kayıt kolaylığı sağlayacak düzenleme
+            türkiye'ye giriş amacıyla 30 kasım'dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 aralık'a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>YÖK'ten uluslararası öğrencilerine kayıt kolaylığı sağlayacak düzenleme</h3>
+                    <p>Türkiye'ye giriş amacıyla 30 Kasım'dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 Aralık'a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/egitim/yokten-uluslararasi-ogrencilerine-kayit-kolayligi-saglayacak-duzenleme-964344.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            eski tbmm başkanı hikmet çetin yaşamını yitirdi
+            eski türkiye büyük millet meclisi (tbmm) başkanı hikmet çetin 89 yaşında hayatını kaybetti.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Eski TBMM Başkanı Hikmet Çetin yaşamını yitirdi</h3>
+                    <p>Eski Türkiye Büyük Millet Meclisi (TBMM) Başkanı Hikmet Çetin 89 yaşında hayatını kaybetti.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/eski-tbmm-baskani-hikmet-cetin-yasamini-yitirdi-964342.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">EKONOMI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            ticaret bakanlığı'ndan şişli'deki otomotiv servisine cezai işlem
+            ticaret bakanlığı, şikayet üzerine i̇stanbul'un şişli ilçesinde denetlenen otomotiv servisine, tespit edilen aykırılıklar nedeniyle cezai işlem uygulandığını ve konunun incelenmek üzere reklam kuruluna sevk edildiğini duyurdu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Ticaret Bakanlığı'ndan Şişli'deki otomotiv servisine cezai işlem</h3>
+                    <p>Ticaret Bakanlığı, şikayet üzerine İstanbul'un Şişli ilçesinde denetlenen otomotiv servisine, tespit edilen aykırılıklar nedeniyle cezai işlem uygulandığını ve konunun incelenmek üzere Reklam Kuruluna sevk edildiğini duyurdu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/ticaret-bakanligindan-sislideki-otomotiv-servisine-cezai-islem-964345.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bahçeli: 'yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz'
+            mhp genel başkanı devlet bahçeli, partisinin meclis grup toplantısında yaptığı konuşmada yolsuzluk, yoksulluk, adalet, orta sınıfın ekonomik durumu ve sürece ilişkin değerlendirmelerde bulundu.
+            ekonomi
+            bbc türkçe
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Bahçeli: 'Yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz'</h3>
+                    <p>MHP Genel Başkanı Devlet Bahçeli, partisinin Meclis grup toplantısında yaptığı konuşmada yolsuzluk, yoksulluk, adalet, orta sınıfın ekonomik durumu ve sürece ilişkin değerlendirmelerde bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqgm3j0zjvgyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            altın, gün sonunda 6 milyon 140 bin liraya çıktı
+            borsa i̇stanbul kıymetli madenler ve kıymetli taşlar piyasası'nda (kmktp) standart altının kilogram fiyatı, günün sonunda 6 milyon 140 bin liraya yükseldi.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Altın, gün sonunda 6 milyon 140 bin liraya çıktı</h3>
+                    <p>Borsa İstanbul Kıymetli Madenler ve Kıymetli Taşlar Piyasası'nda (KMKTP) standart altının kilogram fiyatı, günün sonunda 6 milyon 140 bin liraya yükseldi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/altin-gun-sonunda-6-milyon-140-bin-liraya-cikti-964341.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küresel ham çelik üretimi azaldı
+            küresel ham çelik üretimi ekimde geçen yılın aynı ayına göre yüzde 1,1 azalarak 142,4 milyon ton oldu.
+            ekonomi
+            trt haber
+            "
+                    data-category="ekonomi"
+                >
+                    <h3>Küresel ham çelik üretimi azaldı</h3>
+                    <p>Küresel ham çelik üretimi ekimde geçen yılın aynı ayına göre yüzde 1,1 azalarak 142,4 milyon ton oldu.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/kuresel-ham-celik-uretimi-azaldi-964339.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">SPOR</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            galatasaray, aston villa karşısına osimhen'siz çıkıyor
+            galatasaray, uefa şampiyonlar ligi'nin beşinci haftasında evinde i̇ngiltere temsilcisi aston villa'yı ağırlıyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Galatasaray, Aston Villa karşısına Osimhen'siz çıkıyor</h3>
+                    <p>Galatasaray, UEFA Şampiyonlar Ligi'nin beşinci haftasında evinde İngiltere temsilcisi Aston Villa'yı ağırlıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            futbolun yeni genç yıldızı 16 yaşındaki jj gabriel'i neler bekliyor?
+            yılın en büyük transfer dedikodularından biri, henüz a takımda hiç resmi maça çıkmamış 16 yaşında bir oyuncu etrafında dönüyor.
+            spor
+            bbc türkçe
+            "
+                    data-category="spor"
+                >
+                    <h3>Futbolun yeni genç yıldızı 16 yaşındaki JJ Gabriel'i neler bekliyor?</h3>
+                    <p>Yılın en büyük transfer dedikodularından biri, henüz A takımda hiç resmi maça çıkmamış 16 yaşında bir oyuncu etrafında dönüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqr7gz4r1kvvo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dursun özbek: netanyahu hükümeti, kulübümüzü uefa'ya şikayet etmiş
+            galatasaray başkanı dursun özbek, sarı kırmızılı taraftarların filistin halkına destek amacıyla açtığı pankartlar nedeniyle katil i̇srail hükümeti tarafından uefa'ya şikayet edildiğini açıkladı.
+            spor
+            trt haber
+            "
+                    data-category="spor"
+                >
+                    <h3>Dursun Özbek: Netanyahu hükümeti, kulübümüzü UEFA'ya şikayet etmiş</h3>
+                    <p>Galatasaray Başkanı Dursun Özbek, sarı kırmızılı taraftarların Filistin halkına destek amacıyla açtığı pankartlar nedeniyle katil İsrail hükümeti tarafından UEFA'ya şikayet edildiğini açıkladı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/dursun-ozbek-netanyahu-hukumeti-kulubumuzu-uefaya-sikayet-etmis-964337.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
