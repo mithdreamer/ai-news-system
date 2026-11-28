@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Günün Haberleri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            line-height: 1.6;
+        }
+
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: 1px solid #ddd;
+            padding: 12px 20px;
+            border-radius: 8px;
+            min-width: 140px;
+            background: #f7f7f7;
+        }
+
+        .stat-card strong {
+            display: block;
+            color: #444;
+        }
+
+        .stat-card span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .featured-list {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px 24px;
+            background: #fafafa;
+            margin-bottom: 35px;
+        }
+
+        .featured-list li {
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 6px;
+        }
+
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .news-card h3 {
+            margin-top: 0;
+        }
+
+        .source {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0066cc;
+        }
+        .search-box {
+    margin: 25px 0;
+    }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+            .category-filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 20px 0 30px;
+            }
+
+            .category-filter-btn {
+                padding: 8px 14px;
+                border: 1px solid #ddd;
+                border-radius: 999px;
+                background: #f7f7f7;
+                cursor: pointer;
+            }
+
+            .category-filter-btn.active {
+                background: #222;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+        <nav>
+            <a href="index.html">Güncel Haberler</a> |
+            <a href="archive.html">Arşiv</a> |
+            <a href="search.html">Arama</a>
+        </nav>
+    <h1>Günün Haberleri</h1>
+    <div class="search-box">
+    <input
+        type="text"
+        id="home-search-input"
+        placeholder="Güncel haberlerde ara..."
+    >
+</div>
+
+<div class="category-filters">
+    <button class="category-filter-btn active" data-category="all">Tümü</button>
+    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
+    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
+    <button class="category-filter-btn" data-category="dünya">Dünya</button>
+    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
+    <button class="category-filter-btn" data-category="genel">Genel</button>
+</div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong>toplam_haber</strong>
+            <span>28</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>dünya</strong>
+            <span>6</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>genel</strong>
+            <span>21</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>teknoloji</strong>
+            <span>1</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>generated_at</strong>
+            <span>2026-11-28 14:15</span>
+        </div>
+
+    </div>
+
+    <h2>🔥 Öne Çıkan Haberler</h2>
+    <ul class="featured-list">
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-filistin-bizim-icin-en-onemli-ahlaki-pusula-964746.html" target="_blank">
+                <strong>Bakan Fidan: Filistin bizim için en önemli ahlaki pusula</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmpqrvg1g0r5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Yeni Parti lideri Özel, cumhurbaşkanı adayıyla ilgili 4 Aralık'ta açıklama yapacağını duyurdu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.bbc.com/turkce/articles/cmx289847rl5o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <strong>Bolu Yedigöller'de gezi sırasında kaybolan on çocuk ve üç personel bulundu</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/ekonomi/isikhan-onumuzdeki-yil-calisma-hayatimiz-acisindan-yogun-bir-yil-olacak-964747.html" target="_blank">
+                <strong>Işıkhan: Önümüzdeki yıl çalışma hayatımız açısından yoğun bir yıl olacak</strong>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.trthaber.com/haber/gundem/ozgur-ozel-ve-4-milletvekili-icin-fezleke-talebi-964742.html" target="_blank">
+                <strong>Özgür Özel ve 4 milletvekili için fezleke talebi</strong>
+            </a>
+        </li>
+
+    </ul>
+
+    <h2 class="category-title">DÜNYA</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            bakan fidan: filistin bizim için en önemli ahlaki pusula
+            dışişleri bakanı hakan fidan, müslüman dünyasının insanlığın ortak vicdanını derinden inciten konularda tek bir ses olarak konuşması gerektiğini vurgulayarak, "bizim için, örneğin filistin en önemli ahlaki pusula olmaya devam etmektedir. gazze'deki soykırıma ve batı şeria'daki yerleşimci terörüne karşı durduk." dedi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bakan Fidan: Filistin bizim için en önemli ahlaki pusula</h3>
+                    <p>Dışişleri Bakanı Hakan Fidan, Müslüman dünyasının insanlığın ortak vicdanını derinden inciten konularda tek bir ses olarak konuşması gerektiğini vurgulayarak, "Bizim için, örneğin Filistin en önemli ahlaki pusula olmaya devam etmektedir. Gazze'deki soykırıma ve Batı Şeria'daki yerleşimci terörüne karşı durduk." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-filistin-bizim-icin-en-onemli-ahlaki-pusula-964746.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bolu yedigöller'de gezi sırasında kaybolan on çocuk ve üç personel bulundu
+            kocaeli çocuk evleri sitesi müdürlüğü'nden günübirlik gezi için bolu yedigöller'e giden ve uzun saatler haber alınamayan 14-17 yaş aralığındaki on kız çocuğu ve üç görevli personel sağ olarak bulundu.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>Bolu Yedigöller'de gezi sırasında kaybolan on çocuk ve üç personel bulundu</h3>
+                    <p>Kocaeli Çocuk Evleri Sitesi Müdürlüğü'nden günübirlik gezi için Bolu Yedigöller'e giden ve uzun saatler haber alınamayan 14-17 yaş aralığındaki on kız çocuğu ve üç görevli personel sağ olarak bulundu.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmx289847rl5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            özgür özel ve 4 milletvekili için fezleke talebi
+            i̇stanbul cumhuriyet başsavcılığı, mustafa sarıgül hakkında yürüttüğü suç örgütü soruşturmasında adı geçen özgür özel, veli ağbaba, umut akdoğan, burhanettin bulut ve gökhan zeybek'e ilişkin dosyayı, fezleke düzenlenmesi amacıyla ankara cumhuriyet başsavcılığı'na gönderdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Özgür Özel ve 4 milletvekili için fezleke talebi</h3>
+                    <p>İstanbul Cumhuriyet Başsavcılığı, Mustafa Sarıgül hakkında yürüttüğü suç örgütü soruşturmasında adı geçen Özgür Özel, Veli Ağbaba, Umut Akdoğan, Burhanettin Bulut ve Gökhan Zeybek'e ilişkin dosyayı, fezleke düzenlenmesi amacıyla Ankara Cumhuriyet Başsavcılığı'na gönderdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/ozgur-ozel-ve-4-milletvekili-icin-fezleke-talebi-964742.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇ngiltere'de keyif için kitap okuma müfredata giriyor
+            hükümet, yeni müfredatıyla okuma yazma oranlarındaki düşüşü tersine çevirmeyi ve ekran bağımlılığıyla mücadele etmeyi umduğunu söylüyor.
+            dünya
+            bbc türkçe
+            "
+                    data-category="dünya"
+                >
+                    <h3>İngiltere'de keyif için kitap okuma müfredata giriyor</h3>
+                    <p>Hükümet, yeni müfredatıyla okuma yazma oranlarındaki düşüşü tersine çevirmeyi ve ekran bağımlılığıyla mücadele etmeyi umduğunu söylüyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cqlyklnjg7klo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul için kuvvetli yağış uyarısı
+            i̇stanbul valiliği, gece saatlerinden itibaren etkili olması beklenen sağanak nedeniyle vatandaşları dikkatli olmaları konusunda uyardı.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>İstanbul için kuvvetli yağış uyarısı</h3>
+                    <p>İstanbul Valiliği, gece saatlerinden itibaren etkili olması beklenen sağanak nedeniyle vatandaşları dikkatli olmaları konusunda uyardı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-icin-kuvvetli-yagis-uyarisi-964749.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            rusya: moskova bölgesi 462 i̇ha'yla hedef alındı
+            moskova belediye başkanı sergey sobyanin, moskova bölgesine 462 insansız hava aracının (i̇ha) yönlendirildiğini ve kente yaklaşan 123 i̇ha'nın etkisiz hale getirildiğini bildirdi.
+            dünya
+            trt haber
+            "
+                    data-category="dünya"
+                >
+                    <h3>Rusya: Moskova bölgesi 462 İHA'yla hedef alındı</h3>
+                    <p>Moskova Belediye Başkanı Sergey Sobyanin, Moskova bölgesine 462 insansız hava aracının (İHA) yönlendirildiğini ve kente yaklaşan 123 İHA'nın etkisiz hale getirildiğini bildirdi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/rusya-moskova-bolgesi-462-ihayla-hedef-alindi-964744.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">GENEL</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yeni parti lideri özel, cumhurbaşkanı adayıyla ilgili 4 aralık'ta açıklama yapacağını duyurdu
+            yeni parti genel başkanı özgür özel, cumhurbaşkanı adaylığı konusunda 4 aralık cuma günü ankara'da bir basın toplantısı düzenleyeceğini açıklayarak, "tüm türkiye haftaya bugün başka bir şey konuşuyor olacak" dedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Yeni Parti lideri Özel, cumhurbaşkanı adayıyla ilgili 4 Aralık'ta açıklama yapacağını duyurdu</h3>
+                    <p>Yeni Parti Genel Başkanı Özgür Özel, cumhurbaşkanı adaylığı konusunda 4 Aralık Cuma günü Ankara'da bir basın toplantısı düzenleyeceğini açıklayarak, "Tüm Türkiye haftaya bugün başka bir şey konuşuyor olacak" dedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmpqrvg1g0r5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            işıkhan: önümüzdeki yıl çalışma hayatımız açısından yoğun bir yıl olacak
+            çalışma ve sosyal güvenlik bakanı işıkhan, "önümüzdeki yıl çalışma hayatımız açısından yoğun bir yıl olacak. 2027 yılında hem kamu işçilerimizi ilgilendiren 'kamu toplu i̇ş sözleşmeleri çerçeve protokolü' sürecini hem de 'kamu görevlilerimizin 9. dönem toplu sözleşme' görüşmelerini gerçekleştireceğiz." dedi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Işıkhan: Önümüzdeki yıl çalışma hayatımız açısından yoğun bir yıl olacak</h3>
+                    <p>Çalışma ve Sosyal Güvenlik Bakanı Işıkhan, "Önümüzdeki yıl çalışma hayatımız açısından yoğun bir yıl olacak. 2027 yılında hem kamu işçilerimizi ilgilendiren 'Kamu Toplu İş Sözleşmeleri Çerçeve Protokolü' sürecini hem de 'kamu görevlilerimizin 9. Dönem Toplu Sözleşme' görüşmelerini gerçekleştireceğiz." dedi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/ekonomi/isikhan-onumuzdeki-yil-calisma-hayatimiz-acisindan-yogun-bir-yil-olacak-964747.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            küresel konut krizi: yaşadığınız yerde ev satın alabiliyor musunuz?
+            türkiye dahil dünyanın birçok ülkesinden veriler, uzman röportajları ve ülkelerden örnekler aracılığıyla konut satın almanın dünya çapında neden zorlaştığını inceledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Küresel konut krizi: Yaşadığınız yerde ev satın alabiliyor musunuz?</h3>
+                    <p>Türkiye dahil dünyanın birçok ülkesinden veriler, uzman röportajları ve ülkelerden örnekler aracılığıyla konut satın almanın dünya çapında neden zorlaştığını inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm2d95j022e0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            dışkı nakli nedir? 'süper dışkı' bağışçıları nasıl seçiliyor?
+            bazı bağırsak hastalıkları dışkı nakli sayesinde tedavi edilebiliyor. ancak doğru bağışçıyı bulmak hiç de kolay değil. uzmanlar, bazı bağışçıların dışkılarının diğerlerine kıyasla çok daha faydalı olduğunu söylüyor. peki bu "süper bağışçılar" nasıl tespit ediliyor?
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Dışkı nakli nedir? 'Süper dışkı' bağışçıları nasıl seçiliyor?</h3>
+                    <p>Bazı bağırsak hastalıkları dışkı nakli sayesinde tedavi edilebiliyor. Ancak doğru bağışçıyı bulmak hiç de kolay değil. Uzmanlar, bazı bağışçıların dışkılarının diğerlerine kıyasla çok daha faydalı olduğunu söylüyor. Peki bu "süper bağışçılar" nasıl tespit ediliyor?</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cm5y1p23yl4yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            türkiye'deki suriyelilerle ilgili tablo nasıl değişti? bundan sonra ne olabilir?
+            suriye'de yönetim değişikliğinin ikinci yıl dönümü yaklaşırken türkiye'deki suriyelilerin sayısı düşmeye devam ediyor. bir yandansa çalışma izni muafiyeti gibi adımlar atılıyor. türkiye'deki suriyelilerin son durumuyla ilgili gelişmeleri inceledik.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Türkiye'deki Suriyelilerle ilgili tablo nasıl değişti? Bundan sonra ne olabilir?</h3>
+                    <p>Suriye'de yönetim değişikliğinin ikinci yıl dönümü yaklaşırken Türkiye'deki Suriyelilerin sayısı düşmeye devam ediyor. Bir yandansa çalışma izni muafiyeti gibi adımlar atılıyor. Türkiye'deki Suriyelilerin son durumuyla ilgili gelişmeleri inceledik.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmwy0wpr9xyzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            cumhurbaşkanı erdoğan, yunan mevkidaşıyla görüşüyor
+            cumhurbaşkanı recep tayyip erdoğan, cumhurbaşkanlığı dolmabahçe ofisi'nde yunanistan cumhurbaşkanı konstantinos tasulas ile görüşüyor.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Cumhurbaşkanı Erdoğan, Yunan mevkidaşıyla görüşüyor</h3>
+                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Cumhurbaşkanlığı Dolmabahçe Ofisi'nde Yunanistan Cumhurbaşkanı Konstantinos Tasulas ile görüşüyor.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-yunan-mevkidasiyla-gorusuyor-964751.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gazze'de katil i̇srail saldırılarında öldürülen sınır tanımayan doktorlar personeli sayısı 17'ye yükseldi
+            sınır tanımayan doktorlar (msf), dün i̇srail saldırısında 2 personelinin öldürüldüğünü doğrulayarak, "bunlarla birlikte gazze'de hayatını kaybeden msf çalışanlarının toplam sayısı 17'ye ulaştı." açıklaması yaptı.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gazze'de katil İsrail saldırılarında öldürülen Sınır Tanımayan Doktorlar personeli sayısı 17'ye yükseldi</h3>
+                    <p>Sınır Tanımayan Doktorlar (MSF), dün İsrail saldırısında 2 personelinin öldürüldüğünü doğrulayarak, "Bunlarla birlikte Gazze'de hayatını kaybeden MSF çalışanlarının toplam sayısı 17'ye ulaştı." açıklaması yaptı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/gazzede-katil-israil-saldirilarinda-oldurulen-sinir-tanimayan-doktorlar-personeli-sayisi-17ye-yukseldi-964745.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            'difficult to say with a straight face': tapper reacts to fox news' statement on settlement
+            a settlement has been reached in dominion voting systems' defamation case against fox news, the judge for the case announced. the network will pay more than $787 million to dominion, a lawyer for the company said.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>'Difficult to say with a straight face': Tapper reacts to Fox News' statement on settlement</h3>
+                    <p>A settlement has been reached in Dominion Voting Systems' defamation case against Fox News, the judge for the case announced. The network will pay more than $787 million to Dominion, a lawyer for the company said.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/politics/2023/04/18/jake-tapper-dominion-lawsuit-settlement-fox-news-statement-lead-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            millions in the us could face massive consequences unless mccarthy can navigate out of a debt trap he set for biden
+            • desantis goes to washington, a place he once despised, looking for support to take on trump • opinion: for the gop to win, it must ditch trump • chris christie mulling 2024 white house bid • analysis: the fire next time has begun burning in tennessee
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Millions in the US could face massive consequences unless McCarthy can navigate out of a debt trap he set for Biden</h3>
+                    <p>• DeSantis goes to Washington, a place he once despised, looking for support to take on Trump • Opinion: For the GOP to win, it must ditch Trump • Chris Christie mulling 2024 White House bid • Analysis: The fire next time has begun burning in Tennessee</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/mccarthy-biden-debt-ceiling/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            newly released video shows scene of jeremy renner's snowplow accident
+            newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor jeremy renner after a near-fatal snowplow accident in january. the "avengers" actor broke more than 30 bones and suffered other severe injuries. cnn's chloe melas has more.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Newly released video shows scene of Jeremy Renner's snowplow accident</h3>
+                    <p>Newly released body camera footage shows firefighters and sheriff's deputies rushing to help actor Jeremy Renner after a near-fatal snowplow accident in January. The "Avengers" actor broke more than 30 bones and suffered other severe injuries. CNN's Chloe Melas has more.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/videos/us/2023/04/18/jeremy-renner-snowplow-accident-bodycam-nc-melas-contd-vpx.cnn" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇spanya seçimleri: sanchez iktidarda kalabilecek mi, aşırı sağcı vox kilit parti mi olacak?
+            i̇spanya'da yarın erken seçim yapılacak. seçmenler, sosyalist yönetimin devamı veya aşırı sağcı vox'un muhtemel desteğiyle muhafazakarların liderliğinde kurulacak bir hükümet arasında tercih yapacak.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>İspanya seçimleri: Sanchez iktidarda kalabilecek mi, aşırı sağcı Vox kilit parti mi olacak?</h3>
+                    <p>İspanya'da yarın erken seçim yapılacak. Seçmenler, sosyalist yönetimin devamı veya aşırı sağcı Vox'un muhtemel desteğiyle muhafazakarların liderliğinde kurulacak bir hükümet arasında tercih yapacak.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6lywr2w8lrzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            uçak iniş yaptığında alkışlamak insanları neden bu kadar öfkelendiriyor?
+            uçak yere indikten sonra gelen birkaç saniyelik alkış bazı yolcuların hoşuna giderken, neden bazılarını çok öfkelendiriyor? psikologlar bunun arkasındaki nedenleri açıklıyor.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Uçak iniş yaptığında alkışlamak insanları neden bu kadar öfkelendiriyor?</h3>
+                    <p>Uçak yere indikten sonra gelen birkaç saniyelik alkış bazı yolcuların hoşuna giderken, neden bazılarını çok öfkelendiriyor? Psikologlar bunun arkasındaki nedenleri açıklıyor.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/c6792e7ej458o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            halk tv soruşturması ile ilgili son durum ne?
+            halk tv'nin sahibi iş insanı cafer mahiroğlu hakkında yürütülen soruşturma kapsamında 27 kasım cuma günü 12 kişiyle ilgili gözaltı kararı verildi, dokuz kişi gözaltına alındı.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>Halk TV soruşturması ile ilgili son durum ne?</h3>
+                    <p>Halk TV'nin sahibi iş insanı Cafer Mahiroğlu hakkında yürütülen soruşturma kapsamında 27 Kasım Cuma günü 12 kişiyle ilgili gözaltı kararı verildi, dokuz kişi gözaltına alındı.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmge3r8983wno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            bm filistin özel raportörü francesca albanese kosta rika'ya alınmadı, iki gece havaalanında bekletildi
+            birleşmiş milletler (bm) filistin özel raportörü francesca albanese'in, bir üniversiteden fahri doktora almak üzere gittiği kosta rika'ya girişine izin verilmedi.
+            genel
+            bbc türkçe
+            "
+                    data-category="genel"
+                >
+                    <h3>BM Filistin Özel Raportörü Francesca Albanese Kosta Rika'ya alınmadı, iki gece havaalanında bekletildi</h3>
+                    <p>Birleşmiş Milletler (BM) Filistin Özel Raportörü Francesca Albanese'in, bir üniversiteden fahri doktora almak üzere gittiği Kosta Rika'ya girişine izin verilmedi.</p>
+                    <div class="source">Kaynak: BBC Türkçe</div>
+                    <a href="https://www.bbc.com/turkce/articles/cmvg20er901ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            gökçeada ve bozcaada hattında feribotlara hava engeli
+            kuzey ege'de olumsuz hava koşulları nedeniyle kabatepe-gökçeada ile geyikli-bozcaada hattında yarın yapılması planlanan tüm feribot seferleri iptal edildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>Gökçeada ve Bozcaada hattında feribotlara hava engeli</h3>
+                    <p>Kuzey Ege'de olumsuz hava koşulları nedeniyle Kabatepe-Gökçeada ile Geyikli-Bozcaada hattında yarın yapılması planlanan tüm feribot seferleri iptal edildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/gokceada-ve-bozcaada-hattinda-feribotlara-hava-engeli-964748.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            i̇stanbul'da sahte 196 pasaport ve 30 kimlik ele geçirildi
+            i̇stanbul fatih'te bir ikamete düzenlenen operasyonda sahte 196 pasaport ve 30 kimlik ele geçirildi.
+            genel
+            trt haber
+            "
+                    data-category="genel"
+                >
+                    <h3>İstanbul'da sahte 196 pasaport ve 30 kimlik ele geçirildi</h3>
+                    <p>İstanbul Fatih'te bir ikamete düzenlenen operasyonda sahte 196 pasaport ve 30 kimlik ele geçirildi.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-sahte-196-pasaport-ve-30-kimlik-ele-gecirildi-964743.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            here are the 20 specific fox broadcasts and tweets dominion says were defamatory
+            • fox-dominion trial delay 'is not unusual,' judge says • fox news' defamation battle isn't stopping trump's election lies
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Here are the 20 specific Fox broadcasts and tweets Dominion says were defamatory</h3>
+                    <p>• Fox-Dominion trial delay 'is not unusual,' judge says • Fox News' defamation battle isn't stopping Trump's election lies</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/17/media/dominion-fox-news-allegations/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            judge in fox news-dominion defamation trial: 'the parties have resolved their case'
+            the judge just announced in court that a settlement has been reached in the historic defamation case between fox news and dominion voting systems.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Judge in Fox News-Dominion defamation trial: 'The parties have resolved their case'</h3>
+                    <p>The judge just announced in court that a settlement has been reached in the historic defamation case between Fox News and Dominion Voting Systems.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/media/fox-dominion-settlement/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            white homeowner accused of shooting a black teen who rang his doorbell turns himself in to face criminal charges
+            • 'a major part of ralph died': aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate new york, officials say
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>White homeowner accused of shooting a Black teen who rang his doorbell turns himself in to face criminal charges</h3>
+                    <p>• 'A major part of Ralph died': Aunt of teen shot after ringing wrong doorbell speaks • 20-year-old woman shot after friend turned into the wrong driveway in upstate New York, officials say</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/us/kansas-city-ralph-yarl-shooting-tuesday/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            jake gyllenhaal and jamie lee curtis spent the covid-19 lockdown together
+            it's sourdough bread and handstands for jake gyllenhaal and jamie lee curtis.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Jake Gyllenhaal and Jamie Lee Curtis spent the Covid-19 lockdown together</h3>
+                    <p>It's sourdough bread and handstands for Jake Gyllenhaal and Jamie Lee Curtis.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/entertainment/jake-gyllenhaal-jamie-lee-curtis-pandemic-living/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+                <div
+                    class="news-card"
+                    data-search="
+            toddler crawls through white house fence, prompts secret service response
+            a tiny intruder infiltrated white house grounds tuesday, prompting a swift response from the us secret service.
+            genel
+            cnn 
+            "
+                    data-category="genel"
+                >
+                    <h3>Toddler crawls through White House fence, prompts Secret Service response</h3>
+                    <p>A tiny intruder infiltrated White House grounds Tuesday, prompting a swift response from the US Secret Service.</p>
+                    <div class="source">Kaynak: CNN </div>
+                    <a href="https://www.cnn.com/2023/04/18/politics/white-house-toddler/index.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+    <h2 class="category-title">TEKNOLOJI</h2>
+
+                <div
+                    class="news-card"
+                    data-search="
+            yapay zeka rekabetinde yeni perde: openai'dan apple'a karşı dava
+            yapay zeka destekli kişisel cihaz geliştirme yarışında gerilim tırmanırken openai, apple'ı haksız ticari uygulamalarla suçlayarak karşı dava açtı.
+            teknoloji
+            trt haber
+            "
+                    data-category="teknoloji"
+                >
+                    <h3>Yapay zeka rekabetinde yeni perde: OpenAI'dan Apple'a karşı dava</h3>
+                    <p>Yapay zeka destekli kişisel cihaz geliştirme yarışında gerilim tırmanırken OpenAI, Apple'ı haksız ticari uygulamalarla suçlayarak karşı dava açtı.</p>
+                    <div class="source">Kaynak: TRT Haber</div>
+                    <a href="https://www.trthaber.com/haber/dunya/yapay-zeka-rekabetinde-yeni-perde-openaidan-applea-karsi-dava-964750.html" target="_blank">Haberi Oku</a>
+                </div>
+            
+        <script>
+            const homeSearchInput = document.querySelector("#home-search-input");
+            const newsCards = document.querySelectorAll(".news-card");
+            const categoryButtons = document.querySelectorAll(".category-filter-btn");
+
+            let selectedCategory = "all";
+
+            function filterNews() {
+                const query = homeSearchInput.value.toLowerCase();
+
+                newsCards.forEach(function (card) {
+                    const text = card.dataset.search || "";
+                    const category = card.dataset.category || "genel";
+
+                    const matchesSearch = text.includes(query);
+                    const matchesCategory =
+                        selectedCategory === "all" || category === selectedCategory;
+
+                    if (matchesSearch && matchesCategory) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            homeSearchInput.addEventListener("input", filterNews);
+
+            categoryButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    categoryButtons.forEach(function (btn) {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+                    selectedCategory = button.dataset.category;
+
+                    filterNews();
+                });
+            });
+        </script>
+
+    </body>
+    </html>
+    
